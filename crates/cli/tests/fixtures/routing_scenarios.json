@@ -1,0 +1,305 @@
+{
+  "schema_version": 2,
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "scope": "Actual CLI process bytes/status, saved file bytes/directories, selected configuration bytes; independently authored resets and ordered operations. Standalone Rust vs retained native; retained session/events/full metadata certification transferred to P1/P2. All raw config retained, selected omissions disclosed.",
+  "scenarios": [
+    {
+      "id": "normal-cli-routing",
+      "required_dimensions": [
+        "filesystem",
+        "config"
+      ],
+      "selection": {
+        "config_files": [
+          ".obsidian/app.json",
+          ".obsidian/core-plugins.json",
+          ".obsidian/types.json"
+        ],
+        "config_selection_reason": "P0 byte contract for app/core-plugin flags and property types. Complete raw config retained; workspace IDs/session bookkeeping belong to P1, community/plugin lifecycle config to P5.",
+        "filesystem_exclusions": [
+          {
+            "path": ".mnemosyne",
+            "reason": "Private Rust session persistence format; raw bytes retained and state/persistence equivalence remains P1 acceptance."
+          }
+        ]
+      },
+      "initial": {
+        "files": {
+          "Note.md": "Hello parity.\n"
+        },
+        "directories": [],
+        "config_files": {
+          ".obsidian/app.json": "{\n  \"trashOption\": \"local\",\n  \"alwaysUpdateLinks\": true\n}",
+          ".obsidian/core-plugins.json": "{\"audio-recorder\": false, \"backlink\": false, \"bases\": false, \"bookmarks\": false, \"canvas\": false, \"command-palette\": false, \"daily-notes\": false, \"editor-status\": false, \"file-explorer\": false, \"file-recovery\": false, \"footnotes\": false, \"global-search\": false, \"graph\": false, \"note-composer\": false, \"outgoing-link\": false, \"outline\": false, \"page-preview\": false, \"properties\": false, \"publish\": false, \"random-note\": false, \"slash-command\": false, \"slides\": false, \"switcher\": false, \"sync\": false, \"tag-pane\": false, \"templates\": false, \"webviewer\": false, \"word-count\": false, \"workspaces\": false, \"zk-prefixer\": false}",
+          ".obsidian/community-plugins.json": "[]"
+        }
+      },
+      "steps": [
+        {
+          "args": [
+            "version"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "MS4xNC40IChpbnN0YWxsZXIgMS4xNC40KQo=",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "help",
+            "read"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "ICByZWFkICAgICAgICAgICAgICAgICAgUmVhZCBmaWxlIGNvbnRlbnRzCiAgICBmaWxlPTxuYW1lPiAgICAgICAgIC0gRmlsZSBuYW1lCiAgICBwYXRoPTxwYXRoPiAgICAgICAgIC0gRmlsZSBwYXRoCg==",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "property:set"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "RXJyb3I6IE1pc3NpbmcgcmVxdWlyZWQgcGFyYW1ldGVyOiBuYW1lPTxuYW1lPiwgdmFsdWU9PHZhbHVlPgpVc2FnZTogcHJvcGVydHk6c2V0IG5hbWU9PG5hbWU+IHZhbHVlPTx2YWx1ZT4gW3R5cGU9dGV4dHxsaXN0fG51bWJlcnxjaGVja2JveHxkYXRlfGRhdGV0aW1lXSBbZmlsZT08bmFtZT5dIFtwYXRoPTxwYXRoPl0K",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "zzzzzzzzzzzzzzzzzz"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "RXJyb3I6IENvbW1hbmQgInp6enp6enp6enp6enp6enp6eiIgbm90IGZvdW5kLiBJdCBtYXkgcmVxdWlyZSBhIHBsdWdpbiB0byBiZSBlbmFibGVkLgo=",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "read",
+            "path=Note.md"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "SGVsbG8gcGFyaXR5Lgo=",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        }
+      ]
+    },
+    {
+      "id": "ordered-files-and-types",
+      "required_dimensions": [
+        "filesystem",
+        "config"
+      ],
+      "selection": {
+        "config_files": [
+          ".obsidian/app.json",
+          ".obsidian/core-plugins.json",
+          ".obsidian/types.json"
+        ],
+        "config_selection_reason": "P0 byte contract for app/core-plugin flags and property types. Complete raw config retained; workspace IDs/session bookkeeping belong to P1, community/plugin lifecycle config to P5.",
+        "filesystem_exclusions": [
+          {
+            "path": ".mnemosyne",
+            "reason": "Private Rust session persistence format; raw bytes retained and state/persistence equivalence remains P1 acceptance."
+          }
+        ]
+      },
+      "initial": {
+        "files": {
+          "Start.md": "---\nPriority: 2\n---\nStart.\n"
+        },
+        "directories": [],
+        "config_files": {
+          ".obsidian/app.json": "{\n  \"trashOption\": \"local\",\n  \"alwaysUpdateLinks\": true\n}",
+          ".obsidian/core-plugins.json": "{\"audio-recorder\": false, \"backlink\": false, \"bases\": false, \"bookmarks\": false, \"canvas\": false, \"command-palette\": false, \"daily-notes\": false, \"editor-status\": false, \"file-explorer\": false, \"file-recovery\": false, \"footnotes\": false, \"global-search\": false, \"graph\": false, \"note-composer\": false, \"outgoing-link\": false, \"outline\": false, \"page-preview\": false, \"properties\": false, \"publish\": false, \"random-note\": false, \"slash-command\": false, \"slides\": false, \"switcher\": false, \"sync\": false, \"tag-pane\": false, \"templates\": false, \"webviewer\": false, \"word-count\": false, \"workspaces\": false, \"zk-prefixer\": false}",
+          ".obsidian/community-plugins.json": "[]"
+        }
+      },
+      "steps": [
+        {
+          "args": [
+            "create",
+            "path=Draft.md",
+            "content=Draft."
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "Q3JlYXRlZDogRHJhZnQubWQK",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "append",
+            "path=Draft.md",
+            "content=Next."
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "QXBwZW5kZWQgdG86IERyYWZ0Lm1kCg==",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "property:set",
+            "path=Start.md",
+            "name=Priority",
+            "value=3",
+            "type=number"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "U2V0IFByaW9yaXR5OiAzCg==",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Start.md",
+            "name=Priority"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "Mwo=",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "rename",
+            "path=Draft.md",
+            "name=Renamed"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "UmVuYW1lZDogRHJhZnQubWQgLT4gUmVuYW1lZC5tZAo=",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "external": {
+            "kind": "write",
+            "path": "Renamed.md",
+            "value": "External update.\n"
+          }
+        },
+        {
+          "args": [
+            "read",
+            "path=Renamed.md"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "RXh0ZXJuYWwgdXBkYXRlLgo=",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "external": {
+            "kind": "move",
+            "path": "Renamed.md",
+            "to": "Moved.md"
+          }
+        },
+        {
+          "args": [
+            "read",
+            "path=Moved.md"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "RXh0ZXJuYWwgdXBkYXRlLgo=",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        },
+        {
+          "args": [
+            "delete",
+            "path=Moved.md",
+            "permanent"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "RGVsZXRlZCBwZXJtYW5lbnRseTogTW92ZWQubWQK",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        }
+      ]
+    },
+    {
+      "id": "permanent-root-boundary",
+      "required_dimensions": [
+        "filesystem",
+        "config"
+      ],
+      "selection": {
+        "config_files": [
+          ".obsidian/app.json",
+          ".obsidian/core-plugins.json",
+          ".obsidian/types.json"
+        ],
+        "config_selection_reason": "P0 byte contract for app/core-plugin flags and property types. Complete raw config retained; workspace IDs/session bookkeeping belong to P1, community/plugin lifecycle config to P5.",
+        "filesystem_exclusions": [
+          {
+            "path": ".mnemosyne",
+            "reason": "Private Rust session persistence format; raw bytes retained and state/persistence equivalence remains P1 acceptance."
+          }
+        ]
+      },
+      "initial": {
+        "files": {
+          "Last.md": "last\n"
+        },
+        "directories": [],
+        "config_files": {
+          ".obsidian/app.json": "{\n  \"trashOption\": \"local\",\n  \"alwaysUpdateLinks\": true\n}",
+          ".obsidian/core-plugins.json": "{\"audio-recorder\": false, \"backlink\": false, \"bases\": false, \"bookmarks\": false, \"canvas\": false, \"command-palette\": false, \"daily-notes\": false, \"editor-status\": false, \"file-explorer\": false, \"file-recovery\": false, \"footnotes\": false, \"global-search\": false, \"graph\": false, \"note-composer\": false, \"outgoing-link\": false, \"outline\": false, \"page-preview\": false, \"properties\": false, \"publish\": false, \"random-note\": false, \"slash-command\": false, \"slides\": false, \"switcher\": false, \"sync\": false, \"tag-pane\": false, \"templates\": false, \"webviewer\": false, \"word-count\": false, \"workspaces\": false, \"zk-prefixer\": false}",
+          ".obsidian/community-plugins.json": "[]"
+        }
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=Last.md",
+            "permanent"
+          ],
+          "expected_process": {
+            "exit_code": 0,
+            "stdout": "RGVsZXRlZCBwZXJtYW5lbnRseTogTGFzdC5tZAo=",
+            "stderr": ""
+          },
+          "expected_process_authority": "actual pinned isolated native CLI capture"
+        }
+      ]
+    }
+  ],
+  "capture": {
+    "report_sha256": "b95663ca66fc0f93c6c73f6dd4efdf52c6cce07441a3d6242f7e0fe45adc8da9",
+    "capture_manifest_sha256": "562d58e3c07ca4feb98d3fe3c91eb7599106839e9052f749b81f9c6c9ac88e27",
+    "report": "target/parity/p0-scenarios-verified.json",
+    "scope": "Expected process bytes captured from passing actual isolated pinned reference; fixture inputs independently authored."
+  }
+}

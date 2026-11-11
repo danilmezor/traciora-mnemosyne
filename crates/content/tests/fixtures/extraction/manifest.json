@@ -1,0 +1,66 @@
+{
+  "alternate-prefix.docx": {
+    "bytes": 847,
+    "sha256": "efad9cc604e117ea18ceabf039e8afe42b6a5ad873818bfede011cfc3a89732d"
+  },
+  "bounded-expansion.docx": {
+    "bytes": 10008,
+    "sha256": "dd67562a59b38de0df67e21306469e1639553a5f4582a3a8f336af86ee00cba4"
+  },
+  "cdata.docx": {
+    "bytes": 862,
+    "sha256": "32177820485319cc67d0dcd1238c20c9ff2749069fe0dd934db9ddb58dd2b66c"
+  },
+  "doctype.docx": {
+    "bytes": 868,
+    "sha256": "d241e891437946e2cf313e33281ab8a09c9b27b55d52c2a7fbbdb21b296e62d8"
+  },
+  "empty.docx": {
+    "bytes": 783,
+    "sha256": "172ff3ea0af38e03a79d45fccf9a77455c92baaf3d97b41229f57948dba9bf1a"
+  },
+  "empty.pdf": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "encrypted.pdf": {
+    "bytes": 1710,
+    "sha256": "d81a9dad6c45971fc755b65f5014271710e4e992870a63a049355f58973673fd"
+  },
+  "image-only.pdf": {
+    "bytes": 1201,
+    "sha256": "8b968d20c94accbb8702ef4c5f5f844bc08e861b87d6683e9f9d7faee97f3b7c"
+  },
+  "malformed-xml.docx": {
+    "bytes": 795,
+    "sha256": "c6f1c58b417fcbea516061bd1a13d5a644c2e6ac8bbe709c6902b618d4c5a4c8"
+  },
+  "malformed.docx": {
+    "bytes": 15,
+    "sha256": "7e80da10d8625b1805df9f85eeefe046460f9e1f252be5ec6698ba33c7fa1849"
+  },
+  "malformed.pdf": {
+    "bytes": 18,
+    "sha256": "e2242b1fce59b543f42617922427561d806cef0a60b5e1a3017f111875d31e56"
+  },
+  "mixed.pdf": {
+    "bytes": 2176,
+    "sha256": "3735e18c8a53518eb465e123d61f2b64f28027875ea244b5296ebb5fda3e9302"
+  },
+  "partial.pdf": {
+    "bytes": 1778,
+    "sha256": "f4e6b22c3334ef89eb99899cc1d105ab59d7bfbc1f45cb2ec9f37ec5b5d92fcf"
+  },
+  "replacement.pdf": {
+    "bytes": 1666,
+    "sha256": "2dcad1249a3b370936c161231f1e40a7380645cea5744f759fea101a8b0c7d2c"
+  },
+  "structured.docx": {
+    "bytes": 976,
+    "sha256": "9132c3af9c36f68c2fe0d78abce1e9e744018a20a776d58f4dfe0a6f3287196d"
+  },
+  "unsupported.bin": {
+    "bytes": 33,
+    "sha256": "b8e6d089a55fa193b498381d6a9a59fe4521d4960bb01f21c759eef7634dc817"
+  }
+}

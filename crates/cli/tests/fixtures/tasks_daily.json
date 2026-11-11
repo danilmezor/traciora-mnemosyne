@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "coverage": "Five enabled daily task reads of an existing note with literal Moment format. Creation/template/broad locale/timezone behavior remains pending.",
+  "cases": [
+    {
+      "args": [
+        "tasks",
+        "daily"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "DailyFolder",
+          "format": "[Daily]",
+          "template": ""
+        }
+      },
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] daily task\n",
+        "stderr": ""
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "id": "existing-daily-0"
+    },
+    {
+      "args": [
+        "tasks",
+        "daily",
+        "file=Missing"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "DailyFolder",
+          "format": "[Daily]",
+          "template": ""
+        }
+      },
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] daily task\n",
+        "stderr": ""
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "id": "existing-daily-1"
+    },
+    {
+      "args": [
+        "tasks",
+        "daily",
+        "active",
+        "total"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "DailyFolder",
+          "format": "[Daily]",
+          "template": ""
+        }
+      },
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "id": "existing-daily-2"
+    },
+    {
+      "args": [
+        "task",
+        "daily",
+        "line=1"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "DailyFolder",
+          "format": "[Daily]",
+          "template": ""
+        }
+      },
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tDailyFolder/Daily.md\nline\t1\nstatus\t \ntext\t- [ ] daily task\n",
+        "stderr": ""
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "id": "existing-daily-3"
+    },
+    {
+      "args": [
+        "tasks",
+        "daily",
+        "format=json"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "DailyFolder",
+          "format": "[Daily]",
+          "template": ""
+        }
+      },
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] daily task\",\n    \"file\": \"DailyFolder/Daily.md\",\n    \"line\": \"1\"\n  }\n]\n",
+        "stderr": ""
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "Note10.md": "- [ ] tenth\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+          "DailyFolder/Daily.md": "- [ ] daily task\n"
+        }
+      },
+      "id": "existing-daily-4"
+    }
+  ],
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "source_handlers": {
+    "tasks_byte_range": [
+      1651410,
+      1653954
+    ],
+    "task_byte_range": [
+      1653954,
+      1656168
+    ],
+    "resolver_byte_range": [
+      1691012,
+      1691583
+    ]
+  }
+}

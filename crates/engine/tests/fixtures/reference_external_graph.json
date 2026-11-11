@@ -1,0 +1,1436 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2
+  },
+  "external_cases": [
+    {
+      "id": "opened",
+      "state": {
+        "active": "file:$RUN/External.md",
+        "editor": {
+          "text": "# Outside\nbody\n",
+          "cursor": {
+            "line": 0,
+            "ch": 0
+          }
+        },
+        "stat": {
+          "ctime": 1791975219955,
+          "mtime": 1791975219956,
+          "size": 18
+        },
+        "external_metadata": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 9,
+                  "offset": 9
+                }
+              },
+              "heading": "Outside",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 9,
+                  "offset": 9
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 1,
+                  "col": 4,
+                  "offset": 14
+                }
+              }
+            }
+          ]
+        },
+        "external_users": 1,
+        "cache": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 9,
+                  "offset": 9
+                }
+              },
+              "heading": "Outside",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 9,
+                  "offset": 9
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 1,
+                  "col": 4,
+                  "offset": 14
+                }
+              }
+            }
+          ]
+        },
+        "fileCacheKeys": [
+          "ParityReady.md"
+        ],
+        "resolvedKeys": [
+          "ParityReady.md"
+        ],
+        "fs": {
+          "birthtimeNs": "1791975219955343610",
+          "mtimeNs": "1791975219955627525",
+          "size": "18"
+        }
+      }
+    },
+    {
+      "id": "saved-modify",
+      "state": {
+        "active": "file:$RUN/External.md",
+        "editor": {
+          "text": "# Outside\nbody\n",
+          "cursor": {
+            "line": 0,
+            "ch": 0
+          }
+        },
+        "stat": {
+          "ctime": 1791975219955,
+          "mtime": 1791975221024,
+          "size": 16
+        },
+        "external_metadata": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 9,
+                  "offset": 9
+                }
+              },
+              "heading": "Updated",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 9,
+                  "offset": 9
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 1,
+                  "col": 5,
+                  "offset": 15
+                }
+              }
+            }
+          ]
+        },
+        "external_users": 1,
+        "cache": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 9,
+                  "offset": 9
+                }
+              },
+              "heading": "Updated",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 9,
+                  "offset": 9
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 1,
+                  "col": 5,
+                  "offset": 15
+                }
+              }
+            }
+          ]
+        },
+        "fileCacheKeys": [
+          "ParityReady.md"
+        ],
+        "resolvedKeys": [
+          "ParityReady.md"
+        ],
+        "fs": {
+          "birthtimeNs": "1791975219955343610",
+          "mtimeNs": "1791975221024316997",
+          "size": "16"
+        }
+      }
+    },
+    {
+      "id": "external-write-immediate",
+      "state": {
+        "active": "file:$RUN/External.md",
+        "editor": {
+          "text": "# External edit\nnew saved\n",
+          "cursor": {
+            "line": 0,
+            "ch": 0
+          }
+        },
+        "stat": {
+          "ctime": 1791975219955,
+          "mtime": 1791975221466,
+          "size": 26
+        },
+        "external_metadata": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              },
+              "heading": "External edit",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 16
+                },
+                "end": {
+                  "line": 1,
+                  "col": 9,
+                  "offset": 25
+                }
+              }
+            }
+          ]
+        },
+        "external_users": 1,
+        "cache": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              },
+              "heading": "External edit",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 16
+                },
+                "end": {
+                  "line": 1,
+                  "col": 9,
+                  "offset": 25
+                }
+              }
+            }
+          ]
+        },
+        "fileCacheKeys": [
+          "ParityReady.md"
+        ],
+        "resolvedKeys": [
+          "ParityReady.md"
+        ],
+        "fs": {
+          "birthtimeNs": "1791975219955343610",
+          "mtimeNs": "1791975221466387308",
+          "size": "26"
+        }
+      }
+    },
+    {
+      "id": "external-write-after-monitor",
+      "state": {
+        "active": "file:$RUN/External.md",
+        "editor": {
+          "text": "# External edit\nnew saved\n",
+          "cursor": {
+            "line": 0,
+            "ch": 0
+          }
+        },
+        "stat": {
+          "ctime": 1791975219955,
+          "mtime": 1791975221466,
+          "size": 26
+        },
+        "external_metadata": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              },
+              "heading": "External edit",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 16
+                },
+                "end": {
+                  "line": 1,
+                  "col": 9,
+                  "offset": 25
+                }
+              }
+            }
+          ]
+        },
+        "external_users": 1,
+        "cache": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              },
+              "heading": "External edit",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 16
+                },
+                "end": {
+                  "line": 1,
+                  "col": 9,
+                  "offset": 25
+                }
+              }
+            }
+          ]
+        },
+        "fileCacheKeys": [
+          "ParityReady.md"
+        ],
+        "resolvedKeys": [
+          "ParityReady.md"
+        ],
+        "fs": {
+          "birthtimeNs": "1791975219955343610",
+          "mtimeNs": "1791975221466387308",
+          "size": "26"
+        }
+      }
+    },
+    {
+      "id": "closed-external-leaf",
+      "state": {
+        "active": "ParityReady.md",
+        "editor": {
+          "text": "Isolated parity oracle.\n",
+          "cursor": {
+            "line": 0,
+            "ch": 0
+          }
+        },
+        "stat": {
+          "ctime": 1791975218948,
+          "mtime": 1791975218948,
+          "size": 24
+        },
+        "external_metadata": null,
+        "external_users": 0,
+        "cache": null,
+        "fileCacheKeys": [
+          "ParityReady.md"
+        ],
+        "resolvedKeys": [
+          "ParityReady.md"
+        ],
+        "fs": {
+          "birthtimeNs": "1791975219955343610",
+          "mtimeNs": "1791975221466387308",
+          "size": "26"
+        }
+      }
+    },
+    {
+      "id": "reopened",
+      "state": {
+        "active": "file:$RUN/External.md",
+        "editor": {
+          "text": "# External edit\nnew saved\n",
+          "cursor": {
+            "line": 0,
+            "ch": 0
+          }
+        },
+        "stat": {
+          "ctime": 1791975219955,
+          "mtime": 1791975221466,
+          "size": 26
+        },
+        "external_metadata": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              },
+              "heading": "External edit",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 16
+                },
+                "end": {
+                  "line": 1,
+                  "col": 9,
+                  "offset": 25
+                }
+              }
+            }
+          ]
+        },
+        "external_users": 1,
+        "cache": {
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              },
+              "heading": "External edit",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 15,
+                  "offset": 15
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 16
+                },
+                "end": {
+                  "line": 1,
+                  "col": 9,
+                  "offset": 25
+                }
+              }
+            }
+          ]
+        },
+        "fileCacheKeys": [
+          "ParityReady.md"
+        ],
+        "resolvedKeys": [
+          "ParityReady.md"
+        ],
+        "fs": {
+          "birthtimeNs": "1791975219955343610",
+          "mtimeNs": "1791975221466387308",
+          "size": "26"
+        }
+      }
+    }
+  ],
+  "ghost_cases": [
+    {
+      "id": "target-renamed",
+      "source": "Source-target-renamed.md",
+      "raw": "./Raw-target-renamed.md",
+      "canonical": "Raw-target-renamed.md",
+      "target": "Target-target-renamed.md",
+      "missing": "Missing-target-renamed",
+      "before": {
+        "rawfile": "./Raw-target-renamed.md",
+        "rawcache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 25,
+                  "offset": 25
+                }
+              },
+              "link": "Target-target-renamed",
+              "original": "[[Target-target-renamed]]",
+              "displayText": "Target-target-renamed"
+            },
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 26,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 0,
+                  "col": 52,
+                  "offset": 52
+                }
+              },
+              "link": "Missing-target-renamed",
+              "original": "[[Missing-target-renamed]]",
+              "displayText": "Missing-target-renamed"
+            }
+          ],
+          "sections": [
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 52,
+                  "offset": 52
+                }
+              }
+            }
+          ]
+        },
+        "resolved": {
+          "ParityReady.md": {},
+          "Target-target-renamed.md": {},
+          "./Raw-target-renamed.md": {
+            "Target-target-renamed.md": 1
+          },
+          "Raw-target-renamed.md": {
+            "Target-target-renamed.md": 1
+          }
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Target-target-renamed.md": {},
+          "./Raw-target-renamed.md": {
+            "Missing-target-renamed": 1
+          },
+          "Raw-target-renamed.md": {
+            "Missing-target-renamed": 1
+          }
+        },
+        "fileCacheKeys": [
+          "ParityReady.md",
+          "Target-target-renamed.md",
+          "./Raw-target-renamed.md",
+          "Raw-target-renamed.md"
+        ]
+      },
+      "action": {
+        "exit_code": 0,
+        "stdout": "UmVuYW1lZDogVGFyZ2V0LXRhcmdldC1yZW5hbWVkLm1kIC0+IE5ldy1UYXJnZXQtdGFyZ2V0LXJlbmFtZWQubWQK",
+        "stderr": ""
+      },
+      "after": {
+        "rawfile": null,
+        "rawcache": null,
+        "resolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "New-Target-target-renamed.md": 1
+          },
+          "New-Target-target-renamed.md": {}
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "Missing-target-renamed": 1
+          },
+          "New-Target-target-renamed.md": {}
+        },
+        "fileCacheKeys": [
+          "ParityReady.md",
+          "Raw-target-renamed.md",
+          "New-Target-target-renamed.md"
+        ],
+        "events": [
+          [
+            "rename",
+            "New-Target-target-renamed.md",
+            "Target-target-renamed.md"
+          ],
+          [
+            "resolve",
+            "./Raw-target-renamed.md"
+          ],
+          [
+            "resolve",
+            "Raw-target-renamed.md"
+          ],
+          [
+            "delete",
+            "./Raw-target-renamed.md"
+          ],
+          [
+            "modify",
+            "Raw-target-renamed.md"
+          ],
+          [
+            "changed",
+            "Raw-target-renamed.md"
+          ],
+          [
+            "resolve",
+            "Raw-target-renamed.md"
+          ]
+        ],
+        "post_stop_saved_source": "[[New-Target-target-renamed]]ed]] [[Missing-target-renamed]]\n",
+        "post_stop_saved_sha256": "0db84839694b4ea095150e98bd6824b7d08f0fdcc3cb6f5b2565f2b09ba9dfd5"
+      }
+    },
+    {
+      "id": "target-deleted",
+      "source": "Source-target-deleted.md",
+      "raw": "./Raw-target-deleted.md",
+      "canonical": "Raw-target-deleted.md",
+      "target": "Target-target-deleted.md",
+      "missing": "Missing-target-deleted",
+      "before": {
+        "rawfile": "./Raw-target-deleted.md",
+        "rawcache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 25,
+                  "offset": 25
+                }
+              },
+              "link": "Target-target-deleted",
+              "original": "[[Target-target-deleted]]",
+              "displayText": "Target-target-deleted"
+            },
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 26,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 0,
+                  "col": 52,
+                  "offset": 52
+                }
+              },
+              "link": "Missing-target-deleted",
+              "original": "[[Missing-target-deleted]]",
+              "displayText": "Missing-target-deleted"
+            }
+          ],
+          "sections": [
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 52,
+                  "offset": 52
+                }
+              }
+            }
+          ]
+        },
+        "resolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "New-Target-target-renamed.md": 1
+          },
+          "New-Target-target-renamed.md": {},
+          "Target-target-deleted.md": {},
+          "./Raw-target-deleted.md": {
+            "Target-target-deleted.md": 1
+          },
+          "Raw-target-deleted.md": {
+            "Target-target-deleted.md": 1
+          }
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "Missing-target-renamed": 1
+          },
+          "New-Target-target-renamed.md": {},
+          "Target-target-deleted.md": {},
+          "./Raw-target-deleted.md": {
+            "Missing-target-deleted": 1
+          },
+          "Raw-target-deleted.md": {
+            "Missing-target-deleted": 1
+          }
+        },
+        "fileCacheKeys": [
+          "ParityReady.md",
+          "Raw-target-renamed.md",
+          "New-Target-target-renamed.md",
+          "Target-target-deleted.md",
+          "./Raw-target-deleted.md",
+          "Raw-target-deleted.md"
+        ],
+        "events": [
+          [
+            "rename",
+            "New-Target-target-renamed.md",
+            "Target-target-renamed.md"
+          ],
+          [
+            "resolve",
+            "./Raw-target-renamed.md"
+          ],
+          [
+            "resolve",
+            "Raw-target-renamed.md"
+          ],
+          [
+            "delete",
+            "./Raw-target-renamed.md"
+          ],
+          [
+            "modify",
+            "Raw-target-renamed.md"
+          ],
+          [
+            "changed",
+            "Raw-target-renamed.md"
+          ],
+          [
+            "resolve",
+            "Raw-target-renamed.md"
+          ]
+        ]
+      },
+      "action": true,
+      "after": {
+        "rawfile": "./Raw-target-deleted.md",
+        "rawcache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 25,
+                  "offset": 25
+                }
+              },
+              "link": "Target-target-deleted",
+              "original": "[[Target-target-deleted]]",
+              "displayText": "Target-target-deleted"
+            },
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 26,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 0,
+                  "col": 52,
+                  "offset": 52
+                }
+              },
+              "link": "Missing-target-deleted",
+              "original": "[[Missing-target-deleted]]",
+              "displayText": "Missing-target-deleted"
+            }
+          ],
+          "sections": [
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 52,
+                  "offset": 52
+                }
+              }
+            }
+          ]
+        },
+        "resolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "New-Target-target-renamed.md": 1
+          },
+          "New-Target-target-renamed.md": {},
+          "./Raw-target-deleted.md": {},
+          "Raw-target-deleted.md": {}
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "Missing-target-renamed": 1
+          },
+          "New-Target-target-renamed.md": {},
+          "./Raw-target-deleted.md": {
+            "Target-target-deleted": 1,
+            "Missing-target-deleted": 1
+          },
+          "Raw-target-deleted.md": {
+            "Target-target-deleted": 1,
+            "Missing-target-deleted": 1
+          }
+        },
+        "fileCacheKeys": [
+          "ParityReady.md",
+          "Raw-target-renamed.md",
+          "New-Target-target-renamed.md",
+          "./Raw-target-deleted.md",
+          "Raw-target-deleted.md"
+        ],
+        "events": [
+          [
+            "delete",
+            "Target-target-deleted.md"
+          ],
+          [
+            "resolve",
+            "./Raw-target-deleted.md"
+          ],
+          [
+            "resolve",
+            "Raw-target-deleted.md"
+          ]
+        ],
+        "post_stop_saved_source": "[[Target-target-deleted]] [[Missing-target-deleted]]\n",
+        "post_stop_saved_sha256": "146092f7e4002a9313c56eb1a8c62ee69dd06fa7a35122a091e254afbe512ace"
+      }
+    },
+    {
+      "id": "missing-created",
+      "source": "Source-missing-created.md",
+      "raw": "./Raw-missing-created.md",
+      "canonical": "Raw-missing-created.md",
+      "target": "Target-missing-created.md",
+      "missing": "Missing-missing-created",
+      "before": {
+        "rawfile": "./Raw-missing-created.md",
+        "rawcache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 26,
+                  "offset": 26
+                }
+              },
+              "link": "Target-missing-created",
+              "original": "[[Target-missing-created]]",
+              "displayText": "Target-missing-created"
+            },
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 27,
+                  "offset": 27
+                },
+                "end": {
+                  "line": 0,
+                  "col": 54,
+                  "offset": 54
+                }
+              },
+              "link": "Missing-missing-created",
+              "original": "[[Missing-missing-created]]",
+              "displayText": "Missing-missing-created"
+            }
+          ],
+          "sections": [
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 54,
+                  "offset": 54
+                }
+              }
+            }
+          ]
+        },
+        "resolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "New-Target-target-renamed.md": 1
+          },
+          "New-Target-target-renamed.md": {},
+          "./Raw-target-deleted.md": {},
+          "Raw-target-deleted.md": {},
+          "Target-missing-created.md": {},
+          "./Raw-missing-created.md": {
+            "Target-missing-created.md": 1
+          },
+          "Raw-missing-created.md": {
+            "Target-missing-created.md": 1
+          }
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "Missing-target-renamed": 1
+          },
+          "New-Target-target-renamed.md": {},
+          "./Raw-target-deleted.md": {
+            "Target-target-deleted": 1,
+            "Missing-target-deleted": 1
+          },
+          "Raw-target-deleted.md": {
+            "Target-target-deleted": 1,
+            "Missing-target-deleted": 1
+          },
+          "Target-missing-created.md": {},
+          "./Raw-missing-created.md": {
+            "Missing-missing-created": 1
+          },
+          "Raw-missing-created.md": {
+            "Missing-missing-created": 1
+          }
+        },
+        "fileCacheKeys": [
+          "ParityReady.md",
+          "Raw-target-renamed.md",
+          "New-Target-target-renamed.md",
+          "./Raw-target-deleted.md",
+          "Raw-target-deleted.md",
+          "Target-missing-created.md",
+          "./Raw-missing-created.md",
+          "Raw-missing-created.md"
+        ],
+        "events": [
+          [
+            "delete",
+            "Target-target-deleted.md"
+          ],
+          [
+            "resolve",
+            "./Raw-target-deleted.md"
+          ],
+          [
+            "resolve",
+            "Raw-target-deleted.md"
+          ]
+        ]
+      },
+      "action": true,
+      "after": {
+        "rawfile": "./Raw-missing-created.md",
+        "rawcache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 26,
+                  "offset": 26
+                }
+              },
+              "link": "Target-missing-created",
+              "original": "[[Target-missing-created]]",
+              "displayText": "Target-missing-created"
+            },
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 27,
+                  "offset": 27
+                },
+                "end": {
+                  "line": 0,
+                  "col": 54,
+                  "offset": 54
+                }
+              },
+              "link": "Missing-missing-created",
+              "original": "[[Missing-missing-created]]",
+              "displayText": "Missing-missing-created"
+            }
+          ],
+          "sections": [
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 54,
+                  "offset": 54
+                }
+              }
+            }
+          ]
+        },
+        "resolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "New-Target-target-renamed.md": 1
+          },
+          "New-Target-target-renamed.md": {},
+          "./Raw-target-deleted.md": {},
+          "Raw-target-deleted.md": {},
+          "Target-missing-created.md": {},
+          "./Raw-missing-created.md": {
+            "Target-missing-created.md": 1,
+            "Missing-missing-created.md": 1
+          },
+          "Raw-missing-created.md": {
+            "Target-missing-created.md": 1,
+            "Missing-missing-created.md": 1
+          },
+          "Missing-missing-created.md": {}
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Raw-target-renamed.md": {
+            "Missing-target-renamed": 1
+          },
+          "New-Target-target-renamed.md": {},
+          "./Raw-target-deleted.md": {
+            "Target-target-deleted": 1,
+            "Missing-target-deleted": 1
+          },
+          "Raw-target-deleted.md": {
+            "Target-target-deleted": 1,
+            "Missing-target-deleted": 1
+          },
+          "Target-missing-created.md": {},
+          "./Raw-missing-created.md": {},
+          "Raw-missing-created.md": {},
+          "Missing-missing-created.md": {}
+        },
+        "fileCacheKeys": [
+          "ParityReady.md",
+          "Raw-target-renamed.md",
+          "New-Target-target-renamed.md",
+          "./Raw-target-deleted.md",
+          "Raw-target-deleted.md",
+          "Target-missing-created.md",
+          "./Raw-missing-created.md",
+          "Raw-missing-created.md",
+          "Missing-missing-created.md"
+        ],
+        "events": [
+          [
+            "resolve",
+            "./Raw-missing-created.md"
+          ],
+          [
+            "resolve",
+            "Raw-missing-created.md"
+          ],
+          [
+            "changed",
+            "Missing-missing-created.md"
+          ],
+          [
+            "resolve",
+            "Missing-missing-created.md"
+          ]
+        ],
+        "post_stop_saved_source": "[[Target-missing-created]] [[Missing-missing-created]]\n",
+        "post_stop_saved_sha256": "a296ab7157b13042df4a3cab1fde1bee90b2d09b1ad6357b1093d7606dae2cea"
+      }
+    }
+  ],
+  "initial_external_source": "﻿# Outside\nbody\n",
+  "read_default": {
+    "exit_code": 0,
+    "stdout": "IyBPdXRzaWRlCmJvZHkK",
+    "stderr": ""
+  },
+  "read_exact": {
+    "exit_code": 0,
+    "stdout": "IyBPdXRzaWRlCmJvZHkK",
+    "stderr": ""
+  },
+  "cleanup": {
+    "pid": 39181,
+    "returncode": 0,
+    "stopped": true
+  },
+  "post_stop_file_capture": {
+    "condition": "Owned stopped-profile filesystem snapshot, captured after process exit; not an in-process fs.read observation.",
+    "pid": 39181,
+    "process_returncode": 0,
+    "files": {
+      "Raw-target-renamed.md": "0db84839694b4ea095150e98bd6824b7d08f0fdcc3cb6f5b2565f2b09ba9dfd5",
+      "Raw-target-deleted.md": "146092f7e4002a9313c56eb1a8c62ee69dd06fa7a35122a091e254afbe512ace",
+      "Raw-missing-created.md": "a296ab7157b13042df4a3cab1fde1bee90b2d09b1ad6357b1093d7606dae2cea"
+    }
+  },
+  "source_receipt": "target/rea/engine-clock/external-graph-report.json",
+  "source_evidence": {
+    "app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+    "app_anchors": {
+      "KP=function": {
+        "utf8_start": 1412997,
+        "utf8_end": 1413008
+      },
+      "getExternalFile=function": {
+        "utf8_start": 1413142,
+        "utf8_end": 1413166
+      },
+      "reconcileFile=function": {
+        "utf8_start": 565234,
+        "utf8_end": 565256
+      },
+      "reconcileInternalFile=function": {
+        "utf8_start": 565061,
+        "utf8_end": 565091
+      },
+      "function gB(": {
+        "utf8_start": 1809307,
+        "utf8_end": 1809319
+      },
+      "runAsyncLinkUpdate=function": {
+        "utf8_start": 1794785,
+        "utf8_end": 1794812
+      },
+      "updateInternalLinks=function": {
+        "utf8_start": 1758125,
+        "utf8_end": 1758153
+      },
+      "function zR(": {
+        "utf8_start": 1752422,
+        "utf8_end": 1752434
+      },
+      "function Al(": {
+        "utf8_start": 547962,
+        "utf8_end": 547974
+      }
+    },
+    "scope": "Independent Rust implementation; anchors identify shipped source, no source excerpts embedded."
+  }
+}

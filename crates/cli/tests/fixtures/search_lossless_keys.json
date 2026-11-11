@@ -1,0 +1,626 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial_files": {
+    "High.md": "---\n\"\\uD800\": high\n---\nbody\n",
+    "Low.md": "---\n\"\\uDC00\": low\n---\nbody\n",
+    "Replacement.md": "---\n\"\ufffd\": replacement\n---\nbody\n",
+    "Pair.md": "---\n\"\\uD83D\\uDE00\": emoji\n---\nbody\n",
+    "Mixed.md": "---\n\"\\uD800\": high\n\"\\uD801\": next\n\"\\uDC00\": low\n\"\ufffd\": replacement\n\"\\uD83D\\uDE00\": emoji\n\"\\\\uD800\": literal\n10: ten\n2: two\nCase: upper\ncase: lower\n---\nbody\n",
+    "RootArray.md": "---\n- first\n- second\n---\nbody\n",
+    "RootBinary.md": "---\n!!binary YWI=\n---\nbody\n",
+    "RootDate.md": "---\n!!timestamp 2024-01-02\n---\nbody\n"
+  },
+  "cases": [
+    {
+      "args": [
+        "search",
+        "query=[/\\uD800/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/\\uD800/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/\\uD801/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/\\uD801/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/\\uDC00/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\",\"Low.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/\\uDC00/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"Low.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/\\uFFFD/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\",\"Replacement.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/\\uFFFD/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"Replacement.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/^.$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"RootBinary.md\",\"Mixed.md\",\"Replacement.md\",\"Low.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/^.$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"RootBinary.md\",\"matches\":[]},{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"Replacement.md\",\"matches\":[]},{\"file\":\"Low.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/^..$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\",\"Pair.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/^..$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"Pair.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/^\ud83d\ude00$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\",\"Pair.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/^\ud83d\ude00$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"Pair.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/^[\ud83d\ude00]$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/^[\ud83d\ude00]$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/^\\\\uD800$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/^\\\\uD800$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/\\uD800/:high]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/\\uD800/:high]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/\\uD800/:replacement]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/\\uD800/:replacement]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/\\uFFFD/:replacement]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\",\"Replacement.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/\\uFFFD/:replacement]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"Replacement.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[/\\uFFFD/:high]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[/\\uFFFD/:high]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[2:two]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[2:two]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[10:ten]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[10:ten]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[0:first]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[0:first]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[1:second]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[1:second]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[0:>90]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"RootBinary.md\",\"Mixed.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[0:>90]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"RootBinary.md\",\"matches\":[]},{\"file\":\"Mixed.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[1:<100]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"RootBinary.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[1:<100]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"RootBinary.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[length]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[length]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[position]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[position]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[Case:upper]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[Case:upper]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[\"case\":lower]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[\"case\":lower]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[\"\ufffd\":replacement]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Mixed.md\",\"Replacement.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[\"\ufffd\":replacement]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Mixed.md\",\"matches\":[]},{\"file\":\"Replacement.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "isolation_proof": {
+    "vault": "/home/user/reference/run-9wv_a4rs/vault",
+    "profile": "/home/user/reference/run-9wv_a4rs/profile",
+    "use_mock_keychain": true
+  },
+  "setup": {
+    "files": [
+      "RootDate.md",
+      "RootBinary.md",
+      "RootArray.md",
+      "Mixed.md",
+      "Pair.md",
+      "Replacement.md",
+      "Low.md",
+      "High.md"
+    ],
+    "cache_order": [
+      "High.md",
+      "Low.md",
+      "Replacement.md",
+      "Pair.md",
+      "Mixed.md",
+      "RootArray.md",
+      "RootBinary.md",
+      "RootDate.md"
+    ]
+  },
+  "process_cleanup": {
+    "pid": 66636,
+    "stopped": true
+  },
+  "scope": "48 actual CLI outputs over literal/escaped lone property-key identity, UTF16 regexp/quoted matching, numeric/CASE keys and root Array/Binary/Date constructor cache inputs. Captured discovery/cache order; full YAML/query/string API and coldordering remain required.",
+  "raw_report_sha256": "7439a84e7e55a806f9100f069033f9d9a42ecb4435d807f3bfec1b933ff1d9d5"
+}

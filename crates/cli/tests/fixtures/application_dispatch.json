@@ -1,0 +1,111 @@
+{
+  "reference_version": "1.14.4",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "help_cases": [
+    {
+      "args": [
+        "help",
+        "create"
+      ],
+      "stdout": "  create                Create a new file\n    name=<name>         - File name\n    path=<path>         - File path\n    content=<text>      - Initial content\n    template=<name>     - Template to use\n    overwrite           - Overwrite if file exists\n    open                - Open file after creating\n    newtab              - Open in new tab\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "append"
+      ],
+      "stdout": "  append                Append content to a file\n    file=<name>         - File name\n    path=<path>         - File path\n    content=<text>      - Content to append (required)\n    inline              - Append without newline\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "prepend"
+      ],
+      "stdout": "  prepend               Prepend content to a file\n    file=<name>         - File name\n    path=<path>         - File path\n    content=<text>      - Content to prepend (required)\n    inline              - Prepend without newline\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "rename"
+      ],
+      "stdout": "  rename                Rename a file\n    file=<name>         - File name\n    path=<path>         - File path\n    name=<name>         - New file name (required)\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "move"
+      ],
+      "stdout": "  move                  Move or rename a file\n    file=<name>         - File name\n    path=<path>         - File path\n    to=<path>           - Destination folder or path (required)\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "read"
+      ],
+      "stdout": "  read                  Read file contents\n    file=<name>         - File name\n    path=<path>         - File path\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "open"
+      ],
+      "stdout": "  open                  Open a file\n    file=<name>         - File name\n    path=<path>         - File path\n    newtab              - Open in new tab\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "recents"
+      ],
+      "stdout": "  recents               List recently opened files\n    total               - Return recent file count\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "tabs"
+      ],
+      "stdout": "  tabs                  List open tabs\n    ids                 - Include tab IDs\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "version"
+      ],
+      "stdout": "  version               Show app version\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "tasks"
+      ],
+      "stdout": "  tasks                 List tasks in the vault\n    file=<name>         - Filter by file name\n    path=<path>         - Filter by file path\n    total               - Return task count\n    done                - Show completed tasks\n    todo                - Show incomplete tasks\n    status=\"<char>\"     - Filter by status character\n    verbose             - Group by file with line numbers\n    format=json|tsv|csv - Output format (default: text)\n    active              - Show tasks for active file\n    daily               - Show tasks from daily note\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    },
+    {
+      "args": [
+        "help",
+        "task"
+      ],
+      "stdout": "  task                  Show or update a task\n    ref=<path:line>     - Task reference (path:line)\n    file=<name>         - File name\n    path=<path>         - File path\n    line=<n>            - Line number\n    toggle              - Toggle task status\n    done                - Mark as done\n    todo                - Mark as todo\n    daily               - Use daily note\n    status=\"<char>\"     - Set status character\n",
+      "provenance": "Block from actual baseline full-help capture; single-command source uses identical formatter, source-derived framing."
+    }
+  ],
+  "version": {
+    "args": [
+      "version"
+    ],
+    "stdout": "1.14.4 (installer 1.14.4)\n",
+    "stderr": "",
+    "exit_code": 0,
+    "provenance": "Actual pinned native pipe output checked at every owned oracle readiness boundary; initial REA PTY capture ev_e690d3064f28e55348ae067215d6285227219d825ae916a2549625afe358cbba corroborates text."
+  }
+}

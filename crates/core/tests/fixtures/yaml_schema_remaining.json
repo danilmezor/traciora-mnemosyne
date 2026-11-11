@@ -1,0 +1,970 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "direct_cases": [
+    {
+      "id": "tag-handle",
+      "source": "%TAG !e! tag:example.com,2024:\n---\nvalue: !e!thing 123\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "string",
+                "value": "123"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: tag:example.com,2024:thing at line 3, column 8:\n\nvalue: !e!thing 123\n       ^^^^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              42,
+              50
+            ],
+            "linePos": [
+              {
+                "line": 3,
+                "col": 8
+              },
+              {
+                "line": 3,
+                "col": 16
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tag-verbatim",
+      "source": "value: !<tag:example.com,2024:thing> 123\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "string",
+                "value": "123"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: tag:example.com,2024:thing at line 1, column 8:\n\nvalue: !<tag:example.com,2024:thing> 123\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              7,
+              36
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 8
+              },
+              {
+                "line": 1,
+                "col": 37
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tag-unicode",
+      "source": "é😀: !<tag:example.com,2024:thing> 123\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "é😀",
+              {
+                "type": "string",
+                "value": "123"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: tag:example.com,2024:thing at line 1, column 6:\n\né😀: !<tag:example.com,2024:thing> 123\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              5,
+              34
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 6
+              },
+              {
+                "line": 1,
+                "col": 35
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tag-context",
+      "source": "previous: value\n  # ignored\nvalue: !unknown 123\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "previous",
+              {
+                "type": "string",
+                "value": "value"
+              }
+            ],
+            [
+              "value",
+              {
+                "type": "string",
+                "value": "123"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: !unknown at line 3, column 8:\n\nvalue: !unknown 123\n       ^^^^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              35,
+              43
+            ],
+            "linePos": [
+              {
+                "line": 3,
+                "col": 8
+              },
+              {
+                "line": 3,
+                "col": 16
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tag-long-context",
+      "source": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: !unknown 123\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+              {
+                "type": "string",
+                "value": "123"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: !unknown at line 1, column 68:\n\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: !unknown 123\n                                                                   ^^^^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              67,
+              75
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 68
+              },
+              {
+                "line": 1,
+                "col": 76
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "scalar-seq",
+      "source": "value: !!seq scalar\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "string",
+                "value": "scalar"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: tag:yaml.org,2002:seq at line 1, column 8:\n\nvalue: !!seq scalar\n       ^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              7,
+              12
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 8
+              },
+              {
+                "line": 1,
+                "col": 13
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "scalar-map",
+      "source": "value: !!map scalar\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "string",
+                "value": "scalar"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: tag:yaml.org,2002:map at line 1, column 8:\n\nvalue: !!map scalar\n       ^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              7,
+              12
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 8
+              },
+              {
+                "line": 1,
+                "col": 13
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "map-seq",
+      "source": "value: !!seq {a: 1}\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "a",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: tag:yaml.org,2002:seq at line 1, column 8:\n\nvalue: !!seq {a: 1}\n       ^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              7,
+              12
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 8
+              },
+              {
+                "line": 1,
+                "col": 13
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "seq-map",
+      "source": "value: !!map [1,2]\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "number",
+                    "string": "1",
+                    "value": 1
+                  },
+                  {
+                    "type": "number",
+                    "string": "2",
+                    "value": 2
+                  }
+                ],
+                "string": "1,2"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: tag:yaml.org,2002:map at line 1, column 8:\n\nvalue: !!map [1,2]\n       ^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              7,
+              12
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 8
+              },
+              {
+                "line": 1,
+                "col": 13
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sequence-set",
+      "source": "value: !!set [red, blue]\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "red"
+                  },
+                  {
+                    "type": "string",
+                    "value": "blue"
+                  }
+                ],
+                "string": "red,blue"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "tag:yaml.org,2002:set used for seq collection, but expects map at line 1, column 8:\n\nvalue: !!set [red, blue]\n       ^^^^^\n",
+            "code": "BAD_COLLECTION_TYPE",
+            "pos": [
+              7,
+              12
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 8
+              },
+              {
+                "line": 1,
+                "col": 13
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "merge-invalid",
+      "source": "value: {!!merge <<: 1, own: true}\n",
+      "result": {
+        "error": {
+          "name": "Error",
+          "message": "Merge sources must be maps or map aliases"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "merge-seq-invalid",
+      "source": "value: {!!merge <<: [1], own: true}\n",
+      "result": {
+        "error": {
+          "name": "Error",
+          "message": "Merge sources must be maps or map aliases"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "merge-symbol",
+      "source": "value: !!merge <<\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "symbol",
+                "string": "Symbol(<<)"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "binary-atob-1",
+      "source": "value: !!binary A\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded. at line 1, column 8:\n\nvalue: !!binary A\n       ^^^^^^^^\n",
+          "code": "TAG_RESOLVE_FAILED",
+          "pos": [
+            7,
+            15
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 8
+            },
+            {
+              "line": 1,
+              "col": 16
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "binary-atob-padding",
+      "source": "value: !!binary AA===\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded. at line 1, column 8:\n\nvalue: !!binary AA===\n       ^^^^^^^^\n",
+          "code": "TAG_RESOLVE_FAILED",
+          "pos": [
+            7,
+            15
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 8
+            },
+            {
+              "line": 1,
+              "col": 16
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "explicit-hex-E",
+      "source": "value: !!int 0xDEAD\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "number",
+                "string": "57005",
+                "value": 57005
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "float-int",
+      "source": "value: !!float 1\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "string",
+                "value": "1"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: tag:yaml.org,2002:float at line 1, column 8:\n\nvalue: !!float 1\n       ^^^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              7,
+              14
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 8
+              },
+              {
+                "line": 1,
+                "col": 15
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "radix-rounding",
+      "source": "a: 0x10000000000000801\nb: 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "a",
+              {
+                "type": "number",
+                "string": "18446744073709556000",
+                "value": 18446744073709556000
+              }
+            ],
+            [
+              "b",
+              {
+                "type": "number",
+                "string": "8.711228593176025e+40",
+                "value": 8.711228593176025e+40
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "unknown-alias",
+      "source": "value: *missing\n",
+      "result": {
+        "error": {
+          "name": "ReferenceError",
+          "message": "Unresolved alias (the anchor must be set before the alias): missing"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "tag-standard-prefix",
+      "source": "%TAG !e! tag:yaml.org,2002:\n---\nvalue: !e!int 123\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "number",
+                "string": "123",
+                "value": 123
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": []
+      }
+    }
+  ],
+  "mutation_cases": [
+    {
+      "id": "root-typed-root-array-set",
+      "path": "Native0-set.md",
+      "before": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native0-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 5,
+                  "col": 3,
+                  "offset": 88
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 6,
+                  "col": 0,
+                  "offset": 89
+                },
+                "end": {
+                  "line": 6,
+                  "col": 4,
+                  "offset": 93
+                }
+              }
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native0-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "No frontmatter found.\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\n- 2024-01-02T00:00:00.000Z\n- - 72\n  - 105\n- - red\n- one: 1\n---\nbody\n"
+    },
+    {
+      "id": "root-typed-root-array-remove",
+      "path": "Native0-remove.md",
+      "before": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native0-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 5,
+                  "col": 3,
+                  "offset": 88
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 6,
+                  "col": 0,
+                  "offset": 89
+                },
+                "end": {
+                  "line": 6,
+                  "col": 4,
+                  "offset": 93
+                }
+              }
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\n- 2024-01-02T00:00:00.000Z\n- - 72\n  - 105\n- - red\n- one: 1\n---\nbody\n"
+    },
+    {
+      "id": "root-typed-root-array-empty-set",
+      "path": "Native1-set.md",
+      "before": "---\n- !!timestamp 2024-01-02\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native1-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\n- !!timestamp 2024-01-02\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 32
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 37
+                }
+              }
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native1-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "No frontmatter found.\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\n- 2024-01-02T00:00:00.000Z\n---\nbody\n"
+    },
+    {
+      "id": "root-typed-root-array-empty-remove",
+      "path": "Native1-remove.md",
+      "before": "---\n- !!timestamp 2024-01-02\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native1-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\n- !!timestamp 2024-01-02\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 32
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 37
+                }
+              }
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\n- 2024-01-02T00:00:00.000Z\n---\nbody\n"
+    }
+  ],
+  "manager": {
+    "properties": {
+      "aliases": {
+        "name": "aliases",
+        "widget": "aliases"
+      },
+      "cssclasses": {
+        "name": "cssclasses",
+        "widget": "multitext"
+      },
+      "tags": {
+        "name": "tags",
+        "widget": "tags"
+      }
+    },
+    "occurrences": {},
+    "order": [
+      "Native0-set.md",
+      "Native0-remove.md",
+      "Native1-set.md",
+      "Native1-remove.md"
+    ]
+  },
+  "plugin_proof": {
+    "parse": "function",
+    "stringify": "function",
+    "loaded": true
+  },
+  "plugin_cleanup": {
+    "loaded": false,
+    "exposed": false
+  },
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "evidence": "target/rea/yaml-schema-probes/remaining.json; isolated PID40260 stopped; mock-keychain true"
+}

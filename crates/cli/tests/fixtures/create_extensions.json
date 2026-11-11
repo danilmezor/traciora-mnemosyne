@@ -1,0 +1,92 @@
+{
+  "cases": [
+    {
+      "args": [
+        "create",
+        "name=Ends.canvas."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Created: Ends.canvas\n",
+        "stderr": ""
+      },
+      "after": {
+        "files": {
+          "Ends.canvas": ""
+        },
+        "directories": [],
+        "vault_exists": true
+      }
+    },
+    {
+      "args": [
+        "create",
+        "name=Upper.CANVAS."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Created: Upper.canvas\n",
+        "stderr": ""
+      },
+      "after": {
+        "files": {
+          "Ends.canvas": "",
+          "Upper.canvas": ""
+        },
+        "directories": [],
+        "vault_exists": true
+      }
+    },
+    {
+      "args": [
+        "create",
+        "name=Ends.base."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Created: Ends.base\n",
+        "stderr": ""
+      },
+      "after": {
+        "files": {
+          "Ends.canvas": "",
+          "Ends.base": "",
+          "Upper.canvas": ""
+        },
+        "directories": [],
+        "vault_exists": true
+      }
+    },
+    {
+      "args": [
+        "create",
+        "name=Plain."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Created: Plain.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "files": {
+          "Plain.md": "",
+          "Ends.canvas": "",
+          "Ends.base": "",
+          "Upper.canvas": ""
+        },
+        "directories": [],
+        "vault_exists": true
+      }
+    }
+  ],
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "conditions": {
+    "canvas": true,
+    "bases": true,
+    "use_mock_keychain": true,
+    "authority": "actual pinned isolated runtime",
+    "scope": "Trailing requested extension fallback using retained creator registry; saved bytes and exact handler pipe output"
+  }
+}

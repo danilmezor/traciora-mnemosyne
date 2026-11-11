@@ -1,0 +1,942 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "owned_isolated_profile": true,
+    "use_mock_keychain": true,
+    "reference_normal_filesystem_watcher": true,
+    "rust_explicit_watch_command": false,
+    "post_mutation_readiness": "Vault file membership and cached saved source checked before native search; no synchronous watcher latency claim",
+    "request_pacing_seconds": 0.2,
+    "cold_chronology_overrides": false,
+    "full_query_grammar_certified": false
+  },
+  "initial_files": {
+    "ParityReady.md": "Isolated parity oracle.\n",
+    "A.md": "p0before\n",
+    "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+    "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+    "Folderish/Outside.md": "p0limit\n",
+    "ZOutside.md": "p0limit\n"
+  },
+  "steps": [
+    {
+      "id": "baseline-search",
+      "args": [
+        "search",
+        "query=p0before",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"A.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "WyJBLm1kIl0K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBiZWZvcmUK",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "baseline-context",
+      "args": [
+        "search:context",
+        "query=p0before",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"A.md\",\"matches\":[{\"line\":1,\"text\":\"p0before\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "W3siZmlsZSI6IkEubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoicDBiZWZvcmUifV19XQo=",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBiZWZvcmUK",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "external-edit",
+      "external": {
+        "kind": "write",
+        "path": "A.md",
+        "text": "p0after\n"
+      },
+      "ready_state": {
+        "order": [
+          "ZOutside.md",
+          "Folderish/Outside.md",
+          "Folder/Sub/Deep.md",
+          "Folder/Inside.md",
+          "A.md",
+          "ParityReady.md"
+        ],
+        "contents": {
+          "ZOutside.md": "p0limit\n",
+          "Folderish/Outside.md": "p0limit\n",
+          "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+          "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+          "A.md": "p0after\n",
+          "ParityReady.md": "Isolated parity oracle.\n"
+        }
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "edited-search",
+      "args": [
+        "search",
+        "query=p0after",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"A.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "WyJBLm1kIl0K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "edited-context",
+      "args": [
+        "search:context",
+        "query=p0after",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"A.md\",\"matches\":[{\"line\":1,\"text\":\"p0after\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "W3siZmlsZSI6IkEubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoicDBhZnRlciJ9XX1dCg==",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "edited-old-missing",
+      "args": [
+        "search",
+        "query=p0before",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "Tm8gbWF0Y2hlcyBmb3VuZC4K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "external-create",
+      "external": {
+        "kind": "write",
+        "path": "ZCreated.md",
+        "text": "p0external\n"
+      },
+      "ready_state": {
+        "order": [
+          "ZCreated.md",
+          "ZOutside.md",
+          "Folderish/Outside.md",
+          "Folder/Sub/Deep.md",
+          "Folder/Inside.md",
+          "A.md",
+          "ParityReady.md"
+        ],
+        "contents": {
+          "ZCreated.md": "p0external\n",
+          "ZOutside.md": "p0limit\n",
+          "Folderish/Outside.md": "p0limit\n",
+          "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+          "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+          "A.md": "p0after\n",
+          "ParityReady.md": "Isolated parity oracle.\n"
+        }
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZCreated.md": "cDBleHRlcm5hbAo=",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "created-search",
+      "args": [
+        "search",
+        "query=p0external",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"ZCreated.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "WyJaQ3JlYXRlZC5tZCJdCg==",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZCreated.md": "cDBleHRlcm5hbAo=",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "created-context",
+      "args": [
+        "search:context",
+        "query=p0external",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"ZCreated.md\",\"matches\":[{\"line\":1,\"text\":\"p0external\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "W3siZmlsZSI6IlpDcmVhdGVkLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6InAwZXh0ZXJuYWwifV19XQo=",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZCreated.md": "cDBleHRlcm5hbAo=",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "external-move",
+      "external": {
+        "kind": "rename",
+        "from": "ZCreated.md",
+        "to": "Folder/ExternalMoved.md"
+      },
+      "ready_state": {
+        "order": [
+          "ZOutside.md",
+          "Folderish/Outside.md",
+          "Folder/ExternalMoved.md",
+          "Folder/Sub/Deep.md",
+          "Folder/Inside.md",
+          "A.md",
+          "ParityReady.md"
+        ],
+        "contents": {
+          "ZOutside.md": "p0limit\n",
+          "Folderish/Outside.md": "p0limit\n",
+          "Folder/ExternalMoved.md": "p0external\n",
+          "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+          "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+          "A.md": "p0after\n",
+          "ParityReady.md": "Isolated parity oracle.\n"
+        }
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/ExternalMoved.md": "cDBleHRlcm5hbAo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "moved-search",
+      "args": [
+        "search",
+        "query=p0external",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/ExternalMoved.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "WyJGb2xkZXIvRXh0ZXJuYWxNb3ZlZC5tZCJdCg==",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/ExternalMoved.md": "cDBleHRlcm5hbAo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "moved-context",
+      "args": [
+        "search:context",
+        "query=p0external",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Folder/ExternalMoved.md\",\"matches\":[{\"line\":1,\"text\":\"p0external\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "W3siZmlsZSI6IkZvbGRlci9FeHRlcm5hbE1vdmVkLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6InAwZXh0ZXJuYWwifV19XQo=",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/ExternalMoved.md": "cDBleHRlcm5hbAo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "moved-old-path-missing",
+      "args": [
+        "search",
+        "query=p0external",
+        "path=ZCreated.md",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "Tm8gbWF0Y2hlcyBmb3VuZC4K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/ExternalMoved.md": "cDBleHRlcm5hbAo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "external-delete",
+      "external": {
+        "kind": "remove",
+        "path": "Folder/ExternalMoved.md"
+      },
+      "ready_state": {
+        "order": [
+          "ZOutside.md",
+          "Folderish/Outside.md",
+          "Folder/Sub/Deep.md",
+          "Folder/Inside.md",
+          "A.md",
+          "ParityReady.md"
+        ],
+        "contents": {
+          "ZOutside.md": "p0limit\n",
+          "Folderish/Outside.md": "p0limit\n",
+          "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+          "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+          "A.md": "p0after\n",
+          "ParityReady.md": "Isolated parity oracle.\n"
+        }
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "deleted-search",
+      "args": [
+        "search",
+        "query=p0external",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "Tm8gbWF0Y2hlcyBmb3VuZC4K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "deleted-context",
+      "args": [
+        "search:context",
+        "query=p0external",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "Tm8gbWF0Y2hlcyBmb3VuZC4K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "native-create",
+      "args": [
+        "create",
+        "path=NativeCreated.md",
+        "content=p0native\n"
+      ],
+      "expected": {
+        "stdout": "Created: NativeCreated.md\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "Q3JlYXRlZDogTmF0aXZlQ3JlYXRlZC5tZAo=",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "NativeCreated.md": "cDBuYXRpdmUK",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      },
+      "ready_state": {
+        "order": [
+          "NativeCreated.md",
+          "ZOutside.md",
+          "Folderish/Outside.md",
+          "Folder/Sub/Deep.md",
+          "Folder/Inside.md",
+          "A.md",
+          "ParityReady.md"
+        ],
+        "contents": {
+          "NativeCreated.md": "p0native\n",
+          "ZOutside.md": "p0limit\n",
+          "Folderish/Outside.md": "p0limit\n",
+          "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+          "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+          "A.md": "p0after\n",
+          "ParityReady.md": "Isolated parity oracle.\n"
+        }
+      }
+    },
+    {
+      "id": "native-created-search",
+      "args": [
+        "search",
+        "query=p0native",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"NativeCreated.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "WyJOYXRpdmVDcmVhdGVkLm1kIl0K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "NativeCreated.md": "cDBuYXRpdmUK",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "native-created-context",
+      "args": [
+        "search:context",
+        "query=p0native",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"NativeCreated.md\",\"matches\":[{\"line\":1,\"text\":\"p0native\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "W3siZmlsZSI6Ik5hdGl2ZUNyZWF0ZWQubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoicDBuYXRpdmUifV19XQo=",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "NativeCreated.md": "cDBuYXRpdmUK",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "native-move",
+      "args": [
+        "move",
+        "path=NativeCreated.md",
+        "to=Folder/NativeMoved.md"
+      ],
+      "expected": {
+        "stdout": "Moved: NativeCreated.md -> Folder/NativeMoved.md\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "TW92ZWQ6IE5hdGl2ZUNyZWF0ZWQubWQgLT4gRm9sZGVyL05hdGl2ZU1vdmVkLm1kCg==",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/NativeMoved.md": "cDBuYXRpdmUK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      },
+      "ready_state": {
+        "order": [
+          "ZOutside.md",
+          "Folderish/Outside.md",
+          "Folder/NativeMoved.md",
+          "Folder/Sub/Deep.md",
+          "Folder/Inside.md",
+          "A.md",
+          "ParityReady.md"
+        ],
+        "contents": {
+          "ZOutside.md": "p0limit\n",
+          "Folderish/Outside.md": "p0limit\n",
+          "Folder/NativeMoved.md": "p0native\n",
+          "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+          "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+          "A.md": "p0after\n",
+          "ParityReady.md": "Isolated parity oracle.\n"
+        }
+      }
+    },
+    {
+      "id": "native-moved-search",
+      "args": [
+        "search",
+        "query=p0native",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/NativeMoved.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "WyJGb2xkZXIvTmF0aXZlTW92ZWQubWQiXQo=",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/NativeMoved.md": "cDBuYXRpdmUK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "native-moved-context",
+      "args": [
+        "search:context",
+        "query=p0native",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Folder/NativeMoved.md\",\"matches\":[{\"line\":1,\"text\":\"p0native\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "W3siZmlsZSI6IkZvbGRlci9OYXRpdmVNb3ZlZC5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJwMG5hdGl2ZSJ9XX1dCg==",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/NativeMoved.md": "cDBuYXRpdmUK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "native-delete",
+      "args": [
+        "delete",
+        "path=Folder/NativeMoved.md",
+        "permanent"
+      ],
+      "expected": {
+        "stdout": "Deleted permanently: Folder/NativeMoved.md\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "RGVsZXRlZCBwZXJtYW5lbnRseTogRm9sZGVyL05hdGl2ZU1vdmVkLm1kCg==",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      },
+      "ready_state": {
+        "order": [
+          "ZOutside.md",
+          "Folderish/Outside.md",
+          "Folder/Sub/Deep.md",
+          "Folder/Inside.md",
+          "A.md",
+          "ParityReady.md"
+        ],
+        "contents": {
+          "ZOutside.md": "p0limit\n",
+          "Folderish/Outside.md": "p0limit\n",
+          "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+          "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+          "A.md": "p0after\n",
+          "ParityReady.md": "Isolated parity oracle.\n"
+        }
+      }
+    },
+    {
+      "id": "native-deleted-search",
+      "args": [
+        "search",
+        "query=p0native",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "Tm8gbWF0Y2hlcyBmb3VuZC4K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "native-deleted-context",
+      "args": [
+        "search:context",
+        "query=p0native",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "Tm8gbWF0Y2hlcyBmb3VuZC4K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "folder-limit-one",
+      "args": [
+        "search",
+        "query=p0limit",
+        "path=Folder",
+        "limit=1",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Deep.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "WyJGb2xkZXIvU3ViL0RlZXAubWQiXQo=",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "nested-folder-limit-one",
+      "args": [
+        "search",
+        "query=p0limit",
+        "path=Folder/Sub",
+        "limit=1",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Deep.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "WyJGb2xkZXIvU3ViL0RlZXAubWQiXQo=",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "folder-context-limit-one",
+      "args": [
+        "search:context",
+        "query=p0limit",
+        "path=Folder",
+        "limit=1",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Folder/Sub/Deep.md\",\"matches\":[{\"line\":4,\"text\":\"p0limit\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "W3siZmlsZSI6IkZvbGRlci9TdWIvRGVlcC5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjQsInRleHQiOiJwMGxpbWl0In1dfV0K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    },
+    {
+      "id": "folder-total-before-limit",
+      "args": [
+        "search",
+        "query=p0limit",
+        "path=Folder",
+        "limit=1",
+        "total",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "{\"total\":2}\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "raw": {
+        "exit_code": 0,
+        "stdout": "eyJ0b3RhbCI6Mn0K",
+        "stderr": ""
+      },
+      "tree": {
+        "A.md": "cDBhZnRlcgo=",
+        "Folder/Inside.md": "LS0tCnN0YXR1czogcmVhZHkKLS0tCnAwbGltaXQK",
+        "Folder/Sub/Deep.md": "LS0tDQpzdGF0dXM6IHJlYWR5DQotLS0NCnAwbGltaXQNCg==",
+        "Folderish/Outside.md": "cDBsaW1pdAo=",
+        "ParityReady.md": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "ZOutside.md": "cDBsaW1pdAo="
+      }
+    }
+  ],
+  "session": {
+    "home": "/home/user/reference/run-itsvqp6m/home",
+    "profile": "/home/user/reference/run-itsvqp6m/profile",
+    "vault": "/home/user/reference/run-itsvqp6m/vault",
+    "executable": "/Applications/Desktop.app/Contents/MacOS/desktop-cli",
+    "pid": 77096
+  },
+  "proof": {
+    "vault": "/home/user/reference/run-itsvqp6m/vault",
+    "profile": "/home/user/reference/run-itsvqp6m/profile",
+    "use_mock_keychain": true
+  },
+  "initial_ready": {
+    "order": [
+      "ZOutside.md",
+      "Folderish/Outside.md",
+      "Folder/Sub/Deep.md",
+      "Folder/Inside.md",
+      "A.md",
+      "ParityReady.md"
+    ],
+    "contents": {
+      "ZOutside.md": "p0limit\n",
+      "Folderish/Outside.md": "p0limit\n",
+      "Folder/Sub/Deep.md": "---\r\nstatus: ready\r\n---\r\np0limit\r\n",
+      "Folder/Inside.md": "---\nstatus: ready\n---\np0limit\n",
+      "A.md": "p0before\n",
+      "ParityReady.md": "Isolated parity oracle.\n"
+    }
+  },
+  "cleanup": {
+    "pid": 77096,
+    "exit_code": 0,
+    "stopped": true,
+    "ps_absent": true
+  },
+  "export_audit": {
+    "initial_export_cardinality_check": 31,
+    "actual_complete_trace_steps": 29,
+    "fixed_export_expected_count": 29,
+    "native_replay_repeated": false,
+    "scope": "all planned native operations completed before initial local export-count error; cleanup already recorded"
+  },
+  "probe_script_sha256": "8088144eaca334eafb70ce55561254605c489c62a33d04c11021fed2922536af"
+}

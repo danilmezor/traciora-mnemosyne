@@ -1,0 +1,556 @@
+{
+  "schema_version": 1,
+  "scope": "Pinned getDailyNote task branch: saved-file creation/templates/readiness-frame/existing paths/configured parents. Event timings, locale and full daily CLI remain pending.",
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "test_conditions": {
+    "TZ": "UTC",
+    "moment_now_unix_ms": 1791994087123,
+    "moment_locale": "en",
+    "use_mock_keychain": true,
+    "credential_storage": "excluded real OS keychain"
+  },
+  "cases": [
+    {
+      "id": "default-create",
+      "initial_files": {},
+      "initial_directories": [],
+      "options": {},
+      "app_config": {},
+      "first_path": "2026-10-14.md",
+      "expected_first_stdout": "No tasks found.\n",
+      "second_path": "2026-10-14.md",
+      "after_files": {
+        "2026-10-14.md": ""
+      },
+      "after_directories": [],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [
+        "2026-10-14.md"
+      ],
+      "events": [
+        {
+          "event": "create",
+          "time": 837.7999999970198,
+          "args": [
+            {
+              "path": "2026-10-14.md"
+            }
+          ]
+        },
+        {
+          "event": "changed",
+          "time": 838.5999999940395,
+          "args": [
+            {
+              "path": "2026-10-14.md"
+            },
+            "",
+            {
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "event": "resolve",
+          "time": 838.5999999940395,
+          "args": [
+            {
+              "path": "2026-10-14.md"
+            }
+          ]
+        },
+        {
+          "event": "resolved",
+          "time": 838.5999999940395,
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "template-nested-create",
+      "initial_files": {
+        "Templates/Template.md": "---\ntitle: {{title}}\n---\n- [ ] {{date}} {{time}} {{date:YYYY/MM/DD}} {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Daily",
+        "Templates"
+      ],
+      "options": {
+        "folder": "Daily",
+        "format": "YYYY/MM/[Note-]DD",
+        "template": "Templates/Template"
+      },
+      "app_config": {},
+      "first_path": "Daily/2026/10/Note-14.md",
+      "expected_first_stdout": "No tasks found.\n",
+      "second_path": "Daily/2026/10/Note-14.md",
+      "after_files": {
+        "Daily/2026/10/Note-14.md": "---\ntitle: 2026/10/Note-14\n---\n- [ ] 2026-10-14 16:08 2026/10/14 2026/10/Note-14 {{unknown}}\n",
+        "Templates/Template.md": "---\ntitle: {{title}}\n---\n- [ ] {{date}} {{time}} {{date:YYYY/MM/DD}} {{TITLE}} {{unknown}}\n"
+      },
+      "after_directories": [
+        "Daily",
+        "Daily/2026",
+        "Daily/2026/10",
+        "Templates"
+      ],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [
+        "Daily/2026/10/Note-14.md",
+        "Daily/2026/10",
+        "Daily/2026"
+      ],
+      "events": [
+        {
+          "event": "create",
+          "time": 1429.4000000059605,
+          "args": [
+            {
+              "path": "Daily/2026"
+            }
+          ]
+        },
+        {
+          "event": "create",
+          "time": 1429.5,
+          "args": [
+            {
+              "path": "Daily/2026/10"
+            }
+          ]
+        },
+        {
+          "event": "create",
+          "time": 1430.2999999970198,
+          "args": [
+            {
+              "path": "Daily/2026/10/Note-14.md"
+            }
+          ]
+        },
+        {
+          "event": "changed",
+          "time": 1431.5999999940395,
+          "args": [
+            {
+              "path": "Daily/2026/10/Note-14.md"
+            },
+            "---\ntitle: 2026/10/Note-14\n---\n- [ ] 2026-10-14 16:08 2026/10/14 2026/10/Note-14 {{unknown}}\n",
+            {
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "event": "resolve",
+          "time": 1431.7000000029802,
+          "args": [
+            {
+              "path": "Daily/2026/10/Note-14.md"
+            }
+          ]
+        },
+        {
+          "event": "resolved",
+          "time": 1431.7000000029802,
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "case-insensitive-existing",
+      "initial_files": {
+        "Daily/2026-10-14.MD": "- [ ] existing\n"
+      },
+      "initial_directories": [
+        "Daily"
+      ],
+      "options": {
+        "folder": "Daily"
+      },
+      "app_config": {},
+      "first_path": "Daily/2026-10-14.MD",
+      "expected_first_stdout": "- [ ] existing\n",
+      "second_path": "Daily/2026-10-14.MD",
+      "after_files": {
+        "Daily/2026-10-14.MD": "- [ ] existing\n"
+      },
+      "after_directories": [
+        "Daily"
+      ],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [],
+      "events": []
+    },
+    {
+      "id": "missing-folder",
+      "initial_files": {},
+      "initial_directories": [],
+      "options": {
+        "folder": "Missing"
+      },
+      "app_config": {},
+      "first_path": null,
+      "expected_first_stdout": "Error: Failed to get daily note.\n",
+      "second_path": null,
+      "after_files": {},
+      "after_directories": [],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [],
+      "events": []
+    },
+    {
+      "id": "missing-template",
+      "initial_files": {},
+      "initial_directories": [
+        "Daily"
+      ],
+      "options": {
+        "folder": "Daily",
+        "template": "Templates/Missing"
+      },
+      "app_config": {},
+      "first_path": null,
+      "expected_first_stdout": "Error: Failed to get daily note.\n",
+      "second_path": null,
+      "after_files": {},
+      "after_directories": [
+        "Daily"
+      ],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [],
+      "events": []
+    },
+    {
+      "id": "bom-template",
+      "initial_files": {
+        "Templates/Template.md": "﻿- [ ] {{title}}\n{{time:HH:mm}}\n"
+      },
+      "initial_directories": [
+        "Daily",
+        "Templates"
+      ],
+      "options": {
+        "folder": "Daily",
+        "format": "[BOMDaily]",
+        "template": "Templates/Template"
+      },
+      "app_config": {},
+      "first_path": "Daily/BOMDaily.md",
+      "expected_first_stdout": "No tasks found.\n",
+      "second_path": "Daily/BOMDaily.md",
+      "after_files": {
+        "Daily/BOMDaily.md": "- [ ] BOMDaily\n16:08\n",
+        "Templates/Template.md": "﻿- [ ] {{title}}\n{{time:HH:mm}}\n"
+      },
+      "after_directories": [
+        "Daily",
+        "Templates"
+      ],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [
+        "Daily/BOMDaily.md"
+      ],
+      "events": [
+        {
+          "event": "create",
+          "time": 3389.7000000029802,
+          "args": [
+            {
+              "path": "Daily/BOMDaily.md"
+            }
+          ]
+        },
+        {
+          "event": "changed",
+          "time": 3390.9000000059605,
+          "args": [
+            {
+              "path": "Daily/BOMDaily.md"
+            },
+            "- [ ] BOMDaily\n16:08\n",
+            {
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "event": "resolve",
+          "time": 3391,
+          "args": [
+            {
+              "path": "Daily/BOMDaily.md"
+            }
+          ]
+        },
+        {
+          "event": "resolved",
+          "time": 3391,
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "existing-ignores-missing-template",
+      "initial_files": {
+        "Daily/Existing.md": "- [ ] existing\n"
+      },
+      "initial_directories": [
+        "Daily"
+      ],
+      "options": {
+        "folder": "Daily",
+        "format": "[Existing]",
+        "template": "Missing"
+      },
+      "app_config": {},
+      "first_path": "Daily/Existing.md",
+      "expected_first_stdout": "- [ ] existing\n",
+      "second_path": "Daily/Existing.md",
+      "after_files": {
+        "Daily/Existing.md": "- [ ] existing\n"
+      },
+      "after_directories": [
+        "Daily"
+      ],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [],
+      "events": []
+    },
+    {
+      "id": "configured-newfile-folder",
+      "initial_files": {},
+      "initial_directories": [
+        "Configured"
+      ],
+      "options": {},
+      "app_config": {
+        "newFileLocation": "folder",
+        "newFileFolderPath": "Configured"
+      },
+      "first_path": "Configured/2026-10-14.md",
+      "expected_first_stdout": "No tasks found.\n",
+      "second_path": "Configured/2026-10-14.md",
+      "after_files": {
+        "Configured/2026-10-14.md": ""
+      },
+      "after_directories": [
+        "Configured"
+      ],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [
+        "Configured/2026-10-14.md"
+      ],
+      "events": [
+        {
+          "event": "create",
+          "time": 4343.70000000298,
+          "args": [
+            {
+              "path": "Configured/2026-10-14.md"
+            }
+          ]
+        },
+        {
+          "event": "changed",
+          "time": 4344.20000000298,
+          "args": [
+            {
+              "path": "Configured/2026-10-14.md"
+            },
+            "",
+            {
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "event": "resolve",
+          "time": 4344.29999999702,
+          "args": [
+            {
+              "path": "Configured/2026-10-14.md"
+            }
+          ]
+        },
+        {
+          "event": "resolved",
+          "time": 4344.29999999702,
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "configured-newfile-current-uses-root",
+      "initial_files": {},
+      "initial_directories": [
+        "Other"
+      ],
+      "options": {},
+      "app_config": {
+        "newFileLocation": "current"
+      },
+      "first_path": "2026-10-14.md",
+      "expected_first_stdout": "No tasks found.\n",
+      "second_path": "2026-10-14.md",
+      "after_files": {
+        "2026-10-14.md": ""
+      },
+      "after_directories": [
+        "Other"
+      ],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [
+        "2026-10-14.md"
+      ],
+      "events": [
+        {
+          "event": "create",
+          "time": 4821,
+          "args": [
+            {
+              "path": "2026-10-14.md"
+            }
+          ]
+        },
+        {
+          "event": "changed",
+          "time": 4821.5999999940395,
+          "args": [
+            {
+              "path": "2026-10-14.md"
+            },
+            "",
+            {
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "event": "resolve",
+          "time": 4821.70000000298,
+          "args": [
+            {
+              "path": "2026-10-14.md"
+            }
+          ]
+        },
+        {
+          "event": "resolved",
+          "time": 4822.5,
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "date-title-already-extension",
+      "initial_files": {},
+      "initial_directories": [],
+      "options": {
+        "format": "[Daily.MD]"
+      },
+      "app_config": {},
+      "first_path": "Daily.md",
+      "expected_first_stdout": "No tasks found.\n",
+      "second_path": "Daily 1.md",
+      "after_files": {
+        "Daily 1.md": "",
+        "Daily.md": ""
+      },
+      "after_directories": [],
+      "after_active": null,
+      "after_editor": null,
+      "after_recents": [
+        "Daily 1.md",
+        "Daily.md"
+      ],
+      "events": [
+        {
+          "event": "create",
+          "time": 5315,
+          "args": [
+            {
+              "path": "Daily.md"
+            }
+          ]
+        },
+        {
+          "event": "changed",
+          "time": 5315.20000000298,
+          "args": [
+            {
+              "path": "Daily.md"
+            },
+            "",
+            {
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "event": "resolve",
+          "time": 5315.20000000298,
+          "args": [
+            {
+              "path": "Daily.md"
+            }
+          ]
+        },
+        {
+          "event": "resolved",
+          "time": 5315.20000000298,
+          "args": []
+        },
+        {
+          "event": "create",
+          "time": 5318.79999999702,
+          "args": [
+            {
+              "path": "Daily 1.md"
+            }
+          ]
+        },
+        {
+          "event": "changed",
+          "time": 5319.20000000298,
+          "args": [
+            {
+              "path": "Daily 1.md"
+            },
+            "",
+            {
+              "type": "object"
+            }
+          ]
+        },
+        {
+          "event": "resolve",
+          "time": 5319.20000000298,
+          "args": [
+            {
+              "path": "Daily 1.md"
+            }
+          ]
+        },
+        {
+          "event": "resolved",
+          "time": 5319.20000000298,
+          "args": []
+        }
+      ]
+    }
+  ]
+}

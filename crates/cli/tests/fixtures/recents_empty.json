@@ -1,0 +1,36 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "cases": [
+    {
+      "args": [
+        "recents"
+      ],
+      "state_proof": {
+        "active": null,
+        "recents": []
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "No recent files.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "recents",
+        "total"
+      ],
+      "state_proof": {
+        "active": null,
+        "recents": []
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      }
+    }
+  ]
+}

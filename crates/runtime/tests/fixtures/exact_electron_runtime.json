@@ -1,0 +1,2911 @@
+{
+  "schema_version": 1,
+  "scope": "Exact upstream engine + Rust Node-API addon bounded proof. Full renderer/SDK/Electron facade remains pending.",
+  "release": {
+    "tag": "v43.7.7",
+    "asset": "electron-v43.7.7-darwin-arm64.zip",
+    "sha256": "9327d8ba5bc9e279d1a2f7da90235301c65a2e80eb4ad3bc5610d28d483340f9",
+    "bytes": 123354823,
+    "url": "https://github.com/electron/electron/releases/download/v43.7.7/electron-v43.7.7-darwin-arm64.zip",
+    "executable_sha256": "1121571fb0838d50519c2f002780b2b69f285d37993cf5622ee4b88c6f4b5ce4"
+  },
+  "fuses": {
+    "artifact": "official upstream Electron43.7.7 darwin-arm64 release",
+    "framework_sha256": "be1b9531ce2218021027aab470e1c188c975d1525b176992c160499cb860838c",
+    "framework_bytes": 195388288,
+    "wires": [
+      {
+        "offset": 152002840,
+        "version": 1,
+        "length": 9,
+        "wire_hex": "313031313030303131",
+        "run_as_node": true
+      }
+    ],
+    "mutated": false
+  },
+  "verified_versions": {
+    "node": "24.21.0",
+    "acorn": "8.18.0",
+    "ada": "4.0.0",
+    "amaro": "1.1.11",
+    "ares": "1.34.8",
+    "brotli": "1.2.0",
+    "cldr": "48.0",
+    "icu": "78.2",
+    "llhttp": "9.4.3",
+    "merve": "1.2.2",
+    "modules": "148",
+    "napi": "10",
+    "nbytes": "0.1.4",
+    "ncrypto": "0.0.1",
+    "nghttp2": "1.70.0",
+    "nghttp3": "",
+    "ngtcp2": "",
+    "openssl": "0.0.0",
+    "simdjson": "4.6.7",
+    "simdutf": "7.7.0",
+    "sqlite": "3.53.4",
+    "tz": "2025c",
+    "undici": "7.29.1",
+    "unicode": "17.0",
+    "uv": "1.52.1",
+    "uvwasi": "0.0.23",
+    "v8": "15.0.245.31-electron.0",
+    "zlib": "1.3.2.1-motley",
+    "zstd": "1.6.0",
+    "electron": "43.7.7",
+    "chrome": "150.0.7871.250"
+  },
+  "native_eval_fixture": "crates/engine/tests/fixtures/cli_eval.json",
+  "total_native_cases": 117,
+  "exact_addon_cases": 109,
+  "exact_case_ids": [
+    "undefined",
+    "null",
+    "boolean-true",
+    "boolean-false",
+    "zero",
+    "negative-zero",
+    "fraction",
+    "nan",
+    "infinity",
+    "negative-infinity",
+    "bigint",
+    "symbol",
+    "empty-string",
+    "newline-string",
+    "multiline-string",
+    "unicode-string",
+    "lone-high-surrogate",
+    "lone-low-surrogate",
+    "surrogate-pair",
+    "surrogate-object",
+    "utf16-length",
+    "object",
+    "numeric-object-keys",
+    "array",
+    "sparse-array",
+    "array-function-symbol",
+    "date",
+    "invalid-date",
+    "map",
+    "set",
+    "regex",
+    "error-object",
+    "typed-array",
+    "bigint-object",
+    "bigint-wrapper",
+    "symbol-wrapper",
+    "cycle",
+    "cycle-array",
+    "tojson-undefined",
+    "tojson-string",
+    "tojson-throw",
+    "getter-json-throw",
+    "proxy-ownkeys-throw",
+    "function",
+    "arrow",
+    "native-function",
+    "class",
+    "async-function",
+    "throw-error",
+    "throw-typeerror",
+    "throw-string",
+    "throw-number",
+    "throw-zero",
+    "throw-false",
+    "throw-null",
+    "throw-undefined",
+    "throw-symbol",
+    "throw-bigint",
+    "throw-message",
+    "throw-empty-message",
+    "throw-object",
+    "syntax-error",
+    "reference-error",
+    "promise-resolve",
+    "promise-reject",
+    "promise-reject-null",
+    "thenable",
+    "then-getter-throw",
+    "console-log",
+    "console-levels",
+    "console-empty",
+    "console-empty-string",
+    "console-empty-warn",
+    "console-object",
+    "console-cycle",
+    "console-bigint-object",
+    "console-tojson-undefined",
+    "console-function-symbol",
+    "console-before-throw",
+    "console-before-cycle",
+    "console-surrogate",
+    "console-override",
+    "microtask-before-result",
+    "promise-then-before-result",
+    "promise-timer",
+    "timer-after-result",
+    "microtask-order",
+    "async-console-order",
+    "top-level-await",
+    "let-local",
+    "let-not-retained",
+    "var-retained",
+    "var-next-call",
+    "global-property",
+    "global-next-call",
+    "node-buffer",
+    "node-buffer-unicode",
+    "node-path",
+    "node-eventemitter",
+    "node-timer-handle",
+    "missing-code",
+    "empty-code",
+    "bare-code",
+    "whitespace-code",
+    "microtask-chain-cutoff",
+    "microtask-nested-cutoff",
+    "microtask-chain-promise-cutoff",
+    "node-nexttick-before-result",
+    "node-nexttick-awaited"
+  ],
+  "pending_case_ids": [
+    "global-types",
+    "commonjs-types",
+    "sdk-not-global-require",
+    "node-module-types",
+    "node-vm-context",
+    "owned-file-read",
+    "browser-timer-handle",
+    "electron-boundary"
+  ],
+  "request_entry": "Node event-loop task (setImmediate in study; production Rust incoming TSFN dispatch required)",
+  "utf16_roundtrips": [
+    {
+      "equal": true,
+      "units": [
+        55296
+      ]
+    },
+    {
+      "equal": true,
+      "units": [
+        55357,
+        56832
+      ]
+    },
+    {
+      "equal": true,
+      "units": [
+        97,
+        0,
+        98
+      ]
+    }
+  ],
+  "capture_reports": [
+    {
+      "path": "target/rea/runtime-eval/electron-node/versions-report.json",
+      "sha256": "deb182519fb5e8946ed85b4a29be3e0fb64af7f8cc3eda32d01b27b2baae8b21"
+    },
+    {
+      "path": "target/rea/runtime-eval/electron-node/addon-report.json",
+      "sha256": "91bb02c7169cd26a61a54e395b8386059ef7cd62c423032275895dbe24fb3f33"
+    },
+    {
+      "path": "target/rea/runtime-eval/electron-node/eval-macrotask-process-report.json",
+      "sha256": "c64f5fd5075b5fac782fa9a7fbe173a426cd0b27db914e5a33d7689a86bc0bb5"
+    },
+    {
+      "path": "target/rea/runtime-eval/electron-node/eval-macrotask-comparison.json",
+      "sha256": "46d5744829a4917e297533175c04443f5d73f14cc83f63fc98aeb13650ad9f29"
+    }
+  ],
+  "owned_process_cleanup": [
+    {
+      "stopped": true,
+      "exit_code": 0,
+      "pid_absent": true
+    },
+    {
+      "stopped": true,
+      "exit_code": 0,
+      "pid_absent": true
+    },
+    {
+      "stopped": true,
+      "exit_code": 0,
+      "pid_absent": true
+    }
+  ],
+  "production_rust_ipc": {
+    "native_cases": 117,
+    "matched": 110,
+    "pending_case_ids": [
+      "global-types",
+      "sdk-not-global-require",
+      "node-module-types",
+      "node-vm-context",
+      "owned-file-read",
+      "browser-timer-handle",
+      "electron-boundary"
+    ],
+    "scope": "Actual Rust NodeChild/Unix socket/NAPI TSFN/addon; private3-class registry with15 native function shapes and11 identity/prototype checks plus authored nested host/VM invariants; no SDK module or renderer facades",
+    "report": {
+      "path": "target/rea/runtime-eval/electron-node/rust-ipc-1791991704160760000/report.json",
+      "sha256": "0da332dab30d8808c9ab307d977e66c0fdb71e68cc032bb9692cd00fcd13995a"
+    },
+    "test_source": {
+      "path": "crates/runtime/tests/node_child.rs",
+      "sha256": "0c78eccb86407984ebda92202930abd59e369ae796ffe95e19f71060e235626d"
+    },
+    "addon_sha256": "5c13be76ada136605874c30850de6acbd8064b0b4a4a9959a4cca545d7fe4bbd",
+    "cleanup": {
+      "pid": 39947,
+      "exit_code": 0,
+      "reaped": true,
+      "runtime_pid": 39947,
+      "process_group_stopped": true
+    },
+    "strict_receiver_forwarding": "Metadata-directed generic strict ordinary function/method preserves receiver/new.target/args;15 native SDK ordinaryfunction shapes registered privately",
+    "getter_exception_identity": "Object/Symbol/lone-surrogate/null/undefined preserved and rethrown",
+    "async_completion": "Synchronous Rust dispatch prefix acknowledged before Promise/void callback return; separately retained completion; owner-thread pending continuations pumped at actual new JS task boundaries",
+    "generic_nested_operations": {
+      "scope": "Authored transport invariants, not SDK constructor-body certification",
+      "nested_calls": [
+        710,
+        711,
+        711
+      ],
+      "console_order": [
+        "setter",
+        "getter",
+        "method"
+      ],
+      "setter_and_getter_invocation": true,
+      "function_receiver_preserved": true,
+      "arithmetic_custom_coercion": true,
+      "relational_custom_coercion_and_order": true,
+      "instanceof": true,
+      "mutable_ctor_prototype": true
+    },
+    "sdk_registry_contract": {
+      "scope": "Actual registered constructor/prototype/function shapes and controlled backend wrapper identities; constructor/method bodies, SDK module and lifecycle not certified",
+      "function_shapes": [
+        {
+          "owner": "TAbstractFile",
+          "member": "constructor",
+          "name": "e",
+          "length": 2,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": "e"
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              },
+              {
+                "key": {
+                  "string": "setPath"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getNewPathAfterRename"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TAbstractFile",
+          "member": "setPath",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TAbstractFile",
+          "member": "getNewPathAfterRename",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "constructor",
+          "name": "t",
+          "length": 2,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": "t"
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": false,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              },
+              {
+                "key": {
+                  "string": "setPath"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getShortName"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getNewPathAfterRename"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "cache"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "updateCacheLimit"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "toString"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "setPath",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "getShortName",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "getNewPathAfterRename",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "cache",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "updateCacheLimit",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "toString",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "constructor",
+          "name": "t",
+          "length": 2,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": "t"
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": false,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              },
+              {
+                "key": {
+                  "string": "isRoot"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getParentPrefix"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getFileCount"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getFolderCount"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "isRoot",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "getParentPrefix",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "getFileCount",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "getFolderCount",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        }
+      ],
+      "identity_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "class_count": 3,
+      "function_count": 15,
+      "no_proxy": true,
+      "writable_data_field": "plugin mutation"
+    },
+    "protocol_version": 5,
+    "realm_ownership_contract": {
+      "scope": "Authored genuine realm/root ownership invariants, no SDK manager binding claim",
+      "lease_clone_and_independent_owners": true,
+      "borrowed_ownership_separate": true,
+      "last_drop_releases": true,
+      "close_invalidates_leases": true,
+      "computed_key_coercion": true,
+      "delete": true,
+      "intrinsic_define_vs_proto_assignment": true,
+      "weakmap_regexp_construction": true,
+      "genuine_array": true,
+      "own_key_order": true,
+      "current_realm_json_mutation": true,
+      "rooted_stringify_exception": true
+    },
+    "private_holder_inherited_setter_immunity": "RealArray.prototype[0] setter sensitivity case passes with0calls; callbackpayloadremainsreadable",
+    "prefix_and_iteration_contract": {
+      "scope": "Authored protocol invariants; native widget phases replayed separately",
+      "synchronous_prefix_before_promise_return": true,
+      "continuation_after_js_stack": true,
+      "continuation_inspects_actual_getter": true,
+      "for_in_inherited_and_deleted_keys": true
+    },
+    "prior_protocol5_report": {
+      "path": "target/rea/runtime-eval/electron-node/rust-ipc-1791990863201213000/report.json",
+      "sha256": "dca2400b429ff4f4aef97c7008f006aa9d5164a0fa02978b00e2ac843e385df0"
+    },
+    "mutable_eval_contract": null
+  },
+  "renderer_rust_ipc": {
+    "scope": "Genuine hidden Electron renderer+Rust addon; real global require/Node/Blink timers/electron/remote; no app facade or SDK module",
+    "native_cases": 117,
+    "matched": 115,
+    "required_pending_case_ids": [
+      "global-types",
+      "owned-file-read"
+    ],
+    "report": {
+      "path": "target/rea/runtime-eval/electron-node/renderer-ipc-1791991696831710000/report.json",
+      "sha256": "08872a215f8696ab92211a4ec6979b0df518706cfbc6f6d6d477cf070635dc90"
+    },
+    "protocol_version": 5,
+    "browser_pid": 31698,
+    "renderer_pid": 31701,
+    "browser_identity_receipt": "31698 31701",
+    "renderer_exit": "clean-exit 0",
+    "cleanup": {
+      "pid": 39936,
+      "exit_code": 0,
+      "reaped": true,
+      "runtime_pid": 39939,
+      "process_group_stopped": true
+    },
+    "process_group_stopped": true,
+    "remote": {
+      "version": "2.1.2",
+      "registry_url": "https://registry.npmjs.org/@electron/remote/2.1.2",
+      "tarball_url": "https://registry.npmjs.org/@electron/remote/-/remote-2.1.2.tgz",
+      "integrity": "sha512-EPwNx+nhdrTBxyCqXt/pftoQg/ybtWDW3DUWHafejvnB1ZGGfMpv6e15D8KeempocjXe78T7WreyGGb3mlZxdA==",
+      "sha256": "d748364d3fc5b6d9b5223a6938531b4c494dac17cc537456f5aa1b8ef993bb13",
+      "files_sha256": {
+        "LICENSE": "fc9ae4f3237a307eb111ef8f55bef41d90857e8d1500e592feb4e48639de7a82",
+        "README.md": "fa8d03dca942ab874b84f1f7ffc772671feb2b7f704b5b2cced4734c792a08f6",
+        "dist/src/common/get-electron-binding.d.ts": "21b0b17a56904738509a0101fd0dfe97e7bd1c986ba5c2e380d4d1bda5d45670",
+        "dist/src/common/get-electron-binding.js": "f857a19eec43c9f8d97736c86057064c5b71fc14f6e773d1d7b1c268598bd309",
+        "dist/src/common/ipc-messages.d.ts": "e278adbc682c37c88b489b3ad3eb8039ae1edf9b1553421adcd4520de5f28dae",
+        "dist/src/common/ipc-messages.js": "d43aa81f5bc89faa359e0f97c814ba25155591ff078fbb9bfd40f8c7c9683230",
+        "dist/src/common/module-names.d.ts": "1181a797419b74fa34ac57b639b3fed6f175869db25b4d82383ac9b005d7f1b3",
+        "dist/src/common/module-names.js": "dfcea2c5575d2db51cb38b22c6b4958337746e6d75ba827f450a57b196856c16",
+        "dist/src/common/type-utils.d.ts": "81be03ae26ef56d671e2b8ef4d3cc613e42d6b8c5ca4febf8bad75db58815ef6",
+        "dist/src/common/type-utils.js": "4e4e7bda21b242e517b9b1b582a15a45e8135bc7f7b1f0e9b33e56181dea3ee8",
+        "dist/src/main/index.d.ts": "e2980ec42765cf88150b6b965a0de3b91cb032a2d701eddaada62517d6998c44",
+        "dist/src/main/index.js": "ae4b7e86235189c9a7ee079f4a7bddf7baacbdcc7d213f853ac32bc7ddeafcde",
+        "dist/src/main/objects-registry.d.ts": "d7423bf64447903db2cae6abf096f8c53e87f00e00cfe34ff827767ba6f9006f",
+        "dist/src/main/objects-registry.js": "0312d21bd8da83d0384deab4c87cf7d8f3bbfa8424cd65e07e259d3044afd8d9",
+        "dist/src/main/server.d.ts": "6fa3b9be81041aa652f32234a91f1694c001617fa23abc7eda86551dc48fce1b",
+        "dist/src/main/server.js": "520423ed3cad887c987493d4a8617dc8086223ace4e67cffd71beffbcda8e7a7",
+        "dist/src/renderer/callbacks-registry.d.ts": "a3ffe096d90143e8e23ef143414b49cc366127674b1a32a026b880933f727f99",
+        "dist/src/renderer/callbacks-registry.js": "14db4469fabeed645433a21fabe124f07a7b46e115829b170e9bb16aa77d5992",
+        "dist/src/renderer/index.d.ts": "801fa3473d8dc740c9efb8eeeef39b68f1fe570de3c598d79cf80bdf1758ff4d",
+        "dist/src/renderer/index.js": "f459072159108ef7cc53cb8ca2bb1ce32d752393808165df92ef3708cfe01f54",
+        "dist/src/renderer/remote.d.ts": "a3c2494266d72afd71926c8906bceff4bb3780ca5eda182ca68ffe1ae20787ce",
+        "dist/src/renderer/remote.js": "f495b4730d590ae7f52361f973b639041b78ed457477ce52333c2ab8e3045c43",
+        "index.d.ts": "461c7274208b675846fcd7fdcbd12bb368f4d45c50f234b2dfa1a4f46c8c38c4",
+        "main/index.d.ts": "b71582d2fde1858a9a1ff246c147fbe46f4d52761c5f55888c69f88ed3e50832",
+        "main/index.js": "289679196b4b9ea379488a1e810e108f697b7c7e4e4c3a303f403af35482eb87",
+        "package.json": "76c3f0ffb9564b6e1cd252266621f15a9406b7d1f1ad8bbf3f29a712fe05eb27",
+        "renderer/index.d.ts": "8065a4ec1e5431fe0ce933c1fd52632d57ad38be68f9d75f264bc9ab3022a3db",
+        "renderer/index.js": "2d84fc7d883b14e0f88b9ab83ff28a162a8d10ccfa4f758f940184941d531b82"
+      }
+    },
+    "authored_host_contract": {
+      "scope": "Authored Rust backend protocol invariants; not native SDK conformance",
+      "passed": [
+        "actual non-null receiver identity",
+        "caller-thread callback",
+        "cycles and repeated references",
+        "symbol keys",
+        "accessor descriptor without invocation then explicit get",
+        "prototype identity",
+        "absent descriptor",
+        "negative zero",
+        "large BigInt",
+        "lone surrogate",
+        "function references",
+        "Sync",
+        "Promise",
+        "VoidAsync",
+        "backend thrown/rejected errors",
+        "console observer",
+        "released references rejected"
+      ],
+      "receiver_edge_observations": [
+        {
+          "source": "ownedSync.call(undefined,globalThis)",
+          "receiver_kind": "undefined",
+          "receiver_equals_global": false
+        },
+        {
+          "source": "ownedSync.call(null,globalThis)",
+          "receiver_kind": "null",
+          "receiver_equals_global": false
+        },
+        {
+          "source": "ownedSync.call(1,globalThis)",
+          "receiver_kind": "number",
+          "receiver_equals_global": false
+        }
+      ]
+    },
+    "sdk_registry_contract": {
+      "scope": "Actual registered constructor/prototype/function shapes and controlled backend wrapper identities; constructor/method bodies, SDK module and lifecycle not certified",
+      "function_shapes": [
+        {
+          "owner": "TAbstractFile",
+          "member": "constructor",
+          "name": "e",
+          "length": 2,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": "e"
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              },
+              {
+                "key": {
+                  "string": "setPath"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getNewPathAfterRename"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TAbstractFile",
+          "member": "setPath",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TAbstractFile",
+          "member": "getNewPathAfterRename",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "constructor",
+          "name": "t",
+          "length": 2,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": "t"
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": false,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              },
+              {
+                "key": {
+                  "string": "setPath"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getShortName"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getNewPathAfterRename"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "cache"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "updateCacheLimit"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "toString"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "setPath",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "getShortName",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "getNewPathAfterRename",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "cache",
+          "name": "",
+          "length": 1,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "updateCacheLimit",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFile",
+          "member": "toString",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "constructor",
+          "name": "t",
+          "length": 2,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": "t"
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": false,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              },
+              {
+                "key": {
+                  "string": "isRoot"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getParentPrefix"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getFileCount"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              },
+              {
+                "key": {
+                  "string": "getFolderCount"
+                },
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function"
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "isRoot",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "getParentPrefix",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "getFileCount",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        },
+        {
+          "owner": "TFolder",
+          "member": "getFolderCount",
+          "name": "",
+          "length": 0,
+          "is_proxy": false,
+          "own": [
+            {
+              "key": {
+                "string": "length"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "key": {
+                "string": "name"
+              },
+              "enumerable": false,
+              "configurable": true,
+              "kind": "data",
+              "writable": false,
+              "value": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "key": {
+                "string": "prototype"
+              },
+              "enumerable": false,
+              "configurable": false,
+              "kind": "data",
+              "writable": true,
+              "value": {
+                "type": "object"
+              }
+            }
+          ],
+          "prototype": {
+            "parent_is_object_prototype": true,
+            "own": [
+              {
+                "key": {
+                  "string": "constructor"
+                },
+                "enumerable": false,
+                "configurable": true,
+                "kind": "data",
+                "writable": true,
+                "value": {
+                  "type": "function",
+                  "same_function": true
+                }
+              }
+            ]
+          },
+          "constructible": true
+        }
+      ],
+      "identity_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "class_count": 3,
+      "function_count": 15,
+      "no_proxy": true,
+      "writable_data_field": "plugin mutation"
+    },
+    "reentrancy_contract": {
+      "scope": "Authored transport invariants, not SDK constructor-body certification",
+      "nested_calls": [
+        710,
+        711,
+        711
+      ],
+      "console_order": [
+        "setter",
+        "getter",
+        "method"
+      ],
+      "setter_and_getter_invocation": true,
+      "function_receiver_preserved": true,
+      "arithmetic_custom_coercion": true,
+      "relational_custom_coercion_and_order": true,
+      "instanceof": true,
+      "mutable_ctor_prototype": true
+    },
+    "addon_sha256": "5c13be76ada136605874c30850de6acbd8064b0b4a4a9959a4cca545d7fe4bbd",
+    "realm_ownership_contract": {
+      "scope": "Authored genuine realm/root ownership invariants, no SDK manager binding claim",
+      "lease_clone_and_independent_owners": true,
+      "borrowed_ownership_separate": true,
+      "last_drop_releases": true,
+      "close_invalidates_leases": true,
+      "computed_key_coercion": true,
+      "delete": true,
+      "intrinsic_define_vs_proto_assignment": true,
+      "weakmap_regexp_construction": true,
+      "genuine_array": true,
+      "own_key_order": true,
+      "current_realm_json_mutation": true,
+      "rooted_stringify_exception": true
+    },
+    "test_source": {
+      "path": "crates/runtime/tests/node_child.rs",
+      "sha256": "0c78eccb86407984ebda92202930abd59e369ae796ffe95e19f71060e235626d"
+    },
+    "private_holder_inherited_setter_immunity": "RealArray.prototype[0] setter sensitivity case passes with0calls; callbackpayloadremainsreadable",
+    "prefix_and_iteration_contract": {
+      "scope": "Authored protocol invariants; native widget phases replayed separately",
+      "synchronous_prefix_before_promise_return": true,
+      "continuation_after_js_stack": true,
+      "continuation_inspects_actual_getter": true,
+      "for_in_inherited_and_deleted_keys": true
+    },
+    "async_completion": "Synchronous Rust dispatch prefix acknowledged before Promise/void callback return; separately retained completion; owner-thread pending continuations pumped at actual new JS task boundaries",
+    "prior_protocol5_report": {
+      "path": "target/rea/runtime-eval/electron-node/renderer-ipc-1791990855860746000/report.json",
+      "sha256": "bada1ec43eb288e6b6fadd3aef22a7e2c8983ff5e532e8c23165f48219106cf3"
+    },
+    "mutable_eval_contract": {
+      "scope": "11 deterministic native mutable-global paired cases; globalPromise constructor and frameworkPromise.resolve still required",
+      "matched_cases": 11,
+      "matched_pipes": 22,
+      "cases": [
+        {
+          "id": "eval-replacement",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "eval-replacement",
+          "stage": "probe",
+          "stdout": "replacement true 40+2\n=> 43\n"
+        },
+        {
+          "id": "eval-getter",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "eval-getter",
+          "stage": "probe",
+          "stdout": "eval getter\n=> 42\n"
+        },
+        {
+          "id": "eval-getter-throw",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "eval-getter-throw",
+          "stage": "probe",
+          "stdout": "Error: owned eval getter\n"
+        },
+        {
+          "id": "eval-number",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "eval-number",
+          "stage": "probe",
+          "stdout": "Error: window.eval is not a function\n"
+        },
+        {
+          "id": "string-number",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "string-number",
+          "stage": "probe",
+          "stdout": "=> 7\n"
+        },
+        {
+          "id": "string-object",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "string-object",
+          "stage": "probe",
+          "stdout": "=> owned converted\n"
+        },
+        {
+          "id": "string-throw",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "string-throw",
+          "stage": "probe",
+          "stdout": "Error: owned String failure\n"
+        },
+        {
+          "id": "json-stringify-number",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "json-stringify-number",
+          "stage": "probe",
+          "stdout": "=> 7\n"
+        },
+        {
+          "id": "json-stringify-object",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "json-stringify-object",
+          "stage": "probe",
+          "stdout": "=> owned JSON object\n"
+        },
+        {
+          "id": "json-stringify-getter",
+          "stage": "setup",
+          "stdout": "(no output)\n"
+        },
+        {
+          "id": "json-stringify-getter",
+          "stage": "probe",
+          "stdout": "=> {\n  \"value\": 1\n}\n"
+        },
+        {
+          "id": "promise-then-prefix",
+          "stage": "setup",
+          "stdout": "then prefix\n"
+        },
+        {
+          "id": "promise-then-prefix",
+          "stage": "probe",
+          "stdout": "=> 42\n"
+        }
+      ],
+      "pending": [
+        "promise-resolve-number",
+        "promise-constructor-proxy"
+      ]
+    }
+  }
+}

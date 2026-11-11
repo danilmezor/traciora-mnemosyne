@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "authority": "pinned actual native application/CLI with owned raw peers",
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "source": {
+    "main_js_sha256": "5d90e3738f7db8fb8ea00d01556d71310fd557c4a3c785601274c2bb875a2cba",
+    "server_byte_start": 185845,
+    "header_timeout_byte": 186161,
+    "dispatch_byte_start": 186330,
+    "tty_entry_byte": 21173,
+    "key_decoder_byte": 5084,
+    "lexer_byte": 5913,
+    "command_executor_byte": 20323
+  },
+  "limits": {
+    "header_timeout_seconds": 5,
+    "header_deadline": "absolute since connection accepted, not inactivity",
+    "default_header_size_limit": null,
+    "default_output_timeout": null
+  },
+  "stalled_header": {
+    "sent_header_base64": "ew==",
+    "parallel_version": {
+      "exit_code": 0,
+      "stdout": "MS4xNC40IChpbnN0YWxsZXIgMS4xNC40KQo=",
+      "stderr": ""
+    },
+    "held_readable_after_parallel_version": false,
+    "held_eof_bytes_base64": "",
+    "recovery_version": {
+      "exit_code": 0,
+      "stdout": "MS4xNC40IChpbnN0YWxsZXIgMS4xNC40KQo=",
+      "stderr": ""
+    }
+  },
+  "headers": [
+    {
+      "id": "complete-unicode",
+      "chunks_base64": [
+        "eyJhcmd2IjpbInJlYWQiLCJwYXRoPVNwbGl0LcOpLm1kIl0sInR0eSI6ZmFsc2UsImN3ZCI6IiJ9Cg=="
+      ],
+      "delays_seconds": [],
+      "stdout_base64": "VW5pY29kZSB0YXJnZXQuCg==",
+      "eof": true,
+      "recovery_process": {
+        "stdout": "MS4xNC40IChpbnN0YWxsZXIgMS4xNC40KQo=",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "split-unicode",
+      "chunks_base64": [
+        "eyJhcmd2IjpbInJlYWQiLCJwYXRoPVNwbGl0LcM=",
+        "qS5tZCJdLCJ0dHkiOmZhbHNlLCJjd2QiOiIifQo="
+      ],
+      "delays_seconds": [
+        0.25
+      ],
+      "stdout_base64": "RXJyb3I6IEZpbGUgIlNwbGl0Le+/ve+/vS5tZCIgbm90IGZvdW5kLgo=",
+      "eof": true,
+      "recovery_process": {
+        "stdout": "MS4xNC40IChpbnN0YWxsZXIgMS4xNC40KQo=",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "normal-command-tty",
+      "chunks_base64": [
+        "eyJhcmd2IjpbInZlcnNpb24iXSwidHR5Ijp0cnVlLCJjd2QiOiIifQo="
+      ],
+      "delays_seconds": [],
+      "stdout_base64": "MS4xNC40IChpbnN0YWxsZXIgMS4xNC40KQo=",
+      "eof": true,
+      "recovery_process": {
+        "stdout": "MS4xNC40IChpbnN0YWxsZXIgMS4xNC40KQo=",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "absolute-header-timeout",
+      "chunks_base64": [
+        "ew==",
+        "ImFyZ3Yi"
+      ],
+      "delays_seconds": [
+        3
+      ],
+      "stdout_base64": "",
+      "eof": true,
+      "recovery_process": {
+        "stdout": "MS4xNC40IChpbnN0YWxsZXIgMS4xNC40KQo=",
+        "stderr": "",
+        "exit_code": 0
+      }
+    }
+  ],
+  "long_header": {
+    "construction": "argv=[read,path=Initial.md,ignored= plus \u00e9\ud83d\ude00 repeated2048 then codepoints1..31]; JSON UTF8 compact, tty=false,cwd empty, newline terminated",
+    "native_response_base64": "SW5pdGlhbCBoZWFkZXIgZml4dHVyZS4K"
+  },
+  "malformed_header_ui_branch": {
+    "status": "visual UI error branch deferred; no further native alert probes",
+    "source": "JSON.parse in data callback invokes main uncaughtException/showErrorBox",
+    "observed": "empty peer timed out7s; subsequent native version timed out7s; modal was visible; owned profile stopped",
+    "candidate_behavior": "headless guard closes affected connection; does not emulate the modal or global blocking",
+    "unknown": "full UI error recovery behavior"
+  },
+  "receipts": {
+    "stalled-header-native.json": {
+      "path": "target/rea/p1-transport/stalled-header-native.json",
+      "sha256": "b4f82675e276cfb39e87a83bba70fa3a2a3d8b98a35596bbc8c6c1b62f6c8be1"
+    },
+    "headers-native.json": {
+      "path": "target/rea/p1-transport/headers-native.json",
+      "sha256": "287b44853b57fefc67985c6f2a9cfa3c01159974b4d22b404c0e6a4cda11056e"
+    },
+    "headers-stop.json": {
+      "path": "target/rea/p1-transport/headers-stop.json",
+      "sha256": "744225b13b563c2d6ef958ccaebcb3915b646d9a52d6187710f1d81f1621f392"
+    }
+  },
+  "rea_evidence_ids": [
+    "ev_84760bece713de3cbdcdf15e87ac1f6eedb6e5c367dfe0fcb8edf20beebb8859",
+    "ev_974e50e81a67917c53bb4c4f77e117e922d96efe16b1a013992a3a83894b9fbf"
+  ],
+  "scope": "Unix P1 noninteractive header framing and independent connection I/O. TTY commandless data backend/drawing tracked separately; no other-platform certification."
+}

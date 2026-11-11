@@ -1,0 +1,82 @@
+{
+  "reference_version": "1.14.4",
+  "platform": "darwin",
+  "scope": "Five owned parent-directory create cases; no note created. Rename/move traversal and other platforms remain outside this fixture.",
+  "initial_vault_files": {
+    "ParityReady.md": "Isolated parity oracle.\n"
+  },
+  "initial_directories": [
+    "vault/Sub",
+    "sibling/existing"
+  ],
+  "source_anchors": {
+    "create_new_file": 1793243,
+    "get_or_create_folder": 1793814,
+    "vault_create_folder": 1427691,
+    "check_path": 1340971
+  },
+  "cases": [
+    {
+      "id": "create-0",
+      "args": [
+        "create",
+        "path=./Dot.md",
+        "content=Owned bd8349a063e949c4863f3c7e934680a1"
+      ],
+      "stdout": "Error: Folder already exists.\n",
+      "stderr": "",
+      "exit_code": 0,
+      "created_directories": []
+    },
+    {
+      "id": "create-1",
+      "args": [
+        "create",
+        "path=Sub/../Back.md",
+        "content=Owned bd8349a063e949c4863f3c7e934680a1"
+      ],
+      "stdout": "Error: Folder already exists.\n",
+      "stderr": "",
+      "exit_code": 0,
+      "created_directories": []
+    },
+    {
+      "id": "create-2",
+      "args": [
+        "create",
+        "path=Sub/./Nested.md",
+        "content=Owned bd8349a063e949c4863f3c7e934680a1"
+      ],
+      "stdout": "Error: Folder already exists.\n",
+      "stderr": "",
+      "exit_code": 0,
+      "created_directories": []
+    },
+    {
+      "id": "create-3",
+      "args": [
+        "create",
+        "path=../sibling/Existing.md",
+        "content=Owned bd8349a063e949c4863f3c7e934680a1"
+      ],
+      "stdout": "Error: Folder already exists.\n",
+      "stderr": "",
+      "exit_code": 0,
+      "created_directories": []
+    },
+    {
+      "id": "create-missing-parent-outside-vault-owned-sibling",
+      "args": [
+        "create",
+        "path=../sibling/new/Outside.md",
+        "content=Owned 44ff706d77ff4745acdc0a71b2e9e7d6"
+      ],
+      "stdout": "TypeError: Cannot read properties of null (reading 'getParentPrefix')\n",
+      "stderr": "",
+      "exit_code": 0,
+      "created_directories": [
+        "sibling/new"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3050 @@
+{
+  "reference_version": "1.14.4",
+  "uid": "41a3f9f8b69841f098683dc3c600c1aa",
+  "records": [
+    {
+      "id": "move-0",
+      "args": [
+        "move",
+        "path=Owned-move-0.md",
+        "to=./Dot-move.md"
+      ],
+      "source": "Owned-move-0.md",
+      "destination": "./Dot-move.md",
+      "before": {
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-0.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-move-0.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "Owned-move-0.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "Owned-move-0.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Moved: Owned-move-0.md -> ./Dot-move.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Dot-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "move-1",
+      "args": [
+        "move",
+        "path=Owned-move-1.md",
+        "to=Sub/../Back-move.md"
+      ],
+      "source": "Owned-move-1.md",
+      "destination": "Sub/../Back-move.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-1.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-move-1.md",
+          "Dot-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Owned-move-1.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Owned-move-1.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Moved: Owned-move-1.md -> Sub/../Back-move.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Back-move.md",
+          "Dot-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "move-2",
+      "args": [
+        "move",
+        "path=Owned-move-2.md",
+        "to=Sub/./Nested-move.md"
+      ],
+      "source": "Owned-move-2.md",
+      "destination": "Sub/./Nested-move.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Owned-move-2.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-move-2.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Owned-move-2.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Owned-move-2.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Moved: Owned-move-2.md -> Sub/./Nested-move.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "move-3",
+      "args": [
+        "move",
+        "path=Owned-move-3.md",
+        "to=../sibling/Existing-move.md"
+      ],
+      "source": "Owned-move-3.md",
+      "destination": "../sibling/Existing-move.md",
+      "before": {
+        "vault/Owned-move-3.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-move-3.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "Owned-move-3.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "Owned-move-3.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Moved: Owned-move-3.md -> ../sibling/Existing-move.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "move-4",
+      "args": [
+        "move",
+        "path=Owned-move-4.md",
+        "to=../sibling/new/Missing-move.md"
+      ],
+      "source": "Owned-move-4.md",
+      "destination": "../sibling/new/Missing-move.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Error: ENOENT: no such file or directory, rename '{{boundary}}/vault/Owned-move-4.md' -> '{{boundary}}/sibling/new/Missing-move.md'\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "move-5",
+      "args": [
+        "move",
+        "path=Owned-move-5.md",
+        "to=../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md"
+      ],
+      "source": "Owned-move-5.md",
+      "destination": "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Owned-move-5.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-move-5.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "Owned-move-5.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "Owned-move-5.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Moved: Owned-move-5.md -> ../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "move-6",
+      "args": [
+        "move",
+        "path=Owned-move-6.md",
+        "to=Sub/../../sibling/FromSub-move.md"
+      ],
+      "source": "Owned-move-6.md",
+      "destination": "Sub/../../sibling/FromSub-move.md",
+      "before": {
+        "vault/Owned-move-6.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-move-6.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Owned-move-6.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Owned-move-6.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Moved: Owned-move-6.md -> Sub/../../sibling/FromSub-move.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "move-7",
+      "args": [
+        "move",
+        "path=Owned-move-7.md",
+        "to=../vault/ThroughVault-move.md"
+      ],
+      "source": "Owned-move-7.md",
+      "destination": "../vault/ThroughVault-move.md",
+      "before": {
+        "vault/Owned-move-7.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-move-7.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "Owned-move-7.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "Owned-move-7.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Moved: Owned-move-7.md -> ../vault/ThroughVault-move.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "rename-0",
+      "args": [
+        "rename",
+        "path=Owned-rename-0.md",
+        "name=./Dot-rename.md"
+      ],
+      "source": "Owned-rename-0.md",
+      "destination": "./Dot-rename.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Owned-rename-0.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-rename-0.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "Owned-rename-0.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "Owned-rename-0.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Renamed: Owned-rename-0.md -> ./Dot-rename.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "rename-1",
+      "args": [
+        "rename",
+        "path=Owned-rename-1.md",
+        "name=Sub/../Back-rename.md"
+      ],
+      "source": "Owned-rename-1.md",
+      "destination": "Sub/../Back-rename.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Owned-rename-1.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-rename-1.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Owned-rename-1.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Owned-rename-1.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Renamed: Owned-rename-1.md -> Sub/../Back-rename.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "rename-2",
+      "args": [
+        "rename",
+        "path=Owned-rename-2.md",
+        "name=Sub/./Nested-rename.md"
+      ],
+      "source": "Owned-rename-2.md",
+      "destination": "Sub/./Nested-rename.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Owned-rename-2.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-rename-2.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Owned-rename-2.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Owned-rename-2.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Renamed: Owned-rename-2.md -> Sub/./Nested-rename.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "rename-3",
+      "args": [
+        "rename",
+        "path=Owned-rename-3.md",
+        "name=../sibling/Existing-rename.md"
+      ],
+      "source": "Owned-rename-3.md",
+      "destination": "../sibling/Existing-rename.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-3.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-rename-3.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "Owned-rename-3.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "Owned-rename-3.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Renamed: Owned-rename-3.md -> ../sibling/Existing-rename.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "rename-4",
+      "args": [
+        "rename",
+        "path=Owned-rename-4.md",
+        "name=../sibling/new/Missing-rename.md"
+      ],
+      "source": "Owned-rename-4.md",
+      "destination": "../sibling/new/Missing-rename.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDQK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-rename-4.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md",
+          "Owned-rename-4.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {},
+          "Owned-rename-4.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDQK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Error: ENOENT: no such file or directory, rename '{{boundary}}/vault/Owned-rename-4.md' -> '{{boundary}}/sibling/new/Missing-rename.md'\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Owned-rename-4.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md",
+          "Owned-rename-4.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {},
+          "Owned-rename-4.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "rename-5",
+      "args": [
+        "rename",
+        "path=Owned-rename-5.md",
+        "name=../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md"
+      ],
+      "source": "Owned-rename-5.md",
+      "destination": "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDQK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/Owned-rename-5.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDUK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-rename-5.md",
+          "Owned-rename-4.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md",
+          "Owned-rename-4.md",
+          "Owned-rename-5.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {},
+          "Owned-rename-4.md": {},
+          "Owned-rename-5.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDQK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDUK"
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Renamed: Owned-rename-5.md -> ../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Owned-rename-4.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md",
+          "Owned-rename-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {},
+          "Owned-rename-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "rename-6",
+      "args": [
+        "rename",
+        "path=Owned-rename-6.md",
+        "name=Sub/../../sibling/FromSub-rename.md"
+      ],
+      "source": "Owned-rename-6.md",
+      "destination": "Sub/../../sibling/FromSub-rename.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Owned-rename-6.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDYK"
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDQK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDUK"
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-rename-6.md",
+          "Owned-rename-4.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md",
+          "Owned-rename-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md",
+          "Owned-rename-6.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {},
+          "Owned-rename-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {},
+          "Owned-rename-6.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDQK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/FromSub-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDYK"
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDUK"
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Renamed: Owned-rename-6.md -> Sub/../../sibling/FromSub-rename.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "Owned-rename-4.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md",
+          "Owned-rename-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md",
+          "Sub/../../sibling/FromSub-rename.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {},
+          "Owned-rename-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {},
+          "Sub/../../sibling/FromSub-rename.md": {}
+        },
+        "clean": true
+      }
+    },
+    {
+      "id": "rename-7",
+      "args": [
+        "rename",
+        "path=Owned-rename-7.md",
+        "name=../vault/ThroughVault-rename.md"
+      ],
+      "source": "Owned-rename-7.md",
+      "destination": "../vault/ThroughVault-rename.md",
+      "before": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Owned-rename-7.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDcK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDQK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/FromSub-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDYK"
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDUK"
+        }
+      },
+      "before_state": {
+        "files": [
+          "Owned-rename-7.md",
+          "Owned-rename-4.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md",
+          "Owned-rename-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md",
+          "Sub/../../sibling/FromSub-rename.md",
+          "Owned-rename-7.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {},
+          "Owned-rename-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {},
+          "Sub/../../sibling/FromSub-rename.md": {},
+          "Owned-rename-7.md": {}
+        },
+        "clean": true
+      },
+      "after": {
+        "vault/Dot-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAwCg=="
+        },
+        "vault/ThroughVault-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA3Cg=="
+        },
+        "vault/Dot-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDAK"
+        },
+        "vault/Back-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAxCg=="
+        },
+        "vault/Owned-rename-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDQK"
+        },
+        "vault/Sub": {
+          "kind": "directory"
+        },
+        "vault/Back-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDEK"
+        },
+        "vault/ThroughVault-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDcK"
+        },
+        "vault/ParityReady.md": {
+          "kind": "file",
+          "bytes_base64": "SXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K"
+        },
+        "vault/Owned-move-4.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA0Cg=="
+        },
+        "vault/Sub/Nested-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDIK"
+        },
+        "vault/Sub/Nested-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAyCg=="
+        },
+        "sibling/Existing-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSAzCg=="
+        },
+        "sibling/FromSub-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA2Cg=="
+        },
+        "sibling/FromSub-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDYK"
+        },
+        "sibling/Existing-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDMK"
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgbW92ZSA1Cg=="
+        },
+        "owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {
+          "kind": "file",
+          "bytes_base64": "T3duZWQgNDFhM2Y5ZjhiNjk4NDFmMDk4NjgzZGMzYzYwMGMxYWEgcmVuYW1lIDUK"
+        }
+      },
+      "exit_code": 0,
+      "stdout": "Renamed: Owned-rename-7.md -> ../vault/ThroughVault-rename.md\n",
+      "stderr": "",
+      "timed_out": false,
+      "after_state": {
+        "files": [
+          "ThroughVault-rename.md",
+          "Owned-rename-4.md",
+          "Back-rename.md",
+          "Dot-rename.md",
+          "ThroughVault-move.md",
+          "Owned-move-4.md",
+          "Back-move.md",
+          "Dot-move.md",
+          "Sub/Nested-rename.md",
+          "Sub/Nested-move.md",
+          "ParityReady.md"
+        ],
+        "fileCache": [
+          "ParityReady.md",
+          "./Dot-move.md",
+          "Dot-move.md",
+          "Sub/../Back-move.md",
+          "Back-move.md",
+          "Sub/./Nested-move.md",
+          "Sub/Nested-move.md",
+          "../sibling/Existing-move.md",
+          "Owned-move-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md",
+          "Sub/../../sibling/FromSub-move.md",
+          "../vault/ThroughVault-move.md",
+          "ThroughVault-move.md",
+          "./Dot-rename.md",
+          "Dot-rename.md",
+          "Sub/../Back-rename.md",
+          "Back-rename.md",
+          "Sub/./Nested-rename.md",
+          "Sub/Nested-rename.md",
+          "../sibling/Existing-rename.md",
+          "Owned-rename-4.md",
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md",
+          "Sub/../../sibling/FromSub-rename.md",
+          "../vault/ThroughVault-rename.md",
+          "ThroughVault-rename.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "./Dot-move.md": {},
+          "Dot-move.md": {},
+          "Sub/../Back-move.md": {},
+          "Back-move.md": {},
+          "Sub/./Nested-move.md": {},
+          "Sub/Nested-move.md": {},
+          "../sibling/Existing-move.md": {},
+          "Owned-move-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-move.md": {},
+          "Sub/../../sibling/FromSub-move.md": {},
+          "../vault/ThroughVault-move.md": {},
+          "ThroughVault-move.md": {},
+          "./Dot-rename.md": {},
+          "Dot-rename.md": {},
+          "Sub/../Back-rename.md": {},
+          "Back-rename.md": {},
+          "Sub/./Nested-rename.md": {},
+          "Sub/Nested-rename.md": {},
+          "../sibling/Existing-rename.md": {},
+          "Owned-rename-4.md": {},
+          "../owned-41a3f9f8b69841f098683dc3c600c1aa-rename.md": {},
+          "Sub/../../sibling/FromSub-rename.md": {},
+          "../vault/ThroughVault-rename.md": {},
+          "ThroughVault-rename.md": {}
+        },
+        "clean": true
+      }
+    }
+  ],
+  "scope": "Sixteen settled native rename/move pipe, physical tree and vault file inventory cases. Raw metadata ghost keys are preserved as observations and remain pending implementation.",
+  "same_file_cases": [
+    {
+      "args": [
+        "move",
+        "path=Known.md",
+        "to=./Known.md"
+      ],
+      "stdout": "Error: Destination file already exists!\n",
+      "stderr": "",
+      "exit_code": 0,
+      "before_bytes": "T3duZWQgc2FtZS1maWxlIGZpeHR1cmUK",
+      "after_bytes": "T3duZWQgc2FtZS1maWxlIGZpeHR1cmUK"
+    },
+    {
+      "args": [
+        "rename",
+        "path=Known.md",
+        "name=./Known.md"
+      ],
+      "stdout": "Error: Destination file already exists!\n",
+      "stderr": "",
+      "exit_code": 0,
+      "before_bytes": "T3duZWQgc2FtZS1maWxlIGZpeHR1cmUK",
+      "after_bytes": "T3duZWQgc2FtZS1maWxlIGZpeHR1cmUK"
+    }
+  ],
+  "same_file_state": {
+    "files": [
+      "Known.md",
+      "ParityReady.md"
+    ],
+    "fileCache": [
+      "ParityReady.md",
+      "Known.md"
+    ],
+    "clean": true
+  }
+}

@@ -1,0 +1,23 @@
+[package]
+name = "mnemosyne-engine"
+version = "0.1.0"
+edition = "2021"
+description = "Persistent headless application state and vault orchestration"
+license = "Apache-2.0"
+
+[dependencies]
+mnemosyne-core = { path = "../core" }
+mnemosyne-runtime-protocol = { path = "../runtime/protocol" }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+indexmap = { version = "2", features = ["serde"] }
+thiserror = "2"
+time = { version = "0.3.55", features = ["local-offset"] }
+regress = { version = "0.12", features = ["utf16"] }
+diff-match-patch-rs = "=0.5.1"
+serde_yaml = "0.9"
+sha2 = "0.10"
+notify = "8"
+
+[target.'cfg(unix)'.dependencies]
+mnemosyne-runtime = { path = "../runtime" }

@@ -1,0 +1,2438 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+    "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "Real OS credential storage excluded",
+    "request_pacing_seconds": 0.2,
+    "backend": "Enabled core templates insertTemplate(TFile), no chooser or malformed transport. Each target is unique. Dirty/timing observations within one eval, actual events/dirty poll with finite5seconddeadline.",
+    "variables_clock": "Date/time formats [DATE]/[TIME] are deterministic literals; title replacement retains native JS $& behavior.",
+    "fixture_clock": "2026-10-14T00:00:00Z"
+  },
+  "cases": [
+    {
+      "input": {
+        "id": "plain-start",
+        "note": "body\n",
+        "template": "hello\n",
+        "line": 0,
+        "ch": 0,
+        "path": "Target0.md",
+        "template_path": "Templates/Template0.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.5,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "body\n",
+          "anchor": {
+            "line": 0,
+            "ch": 0
+          },
+          "head": {
+            "line": 0,
+            "ch": 0
+          },
+          "viewData": "body\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "immediate": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 4.5999999940395355,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": true,
+          "editor": "hello\nbody\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "hello\nbody\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "settled": {
+          "file_bytes_b64": "aGVsbG8KYm9keQo=",
+          "elapsed_ms": 2014.4000000059605,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "hello\nbody\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "hello\nbody\n",
+          "data": "hello\nbody\n",
+          "lastSavedData": "hello\nbody\n",
+          "properties": {}
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target0.md",
+            "kind": "file",
+            "elapsed_ms": 2010.699999988079
+          }
+        ],
+        "polls": 185,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "hello\nbody\n"
+      },
+      "post_eval_file_bytes": [
+        104,
+        101,
+        108,
+        108,
+        111,
+        10,
+        98,
+        111,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "plain-middle",
+        "note": "body\n",
+        "template": "hello\n",
+        "line": 0,
+        "ch": 2,
+        "path": "Target1.md",
+        "template_path": "Templates/Template1.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.30000001192092896,
+          "active": "Target1.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "body\n",
+          "anchor": {
+            "line": 0,
+            "ch": 2
+          },
+          "head": {
+            "line": 0,
+            "ch": 2
+          },
+          "viewData": "body\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "immediate": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 4.5,
+          "active": "Target1.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "bohello\ndy\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "bohello\ndy\n",
+          "data": "bohello\ndy\n",
+          "lastSavedData": "bohello\ndy\n",
+          "properties": {}
+        },
+        "settled": {
+          "file_bytes_b64": "Ym9oZWxsbwpkeQo=",
+          "elapsed_ms": 15.099999994039536,
+          "active": "Target1.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "bohello\ndy\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "bohello\ndy\n",
+          "data": "bohello\ndy\n",
+          "lastSavedData": "bohello\ndy\n",
+          "properties": {}
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target1.md",
+            "kind": "file",
+            "elapsed_ms": 10.400000005960464
+          }
+        ],
+        "polls": 1,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "bohello\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        98,
+        111,
+        104,
+        101,
+        108,
+        108,
+        111,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "plain-reversed",
+        "note": "abcde\n",
+        "template": "hello\n",
+        "line": 0,
+        "ch": 4,
+        "head_ch": 1,
+        "path": "Target2.md",
+        "template_path": "Templates/Template2.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "YWJjZGUK",
+          "elapsed_ms": 0.29999998211860657,
+          "active": "Target2.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "abcde\n",
+          "anchor": {
+            "line": 0,
+            "ch": 4
+          },
+          "head": {
+            "line": 0,
+            "ch": 1
+          },
+          "viewData": "abcde\n",
+          "data": "abcde\n",
+          "lastSavedData": "abcde\n",
+          "properties": {}
+        },
+        "immediate": {
+          "file_bytes_b64": "YWJjZGUK",
+          "elapsed_ms": 2.399999976158142,
+          "active": "Target2.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "ahello\ne\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "ahello\ne\n",
+          "data": "ahello\ne\n",
+          "lastSavedData": "ahello\ne\n",
+          "properties": {}
+        },
+        "settled": {
+          "file_bytes_b64": "YWhlbGxvCmUK",
+          "elapsed_ms": 36.099999994039536,
+          "active": "Target2.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "ahello\ne\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "ahello\ne\n",
+          "data": "ahello\ne\n",
+          "lastSavedData": "ahello\ne\n",
+          "properties": {}
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target2.md",
+            "kind": "file",
+            "elapsed_ms": 27.299999982118607
+          }
+        ],
+        "polls": 3,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "ahello\ne\n"
+      },
+      "post_eval_file_bytes": [
+        97,
+        104,
+        101,
+        108,
+        108,
+        111,
+        10,
+        101,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "fm-start",
+        "note": "body\n",
+        "template": "---\nnew: value\n---\nTemplate\n",
+        "line": 0,
+        "ch": 0,
+        "path": "Target3.md",
+        "template_path": "Templates/Template3.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.20000001788139343,
+          "active": "Target3.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "body\n",
+          "anchor": {
+            "line": 0,
+            "ch": 0
+          },
+          "head": {
+            "line": 0,
+            "ch": 0
+          },
+          "viewData": "body\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "immediate": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 10.800000011920929,
+          "active": "Target3.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": true,
+          "editor": "---\nnew: value\n---\nTemplate\nbody\n",
+          "anchor": {
+            "line": 4,
+            "ch": 0
+          },
+          "head": {
+            "line": 4,
+            "ch": 0
+          },
+          "viewData": "---\nnew: value\n---\nTemplate\nbody\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCm5ldzogdmFsdWUKLS0tClRlbXBsYXRlCmJvZHkK",
+          "elapsed_ms": 2027.9000000059605,
+          "active": "Target3.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nnew: value\n---\nTemplate\nbody\n",
+          "anchor": {
+            "line": 4,
+            "ch": 0
+          },
+          "head": {
+            "line": 4,
+            "ch": 0
+          },
+          "viewData": "---\nnew: value\n---\nTemplate\nbody\n",
+          "data": "---\nnew: value\n---\nTemplate\nbody\n",
+          "lastSavedData": "---\nnew: value\n---\nTemplate\nbody\n",
+          "properties": {
+            "new": "value"
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target3.md",
+            "kind": "file",
+            "elapsed_ms": 2019.4000000059605
+          }
+        ],
+        "polls": 186,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\nnew: value\n---\nTemplate\nbody\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        110,
+        101,
+        119,
+        58,
+        32,
+        118,
+        97,
+        108,
+        117,
+        101,
+        10,
+        45,
+        45,
+        45,
+        10,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        98,
+        111,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "fm-start-existing",
+        "note": "---\nkeep: old\n---\nbody\n",
+        "template": "---\nnew: value\n---\nTemplate\n",
+        "line": 0,
+        "ch": 0,
+        "path": "Target4.md",
+        "template_path": "Templates/Template4.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAotLS0KYm9keQo=",
+          "elapsed_ms": 0.20000001788139343,
+          "active": "Target4.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\n---\nbody\n",
+          "anchor": {
+            "line": 0,
+            "ch": 0
+          },
+          "head": {
+            "line": 0,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\n---\nbody\n",
+          "data": "---\nkeep: old\n---\nbody\n",
+          "lastSavedData": "---\nkeep: old\n---\nbody\n",
+          "properties": {
+            "keep": "old"
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAotLS0KYm9keQo=",
+          "elapsed_ms": 5,
+          "active": "Target4.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": true,
+          "editor": "---\nnew: value\n---\nTemplate\n---\nkeep: old\n---\nbody\n",
+          "anchor": {
+            "line": 4,
+            "ch": 0
+          },
+          "head": {
+            "line": 4,
+            "ch": 0
+          },
+          "viewData": "---\nnew: value\n---\nTemplate\n---\nkeep: old\n---\nbody\n",
+          "data": "---\nkeep: old\n---\nbody\n",
+          "lastSavedData": "---\nkeep: old\n---\nbody\n",
+          "properties": {
+            "keep": "old"
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCm5ldzogdmFsdWUKLS0tClRlbXBsYXRlCi0tLQprZWVwOiBvbGQKLS0tCmJvZHkK",
+          "elapsed_ms": 2026.2000000178814,
+          "active": "Target4.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nnew: value\n---\nTemplate\n---\nkeep: old\n---\nbody\n",
+          "anchor": {
+            "line": 4,
+            "ch": 0
+          },
+          "head": {
+            "line": 4,
+            "ch": 0
+          },
+          "viewData": "---\nnew: value\n---\nTemplate\n---\nkeep: old\n---\nbody\n",
+          "data": "---\nnew: value\n---\nTemplate\n---\nkeep: old\n---\nbody\n",
+          "lastSavedData": "---\nnew: value\n---\nTemplate\n---\nkeep: old\n---\nbody\n",
+          "properties": {
+            "new": "value"
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target4.md",
+            "kind": "file",
+            "elapsed_ms": 2016.2000000178814
+          }
+        ],
+        "polls": 187,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\nnew: value\n---\nTemplate\n---\nkeep: old\n---\nbody\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        110,
+        101,
+        119,
+        58,
+        32,
+        118,
+        97,
+        108,
+        117,
+        101,
+        10,
+        45,
+        45,
+        45,
+        10,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        45,
+        45,
+        45,
+        10,
+        107,
+        101,
+        101,
+        112,
+        58,
+        32,
+        111,
+        108,
+        100,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "fm-middle",
+        "note": "---\nkeep: old\n---\nbody\n",
+        "template": "---\nnew: value\n---\nTemplate\n",
+        "line": 3,
+        "ch": 2,
+        "path": "Target5.md",
+        "template_path": "Templates/Template5.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAotLS0KYm9keQo=",
+          "elapsed_ms": 0.29999998211860657,
+          "active": "Target5.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\n---\nbody\n",
+          "anchor": {
+            "line": 3,
+            "ch": 2
+          },
+          "head": {
+            "line": 3,
+            "ch": 2
+          },
+          "viewData": "---\nkeep: old\n---\nbody\n",
+          "data": "---\nkeep: old\n---\nbody\n",
+          "lastSavedData": "---\nkeep: old\n---\nbody\n",
+          "properties": {
+            "keep": "old"
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAotLS0KYm9keQo=",
+          "elapsed_ms": 8.199999988079071,
+          "active": "Target5.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 5,
+            "ch": 0
+          },
+          "head": {
+            "line": 5,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "data": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "properties": {
+            "keep": "old",
+            "new": "value"
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZApuZXc6IHZhbHVlCi0tLQpib1RlbXBsYXRlCmR5Cg==",
+          "elapsed_ms": 39.5,
+          "active": "Target5.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 5,
+            "ch": 0
+          },
+          "head": {
+            "line": 5,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "data": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "properties": {
+            "keep": "old",
+            "new": "value"
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target5.md",
+            "kind": "file",
+            "elapsed_ms": 33
+          }
+        ],
+        "polls": 3,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        107,
+        101,
+        101,
+        112,
+        58,
+        32,
+        111,
+        108,
+        100,
+        10,
+        110,
+        101,
+        119,
+        58,
+        32,
+        118,
+        97,
+        108,
+        117,
+        101,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "fm-null",
+        "note": "---\nkeep: old\nfalse: false\nempty: \"\"\n---\nbody\n",
+        "template": "---\nkeep: null\nfalse: null\nempty: null\nnew: null\n---\nTemplate\n",
+        "line": 5,
+        "ch": 2,
+        "path": "Target6.md",
+        "template_path": "Templates/Template6.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZApmYWxzZTogZmFsc2UKZW1wdHk6ICIiCi0tLQpib2R5Cg==",
+          "elapsed_ms": 0.19999998807907104,
+          "active": "Target6.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\nfalse: false\nempty: \"\"\n---\nbody\n",
+          "anchor": {
+            "line": 5,
+            "ch": 2
+          },
+          "head": {
+            "line": 5,
+            "ch": 2
+          },
+          "viewData": "---\nkeep: old\nfalse: false\nempty: \"\"\n---\nbody\n",
+          "data": "---\nkeep: old\nfalse: false\nempty: \"\"\n---\nbody\n",
+          "lastSavedData": "---\nkeep: old\nfalse: false\nempty: \"\"\n---\nbody\n",
+          "properties": {
+            "keep": "old",
+            "false": false,
+            "empty": ""
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZApmYWxzZTogZmFsc2UKZW1wdHk6ICIiCi0tLQpib2R5Cg==",
+          "elapsed_ms": 4.300000011920929,
+          "active": "Target6.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n",
+          "data": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n",
+          "properties": {
+            "keep": "old",
+            "false": null,
+            "empty": null,
+            "new": null
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAoiZmFsc2UiOgplbXB0eToKbmV3OgotLS0KYm9UZW1wbGF0ZQpkeQo=",
+          "elapsed_ms": 26,
+          "active": "Target6.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n",
+          "data": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n",
+          "properties": {
+            "keep": "old",
+            "false": null,
+            "empty": null,
+            "new": null
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target6.md",
+            "kind": "file",
+            "elapsed_ms": 19.69999998807907
+          }
+        ],
+        "polls": 2,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\nkeep: old\n\"false\":\nempty:\nnew:\n---\nboTemplate\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        107,
+        101,
+        101,
+        112,
+        58,
+        32,
+        111,
+        108,
+        100,
+        10,
+        34,
+        102,
+        97,
+        108,
+        115,
+        101,
+        34,
+        58,
+        10,
+        101,
+        109,
+        112,
+        116,
+        121,
+        58,
+        10,
+        110,
+        101,
+        119,
+        58,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "fm-arrays",
+        "note": "---\ntags: [a, b]\n---\nbody\n",
+        "template": "---\ntags: [b, c, a]\n---\nTemplate\n",
+        "line": 3,
+        "ch": 2,
+        "path": "Target7.md",
+        "template_path": "Templates/Template7.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCnRhZ3M6IFthLCBiXQotLS0KYm9keQo=",
+          "elapsed_ms": 0.29999998211860657,
+          "active": "Target7.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\ntags: [a, b]\n---\nbody\n",
+          "anchor": {
+            "line": 3,
+            "ch": 2
+          },
+          "head": {
+            "line": 3,
+            "ch": 2
+          },
+          "viewData": "---\ntags: [a, b]\n---\nbody\n",
+          "data": "---\ntags: [a, b]\n---\nbody\n",
+          "lastSavedData": "---\ntags: [a, b]\n---\nbody\n",
+          "properties": {
+            "tags": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCnRhZ3M6IFthLCBiXQotLS0KYm9keQo=",
+          "elapsed_ms": 5.5999999940395355,
+          "active": "Target7.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "viewData": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n",
+          "data": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n",
+          "properties": {
+            "tags": [
+              "a",
+              "b",
+              "c"
+            ]
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCnRhZ3M6CiAgLSBhCiAgLSBiCiAgLSBjCi0tLQpib1RlbXBsYXRlCmR5Cg==",
+          "elapsed_ms": 16,
+          "active": "Target7.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "viewData": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n",
+          "data": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n",
+          "properties": {
+            "tags": [
+              "a",
+              "b",
+              "c"
+            ]
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target7.md",
+            "kind": "file",
+            "elapsed_ms": 13.400000005960464
+          }
+        ],
+        "polls": 1,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\ntags:\n  - a\n  - b\n  - c\n---\nboTemplate\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        116,
+        97,
+        103,
+        115,
+        58,
+        10,
+        32,
+        32,
+        45,
+        32,
+        97,
+        10,
+        32,
+        32,
+        45,
+        32,
+        98,
+        10,
+        32,
+        32,
+        45,
+        32,
+        99,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "fm-nested-alias",
+        "note": "---\nobj: {keep: 1, scalar: old}\narr: [{a: 1}]\n---\nbody\n",
+        "template": "---\nobj: {new: 2, scalar: new}\narr: [&x {a: 1}, *x]\nref: *x\n---\nTemplate\n",
+        "line": 4,
+        "ch": 2,
+        "path": "Target8.md",
+        "template_path": "Templates/Template8.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCm9iajoge2tlZXA6IDEsIHNjYWxhcjogb2xkfQphcnI6IFt7YTogMX1dCi0tLQpib2R5Cg==",
+          "elapsed_ms": 0.20000001788139343,
+          "active": "Target8.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nobj: {keep: 1, scalar: old}\narr: [{a: 1}]\n---\nbody\n",
+          "anchor": {
+            "line": 4,
+            "ch": 2
+          },
+          "head": {
+            "line": 4,
+            "ch": 2
+          },
+          "viewData": "---\nobj: {keep: 1, scalar: old}\narr: [{a: 1}]\n---\nbody\n",
+          "data": "---\nobj: {keep: 1, scalar: old}\narr: [{a: 1}]\n---\nbody\n",
+          "lastSavedData": "---\nobj: {keep: 1, scalar: old}\narr: [{a: 1}]\n---\nbody\n",
+          "properties": {
+            "obj": {
+              "keep": 1,
+              "scalar": "old"
+            },
+            "arr": [
+              {
+                "a": 1
+              }
+            ]
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCm9iajoge2tlZXA6IDEsIHNjYWxhcjogb2xkfQphcnI6IFt7YTogMX1dCi0tLQpib2R5Cg==",
+          "elapsed_ms": 6.9000000059604645,
+          "active": "Target8.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 12,
+            "ch": 0
+          },
+          "head": {
+            "line": 12,
+            "ch": 0
+          },
+          "viewData": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n",
+          "data": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n",
+          "properties": {
+            "obj": {
+              "keep": 1,
+              "scalar": "new",
+              "new": 2
+            },
+            "arr": [
+              {
+                "a": 1
+              },
+              {
+                "a": 1
+              }
+            ],
+            "ref": {
+              "a": 1
+            }
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCm9iajoKICBrZWVwOiAxCiAgc2NhbGFyOiBuZXcKICBuZXc6IDIKYXJyOgogIC0gYTogMQogIC0gYTogMQpyZWY6CiAgYTogMQotLS0KYm9UZW1wbGF0ZQpkeQo=",
+          "elapsed_ms": 17.700000017881393,
+          "active": "Target8.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 12,
+            "ch": 0
+          },
+          "head": {
+            "line": 12,
+            "ch": 0
+          },
+          "viewData": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n",
+          "data": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n",
+          "properties": {
+            "obj": {
+              "keep": 1,
+              "scalar": "new",
+              "new": 2
+            },
+            "arr": [
+              {
+                "a": 1
+              },
+              {
+                "a": 1
+              }
+            ],
+            "ref": {
+              "a": 1
+            }
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target8.md",
+            "kind": "file",
+            "elapsed_ms": 14.400000005960464
+          }
+        ],
+        "polls": 1,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\nobj:\n  keep: 1\n  scalar: new\n  new: 2\narr:\n  - a: 1\n  - a: 1\nref:\n  a: 1\n---\nboTemplate\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        111,
+        98,
+        106,
+        58,
+        10,
+        32,
+        32,
+        107,
+        101,
+        101,
+        112,
+        58,
+        32,
+        49,
+        10,
+        32,
+        32,
+        115,
+        99,
+        97,
+        108,
+        97,
+        114,
+        58,
+        32,
+        110,
+        101,
+        119,
+        10,
+        32,
+        32,
+        110,
+        101,
+        119,
+        58,
+        32,
+        50,
+        10,
+        97,
+        114,
+        114,
+        58,
+        10,
+        32,
+        32,
+        45,
+        32,
+        97,
+        58,
+        32,
+        49,
+        10,
+        32,
+        32,
+        45,
+        32,
+        97,
+        58,
+        32,
+        49,
+        10,
+        114,
+        101,
+        102,
+        58,
+        10,
+        32,
+        32,
+        97,
+        58,
+        32,
+        49,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "fm-date",
+        "note": "---\ndate: 2020-01-01\n---\nbody\n",
+        "template": "---\ndate: 2030-01-01\n---\nTemplate\n",
+        "line": 3,
+        "ch": 2,
+        "path": "Target9.md",
+        "template_path": "Templates/Template9.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCmRhdGU6IDIwMjAtMDEtMDEKLS0tCmJvZHkK",
+          "elapsed_ms": 0.30000001192092896,
+          "active": "Target9.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\ndate: 2020-01-01\n---\nbody\n",
+          "anchor": {
+            "line": 3,
+            "ch": 2
+          },
+          "head": {
+            "line": 3,
+            "ch": 2
+          },
+          "viewData": "---\ndate: 2020-01-01\n---\nbody\n",
+          "data": "---\ndate: 2020-01-01\n---\nbody\n",
+          "lastSavedData": "---\ndate: 2020-01-01\n---\nbody\n",
+          "properties": {
+            "date": "2020-01-01"
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCmRhdGU6IDIwMjAtMDEtMDEKLS0tCmJvZHkK",
+          "elapsed_ms": 4,
+          "active": "Target9.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 4,
+            "ch": 0
+          },
+          "head": {
+            "line": 4,
+            "ch": 0
+          },
+          "viewData": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n",
+          "data": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n",
+          "properties": {
+            "date": "2030-01-01"
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCmRhdGU6IDIwMzAtMDEtMDEKLS0tCmJvVGVtcGxhdGUKZHkK",
+          "elapsed_ms": 14.300000011920929,
+          "active": "Target9.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 4,
+            "ch": 0
+          },
+          "head": {
+            "line": 4,
+            "ch": 0
+          },
+          "viewData": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n",
+          "data": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n",
+          "properties": {
+            "date": "2030-01-01"
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target9.md",
+            "kind": "file",
+            "elapsed_ms": 11.599999994039536
+          }
+        ],
+        "polls": 1,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\ndate: 2030-01-01\n---\nboTemplate\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        100,
+        97,
+        116,
+        101,
+        58,
+        32,
+        50,
+        48,
+        51,
+        48,
+        45,
+        48,
+        49,
+        45,
+        48,
+        49,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "title-dates",
+        "name": "Money$&.md",
+        "note": "body\n",
+        "template": "{{title}}/{{TITLE}}/{{date}}/{{TIME}}\n",
+        "line": 0,
+        "ch": 0,
+        "path": "Money$&.md",
+        "template_path": "Templates/Template10.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.30000001192092896,
+          "active": "Money$&.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "body\n",
+          "anchor": {
+            "line": 0,
+            "ch": 0
+          },
+          "head": {
+            "line": 0,
+            "ch": 0
+          },
+          "viewData": "body\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "immediate": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 2.5,
+          "active": "Money$&.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": true,
+          "editor": "Money{{title}}/Money{{TITLE}}/DATE/TIME\nbody\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "Money{{title}}/Money{{TITLE}}/DATE/TIME\nbody\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "settled": {
+          "file_bytes_b64": "TW9uZXl7e3RpdGxlfX0vTW9uZXl7e1RJVExFfX0vREFURS9USU1FCmJvZHkK",
+          "elapsed_ms": 2017.5999999940395,
+          "active": "Money$&.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "Money{{title}}/Money{{TITLE}}/DATE/TIME\nbody\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "Money{{title}}/Money{{TITLE}}/DATE/TIME\nbody\n",
+          "data": "Money{{title}}/Money{{TITLE}}/DATE/TIME\nbody\n",
+          "lastSavedData": "Money{{title}}/Money{{TITLE}}/DATE/TIME\nbody\n",
+          "properties": {}
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Money$&.md",
+            "kind": "file",
+            "elapsed_ms": 2013.0999999940395
+          }
+        ],
+        "polls": 186,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "Money{{title}}/Money{{TITLE}}/DATE/TIME\nbody\n"
+      },
+      "post_eval_file_bytes": [
+        77,
+        111,
+        110,
+        101,
+        121,
+        123,
+        123,
+        116,
+        105,
+        116,
+        108,
+        101,
+        125,
+        125,
+        47,
+        77,
+        111,
+        110,
+        101,
+        121,
+        123,
+        123,
+        84,
+        73,
+        84,
+        76,
+        69,
+        125,
+        125,
+        47,
+        68,
+        65,
+        84,
+        69,
+        47,
+        84,
+        73,
+        77,
+        69,
+        10,
+        98,
+        111,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "falsy-null-fm",
+        "note": "body\n",
+        "template": "---\nnull\n---\nTemplate\n",
+        "line": 0,
+        "ch": 2,
+        "path": "Target11.md",
+        "template_path": "Templates/Template11.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.30000001192092896,
+          "active": "Target11.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "body\n",
+          "anchor": {
+            "line": 0,
+            "ch": 2
+          },
+          "head": {
+            "line": 0,
+            "ch": 2
+          },
+          "viewData": "body\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "immediate": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 1.9000000059604645,
+          "active": "Target11.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": true,
+          "editor": "boTemplate\ndy\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "boTemplate\ndy\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "settled": {
+          "file_bytes_b64": "Ym9UZW1wbGF0ZQpkeQo=",
+          "elapsed_ms": 2028.4000000059605,
+          "active": "Target11.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "boTemplate\ndy\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "boTemplate\ndy\n",
+          "data": "boTemplate\ndy\n",
+          "lastSavedData": "boTemplate\ndy\n",
+          "properties": {}
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target11.md",
+            "kind": "file",
+            "elapsed_ms": 2027.9000000059605
+          }
+        ],
+        "polls": 187,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "boTemplate\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        98,
+        111,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "dirty-fm-immediate",
+        "note": "---\nkeep: old\n---\nbody\n",
+        "dirty": "---\nkeep: dirty\n---\nbody\n",
+        "template": "---\nnew: value\n---\nTemplate\n",
+        "line": 3,
+        "ch": 2,
+        "path": "Target12.md",
+        "template_path": "Templates/Template12.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAotLS0KYm9keQo=",
+          "elapsed_ms": 0.19999998807907104,
+          "active": "Target12.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": true,
+          "editor": "---\nkeep: dirty\n---\nbody\n",
+          "anchor": {
+            "line": 3,
+            "ch": 2
+          },
+          "head": {
+            "line": 3,
+            "ch": 2
+          },
+          "viewData": "---\nkeep: dirty\n---\nbody\n",
+          "data": "---\nkeep: old\n---\nbody\n",
+          "lastSavedData": "---\nkeep: old\n---\nbody\n",
+          "properties": {
+            "keep": "old"
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAotLS0KYm9keQo=",
+          "elapsed_ms": 3.4000000059604645,
+          "active": "Target12.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 5,
+            "ch": 0
+          },
+          "head": {
+            "line": 5,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "data": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "properties": {
+            "keep": "old",
+            "new": "value"
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZApuZXc6IHZhbHVlCi0tLQpib1RlbXBsYXRlCmR5Cg==",
+          "elapsed_ms": 36.69999998807907,
+          "active": "Target12.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 5,
+            "ch": 0
+          },
+          "head": {
+            "line": 5,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "data": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "properties": {
+            "keep": "old",
+            "new": "value"
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target12.md",
+            "kind": "file",
+            "elapsed_ms": 32.30000001192093
+          }
+        ],
+        "polls": 3,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        107,
+        101,
+        101,
+        112,
+        58,
+        32,
+        111,
+        108,
+        100,
+        10,
+        110,
+        101,
+        119,
+        58,
+        32,
+        118,
+        97,
+        108,
+        117,
+        101,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "dirty-fm-presave",
+        "note": "---\nkeep: old\n---\nbody\n",
+        "dirty": "---\nkeep: dirty\n---\nbody\n",
+        "presave": true,
+        "template": "---\nnew: value\n---\nTemplate\n",
+        "line": 3,
+        "ch": 2,
+        "path": "Target13.md",
+        "template_path": "Templates/Template13.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCmtlZXA6IGRpcnR5Ci0tLQpib2R5Cg==",
+          "elapsed_ms": 0.19999998807907104,
+          "active": "Target13.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: dirty\n---\nbody\n",
+          "anchor": {
+            "line": 3,
+            "ch": 2
+          },
+          "head": {
+            "line": 3,
+            "ch": 2
+          },
+          "viewData": "---\nkeep: dirty\n---\nbody\n",
+          "data": "---\nkeep: dirty\n---\nbody\n",
+          "lastSavedData": "---\nkeep: dirty\n---\nbody\n",
+          "properties": {
+            "keep": "old"
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCmtlZXA6IGRpcnR5Ci0tLQpib2R5Cg==",
+          "elapsed_ms": 3.899999976158142,
+          "active": "Target13.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 5,
+            "ch": 0
+          },
+          "head": {
+            "line": 5,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "data": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "properties": {
+            "keep": "old",
+            "new": "value"
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZApuZXc6IHZhbHVlCi0tLQpib1RlbXBsYXRlCmR5Cg==",
+          "elapsed_ms": 14.399999976158142,
+          "active": "Target13.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 5,
+            "ch": 0
+          },
+          "head": {
+            "line": 5,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "data": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "lastSavedData": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n",
+          "properties": {
+            "keep": "old",
+            "new": "value"
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target13.md",
+            "kind": "file",
+            "elapsed_ms": 10.299999982118607
+          }
+        ],
+        "polls": 1,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\nkeep: old\nnew: value\n---\nboTemplate\ndy\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        107,
+        101,
+        101,
+        112,
+        58,
+        32,
+        111,
+        108,
+        100,
+        10,
+        110,
+        101,
+        119,
+        58,
+        32,
+        118,
+        97,
+        108,
+        117,
+        101,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        84,
+        101,
+        109,
+        112,
+        108,
+        97,
+        116,
+        101,
+        10,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "preview-plain",
+        "note": "body\n",
+        "template": "hello\n",
+        "line": 0,
+        "ch": 2,
+        "mode": "preview",
+        "path": "Target14.md",
+        "template_path": "Templates/Template14.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.29999998211860657,
+          "active": "Target14.md",
+          "active_editor": true,
+          "mode": "preview",
+          "source": true,
+          "dirty": false,
+          "editor": "body\n",
+          "anchor": {
+            "line": 0,
+            "ch": 2
+          },
+          "head": {
+            "line": 0,
+            "ch": 2
+          },
+          "viewData": "body\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "immediate": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 1.0999999940395355,
+          "active": "Target14.md",
+          "active_editor": true,
+          "mode": "preview",
+          "source": true,
+          "dirty": false,
+          "editor": "bohello\ndy\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "body\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "settled": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 1.0999999940395355,
+          "active": "Target14.md",
+          "active_editor": true,
+          "mode": "preview",
+          "source": true,
+          "dirty": false,
+          "editor": "bohello\ndy\n",
+          "anchor": {
+            "line": 1,
+            "ch": 0
+          },
+          "head": {
+            "line": 1,
+            "ch": 0
+          },
+          "viewData": "body\n",
+          "data": "body\n",
+          "lastSavedData": "body\n",
+          "properties": {}
+        },
+        "events": [],
+        "polls": 0,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "body\n"
+      },
+      "post_eval_file_bytes": [
+        98,
+        111,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "no-editor",
+        "note": "body\n",
+        "template": "hello\n",
+        "line": 0,
+        "ch": 0,
+        "empty": true,
+        "path": "Target15.md",
+        "template_path": "Templates/Template15.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.20000001788139343,
+          "active": null,
+          "active_editor": false,
+          "mode": null,
+          "source": null,
+          "dirty": false,
+          "editor": null,
+          "anchor": null,
+          "head": null,
+          "viewData": null,
+          "data": null,
+          "lastSavedData": null,
+          "properties": null
+        },
+        "immediate": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.4000000059604645,
+          "active": null,
+          "active_editor": false,
+          "mode": null,
+          "source": null,
+          "dirty": false,
+          "editor": null,
+          "anchor": null,
+          "head": null,
+          "viewData": null,
+          "data": null,
+          "lastSavedData": null,
+          "properties": null
+        },
+        "settled": {
+          "file_bytes_b64": "Ym9keQo=",
+          "elapsed_ms": 0.4000000059604645,
+          "active": null,
+          "active_editor": false,
+          "mode": null,
+          "source": null,
+          "dirty": false,
+          "editor": null,
+          "anchor": null,
+          "head": null,
+          "viewData": null,
+          "data": null,
+          "lastSavedData": null,
+          "properties": null
+        },
+        "events": [],
+        "polls": 0,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "body\n"
+      },
+      "post_eval_file_bytes": [
+        98,
+        111,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "bom-crlf",
+        "note": "old\r\nbody\r\n",
+        "template": "﻿hello\r\nnext\r\n",
+        "line": 0,
+        "ch": 0,
+        "path": "Target0.md",
+        "template_path": "Templates/Template0.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "b2xkDQpib2R5DQo=",
+          "elapsed_ms": 0.20000001788139343,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "old\nbody\n",
+          "anchor": {
+            "line": 0,
+            "ch": 0
+          },
+          "head": {
+            "line": 0,
+            "ch": 0
+          },
+          "viewData": "old\nbody\n",
+          "data": "old\r\nbody\r\n",
+          "lastSavedData": "old\r\nbody\r\n",
+          "properties": {}
+        },
+        "immediate": {
+          "file_bytes_b64": "b2xkDQpib2R5DQo=",
+          "elapsed_ms": 3.0999999940395355,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": true,
+          "editor": "hello\nnext\nold\nbody\n",
+          "anchor": {
+            "line": 2,
+            "ch": 0
+          },
+          "head": {
+            "line": 2,
+            "ch": 0
+          },
+          "viewData": "hello\nnext\nold\nbody\n",
+          "data": "old\r\nbody\r\n",
+          "lastSavedData": "old\r\nbody\r\n",
+          "properties": {}
+        },
+        "settled": {
+          "file_bytes_b64": "aGVsbG8KbmV4dApvbGQKYm9keQo=",
+          "elapsed_ms": 2019,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "source",
+          "source": true,
+          "dirty": false,
+          "editor": "hello\nnext\nold\nbody\n",
+          "anchor": {
+            "line": 2,
+            "ch": 0
+          },
+          "head": {
+            "line": 2,
+            "ch": 0
+          },
+          "viewData": "hello\nnext\nold\nbody\n",
+          "data": "hello\nnext\nold\nbody\n",
+          "lastSavedData": "hello\nnext\nold\nbody\n",
+          "properties": {}
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target0.md",
+            "kind": "file",
+            "elapsed_ms": 2009.5
+          }
+        ],
+        "polls": 186,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "hello\nnext\nold\nbody\n"
+      },
+      "post_eval_file_bytes": [
+        104,
+        101,
+        108,
+        108,
+        111,
+        10,
+        110,
+        101,
+        120,
+        116,
+        10,
+        111,
+        108,
+        100,
+        10,
+        98,
+        111,
+        100,
+        121,
+        10
+      ]
+    },
+    {
+      "input": {
+        "id": "preview-fm",
+        "note": "---\nkeep: old\n---\nbody\n",
+        "template": "---\nnew: value\n---\nTemplate\n",
+        "line": 3,
+        "ch": 2,
+        "mode": "preview",
+        "path": "Target0.md",
+        "template_path": "Templates/Template0.md"
+      },
+      "result": {
+        "before": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAotLS0KYm9keQo=",
+          "elapsed_ms": 0.20000001788139343,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "preview",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\n---\nbody\n",
+          "anchor": {
+            "line": 3,
+            "ch": 2
+          },
+          "head": {
+            "line": 3,
+            "ch": 2
+          },
+          "viewData": "---\nkeep: old\n---\nbody\n",
+          "data": "---\nkeep: old\n---\nbody\n",
+          "lastSavedData": "---\nkeep: old\n---\nbody\n",
+          "properties": {
+            "keep": "old"
+          }
+        },
+        "immediate": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZAotLS0KYm9keQo=",
+          "elapsed_ms": 25.5,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "preview",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 4,
+            "ch": 0
+          },
+          "head": {
+            "line": 4,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\nnew: value\n---\nbody\n",
+          "data": "---\nkeep: old\nnew: value\n---\nbody\n",
+          "lastSavedData": "---\nkeep: old\nnew: value\n---\nbody\n",
+          "properties": {
+            "keep": "old",
+            "new": "value"
+          }
+        },
+        "settled": {
+          "file_bytes_b64": "LS0tCmtlZXA6IG9sZApuZXc6IHZhbHVlCi0tLQpib2R5Cg==",
+          "elapsed_ms": 162,
+          "active": "Target0.md",
+          "active_editor": true,
+          "mode": "preview",
+          "source": true,
+          "dirty": false,
+          "editor": "---\nkeep: old\n---\nboTemplate\ndy\n",
+          "anchor": {
+            "line": 4,
+            "ch": 0
+          },
+          "head": {
+            "line": 4,
+            "ch": 0
+          },
+          "viewData": "---\nkeep: old\nnew: value\n---\nbody\n",
+          "data": "---\nkeep: old\nnew: value\n---\nbody\n",
+          "lastSavedData": "---\nkeep: old\nnew: value\n---\nbody\n",
+          "properties": {
+            "keep": "old",
+            "new": "value"
+          }
+        },
+        "events": [
+          {
+            "name": "modify",
+            "path": "Target0.md",
+            "kind": "file",
+            "elapsed_ms": 152.2000000178814
+          }
+        ],
+        "polls": 2,
+        "operation_error": null,
+        "timed_out": false,
+        "saved": "---\nkeep: old\nnew: value\n---\nbody\n"
+      },
+      "post_eval_file_bytes": [
+        45,
+        45,
+        45,
+        10,
+        107,
+        101,
+        101,
+        112,
+        58,
+        32,
+        111,
+        108,
+        100,
+        10,
+        110,
+        101,
+        119,
+        58,
+        32,
+        118,
+        97,
+        108,
+        117,
+        101,
+        10,
+        45,
+        45,
+        45,
+        10,
+        98,
+        111,
+        100,
+        121,
+        10
+      ]
+    }
+  ],
+  "setup": {
+    "process": {
+      "exit_code": 0,
+      "stdout": "PT4geyJlbmFibGVkIjp0cnVlLCJvcHRpb25zIjp7ImZvbGRlciI6IlRlbXBsYXRlcyIsImRhdGVGb3JtYXQiOiJbREFURV0iLCJ0aW1lRm9ybWF0IjoiW1RJTUVdIn19Cg==",
+      "stderr": ""
+    },
+    "result": {
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      }
+    }
+  },
+  "cleanup": {
+    "main": {
+      "pid": 54454,
+      "returncode": 0,
+      "stopped": true,
+      "ps_absent": true
+    },
+    "bom_crlf": {
+      "pid": 59106,
+      "returncode": 0,
+      "stopped": true,
+      "ps_absent": true
+    },
+    "rea_owned_process_groups": "verified",
+    "listeners": "all four offref in finally for every successful case",
+    "preview_fm": {
+      "pid": 63793,
+      "returncode": 0,
+      "stopped": true,
+      "ps_absent": true
+    }
+  },
+  "evidence_ids": [
+    "ev_9fdd62b97fac137dadcc41f361dbd4ed28a234c8dc81f44514cc3e1187eacf88",
+    "ev_d0d97b5f7812b2f4a04ec4dbcac1fd322660ee08a339dcc552ae00593c8b730b",
+    "ev_e30114b89089e0612dbcec795842d9c3b9b5d4953d3972564952fc8630bc7ec6"
+  ],
+  "limitations": [
+    "Elapsed times are observations, not exact scheduler guarantees. Immediate disk samples may race asynchronous IO; settled bytes plus modify readiness are authoritative.",
+    "The first raw-spec capture timed out on BOM/CRLF; base64 JSON spec capture succeeded. Its first11 results are superseded by instrumented capture. No native malformed transport, alert patch or chooser interaction was used.",
+    "JSON snapshots tree-project YAML identity and stringify dates. Alias union identity is evidenced by resulting array length and exact serialized YAML, not properties JSON alone.",
+    "Settled readiness waits for view dirty false and target modify event only when getViewData differs from pre-operation lastSavedData; preview/no-editor finish without events and retain files. No full metadata quiet/readiness claim."
+  ]
+}

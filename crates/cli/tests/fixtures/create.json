@@ -1,0 +1,4926 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "default",
+      "args": [
+        "create"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Untitled.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Untitled.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "name",
+      "args": [
+        "create",
+        "name=New"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "New.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "name-path",
+      "args": [
+        "create",
+        "name=New",
+        "path=Folder///"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Folder/New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/New.md": "",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "path",
+      "args": [
+        "create",
+        "path=Nested/New"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Nested/New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n",
+            "Nested/New.md": ""
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Nested",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "name-slash",
+      "args": [
+        "create",
+        "name=Folder/New"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: name cannot contain \"/\". Use path for a full file path.\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "name-backslash",
+      "args": [
+        "create",
+        "name=Folder\\New"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Folder/New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/New.md": "",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "empty-name",
+      "args": [
+        "create",
+        "name="
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Untitled.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Untitled.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "empty-path",
+      "args": [
+        "create",
+        "path="
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Untitled.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Untitled.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "invalid-colon",
+      "args": [
+        "create",
+        "name=Bad:Name"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File name cannot contain any of the following characters: \\ / :\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "invalid-star",
+      "args": [
+        "create",
+        "name=Bad*Name"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Bad*Name.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Bad*Name.md": "",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "dot-name",
+      "args": [
+        "create",
+        "name=New.md"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "New.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "double-extension",
+      "args": [
+        "create",
+        "name=New.md.md"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "New.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "extension-upper",
+      "args": [
+        "create",
+        "name=New.MD"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "New.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "attachment-ext",
+      "args": [
+        "create",
+        "name=New.txt"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "New.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "canvas",
+      "args": [
+        "create",
+        "name=Board.canvas"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Board.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Board.md": "",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "base",
+      "args": [
+        "create",
+        "name=Data.base"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Data.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Data.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "canvas-enabled",
+      "args": [
+        "create",
+        "name=Board.canvas"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "canvas"
+        ],
+        "feature_plugins": {
+          "canvas": true,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Board.canvas\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Board.canvas": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "base-enabled",
+      "args": [
+        "create",
+        "name=Data.base"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": true
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Data.base\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Data.base": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "canvas-open-enabled",
+      "args": [
+        "create",
+        "name=Board.canvas",
+        "open"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base",
+          "canvas"
+        ],
+        "feature_plugins": {
+          "canvas": true,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Board.canvas\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Board.canvas": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Board.canvas",
+          "editor": null,
+          "file_leaves": [
+            {
+              "path": "Board.canvas",
+              "type": "canvas"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "base-open-enabled",
+      "args": [
+        "create",
+        "name=Data.base",
+        "open"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": true
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Data.base\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Data.base": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Data.base",
+          "editor": null,
+          "file_leaves": [
+            {
+              "path": "Data.base",
+              "type": "bases"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dot-directory",
+      "args": [
+        "create",
+        "path=Folder.v1/New"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Folder.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Folder.md": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "hiddenname",
+      "args": [
+        "create",
+        "name=.hidden"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "TypeError: Cannot read properties of null (reading 'path')\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            ".hidden.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "trailingdot",
+      "args": [
+        "create",
+        "name=New."
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "New.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "whitespace",
+      "args": [
+        "create",
+        "name=  New  "
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "New.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "blankname",
+      "args": [
+        "create",
+        "name=   "
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "TypeError: Cannot read properties of null (reading 'path')\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            ".md": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "rootpath",
+      "args": [
+        "create",
+        "path=/"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "TypeError: Cannot read properties of null (reading 'path')\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            ".md": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "content",
+      "args": [
+        "create",
+        "name=Content",
+        "content=first\\nsecond\\tthird"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Content.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Content.md": "first\nsecond\tthird",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "content-empty",
+      "args": [
+        "create",
+        "name=Content",
+        "content="
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Content.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Content.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "collision",
+      "args": [
+        "create",
+        "name=Existing"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Existing 1.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Existing 1.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "case-collision",
+      "args": [
+        "create",
+        "name=existing"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: existing 1.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "existing 1.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "foldercollision",
+      "args": [
+        "create",
+        "name=Folder.md"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n",
+            "Folder.md/Child.md": "child\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Folder.md",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Folder 1.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Folder 1.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n",
+            "Folder.md/Child.md": "child\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Folder.md",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "overwrite",
+      "args": [
+        "create",
+        "name=Existing",
+        "content=replaced",
+        "overwrite"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Overwrote: Existing.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "replaced",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "overwrite-case",
+      "args": [
+        "create",
+        "name=existing",
+        "content=replaced",
+        "overwrite"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: existing 1.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "existing 1.md": "replaced",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "overwrite-attachment",
+      "args": [
+        "create",
+        "path=attachment.txt",
+        "content=replaced",
+        "overwrite"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Overwrote: attachment.txt\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "replaced",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "overwrite-missing",
+      "args": [
+        "create",
+        "name=Fresh",
+        "overwrite"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Fresh.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Fresh.md": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "open",
+      "args": [
+        "create",
+        "name=Opened",
+        "open"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Opened.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Opened.md": "",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Opened.md",
+          "editor": {
+            "text": "",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Opened.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "newtab-alone",
+      "args": [
+        "create",
+        "name=NewTab",
+        "newtab"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: NewTab.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "NewTab.md": "",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "open-newtab",
+      "args": [
+        "create",
+        "name=OpenedTab",
+        "open",
+        "newtab"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: OpenedTab.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "OpenedTab.md": "",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "OpenedTab.md",
+          "editor": {
+            "text": "",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "OpenedTab.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "open-existing",
+      "args": [
+        "create",
+        "name=OpenExisting",
+        "open"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Folder/Other.md",
+          "editor": {
+            "text": "other\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Folder/Other.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: OpenExisting.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "OpenExisting.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "OpenExisting.md",
+          "editor": {
+            "text": "",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "OpenExisting.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "open-existing-newtab",
+      "args": [
+        "create",
+        "name=OpenTab",
+        "open",
+        "newtab"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Folder/Other.md",
+          "editor": {
+            "text": "other\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Folder/Other.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: OpenTab.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "OpenTab.md": "",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "OpenTab.md",
+          "editor": {
+            "text": "",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Folder/Other.md",
+              "type": "markdown"
+            },
+            {
+              "path": "OpenTab.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "overwrite-open",
+      "args": [
+        "create",
+        "name=Existing",
+        "content=updated",
+        "overwrite",
+        "open"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Folder/Other.md",
+          "editor": {
+            "text": "other\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Folder/Other.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Overwrote: Existing.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "updated",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Existing.md",
+          "editor": {
+            "text": "updated",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Existing.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "alias-open",
+      "args": [
+        "create:open",
+        "name=Alias"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Alias.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Alias.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Alias.md",
+          "editor": {
+            "text": "",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Alias.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "setting-folder",
+      "args": [
+        "create",
+        "name=SettingFolder"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "folder",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: SettingFolder.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "SettingFolder.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "setting-current",
+      "args": [
+        "create",
+        "name=SettingCurrent"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "current",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Folder/Other.md",
+          "editor": {
+            "text": "other\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Folder/Other.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: SettingCurrent.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "SettingCurrent.md": "",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Folder/Other.md",
+          "editor": {
+            "text": "other\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "file_leaves": [
+            {
+              "path": "Folder/Other.md",
+              "type": "markdown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "template-disabled",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=Basic"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Templates plugin is not enabled.\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-basic",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=Basic",
+        "content=ignored"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Templated.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Templated.md": "Title=Templated\nDATE=CONST TIME=CLOCK\n",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-path-title",
+      "args": [
+        "create",
+        "path=Nested/Title.md",
+        "template=Basic"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Nested/Title.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n",
+            "Nested/Title.md": "Title=Title\nDATE=CONST TIME=CLOCK\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Nested",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-title-dollar",
+      "args": [
+        "create",
+        "name=Money$&",
+        "template=Basic"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Money$&.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Money$&.md": "Title=Money{{title}}\nDATE=CONST TIME=CLOCK\n",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-title-spaces",
+      "args": [
+        "create",
+        "name=  Title  ",
+        "template=Basic"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Title.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Title.md": "Title=  Title  \nDATE=CONST TIME=CLOCK\n",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-case",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=basic"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Templated.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Templated.md": "Title=Templated\nDATE=CONST TIME=CLOCK\n",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-nested",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=Sub/Nested"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Templated.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Templated.md": "Nested Templated {{unknown}}\n",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-defaults",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=Defaults"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Templated.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Templated.md": "DATE/TIME/DATE/TIME\n",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-bom",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=BOM"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Templated.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Templated.md": "BOM Templated\r\n",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-missing",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=Missing"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Template \"Missing\" not found.\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-name-extension",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=Basic.md"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "Templates",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Templated.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Templated.md": "Title=Templated\nDATE=CONST TIME=CLOCK\n",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-no-folder",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=Basic"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: No template folder configured.\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "template-missing-folder",
+      "args": [
+        "create",
+        "name=Templated",
+        "template=Basic"
+      ],
+      "config": {
+        "enabled": true,
+        "options": {
+          "folder": "MissingFolder",
+          "dateFormat": "[DATE]",
+          "timeFormat": "[TIME]"
+        },
+        "creators": [
+          "md",
+          "base"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Template folder \"MissingFolder\" not found.\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "Folder/Other.md": "other\n",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    }
+  ],
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "source_anchors": [
+    {
+      "name": "handler",
+      "byte_range": [
+        1673464,
+        1675346
+      ]
+    },
+    {
+      "name": "new-file",
+      "byte_range": [
+        1793244,
+        1793814
+      ]
+    },
+    {
+      "name": "available-path",
+      "byte_range": [
+        1432539,
+        1432675
+      ]
+    },
+    {
+      "name": "template-resolver",
+      "byte_range": [
+        3780934,
+        3781602
+      ]
+    },
+    {
+      "name": "template-render",
+      "byte_range": [
+        1603201,
+        1603536
+      ]
+    },
+    {
+      "name": "normalizer",
+      "byte_range": [
+        548372,
+        548421
+      ]
+    }
+  ],
+  "coverage": "57 isolated runtime create cases: exact pipe output, saved bytes/directories and editor/session leaves. Locale/platform path rules, dirty-editor concurrency and plugin session registration lifetime remain pending."
+}

@@ -1,0 +1,628 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "isolation_proof": {
+    "vault": "/home/user/reference/run-yp7frmzs/vault",
+    "profile": "/home/user/reference/run-yp7frmzs/profile",
+    "use_mock_keychain": true
+  },
+  "authored_plugin_sha256": "0d3d90de21707f52f821a9b57e6c4afe3de6c23191ef1e7b9e53f46acbe509d8",
+  "load": {
+    "loaded": true
+  },
+  "cases": [
+    {
+      "id": "short-md",
+      "class": "TFile",
+      "method": "getShortName",
+      "result": {
+        "type": "string",
+        "units": [
+          66,
+          65,
+          83,
+          69
+        ]
+      },
+      "log": [
+        "extension",
+        "basename"
+      ]
+    },
+    {
+      "id": "short-uppercase",
+      "class": "TFile",
+      "method": "getShortName",
+      "result": {
+        "type": "string",
+        "units": [
+          78,
+          97,
+          109,
+          101,
+          46,
+          77,
+          68
+        ]
+      },
+      "log": [
+        "extension",
+        "name"
+      ]
+    },
+    {
+      "id": "short-missing",
+      "class": "TFile",
+      "method": "getShortName",
+      "result": {
+        "type": "undefined"
+      },
+      "log": []
+    },
+    {
+      "id": "short-object",
+      "class": "TFile",
+      "method": "getShortName",
+      "result": {
+        "type": "object",
+        "same_input": true,
+        "array": false
+      },
+      "log": []
+    },
+    {
+      "id": "short-null",
+      "class": "TFile",
+      "method": "getShortName",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of null (reading 'extension')"
+      },
+      "log": []
+    },
+    {
+      "id": "short-undefined",
+      "class": "TFile",
+      "method": "getShortName",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of undefined (reading 'extension')"
+      },
+      "log": []
+    },
+    {
+      "id": "short-extension-throws",
+      "class": "TFile",
+      "method": "getShortName",
+      "error": {
+        "name": "Error",
+        "message": "owned getter fault"
+      },
+      "log": [
+        "extension"
+      ]
+    },
+    {
+      "id": "toString-text",
+      "class": "TFile",
+      "method": "toString",
+      "result": {
+        "type": "string",
+        "units": [
+          70,
+          111,
+          108,
+          100,
+          101,
+          114,
+          47,
+          65,
+          46,
+          109,
+          100
+        ]
+      },
+      "log": [
+        "path"
+      ]
+    },
+    {
+      "id": "toString-lone",
+      "class": "TFile",
+      "method": "toString",
+      "result": {
+        "type": "string",
+        "units": [
+          55296
+        ]
+      },
+      "log": []
+    },
+    {
+      "id": "toString-missing",
+      "class": "TFile",
+      "method": "toString",
+      "result": {
+        "type": "undefined"
+      },
+      "log": []
+    },
+    {
+      "id": "toString-object",
+      "class": "TFile",
+      "method": "toString",
+      "result": {
+        "type": "object",
+        "same_input": true,
+        "array": false
+      },
+      "log": []
+    },
+    {
+      "id": "toString-number",
+      "class": "TFile",
+      "method": "toString",
+      "result": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": []
+    },
+    {
+      "id": "toString-null",
+      "class": "TFile",
+      "method": "toString",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of null (reading 'path')"
+      },
+      "log": []
+    },
+    {
+      "id": "root-borrowed",
+      "class": "TFolder",
+      "method": "isRoot",
+      "result": {
+        "type": "boolean",
+        "value": true
+      },
+      "log": [
+        "path"
+      ]
+    },
+    {
+      "id": "root-boxed",
+      "class": "TFolder",
+      "method": "isRoot",
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "log": []
+    },
+    {
+      "id": "root-missing",
+      "class": "TFolder",
+      "method": "isRoot",
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "log": []
+    },
+    {
+      "id": "count-plain",
+      "class": "TFolder",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": [
+        "children"
+      ]
+    },
+    {
+      "id": "folder-count-plain",
+      "class": "TFolder",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "0"
+      },
+      "log": []
+    },
+    {
+      "id": "count-missing",
+      "class": "TFolder",
+      "method": "getFileCount",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of undefined (reading 'length')"
+      },
+      "log": []
+    },
+    {
+      "id": "count-real-folder",
+      "class": "TFolder",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "2"
+      },
+      "log": []
+    },
+    {
+      "id": "folder-count-real",
+      "class": "TFolder",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "1"
+      },
+      "log": []
+    },
+    {
+      "id": "rename-root",
+      "class": "TFile",
+      "method": "getNewPathAfterRename",
+      "result": {
+        "type": "string",
+        "units": [
+          78,
+          101,
+          119,
+          32,
+          32,
+          32,
+          46,
+          109,
+          100
+        ]
+      },
+      "log": [
+        "extension",
+        "parent",
+        "parent",
+        "isRoot"
+      ]
+    },
+    {
+      "id": "rename-folder",
+      "class": "TFile",
+      "method": "getNewPathAfterRename",
+      "result": {
+        "type": "string",
+        "units": [
+          70,
+          111,
+          108,
+          100,
+          101,
+          114,
+          47,
+          78,
+          101,
+          119,
+          46,
+          109,
+          100
+        ]
+      },
+      "log": [
+        "extension",
+        "parent",
+        "parent",
+        "isRoot",
+        "parent",
+        "parent.path"
+      ]
+    },
+    {
+      "id": "rename-detached",
+      "class": "TFile",
+      "method": "getNewPathAfterRename",
+      "result": {
+        "type": "string",
+        "units": []
+      },
+      "log": []
+    },
+    {
+      "id": "rename-number",
+      "class": "TFile",
+      "method": "getNewPathAfterRename",
+      "result": {
+        "type": "string",
+        "units": []
+      },
+      "log": []
+    }
+  ],
+  "constructors": [
+    {
+      "class": "TAbstractFile",
+      "lookup": false,
+      "own": [
+        {
+          "name": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "name": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "same_vault": true
+          }
+        },
+        {
+          "name": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "name": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "class": "TFile",
+      "lookup": false,
+      "own": [
+        {
+          "name": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "name": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "same_vault": true
+          }
+        },
+        {
+          "name": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "name": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "name": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80
+            ]
+          }
+        },
+        {
+          "name": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              109,
+              100
+            ]
+          }
+        },
+        {
+          "name": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ]
+    },
+    {
+      "class": "TFolder",
+      "lookup": false,
+      "own": [
+        {
+          "name": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "name": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "same_vault": true
+          }
+        },
+        {
+          "name": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "name": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "name": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ]
+    }
+  ],
+  "plugin_cleanup": {
+    "exposed": false
+  },
+  "process_cleanup": {
+    "pid": 83728,
+    "stopped": true
+  },
+  "scope": "25 actual borrowed SDK method calls and3 detached constructors. Getter order, strict null/undefined errors, returned object identity and lone units observed. No installed Rust SDK class or arbitrary receiver compatibility certified.",
+  "raw_report_sha256": "bfb8f839d73f2099a1e362f6c5a999c2914544b89631b83e8e910cbfbc14dbef"
+}

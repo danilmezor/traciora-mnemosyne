@@ -1,0 +1,3260 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+    "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9"
+  },
+  "initial_files": {
+    "Typed.md": "---\ndate: !!timestamp 2024-01-02T03:04:05.678+02:30\nbinary: !!binary SGVsbG8=\nset: !!set {red: null, blue: null}\nmap: !!omap [{one: 1}, {two: 2}]\nshared: &shared {a: 1}\nalias: *shared\ninf: .inf\nnegative: -.inf\nnan: .nan\n\"\\uD800\": lone-key\n---\nTyped body.\n"
+  },
+  "selected_paths": [
+    "Typed.md"
+  ],
+  "steps": [
+    {
+      "id": "fresh",
+      "operation": {
+        "type": "create-initial-files"
+      },
+      "result": {
+        "cache": {
+          "Typed.md": {
+            "sections": [
+              {
+                "type": "yaml",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 11,
+                    "col": 3,
+                    "offset": 242
+                  }
+                }
+              },
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 12,
+                    "col": 0,
+                    "offset": 243
+                  },
+                  "end": {
+                    "line": 12,
+                    "col": 11,
+                    "offset": 254
+                  }
+                }
+              }
+            ],
+            "frontmatter": {
+              "date": "2024-01-02T00:34:05.678Z",
+              "binary": {
+                "0": 72,
+                "1": 101,
+                "2": 108,
+                "3": 108,
+                "4": 111
+              },
+              "set": {},
+              "map": {},
+              "shared": {
+                "a": 1
+              },
+              "alias": {
+                "a": 1
+              },
+              "inf": null,
+              "negative": null,
+              "nan": null,
+              "\ud800": "lone-key"
+            },
+            "frontmatterPosition": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 11,
+                "col": 3,
+                "offset": 242
+              }
+            },
+            "frontmatterLinks": []
+          }
+        },
+        "live_files": {
+          "Typed.md": {
+            "mtime": 1792007209000,
+            "size": 255,
+            "hash": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+          }
+        },
+        "stored_files": {
+          "Typed.md": {
+            "mtime": 1792007209000,
+            "size": 255,
+            "hash": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+          }
+        },
+        "stored_metadata": {
+          "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd": {
+            "sections": [
+              {
+                "type": "yaml",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  11,
+                  3,
+                  242
+                ]
+              },
+              {
+                "type": "paragraph",
+                "pos": [
+                  12,
+                  0,
+                  243,
+                  12,
+                  11,
+                  254
+                ]
+              }
+            ],
+            "frontmatter": {
+              "date": "2024-01-02T00:34:05.678Z",
+              "binary": {
+                "0": 72,
+                "1": 101,
+                "2": 108,
+                "3": 108,
+                "4": 111
+              },
+              "set": {},
+              "map": {},
+              "shared": {
+                "a": 1
+              },
+              "alias": {
+                "a": 1
+              },
+              "inf": null,
+              "negative": null,
+              "nan": null,
+              "\ud800": "lone-key"
+            },
+            "frontmatterLinks": [],
+            "frontmatterPos": [
+              0,
+              0,
+              0,
+              11,
+              3,
+              242
+            ]
+          }
+        },
+        "descriptors": {
+          "Typed.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23.600000023841858,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+        ]
+      },
+      "file_bytes": {
+        "Typed.md": [
+          45,
+          45,
+          45,
+          10,
+          100,
+          97,
+          116,
+          101,
+          58,
+          32,
+          33,
+          33,
+          116,
+          105,
+          109,
+          101,
+          115,
+          116,
+          97,
+          109,
+          112,
+          32,
+          50,
+          48,
+          50,
+          52,
+          45,
+          48,
+          49,
+          45,
+          48,
+          50,
+          84,
+          48,
+          51,
+          58,
+          48,
+          52,
+          58,
+          48,
+          53,
+          46,
+          54,
+          55,
+          56,
+          43,
+          48,
+          50,
+          58,
+          51,
+          48,
+          10,
+          98,
+          105,
+          110,
+          97,
+          114,
+          121,
+          58,
+          32,
+          33,
+          33,
+          98,
+          105,
+          110,
+          97,
+          114,
+          121,
+          32,
+          83,
+          71,
+          86,
+          115,
+          98,
+          71,
+          56,
+          61,
+          10,
+          115,
+          101,
+          116,
+          58,
+          32,
+          33,
+          33,
+          115,
+          101,
+          116,
+          32,
+          123,
+          114,
+          101,
+          100,
+          58,
+          32,
+          110,
+          117,
+          108,
+          108,
+          44,
+          32,
+          98,
+          108,
+          117,
+          101,
+          58,
+          32,
+          110,
+          117,
+          108,
+          108,
+          125,
+          10,
+          109,
+          97,
+          112,
+          58,
+          32,
+          33,
+          33,
+          111,
+          109,
+          97,
+          112,
+          32,
+          91,
+          123,
+          111,
+          110,
+          101,
+          58,
+          32,
+          49,
+          125,
+          44,
+          32,
+          123,
+          116,
+          119,
+          111,
+          58,
+          32,
+          50,
+          125,
+          93,
+          10,
+          115,
+          104,
+          97,
+          114,
+          101,
+          100,
+          58,
+          32,
+          38,
+          115,
+          104,
+          97,
+          114,
+          101,
+          100,
+          32,
+          123,
+          97,
+          58,
+          32,
+          49,
+          125,
+          10,
+          97,
+          108,
+          105,
+          97,
+          115,
+          58,
+          32,
+          42,
+          115,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10,
+          105,
+          110,
+          102,
+          58,
+          32,
+          46,
+          105,
+          110,
+          102,
+          10,
+          110,
+          101,
+          103,
+          97,
+          116,
+          105,
+          118,
+          101,
+          58,
+          32,
+          45,
+          46,
+          105,
+          110,
+          102,
+          10,
+          110,
+          97,
+          110,
+          58,
+          32,
+          46,
+          110,
+          97,
+          110,
+          10,
+          34,
+          92,
+          117,
+          68,
+          56,
+          48,
+          48,
+          34,
+          58,
+          32,
+          108,
+          111,
+          110,
+          101,
+          45,
+          107,
+          101,
+          121,
+          10,
+          45,
+          45,
+          45,
+          10,
+          84,
+          121,
+          112,
+          101,
+          100,
+          32,
+          98,
+          111,
+          100,
+          121,
+          46,
+          10
+        ]
+      },
+      "file_sha256": {
+        "Typed.md": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+      },
+      "typed": {
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 11,
+                  "col": 3,
+                  "offset": 242
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 12,
+                  "col": 0,
+                  "offset": 243
+                },
+                "end": {
+                  "line": 12,
+                  "col": 11,
+                  "offset": 254
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "date": "2024-01-02T00:34:05.678Z",
+            "binary": {
+              "0": 72,
+              "1": 101,
+              "2": 108,
+              "3": 108,
+              "4": 111
+            },
+            "set": {},
+            "map": {},
+            "shared": {
+              "a": 1
+            },
+            "alias": {
+              "a": 1
+            },
+            "inf": null,
+            "negative": null,
+            "nan": null,
+            "\ud800": "lone-key"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 11,
+              "col": 3,
+              "offset": 242
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":11,\"col\":3,\"offset\":242}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":12,\"col\":0,\"offset\":243},\"end\":{\"line\":12,\"col\":11,\"offset\":254}}}],\"frontmatter\":{\"date\":\"2024-01-02T00:34:05.678Z\",\"binary\":{\"0\":72,\"1\":101,\"2\":108,\"3\":108,\"4\":111},\"set\":{},\"map\":{},\"shared\":{\"a\":1},\"alias\":{\"a\":1},\"inf\":null,\"negative\":null,\"nan\":null,\"\\ud800\":\"lone-key\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":11,\"col\":3,\"offset\":242}},\"frontmatterLinks\":[]}",
+        "live_descriptor": {
+          "type": "object",
+          "id": 0,
+          "tag": "[object Object]",
+          "constructor": "Object",
+          "properties": [
+            {
+              "key": "sections",
+              "key_units": [
+                115,
+                101,
+                99,
+                116,
+                105,
+                111,
+                110,
+                115
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "object",
+                "id": 1,
+                "tag": "[object Array]",
+                "constructor": "Array",
+                "properties": [
+                  {
+                    "key": "0",
+                    "key_units": [
+                      48
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 2,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "type",
+                          "key_units": [
+                            116,
+                            121,
+                            112,
+                            101
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "string",
+                            "value": "yaml"
+                          }
+                        },
+                        {
+                          "key": "position",
+                          "key_units": [
+                            112,
+                            111,
+                            115,
+                            105,
+                            116,
+                            105,
+                            111,
+                            110
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "object",
+                            "id": 3,
+                            "tag": "[object Object]",
+                            "constructor": "Object",
+                            "properties": [
+                              {
+                                "key": "start",
+                                "key_units": [
+                                  115,
+                                  116,
+                                  97,
+                                  114,
+                                  116
+                                ],
+                                "enumerable": true,
+                                "configurable": true,
+                                "writable": true,
+                                "kind": "data",
+                                "value": {
+                                  "type": "object",
+                                  "id": 4,
+                                  "tag": "[object Object]",
+                                  "constructor": "Object",
+                                  "properties": [
+                                    {
+                                      "key": "line",
+                                      "key_units": [
+                                        108,
+                                        105,
+                                        110,
+                                        101
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    },
+                                    {
+                                      "key": "col",
+                                      "key_units": [
+                                        99,
+                                        111,
+                                        108
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    },
+                                    {
+                                      "key": "offset",
+                                      "key_units": [
+                                        111,
+                                        102,
+                                        102,
+                                        115,
+                                        101,
+                                        116
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "key": "end",
+                                "key_units": [
+                                  101,
+                                  110,
+                                  100
+                                ],
+                                "enumerable": true,
+                                "configurable": true,
+                                "writable": true,
+                                "kind": "data",
+                                "value": {
+                                  "type": "object",
+                                  "id": 5,
+                                  "tag": "[object Object]",
+                                  "constructor": "Object",
+                                  "properties": [
+                                    {
+                                      "key": "line",
+                                      "key_units": [
+                                        108,
+                                        105,
+                                        110,
+                                        101
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    {
+                                      "key": "col",
+                                      "key_units": [
+                                        99,
+                                        111,
+                                        108
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 3
+                                      }
+                                    },
+                                    {
+                                      "key": "offset",
+                                      "key_units": [
+                                        111,
+                                        102,
+                                        102,
+                                        115,
+                                        101,
+                                        116
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 242
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "1",
+                    "key_units": [
+                      49
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 6,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "type",
+                          "key_units": [
+                            116,
+                            121,
+                            112,
+                            101
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "string",
+                            "value": "paragraph"
+                          }
+                        },
+                        {
+                          "key": "position",
+                          "key_units": [
+                            112,
+                            111,
+                            115,
+                            105,
+                            116,
+                            105,
+                            111,
+                            110
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "object",
+                            "id": 7,
+                            "tag": "[object Object]",
+                            "constructor": "Object",
+                            "properties": [
+                              {
+                                "key": "start",
+                                "key_units": [
+                                  115,
+                                  116,
+                                  97,
+                                  114,
+                                  116
+                                ],
+                                "enumerable": true,
+                                "configurable": true,
+                                "writable": true,
+                                "kind": "data",
+                                "value": {
+                                  "type": "object",
+                                  "id": 8,
+                                  "tag": "[object Object]",
+                                  "constructor": "Object",
+                                  "properties": [
+                                    {
+                                      "key": "line",
+                                      "key_units": [
+                                        108,
+                                        105,
+                                        110,
+                                        101
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 12
+                                      }
+                                    },
+                                    {
+                                      "key": "col",
+                                      "key_units": [
+                                        99,
+                                        111,
+                                        108
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    },
+                                    {
+                                      "key": "offset",
+                                      "key_units": [
+                                        111,
+                                        102,
+                                        102,
+                                        115,
+                                        101,
+                                        116
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 243
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "key": "end",
+                                "key_units": [
+                                  101,
+                                  110,
+                                  100
+                                ],
+                                "enumerable": true,
+                                "configurable": true,
+                                "writable": true,
+                                "kind": "data",
+                                "value": {
+                                  "type": "object",
+                                  "id": 9,
+                                  "tag": "[object Object]",
+                                  "constructor": "Object",
+                                  "properties": [
+                                    {
+                                      "key": "line",
+                                      "key_units": [
+                                        108,
+                                        105,
+                                        110,
+                                        101
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 12
+                                      }
+                                    },
+                                    {
+                                      "key": "col",
+                                      "key_units": [
+                                        99,
+                                        111,
+                                        108
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    {
+                                      "key": "offset",
+                                      "key_units": [
+                                        111,
+                                        102,
+                                        102,
+                                        115,
+                                        101,
+                                        116
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 254
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "length",
+                    "key_units": [
+                      108,
+                      101,
+                      110,
+                      103,
+                      116,
+                      104
+                    ],
+                    "enumerable": false,
+                    "configurable": false,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "number",
+                      "value": 2
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "key": "frontmatter",
+              "key_units": [
+                102,
+                114,
+                111,
+                110,
+                116,
+                109,
+                97,
+                116,
+                116,
+                101,
+                114
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "object",
+                "id": 10,
+                "tag": "[object Object]",
+                "constructor": "Object",
+                "properties": [
+                  {
+                    "key": "date",
+                    "key_units": [
+                      100,
+                      97,
+                      116,
+                      101
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 11,
+                      "tag": "[object Date]",
+                      "constructor": "Date",
+                      "iso": "2024-01-02T00:34:05.678Z",
+                      "properties": []
+                    }
+                  },
+                  {
+                    "key": "binary",
+                    "key_units": [
+                      98,
+                      105,
+                      110,
+                      97,
+                      114,
+                      121
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 12,
+                      "tag": "[object Uint8Array]",
+                      "constructor": "Uint8Array",
+                      "bytes": [
+                        72,
+                        101,
+                        108,
+                        108,
+                        111
+                      ],
+                      "properties": [
+                        {
+                          "key": "0",
+                          "key_units": [
+                            48
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 72
+                          }
+                        },
+                        {
+                          "key": "1",
+                          "key_units": [
+                            49
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 101
+                          }
+                        },
+                        {
+                          "key": "2",
+                          "key_units": [
+                            50
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 108
+                          }
+                        },
+                        {
+                          "key": "3",
+                          "key_units": [
+                            51
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 108
+                          }
+                        },
+                        {
+                          "key": "4",
+                          "key_units": [
+                            52
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 111
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "set",
+                    "key_units": [
+                      115,
+                      101,
+                      116
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 13,
+                      "tag": "[object Set]",
+                      "constructor": "Set",
+                      "values": [
+                        {
+                          "type": "string",
+                          "value": "red"
+                        },
+                        {
+                          "type": "string",
+                          "value": "blue"
+                        }
+                      ],
+                      "properties": []
+                    }
+                  },
+                  {
+                    "key": "map",
+                    "key_units": [
+                      109,
+                      97,
+                      112
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 14,
+                      "tag": "[object Map]",
+                      "constructor": "Map",
+                      "entries": [
+                        [
+                          {
+                            "type": "string",
+                            "value": "one"
+                          },
+                          {
+                            "type": "number",
+                            "value": 1
+                          }
+                        ],
+                        [
+                          {
+                            "type": "string",
+                            "value": "two"
+                          },
+                          {
+                            "type": "number",
+                            "value": 2
+                          }
+                        ]
+                      ],
+                      "properties": []
+                    }
+                  },
+                  {
+                    "key": "shared",
+                    "key_units": [
+                      115,
+                      104,
+                      97,
+                      114,
+                      101,
+                      100
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 15,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "a",
+                          "key_units": [
+                            97
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "alias",
+                    "key_units": [
+                      97,
+                      108,
+                      105,
+                      97,
+                      115
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "ref",
+                      "id": 15
+                    }
+                  },
+                  {
+                    "key": "inf",
+                    "key_units": [
+                      105,
+                      110,
+                      102
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "number",
+                      "value": "Infinity"
+                    }
+                  },
+                  {
+                    "key": "negative",
+                    "key_units": [
+                      110,
+                      101,
+                      103,
+                      97,
+                      116,
+                      105,
+                      118,
+                      101
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "number",
+                      "value": "-Infinity"
+                    }
+                  },
+                  {
+                    "key": "nan",
+                    "key_units": [
+                      110,
+                      97,
+                      110
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "number",
+                      "value": "NaN"
+                    }
+                  },
+                  {
+                    "key": "\ud800",
+                    "key_units": [
+                      55296
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "string",
+                      "value": "lone-key"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "key": "frontmatterPosition",
+              "key_units": [
+                102,
+                114,
+                111,
+                110,
+                116,
+                109,
+                97,
+                116,
+                116,
+                101,
+                114,
+                80,
+                111,
+                115,
+                105,
+                116,
+                105,
+                111,
+                110
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "object",
+                "id": 16,
+                "tag": "[object Object]",
+                "constructor": "Object",
+                "properties": [
+                  {
+                    "key": "start",
+                    "key_units": [
+                      115,
+                      116,
+                      97,
+                      114,
+                      116
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 17,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "line",
+                          "key_units": [
+                            108,
+                            105,
+                            110,
+                            101
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        {
+                          "key": "col",
+                          "key_units": [
+                            99,
+                            111,
+                            108
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        {
+                          "key": "offset",
+                          "key_units": [
+                            111,
+                            102,
+                            102,
+                            115,
+                            101,
+                            116
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "end",
+                    "key_units": [
+                      101,
+                      110,
+                      100
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 18,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "line",
+                          "key_units": [
+                            108,
+                            105,
+                            110,
+                            101
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 11
+                          }
+                        },
+                        {
+                          "key": "col",
+                          "key_units": [
+                            99,
+                            111,
+                            108
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 3
+                          }
+                        },
+                        {
+                          "key": "offset",
+                          "key_units": [
+                            111,
+                            102,
+                            102,
+                            115,
+                            101,
+                            116
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 242
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "key": "frontmatterLinks",
+              "key_units": [
+                102,
+                114,
+                111,
+                110,
+                116,
+                109,
+                97,
+                116,
+                116,
+                101,
+                114,
+                76,
+                105,
+                110,
+                107,
+                115
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "object",
+                "id": 19,
+                "tag": "[object Array]",
+                "constructor": "Array",
+                "properties": [
+                  {
+                    "key": "length",
+                    "key_units": [
+                      108,
+                      101,
+                      110,
+                      103,
+                      116,
+                      104
+                    ],
+                    "enumerable": false,
+                    "configurable": false,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "aliases": {
+          "shared_alias_strict": true
+        },
+        "stored_file": {
+          "mtime": 1792007209000,
+          "size": 255,
+          "hash": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+        },
+        "stored_metadata": {
+          "sections": [
+            {
+              "type": "yaml",
+              "pos": [
+                0,
+                0,
+                0,
+                11,
+                3,
+                242
+              ]
+            },
+            {
+              "type": "paragraph",
+              "pos": [
+                12,
+                0,
+                243,
+                12,
+                11,
+                254
+              ]
+            }
+          ],
+          "frontmatter": {
+            "date": "2024-01-02T00:34:05.678Z",
+            "binary": {
+              "0": 72,
+              "1": 101,
+              "2": 108,
+              "3": 108,
+              "4": 111
+            },
+            "set": {},
+            "map": {},
+            "shared": {
+              "a": 1
+            },
+            "alias": {
+              "a": 1
+            },
+            "inf": null,
+            "negative": null,
+            "nan": null,
+            "\ud800": "lone-key"
+          },
+          "frontmatterLinks": [],
+          "frontmatterPos": [
+            0,
+            0,
+            0,
+            11,
+            3,
+            242
+          ]
+        },
+        "stored_json": "{\"sections\":[{\"type\":\"yaml\",\"pos\":[0,0,0,11,3,242]},{\"type\":\"paragraph\",\"pos\":[12,0,243,12,11,254]}],\"frontmatter\":{\"date\":\"2024-01-02T00:34:05.678Z\",\"binary\":{\"0\":72,\"1\":101,\"2\":108,\"3\":108,\"4\":111},\"set\":{},\"map\":{},\"shared\":{\"a\":1},\"alias\":{\"a\":1},\"inf\":null,\"negative\":null,\"nan\":null,\"\\ud800\":\"lone-key\"},\"frontmatterLinks\":[],\"frontmatterPos\":[0,0,0,11,3,242]}",
+        "hash": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd",
+        "clean": true,
+        "commit_barrier": "readonly transaction.done"
+      }
+    },
+    {
+      "id": "restart-unchanged",
+      "operation": {
+        "type": "restart"
+      },
+      "result": {
+        "cache": {
+          "Typed.md": {
+            "sections": [
+              {
+                "type": "yaml",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 11,
+                    "col": 3,
+                    "offset": 242
+                  }
+                }
+              },
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 12,
+                    "col": 0,
+                    "offset": 243
+                  },
+                  "end": {
+                    "line": 12,
+                    "col": 11,
+                    "offset": 254
+                  }
+                }
+              }
+            ],
+            "frontmatter": {
+              "date": "2024-01-02T00:34:05.678Z",
+              "binary": {
+                "0": 72,
+                "1": 101,
+                "2": 108,
+                "3": 108,
+                "4": 111
+              },
+              "set": {},
+              "map": {},
+              "shared": {
+                "a": 1
+              },
+              "alias": {
+                "a": 1
+              },
+              "inf": null,
+              "negative": null,
+              "nan": null,
+              "\ud800": "lone-key"
+            },
+            "frontmatterLinks": [],
+            "v": 1,
+            "frontmatterPosition": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 11,
+                "col": 3,
+                "offset": 242
+              }
+            }
+          }
+        },
+        "live_files": {
+          "Typed.md": {
+            "mtime": 1792007209000,
+            "size": 255,
+            "hash": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+          }
+        },
+        "stored_files": {
+          "Typed.md": {
+            "mtime": 1792007209000,
+            "size": 255,
+            "hash": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+          }
+        },
+        "stored_metadata": {
+          "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd": {
+            "sections": [
+              {
+                "type": "yaml",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  11,
+                  3,
+                  242
+                ]
+              },
+              {
+                "type": "paragraph",
+                "pos": [
+                  12,
+                  0,
+                  243,
+                  12,
+                  11,
+                  254
+                ]
+              }
+            ],
+            "frontmatter": {
+              "date": "2024-01-02T00:34:05.678Z",
+              "binary": {
+                "0": 72,
+                "1": 101,
+                "2": 108,
+                "3": 108,
+                "4": 111
+              },
+              "set": {},
+              "map": {},
+              "shared": {
+                "a": 1
+              },
+              "alias": {
+                "a": 1
+              },
+              "inf": null,
+              "negative": null,
+              "nan": null,
+              "\ud800": "lone-key"
+            },
+            "frontmatterLinks": [],
+            "frontmatterPos": [
+              0,
+              0,
+              0,
+              11,
+              3,
+              242
+            ],
+            "v": 1
+          }
+        },
+        "descriptors": {
+          "Typed.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          }
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 22.69999998807907,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd",
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596"
+        ]
+      },
+      "file_bytes": {
+        "Typed.md": [
+          45,
+          45,
+          45,
+          10,
+          100,
+          97,
+          116,
+          101,
+          58,
+          32,
+          33,
+          33,
+          116,
+          105,
+          109,
+          101,
+          115,
+          116,
+          97,
+          109,
+          112,
+          32,
+          50,
+          48,
+          50,
+          52,
+          45,
+          48,
+          49,
+          45,
+          48,
+          50,
+          84,
+          48,
+          51,
+          58,
+          48,
+          52,
+          58,
+          48,
+          53,
+          46,
+          54,
+          55,
+          56,
+          43,
+          48,
+          50,
+          58,
+          51,
+          48,
+          10,
+          98,
+          105,
+          110,
+          97,
+          114,
+          121,
+          58,
+          32,
+          33,
+          33,
+          98,
+          105,
+          110,
+          97,
+          114,
+          121,
+          32,
+          83,
+          71,
+          86,
+          115,
+          98,
+          71,
+          56,
+          61,
+          10,
+          115,
+          101,
+          116,
+          58,
+          32,
+          33,
+          33,
+          115,
+          101,
+          116,
+          32,
+          123,
+          114,
+          101,
+          100,
+          58,
+          32,
+          110,
+          117,
+          108,
+          108,
+          44,
+          32,
+          98,
+          108,
+          117,
+          101,
+          58,
+          32,
+          110,
+          117,
+          108,
+          108,
+          125,
+          10,
+          109,
+          97,
+          112,
+          58,
+          32,
+          33,
+          33,
+          111,
+          109,
+          97,
+          112,
+          32,
+          91,
+          123,
+          111,
+          110,
+          101,
+          58,
+          32,
+          49,
+          125,
+          44,
+          32,
+          123,
+          116,
+          119,
+          111,
+          58,
+          32,
+          50,
+          125,
+          93,
+          10,
+          115,
+          104,
+          97,
+          114,
+          101,
+          100,
+          58,
+          32,
+          38,
+          115,
+          104,
+          97,
+          114,
+          101,
+          100,
+          32,
+          123,
+          97,
+          58,
+          32,
+          49,
+          125,
+          10,
+          97,
+          108,
+          105,
+          97,
+          115,
+          58,
+          32,
+          42,
+          115,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10,
+          105,
+          110,
+          102,
+          58,
+          32,
+          46,
+          105,
+          110,
+          102,
+          10,
+          110,
+          101,
+          103,
+          97,
+          116,
+          105,
+          118,
+          101,
+          58,
+          32,
+          45,
+          46,
+          105,
+          110,
+          102,
+          10,
+          110,
+          97,
+          110,
+          58,
+          32,
+          46,
+          110,
+          97,
+          110,
+          10,
+          34,
+          92,
+          117,
+          68,
+          56,
+          48,
+          48,
+          34,
+          58,
+          32,
+          108,
+          111,
+          110,
+          101,
+          45,
+          107,
+          101,
+          121,
+          10,
+          45,
+          45,
+          45,
+          10,
+          84,
+          121,
+          112,
+          101,
+          100,
+          32,
+          98,
+          111,
+          100,
+          121,
+          46,
+          10
+        ]
+      },
+      "file_sha256": {
+        "Typed.md": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+      },
+      "typed": {
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 11,
+                  "col": 3,
+                  "offset": 242
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 12,
+                  "col": 0,
+                  "offset": 243
+                },
+                "end": {
+                  "line": 12,
+                  "col": 11,
+                  "offset": 254
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "date": "2024-01-02T00:34:05.678Z",
+            "binary": {
+              "0": 72,
+              "1": 101,
+              "2": 108,
+              "3": 108,
+              "4": 111
+            },
+            "set": {},
+            "map": {},
+            "shared": {
+              "a": 1
+            },
+            "alias": {
+              "a": 1
+            },
+            "inf": null,
+            "negative": null,
+            "nan": null,
+            "\ud800": "lone-key"
+          },
+          "frontmatterLinks": [],
+          "v": 1,
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 11,
+              "col": 3,
+              "offset": 242
+            }
+          }
+        },
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":11,\"col\":3,\"offset\":242}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":12,\"col\":0,\"offset\":243},\"end\":{\"line\":12,\"col\":11,\"offset\":254}}}],\"frontmatter\":{\"date\":\"2024-01-02T00:34:05.678Z\",\"binary\":{\"0\":72,\"1\":101,\"2\":108,\"3\":108,\"4\":111},\"set\":{},\"map\":{},\"shared\":{\"a\":1},\"alias\":{\"a\":1},\"inf\":null,\"negative\":null,\"nan\":null,\"\\ud800\":\"lone-key\"},\"frontmatterLinks\":[],\"v\":1,\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":11,\"col\":3,\"offset\":242}}}",
+        "live_descriptor": {
+          "type": "object",
+          "id": 0,
+          "tag": "[object Object]",
+          "constructor": "Object",
+          "properties": [
+            {
+              "key": "sections",
+              "key_units": [
+                115,
+                101,
+                99,
+                116,
+                105,
+                111,
+                110,
+                115
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "object",
+                "id": 1,
+                "tag": "[object Array]",
+                "constructor": "Array",
+                "properties": [
+                  {
+                    "key": "0",
+                    "key_units": [
+                      48
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 2,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "type",
+                          "key_units": [
+                            116,
+                            121,
+                            112,
+                            101
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "string",
+                            "value": "yaml"
+                          }
+                        },
+                        {
+                          "key": "position",
+                          "key_units": [
+                            112,
+                            111,
+                            115,
+                            105,
+                            116,
+                            105,
+                            111,
+                            110
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "object",
+                            "id": 3,
+                            "tag": "[object Object]",
+                            "constructor": "Object",
+                            "properties": [
+                              {
+                                "key": "start",
+                                "key_units": [
+                                  115,
+                                  116,
+                                  97,
+                                  114,
+                                  116
+                                ],
+                                "enumerable": true,
+                                "configurable": true,
+                                "writable": true,
+                                "kind": "data",
+                                "value": {
+                                  "type": "object",
+                                  "id": 4,
+                                  "tag": "[object Object]",
+                                  "constructor": "Object",
+                                  "properties": [
+                                    {
+                                      "key": "line",
+                                      "key_units": [
+                                        108,
+                                        105,
+                                        110,
+                                        101
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    },
+                                    {
+                                      "key": "col",
+                                      "key_units": [
+                                        99,
+                                        111,
+                                        108
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    },
+                                    {
+                                      "key": "offset",
+                                      "key_units": [
+                                        111,
+                                        102,
+                                        102,
+                                        115,
+                                        101,
+                                        116
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "key": "end",
+                                "key_units": [
+                                  101,
+                                  110,
+                                  100
+                                ],
+                                "enumerable": true,
+                                "configurable": true,
+                                "writable": true,
+                                "kind": "data",
+                                "value": {
+                                  "type": "object",
+                                  "id": 5,
+                                  "tag": "[object Object]",
+                                  "constructor": "Object",
+                                  "properties": [
+                                    {
+                                      "key": "line",
+                                      "key_units": [
+                                        108,
+                                        105,
+                                        110,
+                                        101
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    {
+                                      "key": "col",
+                                      "key_units": [
+                                        99,
+                                        111,
+                                        108
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 3
+                                      }
+                                    },
+                                    {
+                                      "key": "offset",
+                                      "key_units": [
+                                        111,
+                                        102,
+                                        102,
+                                        115,
+                                        101,
+                                        116
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 242
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "1",
+                    "key_units": [
+                      49
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 6,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "type",
+                          "key_units": [
+                            116,
+                            121,
+                            112,
+                            101
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "string",
+                            "value": "paragraph"
+                          }
+                        },
+                        {
+                          "key": "position",
+                          "key_units": [
+                            112,
+                            111,
+                            115,
+                            105,
+                            116,
+                            105,
+                            111,
+                            110
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "object",
+                            "id": 7,
+                            "tag": "[object Object]",
+                            "constructor": "Object",
+                            "properties": [
+                              {
+                                "key": "start",
+                                "key_units": [
+                                  115,
+                                  116,
+                                  97,
+                                  114,
+                                  116
+                                ],
+                                "enumerable": true,
+                                "configurable": true,
+                                "writable": true,
+                                "kind": "data",
+                                "value": {
+                                  "type": "object",
+                                  "id": 8,
+                                  "tag": "[object Object]",
+                                  "constructor": "Object",
+                                  "properties": [
+                                    {
+                                      "key": "line",
+                                      "key_units": [
+                                        108,
+                                        105,
+                                        110,
+                                        101
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 12
+                                      }
+                                    },
+                                    {
+                                      "key": "col",
+                                      "key_units": [
+                                        99,
+                                        111,
+                                        108
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    },
+                                    {
+                                      "key": "offset",
+                                      "key_units": [
+                                        111,
+                                        102,
+                                        102,
+                                        115,
+                                        101,
+                                        116
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 243
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "key": "end",
+                                "key_units": [
+                                  101,
+                                  110,
+                                  100
+                                ],
+                                "enumerable": true,
+                                "configurable": true,
+                                "writable": true,
+                                "kind": "data",
+                                "value": {
+                                  "type": "object",
+                                  "id": 9,
+                                  "tag": "[object Object]",
+                                  "constructor": "Object",
+                                  "properties": [
+                                    {
+                                      "key": "line",
+                                      "key_units": [
+                                        108,
+                                        105,
+                                        110,
+                                        101
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 12
+                                      }
+                                    },
+                                    {
+                                      "key": "col",
+                                      "key_units": [
+                                        99,
+                                        111,
+                                        108
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    {
+                                      "key": "offset",
+                                      "key_units": [
+                                        111,
+                                        102,
+                                        102,
+                                        115,
+                                        101,
+                                        116
+                                      ],
+                                      "enumerable": true,
+                                      "configurable": true,
+                                      "writable": true,
+                                      "kind": "data",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 254
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "length",
+                    "key_units": [
+                      108,
+                      101,
+                      110,
+                      103,
+                      116,
+                      104
+                    ],
+                    "enumerable": false,
+                    "configurable": false,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "number",
+                      "value": 2
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "key": "frontmatter",
+              "key_units": [
+                102,
+                114,
+                111,
+                110,
+                116,
+                109,
+                97,
+                116,
+                116,
+                101,
+                114
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "object",
+                "id": 10,
+                "tag": "[object Object]",
+                "constructor": "Object",
+                "properties": [
+                  {
+                    "key": "date",
+                    "key_units": [
+                      100,
+                      97,
+                      116,
+                      101
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "string",
+                      "value": "2024-01-02T00:34:05.678Z"
+                    }
+                  },
+                  {
+                    "key": "binary",
+                    "key_units": [
+                      98,
+                      105,
+                      110,
+                      97,
+                      114,
+                      121
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 11,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "0",
+                          "key_units": [
+                            48
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 72
+                          }
+                        },
+                        {
+                          "key": "1",
+                          "key_units": [
+                            49
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 101
+                          }
+                        },
+                        {
+                          "key": "2",
+                          "key_units": [
+                            50
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 108
+                          }
+                        },
+                        {
+                          "key": "3",
+                          "key_units": [
+                            51
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 108
+                          }
+                        },
+                        {
+                          "key": "4",
+                          "key_units": [
+                            52
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 111
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "set",
+                    "key_units": [
+                      115,
+                      101,
+                      116
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 12,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": []
+                    }
+                  },
+                  {
+                    "key": "map",
+                    "key_units": [
+                      109,
+                      97,
+                      112
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 13,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": []
+                    }
+                  },
+                  {
+                    "key": "shared",
+                    "key_units": [
+                      115,
+                      104,
+                      97,
+                      114,
+                      101,
+                      100
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 14,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "a",
+                          "key_units": [
+                            97
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "alias",
+                    "key_units": [
+                      97,
+                      108,
+                      105,
+                      97,
+                      115
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 15,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "a",
+                          "key_units": [
+                            97
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "inf",
+                    "key_units": [
+                      105,
+                      110,
+                      102
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  {
+                    "key": "negative",
+                    "key_units": [
+                      110,
+                      101,
+                      103,
+                      97,
+                      116,
+                      105,
+                      118,
+                      101
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  {
+                    "key": "nan",
+                    "key_units": [
+                      110,
+                      97,
+                      110
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  {
+                    "key": "\ud800",
+                    "key_units": [
+                      55296
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "string",
+                      "value": "lone-key"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "key": "frontmatterLinks",
+              "key_units": [
+                102,
+                114,
+                111,
+                110,
+                116,
+                109,
+                97,
+                116,
+                116,
+                101,
+                114,
+                76,
+                105,
+                110,
+                107,
+                115
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "object",
+                "id": 16,
+                "tag": "[object Array]",
+                "constructor": "Array",
+                "properties": [
+                  {
+                    "key": "length",
+                    "key_units": [
+                      108,
+                      101,
+                      110,
+                      103,
+                      116,
+                      104
+                    ],
+                    "enumerable": false,
+                    "configurable": false,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "key": "v",
+              "key_units": [
+                118
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "key": "frontmatterPosition",
+              "key_units": [
+                102,
+                114,
+                111,
+                110,
+                116,
+                109,
+                97,
+                116,
+                116,
+                101,
+                114,
+                80,
+                111,
+                115,
+                105,
+                116,
+                105,
+                111,
+                110
+              ],
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "kind": "data",
+              "value": {
+                "type": "object",
+                "id": 17,
+                "tag": "[object Object]",
+                "constructor": "Object",
+                "properties": [
+                  {
+                    "key": "start",
+                    "key_units": [
+                      115,
+                      116,
+                      97,
+                      114,
+                      116
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 18,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "line",
+                          "key_units": [
+                            108,
+                            105,
+                            110,
+                            101
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        {
+                          "key": "col",
+                          "key_units": [
+                            99,
+                            111,
+                            108
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        {
+                          "key": "offset",
+                          "key_units": [
+                            111,
+                            102,
+                            102,
+                            115,
+                            101,
+                            116
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "end",
+                    "key_units": [
+                      101,
+                      110,
+                      100
+                    ],
+                    "enumerable": true,
+                    "configurable": true,
+                    "writable": true,
+                    "kind": "data",
+                    "value": {
+                      "type": "object",
+                      "id": 19,
+                      "tag": "[object Object]",
+                      "constructor": "Object",
+                      "properties": [
+                        {
+                          "key": "line",
+                          "key_units": [
+                            108,
+                            105,
+                            110,
+                            101
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 11
+                          }
+                        },
+                        {
+                          "key": "col",
+                          "key_units": [
+                            99,
+                            111,
+                            108
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 3
+                          }
+                        },
+                        {
+                          "key": "offset",
+                          "key_units": [
+                            111,
+                            102,
+                            102,
+                            115,
+                            101,
+                            116
+                          ],
+                          "enumerable": true,
+                          "configurable": true,
+                          "writable": true,
+                          "kind": "data",
+                          "value": {
+                            "type": "number",
+                            "value": 242
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "aliases": {
+          "shared_alias_strict": false
+        },
+        "stored_file": {
+          "mtime": 1792007209000,
+          "size": 255,
+          "hash": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd"
+        },
+        "stored_metadata": {
+          "sections": [
+            {
+              "type": "yaml",
+              "pos": [
+                0,
+                0,
+                0,
+                11,
+                3,
+                242
+              ]
+            },
+            {
+              "type": "paragraph",
+              "pos": [
+                12,
+                0,
+                243,
+                12,
+                11,
+                254
+              ]
+            }
+          ],
+          "frontmatter": {
+            "date": "2024-01-02T00:34:05.678Z",
+            "binary": {
+              "0": 72,
+              "1": 101,
+              "2": 108,
+              "3": 108,
+              "4": 111
+            },
+            "set": {},
+            "map": {},
+            "shared": {
+              "a": 1
+            },
+            "alias": {
+              "a": 1
+            },
+            "inf": null,
+            "negative": null,
+            "nan": null,
+            "\ud800": "lone-key"
+          },
+          "frontmatterLinks": [],
+          "frontmatterPos": [
+            0,
+            0,
+            0,
+            11,
+            3,
+            242
+          ],
+          "v": 1
+        },
+        "stored_json": "{\"sections\":[{\"type\":\"yaml\",\"pos\":[0,0,0,11,3,242]},{\"type\":\"paragraph\",\"pos\":[12,0,243,12,11,254]}],\"frontmatter\":{\"date\":\"2024-01-02T00:34:05.678Z\",\"binary\":{\"0\":72,\"1\":101,\"2\":108,\"3\":108,\"4\":111},\"set\":{},\"map\":{},\"shared\":{\"a\":1},\"alias\":{\"a\":1},\"inf\":null,\"negative\":null,\"nan\":null,\"\\ud800\":\"lone-key\"},\"frontmatterLinks\":[],\"frontmatterPos\":[0,0,0,11,3,242],\"v\":1}",
+        "hash": "20e36fb8a65af54f772b04576addfc4bbfa469e6ff83011b266cd7a3b31766fd",
+        "clean": true,
+        "commit_barrier": "readonly transaction.done"
+      }
+    }
+  ],
+  "cleanup": [
+    {
+      "pid": 10290,
+      "returncode": 0,
+      "stopped": true,
+      "reaped": true,
+      "ps_absent": true
+    },
+    {
+      "pid": 10678,
+      "returncode": 0,
+      "stopped": true,
+      "reaped": true,
+      "ps_absent": true
+    }
+  ],
+  "conditions": {
+    "use_mock_keychain": true,
+    "scope": "ONE known-valid typed-frontmatter file, fresh and unchanged same-profile restart.",
+    "readiness": "Initialized, isCacheClean, actual rounded disk/live/filecache stats, two stable turns; readonly IDB transaction.done commit barrier."
+  },
+  "evidence_id": "ev_2ad0f445ee7456b9bd4735377a10deb1b35c0c027b9a3a8ada491e1bd961aa47",
+  "cleanup_group": "REA verified",
+  "limitations": [
+    "One known-valid explicit typed frontmatter file, fresh and unchanged restart only. No cyclic graph or invalid YAML capture.",
+    "Public cache JSON inherently projects fresh typed values; descriptor graph and strict identity comparison establish actual constructors/alias loss. Own keys are preserved using explicit UTF16 code units.",
+    "IDB raw stored fields are actual readonly observations after committed storage; no expected cache import or parser bypass. Descriptor graph IDs are local traversal IDs, not persistent identities."
+  ]
+}

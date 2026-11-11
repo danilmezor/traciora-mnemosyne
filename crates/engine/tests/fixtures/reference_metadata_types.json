@@ -1,0 +1,343 @@
+{
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "initial_files": {
+    "Rich.md": "---\nzeta: last\nTitle: First\nempty:\nblank: \"\"\nnumber: 1.0\nbig: 9007199254740993\ninf: .inf\nbool: true\nlist: [a, null, 1, false]\nstrings: [a, b]\nobj: {a: 1, b: true}\ndate: 2024-01-02\ndatetime: 2024-01-02T03:04\nseconds: 2024-01-02T03:04:05\naliases: [Alias]\ntags: [tag]\nlinks: \"[[Other]]\"\n---\nRich body\n",
+    "Other.md": "---\nTitle: Second\nnumber: 2\nnullOnly:\n3: three\n1: one\n---\nOther body\n",
+    "NoFM.md": "# No frontmatter\n",
+    "Empty.md": "---\n---\nEmpty body\n",
+    "Array.md": "---\n- one\n- two\n---\nArray body\n",
+    "Scalar.md": "---\nplain\n---\nScalar body\n",
+    "Malformed.md": "---\nfoo: [unclosed\n---\nMalformed body\n",
+    "CRLF.md": "﻿---\r\ny: before\r\n---\r\nBody\r\n",
+    "attachment.txt": "---\ntext: attachment\n---\nasset\n"
+  },
+  "initial_types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+  "initial_state": {
+    "active": null,
+    "editor": null,
+    "properties": {
+      "1": {
+        "name": "1",
+        "widget": "text"
+      },
+      "3": {
+        "name": "3",
+        "widget": "text"
+      },
+      "stored": {
+        "name": "Stored",
+        "widget": "checkbox"
+      },
+      "title": {
+        "name": "Title",
+        "widget": "text"
+      },
+      "aliases": {
+        "name": "aliases",
+        "widget": "aliases"
+      },
+      "cssclasses": {
+        "name": "cssclasses",
+        "widget": "multitext"
+      },
+      "tags": {
+        "name": "tags",
+        "widget": "tags"
+      },
+      "zeta": {
+        "name": "zeta",
+        "widget": "text"
+      },
+      "empty": {
+        "name": "empty",
+        "widget": "text"
+      },
+      "blank": {
+        "name": "blank",
+        "widget": "text"
+      },
+      "number": {
+        "name": "number",
+        "widget": "number"
+      },
+      "big": {
+        "name": "big",
+        "widget": "number"
+      },
+      "inf": {
+        "name": "inf",
+        "widget": "number"
+      },
+      "bool": {
+        "name": "bool",
+        "widget": "checkbox"
+      },
+      "list": {
+        "name": "list",
+        "widget": "unknown"
+      },
+      "strings": {
+        "name": "strings",
+        "widget": "multitext"
+      },
+      "obj": {
+        "name": "obj",
+        "widget": "unknown"
+      },
+      "date": {
+        "name": "date",
+        "widget": "date"
+      },
+      "datetime": {
+        "name": "datetime",
+        "widget": "datetime"
+      },
+      "seconds": {
+        "name": "seconds",
+        "widget": "text"
+      },
+      "links": {
+        "name": "links",
+        "widget": "text"
+      },
+      "nullonly": {
+        "name": "nullOnly",
+        "widget": "text"
+      },
+      "y": {
+        "name": "y",
+        "widget": "text"
+      }
+    },
+    "occurrences": {
+      "1": 1,
+      "3": 1,
+      "zeta": 1,
+      "title": 2,
+      "empty": 1,
+      "blank": 1,
+      "number": 2,
+      "big": 1,
+      "inf": 1,
+      "bool": 1,
+      "list": 1,
+      "strings": 1,
+      "obj": 1,
+      "date": 1,
+      "datetime": 1,
+      "seconds": 1,
+      "aliases": 1,
+      "tags": 1,
+      "links": 1,
+      "nullonly": 1,
+      "y": 1
+    },
+    "assigned": {
+      "stored": {
+        "name": "Stored",
+        "widget": "checkbox"
+      },
+      "title": {
+        "name": "Title",
+        "widget": "text"
+      },
+      "aliases": {
+        "name": "aliases",
+        "widget": "aliases"
+      },
+      "cssclasses": {
+        "name": "cssclasses",
+        "widget": "multitext"
+      },
+      "tags": {
+        "name": "tags",
+        "widget": "tags"
+      }
+    }
+  },
+  "type_cases": [
+    {
+      "id": "list",
+      "before_types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"List\": \"multitext\"\n  }\n}",
+      "changes": [
+        [
+          "aliases",
+          "aliases"
+        ],
+        [
+          "cssclasses",
+          "multitext"
+        ],
+        [
+          "tags",
+          "tags"
+        ],
+        [
+          "List",
+          "multitext"
+        ]
+      ]
+    },
+    {
+      "id": "json-array",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"List\": \"multitext\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"List\": \"multitext\",\n    \"Array\": \"multitext\"\n  }\n}",
+      "changes": [
+        [
+          "Array",
+          "multitext"
+        ]
+      ]
+    },
+    {
+      "id": "array-number-type",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"List\": \"multitext\",\n    \"Array\": \"multitext\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"List\": \"multitext\",\n    \"Array\": \"multitext\",\n    \"ArrayNumber\": \"number\"\n  }\n}",
+      "changes": [
+        [
+          "ArrayNumber",
+          "number"
+        ]
+      ]
+    },
+    {
+      "id": "invalid-array-number-type",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"List\": \"multitext\",\n    \"Array\": \"multitext\",\n    \"ArrayNumber\": \"number\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"List\": \"multitext\",\n    \"Array\": \"multitext\",\n    \"ArrayNumber\": \"number\",\n    \"BadArray\": \"number\"\n  }\n}",
+      "changes": [
+        [
+          "BadArray",
+          "number"
+        ]
+      ]
+    },
+    {
+      "id": "number-hex",
+      "before_types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\"\n  }\n}",
+      "changes": [
+        [
+          "aliases",
+          "aliases"
+        ],
+        [
+          "cssclasses",
+          "multitext"
+        ],
+        [
+          "tags",
+          "tags"
+        ],
+        [
+          "Hex",
+          "number"
+        ]
+      ]
+    },
+    {
+      "id": "number-empty",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\"\n  }\n}",
+      "changes": [
+        [
+          "Zero",
+          "number"
+        ]
+      ]
+    },
+    {
+      "id": "number-infinity",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\"\n  }\n}",
+      "changes": [
+        [
+          "Infinity",
+          "number"
+        ]
+      ]
+    },
+    {
+      "id": "checkbox-uppercase",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\"\n  }\n}",
+      "changes": [
+        [
+          "CheckUpper",
+          "checkbox"
+        ]
+      ]
+    },
+    {
+      "id": "checkbox-one",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\"\n  }\n}",
+      "changes": [
+        [
+          "CheckOne",
+          "checkbox"
+        ]
+      ]
+    },
+    {
+      "id": "date-format",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\"\n  }\n}",
+      "changes": [
+        [
+          "Date",
+          "date"
+        ]
+      ]
+    },
+    {
+      "id": "datetime-format",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\",\n    \"DateTime\": \"datetime\"\n  }\n}",
+      "changes": [
+        [
+          "DateTime",
+          "datetime"
+        ]
+      ]
+    },
+    {
+      "id": "unknown-type",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\",\n    \"DateTime\": \"datetime\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\",\n    \"DateTime\": \"datetime\",\n    \"Custom\": \"unknown\"\n  }\n}",
+      "changes": [
+        [
+          "Custom",
+          "unknown"
+        ]
+      ]
+    },
+    {
+      "id": "typed-title-case",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\",\n    \"DateTime\": \"datetime\",\n    \"Custom\": \"unknown\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"number\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\",\n    \"DateTime\": \"datetime\",\n    \"Custom\": \"unknown\"\n  }\n}",
+      "changes": [
+        [
+          "Title",
+          "number"
+        ]
+      ]
+    },
+    {
+      "id": "attachment-type",
+      "before_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"number\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\",\n    \"DateTime\": \"datetime\",\n    \"Custom\": \"unknown\"\n  }\n}",
+      "after_types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"number\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Hex\": \"number\",\n    \"Zero\": \"number\",\n    \"Infinity\": \"number\",\n    \"CheckUpper\": \"checkbox\",\n    \"CheckOne\": \"checkbox\",\n    \"Date\": \"date\",\n    \"DateTime\": \"datetime\",\n    \"Custom\": \"unknown\",\n    \"Asset\": \"number\"\n  }\n}",
+      "changes": [
+        [
+          "Asset",
+          "number"
+        ]
+      ]
+    }
+  ],
+  "source": "target/rea/properties-probes/report-part1.json and report-part2.json"
+}

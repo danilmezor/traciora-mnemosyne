@@ -1,0 +1,348 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "direct_cases": [
+    {
+      "id": "duplicate-emoji",
+      "source": "😀: 1\n😀: 2\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Map keys must be unique at line 2, column 1:\n\n😀: 1\n😀: 2\n^\n",
+          "code": "DUPLICATE_KEY",
+          "pos": [
+            6,
+            7
+          ],
+          "linePos": [
+            {
+              "line": 2,
+              "col": 1
+            },
+            {
+              "line": 2,
+              "col": 2
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "merge-symbol-object",
+      "source": "value: !!merge <<\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "symbol",
+                "string": "Symbol(<<)"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [],
+        "yaml": {
+          "error": {
+            "name": "Error",
+            "message": "Tag not resolved for Symbol value"
+          }
+        },
+        "json": {
+          "value": "{}"
+        }
+      }
+    },
+    {
+      "id": "merge-symbol-root",
+      "source": "!!merge <<\n",
+      "result": {
+        "descriptor": {
+          "type": "symbol",
+          "string": "Symbol(<<)"
+        },
+        "warnings": [],
+        "yaml": {
+          "error": {
+            "name": "Error",
+            "message": "Tag not resolved for Symbol value"
+          }
+        },
+        "json": {}
+      }
+    }
+  ],
+  "mutation_cases": [
+    {
+      "id": "root-array-index-set",
+      "path": "Native0-set.md",
+      "before": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native0-set.md",
+        "name=0",
+        "value=replaced"
+      ],
+      "proof": {
+        "cached": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 5,
+                  "col": 3,
+                  "offset": 88
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 6,
+                  "col": 0,
+                  "offset": 89
+                },
+                "end": {
+                  "line": 6,
+                  "col": 4,
+                  "offset": 93
+                }
+              }
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native0-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "No frontmatter found.\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set 0: replaced\n",
+        "stderr": ""
+      },
+      "after": "---\n- replaced\n- - 72\n  - 105\n- - red\n- one: 1\n---\nbody\n"
+    },
+    {
+      "id": "root-array-index-remove",
+      "path": "Native0-remove.md",
+      "before": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native0-remove.md",
+        "name=0"
+      ],
+      "proof": {
+        "cached": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 5,
+                  "col": 3,
+                  "offset": 88
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 6,
+                  "col": 0,
+                  "offset": 89
+                },
+                "end": {
+                  "line": 6,
+                  "col": 4,
+                  "offset": 93
+                }
+              }
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: 0\n",
+        "stderr": ""
+      },
+      "after": "---\n- \n- - 72\n  - 105\n- - red\n- one: 1\n---\nbody\n"
+    },
+    {
+      "id": "root-array-length-set",
+      "path": "Native1-set.md",
+      "before": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native1-set.md",
+        "name=length",
+        "value=2"
+      ],
+      "proof": {
+        "cached": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 5,
+                  "col": 3,
+                  "offset": 88
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 6,
+                  "col": 0,
+                  "offset": 89
+                },
+                "end": {
+                  "line": 6,
+                  "col": 4,
+                  "offset": 93
+                }
+              }
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native1-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "No frontmatter found.\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set length: 2\n",
+        "stderr": ""
+      },
+      "after": "---\n- 2024-01-02T00:00:00.000Z\n- - 72\n  - 105\n---\nbody\n"
+    },
+    {
+      "id": "root-array-length-remove",
+      "path": "Native1-remove.md",
+      "before": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native1-remove.md",
+        "name=length"
+      ],
+      "proof": {
+        "cached": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 5,
+                  "col": 3,
+                  "offset": 88
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 6,
+                  "col": 0,
+                  "offset": 89
+                },
+                "end": {
+                  "line": 6,
+                  "col": 4,
+                  "offset": 93
+                }
+              }
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "TypeError: Cannot delete property 'length' of [object Array]\n",
+        "stderr": ""
+      },
+      "after": "---\n- !!timestamp 2024-01-02\n- !!binary SGk=\n- !!set {red: null}\n- !!omap [{one: 1}]\n---\nbody\n"
+    }
+  ],
+  "plugin_proof": {
+    "parse": "function",
+    "stringify": "function",
+    "loaded": true
+  },
+  "plugin_cleanup": {
+    "loaded": false,
+    "exposed": false
+  },
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "evidence": "target/rea/yaml-schema-probes/array-callbacks.json; isolated PID55416 stopped/absent; mockkeychain true"
+}

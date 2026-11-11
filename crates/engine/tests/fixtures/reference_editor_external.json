@@ -1,0 +1,122 @@
+{
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "source": "target/rea/text-edit/report.json",
+  "cases": [
+    {
+      "id": "append-open-clean",
+      "path": "Note.md",
+      "old_saved": "body\n",
+      "before": {
+        "text": "body\n",
+        "anchor": {
+          "line": 0,
+          "ch": 2
+        },
+        "head": {
+          "line": 0,
+          "ch": 2
+        }
+      },
+      "new_saved": "body\n\nadded",
+      "after": {
+        "text": "body\n\nadded",
+        "anchor": {
+          "line": 0,
+          "ch": 2
+        },
+        "head": {
+          "line": 0,
+          "ch": 2
+        }
+      }
+    },
+    {
+      "id": "append-open-dirty",
+      "path": "Note.md",
+      "old_saved": "body\n",
+      "before": {
+        "text": "unsaved\nbody\n",
+        "anchor": {
+          "line": 0,
+          "ch": 0
+        },
+        "head": {
+          "line": 0,
+          "ch": 0
+        }
+      },
+      "new_saved": "body\n\nadded",
+      "after": {
+        "text": "unsaved\nbody\n\nadded",
+        "anchor": {
+          "line": 0,
+          "ch": 0
+        },
+        "head": {
+          "line": 0,
+          "ch": 0
+        }
+      }
+    },
+    {
+      "id": "prepend-open-clean",
+      "path": "Note.md",
+      "old_saved": "body\n",
+      "before": {
+        "text": "body\n",
+        "anchor": {
+          "line": 0,
+          "ch": 2
+        },
+        "head": {
+          "line": 0,
+          "ch": 2
+        }
+      },
+      "new_saved": "added\nbody\n",
+      "after": {
+        "text": "added\nbody\n",
+        "anchor": {
+          "line": 0,
+          "ch": 0
+        },
+        "head": {
+          "line": 0,
+          "ch": 0
+        }
+      }
+    },
+    {
+      "id": "prepend-open-dirty",
+      "path": "Note.md",
+      "old_saved": "body\n",
+      "before": {
+        "text": "unsaved\nbody\n",
+        "anchor": {
+          "line": 0,
+          "ch": 0
+        },
+        "head": {
+          "line": 0,
+          "ch": 0
+        }
+      },
+      "new_saved": "added\nbody\n",
+      "after": {
+        "text": "unsaved\nadded\nbody\n",
+        "anchor": {
+          "line": 0,
+          "ch": 0
+        },
+        "head": {
+          "line": 0,
+          "ch": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "Real OS credential storage excluded.",
+    "request_pacing_seconds": 0.2,
+    "measurement": "Mutation and timer observation within one eval. Poll actual dirty flag, finite 5-second deadline. Source waits genuine modify callback; preview awaits saved read after dirty clears. No command drives timer.",
+    "event_scope": "Vault create/modify/rename/delete listeners, installed only after setup create/open completes."
+  },
+  "cases": [
+    {
+      "id": "dirty-source-autosave",
+      "path": "P1Autosave0.md",
+      "mode": "source",
+      "source": true,
+      "initial_text": "original text\n",
+      "editor_text": "unsaved editor text\n",
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "PT4geyJmcmFtZXMiOlt7ImxhYmVsIjoibG9hZGVkIiwiZWxhcHNlZF9tcyI6MCwibW9kZSI6InNvdXJjZSIsInNvdXJjZSI6dHJ1ZSwiZGlydHkiOmZhbHNlLCJlZGl0b3IiOiJvcmlnaW5hbCB0ZXh0XG4iLCJ2aWV3RGF0YSI6Im9yaWdpbmFsIHRleHRcbiIsImxhc3RTYXZlZERhdGEiOiJvcmlnaW5hbCB0ZXh0XG4ifSx7ImxhYmVsIjoiZWRpdG9yLWltbWVkaWF0ZSIsImVsYXBzZWRfbXMiOjEsIm1vZGUiOiJzb3VyY2UiLCJzb3VyY2UiOnRydWUsImRpcnR5Ijp0cnVlLCJlZGl0b3IiOiJ1bnNhdmVkIGVkaXRvciB0ZXh0XG4iLCJ2aWV3RGF0YSI6InVuc2F2ZWQgZWRpdG9yIHRleHRcbiIsImxhc3RTYXZlZERhdGEiOiJvcmlnaW5hbCB0ZXh0XG4ifSx7ImxhYmVsIjoiYWZ0ZXItbWljcm90YXNrIiwiZWxhcHNlZF9tcyI6MS44MDAwMDAwMTE5MjA5MjksIm1vZGUiOiJzb3VyY2UiLCJzb3VyY2UiOnRydWUsImRpcnR5Ijp0cnVlLCJlZGl0b3IiOiJ1bnNhdmVkIGVkaXRvciB0ZXh0XG4iLCJ2aWV3RGF0YSI6InVuc2F2ZWQgZWRpdG9yIHRleHRcbiIsImxhc3RTYXZlZERhdGEiOiJvcmlnaW5hbCB0ZXh0XG4ifSx7ImxhYmVsIjoic2V0dGxlZC1vci1kZWFkbGluZSIsImVsYXBzZWRfbXMiOjIwMTMuOTAwMDAwMDA1OTYwNSwibW9kZSI6InNvdXJjZSIsInNvdXJjZSI6dHJ1ZSwiZGlydHkiOmZhbHNlLCJlZGl0b3IiOiJ1bnNhdmVkIGVkaXRvciB0ZXh0XG4iLCJ2aWV3RGF0YSI6InVuc2F2ZWQgZWRpdG9yIHRleHRcbiIsImxhc3RTYXZlZERhdGEiOiJ1bnNhdmVkIGVkaXRvciB0ZXh0XG4ifV0sImV2ZW50cyI6W3sibmFtZSI6Im1vZGlmeSIsInBhdGgiOiJQMUF1dG9zYXZlMC5tZCIsImtpbmQiOiJmaWxlIiwiZWxhcHNlZF9tcyI6MjAwNC40MDAwMDAwMDU5NjA1fV0sInBvbGxzIjoxODMsInRpbWVkX291dCI6ZmFsc2UsInNhdmVkIjoidW5zYXZlZCBlZGl0b3IgdGV4dFxuIn0K",
+        "stderr": ""
+      },
+      "result": {
+        "frames": [
+          {
+            "label": "loaded",
+            "elapsed_ms": 0,
+            "mode": "source",
+            "source": true,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "editor-immediate",
+            "elapsed_ms": 1,
+            "mode": "source",
+            "source": true,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "unsaved editor text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-microtask",
+            "elapsed_ms": 1.800000011920929,
+            "mode": "source",
+            "source": true,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "unsaved editor text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "settled-or-deadline",
+            "elapsed_ms": 2013.9000000059605,
+            "mode": "source",
+            "source": true,
+            "dirty": false,
+            "editor": "unsaved editor text\n",
+            "viewData": "unsaved editor text\n",
+            "lastSavedData": "unsaved editor text\n"
+          }
+        ],
+        "events": [
+          {
+            "name": "modify",
+            "path": "P1Autosave0.md",
+            "kind": "file",
+            "elapsed_ms": 2004.4000000059605
+          }
+        ],
+        "polls": 183,
+        "timed_out": false,
+        "saved": "unsaved editor text\n"
+      },
+      "post_eval_file_bytes": [
+        117,
+        110,
+        115,
+        97,
+        118,
+        101,
+        100,
+        32,
+        101,
+        100,
+        105,
+        116,
+        111,
+        114,
+        32,
+        116,
+        101,
+        120,
+        116,
+        10
+      ]
+    },
+    {
+      "id": "unchanged-hidden-preview-autosave",
+      "path": "P1Autosave1.md",
+      "mode": "preview",
+      "source": true,
+      "initial_text": "original text\n",
+      "editor_text": "unsaved editor text\n",
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "PT4geyJmcmFtZXMiOlt7ImxhYmVsIjoibG9hZGVkIiwiZWxhcHNlZF9tcyI6MCwibW9kZSI6InByZXZpZXciLCJzb3VyY2UiOnRydWUsImRpcnR5IjpmYWxzZSwiZWRpdG9yIjoib3JpZ2luYWwgdGV4dFxuIiwidmlld0RhdGEiOiJvcmlnaW5hbCB0ZXh0XG4iLCJsYXN0U2F2ZWREYXRhIjoib3JpZ2luYWwgdGV4dFxuIn0seyJsYWJlbCI6ImVkaXRvci1pbW1lZGlhdGUiLCJlbGFwc2VkX21zIjowLjUsIm1vZGUiOiJwcmV2aWV3Iiwic291cmNlIjp0cnVlLCJkaXJ0eSI6dHJ1ZSwiZWRpdG9yIjoidW5zYXZlZCBlZGl0b3IgdGV4dFxuIiwidmlld0RhdGEiOiJvcmlnaW5hbCB0ZXh0XG4iLCJsYXN0U2F2ZWREYXRhIjoib3JpZ2luYWwgdGV4dFxuIn0seyJsYWJlbCI6ImFmdGVyLW1pY3JvdGFzayIsImVsYXBzZWRfbXMiOjAuNzk5OTk5OTk3MDE5NzY3OCwibW9kZSI6InByZXZpZXciLCJzb3VyY2UiOnRydWUsImRpcnR5Ijp0cnVlLCJlZGl0b3IiOiJ1bnNhdmVkIGVkaXRvciB0ZXh0XG4iLCJ2aWV3RGF0YSI6Im9yaWdpbmFsIHRleHRcbiIsImxhc3RTYXZlZERhdGEiOiJvcmlnaW5hbCB0ZXh0XG4ifSx7ImxhYmVsIjoic2V0dGxlZC1vci1kZWFkbGluZSIsImVsYXBzZWRfbXMiOjIwMTkuNSwibW9kZSI6InByZXZpZXciLCJzb3VyY2UiOnRydWUsImRpcnR5IjpmYWxzZSwiZWRpdG9yIjoidW5zYXZlZCBlZGl0b3IgdGV4dFxuIiwidmlld0RhdGEiOiJvcmlnaW5hbCB0ZXh0XG4iLCJsYXN0U2F2ZWREYXRhIjoib3JpZ2luYWwgdGV4dFxuIn1dLCJldmVudHMiOltdLCJwb2xscyI6MTg0LCJ0aW1lZF9vdXQiOmZhbHNlLCJzYXZlZCI6Im9yaWdpbmFsIHRleHRcbiJ9Cg==",
+        "stderr": ""
+      },
+      "result": {
+        "frames": [
+          {
+            "label": "loaded",
+            "elapsed_ms": 0,
+            "mode": "preview",
+            "source": true,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "editor-immediate",
+            "elapsed_ms": 0.5,
+            "mode": "preview",
+            "source": true,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-microtask",
+            "elapsed_ms": 0.7999999970197678,
+            "mode": "preview",
+            "source": true,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "settled-or-deadline",
+            "elapsed_ms": 2019.5,
+            "mode": "preview",
+            "source": true,
+            "dirty": false,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          }
+        ],
+        "events": [],
+        "polls": 184,
+        "timed_out": false,
+        "saved": "original text\n"
+      },
+      "post_eval_file_bytes": [
+        111,
+        114,
+        105,
+        103,
+        105,
+        110,
+        97,
+        108,
+        32,
+        116,
+        101,
+        120,
+        116,
+        10
+      ]
+    }
+  ],
+  "cleanup": {
+    "pid": 38660,
+    "returncode": 0,
+    "stopped": true,
+    "ps_absent": true
+  },
+  "source_evidence": {
+    "existing_timer_trace": "crates/engine/tests/fixtures/reference_markdown_timers.json",
+    "event_source_contract": "target/rea/p1-vault-events/source-contract.json",
+    "method": "Two genuine native timer callbacks with Vault listeners; no filesystem-difference inference."
+  }
+}

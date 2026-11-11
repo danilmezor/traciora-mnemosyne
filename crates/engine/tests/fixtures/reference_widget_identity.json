@@ -1,0 +1,1784 @@
+{
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "owned_profile": true,
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2,
+    "direct_internal_manager": true,
+    "no_plugin_fixture": true,
+    "report_avoids_raw_widget_json_serialization": true,
+    "controlled_native_unset_between_cases": true
+  },
+  "cases": [
+    {
+      "id": "object",
+      "name": "WidgetFixture0",
+      "expression": "({marker:1,nested:{value:1}})",
+      "result": {
+        "before": {
+          "stored": null,
+          "lastSave": 0
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            48
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "marker",
+              "nested"
+            ],
+            "descriptors": [
+              {
+                "key": "marker",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              },
+              {
+                "key": "nested",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "object",
+                "self": false
+              }
+            ]
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "marker",
+              "nested"
+            ],
+            "descriptors": [
+              {
+                "key": "marker",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              },
+              {
+                "key": "nested",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "object",
+                "self": false
+              }
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984949867,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture0\": {\n      \"marker\": 1,\n      \"nested\": {\n        \"value\": 1\n      }\n    }\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture0\": {\n      \"marker\": 1,\n      \"nested\": {\n        \"value\": 1\n      }\n    }\n  }\n}",
+          "lastSave": 1791984949867
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "array",
+      "name": "WidgetFixture1",
+      "expression": "[1,{marker:1},undefined,Symbol(\"array-entry\"),function entry(){}]",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984949971
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Array",
+            "keys": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "length"
+            ],
+            "descriptors": [
+              {
+                "key": "0",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              },
+              {
+                "key": "1",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "object",
+                "self": false
+              },
+              {
+                "key": "2",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "undefined",
+                "self": false
+              },
+              {
+                "key": "3",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "symbol",
+                "self": false
+              },
+              {
+                "key": "4",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "function",
+                "self": false
+              },
+              {
+                "key": "length",
+                "writable": true,
+                "enumerable": false,
+                "configurable": false,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              }
+            ]
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Array",
+            "keys": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "length"
+            ],
+            "descriptors": [
+              {
+                "key": "0",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              },
+              {
+                "key": "1",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "object",
+                "self": false
+              },
+              {
+                "key": "2",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "undefined",
+                "self": false
+              },
+              {
+                "key": "3",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "symbol",
+                "self": false
+              },
+              {
+                "key": "4",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "function",
+                "self": false
+              },
+              {
+                "key": "length",
+                "writable": true,
+                "enumerable": false,
+                "configurable": false,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              }
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984950288,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture1\": [\n      1,\n      {\n        \"marker\": 1\n      },\n      null,\n      null,\n      null\n    ]\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture1\": [\n      1,\n      {\n        \"marker\": 1\n      },\n      null,\n      null,\n      null\n    ]\n  }\n}",
+          "lastSave": 1791984950288
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "undefined",
+      "name": "WidgetFixture2",
+      "expression": "undefined",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984950389
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            50
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "undefined"
+          },
+          "propertyWidget": {
+            "type": "string",
+            "units": [
+              116,
+              101,
+              120,
+              116
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": false,
+          "assignedStrictInput": true,
+          "propertyStrictInput": false,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984950725,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": false,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984950725
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "null",
+      "name": "WidgetFixture3",
+      "expression": "null",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984950830
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            51
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "null"
+          },
+          "propertyWidget": {
+            "type": "string",
+            "units": [
+              116,
+              101,
+              120,
+              116
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": false,
+          "assignedStrictInput": true,
+          "propertyStrictInput": false,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984951160,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture3\": null\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": false,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture3\": null\n  }\n}",
+          "lastSave": 1791984951160
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "symbol",
+      "name": "WidgetFixture4",
+      "expression": "Symbol(\"widget\")",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984951265
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            52
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "symbol",
+            "string": "Symbol(widget)"
+          },
+          "propertyWidget": {
+            "type": "symbol",
+            "string": "Symbol(widget)"
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984951598,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984951598
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "function",
+      "name": "WidgetFixture5",
+      "expression": "function fixtureWidget(){}",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984951702
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            53
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "function",
+            "name": "fixtureWidget"
+          },
+          "propertyWidget": {
+            "type": "function",
+            "name": "fixtureWidget"
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984952025,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984952025
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "bigint",
+      "name": "WidgetFixture6",
+      "expression": "1n",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984952129
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            54
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "bigint",
+            "string": "1"
+          },
+          "propertyWidget": {
+            "type": "bigint",
+            "string": "1"
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984952457,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984952457
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "cycle",
+      "name": "WidgetFixture7",
+      "expression": "(()=>{const x={marker:1};x.self=x;return x})()",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984952560
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            55
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "marker",
+              "self"
+            ],
+            "descriptors": [
+              {
+                "key": "marker",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              },
+              {
+                "key": "self",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "object",
+                "self": true
+              }
+            ]
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "marker",
+              "self"
+            ],
+            "descriptors": [
+              {
+                "key": "marker",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              },
+              {
+                "key": "self",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "object",
+                "self": true
+              }
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984952885,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984952885
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "throwing-to-json",
+      "name": "WidgetFixture8",
+      "expression": "({toJSON(key){calls.push({call:\"toJSON\",key,thisIsWidget:this===widget});throw new Error(\"owned widget toJSON failure\")}})",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984952986
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            56
+          ]
+        ],
+        "calls": [
+          {
+            "call": "toJSON",
+            "key": "WidgetFixture8",
+            "thisIsWidget": true
+          }
+        ],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "toJSON"
+            ],
+            "descriptors": [
+              {
+                "key": "toJSON",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "function",
+                "self": false
+              }
+            ]
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "toJSON"
+            ],
+            "descriptors": [
+              {
+                "key": "toJSON",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "function",
+                "self": false
+              }
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984953314,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984953314
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "throwing-getter",
+      "name": "WidgetFixture9",
+      "expression": "({get first(){calls.push({call:\"first\",thisIsWidget:this===widget});return 1},get second(){calls.push({call:\"second\",thisIsWidget:this===widget});throw new Error(\"owned widget getter failure\")}})",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984953417
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            57
+          ]
+        ],
+        "calls": [
+          {
+            "call": "first",
+            "thisIsWidget": true
+          },
+          {
+            "call": "second",
+            "thisIsWidget": true
+          }
+        ],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "first",
+              "second"
+            ],
+            "descriptors": [
+              {
+                "key": "first",
+                "enumerable": true,
+                "configurable": true,
+                "kind": "accessor",
+                "self": false
+              },
+              {
+                "key": "second",
+                "enumerable": true,
+                "configurable": true,
+                "kind": "accessor",
+                "self": false
+              }
+            ]
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "first",
+              "second"
+            ],
+            "descriptors": [
+              {
+                "key": "first",
+                "enumerable": true,
+                "configurable": true,
+                "kind": "accessor",
+                "self": false
+              },
+              {
+                "key": "second",
+                "enumerable": true,
+                "configurable": true,
+                "kind": "accessor",
+                "self": false
+              }
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984953752,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984953752
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "to-json-undefined",
+      "name": "WidgetFixture10",
+      "expression": "({toJSON(key){calls.push({call:\"toJSON\",key,thisIsWidget:this===widget});return undefined}})",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984953855
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            48
+          ]
+        ],
+        "calls": [
+          {
+            "call": "toJSON",
+            "key": "WidgetFixture10",
+            "thisIsWidget": true
+          }
+        ],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "toJSON"
+            ],
+            "descriptors": [
+              {
+                "key": "toJSON",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "function",
+                "self": false
+              }
+            ]
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Object",
+            "keys": [
+              "toJSON"
+            ],
+            "descriptors": [
+              {
+                "key": "toJSON",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "function",
+                "self": false
+              }
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984954177,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984954177
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "nan",
+      "name": "WidgetFixture11",
+      "expression": "NaN",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984954281
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            49
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "number",
+            "string": "NaN",
+            "isNaN": true
+          },
+          "propertyWidget": {
+            "type": "number",
+            "string": "NaN",
+            "isNaN": true
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": false,
+          "propertyStrictInput": false,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984954611,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture11\": null\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture11\": null\n  }\n}",
+          "lastSave": 1791984954611
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "infinity",
+      "name": "WidgetFixture12",
+      "expression": "Infinity",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984954716
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            50
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "number",
+            "string": "Infinity",
+            "isNaN": false
+          },
+          "propertyWidget": {
+            "type": "number",
+            "string": "Infinity",
+            "isNaN": false
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984955045,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture12\": null\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture12\": null\n  }\n}",
+          "lastSave": 1791984955045
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "false",
+      "name": "WidgetFixture13",
+      "expression": "false",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984955149
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            51
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "boolean",
+            "value": false
+          },
+          "propertyWidget": {
+            "type": "boolean",
+            "value": false
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984955473,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture13\": false\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture13\": false\n  }\n}",
+          "lastSave": 1791984955473
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "lone-string",
+      "name": "WidgetFixture14",
+      "expression": "String.fromCharCode(0xd800)",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984955579
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            52
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "string",
+            "units": [
+              55296
+            ]
+          },
+          "propertyWidget": {
+            "type": "string",
+            "units": [
+              55296
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984955902,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture14\": \"\\ud800\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture14\": \"\\ud800\"\n  }\n}",
+          "lastSave": 1791984955902
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "date",
+      "name": "WidgetFixture15",
+      "expression": "new Date(0)",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984956005
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            53
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Date",
+            "keys": [],
+            "descriptors": []
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Date",
+            "keys": [],
+            "descriptors": []
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984956339,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture15\": \"1970-01-01T00:00:00.000Z\"\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture15\": \"1970-01-01T00:00:00.000Z\"\n  }\n}",
+          "lastSave": 1791984956339
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "map",
+      "name": "WidgetFixture16",
+      "expression": "new Map([[\"a\",1]])",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984956443
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            54
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Map",
+            "keys": [],
+            "descriptors": []
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Map",
+            "keys": [],
+            "descriptors": []
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984956782,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture16\": {}\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture16\": {}\n  }\n}",
+          "lastSave": 1791984956782
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "set",
+      "name": "WidgetFixture17",
+      "expression": "new Set([1])",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984956888
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            55
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Set",
+            "keys": [],
+            "descriptors": []
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Set",
+            "keys": [],
+            "descriptors": []
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984957222,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture17\": {}\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture17\": {}\n  }\n}",
+          "lastSave": 1791984957222
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "id": "binary",
+      "name": "WidgetFixture18",
+      "expression": "new Uint8Array([1,2])",
+      "result": {
+        "before": {
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+          "lastSave": 1791984957326
+        },
+        "unknownFresh": true,
+        "resultType": "undefined",
+        "events": [
+          [
+            119,
+            105,
+            100,
+            103,
+            101,
+            116,
+            102,
+            105,
+            120,
+            116,
+            117,
+            114,
+            101,
+            49,
+            56
+          ]
+        ],
+        "calls": [],
+        "immediate": {
+          "ownAssigned": true,
+          "assigned": {
+            "type": "object",
+            "constructor": "Uint8Array",
+            "keys": [
+              "0",
+              "1"
+            ],
+            "descriptors": [
+              {
+                "key": "0",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              },
+              {
+                "key": "1",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              }
+            ]
+          },
+          "propertyWidget": {
+            "type": "object",
+            "constructor": "Uint8Array",
+            "keys": [
+              "0",
+              "1"
+            ],
+            "descriptors": [
+              {
+                "key": "0",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              },
+              {
+                "key": "1",
+                "writable": true,
+                "enumerable": true,
+                "configurable": true,
+                "kind": "data",
+                "value_type": "number",
+                "self": false
+              }
+            ]
+          },
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "assignedStrictInput": true,
+          "propertyStrictInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "propertiesReplaced": true,
+          "lastSave": 1791984957668,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture18\": {\n      \"0\": 1,\n      \"1\": 2\n    }\n  }\n}"
+        },
+        "settled": {
+          "assignedObjectIsInput": true,
+          "propertyObjectIsInput": true,
+          "knownInfoStable": true,
+          "propertiesStable": true,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetFixture18\": {\n      \"0\": 1,\n      \"1\": 2\n    }\n  }\n}",
+          "lastSave": 1791984957668
+        },
+        "cleanup": {
+          "ownAssigned": false,
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+        }
+      }
+    }
+  ],
+  "mutation_identity": {
+    "storedInitial": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetMutate\": {\n      \"marker\": 1\n    }\n  }\n}",
+    "mutated": {
+      "assignedMarker": 2,
+      "propertyMarker": 2,
+      "infoStable": true,
+      "propsStable": true,
+      "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetMutate\": {\n      \"marker\": 1\n    }\n  }\n}",
+      "events": []
+    },
+    "saved": {
+      "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetMutate\": {\n      \"marker\": 2\n    }\n  }\n}",
+      "events": [],
+      "infoStable": true,
+      "propsStable": true
+    },
+    "repeated": {
+      "assignedInfoStable": true,
+      "firstDisplay": "WidgetMutate",
+      "propertyInfoReplaced": true,
+      "propsReplaced": true,
+      "assignedIsWidget": true,
+      "propertyIsWidget": true,
+      "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"WidgetMutate\": {\n      \"marker\": 2\n    }\n  }\n}",
+      "events": [
+        [
+          119,
+          105,
+          100,
+          103,
+          101,
+          116,
+          109,
+          117,
+          116,
+          97,
+          116,
+          101
+        ]
+      ]
+    },
+    "unset": {
+      "assignedIsNull": true,
+      "propertyFallback": {
+        "name": "WidgetMutate",
+        "widget": "text"
+      },
+      "knownInfoNowFresh": true,
+      "propsReplaced": true,
+      "oldInfoStillOwnsWidget": true,
+      "oldPropsStillOwnInfo": true,
+      "events": [
+        [
+          119,
+          105,
+          100,
+          103,
+          101,
+          116,
+          109,
+          117,
+          116,
+          97,
+          116,
+          101
+        ],
+        [
+          119,
+          105,
+          100,
+          103,
+          101,
+          116,
+          109,
+          117,
+          116,
+          97,
+          116,
+          101
+        ]
+      ],
+      "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}"
+    }
+  },
+  "cleanup": {
+    "pid": 25533,
+    "exit_code": 0,
+    "stopped": true
+  },
+  "source_anchors": [
+    {
+      "artifact": "app.js",
+      "sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+      "byte_range": [
+        1773242,
+        1778731
+      ],
+      "name": "metadata-type-manager"
+    },
+    {
+      "artifact": "app.js",
+      "sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+      "byte_start": 1423577,
+      "name": "vault-write-json"
+    }
+  ],
+  "coverage": {
+    "native_cases": 19,
+    "mutation_phases": [
+      "mutated",
+      "saved",
+      "repeated",
+      "unset"
+    ],
+    "rust_live_widget_sdk_replay": false,
+    "prototype_and_borrowed_receiver_cases": false,
+    "first_contaminated_sequence_preserved": "target/rea/engine-clock/widget-identity-first-report.json",
+    "rust_controller_native19_replay": true,
+    "rust_controller_injected_write_failure": true,
+    "rust_controller_shared_mutation_and_old_map_replay": true,
+    "installed_manager_backend": false,
+    "async_save_and_event_delivery": false
+  }
+}

@@ -1,0 +1,1590 @@
+{
+  "commands": [
+    {
+      "command": "__commands",
+      "flags": {}
+    },
+    {
+      "command": "__completions",
+      "flags": {}
+    },
+    {
+      "command": "__files",
+      "flags": {}
+    },
+    {
+      "command": "aliases",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "verbose": {
+          "value": null,
+          "required": false
+        },
+        "active": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "append",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "content": {
+          "value": "<text>",
+          "required": true
+        },
+        "inline": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "backlinks",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "counts": {
+          "value": null,
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "base:create",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "view": {
+          "value": "<name>",
+          "required": false
+        },
+        "name": {
+          "value": "<name>",
+          "required": false
+        },
+        "content": {
+          "value": "<text>",
+          "required": false
+        },
+        "open": {
+          "value": null,
+          "required": false
+        },
+        "newtab": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "base:query",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "view": {
+          "value": "<name>",
+          "required": false
+        },
+        "format": {
+          "value": "json|csv|tsv|md|paths",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "base:views",
+      "flags": {}
+    },
+    {
+      "command": "bases",
+      "flags": {}
+    },
+    {
+      "command": "bookmark",
+      "flags": {
+        "file": {
+          "value": "<path>",
+          "required": false
+        },
+        "subpath": {
+          "value": "<subpath>",
+          "required": false
+        },
+        "folder": {
+          "value": "<path>",
+          "required": false
+        },
+        "search": {
+          "value": "<query>",
+          "required": false
+        },
+        "url": {
+          "value": "<url>",
+          "required": false
+        },
+        "title": {
+          "value": "<title>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "bookmarks",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "verbose": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "command",
+      "flags": {
+        "id": {
+          "value": "<command-id>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "commands",
+      "flags": {
+        "filter": {
+          "value": "<prefix>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "create",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "content": {
+          "value": "<text>",
+          "required": false
+        },
+        "template": {
+          "value": "<name>",
+          "required": false
+        },
+        "overwrite": {
+          "value": null,
+          "required": false
+        },
+        "open": {
+          "value": null,
+          "required": false
+        },
+        "newtab": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "daily",
+      "flags": {
+        "paneType": {
+          "value": "tab|split|window",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "daily:append",
+      "flags": {
+        "content": {
+          "value": "<text>",
+          "required": true
+        },
+        "inline": {
+          "value": null,
+          "required": false
+        },
+        "open": {
+          "value": null,
+          "required": false
+        },
+        "paneType": {
+          "value": "tab|split|window",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "daily:path",
+      "flags": {}
+    },
+    {
+      "command": "daily:prepend",
+      "flags": {
+        "content": {
+          "value": "<text>",
+          "required": true
+        },
+        "inline": {
+          "value": null,
+          "required": false
+        },
+        "open": {
+          "value": null,
+          "required": false
+        },
+        "paneType": {
+          "value": "tab|split|window",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "daily:read",
+      "flags": {}
+    },
+    {
+      "command": "deadends",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "all": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "delete",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "permanent": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "dev:cdp",
+      "flags": {
+        "method": {
+          "value": "<CDP.method>",
+          "required": true
+        },
+        "params": {
+          "value": "<json>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "dev:console",
+      "flags": {
+        "clear": {
+          "value": null,
+          "required": false
+        },
+        "limit": {
+          "value": "<n>",
+          "required": false
+        },
+        "level": {
+          "value": "log|warn|error|info|debug",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "dev:css",
+      "flags": {
+        "selector": {
+          "value": "<css>",
+          "required": true
+        },
+        "prop": {
+          "value": "<name>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "dev:debug",
+      "flags": {
+        "on": {
+          "value": null,
+          "required": false
+        },
+        "off": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "dev:dom",
+      "flags": {
+        "selector": {
+          "value": "<css>",
+          "required": true
+        },
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "text": {
+          "value": null,
+          "required": false
+        },
+        "inner": {
+          "value": null,
+          "required": false
+        },
+        "all": {
+          "value": null,
+          "required": false
+        },
+        "attr": {
+          "value": "<name>",
+          "required": false
+        },
+        "css": {
+          "value": "<prop>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "dev:errors",
+      "flags": {
+        "clear": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "dev:mobile",
+      "flags": {
+        "on": {
+          "value": null,
+          "required": false
+        },
+        "off": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "dev:screenshot",
+      "flags": {
+        "path": {
+          "value": "<filename>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "devtools",
+      "flags": {}
+    },
+    {
+      "command": "diff",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "from": {
+          "value": "<n>",
+          "required": false
+        },
+        "to": {
+          "value": "<n>",
+          "required": false
+        },
+        "filter": {
+          "value": "local|sync",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "eval",
+      "flags": {
+        "code": {
+          "value": "<javascript>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "file",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "files",
+      "flags": {
+        "folder": {
+          "value": "<path>",
+          "required": false
+        },
+        "ext": {
+          "value": "<extension>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "folder",
+      "flags": {
+        "path": {
+          "value": "<path>",
+          "required": true
+        },
+        "info": {
+          "value": "files|folders|size",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "folders",
+      "flags": {
+        "folder": {
+          "value": "<path>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "help",
+      "flags": {
+        "<command>": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "history",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "history:list",
+      "flags": {}
+    },
+    {
+      "command": "history:open",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "history:read",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "version": {
+          "value": "<n>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "history:restore",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "version": {
+          "value": "<n>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "hotkey",
+      "flags": {
+        "id": {
+          "value": "<command-id>",
+          "required": true
+        },
+        "verbose": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "hotkeys",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "verbose": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "required": false
+        },
+        "all": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "links",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "move",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "to": {
+          "value": "<path>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "open",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "newtab": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "orphans",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "all": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "outline",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "format": {
+          "value": "tree|md|json",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "plugin",
+      "flags": {
+        "id": {
+          "value": "<plugin-id>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "plugin:disable",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "required": true
+        },
+        "filter": {
+          "value": "core|community",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "plugin:enable",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "required": true
+        },
+        "filter": {
+          "value": "core|community",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "plugin:install",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "required": true
+        },
+        "enable": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "plugin:reload",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "plugin:uninstall",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "plugins",
+      "flags": {
+        "filter": {
+          "value": "core|community",
+          "required": false
+        },
+        "versions": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "plugins:enabled",
+      "flags": {
+        "filter": {
+          "value": "core|community",
+          "required": false
+        },
+        "versions": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "plugins:restrict",
+      "flags": {
+        "on": {
+          "value": null,
+          "required": false
+        },
+        "off": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "prepend",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "content": {
+          "value": "<text>",
+          "required": true
+        },
+        "inline": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "properties",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "name": {
+          "value": "<name>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "sort": {
+          "value": "count",
+          "required": false
+        },
+        "counts": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "yaml|json|tsv",
+          "required": false
+        },
+        "active": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "property:read",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": true
+        },
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "property:remove",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": true
+        },
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "property:set",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": true
+        },
+        "value": {
+          "value": "<value>",
+          "required": true
+        },
+        "type": {
+          "value": "text|list|number|checkbox|date|datetime",
+          "required": false
+        },
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "publish:add",
+      "flags": null
+    },
+    {
+      "command": "publish:list",
+      "flags": null
+    },
+    {
+      "command": "publish:open",
+      "flags": null
+    },
+    {
+      "command": "publish:remove",
+      "flags": null
+    },
+    {
+      "command": "publish:site",
+      "flags": null
+    },
+    {
+      "command": "publish:status",
+      "flags": null
+    },
+    {
+      "command": "random",
+      "flags": {
+        "folder": {
+          "value": "<path>",
+          "required": false
+        },
+        "newtab": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "random:read",
+      "flags": {
+        "folder": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "read",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "recents",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "reload",
+      "flags": {}
+    },
+    {
+      "command": "rename",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "name": {
+          "value": "<name>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "restart",
+      "flags": {}
+    },
+    {
+      "command": "search",
+      "flags": {
+        "query": {
+          "value": "<text>",
+          "required": true
+        },
+        "path": {
+          "value": "<folder>",
+          "required": false
+        },
+        "limit": {
+          "value": "<n>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "case": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "text|json",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "search:context",
+      "flags": {
+        "query": {
+          "value": "<text>",
+          "required": true
+        },
+        "path": {
+          "value": "<folder>",
+          "required": false
+        },
+        "limit": {
+          "value": "<n>",
+          "required": false
+        },
+        "case": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "text|json",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "search:open",
+      "flags": {
+        "query": {
+          "value": "<text>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "snippet:disable",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "snippet:enable",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "snippets",
+      "flags": {}
+    },
+    {
+      "command": "snippets:enabled",
+      "flags": {}
+    },
+    {
+      "command": "sync",
+      "flags": {
+        "on": {
+          "value": null,
+          "required": false
+        },
+        "off": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "sync:deleted",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "sync:history",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "sync:open",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "sync:read",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "version": {
+          "value": "<n>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "sync:restore",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "version": {
+          "value": "<n>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "sync:status",
+      "flags": {}
+    },
+    {
+      "command": "tab:open",
+      "flags": {
+        "group": {
+          "value": "<id>",
+          "required": false
+        },
+        "file": {
+          "value": "<path>",
+          "required": false
+        },
+        "view": {
+          "value": "<type>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "tabs",
+      "flags": {
+        "ids": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "tag",
+      "flags": {
+        "name": {
+          "value": "<tag>",
+          "required": true
+        },
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "verbose": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "tags",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "counts": {
+          "value": null,
+          "required": false
+        },
+        "sort": {
+          "value": "count",
+          "required": false
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "required": false
+        },
+        "active": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "task",
+      "flags": {
+        "ref": {
+          "value": "<path:line>",
+          "required": false
+        },
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "line": {
+          "value": "<n>",
+          "required": false
+        },
+        "toggle": {
+          "value": null,
+          "required": false
+        },
+        "done": {
+          "value": null,
+          "required": false
+        },
+        "todo": {
+          "value": null,
+          "required": false
+        },
+        "daily": {
+          "value": null,
+          "required": false
+        },
+        "status": {
+          "value": "\"<char>\"",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "tasks",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "done": {
+          "value": null,
+          "required": false
+        },
+        "todo": {
+          "value": null,
+          "required": false
+        },
+        "status": {
+          "value": "\"<char>\"",
+          "required": false
+        },
+        "verbose": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "required": false
+        },
+        "active": {
+          "value": null,
+          "required": false
+        },
+        "daily": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "template:insert",
+      "flags": {
+        "name": {
+          "value": "<template>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "template:read",
+      "flags": {
+        "name": {
+          "value": "<template>",
+          "required": true
+        },
+        "resolve": {
+          "value": null,
+          "required": false
+        },
+        "title": {
+          "value": "<title>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "templates",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "theme",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "theme:install",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": true
+        },
+        "enable": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "theme:set",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "theme:uninstall",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "required": true
+        }
+      }
+    },
+    {
+      "command": "themes",
+      "flags": {
+        "versions": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "unique",
+      "flags": null
+    },
+    {
+      "command": "unresolved",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "counts": {
+          "value": null,
+          "required": false
+        },
+        "verbose": {
+          "value": null,
+          "required": false
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "vault",
+      "flags": {
+        "info": {
+          "value": "name|path|files|folders|size",
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "vaults",
+      "flags": {
+        "total": {
+          "value": null,
+          "required": false
+        },
+        "verbose": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "version",
+      "flags": {}
+    },
+    {
+      "command": "web",
+      "flags": null
+    },
+    {
+      "command": "wordcount",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "required": false
+        },
+        "path": {
+          "value": "<path>",
+          "required": false
+        },
+        "words": {
+          "value": null,
+          "required": false
+        },
+        "characters": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "workspace",
+      "flags": {
+        "ids": {
+          "value": null,
+          "required": false
+        }
+      }
+    },
+    {
+      "command": "workspace:delete",
+      "flags": null
+    },
+    {
+      "command": "workspace:load",
+      "flags": null
+    },
+    {
+      "command": "workspace:save",
+      "flags": null
+    },
+    {
+      "command": "workspaces",
+      "flags": null
+    }
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "scope": "13actual mutable-global cases/26evalpipes in disposablemock profiles;12paired output goldens,1 qualitativePromiseconstructor observation",
+  "authored_fixture_plugin_sha256": "4e91acaf819ed0cf19f956fe1bf3404878d22f73e3849b4fa85948227c3f7138",
+  "source_utf8_byte_anchors": {
+    "eval_handler": 1642241,
+    "window_eval_call": 1643378,
+    "cli_layout_queue_promise_resolve": 1629857
+  },
+  "capture_reports": [
+    {
+      "path": "target/rea/runtime-eval/mutable-globals/report.json",
+      "sha256": "80c64e8d62c617c0cc6f511303e8e77b53d5b336bf0c159c6818be805b230fd7",
+      "cleanup": {
+        "pid": 33620,
+        "exit_code": 0,
+        "stopped": true,
+        "pid_absent": true
+      },
+      "plugin_cleanup": {
+        "loaded": false,
+        "globalsPresent": false
+      }
+    },
+    {
+      "path": "target/rea/runtime-eval/mutable-globals/tail-report.json",
+      "sha256": "cf427ada598340b2024329a4f1f729796a5019e82aa6d5159148160e986e81d8",
+      "cleanup": {
+        "pid": 34102,
+        "exit_code": 0,
+        "stopped": true,
+        "pid_absent": true
+      },
+      "plugin_cleanup": {
+        "loaded": false,
+        "globalsPresent": false
+      }
+    }
+  ],
+  "proxy_limit": "Observed constructor count31includesbackgroundactivity and is not deterministic; only actual constructor use is certified",
+  "restore_quirk": "Promise.resolve noncallable causesfirstrestore command to reportTypeErrorafterperformingcallback; secondfinally restore confirmsrestoredglobals",
+  "cases": [
+    {
+      "id": "eval-replacement",
+      "setup": {
+        "args": [
+          "eval",
+          "code=window.eval=function(code){console.log('replacement',this===window,code);return 43};undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.004
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=40+2"
+        ],
+        "stdout": "replacement true 40+2\n=> 43\n",
+        "stderr": "",
+        "stdout_base64": "cmVwbGFjZW1lbnQgdHJ1ZSA0MCsyCj0+IDQzCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "f911cc53ea60dfb18c2000bc4f8910b7e45746d4a9c9e1cff42d8b8c9e903c03",
+        "elapsed": 0.009
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.007
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "eval-getter",
+      "setup": {
+        "args": [
+          "eval",
+          "code=Object.defineProperty(window,'eval',{configurable:true,get(){console.log('eval getter');return __reaMutableOriginal.eval.value}});undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.013
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=40+2"
+        ],
+        "stdout": "eval getter\n=> 42\n",
+        "stderr": "",
+        "stdout_base64": "ZXZhbCBnZXR0ZXIKPT4gNDIK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "3e556219a502fadd08d0faa41793a7c6119fafd339deb96bf0db949b50fedbb3",
+        "elapsed": 0.014
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.008
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "eval-getter-throw",
+      "setup": {
+        "args": [
+          "eval",
+          "code=Object.defineProperty(window,'eval',{configurable:true,get(){throw {message:'owned eval getter'}}});undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.008
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=40+2"
+        ],
+        "stdout": "Error: owned eval getter\n",
+        "stderr": "",
+        "stdout_base64": "RXJyb3I6IG93bmVkIGV2YWwgZ2V0dGVyCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "61c49370984bd7da4ace2d784a5c3f89c31cfa8cb6e8a9f47a06502dddb92dfc",
+        "elapsed": 0.01
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.007
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "eval-number",
+      "setup": {
+        "args": [
+          "eval",
+          "code=window.eval=3;undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.009
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=40+2"
+        ],
+        "stdout": "Error: window.eval is not a function\n",
+        "stderr": "",
+        "stdout_base64": "RXJyb3I6IHdpbmRvdy5ldmFsIGlzIG5vdCBhIGZ1bmN0aW9uCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "0b277b60e2b2f4273378c7ffd6b38e9f2cc92de46815ce92dc62c014aa664448",
+        "elapsed": 0.013
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.008
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "string-number",
+      "setup": {
+        "args": [
+          "eval",
+          "code=window.String=function(value){return 7};undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.016
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=42"
+        ],
+        "stdout": "=> 7\n",
+        "stderr": "",
+        "stdout_base64": "PT4gNwo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "faaaca6a86a331dc130363eb7395d4a1cfad0f57069d3e8ccfb418a4f53dd6b9",
+        "elapsed": 0.013
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.007
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "string-object",
+      "setup": {
+        "args": [
+          "eval",
+          "code=window.String=function(value){return {toString(){return 'owned converted'}}};undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.013
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=42"
+        ],
+        "stdout": "=> owned converted\n",
+        "stderr": "",
+        "stdout_base64": "PT4gb3duZWQgY29udmVydGVkCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "4492822e9567509f4ef804a3b3579f00e68644faea227f31aa54bae27cfd187b",
+        "elapsed": 0.01
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.008
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "string-throw",
+      "setup": {
+        "args": [
+          "eval",
+          "code=window.String=function(value){throw {message:'owned String failure'}};undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.014
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=42"
+        ],
+        "stdout": "Error: owned String failure\n",
+        "stderr": "",
+        "stdout_base64": "RXJyb3I6IG93bmVkIFN0cmluZyBmYWlsdXJlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "0498981da52f89a5ada0dc432af78cf0abbc32faa0e2fa3f532a3edb79532625",
+        "elapsed": 0.014
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.007
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "json-stringify-number",
+      "setup": {
+        "args": [
+          "eval",
+          "code=JSON.stringify=function(){return 7};undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.018
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=({value:1})"
+        ],
+        "stdout": "=> 7\n",
+        "stderr": "",
+        "stdout_base64": "PT4gNwo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "faaaca6a86a331dc130363eb7395d4a1cfad0f57069d3e8ccfb418a4f53dd6b9",
+        "elapsed": 0.006
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.004
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "json-stringify-object",
+      "setup": {
+        "args": [
+          "eval",
+          "code=JSON.stringify=function(){return {toString(){return 'owned JSON object'}}};undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.005
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=({value:1})"
+        ],
+        "stdout": "=> owned JSON object\n",
+        "stderr": "",
+        "stdout_base64": "PT4gb3duZWQgSlNPTiBvYmplY3QK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "27e7be4f8e8356822fd982ee570075324cfeb971700f04f73c1f61329c884bdf",
+        "elapsed": 0.011
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.007
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "json-stringify-getter",
+      "setup": {
+        "args": [
+          "eval",
+          "code=Object.defineProperty(JSON,'stringify',{configurable:true,get(){console.log('stringify getter');return __reaMutableOriginal.stringify.value}});undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.017
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=({value:1})"
+        ],
+        "stdout": "=> {\n  \"value\": 1\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJ2YWx1ZSI6IDEKfQo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "bee7bb0e7ff285deb6db64f726b6d4e42c08171654287ee80f4590c86fa10430",
+        "elapsed": 0.016
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.008
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "promise-then-prefix",
+      "setup": {
+        "args": [
+          "eval",
+          "code=Promise.prototype.then=function(...args){Object.defineProperty(Promise.prototype,'then',__reaMutableOriginal.then);console.log('then prefix');return __reaMutableOriginal.then.value.apply(this,args)};undefined"
+        ],
+        "stdout": "then prefix\n",
+        "stderr": "",
+        "stdout_base64": "dGhlbiBwcmVmaXgK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "628bf6a12b2e76415fde521b212ea1329ede44be4ca4faf90c471d2fb37ff7e7",
+        "elapsed": 0.015
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=42"
+        ],
+        "stdout": "=> 42\n",
+        "stderr": "",
+        "stdout_base64": "PT4gNDIK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "d2075a3716b847b4340e19f639d0966d0a4097c76acb0c31d9d2a327b0c1512a",
+        "elapsed": 0.012
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.008
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "promise-resolve-number",
+      "setup": {
+        "args": [
+          "eval",
+          "code=Promise.resolve=3;undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.005
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=42"
+        ],
+        "stdout": "TypeError: Promise.resolve is not a function\n",
+        "stderr": "",
+        "stdout_base64": "VHlwZUVycm9yOiBQcm9taXNlLnJlc29sdmUgaXMgbm90IGEgZnVuY3Rpb24K",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "f70d6a1b9170cefe71ad6536dc98d33d6b534d7edec8483dccb0e776e2ea77c5",
+        "elapsed": 0.009
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "TypeError: Promise.resolve is not a function\n",
+        "stderr": "",
+        "stdout_base64": "VHlwZUVycm9yOiBQcm9taXNlLnJlc29sdmUgaXMgbm90IGEgZnVuY3Rpb24K",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "f70d6a1b9170cefe71ad6536dc98d33d6b534d7edec8483dccb0e776e2ea77c5",
+        "elapsed": 0.004
+      },
+      "portable_exact": true,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    },
+    {
+      "id": "promise-constructor-proxy",
+      "setup": {
+        "args": [
+          "eval",
+          "code=window.Promise=new Proxy(__reaMutableOriginal.Promise.value,{construct(target,args,newTarget){__reaMutableTrace.push('construct');return Reflect.construct(target,args,newTarget)}});undefined"
+        ],
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "02a713f76226c52a198adae80526740fc4d6057636326bc8dec49635db8ae7a7",
+        "elapsed": 0.004
+      },
+      "probe": {
+        "args": [
+          "eval",
+          "code=__reaMutableTrace.slice()"
+        ],
+        "stdout": "=> [\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\",\n  \"construct\"\n]\n",
+        "stderr": "",
+        "stdout_base64": "PT4gWwogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiLAogICJjb25zdHJ1Y3QiCl0K",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "3010690fd9420a81297162ba89f1702922bc565670c61e5a044f3a5ff182c0eb",
+        "elapsed": 0.007
+      },
+      "restore": {
+        "args": [
+          "command",
+          "id=rea-runtime-mutable-globals:restore"
+        ],
+        "stdout": "Executed: rea-runtime-mutable-globals:restore\n",
+        "stderr": "",
+        "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLW11dGFibGUtZ2xvYmFsczpyZXN0b3JlCg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "stdout_sha256": "7b8b94039efdb2f247aa18eae6ae66f4dee40b40922f0a088cebf64b13dcda89",
+        "elapsed": 0.006
+      },
+      "portable_exact": false,
+      "scope": "renderer eval +nativeCLIframework; requires real owning-realm globals and restoration"
+    }
+  ],
+  "source_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "selected_runtime_replay": {
+    "matched_cases": 11,
+    "matched_pipes": 22,
+    "pending_case_ids": [
+      "promise-resolve-number",
+      "promise-constructor-proxy"
+    ],
+    "report": {
+      "path": "target/rea/runtime-eval/electron-node/renderer-ipc-1791991696831710000/report.json",
+      "sha256": "08872a215f8696ab92211a4ec6979b0df518706cfbc6f6d6d477cf070635dc90"
+    },
+    "addon_sha256": "5c13be76ada136605874c30850de6acbd8064b0b4a4a9959a4cca545d7fe4bbd",
+    "test_source": {
+      "path": "crates/runtime/tests/node_child.rs",
+      "sha256": "0c78eccb86407984ebda92202930abd59e369ae796ffe95e19f71060e235626d"
+    }
+  }
+}

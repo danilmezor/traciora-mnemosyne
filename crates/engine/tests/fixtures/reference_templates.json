@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "scope": "Named template resolution and uF substitution captured by actual create oracle; does not certify template insertion or all Moment locales.",
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "cases": [
+    {
+      "id": "template-disabled",
+      "name": "Basic",
+      "raw_title": "Templated",
+      "enabled": false,
+      "options": null,
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": null,
+      "expected_error": "Templates plugin is not enabled."
+    },
+    {
+      "id": "template-basic",
+      "name": "Basic",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "Title=Templated\nDATE=CONST TIME=CLOCK\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-path-title",
+      "name": "Basic",
+      "raw_title": "Title",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "Title=Title\nDATE=CONST TIME=CLOCK\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-title-dollar",
+      "name": "Basic",
+      "raw_title": "Money$&",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "Title=Money{{title}}\nDATE=CONST TIME=CLOCK\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-title-spaces",
+      "name": "Basic",
+      "raw_title": "  Title  ",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "Title=  Title  \nDATE=CONST TIME=CLOCK\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-case",
+      "name": "basic",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "Title=Templated\nDATE=CONST TIME=CLOCK\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-nested",
+      "name": "Sub/Nested",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "Nested Templated {{unknown}}\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-defaults",
+      "name": "Defaults",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "DATE/TIME/DATE/TIME\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-bom",
+      "name": "BOM",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "BOM Templated\r\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-missing",
+      "name": "Missing",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": null,
+      "expected_error": "Template \"Missing\" not found."
+    },
+    {
+      "id": "template-name-extension",
+      "name": "Basic.md",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "Templates",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": "Title=Templated\nDATE=CONST TIME=CLOCK\n",
+      "expected_error": null
+    },
+    {
+      "id": "template-no-folder",
+      "name": "Basic",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": null,
+      "expected_error": "No template folder configured."
+    },
+    {
+      "id": "template-missing-folder",
+      "name": "Basic",
+      "raw_title": "Templated",
+      "enabled": true,
+      "options": {
+        "folder": "MissingFolder",
+        "dateFormat": "[DATE]",
+        "timeFormat": "[TIME]"
+      },
+      "initial_files": {
+        "attachment.txt": "old attachment\n",
+        "Existing.md": "old saved\n",
+        "Configured/Keep.md": "keep\n",
+        "Folder/Other.md": "other\n",
+        "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+        "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+        "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+        "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+      },
+      "initial_directories": [
+        "Configured",
+        "Folder",
+        "Templates",
+        "Templates/Sub"
+      ],
+      "expected_text": null,
+      "expected_error": "Template folder \"MissingFolder\" not found."
+    }
+  ]
+}

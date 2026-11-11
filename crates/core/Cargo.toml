@@ -1,0 +1,22 @@
+[package]
+name = "mnemosyne-core"
+version = "0.1.0"
+edition = "2021"
+description = "Clean-room Markdown vault parsing: YAML frontmatter, wikilinks, embeds, tags, and a link graph."
+license = "Apache-2.0"
+
+[dependencies]
+pulldown-cmark = "0.13"
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.9"
+serde_json = { version = "1", features = ["raw_value"] }
+thiserror = "2"
+unicode-normalization = "0.1"
+regress = { version = "0.12", features = ["utf16"] }
+ryu-js = "1.0"
+mnemosyne-icu78 = { path = "../icu78" }
+icu_locale = "=2.1.1"
+
+yaml-rust2 = { version = "=0.13.0", default-features = false }
+time = { version = "0.3.55", features = ["formatting", "parsing", "large-dates"] }
+base64 = "0.22.1"

@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "scope": "P0 permanent deletion and local-trash fallback. Does not certify system-trash routing or full delete command parity.",
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "cases": [
+    {
+      "id": "permanent_root",
+      "reference_mode": "default",
+      "initial": {
+        "files": {
+          "Last.md": "last note\n"
+        },
+        "directories": []
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=Last.md",
+            "permanent"
+          ],
+          "expected": {
+            "stdout": "Deleted permanently: Last.md\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {},
+            "directories": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "permanent_nested",
+      "reference_mode": "default",
+      "initial": {
+        "files": {
+          "notes/deep/Only.md": "only note\n"
+        },
+        "directories": []
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=notes/deep/Only.md",
+            "permanent"
+          ],
+          "expected": {
+            "stdout": "Deleted permanently: notes/deep/Only.md\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {},
+            "directories": [
+              "notes",
+              "notes/deep"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "permanent_binary_attachment",
+      "reference_mode": "default",
+      "initial": {
+        "files": {
+          "assets/image.png": [
+            0,
+            255,
+            10,
+            13
+          ]
+        },
+        "directories": []
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=assets/image.png",
+            "permanent"
+          ],
+          "expected": {
+            "stdout": "Deleted permanently: assets/image.png\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {},
+            "directories": [
+              "assets"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "trash_across_cli_processes",
+      "reference_mode": "local_trash_fallback",
+      "initial": {
+        "files": {
+          "a/Shared.md": "first\n",
+          "b/Shared.md": "second\n",
+          "c/Shared.md": "third\n",
+          "Source.md": "[[a/Shared]] [[b/Shared]] [[c/Shared]]\n"
+        },
+        "directories": []
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=a/Shared.md"
+          ],
+          "expected": {
+            "stdout": "Moved to trash: a/Shared.md\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {
+              "b/Shared.md": "second\n",
+              "c/Shared.md": "third\n",
+              "Source.md": "[[a/Shared]] [[b/Shared]] [[c/Shared]]\n",
+              ".trash/Shared.md": "first\n"
+            },
+            "directories": [
+              ".trash",
+              "a",
+              "b",
+              "c"
+            ]
+          }
+        },
+        {
+          "args": [
+            "delete",
+            "path=b/Shared.md"
+          ],
+          "expected": {
+            "stdout": "Moved to trash: b/Shared.md\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {
+              "c/Shared.md": "third\n",
+              "Source.md": "[[a/Shared]] [[b/Shared]] [[c/Shared]]\n",
+              ".trash/Shared.md": "first\n",
+              ".trash/Shared 2.md": "second\n"
+            },
+            "directories": [
+              ".trash",
+              "a",
+              "b",
+              "c"
+            ]
+          }
+        },
+        {
+          "args": [
+            "delete",
+            "path=c/Shared.md"
+          ],
+          "expected": {
+            "stdout": "Moved to trash: c/Shared.md\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {
+              "Source.md": "[[a/Shared]] [[b/Shared]] [[c/Shared]]\n",
+              ".trash/Shared.md": "first\n",
+              ".trash/Shared 2.md": "second\n",
+              ".trash/Shared 3.md": "third\n"
+            },
+            "directories": [
+              ".trash",
+              "a",
+              "b",
+              "c"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "trash_existing_files",
+      "reference_mode": "local_trash_fallback",
+      "initial": {
+        "files": {
+          ".trash/Note.md": "previous\n",
+          ".trash/Note 2.md": "second\n",
+          "notes/Note.md": "new\n"
+        },
+        "directories": []
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=notes/Note.md"
+          ],
+          "expected": {
+            "stdout": "Moved to trash: notes/Note.md\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {
+              ".trash/Note.md": "previous\n",
+              ".trash/Note 2.md": "second\n",
+              ".trash/Note 3.md": "new\n"
+            },
+            "directories": [
+              ".trash",
+              "notes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "trash_existing_directory",
+      "reference_mode": "local_trash_fallback",
+      "initial": {
+        "files": {
+          ".trash/Note.md/keep.txt": "keep\n",
+          "Note.md": "new\n"
+        },
+        "directories": []
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=Note.md"
+          ],
+          "expected": {
+            "stdout": "Moved to trash: Note.md\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {
+              ".trash/Note.md/keep.txt": "keep\n",
+              ".trash/Note 2.md": "new\n"
+            },
+            "directories": [
+              ".trash",
+              ".trash/Note.md"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "trash_extensionless_binary",
+      "reference_mode": "local_trash_fallback",
+      "initial": {
+        "files": {
+          "a/Asset": [
+            0,
+            255,
+            13,
+            10
+          ],
+          ".trash/Asset": [
+            1,
+            2,
+            3
+          ]
+        },
+        "directories": []
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=a/Asset"
+          ],
+          "expected": {
+            "stdout": "Moved to trash: a/Asset\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {
+              ".trash/Asset": [
+                1,
+                2,
+                3
+              ],
+              ".trash/Asset 2": [
+                0,
+                255,
+                13,
+                10
+              ]
+            },
+            "directories": [
+              ".trash",
+              "a"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "trash_multiple_extensions",
+      "reference_mode": "local_trash_fallback",
+      "initial": {
+        "files": {
+          "archives/archive.tar.gz": [
+            31,
+            139,
+            0,
+            255
+          ],
+          ".trash/archive.tar.gz": [
+            1,
+            2
+          ]
+        },
+        "directories": []
+      },
+      "steps": [
+        {
+          "args": [
+            "delete",
+            "path=archives/archive.tar.gz"
+          ],
+          "expected": {
+            "stdout": "Moved to trash: archives/archive.tar.gz\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "after": {
+            "files": {
+              ".trash/archive.tar.gz": [
+                1,
+                2
+              ],
+              ".trash/archive.tar 2.gz": [
+                31,
+                139,
+                0,
+                255
+              ]
+            },
+            "directories": [
+              ".trash",
+              "archives"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

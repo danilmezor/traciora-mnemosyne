@@ -1,0 +1,690 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "direct_cases": [
+    {
+      "id": "surrogate-high",
+      "source": "value: \"\\uD800\"\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "string",
+                "value_utf16": [
+                  55296
+                ]
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [],
+        "yaml": {
+          "value": "value: \"\\ud800\"\n"
+        },
+        "json": {
+          "value": "{\"value\":\"\\ud800\"}"
+        }
+      }
+    },
+    {
+      "id": "surrogate-low",
+      "source": "value: \"\\uDC00\"\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "string",
+                "value_utf16": [
+                  56320
+                ]
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [],
+        "yaml": {
+          "value": "value: \"\\udc00\"\n"
+        },
+        "json": {
+          "value": "{\"value\":\"\\udc00\"}"
+        }
+      }
+    },
+    {
+      "id": "surrogate-pair",
+      "source": "value: \"\\uD800\\uDC00\"\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "string",
+                "value": "\ud800\udc00"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [],
+        "yaml": {
+          "value": "value: \ud800\udc00\n"
+        },
+        "json": {
+          "value": "{\"value\":\"\ud800\udc00\"}"
+        }
+      }
+    },
+    {
+      "id": "timestamp-overflow",
+      "source": "value: !!timestamp 9999-99-99T99:99:99Z\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "+010007-06-11T04:40:39.000Z",
+                "string": "Mon Jun 11 10007 04:40:39 GMT+0000 (Coordinated Universal Time)",
+                "millis": 253637152839000
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [],
+        "yaml": {
+          "value": "value: +010007-06-11T04:40:39.000Z\n"
+        },
+        "json": {
+          "value": "{\"value\":\"+010007-06-11T04:40:39.000Z\"}"
+        }
+      }
+    },
+    {
+      "id": "symbol-array",
+      "source": "value: [!!merge <<]\n",
+      "result": {
+        "error": {
+          "name": "TypeError",
+          "message": "Cannot convert a Symbol value to a string"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "timestamp-small-offset",
+      "source": "a: !!timestamp 2024-01-02T00:00:00+00:15\nb: !!timestamp 2024-01-02T00:00:00+00:30\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "a",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-01T09:00:00.000Z",
+                "string": "Mon Jan 01 2024 09:00:00 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704099600000
+              }
+            ],
+            [
+              "b",
+              {
+                "type": "Date",
+                "id": 2,
+                "iso": "2024-01-01T23:30:00.000Z",
+                "string": "Mon Jan 01 2024 23:30:00 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704151800000
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [],
+        "yaml": {
+          "value": "a: 2024-01-01T09:00:00.000Z\nb: 2024-01-01T23:30:00.000Z\n"
+        },
+        "json": {
+          "value": "{\"a\":\"2024-01-01T09:00:00.000Z\",\"b\":\"2024-01-01T23:30:00.000Z\"}"
+        }
+      }
+    }
+  ],
+  "mutation_cases": [
+    {
+      "id": "root-binary-index-set",
+      "path": "Native0-set.md",
+      "before": "---\n!!binary SGk=\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native0-set.md",
+        "name=0",
+        "value=-1"
+      ],
+      "proof": {
+        "cached": "---\n!!binary SGk=\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 21
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 26
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "0": 72,
+            "1": 105
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 21
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Uint8Array",
+          "id": 0,
+          "values": [
+            72,
+            105
+          ],
+          "string": "72,105"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native0-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "0\t72\n1\t105\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set 0: -1\n",
+        "stderr": ""
+      },
+      "after": "---\n- 255\n- 105\n---\nbody\n"
+    },
+    {
+      "id": "root-binary-index-remove",
+      "path": "Native0-remove.md",
+      "before": "---\n!!binary SGk=\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native0-remove.md",
+        "name=0"
+      ],
+      "proof": {
+        "cached": "---\n!!binary SGk=\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 21
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 26
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "0": 72,
+            "1": 105
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 21
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Uint8Array",
+          "id": 0,
+          "values": [
+            72,
+            105
+          ],
+          "string": "72,105"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "TypeError: Cannot delete property '0' of [object Uint8Array]\n",
+        "stderr": ""
+      },
+      "after": "---\n!!binary SGk=\n---\nbody\n"
+    },
+    {
+      "id": "root-binary-outside-set",
+      "path": "Native1-set.md",
+      "before": "---\n!!binary SGk=\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native1-set.md",
+        "name=10",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\n!!binary SGk=\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 21
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 26
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "0": 72,
+            "1": 105
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 21
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Uint8Array",
+          "id": 0,
+          "values": [
+            72,
+            105
+          ],
+          "string": "72,105"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native1-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "0\t72\n1\t105\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set 10: new\n",
+        "stderr": ""
+      },
+      "after": "---\n- 72\n- 105\n---\nbody\n"
+    },
+    {
+      "id": "root-binary-outside-remove",
+      "path": "Native1-remove.md",
+      "before": "---\n!!binary SGk=\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native1-remove.md",
+        "name=10"
+      ],
+      "proof": {
+        "cached": "---\n!!binary SGk=\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 21
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 26
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "0": 72,
+            "1": 105
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 21
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Uint8Array",
+          "id": 0,
+          "values": [
+            72,
+            105
+          ],
+          "string": "72,105"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: 10\n",
+        "stderr": ""
+      },
+      "after": "---\n- 72\n- 105\n---\nbody\n"
+    },
+    {
+      "id": "root-date-json-set",
+      "path": "Native2-set.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native2-set.md",
+        "name=toJSON",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 30
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 35
+                }
+              }
+            }
+          ],
+          "frontmatter": "2024-01-02T00:00:00.000Z",
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 30
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Date",
+          "id": 0,
+          "iso": "2024-01-02T00:00:00.000Z",
+          "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+          "millis": 1704153600000
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native2-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "No frontmatter found.\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set toJSON: new\n",
+        "stderr": ""
+      },
+      "after": "---\ntoJSON: new\n---\nbody\n"
+    },
+    {
+      "id": "root-date-json-remove",
+      "path": "Native2-remove.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native2-remove.md",
+        "name=toJSON"
+      ],
+      "proof": {
+        "cached": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 30
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 35
+                }
+              }
+            }
+          ],
+          "frontmatter": "2024-01-02T00:00:00.000Z",
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 30
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Date",
+          "id": 0,
+          "iso": "2024-01-02T00:00:00.000Z",
+          "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+          "millis": 1704153600000
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: toJSON\n",
+        "stderr": ""
+      },
+      "after": "body\n"
+    }
+  ],
+  "plugin_proof": {
+    "parse": "function",
+    "stringify": "function",
+    "loaded": true
+  },
+  "plugin_cleanup": {
+    "loaded": false,
+    "exposed": false
+  },
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "evidence": "target/rea/yaml-schema-probes/value-boundaries.json; isolated PID56721 stopped/absent; mockkeychain true",
+  "portable_descriptor_projection": "Unpaired native string values/string-coercions are represented as value_utf16/string_utf16 code units; raw native JSON evidence is retained in target report."
+}

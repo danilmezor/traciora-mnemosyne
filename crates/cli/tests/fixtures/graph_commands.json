@@ -1,0 +1,2851 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "source_member_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "evidence_id": "ev_a1c4024fb98bf28bcc6c7331ffba34e9cf3fe07540140a5fc3f38afaf4a27af5",
+  "coverage": "Authored saved-cache graph CLI cases; recorded cache-source chronology explicit; cold async completion order and full link parser remain separately bounded; retry fresh isolated instance after native timeout.",
+  "collation_locale": "en-US",
+  "phases": {
+    "initial-first": {
+      "resolved": {
+        "Empty.md": {},
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Folder/Source.md": {
+          "Dup.md": 1,
+          "Target.md": 1
+        },
+        "Source,One.md": {
+          "Target.md": 6,
+          "Source,One.md": 1,
+          "Folder/Dup.md": 1,
+          "Dup.md": 1,
+          "image.png": 2
+        },
+        "Self.md": {
+          "Self.md": 2
+        },
+        "AliasOnly.md": {},
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {
+          "é.md": 2
+        },
+        "é.md": {}
+      },
+      "unresolved": {
+        "Empty.md": {},
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Folder/Source.md": {
+          "Missing": 1
+        },
+        "Source,One.md": {
+          "Missing": 4,
+          "Nickname": 1,
+          "shared": 1
+        },
+        "Self.md": {},
+        "AliasOnly.md": {
+          "Nickname": 1
+        },
+        "UnresolvedOnly.md": {
+          "Void": 1
+        },
+        "Unicode.md": {
+          "Missing": 2
+        },
+        "é.md": {}
+      },
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md"
+      ],
+      "files": [
+        "é.md",
+        "Unicode.md",
+        "Unused.bin",
+        "image.png",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Source.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Source.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "LS0tCmFsaWFzZXM6IFtzaGFyZWRdCi0tLQpPdGhlci4K",
+        "AliasOnly.md": "W1tOaWNrbmFtZV1dCg==",
+        "Target.md": "LS0tCmFsaWFzZXM6IFtOaWNrbmFtZSwgc2hhcmVkXQotLS0KIyBIZWFkaW5nClRhcmdldC4K",
+        "Self.md": "W1tTZWxmXV0gW1tTZWxmI0hlYWRpbmddXQo=",
+        "é.md": "VW5pY29kZSB0YXJnZXQuCg==",
+        "Source,One.md": "LS0tCnJlbGF0ZWQ6ICJbW1RhcmdldF1dIgpsaXN0OiBbIltbVGFyZ2V0XV0iLCAiW1tNaXNzaW5nXV0iXQotLS0KW1tUYXJnZXRdXSBbW1RhcmdldF1dIFtbVGFyZ2V0I0hlYWRpbmddXSAhW1tUYXJnZXRdXQpbW05pY2tuYW1lXV0gW1tzaGFyZWRdXSBbW01pc3NpbmcubWRdXSBbW01pc3NpbmddXSBbW01pc3NpbmcuTURdXQpbWyNsb2NhbF1dIFtbRm9sZGVyL0R1cF1dIFtbRHVwXV0KW3JlZl1bcl0gIVtpbWFnZV0oaW1hZ2UucG5nKSAhW1tpbWFnZS5wbmddXSBbZXh0ZXJuYWxdKGh0dHBzOi8vZXhhbXBsZS5jb20pCltyXTogVGFyZ2V0Lm1kCg==",
+        "Dup.md": "Um9vdCBkdXBsaWNhdGUuCg==",
+        "Unicode.md": "W1vDqV1dIFtbZcyBXV0gW1tNaXNzaW5nLm1kI0hlYWRpbmddXSBbW01pc3NpbmcuTUQjSGVhZGluZ11dCg==",
+        "Unused.bin": "AHJhd/8=",
+        "Empty.md": "Tm8gbGlua3MgaGVyZS4K",
+        "image.png": "AFBORwE=",
+        "UnresolvedOnly.md": "W1tWb2lkXV0K",
+        "Folder/Source.md": "W1tEdXBdXSBbW01pc3NpbmddXSBbW1RhcmdldF1dCg==",
+        "Folder/Dup.md": "TmVzdGVkIGR1cGxpY2F0ZS4K"
+      }
+    },
+    "initial": {
+      "resolved": {
+        "Empty.md": {},
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Folder/Source.md": {
+          "Dup.md": 1,
+          "Target.md": 1
+        },
+        "Source,One.md": {
+          "Target.md": 6,
+          "Source,One.md": 1,
+          "Folder/Dup.md": 1,
+          "Dup.md": 1,
+          "image.png": 2
+        },
+        "Self.md": {
+          "Self.md": 2
+        },
+        "AliasOnly.md": {},
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {
+          "é.md": 2
+        },
+        "é.md": {}
+      },
+      "unresolved": {
+        "Empty.md": {},
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Folder/Source.md": {
+          "Missing": 1
+        },
+        "Source,One.md": {
+          "Missing": 4,
+          "Nickname": 1,
+          "shared": 1
+        },
+        "Self.md": {},
+        "AliasOnly.md": {
+          "Nickname": 1
+        },
+        "UnresolvedOnly.md": {
+          "Void": 1
+        },
+        "Unicode.md": {
+          "Missing": 2
+        },
+        "é.md": {}
+      },
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md"
+      ],
+      "files": [
+        "é.md",
+        "Unicode.md",
+        "Unused.bin",
+        "image.png",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Source.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Source.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "LS0tCmFsaWFzZXM6IFtzaGFyZWRdCi0tLQpPdGhlci4K",
+        "AliasOnly.md": "W1tOaWNrbmFtZV1dCg==",
+        "Target.md": "LS0tCmFsaWFzZXM6IFtOaWNrbmFtZSwgc2hhcmVkXQotLS0KIyBIZWFkaW5nClRhcmdldC4K",
+        "Self.md": "W1tTZWxmXV0gW1tTZWxmI0hlYWRpbmddXQo=",
+        "é.md": "VW5pY29kZSB0YXJnZXQuCg==",
+        "Source,One.md": "LS0tCnJlbGF0ZWQ6ICJbW1RhcmdldF1dIgpsaXN0OiBbIltbVGFyZ2V0XV0iLCAiW1tNaXNzaW5nXV0iXQotLS0KW1tUYXJnZXRdXSBbW1RhcmdldF1dIFtbVGFyZ2V0I0hlYWRpbmddXSAhW1tUYXJnZXRdXQpbW05pY2tuYW1lXV0gW1tzaGFyZWRdXSBbW01pc3NpbmcubWRdXSBbW01pc3NpbmddXSBbW01pc3NpbmcuTURdXQpbWyNsb2NhbF1dIFtbRm9sZGVyL0R1cF1dIFtbRHVwXV0KW3JlZl1bcl0gIVtpbWFnZV0oaW1hZ2UucG5nKSAhW1tpbWFnZS5wbmddXSBbZXh0ZXJuYWxdKGh0dHBzOi8vZXhhbXBsZS5jb20pCltyXTogVGFyZ2V0Lm1kCg==",
+        "Dup.md": "Um9vdCBkdXBsaWNhdGUuCg==",
+        "Unicode.md": "W1vDqV1dIFtbZcyBXV0gW1tNaXNzaW5nLm1kI0hlYWRpbmddXSBbW01pc3NpbmcuTUQjSGVhZGluZ11dCg==",
+        "Unused.bin": "AHJhd/8=",
+        "Empty.md": "Tm8gbGlua3MgaGVyZS4K",
+        "image.png": "AFBORwE=",
+        "UnresolvedOnly.md": "W1tWb2lkXV0K",
+        "Folder/Source.md": "W1tEdXBdXSBbW01pc3NpbmddXSBbW1RhcmdldF1dCg==",
+        "Folder/Dup.md": "TmVzdGVkIGR1cGxpY2F0ZS4K"
+      }
+    },
+    "created": {
+      "resolved": {
+        "Empty.md": {},
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Folder/Source.md": {
+          "Dup.md": 1,
+          "Target.md": 1
+        },
+        "Source,One.md": {
+          "Target.md": 6,
+          "Source,One.md": 1,
+          "Folder/Dup.md": 1,
+          "Dup.md": 1,
+          "image.png": 2
+        },
+        "Self.md": {
+          "Self.md": 2
+        },
+        "AliasOnly.md": {},
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {
+          "é.md": 2
+        },
+        "é.md": {},
+        "Created.md": {
+          "Target.md": 1
+        }
+      },
+      "unresolved": {
+        "Empty.md": {},
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Folder/Source.md": {
+          "Missing": 1
+        },
+        "Source,One.md": {
+          "Missing": 4,
+          "Nickname": 1,
+          "shared": 1
+        },
+        "Self.md": {},
+        "AliasOnly.md": {
+          "Nickname": 1
+        },
+        "UnresolvedOnly.md": {
+          "Void": 1
+        },
+        "Unicode.md": {
+          "Missing": 2
+        },
+        "é.md": {},
+        "Created.md": {
+          "Missing": 1
+        }
+      },
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md"
+      ],
+      "files": [
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "Unused.bin",
+        "image.png",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Source.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Source.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "LS0tCmFsaWFzZXM6IFtzaGFyZWRdCi0tLQpPdGhlci4K",
+        "AliasOnly.md": "W1tOaWNrbmFtZV1dCg==",
+        "Target.md": "LS0tCmFsaWFzZXM6IFtOaWNrbmFtZSwgc2hhcmVkXQotLS0KIyBIZWFkaW5nClRhcmdldC4K",
+        "Self.md": "W1tTZWxmXV0gW1tTZWxmI0hlYWRpbmddXQo=",
+        "é.md": "VW5pY29kZSB0YXJnZXQuCg==",
+        "Source,One.md": "LS0tCnJlbGF0ZWQ6ICJbW1RhcmdldF1dIgpsaXN0OiBbIltbVGFyZ2V0XV0iLCAiW1tNaXNzaW5nXV0iXQotLS0KW1tUYXJnZXRdXSBbW1RhcmdldF1dIFtbVGFyZ2V0I0hlYWRpbmddXSAhW1tUYXJnZXRdXQpbW05pY2tuYW1lXV0gW1tzaGFyZWRdXSBbW01pc3NpbmcubWRdXSBbW01pc3NpbmddXSBbW01pc3NpbmcuTURdXQpbWyNsb2NhbF1dIFtbRm9sZGVyL0R1cF1dIFtbRHVwXV0KW3JlZl1bcl0gIVtpbWFnZV0oaW1hZ2UucG5nKSAhW1tpbWFnZS5wbmddXSBbZXh0ZXJuYWxdKGh0dHBzOi8vZXhhbXBsZS5jb20pCltyXTogVGFyZ2V0Lm1kCg==",
+        "Dup.md": "Um9vdCBkdXBsaWNhdGUuCg==",
+        "Unicode.md": "W1vDqV1dIFtbZcyBXV0gW1tNaXNzaW5nLm1kI0hlYWRpbmddXSBbW01pc3NpbmcuTUQjSGVhZGluZ11dCg==",
+        "Unused.bin": "AHJhd/8=",
+        "Created.md": "W1tNaXNzaW5nXV0gW1tUYXJnZXRdXQo=",
+        "Empty.md": "Tm8gbGlua3MgaGVyZS4K",
+        "image.png": "AFBORwE=",
+        "UnresolvedOnly.md": "W1tWb2lkXV0K",
+        "Folder/Source.md": "W1tEdXBdXSBbW01pc3NpbmddXSBbW1RhcmdldF1dCg==",
+        "Folder/Dup.md": "TmVzdGVkIGR1cGxpY2F0ZS4K"
+      }
+    },
+    "modified": {
+      "resolved": {
+        "Empty.md": {},
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Folder/Source.md": {
+          "Dup.md": 1,
+          "Target.md": 1
+        },
+        "Source,One.md": {
+          "Target.md": 6,
+          "Source,One.md": 1,
+          "Folder/Dup.md": 1,
+          "Dup.md": 1,
+          "image.png": 2
+        },
+        "Self.md": {
+          "Self.md": 2
+        },
+        "AliasOnly.md": {},
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {
+          "é.md": 2
+        },
+        "é.md": {},
+        "Created.md": {
+          "Target.md": 1
+        }
+      },
+      "unresolved": {
+        "Empty.md": {
+          "Missing": 1
+        },
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Folder/Source.md": {
+          "Missing": 1
+        },
+        "Source,One.md": {
+          "Missing": 4,
+          "Nickname": 1,
+          "shared": 1
+        },
+        "Self.md": {},
+        "AliasOnly.md": {
+          "Nickname": 1
+        },
+        "UnresolvedOnly.md": {
+          "Void": 1
+        },
+        "Unicode.md": {
+          "Missing": 2
+        },
+        "é.md": {},
+        "Created.md": {
+          "Missing": 1
+        }
+      },
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md"
+      ],
+      "files": [
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "Unused.bin",
+        "image.png",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Source.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Source.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "LS0tCmFsaWFzZXM6IFtzaGFyZWRdCi0tLQpPdGhlci4K",
+        "AliasOnly.md": "W1tOaWNrbmFtZV1dCg==",
+        "Target.md": "LS0tCmFsaWFzZXM6IFtOaWNrbmFtZSwgc2hhcmVkXQotLS0KIyBIZWFkaW5nClRhcmdldC4K",
+        "Self.md": "W1tTZWxmXV0gW1tTZWxmI0hlYWRpbmddXQo=",
+        "é.md": "VW5pY29kZSB0YXJnZXQuCg==",
+        "Source,One.md": "LS0tCnJlbGF0ZWQ6ICJbW1RhcmdldF1dIgpsaXN0OiBbIltbVGFyZ2V0XV0iLCAiW1tNaXNzaW5nXV0iXQotLS0KW1tUYXJnZXRdXSBbW1RhcmdldF1dIFtbVGFyZ2V0I0hlYWRpbmddXSAhW1tUYXJnZXRdXQpbW05pY2tuYW1lXV0gW1tzaGFyZWRdXSBbW01pc3NpbmcubWRdXSBbW01pc3NpbmddXSBbW01pc3NpbmcuTURdXQpbWyNsb2NhbF1dIFtbRm9sZGVyL0R1cF1dIFtbRHVwXV0KW3JlZl1bcl0gIVtpbWFnZV0oaW1hZ2UucG5nKSAhW1tpbWFnZS5wbmddXSBbZXh0ZXJuYWxdKGh0dHBzOi8vZXhhbXBsZS5jb20pCltyXTogVGFyZ2V0Lm1kCg==",
+        "Dup.md": "Um9vdCBkdXBsaWNhdGUuCg==",
+        "Unicode.md": "W1vDqV1dIFtbZcyBXV0gW1tNaXNzaW5nLm1kI0hlYWRpbmddXSBbW01pc3NpbmcuTUQjSGVhZGluZ11dCg==",
+        "Unused.bin": "AHJhd/8=",
+        "Created.md": "W1tNaXNzaW5nXV0gW1tUYXJnZXRdXQo=",
+        "Empty.md": "W1tNaXNzaW5nXV0K",
+        "image.png": "AFBORwE=",
+        "UnresolvedOnly.md": "W1tWb2lkXV0K",
+        "Folder/Source.md": "W1tEdXBdXSBbW01pc3NpbmddXSBbW1RhcmdldF1dCg==",
+        "Folder/Dup.md": "TmVzdGVkIGR1cGxpY2F0ZS4K"
+      }
+    },
+    "renamed-source": {
+      "resolved": {
+        "Empty.md": {},
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {
+          "Target.md": 6,
+          "Source,One.md": 1,
+          "Folder/Dup.md": 1,
+          "Dup.md": 1,
+          "image.png": 2
+        },
+        "Self.md": {
+          "Self.md": 2
+        },
+        "AliasOnly.md": {},
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {
+          "é.md": 2
+        },
+        "é.md": {},
+        "Created.md": {
+          "Target.md": 1
+        },
+        "Folder/Renamed.md": {
+          "Dup.md": 1,
+          "Target.md": 1
+        }
+      },
+      "unresolved": {
+        "Empty.md": {
+          "Missing": 1
+        },
+        "Target.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {
+          "Missing": 4,
+          "Nickname": 1,
+          "shared": 1
+        },
+        "Self.md": {},
+        "AliasOnly.md": {
+          "Nickname": 1
+        },
+        "UnresolvedOnly.md": {
+          "Void": 1
+        },
+        "Unicode.md": {
+          "Missing": 2
+        },
+        "é.md": {},
+        "Created.md": {
+          "Missing": 1
+        },
+        "Folder/Renamed.md": {
+          "Missing": 1
+        }
+      },
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md"
+      ],
+      "files": [
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "Unused.bin",
+        "image.png",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Target.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "LS0tCmFsaWFzZXM6IFtzaGFyZWRdCi0tLQpPdGhlci4K",
+        "AliasOnly.md": "W1tOaWNrbmFtZV1dCg==",
+        "Target.md": "LS0tCmFsaWFzZXM6IFtOaWNrbmFtZSwgc2hhcmVkXQotLS0KIyBIZWFkaW5nClRhcmdldC4K",
+        "Self.md": "W1tTZWxmXV0gW1tTZWxmI0hlYWRpbmddXQo=",
+        "é.md": "VW5pY29kZSB0YXJnZXQuCg==",
+        "Source,One.md": "LS0tCnJlbGF0ZWQ6ICJbW1RhcmdldF1dIgpsaXN0OiBbIltbVGFyZ2V0XV0iLCAiW1tNaXNzaW5nXV0iXQotLS0KW1tUYXJnZXRdXSBbW1RhcmdldF1dIFtbVGFyZ2V0I0hlYWRpbmddXSAhW1tUYXJnZXRdXQpbW05pY2tuYW1lXV0gW1tzaGFyZWRdXSBbW01pc3NpbmcubWRdXSBbW01pc3NpbmddXSBbW01pc3NpbmcuTURdXQpbWyNsb2NhbF1dIFtbRm9sZGVyL0R1cF1dIFtbRHVwXV0KW3JlZl1bcl0gIVtpbWFnZV0oaW1hZ2UucG5nKSAhW1tpbWFnZS5wbmddXSBbZXh0ZXJuYWxdKGh0dHBzOi8vZXhhbXBsZS5jb20pCltyXTogVGFyZ2V0Lm1kCg==",
+        "Dup.md": "Um9vdCBkdXBsaWNhdGUuCg==",
+        "Unicode.md": "W1vDqV1dIFtbZcyBXV0gW1tNaXNzaW5nLm1kI0hlYWRpbmddXSBbW01pc3NpbmcuTUQjSGVhZGluZ11dCg==",
+        "Unused.bin": "AHJhd/8=",
+        "Created.md": "W1tNaXNzaW5nXV0gW1tUYXJnZXRdXQo=",
+        "Empty.md": "W1tNaXNzaW5nXV0K",
+        "image.png": "AFBORwE=",
+        "UnresolvedOnly.md": "W1tWb2lkXV0K",
+        "Folder/Dup.md": "TmVzdGVkIGR1cGxpY2F0ZS4K",
+        "Folder/Renamed.md": "W1tEdXBdXSBbW01pc3NpbmddXSBbW1RhcmdldF1dCg=="
+      }
+    },
+    "renamed-target": {
+      "resolved": {
+        "Empty.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {
+          "Source,One.md": 1,
+          "Folder/Dup.md": 1,
+          "Dup.md": 1,
+          "image.png": 2
+        },
+        "Self.md": {
+          "Self.md": 2
+        },
+        "AliasOnly.md": {},
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {
+          "é.md": 2
+        },
+        "é.md": {},
+        "Created.md": {},
+        "Folder/Renamed.md": {
+          "Dup.md": 1
+        },
+        "Renamed.md": {}
+      },
+      "unresolved": {
+        "Empty.md": {
+          "Missing": 1
+        },
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {
+          "Target": 6,
+          "Missing": 4,
+          "Nickname": 1,
+          "shared": 1
+        },
+        "Self.md": {},
+        "AliasOnly.md": {
+          "Nickname": 1
+        },
+        "UnresolvedOnly.md": {
+          "Void": 1
+        },
+        "Unicode.md": {
+          "Missing": 2
+        },
+        "é.md": {},
+        "Created.md": {
+          "Missing": 1,
+          "Target": 1
+        },
+        "Folder/Renamed.md": {
+          "Missing": 1,
+          "Target": 1
+        },
+        "Renamed.md": {}
+      },
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "files": [
+        "Renamed.md",
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "Unused.bin",
+        "image.png",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "Renamed.md",
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "LS0tCmFsaWFzZXM6IFtzaGFyZWRdCi0tLQpPdGhlci4K",
+        "AliasOnly.md": "W1tOaWNrbmFtZV1dCg==",
+        "Self.md": "W1tTZWxmXV0gW1tTZWxmI0hlYWRpbmddXQo=",
+        "é.md": "VW5pY29kZSB0YXJnZXQuCg==",
+        "Source,One.md": "LS0tCnJlbGF0ZWQ6ICJbW1RhcmdldF1dIgpsaXN0OiBbIltbVGFyZ2V0XV0iLCAiW1tNaXNzaW5nXV0iXQotLS0KW1tUYXJnZXRdXSBbW1RhcmdldF1dIFtbVGFyZ2V0I0hlYWRpbmddXSAhW1tUYXJnZXRdXQpbW05pY2tuYW1lXV0gW1tzaGFyZWRdXSBbW01pc3NpbmcubWRdXSBbW01pc3NpbmddXSBbW01pc3NpbmcuTURdXQpbWyNsb2NhbF1dIFtbRm9sZGVyL0R1cF1dIFtbRHVwXV0KW3JlZl1bcl0gIVtpbWFnZV0oaW1hZ2UucG5nKSAhW1tpbWFnZS5wbmddXSBbZXh0ZXJuYWxdKGh0dHBzOi8vZXhhbXBsZS5jb20pCltyXTogVGFyZ2V0Lm1kCg==",
+        "Dup.md": "Um9vdCBkdXBsaWNhdGUuCg==",
+        "Unicode.md": "W1vDqV1dIFtbZcyBXV0gW1tNaXNzaW5nLm1kI0hlYWRpbmddXSBbW01pc3NpbmcuTUQjSGVhZGluZ11dCg==",
+        "Renamed.md": "LS0tCmFsaWFzZXM6IFtOaWNrbmFtZSwgc2hhcmVkXQotLS0KIyBIZWFkaW5nClRhcmdldC4K",
+        "Unused.bin": "AHJhd/8=",
+        "Created.md": "W1tNaXNzaW5nXV0gW1tUYXJnZXRdXQo=",
+        "Empty.md": "W1tNaXNzaW5nXV0K",
+        "image.png": "AFBORwE=",
+        "UnresolvedOnly.md": "W1tWb2lkXV0K",
+        "Folder/Dup.md": "TmVzdGVkIGR1cGxpY2F0ZS4K",
+        "Folder/Renamed.md": "W1tEdXBdXSBbW01pc3NpbmddXSBbW1RhcmdldF1dCg=="
+      }
+    },
+    "external-modified": {
+      "resolved": {
+        "Empty.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {
+          "Source,One.md": 1,
+          "Folder/Dup.md": 1,
+          "Dup.md": 1,
+          "image.png": 2
+        },
+        "Self.md": {
+          "Self.md": 2
+        },
+        "AliasOnly.md": {
+          "Renamed.md": 2
+        },
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {
+          "é.md": 2
+        },
+        "é.md": {},
+        "Created.md": {},
+        "Folder/Renamed.md": {
+          "Dup.md": 1
+        },
+        "Renamed.md": {}
+      },
+      "unresolved": {
+        "Empty.md": {
+          "Missing": 1
+        },
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {
+          "Target": 6,
+          "Missing": 4,
+          "Nickname": 1,
+          "shared": 1
+        },
+        "Self.md": {},
+        "AliasOnly.md": {
+          "Missing": 1
+        },
+        "UnresolvedOnly.md": {
+          "Void": 1
+        },
+        "Unicode.md": {
+          "Missing": 2
+        },
+        "é.md": {},
+        "Created.md": {
+          "Missing": 1,
+          "Target": 1
+        },
+        "Folder/Renamed.md": {
+          "Missing": 1,
+          "Target": 1
+        },
+        "Renamed.md": {}
+      },
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "files": [
+        "Renamed.md",
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "Unused.bin",
+        "image.png",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "Renamed.md",
+        "Created.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "LS0tCmFsaWFzZXM6IFtzaGFyZWRdCi0tLQpPdGhlci4K",
+        "AliasOnly.md": "W1tSZW5hbWVkXV0gW1tSZW5hbWVkXV0gW1tNaXNzaW5nXV0K",
+        "Self.md": "W1tTZWxmXV0gW1tTZWxmI0hlYWRpbmddXQo=",
+        "é.md": "VW5pY29kZSB0YXJnZXQuCg==",
+        "Source,One.md": "LS0tCnJlbGF0ZWQ6ICJbW1RhcmdldF1dIgpsaXN0OiBbIltbVGFyZ2V0XV0iLCAiW1tNaXNzaW5nXV0iXQotLS0KW1tUYXJnZXRdXSBbW1RhcmdldF1dIFtbVGFyZ2V0I0hlYWRpbmddXSAhW1tUYXJnZXRdXQpbW05pY2tuYW1lXV0gW1tzaGFyZWRdXSBbW01pc3NpbmcubWRdXSBbW01pc3NpbmddXSBbW01pc3NpbmcuTURdXQpbWyNsb2NhbF1dIFtbRm9sZGVyL0R1cF1dIFtbRHVwXV0KW3JlZl1bcl0gIVtpbWFnZV0oaW1hZ2UucG5nKSAhW1tpbWFnZS5wbmddXSBbZXh0ZXJuYWxdKGh0dHBzOi8vZXhhbXBsZS5jb20pCltyXTogVGFyZ2V0Lm1kCg==",
+        "Dup.md": "Um9vdCBkdXBsaWNhdGUuCg==",
+        "Unicode.md": "W1vDqV1dIFtbZcyBXV0gW1tNaXNzaW5nLm1kI0hlYWRpbmddXSBbW01pc3NpbmcuTUQjSGVhZGluZ11dCg==",
+        "Renamed.md": "LS0tCmFsaWFzZXM6IFtOaWNrbmFtZSwgc2hhcmVkXQotLS0KIyBIZWFkaW5nClRhcmdldC4K",
+        "Unused.bin": "AHJhd/8=",
+        "Created.md": "W1tNaXNzaW5nXV0gW1tUYXJnZXRdXQo=",
+        "Empty.md": "W1tNaXNzaW5nXV0K",
+        "image.png": "AFBORwE=",
+        "UnresolvedOnly.md": "W1tWb2lkXV0K",
+        "Folder/Dup.md": "TmVzdGVkIGR1cGxpY2F0ZS4K",
+        "Folder/Renamed.md": "W1tEdXBdXSBbW01pc3NpbmddXSBbW1RhcmdldF1dCg=="
+      }
+    },
+    "deleted-source": {
+      "resolved": {
+        "Empty.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {
+          "Source,One.md": 1,
+          "Folder/Dup.md": 1,
+          "Dup.md": 1,
+          "image.png": 2
+        },
+        "Self.md": {
+          "Self.md": 2
+        },
+        "AliasOnly.md": {
+          "Renamed.md": 2
+        },
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {
+          "é.md": 2
+        },
+        "é.md": {},
+        "Folder/Renamed.md": {
+          "Dup.md": 1
+        },
+        "Renamed.md": {}
+      },
+      "unresolved": {
+        "Empty.md": {
+          "Missing": 1
+        },
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {
+          "Target": 6,
+          "Missing": 4,
+          "Nickname": 1,
+          "shared": 1
+        },
+        "Self.md": {},
+        "AliasOnly.md": {
+          "Missing": 1
+        },
+        "UnresolvedOnly.md": {
+          "Void": 1
+        },
+        "Unicode.md": {
+          "Missing": 2
+        },
+        "é.md": {},
+        "Folder/Renamed.md": {
+          "Missing": 1,
+          "Target": 1
+        },
+        "Renamed.md": {}
+      },
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "files": [
+        "Renamed.md",
+        "é.md",
+        "Unicode.md",
+        "Unused.bin",
+        "image.png",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "Renamed.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "LS0tCmFsaWFzZXM6IFtzaGFyZWRdCi0tLQpPdGhlci4K",
+        "AliasOnly.md": "W1tSZW5hbWVkXV0gW1tSZW5hbWVkXV0gW1tNaXNzaW5nXV0K",
+        "Self.md": "W1tTZWxmXV0gW1tTZWxmI0hlYWRpbmddXQo=",
+        "é.md": "VW5pY29kZSB0YXJnZXQuCg==",
+        "Source,One.md": "LS0tCnJlbGF0ZWQ6ICJbW1RhcmdldF1dIgpsaXN0OiBbIltbVGFyZ2V0XV0iLCAiW1tNaXNzaW5nXV0iXQotLS0KW1tUYXJnZXRdXSBbW1RhcmdldF1dIFtbVGFyZ2V0I0hlYWRpbmddXSAhW1tUYXJnZXRdXQpbW05pY2tuYW1lXV0gW1tzaGFyZWRdXSBbW01pc3NpbmcubWRdXSBbW01pc3NpbmddXSBbW01pc3NpbmcuTURdXQpbWyNsb2NhbF1dIFtbRm9sZGVyL0R1cF1dIFtbRHVwXV0KW3JlZl1bcl0gIVtpbWFnZV0oaW1hZ2UucG5nKSAhW1tpbWFnZS5wbmddXSBbZXh0ZXJuYWxdKGh0dHBzOi8vZXhhbXBsZS5jb20pCltyXTogVGFyZ2V0Lm1kCg==",
+        "Dup.md": "Um9vdCBkdXBsaWNhdGUuCg==",
+        "Unicode.md": "W1vDqV1dIFtbZcyBXV0gW1tNaXNzaW5nLm1kI0hlYWRpbmddXSBbW01pc3NpbmcuTUQjSGVhZGluZ11dCg==",
+        "Renamed.md": "LS0tCmFsaWFzZXM6IFtOaWNrbmFtZSwgc2hhcmVkXQotLS0KIyBIZWFkaW5nClRhcmdldC4K",
+        "Unused.bin": "AHJhd/8=",
+        "Empty.md": "W1tNaXNzaW5nXV0K",
+        "image.png": "AFBORwE=",
+        "UnresolvedOnly.md": "W1tWb2lkXV0K",
+        "Folder/Dup.md": "TmVzdGVkIGR1cGxpY2F0ZS4K",
+        "Folder/Renamed.md": "W1tEdXBdXSBbW01pc3NpbmddXSBbW1RhcmdldF1dCg=="
+      }
+    },
+    "all-self": {
+      "resolved": {
+        "Empty.md": {
+          "Empty.md": 1
+        },
+        "AliasOther.md": {
+          "AliasOther.md": 1
+        },
+        "Dup.md": {
+          "Dup.md": 1
+        },
+        "Folder/Dup.md": {
+          "Folder/Dup.md": 1
+        },
+        "Source,One.md": {
+          "Source,One.md": 1
+        },
+        "Self.md": {
+          "Self.md": 1
+        },
+        "AliasOnly.md": {
+          "AliasOnly.md": 1
+        },
+        "UnresolvedOnly.md": {
+          "UnresolvedOnly.md": 1
+        },
+        "Unicode.md": {
+          "Unicode.md": 1
+        },
+        "é.md": {
+          "é.md": 1
+        },
+        "Folder/Renamed.md": {
+          "Folder/Renamed.md": 1
+        },
+        "Renamed.md": {
+          "Renamed.md": 1
+        }
+      },
+      "unresolved": {
+        "Empty.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {},
+        "Self.md": {},
+        "AliasOnly.md": {},
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {},
+        "é.md": {},
+        "Folder/Renamed.md": {},
+        "Renamed.md": {}
+      },
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "files": [
+        "Renamed.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "Renamed.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "W1tBbGlhc090aGVyLm1kXV0K",
+        "AliasOnly.md": "W1tBbGlhc09ubHkubWRdXQo=",
+        "Self.md": "W1tTZWxmLm1kXV0K",
+        "é.md": "W1vDqS5tZF1dCg==",
+        "Source,One.md": "W1tTb3VyY2UsT25lLm1kXV0K",
+        "Dup.md": "W1tEdXAubWRdXQo=",
+        "Unicode.md": "W1tVbmljb2RlLm1kXV0K",
+        "Renamed.md": "W1tSZW5hbWVkLm1kXV0K",
+        "Empty.md": "W1tFbXB0eS5tZF1dCg==",
+        "UnresolvedOnly.md": "W1tVbnJlc29sdmVkT25seS5tZF1dCg==",
+        "Folder/Dup.md": "W1tGb2xkZXIvRHVwLm1kXV0K",
+        "Folder/Renamed.md": "W1tGb2xkZXIvUmVuYW1lZC5tZF1dCg=="
+      }
+    },
+    "final": {
+      "resolved": {
+        "Empty.md": {
+          "Empty.md": 1
+        },
+        "AliasOther.md": {
+          "AliasOther.md": 1
+        },
+        "Dup.md": {
+          "Dup.md": 1
+        },
+        "Folder/Dup.md": {
+          "Folder/Dup.md": 1
+        },
+        "Source,One.md": {
+          "Source,One.md": 1
+        },
+        "Self.md": {
+          "Self.md": 1
+        },
+        "AliasOnly.md": {
+          "AliasOnly.md": 1
+        },
+        "UnresolvedOnly.md": {
+          "UnresolvedOnly.md": 1
+        },
+        "Unicode.md": {
+          "Unicode.md": 1
+        },
+        "é.md": {
+          "é.md": 1
+        },
+        "Folder/Renamed.md": {
+          "Folder/Renamed.md": 1
+        },
+        "Renamed.md": {
+          "Renamed.md": 1
+        }
+      },
+      "unresolved": {
+        "Empty.md": {},
+        "AliasOther.md": {},
+        "Dup.md": {},
+        "Folder/Dup.md": {},
+        "Source,One.md": {},
+        "Self.md": {},
+        "AliasOnly.md": {},
+        "UnresolvedOnly.md": {},
+        "Unicode.md": {},
+        "é.md": {},
+        "Folder/Renamed.md": {},
+        "Renamed.md": {}
+      },
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "files": [
+        "Renamed.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "markdown": [
+        "Renamed.md",
+        "é.md",
+        "Unicode.md",
+        "UnresolvedOnly.md",
+        "AliasOnly.md",
+        "Self.md",
+        "Source,One.md",
+        "Folder/Renamed.md",
+        "Folder/Dup.md",
+        "Dup.md",
+        "AliasOther.md",
+        "Empty.md"
+      ],
+      "active": "Source,One.md",
+      "files_base64": {
+        "AliasOther.md": "W1tBbGlhc090aGVyLm1kXV0K",
+        "AliasOnly.md": "W1tBbGlhc09ubHkubWRdXQo=",
+        "Self.md": "W1tTZWxmLm1kXV0K",
+        "é.md": "W1vDqS5tZF1dCg==",
+        "Source,One.md": "W1tTb3VyY2UsT25lLm1kXV0K",
+        "Dup.md": "W1tEdXAubWRdXQo=",
+        "Unicode.md": "W1tVbmljb2RlLm1kXV0K",
+        "Renamed.md": "W1tSZW5hbWVkLm1kXV0K",
+        "Empty.md": "W1tFbXB0eS5tZF1dCg==",
+        "UnresolvedOnly.md": "W1tVbnJlc29sdmVkT25seS5tZF1dCg==",
+        "Folder/Dup.md": "W1tGb2xkZXIvRHVwLm1kXV0K",
+        "Folder/Renamed.md": "W1tGb2xkZXIvUmVuYW1lZC5tZF1dCg=="
+      }
+    }
+  },
+  "cases": [
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md"
+      ],
+      "id": "first-initial-000",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Folder/Source.md\nSource,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "total"
+      ],
+      "id": "first-initial-001",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "7\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "counts",
+        "format=json"
+      ],
+      "id": "first-initial-002",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Folder/Source.md\",\n    \"count\": \"1\"\n  },\n  {\n    \"file\": \"Source,One.md\",\n    \"count\": \"6\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Source,One.md"
+      ],
+      "id": "first-initial-003",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Source,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Source,One.md",
+        "total"
+      ],
+      "id": "first-initial-004",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "1\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Source,One.md",
+        "counts",
+        "format=json"
+      ],
+      "id": "first-initial-005",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Source,One.md\",\n    \"count\": \"1\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Self.md"
+      ],
+      "id": "first-initial-006",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Self.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Self.md",
+        "total"
+      ],
+      "id": "first-initial-007",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Self.md",
+        "counts",
+        "format=json"
+      ],
+      "id": "first-initial-008",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Self.md\",\n    \"count\": \"2\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=image.png"
+      ],
+      "id": "first-initial-009",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Source,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=image.png",
+        "total"
+      ],
+      "id": "first-initial-010",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=image.png",
+        "counts",
+        "format=json"
+      ],
+      "id": "first-initial-011",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Source,One.md\",\n    \"count\": \"2\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=AliasOnly.md"
+      ],
+      "id": "first-initial-012",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "No backlinks found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=AliasOnly.md",
+        "total"
+      ],
+      "id": "first-initial-013",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=AliasOnly.md",
+        "counts",
+        "format=json"
+      ],
+      "id": "first-initial-014",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "No backlinks found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Folder/Dup.md"
+      ],
+      "id": "first-initial-015",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Source,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Folder/Dup.md",
+        "total"
+      ],
+      "id": "first-initial-016",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "1\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Folder/Dup.md",
+        "counts",
+        "format=json"
+      ],
+      "id": "first-initial-017",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Source,One.md\",\n    \"count\": \"1\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Empty.md"
+      ],
+      "id": "first-initial-018",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "No backlinks found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Empty.md",
+        "total"
+      ],
+      "id": "first-initial-019",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Empty.md",
+        "counts",
+        "format=json"
+      ],
+      "id": "first-initial-020",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "No backlinks found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Target.md"
+      ],
+      "id": "first-initial-021",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "No links found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Target.md",
+        "total"
+      ],
+      "id": "first-initial-022",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Source,One.md"
+      ],
+      "id": "first-initial-023",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Dup.md\nFolder/Dup.md\nMissing (unresolved)\nMissing.MD (unresolved)\nMissing.md (unresolved)\nNickname (unresolved)\nSource,One.md\nTarget.md\nimage.png\nshared (unresolved)\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Source,One.md",
+        "total"
+      ],
+      "id": "first-initial-024",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "10\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Self.md"
+      ],
+      "id": "first-initial-025",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Self.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Self.md",
+        "total"
+      ],
+      "id": "first-initial-026",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "1\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=image.png"
+      ],
+      "id": "first-initial-027",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "No links found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=image.png",
+        "total"
+      ],
+      "id": "first-initial-028",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=AliasOnly.md"
+      ],
+      "id": "first-initial-029",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Nickname (unresolved)\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=AliasOnly.md",
+        "total"
+      ],
+      "id": "first-initial-030",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "1\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Folder/Dup.md"
+      ],
+      "id": "first-initial-031",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "No links found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Folder/Dup.md",
+        "total"
+      ],
+      "id": "first-initial-032",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Empty.md"
+      ],
+      "id": "first-initial-033",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "No links found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Empty.md",
+        "total"
+      ],
+      "id": "first-initial-034",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved"
+      ],
+      "id": "first-initial-035",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Missing\nNickname\nshared\nVoid\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "total"
+      ],
+      "id": "first-initial-036",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "4\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "all"
+      ],
+      "id": "first-initial-037",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Missing\nNickname\nshared\nVoid\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "total=false"
+      ],
+      "id": "first-initial-038",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "4\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "total="
+      ],
+      "id": "first-initial-039",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Missing\nNickname\nshared\nVoid\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "format=json"
+      ],
+      "id": "first-initial-040",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\"\n  },\n  {\n    \"link\": \"Nickname\"\n  },\n  {\n    \"link\": \"shared\"\n  },\n  {\n    \"link\": \"Void\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "counts"
+      ],
+      "id": "first-initial-041",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Missing\t7\nNickname\t2\nshared\t1\nVoid\t1\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose"
+      ],
+      "id": "first-initial-042",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Missing\t7\tFolder/Source.md, Source,One.md, Unicode.md\nNickname\t2\tSource,One.md, AliasOnly.md\nshared\t1\tSource,One.md\nVoid\t1\tUnresolvedOnly.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "counts",
+        "format=json"
+      ],
+      "id": "first-initial-043",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\",\n    \"count\": \"7\"\n  },\n  {\n    \"link\": \"Nickname\",\n    \"count\": \"2\"\n  },\n  {\n    \"link\": \"shared\",\n    \"count\": \"1\"\n  },\n  {\n    \"link\": \"Void\",\n    \"count\": \"1\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=json"
+      ],
+      "id": "first-initial-044",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\",\n    \"count\": \"7\",\n    \"sources\": \"Folder/Source.md, Source,One.md, Unicode.md\"\n  },\n  {\n    \"link\": \"Nickname\",\n    \"count\": \"2\",\n    \"sources\": \"Source,One.md, AliasOnly.md\"\n  },\n  {\n    \"link\": \"shared\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"Void\",\n    \"count\": \"1\",\n    \"sources\": \"UnresolvedOnly.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=csv"
+      ],
+      "id": "first-initial-045",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Missing,7,\"Folder/Source.md, Source,One.md, Unicode.md\"\nNickname,2,\"Source,One.md, AliasOnly.md\"\nshared,1,\"Source,One.md\"\nVoid,1,UnresolvedOnly.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "counts",
+        "format=csv"
+      ],
+      "id": "first-initial-046",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Missing,7\nNickname,2\nshared,1\nVoid,1\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=invalid"
+      ],
+      "id": "first-initial-047",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "Missing\t7\tFolder/Source.md, Source,One.md, Unicode.md\nNickname\t2\tSource,One.md, AliasOnly.md\nshared\t1\tSource,One.md\nVoid\t1\tUnresolvedOnly.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "json",
+        "csv"
+      ],
+      "id": "first-initial-048",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\"\n  },\n  {\n    \"link\": \"Nickname\"\n  },\n  {\n    \"link\": \"shared\"\n  },\n  {\n    \"link\": \"Void\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans"
+      ],
+      "id": "first-initial-049",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nEmpty.md\nFolder/Source.md\nUnicode.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans",
+        "total"
+      ],
+      "id": "first-initial-050",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "7\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans",
+        "all"
+      ],
+      "id": "first-initial-051",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nEmpty.md\nFolder/Source.md\nUnicode.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans",
+        "total=false"
+      ],
+      "id": "first-initial-052",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "7\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans",
+        "total="
+      ],
+      "id": "first-initial-053",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nEmpty.md\nFolder/Source.md\nUnicode.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans",
+        "format=json"
+      ],
+      "id": "first-initial-054",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nEmpty.md\nFolder/Source.md\nUnicode.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends"
+      ],
+      "id": "first-initial-055",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nDup.md\né.md\nEmpty.md\nFolder/Dup.md\nimage.png\nTarget.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends",
+        "total"
+      ],
+      "id": "first-initial-056",
+      "phase": "initial-first",
+      "expected": {
+        "stdout": "10\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends",
+        "all"
+      ],
+      "id": "initial-000",
+      "phase": "initial",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nDup.md\né.md\nEmpty.md\nFolder/Dup.md\nimage.png\nTarget.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends",
+        "total=false"
+      ],
+      "id": "initial-001",
+      "phase": "initial",
+      "expected": {
+        "stdout": "10\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends",
+        "total="
+      ],
+      "id": "initial-002",
+      "phase": "initial",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nDup.md\né.md\nEmpty.md\nFolder/Dup.md\nimage.png\nTarget.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends",
+        "format=json"
+      ],
+      "id": "initial-003",
+      "phase": "initial",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nDup.md\né.md\nEmpty.md\nFolder/Dup.md\nimage.png\nTarget.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "counts"
+      ],
+      "id": "initial-004",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Folder/Source.md\t1\nSource,One.md\t6\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "counts",
+        "format=csv"
+      ],
+      "id": "initial-005",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Folder/Source.md,1\n\"Source,One.md\",6\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "format=json"
+      ],
+      "id": "initial-006",
+      "phase": "initial",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Folder/Source.md\"\n  },\n  {\n    \"file\": \"Source,One.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "total=false"
+      ],
+      "id": "initial-007",
+      "phase": "initial",
+      "expected": {
+        "stdout": "7\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "total="
+      ],
+      "id": "initial-008",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Folder/Source.md\nSource,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "counts=",
+        "format=json"
+      ],
+      "id": "initial-009",
+      "phase": "initial",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Folder/Source.md\"\n  },\n  {\n    \"file\": \"Source,One.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "json",
+        "csv"
+      ],
+      "id": "initial-010",
+      "phase": "initial",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Folder/Source.md\"\n  },\n  {\n    \"file\": \"Source,One.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks"
+      ],
+      "id": "initial-011",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Source,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "file=Nickname"
+      ],
+      "id": "initial-012",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: File \"Nickname\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "file=shared"
+      ],
+      "id": "initial-013",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: File \"shared\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "file=Dup"
+      ],
+      "id": "initial-014",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Folder/Source.md\nSource,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Folder"
+      ],
+      "id": "initial-015",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Absent.md"
+      ],
+      "id": "initial-016",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: File \"Absent.md\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path="
+      ],
+      "id": "initial-017",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Source,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "file=Absent"
+      ],
+      "id": "initial-018",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Folder/Source.md\nSource,One.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "file=Target.md#Heading"
+      ],
+      "id": "initial-019",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: File \"Target.md#Heading\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links"
+      ],
+      "id": "initial-020",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Dup.md\nFolder/Dup.md\nMissing (unresolved)\nMissing.MD (unresolved)\nMissing.md (unresolved)\nNickname (unresolved)\nSource,One.md\nTarget.md\nimage.png\nshared (unresolved)\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "file=Nickname"
+      ],
+      "id": "initial-021",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: File \"Nickname\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "file=shared"
+      ],
+      "id": "initial-022",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: File \"shared\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "file=Dup"
+      ],
+      "id": "initial-023",
+      "phase": "initial",
+      "expected": {
+        "stdout": "No links found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Folder"
+      ],
+      "id": "initial-024",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Absent.md"
+      ],
+      "id": "initial-025",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: File \"Absent.md\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path="
+      ],
+      "id": "initial-026",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Dup.md\nFolder/Dup.md\nMissing (unresolved)\nMissing.MD (unresolved)\nMissing.md (unresolved)\nNickname (unresolved)\nSource,One.md\nTarget.md\nimage.png\nshared (unresolved)\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Target.md",
+        "file=Absent"
+      ],
+      "id": "initial-027",
+      "phase": "initial",
+      "expected": {
+        "stdout": "No links found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "file=Target.md#Heading"
+      ],
+      "id": "initial-028",
+      "phase": "initial",
+      "expected": {
+        "stdout": "Error: File \"Target.md#Heading\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=json"
+      ],
+      "id": "created-029",
+      "phase": "created",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\",\n    \"count\": \"8\",\n    \"sources\": \"Folder/Source.md, Source,One.md, Unicode.md, Created.md\"\n  },\n  {\n    \"link\": \"Nickname\",\n    \"count\": \"2\",\n    \"sources\": \"Source,One.md, AliasOnly.md\"\n  },\n  {\n    \"link\": \"shared\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"Void\",\n    \"count\": \"1\",\n    \"sources\": \"UnresolvedOnly.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "counts",
+        "format=json"
+      ],
+      "id": "created-030",
+      "phase": "created",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Created.md\",\n    \"count\": \"1\"\n  },\n  {\n    \"file\": \"Folder/Source.md\",\n    \"count\": \"1\"\n  },\n  {\n    \"file\": \"Source,One.md\",\n    \"count\": \"6\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans"
+      ],
+      "id": "created-031",
+      "phase": "created",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nCreated.md\nEmpty.md\nFolder/Source.md\nUnicode.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends"
+      ],
+      "id": "created-032",
+      "phase": "created",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nDup.md\né.md\nEmpty.md\nFolder/Dup.md\nimage.png\nTarget.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=json"
+      ],
+      "id": "modified-033",
+      "phase": "modified",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\",\n    \"count\": \"9\",\n    \"sources\": \"Empty.md, Folder/Source.md, Source,One.md, Unicode.md, Created.md\"\n  },\n  {\n    \"link\": \"Nickname\",\n    \"count\": \"2\",\n    \"sources\": \"Source,One.md, AliasOnly.md\"\n  },\n  {\n    \"link\": \"shared\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"Void\",\n    \"count\": \"1\",\n    \"sources\": \"UnresolvedOnly.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=json"
+      ],
+      "id": "renamed-source-034",
+      "phase": "renamed-source",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\",\n    \"count\": \"9\",\n    \"sources\": \"Empty.md, Source,One.md, Unicode.md, Created.md, Folder/Renamed.md\"\n  },\n  {\n    \"link\": \"Nickname\",\n    \"count\": \"2\",\n    \"sources\": \"Source,One.md, AliasOnly.md\"\n  },\n  {\n    \"link\": \"shared\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"Void\",\n    \"count\": \"1\",\n    \"sources\": \"UnresolvedOnly.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Target.md",
+        "counts",
+        "format=json"
+      ],
+      "id": "renamed-source-035",
+      "phase": "renamed-source",
+      "expected": {
+        "stdout": "[\n  {\n    \"file\": \"Created.md\",\n    \"count\": \"1\"\n  },\n  {\n    \"file\": \"Folder/Renamed.md\",\n    \"count\": \"1\"\n  },\n  {\n    \"file\": \"Source,One.md\",\n    \"count\": \"6\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "links",
+        "path=Source,One.md"
+      ],
+      "id": "renamed-target-036",
+      "phase": "renamed-target",
+      "expected": {
+        "stdout": "Dup.md\nFolder/Dup.md\nMissing (unresolved)\nMissing.MD (unresolved)\nMissing.md (unresolved)\nNickname (unresolved)\nSource,One.md\nTarget (unresolved)\nimage.png\nshared (unresolved)\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=json"
+      ],
+      "id": "renamed-target-037",
+      "phase": "renamed-target",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\",\n    \"count\": \"9\",\n    \"sources\": \"Empty.md, Source,One.md, Unicode.md, Created.md, Folder/Renamed.md\"\n  },\n  {\n    \"link\": \"Nickname\",\n    \"count\": \"2\",\n    \"sources\": \"Source,One.md, AliasOnly.md\"\n  },\n  {\n    \"link\": \"shared\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"Target\",\n    \"count\": \"8\",\n    \"sources\": \"Source,One.md, Created.md, Folder/Renamed.md\"\n  },\n  {\n    \"link\": \"Void\",\n    \"count\": \"1\",\n    \"sources\": \"UnresolvedOnly.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Renamed.md",
+        "total"
+      ],
+      "id": "renamed-target-038",
+      "phase": "renamed-target",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends"
+      ],
+      "id": "renamed-target-039",
+      "phase": "renamed-target",
+      "expected": {
+        "stdout": "AliasOnly.md\nAliasOther.md\nCreated.md\nDup.md\né.md\nEmpty.md\nFolder/Dup.md\nimage.png\nRenamed.md\nUnresolvedOnly.md\nUnused.bin\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "backlinks",
+        "path=Renamed.md",
+        "total"
+      ],
+      "id": "external-modified-040",
+      "phase": "external-modified",
+      "expected": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=json"
+      ],
+      "id": "external-modified-041",
+      "phase": "external-modified",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\",\n    \"count\": \"10\",\n    \"sources\": \"Empty.md, Source,One.md, AliasOnly.md, Unicode.md, Created.md, Folder/Renamed.md\"\n  },\n  {\n    \"link\": \"Nickname\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"shared\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"Target\",\n    \"count\": \"8\",\n    \"sources\": \"Source,One.md, Created.md, Folder/Renamed.md\"\n  },\n  {\n    \"link\": \"Void\",\n    \"count\": \"1\",\n    \"sources\": \"UnresolvedOnly.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "verbose",
+        "format=json"
+      ],
+      "id": "deleted-source-042",
+      "phase": "deleted-source",
+      "expected": {
+        "stdout": "[\n  {\n    \"link\": \"Missing\",\n    \"count\": \"9\",\n    \"sources\": \"Empty.md, Source,One.md, AliasOnly.md, Unicode.md, Folder/Renamed.md\"\n  },\n  {\n    \"link\": \"Nickname\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"shared\",\n    \"count\": \"1\",\n    \"sources\": \"Source,One.md\"\n  },\n  {\n    \"link\": \"Target\",\n    \"count\": \"7\",\n    \"sources\": \"Source,One.md, Folder/Renamed.md\"\n  },\n  {\n    \"link\": \"Void\",\n    \"count\": \"1\",\n    \"sources\": \"UnresolvedOnly.md\"\n  }\n]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved"
+      ],
+      "id": "all-self-043",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "No unresolved links found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "total"
+      ],
+      "id": "all-self-044",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "unresolved",
+        "format=json"
+      ],
+      "id": "all-self-045",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "No unresolved links found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans"
+      ],
+      "id": "all-self-046",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "No orphan files found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans",
+        "total"
+      ],
+      "id": "all-self-047",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "orphans",
+        "format=json"
+      ],
+      "id": "all-self-048",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "No orphan files found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends"
+      ],
+      "id": "all-self-049",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "No dead-end files found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends",
+        "total"
+      ],
+      "id": "all-self-050",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "args": [
+        "deadends",
+        "format=json"
+      ],
+      "id": "all-self-051",
+      "phase": "all-self",
+      "expected": {
+        "stdout": "No dead-end files found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,2274 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+    "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9"
+  },
+  "initial_files": {
+    "A.md": "# Shared\n",
+    "B.md": "# Shared\n",
+    "Old.md": "# Old\n"
+  },
+  "selected_paths": [
+    "A.md",
+    "B.md",
+    "Old.md"
+  ],
+  "steps": [
+    {
+      "id": "fresh",
+      "operation": {
+        "type": "create-initial-files"
+      },
+      "result": {
+        "cache": {
+          "A.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                },
+                "heading": "Shared",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ]
+          },
+          "B.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                },
+                "heading": "Shared",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ]
+          },
+          "Old.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                },
+                "heading": "Old",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "live_files": {
+          "A.md": {
+            "mtime": 1792008073438,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008073440,
+            "size": 6,
+            "hash": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+          }
+        },
+        "stored_files": {
+          "A.md": {
+            "mtime": 1792008073438,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008073440,
+            "size": 6,
+            "hash": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+          }
+        },
+        "stored_metadata": {
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ]
+          },
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        "descriptors": {
+          "A.md": null,
+          "B.md": null,
+          "Old.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23.099999994039536,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": false
+        }
+      },
+      "file_bytes": {
+        "A.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "B.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "Old.md": [
+          35,
+          32,
+          79,
+          108,
+          100,
+          10
+        ]
+      },
+      "file_sha256": {
+        "A.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "B.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "Old.md": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+      },
+      "gc": {
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": false
+        },
+        "stored_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": false
+        },
+        "live_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "stored_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "stored_selected": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ]
+          },
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ]
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": null
+        },
+        "clean": true,
+        "commit_barrier": "readonly metadata transaction.done"
+      }
+    },
+    {
+      "id": "restart-unchanged",
+      "operation": {
+        "type": "restart"
+      },
+      "result": {
+        "cache": {
+          "A.md": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "B.md": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Old.md": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "v": 1
+          }
+        },
+        "live_files": {
+          "A.md": {
+            "mtime": 1792008073438,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008073440,
+            "size": 6,
+            "hash": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+          }
+        },
+        "stored_files": {
+          "A.md": {
+            "mtime": 1792008073438,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008073440,
+            "size": 6,
+            "hash": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+          }
+        },
+        "stored_metadata": {
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          }
+        },
+        "descriptors": {
+          "A.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "B.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Old.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          }
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23.80000001192093,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": false
+        }
+      },
+      "file_bytes": {
+        "A.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "B.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "Old.md": [
+          35,
+          32,
+          79,
+          108,
+          100,
+          10
+        ]
+      },
+      "file_sha256": {
+        "A.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "B.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "Old.md": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+      },
+      "gc": {
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": false
+        },
+        "stored_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": false
+        },
+        "live_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "stored_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "stored_selected": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": null
+        },
+        "clean": true,
+        "commit_barrier": "readonly metadata transaction.done"
+      }
+    },
+    {
+      "id": "change",
+      "operation": {
+        "type": "modify",
+        "path": "Old.md",
+        "content": "# Changed\n"
+      },
+      "result": {
+        "cache": {
+          "A.md": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "B.md": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Old.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 9,
+                    "offset": 9
+                  }
+                },
+                "heading": "Changed",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 9,
+                    "offset": 9
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "live_files": {
+          "A.md": {
+            "mtime": 1792008073438,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008075811,
+            "size": 10,
+            "hash": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+          }
+        },
+        "stored_files": {
+          "A.md": {
+            "mtime": 1792008073438,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008075811,
+            "size": 10,
+            "hash": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+          }
+        },
+        "stored_metadata": {
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": {
+            "headings": [
+              {
+                "heading": "Changed",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ]
+          }
+        },
+        "descriptors": {
+          "A.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "B.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Old.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 22.399999976158142,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        }
+      },
+      "file_bytes": {
+        "A.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "B.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "Old.md": [
+          35,
+          32,
+          67,
+          104,
+          97,
+          110,
+          103,
+          101,
+          100,
+          10
+        ]
+      },
+      "file_sha256": {
+        "A.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "B.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "Old.md": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+      },
+      "gc": {
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        },
+        "stored_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        },
+        "live_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "stored_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "stored_selected": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": {
+            "headings": [
+              {
+                "heading": "Changed",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ]
+          }
+        },
+        "clean": true,
+        "commit_barrier": "readonly metadata transaction.done"
+      }
+    },
+    {
+      "id": "delete-one-shared",
+      "operation": {
+        "type": "delete",
+        "path": "A.md"
+      },
+      "result": {
+        "cache": {
+          "A.md": null,
+          "B.md": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Old.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 9,
+                    "offset": 9
+                  }
+                },
+                "heading": "Changed",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 9,
+                    "offset": 9
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "live_files": {
+          "A.md": null,
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008075811,
+            "size": 10,
+            "hash": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+          }
+        },
+        "stored_files": {
+          "A.md": null,
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008075811,
+            "size": 10,
+            "hash": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+          }
+        },
+        "stored_metadata": {
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": {
+            "headings": [
+              {
+                "heading": "Changed",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ]
+          }
+        },
+        "descriptors": {
+          "A.md": null,
+          "B.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Old.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 22,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        }
+      },
+      "file_bytes": {
+        "A.md": null,
+        "B.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "Old.md": [
+          35,
+          32,
+          67,
+          104,
+          97,
+          110,
+          103,
+          101,
+          100,
+          10
+        ]
+      },
+      "file_sha256": {
+        "A.md": null,
+        "B.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "Old.md": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+      },
+      "gc": {
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        },
+        "stored_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        },
+        "live_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "stored_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "stored_selected": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": {
+            "headings": [
+              {
+                "heading": "Changed",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ]
+          }
+        },
+        "clean": true,
+        "commit_barrier": "readonly metadata transaction.done"
+      }
+    },
+    {
+      "id": "natural-startup-gc",
+      "operation": {
+        "type": "wait-for-cache-gc",
+        "hashes_removed": [
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "hashes_retained": [
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "timeout_seconds": 90
+      },
+      "result": {
+        "cache": {
+          "A.md": null,
+          "B.md": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Old.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 9,
+                    "offset": 9
+                  }
+                },
+                "heading": "Changed",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 9,
+                    "offset": 9
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "live_files": {
+          "A.md": null,
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008075811,
+            "size": 10,
+            "hash": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+          }
+        },
+        "stored_files": {
+          "A.md": null,
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008075811,
+            "size": 10,
+            "hash": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+          }
+        },
+        "stored_metadata": {
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": {
+            "headings": [
+              {
+                "heading": "Changed",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ]
+          }
+        },
+        "descriptors": {
+          "A.md": null,
+          "B.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Old.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23.80000001192093,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": false,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        }
+      },
+      "file_bytes": {
+        "A.md": null,
+        "B.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "Old.md": [
+          35,
+          32,
+          67,
+          104,
+          97,
+          110,
+          103,
+          101,
+          100,
+          10
+        ]
+      },
+      "file_sha256": {
+        "A.md": null,
+        "B.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "Old.md": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+      },
+      "gc": {
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": false,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        },
+        "stored_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": false,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        },
+        "live_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "stored_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "stored_selected": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": null,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": {
+            "headings": [
+              {
+                "heading": "Changed",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ]
+          }
+        },
+        "clean": true,
+        "commit_barrier": "readonly metadata transaction.done"
+      }
+    },
+    {
+      "id": "revert-collected",
+      "operation": {
+        "type": "modify",
+        "path": "Old.md",
+        "content": "# Old\n"
+      },
+      "result": {
+        "cache": {
+          "A.md": null,
+          "B.md": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 8,
+                    "offset": 8
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Old.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                },
+                "heading": "Old",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "live_files": {
+          "A.md": null,
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008138306,
+            "size": 6,
+            "hash": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+          }
+        },
+        "stored_files": {
+          "A.md": null,
+          "B.md": {
+            "mtime": 1792008073439,
+            "size": 9,
+            "hash": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944"
+          },
+          "Old.md": {
+            "mtime": 1792008138306,
+            "size": 6,
+            "hash": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+          }
+        },
+        "stored_metadata": {
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        "descriptors": {
+          "A.md": null,
+          "B.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Old.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 22.100000023841858,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        }
+      },
+      "file_bytes": {
+        "A.md": null,
+        "B.md": [
+          35,
+          32,
+          83,
+          104,
+          97,
+          114,
+          101,
+          100,
+          10
+        ],
+        "Old.md": [
+          35,
+          32,
+          79,
+          108,
+          100,
+          10
+        ]
+      },
+      "file_sha256": {
+        "A.md": null,
+        "B.md": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "Old.md": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+      },
+      "gc": {
+        "hash_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        },
+        "stored_presence": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": true,
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": true,
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": true
+        },
+        "live_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+        ],
+        "stored_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590",
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+        ],
+        "stored_selected": {
+          "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590": {
+            "headings": [
+              {
+                "heading": "Old",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ]
+          },
+          "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944": {
+            "headings": [
+              {
+                "heading": "Shared",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a": {
+            "headings": [
+              {
+                "heading": "Changed",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  9,
+                  9
+                ]
+              }
+            ]
+          }
+        },
+        "clean": true,
+        "commit_barrier": "readonly metadata transaction.done"
+      }
+    }
+  ],
+  "cleanup": [
+    {
+      "pid": 20483,
+      "returncode": 0,
+      "stopped": true,
+      "reaped": true,
+      "ps_absent": true
+    },
+    {
+      "pid": 21373,
+      "returncode": 0,
+      "stopped": true,
+      "reaped": true,
+      "ps_absent": true
+    }
+  ],
+  "hash_roles": {
+    "orphan_original": "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590",
+    "shared_referenced": "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+    "changed_referenced": "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "scope": "One natural startup60s cleanup; periodic600s scheduling source-only.",
+    "readiness": "Initialized, actual isCacheClean, rounded actualdisk stats, stable cache turns, committed readonly IDB transaction.done.",
+    "timer_observation": "Readonly owned renderer watcher observes actual old hash removal; no cleanup method call or timer patch. CLI reads watcher status only."
+  },
+  "timer_start": {
+    "started": true,
+    "observation": {
+      "started_ms": 2218.5999999940395,
+      "polls": 1,
+      "last_present_elapsed_ms": 0,
+      "first_absent_elapsed_ms": null,
+      "done": false,
+      "error": null,
+      "removed": [
+        "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+      ],
+      "retained": [
+        "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+        "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+      ]
+    }
+  },
+  "timer_observation": {
+    "started_ms": 2218.5999999940395,
+    "polls": 234,
+    "last_present_elapsed_ms": 58270.5,
+    "first_absent_elapsed_ms": 58522.30000001192,
+    "done": true,
+    "error": null,
+    "removed": [
+      "ccd2955cfc4a825d2f7a5462af7450e9ffa3206a551ce903071776fa6bb78590"
+    ],
+    "retained": [
+      "78b2119065eebb2a0306bce4244e4990707e525589f7a3337bd19555fc350944",
+      "fa8549bc791b513f06435d4e2b912b37bfed2e8388ad5edd89c33a9fee467f7a"
+    ],
+    "observed_performance_ms": 60740.90000000596
+  },
+  "evidence_id": "ev_3f7d964db5422e80434da83a325f4d8ed53c39e4f5f219f0ca25e70cbd2dc953",
+  "cleanup_group": "REA verified",
+  "limitations": [
+    "Natural 60-second startup cleanup actually observed. Recurring 600-second timer uses the same source callback, but no actual ten-minute capture was performed.",
+    "Readonly watcher polls hash membership every250ms; last-present/first-absent bracket collection, not exact timer execution instant. Native elapsed times and performance clock are facts, not cross-runtime scheduling equality.",
+    "Hash membership comparisons are only declared raw-SHA256 roles. Full hash lists retain native startup-note data and are not a portable complete-cache claim.",
+    "Candidate replay should require spontaneous idle cleanup without CLI requests; native watcher only observed membership and did not call/patch cleanup or change the timer."
+  ]
+}

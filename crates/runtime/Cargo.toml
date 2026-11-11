@@ -1,0 +1,24 @@
+[package]
+name = "mnemosyne-runtime"
+version = "0.1.0"
+edition = "2024"
+description = "Rust-owned JavaScript runtime and explicit plugin API compatibility contracts"
+license = "Apache-2.0"
+
+[features]
+default=[]
+embedded-v8=["dep:deno_core","dep:tokio"]
+
+[dependencies]
+mnemosyne-runtime-protocol={path="protocol"}
+deno_core = { optional=true, version = "=0.412.0", default-features = false, features = ["v8", "v8_use_custom_libcxx", "reactor-tokio"] }
+tokio = { optional=true, version = "1", features = ["rt", "time"] }
+thiserror = "2"
+sha2 = "0.10"
+memchr = "2"
+tempfile = "3"
+libc = "0.2"
+
+[dev-dependencies]
+base64 = "0.22"
+serde_json = { version = "1", features = ["preserve_order"] }

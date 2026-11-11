@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2,
+    "all_vaults_owned_disposable": true,
+    "focus_scope": "BrowserWindow.focus() requests did not alter observed outside-cwd selection; remote focus_time absent for all threewindows. Actual OSfocus transitions are not certified."
+  },
+  "registrations": [
+    {
+      "label": "nested",
+      "path": "$RUN/vault/Inner",
+      "id": "818367ce126b7d4e",
+      "opened": true,
+      "ready": {
+        "id": "818367ce126b7d4e",
+        "path": "$RUN/vault/Inner",
+        "mock": true
+      }
+    },
+    {
+      "label": "duplicate",
+      "path": "$RUN/area/vault",
+      "id": "2ea71022cbb9b6ca",
+      "opened": true,
+      "ready": {
+        "id": "2ea71022cbb9b6ca",
+        "path": "$RUN/area/vault",
+        "mock": true
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "cwd-base",
+      "argv": [
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/vault",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cwd-nested-parent-first",
+      "argv": [
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/vault/Inner",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cwd-duplicate",
+      "argv": [
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/area/vault",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "2ea71022cbb9b6ca",
+        "path": "$RUN/area/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"2ea71022cbb9b6ca\",\"path\":\"$RUN/area/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "leading-id-nested",
+      "argv": [
+        "vault=818367ce126b7d4e",
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/vault",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "818367ce126b7d4e",
+        "path": "$RUN/vault/Inner"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"818367ce126b7d4e\",\"path\":\"$RUN/vault/Inner\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "leading-id-base",
+      "argv": [
+        "vault=f1ea000000000001",
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/area/vault",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "leading-name-duplicate-first",
+      "argv": [
+        "vault=VAULT",
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/area/vault",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "leading-name-inner",
+      "argv": [
+        "vault=iNnEr",
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/vault",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "818367ce126b7d4e",
+        "path": "$RUN/vault/Inner"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"818367ce126b7d4e\",\"path\":\"$RUN/vault/Inner\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "leading-unknown-no-fallback",
+      "argv": [
+        "vault=MissingVault",
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/vault/Inner",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "Vault not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nonleading-selector",
+      "argv": [
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})",
+        "vault=818367ce126b7d4e"
+      ],
+      "cwd": "$RUN/vault",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "outside-cwd-focused-duplicate",
+      "argv": [
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "outside-cwd-focused-base",
+      "argv": [
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "outside-cwd-focused-nested",
+      "argv": [
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN",
+      "windows": [
+        {
+          "id": "2ea71022cbb9b6ca",
+          "destroyed": false
+        },
+        {
+          "id": "818367ce126b7d4e",
+          "destroyed": false
+        },
+        {
+          "id": "f1ea000000000001",
+          "destroyed": false
+        }
+      ],
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cli-disabled-before-selection",
+      "argv": [
+        "vault=818367ce126b7d4e",
+        "eval",
+        "code=JSON.stringify({id:app.appId,path:app.vault.adapter.getBasePath()})"
+      ],
+      "cwd": "$RUN/vault",
+      "process": {
+        "exit_code": 0,
+        "stdout": "Command line interface is not enabled. Please turn it on in Settings > General > Advanced.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cli-disabled-last-existing-owned-path",
+      "argv": [
+        "eval",
+        "$RUN/vault/ParityReady.md"
+      ],
+      "cwd": "$RUN",
+      "process": {
+        "exit_code": 0,
+        "stdout": "Opened $RUN/vault/ParityReady.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cli-disabled-last-owned-uri",
+      "argv": [
+        "obsidian://open?vault=vault&file=ParityReady"
+      ],
+      "cwd": "$RUN",
+      "process": {
+        "exit_code": 0,
+        "stdout": "Processed URI obsidian://open?vault=vault&file=ParityReady\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "initial_registry": {
+    "f1ea000000000001": {
+      "path": "$RUN/vault",
+      "ts": 1,
+      "open": true
+    }
+  },
+  "registry_after_open": {
+    "f1ea000000000001": {
+      "path": "$RUN/vault",
+      "ts": 1,
+      "open": true
+    },
+    "818367ce126b7d4e": {
+      "path": "$RUN/vault/Inner",
+      "ts": 1791972493305,
+      "open": true
+    },
+    "2ea71022cbb9b6ca": {
+      "path": "$RUN/area/vault",
+      "ts": 1791972493982,
+      "open": true
+    }
+  },
+  "profile_after_open": {
+    "vaults": {
+      "f1ea000000000001": {
+        "path": "$RUN/vault",
+        "ts": 1,
+        "open": true
+      },
+      "818367ce126b7d4e": {
+        "path": "$RUN/vault/Inner",
+        "ts": 1791972493305,
+        "open": true
+      },
+      "2ea71022cbb9b6ca": {
+        "path": "$RUN/area/vault",
+        "ts": 1791972493982,
+        "open": true
+      }
+    },
+    "cli": true,
+    "updateDisabled": true
+  },
+  "open_mutation_rejections": {
+    "remove": false,
+    "move": "EVAULTOPEN"
+  },
+  "cli_disable_result": false,
+  "cli_disabled": true,
+  "profile_after_disable": {
+    "vaults": {
+      "f1ea000000000001": {
+        "path": "$RUN/vault",
+        "ts": 1,
+        "open": true
+      },
+      "818367ce126b7d4e": {
+        "path": "$RUN/vault/Inner",
+        "ts": 1791972493305,
+        "open": true
+      },
+      "2ea71022cbb9b6ca": {
+        "path": "$RUN/area/vault",
+        "ts": 1791972493982,
+        "open": true
+      }
+    },
+    "updateDisabled": true
+  },
+  "cleanup": {
+    "pid": 27533,
+    "returncode": 0,
+    "stopped": true
+  }
+}

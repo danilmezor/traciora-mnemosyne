@@ -1,0 +1,11 @@
+[package]
+name = "mnemosyne-icu78"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0 AND Unicode-3.0"
+description = "Pinned ICU4C 78.2 collation and embedded locale data"
+links = "mnemosyne_icu78"
+include = ["src/**", "build.rs", "vendor/icu4c-78.2-sources.tgz", "LICENSE-ICU", "LICENSE-Electron", "LICENSES.chromium.html.gz", "vendor/electron-43.7.7-icudtl.dat.gz", "PROVENANCE.json", "README.md", "Cargo.toml"]
+
+[build-dependencies]
+sha2 = "=0.10.9"

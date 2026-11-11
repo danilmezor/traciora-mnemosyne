@@ -1,0 +1,5813 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "direct_cases": [
+    {
+      "id": "unicode-scalar",
+      "source": "é😀: !unknown 123\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "é😀",
+              {
+                "type": "string",
+                "value": "123"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: !unknown at line 1, column 6:\n\né😀: !unknown 123\n     ^^^^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              5,
+              13
+            ],
+            "linePos": [
+              {
+                "line": 1,
+                "col": 6
+              },
+              {
+                "line": 1,
+                "col": 14
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "unicode-nested",
+      "source": "é😀:\n  value: !unknown true\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "é😀",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "value",
+                    {
+                      "type": "string",
+                      "value": "true"
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": [
+          {
+            "name": "YAMLWarning",
+            "message": "Unresolved tag: !unknown at line 2, column 10:\n\n  value: !unknown true\n         ^^^^^^^^\n",
+            "code": "TAG_RESOLVE_FAILED",
+            "pos": [
+              14,
+              22
+            ],
+            "linePos": [
+              {
+                "line": 2,
+                "col": 10
+              },
+              {
+                "line": 2,
+                "col": 18
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "unicode-tag-error",
+      "source": "é😀: !!timestamp nope\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "!!timestamp expects a date, starting with yyyy-mm-dd at line 1, column 6:\n\né😀: !!timestamp nope\n     ^^^^^^^^^^^\n",
+          "code": "TAG_RESOLVE_FAILED",
+          "pos": [
+            5,
+            16
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 6
+            },
+            {
+              "line": 1,
+              "col": 17
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "duplicate-plain",
+      "source": "a: 1\na: 2\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Map keys must be unique at line 2, column 1:\n\na: 1\na: 2\n^\n",
+          "code": "DUPLICATE_KEY",
+          "pos": [
+            5,
+            6
+          ],
+          "linePos": [
+            {
+              "line": 2,
+              "col": 1
+            },
+            {
+              "line": 2,
+              "col": 2
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "duplicate-quoted",
+      "source": "a: 1\n\"a\": 2\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Map keys must be unique at line 2, column 1:\n\na: 1\n\"a\": 2\n^\n",
+          "code": "DUPLICATE_KEY",
+          "pos": [
+            5,
+            6
+          ],
+          "linePos": [
+            {
+              "line": 2,
+              "col": 1
+            },
+            {
+              "line": 2,
+              "col": 2
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "duplicate-numeric",
+      "source": "1: one\n1.0: two\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Map keys must be unique at line 2, column 1:\n\n1: one\n1.0: two\n^\n",
+          "code": "DUPLICATE_KEY",
+          "pos": [
+            7,
+            8
+          ],
+          "linePos": [
+            {
+              "line": 2,
+              "col": 1
+            },
+            {
+              "line": 2,
+              "col": 2
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "coercion-string",
+      "source": "1: one\n\"1\": two\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "1",
+              {
+                "type": "string",
+                "value": "two"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "duplicate-nested",
+      "source": "nested:\n  a: 1\n  a: 2\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Map keys must be unique at line 3, column 3:\n\n  a: 1\n  a: 2\n  ^\n",
+          "code": "DUPLICATE_KEY",
+          "pos": [
+            17,
+            18
+          ],
+          "linePos": [
+            {
+              "line": 3,
+              "col": 3
+            },
+            {
+              "line": 3,
+              "col": 4
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "flow-duplicate",
+      "source": "value: {a: 1, a: 2}\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Map keys must be unique at line 1, column 15:\n\nvalue: {a: 1, a: 2}\n              ^\n",
+          "code": "DUPLICATE_KEY",
+          "pos": [
+            14,
+            15
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 15
+            },
+            {
+              "line": 1,
+              "col": 16
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "badflow-eof",
+      "source": "a: [x\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Flow sequence in block collection must be sufficiently indented and end with a ] at line 2, column 1:\n\na: [x\n\n^\n",
+          "code": "BAD_INDENT",
+          "pos": [
+            6,
+            7
+          ],
+          "linePos": [
+            {
+              "line": 2,
+              "col": 1
+            },
+            {
+              "line": 2,
+              "col": 2
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "unicode-flow-eof",
+      "source": "é😀: [x\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Flow sequence in block collection must be sufficiently indented and end with a ] at line 2, column 1:\n\né😀: [x\n\n^\n",
+          "code": "BAD_INDENT",
+          "pos": [
+            8,
+            9
+          ],
+          "linePos": [
+            {
+              "line": 2,
+              "col": 1
+            },
+            {
+              "line": 2,
+              "col": 2
+            }
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "core-scalar-matrix",
+      "source": "v0: .inf\nv1: .Inf\nv2: .INF\nv3: .iNF\nv4: .nan\nv5: .NaN\nv6: .NAN\nv7: .Nan\nv8: -.nan\nv9: +.nan\nv10: +0x10\nv11: -0x10\nv12: 0x10\nv13: +0o10\nv14: -0o10\nv15: 0o10\nv16: 0X10\nv17: 0O10\nv18: 01\nv19: +01\nv20: -01\nv21: 0_1\nv22: 1_000\nv23: 1e2\nv24: 1E+2\nv25: 1.e2\nv26: .5\nv27: +.5\nv28: -.5\nv29: 1.\nv30: +1.\nv31: -1.\nv32: 01.2\nv33: 1:20\nv34: 1:20.5\nv35: 0b10\nv36: +0b10\nv37: yes\nv38: y\nv39: NULL\nv40: null\nv41: Null\nv42: nUlL\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "v0",
+              {
+                "type": "number",
+                "string": "Infinity",
+                "value": null
+              }
+            ],
+            [
+              "v1",
+              {
+                "type": "number",
+                "string": "Infinity",
+                "value": null
+              }
+            ],
+            [
+              "v2",
+              {
+                "type": "number",
+                "string": "Infinity",
+                "value": null
+              }
+            ],
+            [
+              "v3",
+              {
+                "type": "string",
+                "value": ".iNF"
+              }
+            ],
+            [
+              "v4",
+              {
+                "type": "number",
+                "string": "NaN",
+                "value": null
+              }
+            ],
+            [
+              "v5",
+              {
+                "type": "number",
+                "string": "NaN",
+                "value": null
+              }
+            ],
+            [
+              "v6",
+              {
+                "type": "number",
+                "string": "NaN",
+                "value": null
+              }
+            ],
+            [
+              "v7",
+              {
+                "type": "string",
+                "value": ".Nan"
+              }
+            ],
+            [
+              "v8",
+              {
+                "type": "string",
+                "value": "-.nan"
+              }
+            ],
+            [
+              "v9",
+              {
+                "type": "string",
+                "value": "+.nan"
+              }
+            ],
+            [
+              "v10",
+              {
+                "type": "string",
+                "value": "+0x10"
+              }
+            ],
+            [
+              "v11",
+              {
+                "type": "string",
+                "value": "-0x10"
+              }
+            ],
+            [
+              "v12",
+              {
+                "type": "number",
+                "string": "16",
+                "value": 16
+              }
+            ],
+            [
+              "v13",
+              {
+                "type": "string",
+                "value": "+0o10"
+              }
+            ],
+            [
+              "v14",
+              {
+                "type": "string",
+                "value": "-0o10"
+              }
+            ],
+            [
+              "v15",
+              {
+                "type": "number",
+                "string": "8",
+                "value": 8
+              }
+            ],
+            [
+              "v16",
+              {
+                "type": "string",
+                "value": "0X10"
+              }
+            ],
+            [
+              "v17",
+              {
+                "type": "string",
+                "value": "0O10"
+              }
+            ],
+            [
+              "v18",
+              {
+                "type": "number",
+                "string": "1",
+                "value": 1
+              }
+            ],
+            [
+              "v19",
+              {
+                "type": "number",
+                "string": "1",
+                "value": 1
+              }
+            ],
+            [
+              "v20",
+              {
+                "type": "number",
+                "string": "-1",
+                "value": -1
+              }
+            ],
+            [
+              "v21",
+              {
+                "type": "string",
+                "value": "0_1"
+              }
+            ],
+            [
+              "v22",
+              {
+                "type": "string",
+                "value": "1_000"
+              }
+            ],
+            [
+              "v23",
+              {
+                "type": "number",
+                "string": "100",
+                "value": 100
+              }
+            ],
+            [
+              "v24",
+              {
+                "type": "number",
+                "string": "100",
+                "value": 100
+              }
+            ],
+            [
+              "v25",
+              {
+                "type": "number",
+                "string": "100",
+                "value": 100
+              }
+            ],
+            [
+              "v26",
+              {
+                "type": "number",
+                "string": "0.5",
+                "value": 0.5
+              }
+            ],
+            [
+              "v27",
+              {
+                "type": "number",
+                "string": "0.5",
+                "value": 0.5
+              }
+            ],
+            [
+              "v28",
+              {
+                "type": "number",
+                "string": "-0.5",
+                "value": -0.5
+              }
+            ],
+            [
+              "v29",
+              {
+                "type": "number",
+                "string": "1",
+                "value": 1
+              }
+            ],
+            [
+              "v30",
+              {
+                "type": "number",
+                "string": "1",
+                "value": 1
+              }
+            ],
+            [
+              "v31",
+              {
+                "type": "number",
+                "string": "-1",
+                "value": -1
+              }
+            ],
+            [
+              "v32",
+              {
+                "type": "number",
+                "string": "1.2",
+                "value": 1.2
+              }
+            ],
+            [
+              "v33",
+              {
+                "type": "string",
+                "value": "1:20"
+              }
+            ],
+            [
+              "v34",
+              {
+                "type": "string",
+                "value": "1:20.5"
+              }
+            ],
+            [
+              "v35",
+              {
+                "type": "string",
+                "value": "0b10"
+              }
+            ],
+            [
+              "v36",
+              {
+                "type": "string",
+                "value": "+0b10"
+              }
+            ],
+            [
+              "v37",
+              {
+                "type": "string",
+                "value": "yes"
+              }
+            ],
+            [
+              "v38",
+              {
+                "type": "string",
+                "value": "y"
+              }
+            ],
+            [
+              "v39",
+              {
+                "type": "null"
+              }
+            ],
+            [
+              "v40",
+              {
+                "type": "null"
+              }
+            ],
+            [
+              "v41",
+              {
+                "type": "null"
+              }
+            ],
+            [
+              "v42",
+              {
+                "type": "string",
+                "value": "nUlL"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "yaml11-scalar-matrix",
+      "source": "%YAML 1.1\n---\nv0: 0_123\nv1: -0_123\nv2: 1_000\nv3: 0b1_0\nv4: -0b1_0\nv5: 0xF_F\nv6: +0xF_F\nv7: 1:20\nv8: -1:20\nv9: 1:20.5\nv10: 12:34:56\nv11: 0:00:01\nv12: 1:60\nv13: 1.2_3\nv14: .NaN\nv15: .iNF\nv16: yes\nv17: No\nv18: n\nv19: oN\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "v0",
+              {
+                "type": "number",
+                "string": "83",
+                "value": 83
+              }
+            ],
+            [
+              "v1",
+              {
+                "type": "number",
+                "string": "-83",
+                "value": -83
+              }
+            ],
+            [
+              "v2",
+              {
+                "type": "number",
+                "string": "1000",
+                "value": 1000
+              }
+            ],
+            [
+              "v3",
+              {
+                "type": "number",
+                "string": "2",
+                "value": 2
+              }
+            ],
+            [
+              "v4",
+              {
+                "type": "number",
+                "string": "-2",
+                "value": -2
+              }
+            ],
+            [
+              "v5",
+              {
+                "type": "number",
+                "string": "255",
+                "value": 255
+              }
+            ],
+            [
+              "v6",
+              {
+                "type": "number",
+                "string": "255",
+                "value": 255
+              }
+            ],
+            [
+              "v7",
+              {
+                "type": "number",
+                "string": "80",
+                "value": 80
+              }
+            ],
+            [
+              "v8",
+              {
+                "type": "number",
+                "string": "-80",
+                "value": -80
+              }
+            ],
+            [
+              "v9",
+              {
+                "type": "number",
+                "string": "80.5",
+                "value": 80.5
+              }
+            ],
+            [
+              "v10",
+              {
+                "type": "number",
+                "string": "45296",
+                "value": 45296
+              }
+            ],
+            [
+              "v11",
+              {
+                "type": "number",
+                "string": "1",
+                "value": 1
+              }
+            ],
+            [
+              "v12",
+              {
+                "type": "string",
+                "value": "1:60"
+              }
+            ],
+            [
+              "v13",
+              {
+                "type": "number",
+                "string": "1.23",
+                "value": 1.23
+              }
+            ],
+            [
+              "v14",
+              {
+                "type": "number",
+                "string": "NaN",
+                "value": null
+              }
+            ],
+            [
+              "v15",
+              {
+                "type": "string",
+                "value": ".iNF"
+              }
+            ],
+            [
+              "v16",
+              {
+                "type": "boolean",
+                "value": true
+              }
+            ],
+            [
+              "v17",
+              {
+                "type": "boolean",
+                "value": false
+              }
+            ],
+            [
+              "v18",
+              {
+                "type": "boolean",
+                "value": false
+              }
+            ],
+            [
+              "v19",
+              {
+                "type": "string",
+                "value": "oN"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "warnings": []
+      }
+    }
+  ],
+  "mutation_cases": [
+    {
+      "id": "core-set",
+      "path": "Native0-set.md",
+      "before": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 0123\nbinary_plain: 0b10\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native0-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 0123\nbinary_plain: 0b10\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 8,
+                  "col": 3,
+                  "offset": 152
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "col": 0,
+                  "offset": 153
+                },
+                "end": {
+                  "line": 9,
+                  "col": 4,
+                  "offset": 157
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "date_plain": "2024-01-02",
+            "time_plain": "2024-01-02T03:04:05Z",
+            "yes_plain": "yes",
+            "on_plain": "on",
+            "leading_zero": 123,
+            "binary_plain": "0b10",
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 8,
+              "col": 3,
+              "offset": 152
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "date_plain",
+              {
+                "type": "string",
+                "value": "2024-01-02"
+              }
+            ],
+            [
+              "time_plain",
+              {
+                "type": "string",
+                "value": "2024-01-02T03:04:05Z"
+              }
+            ],
+            [
+              "yes_plain",
+              {
+                "type": "string",
+                "value": "yes"
+              }
+            ],
+            [
+              "on_plain",
+              {
+                "type": "string",
+                "value": "on"
+              }
+            ],
+            [
+              "leading_zero",
+              {
+                "type": "number",
+                "string": "123",
+                "value": 123
+              }
+            ],
+            [
+              "binary_plain",
+              {
+                "type": "string",
+                "value": "0b10"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native0-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "date_plain\t2024-01-02\ntime_plain\t2024-01-02T03:04:05Z\nyes_plain\tyes\non_plain\ton\nleading_zero\t123\nbinary_plain\t0b10\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 123\nbinary_plain: 0b10\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "core-remove",
+      "path": "Native0-remove.md",
+      "before": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 0123\nbinary_plain: 0b10\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native0-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 0123\nbinary_plain: 0b10\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 8,
+                  "col": 3,
+                  "offset": 152
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "col": 0,
+                  "offset": 153
+                },
+                "end": {
+                  "line": 9,
+                  "col": 4,
+                  "offset": 157
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "date_plain": "2024-01-02",
+            "time_plain": "2024-01-02T03:04:05Z",
+            "yes_plain": "yes",
+            "on_plain": "on",
+            "leading_zero": 123,
+            "binary_plain": "0b10",
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 8,
+              "col": 3,
+              "offset": 152
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "date_plain",
+              {
+                "type": "string",
+                "value": "2024-01-02"
+              }
+            ],
+            [
+              "time_plain",
+              {
+                "type": "string",
+                "value": "2024-01-02T03:04:05Z"
+              }
+            ],
+            [
+              "yes_plain",
+              {
+                "type": "string",
+                "value": "yes"
+              }
+            ],
+            [
+              "on_plain",
+              {
+                "type": "string",
+                "value": "on"
+              }
+            ],
+            [
+              "leading_zero",
+              {
+                "type": "number",
+                "string": "123",
+                "value": 123
+              }
+            ],
+            [
+              "binary_plain",
+              {
+                "type": "string",
+                "value": "0b10"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 123\nbinary_plain: 0b10\n---\nbody\n"
+    },
+    {
+      "id": "timestamp-date-set",
+      "path": "Native1-set.md",
+      "before": "---\nts_date: !!timestamp 2024-01-02\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native1-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nts_date: !!timestamp 2024-01-02\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 62
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 63
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 67
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ts_date": "2024-01-02T00:00:00.000Z",
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 62
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "ts_date",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:00:00.000Z",
+                "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704153600000
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native1-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "ts_date\tTue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nts_date: 2024-01-02T00:00:00.000Z\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "timestamp-date-remove",
+      "path": "Native1-remove.md",
+      "before": "---\nts_date: !!timestamp 2024-01-02\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native1-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nts_date: !!timestamp 2024-01-02\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 62
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 63
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 67
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ts_date": "2024-01-02T00:00:00.000Z",
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 62
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "ts_date",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:00:00.000Z",
+                "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704153600000
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nts_date: 2024-01-02T00:00:00.000Z\n---\nbody\n"
+    },
+    {
+      "id": "timestamp-time-set",
+      "path": "Native2-set.md",
+      "before": "---\nts_datetime: !!timestamp 2024-01-02T03:04:05.678+02:30\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native2-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nts_datetime: !!timestamp 2024-01-02T03:04:05.678+02:30\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 85
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 86
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 90
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ts_datetime": "2024-01-02T00:34:05.678Z",
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 85
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "ts_datetime",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:34:05.678Z",
+                "string": "Tue Jan 02 2024 00:34:05 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704155645678
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native2-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "ts_datetime\tTue Jan 02 2024 00:34:05 GMT+0000 (Coordinated Universal Time)\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nts_datetime: 2024-01-02T00:34:05.678Z\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "timestamp-time-remove",
+      "path": "Native2-remove.md",
+      "before": "---\nts_datetime: !!timestamp 2024-01-02T03:04:05.678+02:30\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native2-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nts_datetime: !!timestamp 2024-01-02T03:04:05.678+02:30\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 85
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 86
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 90
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ts_datetime": "2024-01-02T00:34:05.678Z",
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 85
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "ts_datetime",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:34:05.678Z",
+                "string": "Tue Jan 02 2024 00:34:05 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704155645678
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nts_datetime: 2024-01-02T00:34:05.678Z\n---\nbody\n"
+    },
+    {
+      "id": "binary-set",
+      "path": "Native3-set.md",
+      "before": "---\nbin_data: !!binary SGVsbG8=\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native3-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nbin_data: !!binary SGVsbG8=\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 58
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 59
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 63
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "bin_data": {
+              "0": 72,
+              "1": 101,
+              "2": 108,
+              "3": 108,
+              "4": 111
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 58
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "bin_data",
+              {
+                "type": "Uint8Array",
+                "id": 1,
+                "values": [
+                  72,
+                  101,
+                  108,
+                  108,
+                  111
+                ],
+                "string": "72,101,108,108,111"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native3-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "bin_data\t72,101,108,108,111\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nbin_data:\n  - 72\n  - 101\n  - 108\n  - 108\n  - 111\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "binary-remove",
+      "path": "Native3-remove.md",
+      "before": "---\nbin_data: !!binary SGVsbG8=\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native3-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nbin_data: !!binary SGVsbG8=\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 58
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 59
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 63
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "bin_data": {
+              "0": 72,
+              "1": 101,
+              "2": 108,
+              "3": 108,
+              "4": 111
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 58
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "bin_data",
+              {
+                "type": "Uint8Array",
+                "id": 1,
+                "values": [
+                  72,
+                  101,
+                  108,
+                  108,
+                  111
+                ],
+                "string": "72,101,108,108,111"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nbin_data:\n  - 72\n  - 101\n  - 108\n  - 108\n  - 111\n---\nbody\n"
+    },
+    {
+      "id": "set-set",
+      "path": "Native4-set.md",
+      "before": "---\nset_data: !!set {red: null, blue: null}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native4-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nset_data: !!set {red: null, blue: null}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 70
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 71
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 75
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "set_data": {},
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 70
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "set_data",
+              {
+                "type": "Set",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "red"
+                  },
+                  {
+                    "type": "string",
+                    "value": "blue"
+                  }
+                ],
+                "string": "[object Set]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native4-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "set_data\t[object Set]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nset_data:\n  - red\n  - blue\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "set-remove",
+      "path": "Native4-remove.md",
+      "before": "---\nset_data: !!set {red: null, blue: null}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native4-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nset_data: !!set {red: null, blue: null}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 70
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 71
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 75
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "set_data": {},
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 70
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "set_data",
+              {
+                "type": "Set",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "red"
+                  },
+                  {
+                    "type": "string",
+                    "value": "blue"
+                  }
+                ],
+                "string": "[object Set]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nset_data:\n  - red\n  - blue\n---\nbody\n"
+    },
+    {
+      "id": "omap-set",
+      "path": "Native5-set.md",
+      "before": "---\nomap_data: !!omap [{one: \"[[Missing]]\"}, {two: 2}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native5-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nomap_data: !!omap [{one: \"[[Missing]]\"}, {two: 2}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 81
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 82
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 86
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "omap_data": {},
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 81
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "omap_data",
+              {
+                "type": "Map",
+                "id": 1,
+                "entries": [
+                  [
+                    {
+                      "type": "string",
+                      "value": "one"
+                    },
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "string",
+                      "value": "two"
+                    },
+                    {
+                      "type": "number",
+                      "string": "2",
+                      "value": 2
+                    }
+                  ]
+                ],
+                "string": "[object Map]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native5-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "omap_data\t[object Map]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nomap_data:\n  one: \"[[Missing]]\"\n  two: 2\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "omap-remove",
+      "path": "Native5-remove.md",
+      "before": "---\nomap_data: !!omap [{one: \"[[Missing]]\"}, {two: 2}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native5-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nomap_data: !!omap [{one: \"[[Missing]]\"}, {two: 2}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 81
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 82
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 86
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "omap_data": {},
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 81
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "omap_data",
+              {
+                "type": "Map",
+                "id": 1,
+                "entries": [
+                  [
+                    {
+                      "type": "string",
+                      "value": "one"
+                    },
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "string",
+                      "value": "two"
+                    },
+                    {
+                      "type": "number",
+                      "string": "2",
+                      "value": 2
+                    }
+                  ]
+                ],
+                "string": "[object Map]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nomap_data:\n  one: \"[[Missing]]\"\n  two: 2\n---\nbody\n"
+    },
+    {
+      "id": "pairs-set",
+      "path": "Native6-set.md",
+      "before": "---\npairs_data: !!pairs [{one: \"[[Missing]]\"}, {two: 2}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native6-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\npairs_data: !!pairs [{one: \"[[Missing]]\"}, {two: 2}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 83
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 84
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 88
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "pairs_data": [
+              {
+                "one": "[[Missing]]"
+              },
+              {
+                "two": 2
+              }
+            ],
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 83
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "pairs_data.0.one",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "pairs_data",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "Object",
+                    "id": 2,
+                    "properties": [
+                      [
+                        "one",
+                        {
+                          "type": "string",
+                          "value": "[[Missing]]"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 3,
+                    "properties": [
+                      [
+                        "two",
+                        {
+                          "type": "number",
+                          "string": "2",
+                          "value": 2
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  }
+                ],
+                "string": "[object Object],[object Object]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native6-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "pairs_data\t[object Object], [object Object]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\npairs_data:\n  - one: \"[[Missing]]\"\n  - two: 2\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "pairs-remove",
+      "path": "Native6-remove.md",
+      "before": "---\npairs_data: !!pairs [{one: \"[[Missing]]\"}, {two: 2}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native6-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\npairs_data: !!pairs [{one: \"[[Missing]]\"}, {two: 2}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 83
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 84
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 88
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "pairs_data": [
+              {
+                "one": "[[Missing]]"
+              },
+              {
+                "two": 2
+              }
+            ],
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 83
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "pairs_data.0.one",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "pairs_data",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "Object",
+                    "id": 2,
+                    "properties": [
+                      [
+                        "one",
+                        {
+                          "type": "string",
+                          "value": "[[Missing]]"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 3,
+                    "properties": [
+                      [
+                        "two",
+                        {
+                          "type": "number",
+                          "string": "2",
+                          "value": 2
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  }
+                ],
+                "string": "[object Object],[object Object]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\npairs_data:\n  - one: \"[[Missing]]\"\n  - two: 2\n---\nbody\n"
+    },
+    {
+      "id": "plain-merge-set",
+      "path": "Native7-set.md",
+      "before": "---\ndefaults_plain: &base {link: \"[[Missing]]\", number: 1}\nmerged_plain: {<<: *base, own: true}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native7-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\ndefaults_plain: &base {link: \"[[Missing]]\", number: 1}\nmerged_plain: {<<: *base, own: true}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 122
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 123
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 127
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "defaults_plain": {
+              "link": "[[Missing]]",
+              "number": 1
+            },
+            "merged_plain": {
+              "<<": {
+                "link": "[[Missing]]",
+                "number": 1
+              },
+              "own": true
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 122
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "defaults_plain.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "merged_plain.<<.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "defaults_plain",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "merged_plain",
+              {
+                "type": "Object",
+                "id": 2,
+                "properties": [
+                  [
+                    "<<",
+                    {
+                      "ref": 1
+                    }
+                  ],
+                  [
+                    "own",
+                    {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native7-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "defaults_plain\t[object Object]\nmerged_plain\t[object Object]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\ndefaults_plain:\n  link: \"[[Missing]]\"\n  number: 1\nmerged_plain:\n  <<:\n    link: \"[[Missing]]\"\n    number: 1\n  own: true\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "plain-merge-remove",
+      "path": "Native7-remove.md",
+      "before": "---\ndefaults_plain: &base {link: \"[[Missing]]\", number: 1}\nmerged_plain: {<<: *base, own: true}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native7-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\ndefaults_plain: &base {link: \"[[Missing]]\", number: 1}\nmerged_plain: {<<: *base, own: true}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 122
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 123
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 127
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "defaults_plain": {
+              "link": "[[Missing]]",
+              "number": 1
+            },
+            "merged_plain": {
+              "<<": {
+                "link": "[[Missing]]",
+                "number": 1
+              },
+              "own": true
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 122
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "defaults_plain.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "merged_plain.<<.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "defaults_plain",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "merged_plain",
+              {
+                "type": "Object",
+                "id": 2,
+                "properties": [
+                  [
+                    "<<",
+                    {
+                      "ref": 1
+                    }
+                  ],
+                  [
+                    "own",
+                    {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\ndefaults_plain:\n  link: \"[[Missing]]\"\n  number: 1\nmerged_plain:\n  <<:\n    link: \"[[Missing]]\"\n    number: 1\n  own: true\n---\nbody\n"
+    },
+    {
+      "id": "explicit-merge-set",
+      "path": "Native8-set.md",
+      "before": "---\ndefaults_explicit: &base {link: \"[[Missing]]\", number: 1}\nmerged_explicit: {!!merge <<: *base, own: true}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native8-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\ndefaults_explicit: &base {link: \"[[Missing]]\", number: 1}\nmerged_explicit: {!!merge <<: *base, own: true}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 136
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 137
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 141
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "defaults_explicit": {
+              "link": "[[Missing]]",
+              "number": 1
+            },
+            "merged_explicit": {
+              "link": "[[Missing]]",
+              "number": 1,
+              "own": true
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 136
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "defaults_explicit.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "merged_explicit.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "defaults_explicit",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "merged_explicit",
+              {
+                "type": "Object",
+                "id": 2,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ],
+                  [
+                    "own",
+                    {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native8-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "defaults_explicit\t[object Object]\nmerged_explicit\t[object Object]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\ndefaults_explicit:\n  link: \"[[Missing]]\"\n  number: 1\nmerged_explicit:\n  link: \"[[Missing]]\"\n  number: 1\n  own: true\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "explicit-merge-remove",
+      "path": "Native8-remove.md",
+      "before": "---\ndefaults_explicit: &base {link: \"[[Missing]]\", number: 1}\nmerged_explicit: {!!merge <<: *base, own: true}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native8-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\ndefaults_explicit: &base {link: \"[[Missing]]\", number: 1}\nmerged_explicit: {!!merge <<: *base, own: true}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 136
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 137
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 141
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "defaults_explicit": {
+              "link": "[[Missing]]",
+              "number": 1
+            },
+            "merged_explicit": {
+              "link": "[[Missing]]",
+              "number": 1,
+              "own": true
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 136
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "defaults_explicit.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "merged_explicit.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "defaults_explicit",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "merged_explicit",
+              {
+                "type": "Object",
+                "id": 2,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ],
+                  [
+                    "own",
+                    {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\ndefaults_explicit:\n  link: \"[[Missing]]\"\n  number: 1\nmerged_explicit:\n  link: \"[[Missing]]\"\n  number: 1\n  own: true\n---\nbody\n"
+    },
+    {
+      "id": "unknown-scalar-set",
+      "path": "Native9-set.md",
+      "before": "---\nunknown_data: !unknown \"[[Missing]]\"\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native9-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nunknown_data: !unknown \"[[Missing]]\"\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 67
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 68
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 72
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_data": "[[Missing]]",
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 67
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_data",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_data",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native9-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "unknown_data\t[[Missing]]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nunknown_data: \"[[Missing]]\"\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "unknown-scalar-remove",
+      "path": "Native9-remove.md",
+      "before": "---\nunknown_data: !unknown \"[[Missing]]\"\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native9-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nunknown_data: !unknown \"[[Missing]]\"\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 67
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 68
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 72
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_data": "[[Missing]]",
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 67
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_data",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_data",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nunknown_data: \"[[Missing]]\"\n---\nbody\n"
+    },
+    {
+      "id": "unknown-map-set",
+      "path": "Native10-set.md",
+      "before": "---\nunknown_map: !unknown {link: \"[[Missing]]\", number: 1}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native10-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nunknown_map: !unknown {link: \"[[Missing]]\", number: 1}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 85
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 86
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 90
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_map": {
+              "link": "[[Missing]]",
+              "number": 1
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 85
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_map.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_map",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native10-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "unknown_map\t[object Object]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nunknown_map:\n  link: \"[[Missing]]\"\n  number: 1\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "unknown-map-remove",
+      "path": "Native10-remove.md",
+      "before": "---\nunknown_map: !unknown {link: \"[[Missing]]\", number: 1}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native10-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nunknown_map: !unknown {link: \"[[Missing]]\", number: 1}\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 85
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 86
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 90
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_map": {
+              "link": "[[Missing]]",
+              "number": 1
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 85
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_map.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_map",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nunknown_map:\n  link: \"[[Missing]]\"\n  number: 1\n---\nbody\n"
+    },
+    {
+      "id": "unknown-sequence-set",
+      "path": "Native11-set.md",
+      "before": "---\nunknown_seq: !unknown [\"[[Missing]]\", 1]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native11-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nunknown_seq: !unknown [\"[[Missing]]\", 1]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 71
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 72
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 76
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_seq": [
+              "[[Missing]]",
+              1
+            ],
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 71
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_seq.0",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_seq",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "[[Missing]]"
+                  },
+                  {
+                    "type": "number",
+                    "string": "1",
+                    "value": 1
+                  }
+                ],
+                "string": "[[Missing]],1"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native11-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "unknown_seq\t[[Missing]], 1\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nunknown_seq:\n  - \"[[Missing]]\"\n  - 1\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "unknown-sequence-remove",
+      "path": "Native11-remove.md",
+      "before": "---\nunknown_seq: !unknown [\"[[Missing]]\", 1]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native11-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nunknown_seq: !unknown [\"[[Missing]]\", 1]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 71
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 72
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 76
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_seq": [
+              "[[Missing]]",
+              1
+            ],
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 71
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_seq.0",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_seq",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "[[Missing]]"
+                  },
+                  {
+                    "type": "number",
+                    "string": "1",
+                    "value": 1
+                  }
+                ],
+                "string": "[[Missing]],1"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nunknown_seq:\n  - \"[[Missing]]\"\n  - 1\n---\nbody\n"
+    },
+    {
+      "id": "nested-tags-set",
+      "path": "Native12-set.md",
+      "before": "---\nnested_data: [{date: !!timestamp 2024-01-02}, {binary: !!binary SGk=}, {set: !!set {red: null}}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native12-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nnested_data: [{date: !!timestamp 2024-01-02}, {binary: !!binary SGk=}, {set: !!set {red: null}}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 127
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 128
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 132
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "nested_data": [
+              {
+                "date": "2024-01-02T00:00:00.000Z"
+              },
+              {
+                "binary": {
+                  "0": 72,
+                  "1": 105
+                }
+              },
+              {
+                "set": {}
+              }
+            ],
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 127
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "nested_data",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "Object",
+                    "id": 2,
+                    "properties": [
+                      [
+                        "date",
+                        {
+                          "type": "Date",
+                          "id": 3,
+                          "iso": "2024-01-02T00:00:00.000Z",
+                          "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                          "millis": 1704153600000
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 4,
+                    "properties": [
+                      [
+                        "binary",
+                        {
+                          "type": "Uint8Array",
+                          "id": 5,
+                          "values": [
+                            72,
+                            105
+                          ],
+                          "string": "72,105"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 6,
+                    "properties": [
+                      [
+                        "set",
+                        {
+                          "type": "Set",
+                          "id": 7,
+                          "values": [
+                            {
+                              "type": "string",
+                              "value": "red"
+                            }
+                          ],
+                          "string": "[object Set]"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  }
+                ],
+                "string": "[object Object],[object Object],[object Object]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native12-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "nested_data\t[object Object], [object Object], [object Object]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nnested_data:\n  - date: 2024-01-02T00:00:00.000Z\n  - binary:\n      - 72\n      - 105\n  - set:\n      - red\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "nested-tags-remove",
+      "path": "Native12-remove.md",
+      "before": "---\nnested_data: [{date: !!timestamp 2024-01-02}, {binary: !!binary SGk=}, {set: !!set {red: null}}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native12-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nnested_data: [{date: !!timestamp 2024-01-02}, {binary: !!binary SGk=}, {set: !!set {red: null}}]\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 127
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 128
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 132
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "nested_data": [
+              {
+                "date": "2024-01-02T00:00:00.000Z"
+              },
+              {
+                "binary": {
+                  "0": 72,
+                  "1": 105
+                }
+              },
+              {
+                "set": {}
+              }
+            ],
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 127
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "nested_data",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "Object",
+                    "id": 2,
+                    "properties": [
+                      [
+                        "date",
+                        {
+                          "type": "Date",
+                          "id": 3,
+                          "iso": "2024-01-02T00:00:00.000Z",
+                          "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                          "millis": 1704153600000
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 4,
+                    "properties": [
+                      [
+                        "binary",
+                        {
+                          "type": "Uint8Array",
+                          "id": 5,
+                          "values": [
+                            72,
+                            105
+                          ],
+                          "string": "72,105"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 6,
+                    "properties": [
+                      [
+                        "set",
+                        {
+                          "type": "Set",
+                          "id": 7,
+                          "values": [
+                            {
+                              "type": "string",
+                              "value": "red"
+                            }
+                          ],
+                          "string": "[object Set]"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  }
+                ],
+                "string": "[object Object],[object Object],[object Object]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nnested_data:\n  - date: 2024-01-02T00:00:00.000Z\n  - binary:\n      - 72\n      - 105\n  - set:\n      - red\n---\nbody\n"
+    },
+    {
+      "id": "nested-numbers-set",
+      "path": "Native13-set.md",
+      "before": "---\nnested_numbers:\n  int: !!int 0123\n  float: !!float 1\n  leading: 0123\n  binary: 0b10\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native13-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nnested_numbers:\n  int: !!int 0123\n  float: !!float 1\n  leading: 0123\n  binary: 0b10\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 7,
+                  "col": 3,
+                  "offset": 114
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 8,
+                  "col": 0,
+                  "offset": 115
+                },
+                "end": {
+                  "line": 8,
+                  "col": 4,
+                  "offset": 119
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "nested_numbers": {
+              "int": 123,
+              "float": "1",
+              "leading": 123,
+              "binary": "0b10"
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 7,
+              "col": 3,
+              "offset": 114
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "nested_numbers",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "int",
+                    {
+                      "type": "number",
+                      "string": "123",
+                      "value": 123
+                    }
+                  ],
+                  [
+                    "float",
+                    {
+                      "type": "string",
+                      "value": "1"
+                    }
+                  ],
+                  [
+                    "leading",
+                    {
+                      "type": "number",
+                      "string": "123",
+                      "value": 123
+                    }
+                  ],
+                  [
+                    "binary",
+                    {
+                      "type": "string",
+                      "value": "0b10"
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native13-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "nested_numbers\t[object Object]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nnested_numbers:\n  int: 123\n  float: \"1\"\n  leading: 123\n  binary: 0b10\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "nested-numbers-remove",
+      "path": "Native13-remove.md",
+      "before": "---\nnested_numbers:\n  int: !!int 0123\n  float: !!float 1\n  leading: 0123\n  binary: 0b10\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native13-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nnested_numbers:\n  int: !!int 0123\n  float: !!float 1\n  leading: 0123\n  binary: 0b10\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 7,
+                  "col": 3,
+                  "offset": 114
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 8,
+                  "col": 0,
+                  "offset": 115
+                },
+                "end": {
+                  "line": 8,
+                  "col": 4,
+                  "offset": 119
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "nested_numbers": {
+              "int": 123,
+              "float": "1",
+              "leading": 123,
+              "binary": "0b10"
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 7,
+              "col": 3,
+              "offset": 114
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "nested_numbers",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "int",
+                    {
+                      "type": "number",
+                      "string": "123",
+                      "value": 123
+                    }
+                  ],
+                  [
+                    "float",
+                    {
+                      "type": "string",
+                      "value": "1"
+                    }
+                  ],
+                  [
+                    "leading",
+                    {
+                      "type": "number",
+                      "string": "123",
+                      "value": 123
+                    }
+                  ],
+                  [
+                    "binary",
+                    {
+                      "type": "string",
+                      "value": "0b10"
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nnested_numbers:\n  int: 123\n  float: \"1\"\n  leading: 123\n  binary: 0b10\n---\nbody\n"
+    },
+    {
+      "id": "alias-copies-set",
+      "path": "Native14-set.md",
+      "before": "---\nfirst_alias: &copy {link: \"[[Missing]]\", count: 1}\nsecond_alias: *copy\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native14-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\nfirst_alias: &copy {link: \"[[Missing]]\", count: 1}\nsecond_alias: *copy\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 101
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 102
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 106
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "first_alias": {
+              "link": "[[Missing]]",
+              "count": 1
+            },
+            "second_alias": {
+              "link": "[[Missing]]",
+              "count": 1
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 101
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "first_alias.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "second_alias.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "first_alias",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "count",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "second_alias",
+              {
+                "ref": 1
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native14-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "first_alias\t[object Object]\nsecond_alias\t[object Object]\nrelated\t[[Missing]]\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\nfirst_alias:\n  link: \"[[Missing]]\"\n  count: 1\nsecond_alias:\n  link: \"[[Missing]]\"\n  count: 1\nrelated: \"[[Missing]]\"\nadded: new\n---\nbody\n"
+    },
+    {
+      "id": "alias-copies-remove",
+      "path": "Native14-remove.md",
+      "before": "---\nfirst_alias: &copy {link: \"[[Missing]]\", count: 1}\nsecond_alias: *copy\nrelated: \"[[Missing]]\"\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native14-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\nfirst_alias: &copy {link: \"[[Missing]]\", count: 1}\nsecond_alias: *copy\nrelated: \"[[Missing]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 101
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 102
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 106
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "first_alias": {
+              "link": "[[Missing]]",
+              "count": 1
+            },
+            "second_alias": {
+              "link": "[[Missing]]",
+              "count": 1
+            },
+            "related": "[[Missing]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 101
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "first_alias.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "second_alias.link",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            },
+            {
+              "key": "related",
+              "link": "Missing",
+              "original": "[[Missing]]",
+              "displayText": "Missing"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "first_alias",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Missing]]"
+                    }
+                  ],
+                  [
+                    "count",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "second_alias",
+              {
+                "ref": 1
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Missing]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\nfirst_alias:\n  link: \"[[Missing]]\"\n  count: 1\nsecond_alias:\n  link: \"[[Missing]]\"\n  count: 1\n---\nbody\n"
+    },
+    {
+      "id": "root-date-set",
+      "path": "Native15-set.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native15-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 30
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 35
+                }
+              }
+            }
+          ],
+          "frontmatter": "2024-01-02T00:00:00.000Z",
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 30
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Date",
+          "id": 0,
+          "iso": "2024-01-02T00:00:00.000Z",
+          "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+          "millis": 1704153600000
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native15-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "No frontmatter found.\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n"
+    },
+    {
+      "id": "root-date-remove",
+      "path": "Native15-remove.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native15-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 30
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 35
+                }
+              }
+            }
+          ],
+          "frontmatter": "2024-01-02T00:00:00.000Z",
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 30
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Date",
+          "id": 0,
+          "iso": "2024-01-02T00:00:00.000Z",
+          "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+          "millis": 1704153600000
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "body\n"
+    },
+    {
+      "id": "root-binary-set",
+      "path": "Native16-set.md",
+      "before": "---\n!!binary SGk=\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native16-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\n!!binary SGk=\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 21
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 26
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "0": 72,
+            "1": 105
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 21
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Uint8Array",
+          "id": 0,
+          "values": [
+            72,
+            105
+          ],
+          "string": "72,105"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native16-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "0\t72\n1\t105\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\n- 72\n- 105\n---\nbody\n"
+    },
+    {
+      "id": "root-binary-remove",
+      "path": "Native16-remove.md",
+      "before": "---\n!!binary SGk=\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native16-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\n!!binary SGk=\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 21
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 26
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "0": 72,
+            "1": 105
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 21
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Uint8Array",
+          "id": 0,
+          "values": [
+            72,
+            105
+          ],
+          "string": "72,105"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "---\n- 72\n- 105\n---\nbody\n"
+    },
+    {
+      "id": "root-set-set",
+      "path": "Native17-set.md",
+      "before": "---\n!!set {red: null}\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native17-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\n!!set {red: null}\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 30
+                }
+              }
+            }
+          ],
+          "frontmatter": {},
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Set",
+          "id": 0,
+          "values": [
+            {
+              "type": "string",
+              "value": "red"
+            }
+          ],
+          "string": "[object Set]"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native17-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "No frontmatter found.\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\n- red\n---\nbody\n"
+    },
+    {
+      "id": "root-set-remove",
+      "path": "Native17-remove.md",
+      "before": "---\n!!set {red: null}\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native17-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\n!!set {red: null}\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 30
+                }
+              }
+            }
+          ],
+          "frontmatter": {},
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Set",
+          "id": 0,
+          "values": [
+            {
+              "type": "string",
+              "value": "red"
+            }
+          ],
+          "string": "[object Set]"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "body\n"
+    },
+    {
+      "id": "root-map-set",
+      "path": "Native18-set.md",
+      "before": "---\n!!omap [{one: 1}]\n---\nbody\n",
+      "args": [
+        "property:set",
+        "path=Native18-set.md",
+        "name=added",
+        "value=new"
+      ],
+      "proof": {
+        "cached": "---\n!!omap [{one: 1}]\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 30
+                }
+              }
+            }
+          ],
+          "frontmatter": {},
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Map",
+          "id": 0,
+          "entries": [
+            [
+              {
+                "type": "string",
+                "value": "one"
+              },
+              {
+                "type": "number",
+                "string": "1",
+                "value": 1
+              }
+            ]
+          ],
+          "string": "[object Map]"
+        }
+      },
+      "tsv": {
+        "args": [
+          "properties",
+          "path=Native18-set.md",
+          "format=tsv"
+        ],
+        "output": {
+          "exit_code": 0,
+          "stdout": "No frontmatter found.\n",
+          "stderr": ""
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set added: new\n",
+        "stderr": ""
+      },
+      "after": "---\none: 1\n---\nbody\n"
+    },
+    {
+      "id": "root-map-remove",
+      "path": "Native18-remove.md",
+      "before": "---\n!!omap [{one: 1}]\n---\nbody\n",
+      "args": [
+        "property:remove",
+        "path=Native18-remove.md",
+        "name=related"
+      ],
+      "proof": {
+        "cached": "---\n!!omap [{one: 1}]\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 4,
+                  "offset": 30
+                }
+              }
+            }
+          ],
+          "frontmatter": {},
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Map",
+          "id": 0,
+          "entries": [
+            [
+              {
+                "type": "string",
+                "value": "one"
+              },
+              {
+                "type": "number",
+                "string": "1",
+                "value": 1
+              }
+            ]
+          ],
+          "string": "[object Map]"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: related\n",
+        "stderr": ""
+      },
+      "after": "body\n"
+    }
+  ],
+  "manager": {
+    "properties": {
+      "0": {
+        "name": "0",
+        "widget": "number"
+      },
+      "1": {
+        "name": "1",
+        "widget": "number"
+      },
+      "aliases": {
+        "name": "aliases",
+        "widget": "aliases"
+      },
+      "cssclasses": {
+        "name": "cssclasses",
+        "widget": "multitext"
+      },
+      "tags": {
+        "name": "tags",
+        "widget": "tags"
+      },
+      "date_plain": {
+        "name": "date_plain",
+        "widget": "date"
+      },
+      "time_plain": {
+        "name": "time_plain",
+        "widget": "text"
+      },
+      "yes_plain": {
+        "name": "yes_plain",
+        "widget": "text"
+      },
+      "on_plain": {
+        "name": "on_plain",
+        "widget": "text"
+      },
+      "leading_zero": {
+        "name": "leading_zero",
+        "widget": "number"
+      },
+      "binary_plain": {
+        "name": "binary_plain",
+        "widget": "text"
+      },
+      "related": {
+        "name": "related",
+        "widget": "text"
+      },
+      "ts_date": {
+        "name": "ts_date",
+        "widget": "unknown"
+      },
+      "ts_datetime": {
+        "name": "ts_datetime",
+        "widget": "unknown"
+      },
+      "bin_data": {
+        "name": "bin_data",
+        "widget": "unknown"
+      },
+      "set_data": {
+        "name": "set_data",
+        "widget": "unknown"
+      },
+      "omap_data": {
+        "name": "omap_data",
+        "widget": "unknown"
+      },
+      "pairs_data": {
+        "name": "pairs_data",
+        "widget": "unknown"
+      },
+      "defaults_plain": {
+        "name": "defaults_plain",
+        "widget": "unknown"
+      },
+      "merged_plain": {
+        "name": "merged_plain",
+        "widget": "unknown"
+      },
+      "defaults_explicit": {
+        "name": "defaults_explicit",
+        "widget": "unknown"
+      },
+      "merged_explicit": {
+        "name": "merged_explicit",
+        "widget": "unknown"
+      },
+      "unknown_data": {
+        "name": "unknown_data",
+        "widget": "text"
+      },
+      "unknown_map": {
+        "name": "unknown_map",
+        "widget": "unknown"
+      },
+      "unknown_seq": {
+        "name": "unknown_seq",
+        "widget": "unknown"
+      },
+      "nested_data": {
+        "name": "nested_data",
+        "widget": "unknown"
+      },
+      "nested_numbers": {
+        "name": "nested_numbers",
+        "widget": "unknown"
+      },
+      "first_alias": {
+        "name": "first_alias",
+        "widget": "unknown"
+      },
+      "second_alias": {
+        "name": "second_alias",
+        "widget": "unknown"
+      }
+    },
+    "occurrences": {
+      "0": 2,
+      "1": 2,
+      "date_plain": 2,
+      "time_plain": 2,
+      "yes_plain": 2,
+      "on_plain": 2,
+      "leading_zero": 2,
+      "binary_plain": 2,
+      "related": 30,
+      "ts_date": 2,
+      "ts_datetime": 2,
+      "bin_data": 2,
+      "set_data": 2,
+      "omap_data": 2,
+      "pairs_data": 2,
+      "defaults_plain": 2,
+      "merged_plain": 2,
+      "defaults_explicit": 2,
+      "merged_explicit": 2,
+      "unknown_data": 2,
+      "unknown_map": 2,
+      "unknown_seq": 2,
+      "nested_data": 2,
+      "nested_numbers": 2,
+      "first_alias": 2,
+      "second_alias": 2
+    },
+    "order": [
+      "Native0-set.md",
+      "Native0-remove.md",
+      "Native1-set.md",
+      "Native1-remove.md",
+      "Native2-set.md",
+      "Native2-remove.md",
+      "Native3-set.md",
+      "Native3-remove.md",
+      "Native4-set.md",
+      "Native4-remove.md",
+      "Native5-set.md",
+      "Native5-remove.md",
+      "Native6-set.md",
+      "Native6-remove.md",
+      "Native7-set.md",
+      "Native7-remove.md",
+      "Native8-set.md",
+      "Native8-remove.md",
+      "Native9-set.md",
+      "Native9-remove.md",
+      "Native10-set.md",
+      "Native10-remove.md",
+      "Native11-set.md",
+      "Native11-remove.md",
+      "Native12-set.md",
+      "Native12-remove.md",
+      "Native13-set.md",
+      "Native13-remove.md",
+      "Native14-set.md",
+      "Native14-remove.md",
+      "Native15-set.md",
+      "Native15-remove.md",
+      "Native16-set.md",
+      "Native16-remove.md",
+      "Native17-set.md",
+      "Native17-remove.md",
+      "Native18-set.md",
+      "Native18-remove.md"
+    ]
+  },
+  "plugin_proof": {
+    "parse": "function",
+    "stringify": "function",
+    "loaded": true
+  },
+  "plugin_cleanup": {
+    "loaded": false,
+    "exposed": false
+  },
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "evidence": "target/rea/yaml-schema-probes/followup.json; isolated PID37554 stopped; mock-keychain true"
+}

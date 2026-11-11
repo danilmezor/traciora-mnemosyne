@@ -1,0 +1,2053 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2,
+    "focus_events": "Explicit owned BrowserWindow.emit(\"focus\") invocation; not evidence of normal OS focus delivery."
+  },
+  "focus_cases": [
+    {
+      "id": "before-injected-focus",
+      "emitted_in_vault": null,
+      "emit_result": null,
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "emit-second-focus",
+      "emitted_in_vault": "9f98f622a43e344a",
+      "emit_result": true,
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "emit-base-focus",
+      "emitted_in_vault": "f1ea000000000001",
+      "emit_result": true,
+      "selected": {
+        "id": "f1ea000000000001",
+        "path": "$RUN/vault"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"f1ea000000000001\",\"path\":\"$RUN/vault\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "emit-second-focus-again",
+      "emitted_in_vault": "9f98f622a43e344a",
+      "emit_result": true,
+      "selected": {
+        "id": "9f98f622a43e344a",
+        "path": "$RUN/Second"
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "=> {\"id\":\"9f98f622a43e344a\",\"path\":\"$RUN/Second\"}\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "ghost_cases": [
+    {
+      "id": "dot",
+      "source": "Original-dot.md",
+      "raw_destination": "./Ghost.md",
+      "physical_destination": "Ghost.md",
+      "saved_source": "---\nfield: dot\n---\n# dot\n[[Missing-dot]] #tag\n",
+      "before": {
+        "files": [
+          "Original-dot.md",
+          "ParityReady.md"
+        ],
+        "file_cache_keys": [
+          "ParityReady.md",
+          "Original-dot.md"
+        ],
+        "resolved_keys": [
+          "ParityReady.md",
+          "Original-dot.md"
+        ],
+        "raw": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 15,
+                  "offset": 40
+                }
+              },
+              "link": "Missing-dot",
+              "original": "[[Missing-dot]]",
+              "displayText": "Missing-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 41
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              },
+              "heading": "dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 18
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 18
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "canonical": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 15,
+                  "offset": 40
+                }
+              },
+              "link": "Missing-dot",
+              "original": "[[Missing-dot]]",
+              "displayText": "Missing-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 41
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              },
+              "heading": "dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 18
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 18
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "same_metadata_object": true,
+        "raw_record": {
+          "mtime": 1791972836927,
+          "size": 46,
+          "hash": "7cd2a79aa70bedf533cc58e7e9c4b4f3046850c60515c5f17e9c1098f672380b"
+        },
+        "canonical_record": {
+          "mtime": 1791972836927,
+          "size": 46,
+          "hash": "7cd2a79aa70bedf533cc58e7e9c4b4f3046850c60515c5f17e9c1098f672380b"
+        }
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "Moved: Original-dot.md -> ./Ghost.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "files": [
+          "Ghost.md",
+          "ParityReady.md"
+        ],
+        "file_cache_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md"
+        ],
+        "resolved_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md"
+        ],
+        "raw": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 15,
+                  "offset": 40
+                }
+              },
+              "link": "Missing-dot",
+              "original": "[[Missing-dot]]",
+              "displayText": "Missing-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 41
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              },
+              "heading": "dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 18
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 18
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "canonical": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 15,
+                  "offset": 40
+                }
+              },
+              "link": "Missing-dot",
+              "original": "[[Missing-dot]]",
+              "displayText": "Missing-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 41
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              },
+              "heading": "dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 18
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 18
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "same_metadata_object": true,
+        "raw_record": {
+          "mtime": 1791972836927,
+          "size": 46,
+          "hash": "7cd2a79aa70bedf533cc58e7e9c4b4f3046850c60515c5f17e9c1098f672380b"
+        },
+        "canonical_record": {
+          "mtime": 1791972836927,
+          "size": 46,
+          "hash": "7cd2a79aa70bedf533cc58e7e9c4b4f3046850c60515c5f17e9c1098f672380b"
+        }
+      },
+      "modified_source": "---\nfield: changed\n---\n[[Different]]\n",
+      "after_canonical_modified": {
+        "files": [
+          "Ghost.md",
+          "ParityReady.md"
+        ],
+        "file_cache_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md"
+        ],
+        "resolved_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md"
+        ],
+        "raw": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 15,
+                  "offset": 40
+                }
+              },
+              "link": "Missing-dot",
+              "original": "[[Missing-dot]]",
+              "displayText": "Missing-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 41
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              },
+              "heading": "dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 18
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 3,
+                  "col": 5,
+                  "offset": 24
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 45
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 18
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "canonical": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 13,
+                  "offset": 36
+                }
+              },
+              "link": "Different",
+              "original": "[[Different]]",
+              "displayText": "Different"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 22
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 13,
+                  "offset": 36
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "changed"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 22
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "same_metadata_object": false,
+        "raw_record": {
+          "mtime": 1791972836927,
+          "size": 46,
+          "hash": "7cd2a79aa70bedf533cc58e7e9c4b4f3046850c60515c5f17e9c1098f672380b"
+        },
+        "canonical_record": {
+          "mtime": 1791972838050,
+          "size": 37,
+          "hash": "9a7f8ce7cecad52024e94b4e12462bbe26e9edc535e3536c0ab27da5615c9ece"
+        }
+      }
+    },
+    {
+      "id": "middle-dot",
+      "source": "Original-middle-dot.md",
+      "raw_destination": "Sub/../Middle.md",
+      "physical_destination": "Middle.md",
+      "saved_source": "---\nfield: middle-dot\n---\n# middle-dot\n[[Missing-middle-dot]] #tag\n",
+      "before": {
+        "files": [
+          "Original-middle-dot.md",
+          "Ghost.md",
+          "ParityReady.md"
+        ],
+        "file_cache_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Original-middle-dot.md"
+        ],
+        "resolved_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Original-middle-dot.md"
+        ],
+        "raw": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 22,
+                  "offset": 61
+                }
+              },
+              "link": "Missing-middle-dot",
+              "original": "[[Missing-middle-dot]]",
+              "displayText": "Missing-middle-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 23,
+                  "offset": 62
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              },
+              "heading": "middle-dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "middle-dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "canonical": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 22,
+                  "offset": 61
+                }
+              },
+              "link": "Missing-middle-dot",
+              "original": "[[Missing-middle-dot]]",
+              "displayText": "Missing-middle-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 23,
+                  "offset": 62
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              },
+              "heading": "middle-dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "middle-dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "same_metadata_object": true,
+        "raw_record": {
+          "mtime": 1791972838491,
+          "size": 67,
+          "hash": "d0e3a4befbf377d447e1624756c6a9a7d1786947f4ae49e51805aebee78c711e"
+        },
+        "canonical_record": {
+          "mtime": 1791972838491,
+          "size": 67,
+          "hash": "d0e3a4befbf377d447e1624756c6a9a7d1786947f4ae49e51805aebee78c711e"
+        }
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "Moved: Original-middle-dot.md -> Sub/../Middle.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "files": [
+          "Middle.md",
+          "Ghost.md",
+          "ParityReady.md"
+        ],
+        "file_cache_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Sub/../Middle.md",
+          "Middle.md"
+        ],
+        "resolved_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Sub/../Middle.md",
+          "Middle.md"
+        ],
+        "raw": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 22,
+                  "offset": 61
+                }
+              },
+              "link": "Missing-middle-dot",
+              "original": "[[Missing-middle-dot]]",
+              "displayText": "Missing-middle-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 23,
+                  "offset": 62
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              },
+              "heading": "middle-dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "middle-dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "canonical": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 22,
+                  "offset": 61
+                }
+              },
+              "link": "Missing-middle-dot",
+              "original": "[[Missing-middle-dot]]",
+              "displayText": "Missing-middle-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 23,
+                  "offset": 62
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              },
+              "heading": "middle-dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "middle-dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "same_metadata_object": true,
+        "raw_record": {
+          "mtime": 1791972838491,
+          "size": 67,
+          "hash": "d0e3a4befbf377d447e1624756c6a9a7d1786947f4ae49e51805aebee78c711e"
+        },
+        "canonical_record": {
+          "mtime": 1791972838491,
+          "size": 67,
+          "hash": "d0e3a4befbf377d447e1624756c6a9a7d1786947f4ae49e51805aebee78c711e"
+        }
+      },
+      "modified_source": "---\nfield: changed\n---\n[[Different]]\n",
+      "after_canonical_modified": {
+        "files": [
+          "Middle.md",
+          "Ghost.md",
+          "ParityReady.md"
+        ],
+        "file_cache_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Sub/../Middle.md",
+          "Middle.md"
+        ],
+        "resolved_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Sub/../Middle.md",
+          "Middle.md"
+        ],
+        "raw": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 22,
+                  "offset": 61
+                }
+              },
+              "link": "Missing-middle-dot",
+              "original": "[[Missing-middle-dot]]",
+              "displayText": "Missing-middle-dot"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 23,
+                  "offset": 62
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              },
+              "heading": "middle-dot",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 25
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "col": 12,
+                  "offset": 38
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 4,
+                  "col": 27,
+                  "offset": 66
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "middle-dot"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 25
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "canonical": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 13,
+                  "offset": 36
+                }
+              },
+              "link": "Different",
+              "original": "[[Different]]",
+              "displayText": "Different"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 22
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 13,
+                  "offset": 36
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "changed"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 22
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "same_metadata_object": false,
+        "raw_record": {
+          "mtime": 1791972838491,
+          "size": 67,
+          "hash": "d0e3a4befbf377d447e1624756c6a9a7d1786947f4ae49e51805aebee78c711e"
+        },
+        "canonical_record": {
+          "mtime": 1791972839590,
+          "size": 37,
+          "hash": "9a7f8ce7cecad52024e94b4e12462bbe26e9edc535e3536c0ab27da5615c9ece"
+        }
+      }
+    },
+    {
+      "id": "outside",
+      "source": "Original-outside.md",
+      "raw_destination": "../sibling/Outside.md",
+      "physical_destination": null,
+      "saved_source": "---\nfield: outside\n---\n# outside\n[[Missing-outside]] #tag\n",
+      "before": {
+        "files": [
+          "Original-outside.md",
+          "Middle.md",
+          "Ghost.md",
+          "ParityReady.md"
+        ],
+        "file_cache_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Sub/../Middle.md",
+          "Middle.md",
+          "Original-outside.md"
+        ],
+        "resolved_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Sub/../Middle.md",
+          "Middle.md",
+          "Original-outside.md"
+        ],
+        "raw": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 4,
+                  "col": 19,
+                  "offset": 52
+                }
+              },
+              "link": "Missing-outside",
+              "original": "[[Missing-outside]]",
+              "displayText": "Missing-outside"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 53
+                },
+                "end": {
+                  "line": 4,
+                  "col": 24,
+                  "offset": 57
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 9,
+                  "offset": 32
+                }
+              },
+              "heading": "outside",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 22
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 9,
+                  "offset": 32
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 4,
+                  "col": 24,
+                  "offset": 57
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "outside"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 22
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "canonical": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 4,
+                  "col": 19,
+                  "offset": 52
+                }
+              },
+              "link": "Missing-outside",
+              "original": "[[Missing-outside]]",
+              "displayText": "Missing-outside"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 53
+                },
+                "end": {
+                  "line": 4,
+                  "col": 24,
+                  "offset": 57
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 9,
+                  "offset": 32
+                }
+              },
+              "heading": "outside",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 22
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 9,
+                  "offset": 32
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 4,
+                  "col": 24,
+                  "offset": 57
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "outside"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 22
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "same_metadata_object": true,
+        "raw_record": {
+          "mtime": 1791972840028,
+          "size": 58,
+          "hash": "e649a38d4569a8f61bc607dcd7dcea0cb0328b2452b653351cb607b55e8e08f2"
+        },
+        "canonical_record": {
+          "mtime": 1791972840028,
+          "size": 58,
+          "hash": "e649a38d4569a8f61bc607dcd7dcea0cb0328b2452b653351cb607b55e8e08f2"
+        }
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "Moved: Original-outside.md -> ../sibling/Outside.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "files": [
+          "Middle.md",
+          "Ghost.md",
+          "ParityReady.md"
+        ],
+        "file_cache_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Sub/../Middle.md",
+          "Middle.md",
+          "../sibling/Outside.md"
+        ],
+        "resolved_keys": [
+          "ParityReady.md",
+          "./Ghost.md",
+          "Ghost.md",
+          "Sub/../Middle.md",
+          "Middle.md",
+          "../sibling/Outside.md"
+        ],
+        "raw": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 4,
+                  "col": 19,
+                  "offset": 52
+                }
+              },
+              "link": "Missing-outside",
+              "original": "[[Missing-outside]]",
+              "displayText": "Missing-outside"
+            }
+          ],
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 20,
+                  "offset": 53
+                },
+                "end": {
+                  "line": 4,
+                  "col": 24,
+                  "offset": 57
+                }
+              },
+              "tag": "#tag"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 9,
+                  "offset": 32
+                }
+              },
+              "heading": "outside",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 22
+                }
+              }
+            },
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 3,
+                  "col": 9,
+                  "offset": 32
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 4,
+                  "col": 24,
+                  "offset": 57
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "field": "outside"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 22
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "canonical": null,
+        "same_metadata_object": false,
+        "raw_record": {
+          "mtime": 1791972840028,
+          "size": 58,
+          "hash": "e649a38d4569a8f61bc607dcd7dcea0cb0328b2452b653351cb607b55e8e08f2"
+        },
+        "canonical_record": null
+      }
+    }
+  ],
+  "registry": {
+    "f1ea000000000001": {
+      "path": "$RUN/vault",
+      "ts": 1,
+      "open": true
+    },
+    "9f98f622a43e344a": {
+      "path": "$RUN/Second",
+      "ts": 1791972834720,
+      "open": true
+    }
+  },
+  "cleanup": {
+    "pid": 29241,
+    "returncode": 0,
+    "stopped": true
+  }
+}

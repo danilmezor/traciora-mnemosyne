@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2,
+    "measurement": "All state changes and immediate snapshots within one eval; timer polls actual dirty flag, finite4seconddeadline."
+  },
+  "cases": [
+    {
+      "id": "preview-live-to-source",
+      "path": "Timer0.md",
+      "source": false,
+      "initial_mode": "preview",
+      "switch_mode": true,
+      "modify_before_editor": false,
+      "result": {
+        "frames": [
+          {
+            "label": "loaded",
+            "elapsed_ms": 0,
+            "mode": "preview",
+            "source": false,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "editor-immediate",
+            "elapsed_ms": 1.5999999940395355,
+            "mode": "preview",
+            "source": false,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "mode-immediate",
+            "elapsed_ms": 4.5,
+            "mode": "source",
+            "source": false,
+            "dirty": true,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-microtask",
+            "elapsed_ms": 4.5,
+            "mode": "source",
+            "source": false,
+            "dirty": true,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-dirty-cleared-or-deadline",
+            "elapsed_ms": 2014.0999999940395,
+            "mode": "source",
+            "source": false,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          }
+        ],
+        "polls": 171,
+        "timed_out": false,
+        "saved": "original text\n"
+      }
+    },
+    {
+      "id": "preview-sourceflag-to-source",
+      "path": "Timer1.md",
+      "source": true,
+      "initial_mode": "preview",
+      "switch_mode": true,
+      "modify_before_editor": false,
+      "result": {
+        "frames": [
+          {
+            "label": "loaded",
+            "elapsed_ms": 0,
+            "mode": "preview",
+            "source": true,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "editor-immediate",
+            "elapsed_ms": 0.7000000029802322,
+            "mode": "preview",
+            "source": true,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "mode-immediate",
+            "elapsed_ms": 2.7000000029802322,
+            "mode": "source",
+            "source": true,
+            "dirty": true,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-microtask",
+            "elapsed_ms": 2.7000000029802322,
+            "mode": "source",
+            "source": true,
+            "dirty": true,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-dirty-cleared-or-deadline",
+            "elapsed_ms": 2009.9000000059605,
+            "mode": "source",
+            "source": true,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          }
+        ],
+        "polls": 173,
+        "timed_out": false,
+        "saved": "original text\n"
+      }
+    },
+    {
+      "id": "source-dirty-to-preview",
+      "path": "Timer2.md",
+      "source": true,
+      "initial_mode": "source",
+      "switch_mode": true,
+      "modify_before_editor": false,
+      "result": {
+        "frames": [
+          {
+            "label": "loaded",
+            "elapsed_ms": 0,
+            "mode": "source",
+            "source": true,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "editor-immediate",
+            "elapsed_ms": 0.5,
+            "mode": "source",
+            "source": true,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "unsaved editor text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "mode-immediate",
+            "elapsed_ms": 3.3999999910593033,
+            "mode": "preview",
+            "source": true,
+            "dirty": false,
+            "editor": "unsaved editor text\n",
+            "viewData": "unsaved editor text\n",
+            "lastSavedData": "unsaved editor text\n"
+          },
+          {
+            "label": "after-microtask",
+            "elapsed_ms": 3.3999999910593033,
+            "mode": "preview",
+            "source": true,
+            "dirty": false,
+            "editor": "unsaved editor text\n",
+            "viewData": "unsaved editor text\n",
+            "lastSavedData": "unsaved editor text\n"
+          },
+          {
+            "label": "after-dirty-cleared-or-deadline",
+            "elapsed_ms": 3.3999999910593033,
+            "mode": "preview",
+            "source": true,
+            "dirty": false,
+            "editor": "unsaved editor text\n",
+            "viewData": "unsaved editor text\n",
+            "lastSavedData": "unsaved editor text\n"
+          }
+        ],
+        "polls": 0,
+        "timed_out": false,
+        "saved": "unsaved editor text\n"
+      }
+    },
+    {
+      "id": "preview-hidden-save",
+      "path": "Timer3.md",
+      "source": true,
+      "initial_mode": "preview",
+      "switch_mode": false,
+      "modify_before_editor": false,
+      "result": {
+        "frames": [
+          {
+            "label": "loaded",
+            "elapsed_ms": 0,
+            "mode": "preview",
+            "source": true,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "editor-immediate",
+            "elapsed_ms": 0.5,
+            "mode": "preview",
+            "source": true,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-microtask",
+            "elapsed_ms": 0.7000000029802322,
+            "mode": "preview",
+            "source": true,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-dirty-cleared-or-deadline",
+            "elapsed_ms": 2011.2000000029802,
+            "mode": "preview",
+            "source": true,
+            "dirty": false,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          }
+        ],
+        "polls": 172,
+        "timed_out": false,
+        "saved": "original text\n"
+      }
+    },
+    {
+      "id": "preview-after-modify",
+      "path": "Timer4.md",
+      "source": false,
+      "initial_mode": "preview",
+      "switch_mode": true,
+      "modify_before_editor": true,
+      "result": {
+        "frames": [
+          {
+            "label": "loaded",
+            "elapsed_ms": 0,
+            "mode": "preview",
+            "source": false,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "saved-modify",
+            "elapsed_ms": 0.8999999910593033,
+            "mode": "preview",
+            "source": false,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "modified saved text\n",
+            "lastSavedData": "modified saved text\n"
+          },
+          {
+            "label": "editor-immediate",
+            "elapsed_ms": 1.3999999910593033,
+            "mode": "preview",
+            "source": false,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "modified saved text\n",
+            "lastSavedData": "modified saved text\n"
+          },
+          {
+            "label": "mode-immediate",
+            "elapsed_ms": 3.5,
+            "mode": "source",
+            "source": false,
+            "dirty": true,
+            "editor": "modified saved text\n",
+            "viewData": "modified saved text\n",
+            "lastSavedData": "modified saved text\n"
+          },
+          {
+            "label": "after-microtask",
+            "elapsed_ms": 3.5,
+            "mode": "source",
+            "source": false,
+            "dirty": true,
+            "editor": "modified saved text\n",
+            "viewData": "modified saved text\n",
+            "lastSavedData": "modified saved text\n"
+          },
+          {
+            "label": "after-dirty-cleared-or-deadline",
+            "elapsed_ms": 2021.0999999940395,
+            "mode": "source",
+            "source": false,
+            "dirty": false,
+            "editor": "modified saved text\n",
+            "viewData": "modified saved text\n",
+            "lastSavedData": "modified saved text\n"
+          }
+        ],
+        "polls": 172,
+        "timed_out": false,
+        "saved": "modified saved text\n"
+      }
+    },
+    {
+      "id": "preview-live-hidden-save",
+      "path": "Timer5.md",
+      "source": false,
+      "initial_mode": "preview",
+      "switch_mode": false,
+      "modify_before_editor": false,
+      "result": {
+        "frames": [
+          {
+            "label": "loaded",
+            "elapsed_ms": 0.09999999403953552,
+            "mode": "preview",
+            "source": false,
+            "dirty": false,
+            "editor": "original text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "editor-immediate",
+            "elapsed_ms": 0.5999999940395355,
+            "mode": "preview",
+            "source": false,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-microtask",
+            "elapsed_ms": 0.8999999910593033,
+            "mode": "preview",
+            "source": false,
+            "dirty": true,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          },
+          {
+            "label": "after-dirty-cleared-or-deadline",
+            "elapsed_ms": 2015.8999999910593,
+            "mode": "preview",
+            "source": false,
+            "dirty": false,
+            "editor": "unsaved editor text\n",
+            "viewData": "original text\n",
+            "lastSavedData": "original text\n"
+          }
+        ],
+        "polls": 171,
+        "timed_out": false,
+        "saved": "original text\n"
+      }
+    }
+  ],
+  "cleanup": {
+    "pid": 58201,
+    "returncode": 0,
+    "stopped": true
+  },
+  "source_receipt": "target/rea/engine-clock/markdown-timer-report.json",
+  "source_evidence": {
+    "app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+    "contract": "Q4 constructor requestSave Gl(save,2000), L8.setMode calls save only when leaving source; pending callback not cancelled."
+  }
+}

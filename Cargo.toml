@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = ["crates/core", "crates/index", "crates/cli", "crates/engine", "crates/runtime", "crates/runtime/protocol", "crates/runtime-addon", "crates/icu78", "crates/content"]
+
+# Keep development and test builds within a small disk footprint.
+# Source-level Rust debugging can be enabled explicitly when needed.
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.test]
+debug = 0
+incremental = false

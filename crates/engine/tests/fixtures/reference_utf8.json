@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2
+  },
+  "cases": [
+    {
+      "id": "single",
+      "bytes": [
+        65,
+        255,
+        66
+      ],
+      "path": "Utf8-single.md",
+      "observed": {
+        "adapter": "A�B",
+        "read": "A�B",
+        "cachedRead": "A�B"
+      },
+      "cli": {
+        "stdout": "A�B\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "overlong",
+      "bytes": [
+        192,
+        175
+      ],
+      "path": "Utf8-overlong.md",
+      "observed": {
+        "adapter": "��",
+        "read": "��",
+        "cachedRead": "��"
+      },
+      "cli": {
+        "stdout": "��\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "surrogate",
+      "bytes": [
+        237,
+        160,
+        128
+      ],
+      "path": "Utf8-surrogate.md",
+      "observed": {
+        "adapter": "���",
+        "read": "���",
+        "cachedRead": "���"
+      },
+      "cli": {
+        "stdout": "���\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "truncated2",
+      "bytes": [
+        65,
+        226,
+        130
+      ],
+      "path": "Utf8-truncated2.md",
+      "observed": {
+        "adapter": "A�",
+        "read": "A�",
+        "cachedRead": "A�"
+      },
+      "cli": {
+        "stdout": "A�\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "truncated4",
+      "bytes": [
+        240,
+        159,
+        152
+      ],
+      "path": "Utf8-truncated4.md",
+      "observed": {
+        "adapter": "�",
+        "read": "�",
+        "cachedRead": "�"
+      },
+      "cli": {
+        "stdout": "�\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "badContinuation",
+      "bytes": [
+        226,
+        40,
+        161
+      ],
+      "path": "Utf8-badContinuation.md",
+      "observed": {
+        "adapter": "�(�",
+        "read": "�(�",
+        "cachedRead": "�(�"
+      },
+      "cli": {
+        "stdout": "�(�\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "range",
+      "bytes": [
+        244,
+        144,
+        128,
+        128
+      ],
+      "path": "Utf8-range.md",
+      "observed": {
+        "adapter": "����",
+        "read": "����",
+        "cachedRead": "����"
+      },
+      "cli": {
+        "stdout": "����\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "bomInvalid",
+      "bytes": [
+        239,
+        187,
+        191,
+        239,
+        187,
+        191,
+        255,
+        65
+      ],
+      "path": "Utf8-bomInvalid.md",
+      "observed": {
+        "adapter": "﻿﻿�A",
+        "read": "﻿�A",
+        "cachedRead": "﻿�A"
+      },
+      "cli": {
+        "stdout": "﻿�A\n",
+        "stderr": ""
+      }
+    }
+  ]
+}

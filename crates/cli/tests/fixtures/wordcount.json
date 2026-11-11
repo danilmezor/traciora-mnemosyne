@@ -1,0 +1,1147 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial_files": {
+    "Count/000-empty.md": "",
+    "Count/001-ascii.md": "Hello world",
+    "Count/002-lf.md": "one\ntwo\n",
+    "Count/003-crlf.md": "one\r\ntwo\r\n",
+    "Count/004-cr.md": "one\rtwo",
+    "Count/005-space.md": " \t\n ​﻿",
+    "Count/006-punctuation.md": "! ? . , : ; / \\ ( ) [ ] { }",
+    "Count/007-hyphens.md": "- -- --- ' '' '''",
+    "Count/008-dashes.md": "one-two one–two one—two",
+    "Count/009-apostrophes.md": "don't don’t l'homme l’homme",
+    "Count/010-underscore.md": "one_two",
+    "Count/011-numbers.md": "123 1,234 1.23 1,2.3 1..2 1,,2 .5 -1 +2 1e3 1_000",
+    "Count/012-alphanumeric.md": "abc123def",
+    "Count/013-markdown.md": "# Header\n- [ ] task\n**bold** _italic_ `code`\n[title](dest.md) [[wiki link]] ![[embed.png]]\n",
+    "Count/014-code.md": "```rust\nlet x = 123;\n```\n",
+    "Count/015-comments.md": "one <!-- two three --> four",
+    "Count/016-html.md": "<div class=\"foo\">bar baz</div>",
+    "Count/017-url.md": "https://example.com/a-b?q=12",
+    "Count/018-cjk.md": "中文漢字",
+    "Count/019-kana.md": "ひらがな カタカナ ー ヽ ゝ",
+    "Count/020-halfwidth-kana.md": "ｶﾀｶﾅ",
+    "Count/021-hangul.md": "한글 가나다 각",
+    "Count/022-tibetan.md": "ༀ ཀཁ ཈ ྈ",
+    "Count/023-arabic.md": "العربية ١٢٣ ۱۲۳",
+    "Count/024-hebrew.md": "עִבְרִית",
+    "Count/025-devanagari.md": "हिन्दी १२३",
+    "Count/026-tamil.md": "தமிழ் ௧௨௩",
+    "Count/027-thai.md": "ภาษาไทย ๑๒๓",
+    "Count/028-greek.md": "Ελληνικά ΑΒΓ",
+    "Count/029-cyrillic.md": "Русский язык",
+    "Count/030-latin.md": "café naïve ĀĶŉ",
+    "Count/031-combining.md": "áé",
+    "Count/032-emoji.md": "😀👩‍💻 🇺🇸",
+    "Count/033-supplementary.md": "𠀀𐐀𝔘𝟙",
+    "Count/034-fullwidth.md": "ａｂｃ １２３",
+    "Count/035-nonascii-numbers.md": "١٢٣ १२३ ௧௨௩ １２３ Ⅻ ½",
+    "Count/036-mixed.md": "a中文bひらc한글d😀e",
+    "Count/037-frontmatter.md": "---\ntitle: Hello\ncount: 123\n---\nbody words\n",
+    "Count/038-fm-empty.md": "---\n---\nbody words",
+    "Count/039-fm-invalid.md": "---\nfoo: [\n---\nbody words",
+    "Count/040-fm-dots.md": "---\na: title\n...\nbody words",
+    "Count/041-fm-unclosed.md": "---\na: title\nbody words",
+    "Count/042-fm-eof.md": "---\na: title\n---",
+    "Count/043-fm-crlf.md": "---\r\na: title\r\n---\r\nbody words\r\n",
+    "Count/044-fm-leading-space.md": " ---\na: title\n---\nbody words",
+    "Count/045-fm-delimiter-space.md": "--- \na: title\n--- \nbody words",
+    "Count/046-bom.md": "﻿body words",
+    "Count/047-bom-fm.md": "﻿---\na: title\n---\nbody words",
+    "Count/048-double-bom-fm.md": "﻿﻿---\na: title\n---\nbody words",
+    "Count/049-nul.md": "one\u0000two",
+    "Count/050-nel.md": "onetwo",
+    "Count/051-line-separator.md": "one two three",
+    "Count/052-large-number.md": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222",
+    "Count/053-long-word.md": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "Count/054-surrogate-boundaries.md": "😀a😀b😀",
+    "Count/055-japanese-marks.md": "゙゚゛゜・〃々〇〻",
+    "Count/056-cjk-limits.md": "䷿一鿕鿖鿿",
+    "Count/057-hangul-limits.md": "꥟ꥠꥼ꥽가힣힤ힰퟆ퟇",
+    "Count/058-tamil-block.md": "஀஁ஂஃ௿",
+    "Count/059-fm-four-dash.md": "----\na: hello\n----\nbody",
+    "Count/060-fm-space-first.md": "\n---\na: hello\n---\nbody",
+    "Other.md": "saved words only",
+    "Upper.MD": "one two",
+    "attach.txt": "one two",
+    "Folder/Keep.md": "keep"
+  },
+  "cases": [
+    {
+      "id": "empty",
+      "args": [
+        "wordcount",
+        "path=Count/000-empty.md"
+      ],
+      "path": "Count/000-empty.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 0\ncharacters: 0\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "ascii",
+      "args": [
+        "wordcount",
+        "path=Count/001-ascii.md"
+      ],
+      "path": "Count/001-ascii.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 11\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "lf",
+      "args": [
+        "wordcount",
+        "path=Count/002-lf.md"
+      ],
+      "path": "Count/002-lf.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 8\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "crlf",
+      "args": [
+        "wordcount",
+        "path=Count/003-crlf.md"
+      ],
+      "path": "Count/003-crlf.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 10\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cr",
+      "args": [
+        "wordcount",
+        "path=Count/004-cr.md"
+      ],
+      "path": "Count/004-cr.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 7\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "space",
+      "args": [
+        "wordcount",
+        "path=Count/005-space.md"
+      ],
+      "path": "Count/005-space.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 0\ncharacters: 6\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "punctuation",
+      "args": [
+        "wordcount",
+        "path=Count/006-punctuation.md"
+      ],
+      "path": "Count/006-punctuation.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 0\ncharacters: 27\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "hyphens",
+      "args": [
+        "wordcount",
+        "path=Count/007-hyphens.md"
+      ],
+      "path": "Count/007-hyphens.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 6\ncharacters: 17\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "dashes",
+      "args": [
+        "wordcount",
+        "path=Count/008-dashes.md"
+      ],
+      "path": "Count/008-dashes.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 5\ncharacters: 23\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "apostrophes",
+      "args": [
+        "wordcount",
+        "path=Count/009-apostrophes.md"
+      ],
+      "path": "Count/009-apostrophes.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 6\ncharacters: 27\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "underscore",
+      "args": [
+        "wordcount",
+        "path=Count/010-underscore.md"
+      ],
+      "path": "Count/010-underscore.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 7\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "numbers",
+      "args": [
+        "wordcount",
+        "path=Count/011-numbers.md"
+      ],
+      "path": "Count/011-numbers.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 14\ncharacters: 49\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "alphanumeric",
+      "args": [
+        "wordcount",
+        "path=Count/012-alphanumeric.md"
+      ],
+      "path": "Count/012-alphanumeric.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 9\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "markdown",
+      "args": [
+        "wordcount",
+        "path=Count/013-markdown.md"
+      ],
+      "path": "Count/013-markdown.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 13\ncharacters: 91\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "code",
+      "args": [
+        "wordcount",
+        "path=Count/014-code.md"
+      ],
+      "path": "Count/014-code.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 4\ncharacters: 25\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "comments",
+      "args": [
+        "wordcount",
+        "path=Count/015-comments.md"
+      ],
+      "path": "Count/015-comments.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 6\ncharacters: 27\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "html",
+      "args": [
+        "wordcount",
+        "path=Count/016-html.md"
+      ],
+      "path": "Count/016-html.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 6\ncharacters: 30\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "url",
+      "args": [
+        "wordcount",
+        "path=Count/017-url.md"
+      ],
+      "path": "Count/017-url.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 6\ncharacters: 28\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cjk",
+      "args": [
+        "wordcount",
+        "path=Count/018-cjk.md"
+      ],
+      "path": "Count/018-cjk.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 4\ncharacters: 4\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "kana",
+      "args": [
+        "wordcount",
+        "path=Count/019-kana.md"
+      ],
+      "path": "Count/019-kana.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 11\ncharacters: 15\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "halfwidth-kana",
+      "args": [
+        "wordcount",
+        "path=Count/020-halfwidth-kana.md"
+      ],
+      "path": "Count/020-halfwidth-kana.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 4\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "hangul",
+      "args": [
+        "wordcount",
+        "path=Count/021-hangul.md"
+      ],
+      "path": "Count/021-hangul.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 10\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "tibetan",
+      "args": [
+        "wordcount",
+        "path=Count/022-tibetan.md"
+      ],
+      "path": "Count/022-tibetan.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 4\ncharacters: 8\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "arabic",
+      "args": [
+        "wordcount",
+        "path=Count/023-arabic.md"
+      ],
+      "path": "Count/023-arabic.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 15\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "hebrew",
+      "args": [
+        "wordcount",
+        "path=Count/024-hebrew.md"
+      ],
+      "path": "Count/024-hebrew.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 4\ncharacters: 8\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "devanagari",
+      "args": [
+        "wordcount",
+        "path=Count/025-devanagari.md"
+      ],
+      "path": "Count/025-devanagari.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 10\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "tamil",
+      "args": [
+        "wordcount",
+        "path=Count/026-tamil.md"
+      ],
+      "path": "Count/026-tamil.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 9\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "thai",
+      "args": [
+        "wordcount",
+        "path=Count/027-thai.md"
+      ],
+      "path": "Count/027-thai.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 11\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "greek",
+      "args": [
+        "wordcount",
+        "path=Count/028-greek.md"
+      ],
+      "path": "Count/028-greek.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 12\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cyrillic",
+      "args": [
+        "wordcount",
+        "path=Count/029-cyrillic.md"
+      ],
+      "path": "Count/029-cyrillic.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 12\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "latin",
+      "args": [
+        "wordcount",
+        "path=Count/030-latin.md"
+      ],
+      "path": "Count/030-latin.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 14\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "combining",
+      "args": [
+        "wordcount",
+        "path=Count/031-combining.md"
+      ],
+      "path": "Count/031-combining.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 4\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "emoji",
+      "args": [
+        "wordcount",
+        "path=Count/032-emoji.md"
+      ],
+      "path": "Count/032-emoji.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 0\ncharacters: 12\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "supplementary",
+      "args": [
+        "wordcount",
+        "path=Count/033-supplementary.md"
+      ],
+      "path": "Count/033-supplementary.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 0\ncharacters: 8\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fullwidth",
+      "args": [
+        "wordcount",
+        "path=Count/034-fullwidth.md"
+      ],
+      "path": "Count/034-fullwidth.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 7\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nonascii-numbers",
+      "args": [
+        "wordcount",
+        "path=Count/035-nonascii-numbers.md"
+      ],
+      "path": "Count/035-nonascii-numbers.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 19\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "mixed",
+      "args": [
+        "wordcount",
+        "path=Count/036-mixed.md"
+      ],
+      "path": "Count/036-mixed.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 8\ncharacters: 13\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "frontmatter",
+      "args": [
+        "wordcount",
+        "path=Count/037-frontmatter.md"
+      ],
+      "path": "Count/037-frontmatter.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 11\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-empty",
+      "args": [
+        "wordcount",
+        "path=Count/038-fm-empty.md"
+      ],
+      "path": "Count/038-fm-empty.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 10\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-invalid",
+      "args": [
+        "wordcount",
+        "path=Count/039-fm-invalid.md"
+      ],
+      "path": "Count/039-fm-invalid.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 10\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-dots",
+      "args": [
+        "wordcount",
+        "path=Count/040-fm-dots.md"
+      ],
+      "path": "Count/040-fm-dots.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 5\ncharacters: 27\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-unclosed",
+      "args": [
+        "wordcount",
+        "path=Count/041-fm-unclosed.md"
+      ],
+      "path": "Count/041-fm-unclosed.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 5\ncharacters: 23\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-eof",
+      "args": [
+        "wordcount",
+        "path=Count/042-fm-eof.md"
+      ],
+      "path": "Count/042-fm-eof.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 0\ncharacters: 0\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-crlf",
+      "args": [
+        "wordcount",
+        "path=Count/043-fm-crlf.md"
+      ],
+      "path": "Count/043-fm-crlf.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 12\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-leading-space",
+      "args": [
+        "wordcount",
+        "path=Count/044-fm-leading-space.md"
+      ],
+      "path": "Count/044-fm-leading-space.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 6\ncharacters: 28\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-delimiter-space",
+      "args": [
+        "wordcount",
+        "path=Count/045-fm-delimiter-space.md"
+      ],
+      "path": "Count/045-fm-delimiter-space.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 6\ncharacters: 29\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "bom",
+      "args": [
+        "wordcount",
+        "path=Count/046-bom.md"
+      ],
+      "path": "Count/046-bom.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 10\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "bom-fm",
+      "args": [
+        "wordcount",
+        "path=Count/047-bom-fm.md"
+      ],
+      "path": "Count/047-bom-fm.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 10\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "double-bom-fm",
+      "args": [
+        "wordcount",
+        "path=Count/048-double-bom-fm.md"
+      ],
+      "path": "Count/048-double-bom-fm.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 6\ncharacters: 28\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nul",
+      "args": [
+        "wordcount",
+        "path=Count/049-nul.md"
+      ],
+      "path": "Count/049-nul.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 7\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nel",
+      "args": [
+        "wordcount",
+        "path=Count/050-nel.md"
+      ],
+      "path": "Count/050-nel.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 7\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "line-separator",
+      "args": [
+        "wordcount",
+        "path=Count/051-line-separator.md"
+      ],
+      "path": "Count/051-line-separator.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 13\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "large-number",
+      "args": [
+        "wordcount",
+        "path=Count/052-large-number.md"
+      ],
+      "path": "Count/052-large-number.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 2001\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "long-word",
+      "args": [
+        "wordcount",
+        "path=Count/053-long-word.md"
+      ],
+      "path": "Count/053-long-word.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 5000\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "surrogate-boundaries",
+      "args": [
+        "wordcount",
+        "path=Count/054-surrogate-boundaries.md"
+      ],
+      "path": "Count/054-surrogate-boundaries.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 8\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "japanese-marks",
+      "args": [
+        "wordcount",
+        "path=Count/055-japanese-marks.md"
+      ],
+      "path": "Count/055-japanese-marks.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 9\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "cjk-limits",
+      "args": [
+        "wordcount",
+        "path=Count/056-cjk-limits.md"
+      ],
+      "path": "Count/056-cjk-limits.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 5\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "hangul-limits",
+      "args": [
+        "wordcount",
+        "path=Count/057-hangul-limits.md"
+      ],
+      "path": "Count/057-hangul-limits.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 10\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "tamil-block",
+      "args": [
+        "wordcount",
+        "path=Count/058-tamil-block.md"
+      ],
+      "path": "Count/058-tamil-block.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 1\ncharacters: 5\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-four-dash",
+      "args": [
+        "wordcount",
+        "path=Count/059-fm-four-dash.md"
+      ],
+      "path": "Count/059-fm-four-dash.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 5\ncharacters: 23\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "fm-space-first",
+      "args": [
+        "wordcount",
+        "path=Count/060-fm-space-first.md"
+      ],
+      "path": "Count/060-fm-space-first.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 5\ncharacters: 22\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flag-words",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "words"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "3\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flag-characters",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "characters"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flag-words=",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "words="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flag-characters=",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "characters="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flag-words=false",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "words=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "3\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flag-characters=false",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "characters=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flag-words=true",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "words=true"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "3\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flag-characters=true",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "characters=true"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flags-words-characters",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "words",
+        "characters"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flags-characters-words",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "characters",
+        "words"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flags-words-characters=",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "words",
+        "characters="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "3\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "flags-words=-characters",
+      "args": [
+        "wordcount",
+        "path=Other.md",
+        "words=",
+        "characters"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "name",
+      "args": [
+        "wordcount",
+        "file=Other"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 16\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "missing",
+      "args": [
+        "wordcount",
+        "path=Missing.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "folder",
+      "args": [
+        "wordcount",
+        "path=Folder"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "upper",
+      "args": [
+        "wordcount",
+        "path=Upper.MD"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 2\ncharacters: 7\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "attachment",
+      "args": [
+        "wordcount",
+        "path=attach.txt"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Word count is only available for markdown files.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "no-active",
+      "args": [
+        "wordcount"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty-path",
+      "args": [
+        "wordcount",
+        "path="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty-file",
+      "args": [
+        "wordcount",
+        "file="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "active-dirty",
+      "args": [
+        "wordcount"
+      ],
+      "opened": "Other.md",
+      "dirty": "dirty unsaved editor text has many more words",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "words: 3\ncharacters: 16\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "disabled": {
+    "exit_code": 0,
+    "stdout": "Error: Command \"wordcount\" not found. It may require a plugin to be enabled.\n",
+    "stderr": ""
+  },
+  "conditions": {
+    "authority": "actual pinned isolated runtime",
+    "use_mock_keychain": true,
+    "request_spacing_ms": 200,
+    "capture_batches": 2,
+    "boundary": "First profile completed55 cases then timed out at japanese-marks; remaining cases and dirty/disabled states captured in fresh profile. Timeouts do not count as passing behavior. Visual status-bar worker is outside this CLI counter contract."
+  }
+}

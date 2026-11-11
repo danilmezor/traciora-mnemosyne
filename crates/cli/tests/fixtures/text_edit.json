@@ -1,0 +1,3548 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "conditions": {
+    "TZ": "UTC",
+    "core_plugins": "launcher default disabled; pinned forced runtime set",
+    "stream": "non-TTY pipes",
+    "settled_state_delay_ms": 100,
+    "state_scope": "saved file bytes + active editor text/cursor; random IDs/config and timestamps excluded",
+    "request_spacing_ms": "First18 successful cases unpaced, remaining38 paced200ms; no timer or dispatcher changes. Timings are bounded observations, not scheduler certification.",
+    "scope": "Raw files/dirs + active editor text and cursor. Two dirty-buffer merges and clean prepend cursor require shared engine integration."
+  },
+  "cases": [
+    {
+      "id": "append-plain",
+      "initial": {
+        "Note.md": "body",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-empty",
+      "initial": {
+        "Note.md": "",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-lf",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-crlf",
+      "initial": {
+        "Note.md": "body\r\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\r\n\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\r\n\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-frontmatter",
+      "initial": {
+        "Note.md": "---\na: one\n---\nbody\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---\nbody\n\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---\nbody\n\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-empty-frontmatter",
+      "initial": {
+        "Note.md": "---\n---\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\n---\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\n---\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-invalid-yaml",
+      "initial": {
+        "Note.md": "---\na: [\n---\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: [\n---\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: [\n---\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-unclosed",
+      "initial": {
+        "Note.md": "---\na: one\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-dots",
+      "initial": {
+        "Note.md": "---\na: one\n...\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n...\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n...\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-crlf-frontmatter",
+      "initial": {
+        "Note.md": "---\r\na: one\r\n---\r\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\r\na: one\r\n---\r\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\r\na: one\r\n---\r\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-eof-delimiter",
+      "initial": {
+        "Note.md": "---\na: one\n---",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-cr-eof-delimiter",
+      "initial": {
+        "Note.md": "---\na: one\n---\r",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---\r\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---\r\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-bom-frontmatter",
+      "initial": {
+        "Note.md": "﻿---\na: one\n---\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "﻿---\na: one\n---\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "﻿---\na: one\n---\nbody\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-bom-plain",
+      "initial": {
+        "Note.md": "﻿body",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "﻿body\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "﻿body\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-unicode",
+      "initial": {
+        "Note.md": "😀 café 中文\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "😀 café 中文\n\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "😀 café 中文\n\nadded\nline\tend",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-inline",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added",
+        "inline"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-inline-empty",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added",
+        "inline="
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-inline-false",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content=added",
+        "inline=false"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-missing-content",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: content=<text>\nUsage: append [file=<name>] [path=<path>] content=<text> [inline]\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-empty-content",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content="
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: content\nUsage: append [file=<name>] [path=<path>] content=<text> [inline]\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-missing-target",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "content=added"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-empty-content-no-target",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "content="
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-missing-file",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Missing.md",
+        "content=added"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-folder",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Folder",
+        "content=added"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-attachment",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=attach.txt",
+        "content=added"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: attach.txt\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n\nadded",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n\nadded",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-bare-content",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "path=Note.md",
+        "content"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\ntrue",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\ntrue",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "append-open-clean",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "content=added"
+      ],
+      "opened": true,
+      "dirty": null,
+      "before": {
+        "active": "Note.md",
+        "editor": {
+          "text": "body\n",
+          "anchor": {
+            "line": 0,
+            "ch": 2
+          },
+          "head": {
+            "line": 0,
+            "ch": 2
+          }
+        }
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Note.md",
+          "editor": {
+            "text": "body\n\nadded",
+            "anchor": {
+              "line": 0,
+              "ch": 2
+            },
+            "head": {
+              "line": 0,
+              "ch": 2
+            }
+          }
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Note.md",
+          "editor": {
+            "text": "body\n\nadded",
+            "anchor": {
+              "line": 0,
+              "ch": 2
+            },
+            "head": {
+              "line": 0,
+              "ch": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "append-open-dirty",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "append",
+        "content=added"
+      ],
+      "opened": true,
+      "dirty": "unsaved\nbody\n",
+      "before": {
+        "active": "Note.md",
+        "editor": {
+          "text": "unsaved\nbody\n",
+          "anchor": {
+            "line": 0,
+            "ch": 0
+          },
+          "head": {
+            "line": 0,
+            "ch": 0
+          }
+        }
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Appended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Note.md",
+          "editor": {
+            "text": "unsaved\nbody\n\nadded",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          }
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n\nadded",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Note.md",
+          "editor": {
+            "text": "unsaved\nbody\n\nadded",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "prepend-plain",
+      "initial": {
+        "Note.md": "body",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-empty",
+      "initial": {
+        "Note.md": "",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-lf",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-crlf",
+      "initial": {
+        "Note.md": "body\r\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\nbody\r\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\nbody\r\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-frontmatter",
+      "initial": {
+        "Note.md": "---\na: one\n---\nbody\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---\nadded\nline\tend\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---\nadded\nline\tend\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-empty-frontmatter",
+      "initial": {
+        "Note.md": "---\n---\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\n---\nadded\nline\tend\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\n---\nadded\nline\tend\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-invalid-yaml",
+      "initial": {
+        "Note.md": "---\na: [\n---\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: [\n---\nadded\nline\tend\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: [\n---\nadded\nline\tend\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-unclosed",
+      "initial": {
+        "Note.md": "---\na: one\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n---\na: one\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n---\na: one\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-dots",
+      "initial": {
+        "Note.md": "---\na: one\n...\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n---\na: one\n...\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n---\na: one\n...\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-crlf-frontmatter",
+      "initial": {
+        "Note.md": "---\r\na: one\r\n---\r\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\r\na: one\r\n---\r\nadded\nline\tend\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\r\na: one\r\n---\r\nadded\nline\tend\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-eof-delimiter",
+      "initial": {
+        "Note.md": "---\na: one\n---",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---added\nline\tend\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "---\na: one\n---added\nline\tend\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-cr-eof-delimiter",
+      "initial": {
+        "Note.md": "---\na: one\n---\r",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n---\na: one\n---\r",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n---\na: one\n---\r",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-bom-frontmatter",
+      "initial": {
+        "Note.md": "﻿---\na: one\n---\nbody",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n﻿---\na: one\n---\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n﻿---\na: one\n---\nbody",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-bom-plain",
+      "initial": {
+        "Note.md": "﻿body",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n﻿body",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n﻿body",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-unicode",
+      "initial": {
+        "Note.md": "😀 café 中文\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added\\nline\\tend"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n😀 café 中文\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nline\tend\n😀 café 中文\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-inline",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added",
+        "inline"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "addedbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "addedbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-inline-empty",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added",
+        "inline="
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-inline-false",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content=added",
+        "inline=false"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "addedbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "addedbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-missing-content",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: content=<text>\nUsage: prepend [file=<name>] [path=<path>] content=<text> [inline]\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-empty-content",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content="
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: content\nUsage: prepend [file=<name>] [path=<path>] content=<text> [inline]\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-missing-target",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "content=added"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-empty-content-no-target",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "content="
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-missing-file",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Missing.md",
+        "content=added"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-folder",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Folder",
+        "content=added"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-attachment",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=attach.txt",
+        "content=added"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: attach.txt\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "added\nattachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "body\n",
+            "Other.md": "other\n",
+            "attach.txt": "added\nattachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-bare-content",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "path=Note.md",
+        "content"
+      ],
+      "opened": false,
+      "dirty": null,
+      "before": {
+        "active": null,
+        "editor": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "true\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "true\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null
+        }
+      }
+    },
+    {
+      "id": "prepend-open-clean",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "content=added"
+      ],
+      "opened": true,
+      "dirty": null,
+      "before": {
+        "active": "Note.md",
+        "editor": {
+          "text": "body\n",
+          "anchor": {
+            "line": 0,
+            "ch": 2
+          },
+          "head": {
+            "line": 0,
+            "ch": 2
+          }
+        }
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Note.md",
+          "editor": {
+            "text": "added\nbody\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          }
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Note.md",
+          "editor": {
+            "text": "added\nbody\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "prepend-open-dirty",
+      "initial": {
+        "Note.md": "body\n",
+        "Other.md": "other\n",
+        "attach.txt": "attachment\n",
+        "Folder/Keep.md": "keep\n"
+      },
+      "args": [
+        "prepend",
+        "content=added"
+      ],
+      "opened": true,
+      "dirty": "unsaved\nbody\n",
+      "before": {
+        "active": "Note.md",
+        "editor": {
+          "text": "unsaved\nbody\n",
+          "anchor": {
+            "line": 0,
+            "ch": 0
+          },
+          "head": {
+            "line": 0,
+            "ch": 0
+          }
+        }
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Prepended to: Note.md\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Note.md",
+          "editor": {
+            "text": "unsaved\nadded\nbody\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          }
+        }
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Note.md": "added\nbody\n",
+            "Other.md": "other\n",
+            "attach.txt": "attachment\n",
+            "Folder/Keep.md": "keep\n"
+          },
+          "directories": [
+            "Folder"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": "Note.md",
+          "editor": {
+            "text": "unsaved\nadded\nbody\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

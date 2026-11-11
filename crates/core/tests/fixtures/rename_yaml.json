@@ -1,0 +1,2331 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "cases": [
+    {
+      "id": "nested-null",
+      "old": "Target0.md",
+      "new": "New0.md",
+      "source": "Source0.md",
+      "format": "shortest",
+      "files": {
+        "Target0.md": "# Target\n",
+        "Source0.md": "---\narray: [[1, 2], [], [null], {key: [a, null], empty: {}}]\nnulls: [null, ~, \"\"]\nrelated: \"[[Target0]]\"\n---\nbody [[Target0]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\narray: [[1, 2], [], [null], {key: [a, null], empty: {}}]\nnulls: [null, ~, \"\"]\nrelated: \"[[Target0]]\"\n---\nbody [[Target0]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 5,
+                  "offset": 114
+                },
+                "end": {
+                  "line": 5,
+                  "col": 16,
+                  "offset": 125
+                }
+              },
+              "link": "Target0",
+              "original": "[[Target0]]",
+              "displayText": "Target0"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 108
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 109
+                },
+                "end": {
+                  "line": 5,
+                  "col": 16,
+                  "offset": 125
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "array": [
+              [
+                1,
+                2
+              ],
+              [],
+              [
+                null
+              ],
+              {
+                "key": [
+                  "a",
+                  null
+                ],
+                "empty": {}
+              }
+            ],
+            "nulls": [
+              null,
+              null,
+              ""
+            ],
+            "related": "[[Target0]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 108
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target0",
+              "original": "[[Target0]]",
+              "displayText": "Target0"
+            }
+          ]
+        },
+        "cache_order": [
+          "Target0.md",
+          "Source0.md",
+          "Target1.md",
+          "Source1.md",
+          "Target2.md",
+          "Source2.md",
+          "Target3.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "Target5.md",
+          "Source5.md",
+          "Target6.md",
+          "Source6.md",
+          "Target7.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md"
+        ]
+      },
+      "expected": {
+        "New0.md": "# Target\n",
+        "Source0.md": "---\narray:\n  - - 1\n    - 2\n  - []\n  - - \n  - key:\n      - a\n      - \n    empty: {}\nnulls:\n  - \n  - \n  - \"\"\nrelated: \"[[New0]]\"\n---\nbody [[New0]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "multiline",
+      "old": "Target1.md",
+      "new": "New1.md",
+      "source": "Source1.md",
+      "format": "shortest",
+      "files": {
+        "Target1.md": "# Target\n",
+        "Source1.md": "---\nstrip: |-\n  first\n  second\nclip: |\n  first\n  second\nkeep: |+\n  first\n\n  second\n\nrelated: \"[[Target1]]\"\n---\nbody [[Target1]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nstrip: |-\n  first\n  second\nclip: |\n  first\n  second\nkeep: |+\n  first\n\n  second\n\nrelated: \"[[Target1]]\"\n---\nbody [[Target1]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 14,
+                  "col": 5,
+                  "offset": 116
+                },
+                "end": {
+                  "line": 14,
+                  "col": 16,
+                  "offset": 127
+                }
+              },
+              "link": "Target1",
+              "original": "[[Target1]]",
+              "displayText": "Target1"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 13,
+                  "col": 3,
+                  "offset": 110
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 14,
+                  "col": 0,
+                  "offset": 111
+                },
+                "end": {
+                  "line": 14,
+                  "col": 16,
+                  "offset": 127
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "strip": "first\nsecond",
+            "clip": "first\nsecond\n",
+            "keep": "first\n\nsecond\n\n",
+            "related": "[[Target1]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 13,
+              "col": 3,
+              "offset": 110
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target1",
+              "original": "[[Target1]]",
+              "displayText": "Target1"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Target1.md",
+          "Source1.md",
+          "Target2.md",
+          "Source2.md",
+          "Target3.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "Target5.md",
+          "Source5.md",
+          "Target6.md",
+          "Source6.md",
+          "Target7.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md"
+        ]
+      },
+      "expected": {
+        "New1.md": "# Target\n",
+        "Source1.md": "---\nstrip: |-\n  first\n  second\nclip: |\n  first\n  second\nkeep: |+\n  first\n\n  second\n\nrelated: \"[[New1]]\"\n---\nbody [[New1]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "control",
+      "old": "Target2.md",
+      "new": "New2.md",
+      "source": "Source2.md",
+      "format": "shortest",
+      "files": {
+        "Target2.md": "# Target\n",
+        "Source2.md": "---\ncontrol: \"a\\tb\\rc\\a\"\nnewline: \"\\n\"\nhash: \"a # b\"\ncolon: \"a: b\"\nrelated: \"[[Target2]]\"\n---\nbody [[Target2]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\ncontrol: \"a\\tb\\rc\\a\"\nnewline: \"\\n\"\nhash: \"a # b\"\ncolon: \"a: b\"\nrelated: \"[[Target2]]\"\n---\nbody [[Target2]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 7,
+                  "col": 5,
+                  "offset": 99
+                },
+                "end": {
+                  "line": 7,
+                  "col": 16,
+                  "offset": 110
+                }
+              },
+              "link": "Target2",
+              "original": "[[Target2]]",
+              "displayText": "Target2"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 6,
+                  "col": 3,
+                  "offset": 93
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "col": 0,
+                  "offset": 94
+                },
+                "end": {
+                  "line": 7,
+                  "col": 16,
+                  "offset": 110
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "control": "a\tb\rc\u0007",
+            "newline": "\n",
+            "hash": "a # b",
+            "colon": "a: b",
+            "related": "[[Target2]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 6,
+              "col": 3,
+              "offset": 93
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target2",
+              "original": "[[Target2]]",
+              "displayText": "Target2"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Target2.md",
+          "Source2.md",
+          "Target3.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "Target5.md",
+          "Source5.md",
+          "Target6.md",
+          "Source6.md",
+          "Target7.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md"
+        ]
+      },
+      "expected": {
+        "New2.md": "# Target\n",
+        "Source2.md": "---\ncontrol: \"a\\tb\\rc\\a\"\nnewline: \"\\n\"\nhash: \"a # b\"\ncolon: \"a: b\"\nrelated: \"[[New2]]\"\n---\nbody [[New2]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "numbers",
+      "old": "Target3.md",
+      "new": "New3.md",
+      "source": "Source3.md",
+      "format": "shortest",
+      "files": {
+        "Target3.md": "# Target\n",
+        "Source3.md": "---\ninteger: 1\nfloat: 1.0\nbig: 9007199254740993\ntiny: 1e-7\nlarge: 1e+21\ninf: .inf\nnegativeInf: -.inf\nnan: .nan\nrelated: \"[[Target3]]\"\n---\nbody [[Target3]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\ninteger: 1\nfloat: 1.0\nbig: 9007199254740993\ntiny: 1e-7\nlarge: 1e+21\ninf: .inf\nnegativeInf: -.inf\nnan: .nan\nrelated: \"[[Target3]]\"\n---\nbody [[Target3]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 11,
+                  "col": 5,
+                  "offset": 143
+                },
+                "end": {
+                  "line": 11,
+                  "col": 16,
+                  "offset": 154
+                }
+              },
+              "link": "Target3",
+              "original": "[[Target3]]",
+              "displayText": "Target3"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 10,
+                  "col": 3,
+                  "offset": 137
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 11,
+                  "col": 0,
+                  "offset": 138
+                },
+                "end": {
+                  "line": 11,
+                  "col": 16,
+                  "offset": 154
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "integer": 1,
+            "float": 1,
+            "big": 9007199254740992,
+            "tiny": 1e-07,
+            "large": 1e+21,
+            "inf": null,
+            "negativeInf": null,
+            "nan": null,
+            "related": "[[Target3]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 10,
+              "col": 3,
+              "offset": 137
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target3",
+              "original": "[[Target3]]",
+              "displayText": "Target3"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Target3.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "Target5.md",
+          "Source5.md",
+          "Target6.md",
+          "Source6.md",
+          "Target7.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md"
+        ]
+      },
+      "expected": {
+        "New3.md": "# Target\n",
+        "Source3.md": "---\ninteger: 1\nfloat: 1\nbig: 9007199254740992\ntiny: 1e-7\nlarge: 1e+21\ninf: .inf\nnegativeInf: -.inf\nnan: .nan\nrelated: \"[[New3]]\"\n---\nbody [[New3]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "numeric-keys",
+      "old": "Target4.md",
+      "new": "New4.md",
+      "source": "Source4.md",
+      "format": "shortest",
+      "files": {
+        "Target4.md": "# Target\n",
+        "Source4.md": "---\n3: three\n1: one\n\"01\": zero-one\n2: two\n4294967295: outside-index\nrelated: \"[[Target4]]\"\n---\nbody [[Target4]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\n3: three\n1: one\n\"01\": zero-one\n2: two\n4294967295: outside-index\nrelated: \"[[Target4]]\"\n---\nbody [[Target4]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 8,
+                  "col": 5,
+                  "offset": 100
+                },
+                "end": {
+                  "line": 8,
+                  "col": 16,
+                  "offset": 111
+                }
+              },
+              "link": "Target4",
+              "original": "[[Target4]]",
+              "displayText": "Target4"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 7,
+                  "col": 3,
+                  "offset": 94
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 8,
+                  "col": 0,
+                  "offset": 95
+                },
+                "end": {
+                  "line": 8,
+                  "col": 16,
+                  "offset": 111
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "1": "one",
+            "2": "two",
+            "3": "three",
+            "01": "zero-one",
+            "4294967295": "outside-index",
+            "related": "[[Target4]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 7,
+              "col": 3,
+              "offset": 94
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target4",
+              "original": "[[Target4]]",
+              "displayText": "Target4"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "Target5.md",
+          "Source5.md",
+          "Target6.md",
+          "Source6.md",
+          "Target7.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md"
+        ]
+      },
+      "expected": {
+        "New4.md": "# Target\n",
+        "Source4.md": "---\n\"1\": one\n\"2\": two\n\"3\": three\n\"01\": zero-one\n\"4294967295\": outside-index\nrelated: \"[[New4]]\"\n---\nbody [[New4]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "dates",
+      "old": "Target5.md",
+      "new": "New5.md",
+      "source": "Source5.md",
+      "format": "shortest",
+      "files": {
+        "Target5.md": "# Target\n",
+        "Source5.md": "---\ndate: 2024-01-02\ndatetime: 2024-01-02T03:04\nseconds: 2024-01-02T03:04:05\nyesword: yes\nnumberstring: \"0123\"\nbool: true\nrelated: \"[[Target5]]\"\n---\nbody [[Target5]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\ndate: 2024-01-02\ndatetime: 2024-01-02T03:04\nseconds: 2024-01-02T03:04:05\nyesword: yes\nnumberstring: \"0123\"\nbool: true\nrelated: \"[[Target5]]\"\n---\nbody [[Target5]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 9,
+                  "col": 5,
+                  "offset": 154
+                },
+                "end": {
+                  "line": 9,
+                  "col": 16,
+                  "offset": 165
+                }
+              },
+              "link": "Target5",
+              "original": "[[Target5]]",
+              "displayText": "Target5"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 8,
+                  "col": 3,
+                  "offset": 148
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "col": 0,
+                  "offset": 149
+                },
+                "end": {
+                  "line": 9,
+                  "col": 16,
+                  "offset": 165
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "date": "2024-01-02",
+            "datetime": "2024-01-02T03:04",
+            "seconds": "2024-01-02T03:04:05",
+            "yesword": "yes",
+            "numberstring": "0123",
+            "bool": true,
+            "related": "[[Target5]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 8,
+              "col": 3,
+              "offset": 148
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target5",
+              "original": "[[Target5]]",
+              "displayText": "Target5"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Source4.md",
+          "Target5.md",
+          "Source5.md",
+          "Target6.md",
+          "Source6.md",
+          "Target7.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md",
+          "New4.md"
+        ]
+      },
+      "expected": {
+        "New5.md": "# Target\n",
+        "Source5.md": "---\ndate: 2024-01-02\ndatetime: 2024-01-02T03:04\nseconds: 2024-01-02T03:04:05\nyesword: yes\nnumberstring: \"0123\"\nbool: true\nrelated: \"[[New5]]\"\n---\nbody [[New5]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "comments",
+      "old": "Target6.md",
+      "new": "New6.md",
+      "source": "Source6.md",
+      "format": "shortest",
+      "files": {
+        "Target6.md": "# Target\n",
+        "Source6.md": "---\n# first comment\nflow: {a: 1, b: true}\nlist: [a, b] # inline\nempty:\nblank: \"\"\nrelated: \"[[Target6]]\"\n---\nbody [[Target6]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\n# first comment\nflow: {a: 1, b: true}\nlist: [a, b] # inline\nempty:\nblank: \"\"\nrelated: \"[[Target6]]\"\n---\nbody [[Target6]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 8,
+                  "col": 5,
+                  "offset": 113
+                },
+                "end": {
+                  "line": 8,
+                  "col": 16,
+                  "offset": 124
+                }
+              },
+              "link": "Target6",
+              "original": "[[Target6]]",
+              "displayText": "Target6"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 7,
+                  "col": 3,
+                  "offset": 107
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 8,
+                  "col": 0,
+                  "offset": 108
+                },
+                "end": {
+                  "line": 8,
+                  "col": 16,
+                  "offset": 124
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "flow": {
+              "a": 1,
+              "b": true
+            },
+            "list": [
+              "a",
+              "b"
+            ],
+            "empty": null,
+            "blank": "",
+            "related": "[[Target6]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 7,
+              "col": 3,
+              "offset": 107
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target6",
+              "original": "[[Target6]]",
+              "displayText": "Target6"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Source4.md",
+          "Source5.md",
+          "Target6.md",
+          "Source6.md",
+          "Target7.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md",
+          "New4.md",
+          "New5.md"
+        ]
+      },
+      "expected": {
+        "New6.md": "# Target\n",
+        "Source6.md": "---\nflow:\n  a: 1\n  b: true\nlist:\n  - a\n  - b\nempty:\nblank: \"\"\nrelated: \"[[New6]]\"\n---\nbody [[New6]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "crlf",
+      "old": "Target7.md",
+      "new": "New7.md",
+      "source": "Source7.md",
+      "format": "shortest",
+      "files": {
+        "Target7.md": "# Target\n",
+        "Source7.md": "---\r\nordinary: before\r\nrelated: \"[[Target7]]\"\r\n---\r\nbody [[Target7]]\r\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\r\nordinary: before\r\nrelated: \"[[Target7]]\"\r\n---\r\nbody [[Target7]]\r\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 5,
+                  "offset": 57
+                },
+                "end": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 68
+                }
+              },
+              "link": "Target7",
+              "original": "[[Target7]]",
+              "displayText": "Target7"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 50
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 52
+                },
+                "end": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 68
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ordinary": "before",
+            "related": "[[Target7]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 50
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target7",
+              "original": "[[Target7]]",
+              "displayText": "Target7"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Source4.md",
+          "Source5.md",
+          "Source6.md",
+          "Target7.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md",
+          "New4.md",
+          "New5.md",
+          "New6.md"
+        ]
+      },
+      "expected": {
+        "New7.md": "# Target\n",
+        "Source7.md": "---\r\nordinary: before\nrelated: \"[[New7]]\"\n---\r\nbody [[New7]]\r\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "bom",
+      "old": "Target8.md",
+      "new": "New8.md",
+      "source": "Source8.md",
+      "format": "shortest",
+      "files": {
+        "Target8.md": "# Target\n",
+        "Source8.md": "﻿---\nordinary: before\nrelated: \"[[Target8]]\"\n---\nbody [[Target8]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nordinary: before\nrelated: \"[[Target8]]\"\n---\nbody [[Target8]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 5,
+                  "offset": 53
+                },
+                "end": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 64
+                }
+              },
+              "link": "Target8",
+              "original": "[[Target8]]",
+              "displayText": "Target8"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 47
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 48
+                },
+                "end": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 64
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ordinary": "before",
+            "related": "[[Target8]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 47
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target8",
+              "original": "[[Target8]]",
+              "displayText": "Target8"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Source4.md",
+          "Source5.md",
+          "Source6.md",
+          "Source7.md",
+          "Target8.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md",
+          "New4.md",
+          "New5.md",
+          "New6.md",
+          "New7.md"
+        ]
+      },
+      "expected": {
+        "New8.md": "# Target\n",
+        "Source8.md": "﻿---\nordinary: before\nrelated: \"[[Target8]]\"\n---\nbody[[New8]]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "bom-crlf",
+      "old": "Target9.md",
+      "new": "New9.md",
+      "source": "Source9.md",
+      "format": "shortest",
+      "files": {
+        "Target9.md": "# Target\n",
+        "Source9.md": "﻿---\r\nordinary: before\r\nrelated: \"[[Target9]]\"\r\n---\r\nbody [[Target9]]\r\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\r\nordinary: before\r\nrelated: \"[[Target9]]\"\r\n---\r\nbody [[Target9]]\r\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 5,
+                  "offset": 57
+                },
+                "end": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 68
+                }
+              },
+              "link": "Target9",
+              "original": "[[Target9]]",
+              "displayText": "Target9"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 50
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 52
+                },
+                "end": {
+                  "line": 4,
+                  "col": 16,
+                  "offset": 68
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ordinary": "before",
+            "related": "[[Target9]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 50
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target9",
+              "original": "[[Target9]]",
+              "displayText": "Target9"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Source4.md",
+          "Source5.md",
+          "Source6.md",
+          "Source7.md",
+          "Source8.md",
+          "Target9.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md",
+          "New4.md",
+          "New5.md",
+          "New6.md",
+          "New7.md",
+          "New8.md"
+        ]
+      },
+      "expected": {
+        "New9.md": "# Target\n",
+        "Source9.md": "﻿---\r\nordinary: before\r\nrelated: \"[[Target9]]\"\r\n---\r\nbody[[New9]]]\r\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "anchors",
+      "old": "Target10.md",
+      "new": "New10.md",
+      "source": "Source10.md",
+      "format": "shortest",
+      "files": {
+        "Target10.md": "# Target\n",
+        "Source10.md": "---\nfirst: &value\n  number: 1.0\n  nested: [x, null]\nsecond: *value\nrelated: \"[[Target10]]\"\n---\nbody [[Target10]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nfirst: &value\n  number: 1.0\n  nested: [x, null]\nsecond: *value\nrelated: \"[[Target10]]\"\n---\nbody [[Target10]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 7,
+                  "col": 5,
+                  "offset": 100
+                },
+                "end": {
+                  "line": 7,
+                  "col": 17,
+                  "offset": 112
+                }
+              },
+              "link": "Target10",
+              "original": "[[Target10]]",
+              "displayText": "Target10"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 6,
+                  "col": 3,
+                  "offset": 94
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "col": 0,
+                  "offset": 95
+                },
+                "end": {
+                  "line": 7,
+                  "col": 17,
+                  "offset": 112
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "first": {
+              "number": 1,
+              "nested": [
+                "x",
+                null
+              ]
+            },
+            "second": {
+              "number": 1,
+              "nested": [
+                "x",
+                null
+              ]
+            },
+            "related": "[[Target10]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 6,
+              "col": 3,
+              "offset": 94
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target10",
+              "original": "[[Target10]]",
+              "displayText": "Target10"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Source4.md",
+          "Source5.md",
+          "Source6.md",
+          "Source7.md",
+          "Source8.md",
+          "Source9.md",
+          "Target10.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md",
+          "New4.md",
+          "New5.md",
+          "New6.md",
+          "New7.md",
+          "New8.md",
+          "New9.md"
+        ]
+      },
+      "expected": {
+        "New10.md": "# Target\n",
+        "Source10.md": "---\nfirst:\n  number: 1\n  nested:\n    - x\n    - \nsecond:\n  number: 1\n  nested:\n    - x\n    - \nrelated: \"[[New10]]\"\n---\nbody [[New10]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "nested-multiline",
+      "old": "Target11.md",
+      "new": "New11.md",
+      "source": "Source11.md",
+      "format": "shortest",
+      "files": {
+        "Target11.md": "# Target\n",
+        "Source11.md": "---\nobject:\n  inner:\n    scalar: |+\n      first\n\n      second\n\n    list:\n      - |\n        one\n        two\nrelated: \"[[Target11]]\"\n---\nbody [[Target11]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nobject:\n  inner:\n    scalar: |+\n      first\n\n      second\n\n    list:\n      - |\n        one\n        two\nrelated: \"[[Target11]]\"\n---\nbody [[Target11]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 14,
+                  "col": 5,
+                  "offset": 140
+                },
+                "end": {
+                  "line": 14,
+                  "col": 17,
+                  "offset": 152
+                }
+              },
+              "link": "Target11",
+              "original": "[[Target11]]",
+              "displayText": "Target11"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 13,
+                  "col": 3,
+                  "offset": 134
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 14,
+                  "col": 0,
+                  "offset": 135
+                },
+                "end": {
+                  "line": 14,
+                  "col": 17,
+                  "offset": 152
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "object": {
+              "inner": {
+                "scalar": "first\n\nsecond\n\n",
+                "list": [
+                  "one\ntwo\n"
+                ]
+              }
+            },
+            "related": "[[Target11]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 13,
+              "col": 3,
+              "offset": 134
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target11",
+              "original": "[[Target11]]",
+              "displayText": "Target11"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Source4.md",
+          "Source5.md",
+          "Source6.md",
+          "Source7.md",
+          "Source8.md",
+          "Source9.md",
+          "Source10.md",
+          "Target11.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md",
+          "New4.md",
+          "New5.md",
+          "New6.md",
+          "New7.md",
+          "New8.md",
+          "New9.md",
+          "New10.md"
+        ]
+      },
+      "expected": {
+        "New11.md": "# Target\n",
+        "Source11.md": "---\nobject:\n  inner:\n    scalar: |+\n      first\n\n      second\n\n    list:\n      - |\n        one\n        two\nrelated: \"[[New11]]\"\n---\nbody [[New11]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "long-unicode",
+      "old": "Target12.md",
+      "new": "New12.md",
+      "source": "Source12.md",
+      "format": "shortest",
+      "files": {
+        "Target12.md": "# Target\n",
+        "Source12.md": "---\né: café 😀\nlong: long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text end\nrelated: \"[[Target12]]\"\n---\nbody [[Target12]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\né: café 😀\nlong: long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text end\nrelated: \"[[Target12]]\"\n---\nbody [[Target12]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 5,
+                  "offset": 408
+                },
+                "end": {
+                  "line": 5,
+                  "col": 17,
+                  "offset": 420
+                }
+              },
+              "link": "Target12",
+              "original": "[[Target12]]",
+              "displayText": "Target12"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 402
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 403
+                },
+                "end": {
+                  "line": 5,
+                  "col": 17,
+                  "offset": 420
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "é": "café 😀",
+            "long": "long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text end",
+            "related": "[[Target12]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 402
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target12",
+              "original": "[[Target12]]",
+              "displayText": "Target12"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Source4.md",
+          "Source5.md",
+          "Source6.md",
+          "Source7.md",
+          "Source8.md",
+          "Source9.md",
+          "Source10.md",
+          "Source11.md",
+          "Target12.md",
+          "Source12.md",
+          "Target13.md",
+          "Source13.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md",
+          "New4.md",
+          "New5.md",
+          "New6.md",
+          "New7.md",
+          "New8.md",
+          "New9.md",
+          "New10.md",
+          "New11.md"
+        ]
+      },
+      "expected": {
+        "New12.md": "# Target\n",
+        "Source12.md": "---\né: café 😀\nlong: long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text end\nrelated: \"[[New12]]\"\n---\nbody [[New12]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "explicit-tags",
+      "old": "Target13.md",
+      "new": "New13.md",
+      "source": "Source13.md",
+      "format": "shortest",
+      "files": {
+        "Target13.md": "# Target\n",
+        "Source13.md": "---\nstring: !!str 0123\nfloat: !!float 1\nint: !!int 0123\nunknown: !unknown hello\nrelated: \"[[Target13]]\"\n---\nbody [[Target13]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nstring: !!str 0123\nfloat: !!float 1\nint: !!int 0123\nunknown: !unknown hello\nrelated: \"[[Target13]]\"\n---\nbody [[Target13]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 7,
+                  "col": 5,
+                  "offset": 113
+                },
+                "end": {
+                  "line": 7,
+                  "col": 17,
+                  "offset": 125
+                }
+              },
+              "link": "Target13",
+              "original": "[[Target13]]",
+              "displayText": "Target13"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 6,
+                  "col": 3,
+                  "offset": 107
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "col": 0,
+                  "offset": 108
+                },
+                "end": {
+                  "line": 7,
+                  "col": 17,
+                  "offset": 125
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "string": "0123",
+            "float": "1",
+            "int": 123,
+            "unknown": "hello",
+            "related": "[[Target13]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 6,
+              "col": 3,
+              "offset": 107
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target13",
+              "original": "[[Target13]]",
+              "displayText": "Target13"
+            }
+          ]
+        },
+        "cache_order": [
+          "Target13.md",
+          "Source13.md"
+        ]
+      },
+      "expected": {
+        "New13.md": "# Target\n",
+        "Source13.md": "---\nstring: \"0123\"\nfloat: \"1\"\nint: 123\nunknown: hello\nrelated: \"[[New13]]\"\n---\nbody [[New13]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "bom-emoji-before-link",
+      "old": "Target0.md",
+      "new": "New0.md",
+      "source": "Source0.md",
+      "format": "shortest",
+      "files": {
+        "Target0.md": "# Target\n",
+        "Source0.md": "﻿---\nrelated: \"[[Target0]]\"\n---\n😀[[Target0]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nrelated: \"[[Target0]]\"\n---\n😀[[Target0]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 2,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 3,
+                  "col": 13,
+                  "offset": 44
+                }
+              },
+              "link": "Target0",
+              "original": "[[Target0]]",
+              "displayText": "Target0"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 30
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "col": 13,
+                  "offset": 44
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "related": "[[Target0]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 30
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target0",
+              "original": "[[Target0]]",
+              "displayText": "Target0"
+            }
+          ]
+        },
+        "cache_order": [
+          "Target0.md",
+          "Source0.md",
+          "Target1.md",
+          "Source1.md",
+          "Target2.md",
+          "Source2.md",
+          "Target3.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md"
+        ]
+      },
+      "expected": {
+        "New0.md": "# Target\n",
+        "Source0.md": "﻿---\nrelated: \"[[Target0]]\"\n---\n�[[New0]]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "bom-emoji-space-before-link",
+      "old": "Target1.md",
+      "new": "New1.md",
+      "source": "Source1.md",
+      "format": "shortest",
+      "files": {
+        "Target1.md": "# Target\n",
+        "Source1.md": "﻿---\nrelated: \"[[Target1]]\"\n---\n😀 [[Target1]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nrelated: \"[[Target1]]\"\n---\n😀 [[Target1]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 34
+                },
+                "end": {
+                  "line": 3,
+                  "col": 14,
+                  "offset": 45
+                }
+              },
+              "link": "Target1",
+              "original": "[[Target1]]",
+              "displayText": "Target1"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 30
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "col": 14,
+                  "offset": 45
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "related": "[[Target1]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 30
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target1",
+              "original": "[[Target1]]",
+              "displayText": "Target1"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Target1.md",
+          "Source1.md",
+          "Target2.md",
+          "Source2.md",
+          "Target3.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "New0.md"
+        ]
+      },
+      "expected": {
+        "New1.md": "# Target\n",
+        "Source1.md": "﻿---\nrelated: \"[[Target1]]\"\n---\n😀[[New1]]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "bom-multiple",
+      "old": "Target2.md",
+      "new": "New2.md",
+      "source": "Source2.md",
+      "format": "shortest",
+      "files": {
+        "Target2.md": "# Target\n",
+        "Source2.md": "﻿---\nrelated: \"[[Target2]]\"\n---\n[[Target2]]😀[[Target2]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nrelated: \"[[Target2]]\"\n---\n[[Target2]]😀[[Target2]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "col": 11,
+                  "offset": 42
+                }
+              },
+              "link": "Target2",
+              "original": "[[Target2]]",
+              "displayText": "Target2"
+            },
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 13,
+                  "offset": 44
+                },
+                "end": {
+                  "line": 3,
+                  "col": 24,
+                  "offset": 55
+                }
+              },
+              "link": "Target2",
+              "original": "[[Target2]]",
+              "displayText": "Target2"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 30
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "col": 24,
+                  "offset": 55
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "related": "[[Target2]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 30
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target2",
+              "original": "[[Target2]]",
+              "displayText": "Target2"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Target2.md",
+          "Source2.md",
+          "Target3.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "New0.md",
+          "New1.md"
+        ]
+      },
+      "expected": {
+        "New2.md": "# Target\n",
+        "Source2.md": "﻿---\nrelated: \"[[Target2]]\"\n---[[New2]]]�[[New2]]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "bom-no-fm",
+      "old": "Target3.md",
+      "new": "New3.md",
+      "source": "Source3.md",
+      "format": "shortest",
+      "files": {
+        "Target3.md": "# Target\n",
+        "Source3.md": "﻿[[Target3]]\n"
+      },
+      "cached_source_proof": {
+        "cached": "[[Target3]]\n",
+        "cache": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 11,
+                  "offset": 11
+                }
+              },
+              "link": "Target3",
+              "original": "[[Target3]]",
+              "displayText": "Target3"
+            }
+          ],
+          "sections": [
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 11,
+                  "offset": 11
+                }
+              }
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Target3.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "New0.md",
+          "New1.md",
+          "New2.md"
+        ]
+      },
+      "expected": {
+        "New3.md": "# Target\n",
+        "Source3.md": "[[New3]]]\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "trailing-multiline",
+      "old": "Target4.md",
+      "new": "New4.md",
+      "source": "Source4.md",
+      "format": "shortest",
+      "files": {
+        "Target4.md": "# Target\n",
+        "Source4.md": "---\nrelated: \"[[Target4]]\"\nkeep: |+\n  first\n\n  second\n\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nrelated: \"[[Target4]]\"\nkeep: |+\n  first\n\n  second\n\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 7,
+                  "col": 3,
+                  "offset": 58
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 8,
+                  "col": 0,
+                  "offset": 59
+                },
+                "end": {
+                  "line": 8,
+                  "col": 4,
+                  "offset": 63
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "related": "[[Target4]]",
+            "keep": "first\n\nsecond\n"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 7,
+              "col": 3,
+              "offset": 58
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target4",
+              "original": "[[Target4]]",
+              "displayText": "Target4"
+            }
+          ]
+        },
+        "cache_order": [
+          "Source0.md",
+          "Source1.md",
+          "Source2.md",
+          "Source3.md",
+          "Target4.md",
+          "Source4.md",
+          "New0.md",
+          "New1.md",
+          "New2.md",
+          "New3.md"
+        ]
+      },
+      "expected": {
+        "New4.md": "# Target\n",
+        "Source4.md": "---\nrelated: \"[[New4]]\"\nkeep: |+\n  first\n\n  second\n\n---\nbody\n"
+      },
+      "rename_result": true
+    }
+  ],
+  "evidence": [
+    "target/rea/yaml-rename-probes/report-part1.json",
+    "target/rea/yaml-rename-probes/report-part2.json",
+    "target/rea/yaml-rename-probes/warnings.json",
+    "target/rea/yaml-rename-probes/report-unicode.json"
+  ],
+  "limitations": [
+    "Only captured whole-header serialization behavior is tested, not complete YAML parser/schema certification.",
+    "BOM raw-source rename offset behavior is captured as an actual reference quirk.",
+    "BOM UTF16 split-surrogate and last block scalar saved bytes are observed; subsequent parser/cache/event lifecycle remains a separate contract.",
+    "Numeric mapping keys whose values contain links are not certified; the older internal Note mapper can collapse non-string keys.",
+    "Native YAMLWarning stdout is preserved separately in warnings.json; delivery through Rust CLI/API diagnostics remains pending.",
+    "Explicit scalar-tag correction is bounded to captured top-level integer-looking !!float/!!int fields; full schema and quoted/block contexts remain required work."
+  ]
+}

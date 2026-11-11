@@ -1,0 +1,4253 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "isolation_proof": {
+    "vault": "/home/user/reference/run-n3nx5lgq/vault",
+    "profile": "/home/user/reference/run-n3nx5lgq/profile",
+    "use_mock_keychain": true
+  },
+  "authored_plugin_sha256": "623ef21c6034e1b07d172d447984a700f30d29255dcf3304abff7c8cff2ab69e",
+  "load": {
+    "loaded": true
+  },
+  "authored_cases_sha256": "86b9fc80a67bad79037e1d9c9e9e78a0c2a295cc486bf288dae285ee3216d103",
+  "cases": [
+    {
+      "id": "TAbstractFile-new-plain",
+      "klass": "TAbstractFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-new-root",
+      "klass": "TAbstractFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              47
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-new-empty",
+      "klass": "TAbstractFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-new-dot",
+      "klass": "TAbstractFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              46,
+              104,
+              105,
+              100,
+              100,
+              101,
+              110
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              46,
+              104,
+              105,
+              100,
+              100,
+              101,
+              110
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-new-trailing-dot",
+      "klass": "TAbstractFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-new-lone",
+      "klass": "TAbstractFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55296
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55296
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-new-pair",
+      "klass": "TAbstractFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-call-virtual",
+      "klass": "TAbstractFile",
+      "operation": "call",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "setPath",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "function"
+          }
+        },
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "marker"
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "setPath",
+          "argument": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              109,
+              100
+            ]
+          },
+          "own": [
+            {
+              "key": "setPath",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "function"
+              }
+            },
+            {
+              "key": "parent",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "null"
+              }
+            },
+            {
+              "key": "deleted",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "key": "vault",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "identity": "vault"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAbstractFile-call-getter-throws",
+      "klass": "TAbstractFile",
+      "operation": "call",
+      "error": {
+        "identity": "marker"
+      },
+      "own": [
+        {
+          "key": "setPath",
+          "enumerable": false,
+          "configurable": true,
+          "get": "function",
+          "set": "undefined"
+        },
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        }
+      ],
+      "log": [
+        "get:setPath"
+      ]
+    },
+    {
+      "id": "TAbstractFile-call-null",
+      "klass": "TAbstractFile",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot set properties of null (setting 'parent')"
+      },
+      "own": {
+        "type": "null"
+      },
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-call-undefined",
+      "klass": "TAbstractFile",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot set properties of undefined (setting 'parent')"
+      },
+      "own": {
+        "type": "undefined"
+      },
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-call-number",
+      "klass": "TAbstractFile",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot create property 'parent' on number '3'"
+      },
+      "own": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-call-no-setPath",
+      "klass": "TAbstractFile",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "this.setPath is not a function"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-derived-override",
+      "klass": "TAbstractFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              79,
+              86,
+              69,
+              82,
+              82,
+              73,
+              68,
+              69
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "override",
+          "argument": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              109,
+              100
+            ]
+          },
+          "own": [
+            {
+              "key": "parent",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "null"
+              }
+            },
+            {
+              "key": "deleted",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "key": "vault",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "identity": "vault"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TFile-new-plain",
+      "klass": "TFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              109,
+              100
+            ]
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-new-root",
+      "klass": "TFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              47
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-new-empty",
+      "klass": "TFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-new-dot",
+      "klass": "TFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              46,
+              104,
+              105,
+              100,
+              100,
+              101,
+              110
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              46,
+              104,
+              105,
+              100,
+              100,
+              101,
+              110
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              46,
+              104,
+              105,
+              100,
+              100,
+              101,
+              110
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-new-trailing-dot",
+      "klass": "TFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-new-lone",
+      "klass": "TFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55296
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55296
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              55296
+            ]
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-new-pair",
+      "klass": "TFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              55297,
+              56360
+            ]
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-call-virtual",
+      "klass": "TFile",
+      "operation": "call",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "setPath",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "function"
+          }
+        },
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "marker"
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "setPath",
+          "argument": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              109,
+              100
+            ]
+          },
+          "own": [
+            {
+              "key": "setPath",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "function"
+              }
+            },
+            {
+              "key": "parent",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "null"
+              }
+            },
+            {
+              "key": "deleted",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "key": "vault",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "identity": "vault"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TFile-call-getter-throws",
+      "klass": "TFile",
+      "operation": "call",
+      "error": {
+        "identity": "marker"
+      },
+      "own": [
+        {
+          "key": "setPath",
+          "enumerable": false,
+          "configurable": true,
+          "get": "function",
+          "set": "undefined"
+        },
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        }
+      ],
+      "log": [
+        "get:setPath"
+      ]
+    },
+    {
+      "id": "TFile-call-null",
+      "klass": "TFile",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot set properties of null (setting 'parent')"
+      },
+      "own": {
+        "type": "null"
+      },
+      "log": []
+    },
+    {
+      "id": "TFile-call-undefined",
+      "klass": "TFile",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot set properties of undefined (setting 'parent')"
+      },
+      "own": {
+        "type": "undefined"
+      },
+      "log": []
+    },
+    {
+      "id": "TFile-call-number",
+      "klass": "TFile",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot create property 'parent' on number '3'"
+      },
+      "own": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": []
+    },
+    {
+      "id": "TFile-call-no-setPath",
+      "klass": "TFile",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "this.setPath is not a function"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-derived-override",
+      "klass": "TFile",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              79,
+              86,
+              69,
+              82,
+              82,
+              73,
+              68,
+              69
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77
+            ]
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "override",
+          "argument": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              109,
+              100
+            ]
+          },
+          "own": [
+            {
+              "key": "parent",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "null"
+              }
+            },
+            {
+              "key": "deleted",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "key": "vault",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "identity": "vault"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TFolder-new-plain",
+      "klass": "TFolder",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFolder-new-root",
+      "klass": "TFolder",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              47
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFolder-new-empty",
+      "klass": "TFolder",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFolder-new-dot",
+      "klass": "TFolder",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              46,
+              104,
+              105,
+              100,
+              100,
+              101,
+              110
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              46,
+              104,
+              105,
+              100,
+              100,
+              101,
+              110
+            ]
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFolder-new-trailing-dot",
+      "klass": "TFolder",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46
+            ]
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFolder-new-lone",
+      "klass": "TFolder",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55296
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55296
+            ]
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFolder-new-pair",
+      "klass": "TFolder",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFolder-call-virtual",
+      "klass": "TFolder",
+      "operation": "call",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "setPath",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "function"
+          }
+        },
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "marker"
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "setPath",
+          "argument": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              109,
+              100
+            ]
+          },
+          "own": [
+            {
+              "key": "setPath",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "function"
+              }
+            },
+            {
+              "key": "parent",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "null"
+              }
+            },
+            {
+              "key": "deleted",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "key": "vault",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "identity": "vault"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TFolder-call-getter-throws",
+      "klass": "TFolder",
+      "operation": "call",
+      "error": {
+        "identity": "marker"
+      },
+      "own": [
+        {
+          "key": "setPath",
+          "enumerable": false,
+          "configurable": true,
+          "get": "function",
+          "set": "undefined"
+        },
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        }
+      ],
+      "log": [
+        "get:setPath"
+      ]
+    },
+    {
+      "id": "TFolder-call-null",
+      "klass": "TFolder",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot set properties of null (setting 'parent')"
+      },
+      "own": {
+        "type": "null"
+      },
+      "log": []
+    },
+    {
+      "id": "TFolder-call-undefined",
+      "klass": "TFolder",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot set properties of undefined (setting 'parent')"
+      },
+      "own": {
+        "type": "undefined"
+      },
+      "log": []
+    },
+    {
+      "id": "TFolder-call-number",
+      "klass": "TFolder",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot create property 'parent' on number '3'"
+      },
+      "own": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": []
+    },
+    {
+      "id": "TFolder-call-no-setPath",
+      "klass": "TFolder",
+      "operation": "call",
+      "error": {
+        "name": "TypeError",
+        "message": "this.setPath is not a function"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFolder-derived-override",
+      "klass": "TFolder",
+      "operation": "construct",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              79,
+              86,
+              69,
+              82,
+              82,
+              73,
+              68,
+              69
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77
+            ]
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "override",
+          "argument": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              109,
+              100
+            ]
+          },
+          "own": [
+            {
+              "key": "parent",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "null"
+              }
+            },
+            {
+              "key": "deleted",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "key": "vault",
+              "enumerable": true,
+              "configurable": true,
+              "writable": true,
+              "value": {
+                "identity": "vault"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAbstractFile-set-plain",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-set-missing",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of undefined (reading 'lastIndexOf')"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "undefined"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-set-null",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of null (reading 'lastIndexOf')"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-set-number",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "error": {
+        "name": "TypeError",
+        "message": "e.lastIndexOf is not a function"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "3"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-set-lone",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55296
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55296
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-set-pair",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TAbstractFile-set-pathlike",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "lastIndexOf",
+          "arg": "/"
+        }
+      ]
+    },
+    {
+      "id": "TAbstractFile-set-pathlike-sliced",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "lastIndexOf",
+          "arg": "/"
+        },
+        {
+          "call": "slice",
+          "arg": 3
+        }
+      ]
+    },
+    {
+      "id": "TAbstractFile-set-index-coercion",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "lastIndexOf",
+          "arg": "/"
+        },
+        "valueOf:index",
+        {
+          "call": "slice",
+          "arg": 3
+        }
+      ]
+    },
+    {
+      "id": "TAbstractFile-set-proxy-writes",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "set": "path",
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "set": "name",
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "TAbstractFile-set-name-getter",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "get": "function",
+          "set": "function"
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "set": "name",
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "TAbstractFile-set-frozen-path",
+      "klass": "TAbstractFile",
+      "operation": "setPath",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot assign to read only property 'path' of object '#<Object>'"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": false,
+          "value": {
+            "type": "string",
+            "units": [
+              79,
+              76,
+              68
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-set-plain",
+      "klass": "TFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              109,
+              100
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-set-missing",
+      "klass": "TFile",
+      "operation": "setPath",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of undefined (reading 'lastIndexOf')"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "undefined"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-set-null",
+      "klass": "TFile",
+      "operation": "setPath",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of null (reading 'lastIndexOf')"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-set-number",
+      "klass": "TFile",
+      "operation": "setPath",
+      "error": {
+        "name": "TypeError",
+        "message": "e.lastIndexOf is not a function"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "3"
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-set-lone",
+      "klass": "TFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55296
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55296
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              55296
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-set-pair",
+      "klass": "TFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              55297,
+              56320
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              55297,
+              56360
+            ]
+          }
+        }
+      ],
+      "log": []
+    },
+    {
+      "id": "TFile-set-pathlike",
+      "klass": "TFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": []
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "lastIndexOf",
+          "arg": "/"
+        },
+        {
+          "call": "lastIndexOf",
+          "arg": "/"
+        },
+        {
+          "call": "lastIndexOf",
+          "arg": "."
+        },
+        {
+          "call": "lastIndexOf",
+          "arg": "."
+        }
+      ]
+    },
+    {
+      "id": "TFile-set-pathlike-sliced",
+      "klass": "TFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              109,
+              100
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "lastIndexOf",
+          "arg": "/"
+        },
+        {
+          "call": "slice",
+          "arg": 3
+        }
+      ]
+    },
+    {
+      "id": "TFile-set-index-coercion",
+      "klass": "TFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "path"
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              65
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              109,
+              100
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "call": "lastIndexOf",
+          "arg": "/"
+        },
+        "valueOf:index",
+        {
+          "call": "slice",
+          "arg": 3
+        }
+      ]
+    },
+    {
+      "id": "TFile-set-proxy-writes",
+      "klass": "TFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              109,
+              100
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "set": "path",
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "set": "name",
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "set": "basename",
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80
+            ]
+          }
+        },
+        {
+          "set": "extension",
+          "value": {
+            "type": "string",
+            "units": [
+              109,
+              100
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "TFile-set-name-getter",
+      "klass": "TFile",
+      "operation": "setPath",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "get": "function",
+          "set": "function"
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              70,
+              111,
+              108,
+              100,
+              101,
+              114,
+              47,
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              71,
+              101,
+              116,
+              116,
+              101,
+              114
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              122
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "set": "name",
+          "value": {
+            "type": "string",
+            "units": [
+              85,
+              80,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        "get:name",
+        "get:name"
+      ]
+    },
+    {
+      "id": "TFile-set-frozen-path",
+      "klass": "TFile",
+      "operation": "setPath",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot assign to read only property 'path' of object '#<Object>'"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": false,
+          "value": {
+            "type": "string",
+            "units": [
+              79,
+              76,
+              68
+            ]
+          }
+        }
+      ],
+      "log": []
+    }
+  ],
+  "plugin_cleanup": {
+    "exposed": false
+  },
+  "process_cleanup": {
+    "pid": 23807,
+    "exit_code": 0,
+    "stopped": true
+  },
+  "raw_report_sha256": "e88b9365d516491185b645a093319e7ebfdb2a8d3719350a6885abd7f54cae76",
+  "scope": "66 actual owned SDK constructor and setPath cases; virtual overrides, strict writes, custom path methods/coercion, lone units and observable assignment/getter order. No Vault registration implied by detached constructors."
+}

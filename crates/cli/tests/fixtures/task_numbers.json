@@ -1,0 +1,95 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "schema_version": 1,
+  "files": {
+    "Known.md": "- [ ] todo\n"
+  },
+  "cases": [
+    {
+      "id": "huge-0",
+      "args": [
+        "task",
+        "file=Known",
+        "line=18446744073709551616"
+      ],
+      "active": null,
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 18446744073709552000 is out of range (file has 2 lines).\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "huge-1",
+      "args": [
+        "task",
+        "file=Known",
+        "line=999999999999999999999999"
+      ],
+      "active": null,
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 1e+24 is out of range (file has 2 lines).\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "huge-2",
+      "args": [
+        "task",
+        "ref=Known.md:9007199254740993tail"
+      ],
+      "active": null,
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 9007199254740992 is out of range (file has 2 lines).\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "huge-3",
+      "args": [
+        "task",
+        "ref=Known.md:9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
+      ],
+      "active": null,
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line Infinity is out of range (file has 2 lines).\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "huge-4",
+      "args": [
+        "task",
+        "file=Known",
+        "line=100000000000000000000"
+      ],
+      "active": null,
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 100000000000000000000 is out of range (file has 2 lines).\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "huge-5",
+      "args": [
+        "task",
+        "file=Known",
+        "line=+000000000000000000001tail"
+      ],
+      "active": null,
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "coverage": "Six actual isolated runtime line/ref parseInt precision, Infinity, prefix and formatting observations.",
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9"
+}

@@ -1,0 +1,3282 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial_files": {
+    "Note.md": "# Note\n",
+    "Folder/Note.md": "# Other\n",
+    "Folder/data.TXT": "data",
+    "map.canvas": "{}",
+    "with.dots.md": "text"
+  },
+  "listing": [
+    {
+      "id": "empty:[]",
+      "initial_items": [],
+      "args": [
+        "bookmarks"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['total']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['verbose']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['format=json']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['format=json', 'verbose']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "format=json",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['format=csv']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "format=csv"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['format=csv', 'verbose']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "format=csv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['format=tsv']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "format=tsv"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['format=tsv', 'verbose']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "format=tsv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['format=bad', 'verbose']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "format=bad",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['json', 'verbose']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "json",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['csv', 'verbose']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "csv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['total=']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "total="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['verbose=false']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "verbose=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['total=false']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "total=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty:['verbose=']",
+      "initial_items": [],
+      "args": [
+        "bookmarks",
+        "verbose="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No bookmarks found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:[]",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\n\"[group] Group \"\"quoted\"\"\"\nFolder/Note.md# Heading\nFolder\n\"tag:#work file:\"\"x\"\"\"\nhttps://example.invalid/a?x=1\n[graph] Graph\n[group] Nested\ngone.name.md\nFolder/data.TXT\nmap.canvas\nwith.dots.md#^block\n[url] \n\"a\tb\nc\"\n[group] \n[unknown] unknown type\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['total']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "17\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file\tNote.md\tNote\ngroup\t\t\"Group \"\"quoted\"\"\"\nfile\tFolder/Note.md# Heading\tNote# Heading\nfolder\tFolder\tFolder\nsearch\t\"tag:#work file:\"\"x\"\"\"\t\"tag:#work file:\"\"x\"\"\"\nurl\thttps://example.invalid/a?x=1\tsite, title\ngraph\t\tGraph\ngroup\t\tNested\nfile\tgone.name.md\tgone.name\nfile\tFolder/data.TXT\tdata.TXT\nfile\tmap.canvas\tmap.canvas\nfile\twith.dots.md#^block\twith.dots#^block\nurl\t\t\nsearch\t\"a\tb\nc\"\t\"a\tb\nc\"\ngroup\t\t\nunknown\t\tunknown type\nfile\tNote.md\t\"Custom\nTitle\"\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['format=json']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"value\": \"Note.md\"\n  },\n  {\n    \"value\": \"[group] Group \\\"quoted\\\"\"\n  },\n  {\n    \"value\": \"Folder/Note.md# Heading\"\n  },\n  {\n    \"value\": \"Folder\"\n  },\n  {\n    \"value\": \"tag:#work file:\\\"x\\\"\"\n  },\n  {\n    \"value\": \"https://example.invalid/a?x=1\"\n  },\n  {\n    \"value\": \"[graph] Graph\"\n  },\n  {\n    \"value\": \"[group] Nested\"\n  },\n  {\n    \"value\": \"gone.name.md\"\n  },\n  {\n    \"value\": \"Folder/data.TXT\"\n  },\n  {\n    \"value\": \"map.canvas\"\n  },\n  {\n    \"value\": \"with.dots.md#^block\"\n  },\n  {\n    \"value\": \"[url] \"\n  },\n  {\n    \"value\": \"a\\tb\\nc\"\n  },\n  {\n    \"value\": \"[group] \"\n  },\n  {\n    \"value\": \"[unknown] unknown type\"\n  },\n  {\n    \"value\": \"Note.md\"\n  }\n]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['format=json', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=json",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"type\": \"file\",\n    \"value\": \"Note.md\",\n    \"title\": \"Note\"\n  },\n  {\n    \"type\": \"group\",\n    \"value\": \"\",\n    \"title\": \"Group \\\"quoted\\\"\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"Folder/Note.md# Heading\",\n    \"title\": \"Note# Heading\"\n  },\n  {\n    \"type\": \"folder\",\n    \"value\": \"Folder\",\n    \"title\": \"Folder\"\n  },\n  {\n    \"type\": \"search\",\n    \"value\": \"tag:#work file:\\\"x\\\"\",\n    \"title\": \"tag:#work file:\\\"x\\\"\"\n  },\n  {\n    \"type\": \"url\",\n    \"value\": \"https://example.invalid/a?x=1\",\n    \"title\": \"site, title\"\n  },\n  {\n    \"type\": \"graph\",\n    \"value\": \"\",\n    \"title\": \"Graph\"\n  },\n  {\n    \"type\": \"group\",\n    \"value\": \"\",\n    \"title\": \"Nested\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"gone.name.md\",\n    \"title\": \"gone.name\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"Folder/data.TXT\",\n    \"title\": \"data.TXT\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"map.canvas\",\n    \"title\": \"map.canvas\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"with.dots.md#^block\",\n    \"title\": \"with.dots#^block\"\n  },\n  {\n    \"type\": \"url\",\n    \"value\": \"\",\n    \"title\": \"\"\n  },\n  {\n    \"type\": \"search\",\n    \"value\": \"a\\tb\\nc\",\n    \"title\": \"a\\tb\\nc\"\n  },\n  {\n    \"type\": \"group\",\n    \"value\": \"\",\n    \"title\": \"\"\n  },\n  {\n    \"type\": \"unknown\",\n    \"value\": \"\",\n    \"title\": \"unknown type\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"Note.md\",\n    \"title\": \"Custom\\nTitle\"\n  }\n]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['format=csv']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=csv"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\n\"[group] Group \"\"quoted\"\"\"\nFolder/Note.md# Heading\nFolder\n\"tag:#work file:\"\"x\"\"\"\nhttps://example.invalid/a?x=1\n[graph] Graph\n[group] Nested\ngone.name.md\nFolder/data.TXT\nmap.canvas\nwith.dots.md#^block\n[url] \n\"a\tb\nc\"\n[group] \n[unknown] unknown type\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['format=csv', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=csv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file,Note.md,Note\ngroup,,\"Group \"\"quoted\"\"\"\nfile,Folder/Note.md# Heading,Note# Heading\nfolder,Folder,Folder\nsearch,\"tag:#work file:\"\"x\"\"\",\"tag:#work file:\"\"x\"\"\"\nurl,https://example.invalid/a?x=1,\"site, title\"\ngraph,,Graph\ngroup,,Nested\nfile,gone.name.md,gone.name\nfile,Folder/data.TXT,data.TXT\nfile,map.canvas,map.canvas\nfile,with.dots.md#^block,with.dots#^block\nurl,,\nsearch,\"a\tb\nc\",\"a\tb\nc\"\ngroup,,\nunknown,,unknown type\nfile,Note.md,\"Custom\nTitle\"\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['format=tsv']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=tsv"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\n\"[group] Group \"\"quoted\"\"\"\nFolder/Note.md# Heading\nFolder\n\"tag:#work file:\"\"x\"\"\"\nhttps://example.invalid/a?x=1\n[graph] Graph\n[group] Nested\ngone.name.md\nFolder/data.TXT\nmap.canvas\nwith.dots.md#^block\n[url] \n\"a\tb\nc\"\n[group] \n[unknown] unknown type\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['format=tsv', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=tsv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file\tNote.md\tNote\ngroup\t\t\"Group \"\"quoted\"\"\"\nfile\tFolder/Note.md# Heading\tNote# Heading\nfolder\tFolder\tFolder\nsearch\t\"tag:#work file:\"\"x\"\"\"\t\"tag:#work file:\"\"x\"\"\"\nurl\thttps://example.invalid/a?x=1\tsite, title\ngraph\t\tGraph\ngroup\t\tNested\nfile\tgone.name.md\tgone.name\nfile\tFolder/data.TXT\tdata.TXT\nfile\tmap.canvas\tmap.canvas\nfile\twith.dots.md#^block\twith.dots#^block\nurl\t\t\nsearch\t\"a\tb\nc\"\t\"a\tb\nc\"\ngroup\t\t\nunknown\t\tunknown type\nfile\tNote.md\t\"Custom\nTitle\"\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['format=bad', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=bad",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file\tNote.md\tNote\ngroup\t\t\"Group \"\"quoted\"\"\"\nfile\tFolder/Note.md# Heading\tNote# Heading\nfolder\tFolder\tFolder\nsearch\t\"tag:#work file:\"\"x\"\"\"\t\"tag:#work file:\"\"x\"\"\"\nurl\thttps://example.invalid/a?x=1\tsite, title\ngraph\t\tGraph\ngroup\t\tNested\nfile\tgone.name.md\tgone.name\nfile\tFolder/data.TXT\tdata.TXT\nfile\tmap.canvas\tmap.canvas\nfile\twith.dots.md#^block\twith.dots#^block\nurl\t\t\nsearch\t\"a\tb\nc\"\t\"a\tb\nc\"\ngroup\t\t\nunknown\t\tunknown type\nfile\tNote.md\t\"Custom\nTitle\"\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['json', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "json",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"type\": \"file\",\n    \"value\": \"Note.md\",\n    \"title\": \"Note\"\n  },\n  {\n    \"type\": \"group\",\n    \"value\": \"\",\n    \"title\": \"Group \\\"quoted\\\"\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"Folder/Note.md# Heading\",\n    \"title\": \"Note# Heading\"\n  },\n  {\n    \"type\": \"folder\",\n    \"value\": \"Folder\",\n    \"title\": \"Folder\"\n  },\n  {\n    \"type\": \"search\",\n    \"value\": \"tag:#work file:\\\"x\\\"\",\n    \"title\": \"tag:#work file:\\\"x\\\"\"\n  },\n  {\n    \"type\": \"url\",\n    \"value\": \"https://example.invalid/a?x=1\",\n    \"title\": \"site, title\"\n  },\n  {\n    \"type\": \"graph\",\n    \"value\": \"\",\n    \"title\": \"Graph\"\n  },\n  {\n    \"type\": \"group\",\n    \"value\": \"\",\n    \"title\": \"Nested\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"gone.name.md\",\n    \"title\": \"gone.name\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"Folder/data.TXT\",\n    \"title\": \"data.TXT\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"map.canvas\",\n    \"title\": \"map.canvas\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"with.dots.md#^block\",\n    \"title\": \"with.dots#^block\"\n  },\n  {\n    \"type\": \"url\",\n    \"value\": \"\",\n    \"title\": \"\"\n  },\n  {\n    \"type\": \"search\",\n    \"value\": \"a\\tb\\nc\",\n    \"title\": \"a\\tb\\nc\"\n  },\n  {\n    \"type\": \"group\",\n    \"value\": \"\",\n    \"title\": \"\"\n  },\n  {\n    \"type\": \"unknown\",\n    \"value\": \"\",\n    \"title\": \"unknown type\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"Note.md\",\n    \"title\": \"Custom\\nTitle\"\n  }\n]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['csv', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "csv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file,Note.md,Note\ngroup,,\"Group \"\"quoted\"\"\"\nfile,Folder/Note.md# Heading,Note# Heading\nfolder,Folder,Folder\nsearch,\"tag:#work file:\"\"x\"\"\",\"tag:#work file:\"\"x\"\"\"\nurl,https://example.invalid/a?x=1,\"site, title\"\ngraph,,Graph\ngroup,,Nested\nfile,gone.name.md,gone.name\nfile,Folder/data.TXT,data.TXT\nfile,map.canvas,map.canvas\nfile,with.dots.md#^block,with.dots#^block\nurl,,\nsearch,\"a\tb\nc\",\"a\tb\nc\"\ngroup,,\nunknown,,unknown type\nfile,Note.md,\"Custom\nTitle\"\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['total=']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "total="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\n\"[group] Group \"\"quoted\"\"\"\nFolder/Note.md# Heading\nFolder\n\"tag:#work file:\"\"x\"\"\"\nhttps://example.invalid/a?x=1\n[graph] Graph\n[group] Nested\ngone.name.md\nFolder/data.TXT\nmap.canvas\nwith.dots.md#^block\n[url] \n\"a\tb\nc\"\n[group] \n[unknown] unknown type\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['verbose=false']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "verbose=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file\tNote.md\tNote\ngroup\t\t\"Group \"\"quoted\"\"\"\nfile\tFolder/Note.md# Heading\tNote# Heading\nfolder\tFolder\tFolder\nsearch\t\"tag:#work file:\"\"x\"\"\"\t\"tag:#work file:\"\"x\"\"\"\nurl\thttps://example.invalid/a?x=1\tsite, title\ngraph\t\tGraph\ngroup\t\tNested\nfile\tgone.name.md\tgone.name\nfile\tFolder/data.TXT\tdata.TXT\nfile\tmap.canvas\tmap.canvas\nfile\twith.dots.md#^block\twith.dots#^block\nurl\t\t\nsearch\t\"a\tb\nc\"\t\"a\tb\nc\"\ngroup\t\t\nunknown\t\tunknown type\nfile\tNote.md\t\"Custom\nTitle\"\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['total=false']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "total=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "17\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "nested:['verbose=']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "group",
+          "ctime": 2,
+          "title": "Group \"quoted\"",
+          "items": [
+            {
+              "type": "file",
+              "ctime": 3,
+              "path": "Folder/Note.md",
+              "subpath": "# Heading"
+            },
+            {
+              "type": "folder",
+              "ctime": 4,
+              "path": "Folder"
+            },
+            {
+              "type": "search",
+              "ctime": 5,
+              "query": "tag:#work file:\"x\""
+            },
+            {
+              "type": "url",
+              "ctime": 6,
+              "url": "https://example.invalid/a?x=1",
+              "title": "site, title"
+            },
+            {
+              "type": "graph",
+              "ctime": 7,
+              "title": "Graph",
+              "options": {
+                "search": "tag:#work"
+              }
+            },
+            {
+              "type": "group",
+              "ctime": 8,
+              "title": "Nested",
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 9,
+                  "path": "gone.name.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "ctime": 10,
+          "path": "Folder/data.TXT"
+        },
+        {
+          "type": "file",
+          "ctime": 11,
+          "path": "map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 12,
+          "path": "with.dots.md",
+          "subpath": "#^block"
+        },
+        {
+          "type": "url",
+          "ctime": 13,
+          "url": "",
+          "title": ""
+        },
+        {
+          "type": "search",
+          "ctime": 14,
+          "query": "a\tb\nc"
+        },
+        {
+          "type": "group",
+          "ctime": 15,
+          "title": "",
+          "items": []
+        },
+        {
+          "type": "unknown",
+          "ctime": 16,
+          "title": "unknown type"
+        },
+        {
+          "type": "file",
+          "ctime": 17,
+          "path": "Note.md",
+          "title": "Custom\nTitle"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "verbose="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\n\"[group] Group \"\"quoted\"\"\"\nFolder/Note.md# Heading\nFolder\n\"tag:#work file:\"\"x\"\"\"\nhttps://example.invalid/a?x=1\n[graph] Graph\n[group] Nested\ngone.name.md\nFolder/data.TXT\nmap.canvas\nwith.dots.md#^block\n[url] \n\"a\tb\nc\"\n[group] \n[unknown] unknown type\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:[]",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['total']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "2\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file\tNote.md\tNote\nfile\tNote.md\tNote\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['format=json']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"value\": \"Note.md\"\n  },\n  {\n    \"value\": \"Note.md\"\n  }\n]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['format=json', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=json",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"type\": \"file\",\n    \"value\": \"Note.md\",\n    \"title\": \"Note\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"Note.md\",\n    \"title\": \"Note\"\n  }\n]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['format=csv']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=csv"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['format=csv', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=csv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file,Note.md,Note\nfile,Note.md,Note\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['format=tsv']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=tsv"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['format=tsv', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=tsv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file\tNote.md\tNote\nfile\tNote.md\tNote\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['format=bad', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "format=bad",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file\tNote.md\tNote\nfile\tNote.md\tNote\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['json', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "json",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"type\": \"file\",\n    \"value\": \"Note.md\",\n    \"title\": \"Note\"\n  },\n  {\n    \"type\": \"file\",\n    \"value\": \"Note.md\",\n    \"title\": \"Note\"\n  }\n]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['csv', 'verbose']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "csv",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file,Note.md,Note\nfile,Note.md,Note\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['total=']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "total="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\nNote.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['verbose=false']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "verbose=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "file\tNote.md\tNote\nfile\tNote.md\tNote\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['total=false']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "total=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "2\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "duplicates:['verbose=']",
+      "initial_items": [
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1,
+          "path": "Note.md"
+        }
+      ],
+      "args": [
+        "bookmarks",
+        "verbose="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Note.md\nNote.md\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "id": "0",
+      "args": [
+        "bookmark"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Specify what to bookmark with: file=<path>, folder=<path>, search=<query>, or url=<url>\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "1",
+      "args": [
+        "bookmark",
+        "file=Note.md"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "2",
+      "args": [
+        "bookmark",
+        "file=Folder"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked folder: Folder\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "folder",
+            "ctime": 1780000000123,
+            "path": "Folder"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"folder\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Folder\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "3",
+      "args": [
+        "bookmark",
+        "file=Folder/data.TXT"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Folder/data.TXT\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Folder/data.TXT"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Folder/data.TXT\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "4",
+      "args": [
+        "bookmark",
+        "file=map.canvas"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: map.canvas\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "map.canvas"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"map.canvas\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "5",
+      "args": [
+        "bookmark",
+        "file=missing"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"missing\" not found.\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "6",
+      "args": [
+        "bookmark",
+        "file=./Note.md"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"./Note.md\" not found.\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "7",
+      "args": [
+        "bookmark",
+        "file=/Note.md"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"/Note.md\" not found.\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "8",
+      "args": [
+        "bookmark",
+        "file="
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Specify what to bookmark with: file=<path>, folder=<path>, search=<query>, or url=<url>\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "9",
+      "args": [
+        "bookmark",
+        "file=Note.md",
+        "subpath=#Heading"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md#Heading\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md",
+            "subpath": "#Heading"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\",\n      \"subpath\": \"#Heading\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "10",
+      "args": [
+        "bookmark",
+        "file=Note.md",
+        "subpath=^block"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md^block\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md",
+            "subpath": "^block"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\",\n      \"subpath\": \"^block\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "11",
+      "args": [
+        "bookmark",
+        "file=Note.md",
+        "subpath="
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "12",
+      "args": [
+        "bookmark",
+        "file=Note.md",
+        "title=Title"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md",
+            "title": "Title"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\",\n      \"title\": \"Title\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "13",
+      "args": [
+        "bookmark",
+        "file=Folder",
+        "title=Folder title"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked folder: Folder\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "folder",
+            "ctime": 1780000000123,
+            "path": "Folder",
+            "title": "Folder title"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"folder\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Folder\",\n      \"title\": \"Folder title\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "14",
+      "args": [
+        "bookmark",
+        "folder=Folder"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked folder: Folder\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "folder",
+            "ctime": 1780000000123,
+            "path": "Folder"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"folder\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Folder\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "15",
+      "args": [
+        "bookmark",
+        "folder=/"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked folder: /\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "folder",
+            "ctime": 1780000000123,
+            "path": "/"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"folder\",\n      \"ctime\": 1780000000123,\n      \"path\": \"/\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "16",
+      "args": [
+        "bookmark",
+        "folder="
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Specify what to bookmark with: file=<path>, folder=<path>, search=<query>, or url=<url>\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "17",
+      "args": [
+        "bookmark",
+        "folder=Note.md"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"Note.md\" not found.\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "18",
+      "args": [
+        "bookmark",
+        "folder=missing"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"missing\" not found.\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "19",
+      "args": [
+        "bookmark",
+        "search=tag:#work"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked search: tag:#work\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "search",
+            "ctime": 1780000000123,
+            "query": "tag:#work"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"search\",\n      \"ctime\": 1780000000123,\n      \"query\": \"tag:#work\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "20",
+      "args": [
+        "bookmark",
+        "search=a\tb\nc",
+        "title=Search title"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked search: a\tb\nc\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "search",
+            "ctime": 1780000000123,
+            "query": "a\tb\nc",
+            "title": "Search title"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"search\",\n      \"ctime\": 1780000000123,\n      \"query\": \"a\\tb\\nc\",\n      \"title\": \"Search title\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "21",
+      "args": [
+        "bookmark",
+        "url=https://example.invalid/test"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked URL: https://example.invalid/test\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "url",
+            "ctime": 1780000000123,
+            "url": "https://example.invalid/test",
+            "title": ""
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"url\",\n      \"ctime\": 1780000000123,\n      \"url\": \"https://example.invalid/test\",\n      \"title\": \"\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "22",
+      "args": [
+        "bookmark",
+        "url=https://example.invalid/test",
+        "title=Site"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked URL: https://example.invalid/test\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "url",
+            "ctime": 1780000000123,
+            "url": "https://example.invalid/test",
+            "title": "Site"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"url\",\n      \"ctime\": 1780000000123,\n      \"url\": \"https://example.invalid/test\",\n      \"title\": \"Site\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "23",
+      "args": [
+        "bookmark",
+        "url=not a url"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked URL: not a url\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "url",
+            "ctime": 1780000000123,
+            "url": "not a url",
+            "title": ""
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"url\",\n      \"ctime\": 1780000000123,\n      \"url\": \"not a url\",\n      \"title\": \"\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "24",
+      "args": [
+        "bookmark",
+        "file=Note.md",
+        "folder=Folder",
+        "search=query",
+        "url=https://example.invalid"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "25",
+      "args": [
+        "bookmark",
+        "folder=Folder",
+        "search=query"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked folder: Folder\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "folder",
+            "ctime": 1780000000123,
+            "path": "Folder"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"folder\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Folder\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "26",
+      "args": [
+        "bookmark",
+        "search=query",
+        "url=https://example.invalid"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked search: query\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "search",
+            "ctime": 1780000000123,
+            "query": "query"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"search\",\n      \"ctime\": 1780000000123,\n      \"query\": \"query\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "27",
+      "args": [
+        "bookmark",
+        "file=Note.md",
+        "title="
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "28",
+      "args": [
+        "bookmark",
+        "file=Note.md",
+        "subpath=#Heading",
+        "title=Same"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md#Heading\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md",
+            "subpath": "#Heading",
+            "title": "Same"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\",\n      \"subpath\": \"#Heading\",\n      \"title\": \"Same\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "29",
+      "args": [
+        "bookmark",
+        "url=https://example.invalid/test",
+        "title="
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": null
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked URL: https://example.invalid/test\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "url",
+            "ctime": 1780000000123,
+            "url": "https://example.invalid/test",
+            "title": ""
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"url\",\n      \"ctime\": 1780000000123,\n      \"url\": \"https://example.invalid/test\",\n      \"title\": \"\"\n    }\n  ]\n}",
+        "active": null
+      }
+    },
+    {
+      "id": "active",
+      "args": [
+        "bookmark"
+      ],
+      "before": {
+        "items": [],
+        "disk": "{\n  \"items\": []\n}",
+        "active": "Note.md"
+      },
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Bookmarked: Note.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "items": [
+          {
+            "type": "file",
+            "ctime": 1780000000123,
+            "path": "Note.md"
+          }
+        ],
+        "disk": "{\n  \"items\": [\n    {\n      \"type\": \"file\",\n      \"ctime\": 1780000000123,\n      \"path\": \"Note.md\"\n    }\n  ]\n}",
+        "active": "Note.md"
+      }
+    }
+  ],
+  "enable": {
+    "enabled": true
+  },
+  "disabled": {
+    "bookmark": {
+      "exit_code": 0,
+      "stdout": "Error: Command \"bookmark\" not found. It may require a plugin to be enabled.\n",
+      "stderr": ""
+    },
+    "bookmarks": {
+      "exit_code": 0,
+      "stdout": "Error: Command \"bookmarks\" not found. It may require a plugin to be enabled.\n",
+      "stderr": ""
+    }
+  },
+  "conditions": [
+    "All cases use the actual pinned desktop app with isolated mock-keychain profile and explicit plugin reload after config reset.",
+    "Saved file/cache membership was settled before commands; no URLs opened or network requests made.",
+    "Mutation Date.now is controlled at1780000000123; after snapshots taken200ms later. This verifies final save bytes, not exact debounce deadline or changed-event ordering.",
+    "48 listing cases,31 mutation cases including active-file default,and2 disabled-plugin errors.",
+    "Unknown/nested/group/graph item data is authored fixture input. Full bookmark API, events, migration, startup and rename/delete effects remain pending."
+  ]
+}

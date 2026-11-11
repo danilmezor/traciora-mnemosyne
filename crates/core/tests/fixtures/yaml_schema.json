@@ -1,0 +1,4044 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "direct_cases": [
+    {
+      "id": "core",
+      "source": "date_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 0123\nbinary_plain: 0b10\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "date_plain",
+              {
+                "type": "string",
+                "value": "2024-01-02"
+              }
+            ],
+            [
+              "time_plain",
+              {
+                "type": "string",
+                "value": "2024-01-02T03:04:05Z"
+              }
+            ],
+            [
+              "yes_plain",
+              {
+                "type": "string",
+                "value": "yes"
+              }
+            ],
+            [
+              "on_plain",
+              {
+                "type": "string",
+                "value": "on"
+              }
+            ],
+            [
+              "leading_zero",
+              {
+                "type": "number",
+                "string": "123",
+                "value": 123
+              }
+            ],
+            [
+              "binary_plain",
+              {
+                "type": "string",
+                "value": "0b10"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "date_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 123\nbinary_plain: 0b10\n"
+        },
+        "json": {
+          "value": "{\"date_plain\":\"2024-01-02\",\"time_plain\":\"2024-01-02T03:04:05Z\",\"yes_plain\":\"yes\",\"on_plain\":\"on\",\"leading_zero\":123,\"binary_plain\":\"0b10\"}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "timestamp-date",
+      "source": "ts_date: !!timestamp 2024-01-02\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "ts_date",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:00:00.000Z",
+                "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704153600000
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "ts_date: 2024-01-02T00:00:00.000Z\n"
+        },
+        "json": {
+          "value": "{\"ts_date\":\"2024-01-02T00:00:00.000Z\"}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "timestamp-time",
+      "source": "ts_datetime: !!timestamp 2024-01-02T03:04:05.678+02:30\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "ts_datetime",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:34:05.678Z",
+                "string": "Tue Jan 02 2024 00:34:05 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704155645678
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "ts_datetime: 2024-01-02T00:34:05.678Z\n"
+        },
+        "json": {
+          "value": "{\"ts_datetime\":\"2024-01-02T00:34:05.678Z\"}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "binary",
+      "source": "bin_data: !!binary SGVsbG8=\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "bin_data",
+              {
+                "type": "Uint8Array",
+                "id": 1,
+                "values": [
+                  72,
+                  101,
+                  108,
+                  108,
+                  111
+                ],
+                "string": "72,101,108,108,111"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "bin_data:\n  - 72\n  - 101\n  - 108\n  - 108\n  - 111\n"
+        },
+        "json": {
+          "value": "{\"bin_data\":{\"0\":72,\"1\":101,\"2\":108,\"3\":108,\"4\":111}}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "set",
+      "source": "set_data: !!set {red: null, blue: null}\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "set_data",
+              {
+                "type": "Set",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "red"
+                  },
+                  {
+                    "type": "string",
+                    "value": "blue"
+                  }
+                ],
+                "string": "[object Set]"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "set_data:\n  - red\n  - blue\n"
+        },
+        "json": {
+          "value": "{\"set_data\":{}}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "omap",
+      "source": "omap_data: !!omap [{one: \"[[TARGET]]\"}, {two: 2}]\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "omap_data",
+              {
+                "type": "Map",
+                "id": 1,
+                "entries": [
+                  [
+                    {
+                      "type": "string",
+                      "value": "one"
+                    },
+                    {
+                      "type": "string",
+                      "value": "[[TARGET]]"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "string",
+                      "value": "two"
+                    },
+                    {
+                      "type": "number",
+                      "string": "2",
+                      "value": 2
+                    }
+                  ]
+                ],
+                "string": "[object Map]"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "omap_data:\n  one: \"[[TARGET]]\"\n  two: 2\n"
+        },
+        "json": {
+          "value": "{\"omap_data\":{}}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "pairs",
+      "source": "pairs_data: !!pairs [{one: \"[[TARGET]]\"}, {two: 2}]\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "pairs_data",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "Object",
+                    "id": 2,
+                    "properties": [
+                      [
+                        "one",
+                        {
+                          "type": "string",
+                          "value": "[[TARGET]]"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 3,
+                    "properties": [
+                      [
+                        "two",
+                        {
+                          "type": "number",
+                          "string": "2",
+                          "value": 2
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  }
+                ],
+                "string": "[object Object],[object Object]"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "pairs_data:\n  - one: \"[[TARGET]]\"\n  - two: 2\n"
+        },
+        "json": {
+          "value": "{\"pairs_data\":[{\"one\":\"[[TARGET]]\"},{\"two\":2}]}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "plain-merge",
+      "source": "defaults_plain: &base {link: \"[[TARGET]]\", number: 1}\nmerged_plain: {<<: *base, own: true}\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "defaults_plain",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[TARGET]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "merged_plain",
+              {
+                "type": "Object",
+                "id": 2,
+                "properties": [
+                  [
+                    "<<",
+                    {
+                      "ref": 1
+                    }
+                  ],
+                  [
+                    "own",
+                    {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "defaults_plain:\n  link: \"[[TARGET]]\"\n  number: 1\nmerged_plain:\n  <<:\n    link: \"[[TARGET]]\"\n    number: 1\n  own: true\n"
+        },
+        "json": {
+          "value": "{\"defaults_plain\":{\"link\":\"[[TARGET]]\",\"number\":1},\"merged_plain\":{\"<<\":{\"link\":\"[[TARGET]]\",\"number\":1},\"own\":true}}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "explicit-merge",
+      "source": "defaults_explicit: &base {link: \"[[TARGET]]\", number: 1}\nmerged_explicit: {!!merge <<: *base, own: true}\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "defaults_explicit",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[TARGET]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "merged_explicit",
+              {
+                "type": "Object",
+                "id": 2,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[TARGET]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ],
+                  [
+                    "own",
+                    {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "defaults_explicit:\n  link: \"[[TARGET]]\"\n  number: 1\nmerged_explicit:\n  link: \"[[TARGET]]\"\n  number: 1\n  own: true\n"
+        },
+        "json": {
+          "value": "{\"defaults_explicit\":{\"link\":\"[[TARGET]]\",\"number\":1},\"merged_explicit\":{\"link\":\"[[TARGET]]\",\"number\":1,\"own\":true}}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "unknown-scalar",
+      "source": "unknown_data: !unknown \"[[TARGET]]\"\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_data",
+              {
+                "type": "string",
+                "value": "[[TARGET]]"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "unknown_data: \"[[TARGET]]\"\n"
+        },
+        "json": {
+          "value": "{\"unknown_data\":\"[[TARGET]]\"}"
+        }
+      },
+      "warnings": [
+        {
+          "name": "YAMLWarning",
+          "code": "TAG_RESOLVE_FAILED",
+          "message": "Unresolved tag: !unknown at line 1, column 15:\n\nunknown_data: !unknown \"[[TARGET]]\"\n              ^^^^^^^^\n",
+          "pos": [
+            14,
+            22
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 15
+            },
+            {
+              "line": 1,
+              "col": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unknown-map",
+      "source": "unknown_map: !unknown {link: \"[[TARGET]]\", number: 1}\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_map",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[TARGET]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "unknown_map:\n  link: \"[[TARGET]]\"\n  number: 1\n"
+        },
+        "json": {
+          "value": "{\"unknown_map\":{\"link\":\"[[TARGET]]\",\"number\":1}}"
+        }
+      },
+      "warnings": [
+        {
+          "name": "YAMLWarning",
+          "code": "TAG_RESOLVE_FAILED",
+          "message": "Unresolved tag: !unknown at line 1, column 14:\n\nunknown_map: !unknown {link: \"[[TARGET]]\", number: 1}\n             ^^^^^^^^\n",
+          "pos": [
+            13,
+            21
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 14
+            },
+            {
+              "line": 1,
+              "col": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unknown-sequence",
+      "source": "unknown_seq: !unknown [\"[[TARGET]]\", 1]\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_seq",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "[[TARGET]]"
+                  },
+                  {
+                    "type": "number",
+                    "string": "1",
+                    "value": 1
+                  }
+                ],
+                "string": "[[TARGET]],1"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "unknown_seq:\n  - \"[[TARGET]]\"\n  - 1\n"
+        },
+        "json": {
+          "value": "{\"unknown_seq\":[\"[[TARGET]]\",1]}"
+        }
+      },
+      "warnings": [
+        {
+          "name": "YAMLWarning",
+          "code": "TAG_RESOLVE_FAILED",
+          "message": "Unresolved tag: !unknown at line 1, column 14:\n\nunknown_seq: !unknown [\"[[TARGET]]\", 1]\n             ^^^^^^^^\n",
+          "pos": [
+            13,
+            21
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 14
+            },
+            {
+              "line": 1,
+              "col": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nested-tags",
+      "source": "nested_data: [{date: !!timestamp 2024-01-02}, {binary: !!binary SGk=}, {set: !!set {red: null}}]\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "nested_data",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "Object",
+                    "id": 2,
+                    "properties": [
+                      [
+                        "date",
+                        {
+                          "type": "Date",
+                          "id": 3,
+                          "iso": "2024-01-02T00:00:00.000Z",
+                          "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                          "millis": 1704153600000
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 4,
+                    "properties": [
+                      [
+                        "binary",
+                        {
+                          "type": "Uint8Array",
+                          "id": 5,
+                          "values": [
+                            72,
+                            105
+                          ],
+                          "string": "72,105"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 6,
+                    "properties": [
+                      [
+                        "set",
+                        {
+                          "type": "Set",
+                          "id": 7,
+                          "values": [
+                            {
+                              "type": "string",
+                              "value": "red"
+                            }
+                          ],
+                          "string": "[object Set]"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  }
+                ],
+                "string": "[object Object],[object Object],[object Object]"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "nested_data:\n  - date: 2024-01-02T00:00:00.000Z\n  - binary:\n      - 72\n      - 105\n  - set:\n      - red\n"
+        },
+        "json": {
+          "value": "{\"nested_data\":[{\"date\":\"2024-01-02T00:00:00.000Z\"},{\"binary\":{\"0\":72,\"1\":105}},{\"set\":{}}]}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "nested-numbers",
+      "source": "nested_numbers:\n  int: !!int 0123\n  float: !!float 1\n  leading: 0123\n  binary: 0b10\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "nested_numbers",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "int",
+                    {
+                      "type": "number",
+                      "string": "123",
+                      "value": 123
+                    }
+                  ],
+                  [
+                    "float",
+                    {
+                      "type": "string",
+                      "value": "1"
+                    }
+                  ],
+                  [
+                    "leading",
+                    {
+                      "type": "number",
+                      "string": "123",
+                      "value": 123
+                    }
+                  ],
+                  [
+                    "binary",
+                    {
+                      "type": "string",
+                      "value": "0b10"
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "nested_numbers:\n  int: 123\n  float: \"1\"\n  leading: 123\n  binary: 0b10\n"
+        },
+        "json": {
+          "value": "{\"nested_numbers\":{\"int\":123,\"float\":\"1\",\"leading\":123,\"binary\":\"0b10\"}}"
+        }
+      },
+      "warnings": [
+        {
+          "name": "YAMLWarning",
+          "code": "TAG_RESOLVE_FAILED",
+          "message": "Unresolved tag: tag:yaml.org,2002:float at line 3, column 10:\n\n  float: !!float 1\n         ^^^^^^^\n",
+          "pos": [
+            43,
+            50
+          ],
+          "linePos": [
+            {
+              "line": 3,
+              "col": 10
+            },
+            {
+              "line": 3,
+              "col": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alias-copies",
+      "source": "first_alias: &copy {link: \"[[TARGET]]\", count: 1}\nsecond_alias: *copy\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "first_alias",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[TARGET]]"
+                    }
+                  ],
+                  [
+                    "count",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "second_alias",
+              {
+                "ref": 1
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "first_alias:\n  link: \"[[TARGET]]\"\n  count: 1\nsecond_alias:\n  link: \"[[TARGET]]\"\n  count: 1\n"
+        },
+        "json": {
+          "value": "{\"first_alias\":{\"link\":\"[[TARGET]]\",\"count\":1},\"second_alias\":{\"link\":\"[[TARGET]]\",\"count\":1}}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "yaml11",
+      "source": "%YAML 1.1\n---\nyes_11: yes\non_11: ON\nzero_11: 0123\nbinary_11: 0b10\ndate_11: 2024-01-02\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "yes_11",
+              {
+                "type": "boolean",
+                "value": true
+              }
+            ],
+            [
+              "on_11",
+              {
+                "type": "boolean",
+                "value": true
+              }
+            ],
+            [
+              "zero_11",
+              {
+                "type": "number",
+                "string": "83",
+                "value": 83
+              }
+            ],
+            [
+              "binary_11",
+              {
+                "type": "number",
+                "string": "2",
+                "value": 2
+              }
+            ],
+            [
+              "date_11",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:00:00.000Z",
+                "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704153600000
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "yes_11: true\non_11: true\nzero_11: 83\nbinary_11: 2\ndate_11: 2024-01-02T00:00:00.000Z\n"
+        },
+        "json": {
+          "value": "{\"yes_11\":true,\"on_11\":true,\"zero_11\":83,\"binary_11\":2,\"date_11\":\"2024-01-02T00:00:00.000Z\"}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "yaml12",
+      "source": "%YAML 1.2\n---\nyes_12: yes\nzero_12: 0123\nbinary_12: 0b10\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "yes_12",
+              {
+                "type": "string",
+                "value": "yes"
+              }
+            ],
+            [
+              "zero_12",
+              {
+                "type": "number",
+                "string": "123",
+                "value": 123
+              }
+            ],
+            [
+              "binary_12",
+              {
+                "type": "string",
+                "value": "0b10"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "yes_12: yes\nzero_12: 123\nbinary_12: 0b10\n"
+        },
+        "json": {
+          "value": "{\"yes_12\":\"yes\",\"zero_12\":123,\"binary_12\":\"0b10\"}"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "unsupported-version",
+      "source": "%YAML 1.3\n---\nvalue: true\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "boolean",
+                "value": true
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "value": "value: true\n"
+        },
+        "json": {
+          "value": "{\"value\":true}"
+        }
+      },
+      "warnings": [
+        {
+          "name": "YAMLWarning",
+          "code": "BAD_DIRECTIVE",
+          "message": "Unsupported YAML version 1.3 at line 1, column 7:\n\n%YAML 1.3\n      ^^^\n",
+          "pos": [
+            6,
+            9
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 7
+            },
+            {
+              "line": 1,
+              "col": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bad-timestamp",
+      "source": "bad_date: !!timestamp not-a-date\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "!!timestamp expects a date, starting with yyyy-mm-dd at line 1, column 11:\n\nbad_date: !!timestamp not-a-date\n          ^^^^^^^^^^^\n",
+          "code": "TAG_RESOLVE_FAILED",
+          "pos": [
+            10,
+            21
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 11
+            },
+            {
+              "line": 1,
+              "col": 22
+            }
+          ]
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "bad-binary",
+      "source": "bad_binary: !!binary \"%%%\"\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded. at line 1, column 13:\n\nbad_binary: !!binary \"%%%\"\n            ^^^^^^^^\n",
+          "code": "TAG_RESOLVE_FAILED",
+          "pos": [
+            12,
+            20
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 13
+            },
+            {
+              "line": 1,
+              "col": 21
+            }
+          ]
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "bad-set",
+      "source": "bad_set: !!set {red: 1}\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Set items must all have null values at line 1, column 10:\n\nbad_set: !!set {red: 1}\n         ^^^^^\n",
+          "code": "TAG_RESOLVE_FAILED",
+          "pos": [
+            9,
+            14
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 10
+            },
+            {
+              "line": 1,
+              "col": 15
+            }
+          ]
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "duplicate-omap",
+      "source": "bad_omap: !!omap [{one: 1}, {one: 2}]\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Ordered maps must not include duplicate keys: one at line 1, column 11:\n\nbad_omap: !!omap [{one: 1}, {one: 2}]\n          ^^^^^^\n",
+          "code": "TAG_RESOLVE_FAILED",
+          "pos": [
+            10,
+            16
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 11
+            },
+            {
+              "line": 1,
+              "col": 17
+            }
+          ]
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "cycle-map",
+      "source": "cyclic: &self {value: *self}\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "cyclic",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "value",
+                    {
+                      "ref": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "error": {
+            "name": "RangeError",
+            "message": "Maximum call stack size exceeded"
+          }
+        },
+        "json": {
+          "error": {
+            "name": "TypeError",
+            "message": "Converting circular structure to JSON\n    --> starting at object with constructor 'Object'\n    --- property 'value' closes the circle"
+          }
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "cycle-sequence",
+      "source": "cyclic: &self [*self]\n",
+      "result": {
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "cyclic",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "ref": 1
+                  }
+                ],
+                "string": ""
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "yaml": {
+          "error": {
+            "name": "RangeError",
+            "message": "Maximum call stack size exceeded"
+          }
+        },
+        "json": {
+          "error": {
+            "name": "TypeError",
+            "message": "Converting circular structure to JSON\n    --> starting at object with constructor 'Array'\n    --- index 0 closes the circle"
+          }
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "alias-limit",
+      "source": "a: &a [x,x,x,x,x,x,x,x,x,x]\nb: &b [*a,*a,*a,*a,*a,*a,*a,*a,*a,*a]\nc: [*b,*b,*b,*b,*b,*b,*b,*b,*b,*b]\n",
+      "result": {
+        "error": {
+          "name": "ReferenceError",
+          "message": "Excessive alias count indicates a resource exhaustion attack"
+        }
+      },
+      "warnings": []
+    }
+  ],
+  "plugin_proof": {
+    "parse": "function",
+    "stringify": "function",
+    "loaded": true
+  },
+  "console": [
+    {
+      "code": "JSON.stringify((()=>{function describe(value){const seen=new Map;function walk(v){if(v===null)return{type:\"null\"};const type=typeof v;if(type===\"string\"||type===\"boolean\")return{type,value:v};if(type===\"number\")return{type,string:String(v),value:Number.isFinite(v)?v:null};if(type!==\"object\")return{type,string:String(v)};if(seen.has(v))return{ref:seen.get(v)};const id=seen.size;seen.set(v,id);if(v instanceof Date)return{type:\"Date\",id,iso:Number.isFinite(+v)?v.toISOString():null,string:String(v),millis:Number.isFinite(+v)?+v:null};if(v instanceof Uint8Array)return{type:\"Uint8Array\",id,values:Array.from(v),string:String(v)};if(v instanceof Map)return{type:\"Map\",id,entries:Array.from(v,([k,v])=>[walk(k),walk(v)]),string:String(v)};if(v instanceof Set)return{type:\"Set\",id,values:Array.from(v,walk),string:String(v)};if(Array.isArray(v))return{type:\"Array\",id,values:Array.from(v,walk),string:String(v)};return{type:\"Object\",id,properties:Object.keys(v).map(k=>[k,walk(v[k])]),symbols:Object.getOwnPropertySymbols(v).map(String)}}return walk(value)};try{const value=window.__reaYaml.parse(\"unknown_data: !unknown \\\"[[TARGET]]\\\"\\n\");let yaml;try{yaml={value:window.__reaYaml.stringify(value)}}catch(e){yaml={error:{name:e.name,message:e.message}}}let json;try{json={value:JSON.stringify(value)}}catch(e){json={error:{name:e.name,message:e.message}}}return{descriptor:describe(value),yaml,json}}catch(e){return{error:{name:e.name,message:e.message,code:e.code,pos:e.pos,linePos:e.linePos}}}})())",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"TAG_RESOLVE_FAILED\",\"message\":\"Unresolved tag: !unknown at line 1, column 15:\\n\\nunknown_data: !unknown \\\"[[TARGET]]\\\"\\n              ^^^^^^^^\\n\",\"pos\":[14,22],\"linePos\":[{\"line\":1,\"col\":15},{\"line\":1,\"col\":23}]}\n=> {\"descriptor\":{\"type\":\"Object\",\"id\":0,\"properties\":[[\"unknown_data\",{\"type\":\"string\",\"value\":\"[[TARGET]]\"}]],\"symbols\":[]},\"yaml\":{\"value\":\"unknown_data: \\\"[[TARGET]]\\\"\\n\"},\"json\":{\"value\":\"{\\\"unknown_data\\\":\\\"[[TARGET]]\\\"}\"}}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "code": "JSON.stringify((()=>{function describe(value){const seen=new Map;function walk(v){if(v===null)return{type:\"null\"};const type=typeof v;if(type===\"string\"||type===\"boolean\")return{type,value:v};if(type===\"number\")return{type,string:String(v),value:Number.isFinite(v)?v:null};if(type!==\"object\")return{type,string:String(v)};if(seen.has(v))return{ref:seen.get(v)};const id=seen.size;seen.set(v,id);if(v instanceof Date)return{type:\"Date\",id,iso:Number.isFinite(+v)?v.toISOString():null,string:String(v),millis:Number.isFinite(+v)?+v:null};if(v instanceof Uint8Array)return{type:\"Uint8Array\",id,values:Array.from(v),string:String(v)};if(v instanceof Map)return{type:\"Map\",id,entries:Array.from(v,([k,v])=>[walk(k),walk(v)]),string:String(v)};if(v instanceof Set)return{type:\"Set\",id,values:Array.from(v,walk),string:String(v)};if(Array.isArray(v))return{type:\"Array\",id,values:Array.from(v,walk),string:String(v)};return{type:\"Object\",id,properties:Object.keys(v).map(k=>[k,walk(v[k])]),symbols:Object.getOwnPropertySymbols(v).map(String)}}return walk(value)};try{const value=window.__reaYaml.parse(\"unknown_map: !unknown {link: \\\"[[TARGET]]\\\", number: 1}\\n\");let yaml;try{yaml={value:window.__reaYaml.stringify(value)}}catch(e){yaml={error:{name:e.name,message:e.message}}}let json;try{json={value:JSON.stringify(value)}}catch(e){json={error:{name:e.name,message:e.message}}}return{descriptor:describe(value),yaml,json}}catch(e){return{error:{name:e.name,message:e.message,code:e.code,pos:e.pos,linePos:e.linePos}}}})())",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"TAG_RESOLVE_FAILED\",\"message\":\"Unresolved tag: !unknown at line 1, column 14:\\n\\nunknown_map: !unknown {link: \\\"[[TARGET]]\\\", number: 1}\\n             ^^^^^^^^\\n\",\"pos\":[13,21],\"linePos\":[{\"line\":1,\"col\":14},{\"line\":1,\"col\":22}]}\n=> {\"descriptor\":{\"type\":\"Object\",\"id\":0,\"properties\":[[\"unknown_map\",{\"type\":\"Object\",\"id\":1,\"properties\":[[\"link\",{\"type\":\"string\",\"value\":\"[[TARGET]]\"}],[\"number\",{\"type\":\"number\",\"string\":\"1\",\"value\":1}]],\"symbols\":[]}]],\"symbols\":[]},\"yaml\":{\"value\":\"unknown_map:\\n  link: \\\"[[TARGET]]\\\"\\n  number: 1\\n\"},\"json\":{\"value\":\"{\\\"unknown_map\\\":{\\\"link\\\":\\\"[[TARGET]]\\\",\\\"number\\\":1}}\"}}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "code": "JSON.stringify((()=>{function describe(value){const seen=new Map;function walk(v){if(v===null)return{type:\"null\"};const type=typeof v;if(type===\"string\"||type===\"boolean\")return{type,value:v};if(type===\"number\")return{type,string:String(v),value:Number.isFinite(v)?v:null};if(type!==\"object\")return{type,string:String(v)};if(seen.has(v))return{ref:seen.get(v)};const id=seen.size;seen.set(v,id);if(v instanceof Date)return{type:\"Date\",id,iso:Number.isFinite(+v)?v.toISOString():null,string:String(v),millis:Number.isFinite(+v)?+v:null};if(v instanceof Uint8Array)return{type:\"Uint8Array\",id,values:Array.from(v),string:String(v)};if(v instanceof Map)return{type:\"Map\",id,entries:Array.from(v,([k,v])=>[walk(k),walk(v)]),string:String(v)};if(v instanceof Set)return{type:\"Set\",id,values:Array.from(v,walk),string:String(v)};if(Array.isArray(v))return{type:\"Array\",id,values:Array.from(v,walk),string:String(v)};return{type:\"Object\",id,properties:Object.keys(v).map(k=>[k,walk(v[k])]),symbols:Object.getOwnPropertySymbols(v).map(String)}}return walk(value)};try{const value=window.__reaYaml.parse(\"unknown_seq: !unknown [\\\"[[TARGET]]\\\", 1]\\n\");let yaml;try{yaml={value:window.__reaYaml.stringify(value)}}catch(e){yaml={error:{name:e.name,message:e.message}}}let json;try{json={value:JSON.stringify(value)}}catch(e){json={error:{name:e.name,message:e.message}}}return{descriptor:describe(value),yaml,json}}catch(e){return{error:{name:e.name,message:e.message,code:e.code,pos:e.pos,linePos:e.linePos}}}})())",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"TAG_RESOLVE_FAILED\",\"message\":\"Unresolved tag: !unknown at line 1, column 14:\\n\\nunknown_seq: !unknown [\\\"[[TARGET]]\\\", 1]\\n             ^^^^^^^^\\n\",\"pos\":[13,21],\"linePos\":[{\"line\":1,\"col\":14},{\"line\":1,\"col\":22}]}\n=> {\"descriptor\":{\"type\":\"Object\",\"id\":0,\"properties\":[[\"unknown_seq\",{\"type\":\"Array\",\"id\":1,\"values\":[{\"type\":\"string\",\"value\":\"[[TARGET]]\"},{\"type\":\"number\",\"string\":\"1\",\"value\":1}],\"string\":\"[[TARGET]],1\"}]],\"symbols\":[]},\"yaml\":{\"value\":\"unknown_seq:\\n  - \\\"[[TARGET]]\\\"\\n  - 1\\n\"},\"json\":{\"value\":\"{\\\"unknown_seq\\\":[\\\"[[TARGET]]\\\",1]}\"}}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "code": "JSON.stringify((()=>{function describe(value){const seen=new Map;function walk(v){if(v===null)return{type:\"null\"};const type=typeof v;if(type===\"string\"||type===\"boolean\")return{type,value:v};if(type===\"number\")return{type,string:String(v),value:Number.isFinite(v)?v:null};if(type!==\"object\")return{type,string:String(v)};if(seen.has(v))return{ref:seen.get(v)};const id=seen.size;seen.set(v,id);if(v instanceof Date)return{type:\"Date\",id,iso:Number.isFinite(+v)?v.toISOString():null,string:String(v),millis:Number.isFinite(+v)?+v:null};if(v instanceof Uint8Array)return{type:\"Uint8Array\",id,values:Array.from(v),string:String(v)};if(v instanceof Map)return{type:\"Map\",id,entries:Array.from(v,([k,v])=>[walk(k),walk(v)]),string:String(v)};if(v instanceof Set)return{type:\"Set\",id,values:Array.from(v,walk),string:String(v)};if(Array.isArray(v))return{type:\"Array\",id,values:Array.from(v,walk),string:String(v)};return{type:\"Object\",id,properties:Object.keys(v).map(k=>[k,walk(v[k])]),symbols:Object.getOwnPropertySymbols(v).map(String)}}return walk(value)};try{const value=window.__reaYaml.parse(\"nested_numbers:\\n  int: !!int 0123\\n  float: !!float 1\\n  leading: 0123\\n  binary: 0b10\\n\");let yaml;try{yaml={value:window.__reaYaml.stringify(value)}}catch(e){yaml={error:{name:e.name,message:e.message}}}let json;try{json={value:JSON.stringify(value)}}catch(e){json={error:{name:e.name,message:e.message}}}return{descriptor:describe(value),yaml,json}}catch(e){return{error:{name:e.name,message:e.message,code:e.code,pos:e.pos,linePos:e.linePos}}}})())",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"TAG_RESOLVE_FAILED\",\"message\":\"Unresolved tag: tag:yaml.org,2002:float at line 3, column 10:\\n\\n  float: !!float 1\\n         ^^^^^^^\\n\",\"pos\":[43,50],\"linePos\":[{\"line\":3,\"col\":10},{\"line\":3,\"col\":17}]}\n=> {\"descriptor\":{\"type\":\"Object\",\"id\":0,\"properties\":[[\"nested_numbers\",{\"type\":\"Object\",\"id\":1,\"properties\":[[\"int\",{\"type\":\"number\",\"string\":\"123\",\"value\":123}],[\"float\",{\"type\":\"string\",\"value\":\"1\"}],[\"leading\",{\"type\":\"number\",\"string\":\"123\",\"value\":123}],[\"binary\",{\"type\":\"string\",\"value\":\"0b10\"}]],\"symbols\":[]}]],\"symbols\":[]},\"yaml\":{\"value\":\"nested_numbers:\\n  int: 123\\n  float: \\\"1\\\"\\n  leading: 123\\n  binary: 0b10\\n\"},\"json\":{\"value\":\"{\\\"nested_numbers\\\":{\\\"int\\\":123,\\\"float\\\":\\\"1\\\",\\\"leading\\\":123,\\\"binary\\\":\\\"0b10\\\"}}\"}}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "code": "JSON.stringify((()=>{function describe(value){const seen=new Map;function walk(v){if(v===null)return{type:\"null\"};const type=typeof v;if(type===\"string\"||type===\"boolean\")return{type,value:v};if(type===\"number\")return{type,string:String(v),value:Number.isFinite(v)?v:null};if(type!==\"object\")return{type,string:String(v)};if(seen.has(v))return{ref:seen.get(v)};const id=seen.size;seen.set(v,id);if(v instanceof Date)return{type:\"Date\",id,iso:Number.isFinite(+v)?v.toISOString():null,string:String(v),millis:Number.isFinite(+v)?+v:null};if(v instanceof Uint8Array)return{type:\"Uint8Array\",id,values:Array.from(v),string:String(v)};if(v instanceof Map)return{type:\"Map\",id,entries:Array.from(v,([k,v])=>[walk(k),walk(v)]),string:String(v)};if(v instanceof Set)return{type:\"Set\",id,values:Array.from(v,walk),string:String(v)};if(Array.isArray(v))return{type:\"Array\",id,values:Array.from(v,walk),string:String(v)};return{type:\"Object\",id,properties:Object.keys(v).map(k=>[k,walk(v[k])]),symbols:Object.getOwnPropertySymbols(v).map(String)}}return walk(value)};try{const value=window.__reaYaml.parse(\"%YAML 1.3\\n---\\nvalue: true\\n\");let yaml;try{yaml={value:window.__reaYaml.stringify(value)}}catch(e){yaml={error:{name:e.name,message:e.message}}}let json;try{json={value:JSON.stringify(value)}}catch(e){json={error:{name:e.name,message:e.message}}}return{descriptor:describe(value),yaml,json}}catch(e){return{error:{name:e.name,message:e.message,code:e.code,pos:e.pos,linePos:e.linePos}}}})())",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"BAD_DIRECTIVE\",\"message\":\"Unsupported YAML version 1.3 at line 1, column 7:\\n\\n%YAML 1.3\\n      ^^^\\n\",\"pos\":[6,9],\"linePos\":[{\"line\":1,\"col\":7},{\"line\":1,\"col\":10}]}\n=> {\"descriptor\":{\"type\":\"Object\",\"id\":0,\"properties\":[[\"value\",{\"type\":\"boolean\",\"value\":true}]],\"symbols\":[]},\"yaml\":{\"value\":\"value: true\\n\"},\"json\":{\"value\":\"{\\\"value\\\":true}\"}}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "code": "(async()=>{await app.fileManager.renameFile(app.vault.getFileByPath(\"Target9.md\"),\"New9.md\");await new Promise(r=>app.metadataCache.onCleanCache(()=>r(true)));return JSON.stringify(true)})()",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"TAG_RESOLVE_FAILED\",\"message\":\"Unresolved tag: !unknown at line 1, column 15:\\n\\nunknown_data: !unknown \\\"[[Target9]]\\\"\\n              ^^^^^^^^\\n\",\"pos\":[14,22],\"linePos\":[{\"line\":1,\"col\":15},{\"line\":1,\"col\":23}]}\n=> true\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "code": "(async()=>{await app.fileManager.renameFile(app.vault.getFileByPath(\"Target10.md\"),\"New10.md\");await new Promise(r=>app.metadataCache.onCleanCache(()=>r(true)));return JSON.stringify(true)})()",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"TAG_RESOLVE_FAILED\",\"message\":\"Unresolved tag: !unknown at line 1, column 14:\\n\\nunknown_map: !unknown {link: \\\"[[Target10]]\\\", number: 1}\\n             ^^^^^^^^\\n\",\"pos\":[13,21],\"linePos\":[{\"line\":1,\"col\":14},{\"line\":1,\"col\":22}]}\n=> true\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "code": "(async()=>{await app.fileManager.renameFile(app.vault.getFileByPath(\"Target11.md\"),\"New11.md\");await new Promise(r=>app.metadataCache.onCleanCache(()=>r(true)));return JSON.stringify(true)})()",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"TAG_RESOLVE_FAILED\",\"message\":\"Unresolved tag: !unknown at line 1, column 14:\\n\\nunknown_seq: !unknown [\\\"[[Target11]]\\\", 1]\\n             ^^^^^^^^\\n\",\"pos\":[13,21],\"linePos\":[{\"line\":1,\"col\":14},{\"line\":1,\"col\":22}]}\n=> true\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "code": "(async()=>{await app.fileManager.renameFile(app.vault.getFileByPath(\"Target13.md\"),\"New13.md\");await new Promise(r=>app.metadataCache.onCleanCache(()=>r(true)));return JSON.stringify(true)})()",
+      "stdout": "[warn] {\"name\":\"YAMLWarning\",\"code\":\"TAG_RESOLVE_FAILED\",\"message\":\"Unresolved tag: tag:yaml.org,2002:float at line 3, column 10:\\n\\n  float: !!float 1\\n         ^^^^^^^\\n\",\"pos\":[43,50],\"linePos\":[{\"line\":3,\"col\":10},{\"line\":3,\"col\":17}]}\n=> true\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ],
+  "plugin_cleanup": {
+    "loaded": false,
+    "exposed": false
+  },
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "evidence": "target/rea/yaml-schema-probes/report.json",
+  "cases": [
+    {
+      "id": "core",
+      "old": "Target0.md",
+      "new": "New0.md",
+      "source": "Source0.md",
+      "format": "shortest",
+      "files": {
+        "Target0.md": "# Target\n",
+        "Source0.md": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 0123\nbinary_plain: 0b10\nrelated: \"[[Target0]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 0123\nbinary_plain: 0b10\nrelated: \"[[Target0]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 8,
+                  "col": 3,
+                  "offset": 152
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "col": 0,
+                  "offset": 153
+                },
+                "end": {
+                  "line": 9,
+                  "col": 4,
+                  "offset": 157
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "date_plain": "2024-01-02",
+            "time_plain": "2024-01-02T03:04:05Z",
+            "yes_plain": "yes",
+            "on_plain": "on",
+            "leading_zero": 123,
+            "binary_plain": "0b10",
+            "related": "[[Target0]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 8,
+              "col": 3,
+              "offset": 152
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target0",
+              "original": "[[Target0]]",
+              "displayText": "Target0"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "date_plain",
+              {
+                "type": "string",
+                "value": "2024-01-02"
+              }
+            ],
+            [
+              "time_plain",
+              {
+                "type": "string",
+                "value": "2024-01-02T03:04:05Z"
+              }
+            ],
+            [
+              "yes_plain",
+              {
+                "type": "string",
+                "value": "yes"
+              }
+            ],
+            [
+              "on_plain",
+              {
+                "type": "string",
+                "value": "on"
+              }
+            ],
+            [
+              "leading_zero",
+              {
+                "type": "number",
+                "string": "123",
+                "value": 123
+              }
+            ],
+            [
+              "binary_plain",
+              {
+                "type": "string",
+                "value": "0b10"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target0]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source0.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"date_plain\": \"2024-01-02\",\n  \"time_plain\": \"2024-01-02T03:04:05Z\",\n  \"yes_plain\": \"yes\",\n  \"on_plain\": \"on\",\n  \"leading_zero\": 123,\n  \"binary_plain\": \"0b10\",\n  \"related\": \"[[Target0]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source0.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "date_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 123\nbinary_plain: 0b10\nrelated: \"[[Target0]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source0.md",
+            "name=date_plain"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "2024-01-02\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source0.md",
+            "name=time_plain"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "2024-01-02T03:04:05Z\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source0.md",
+            "name=yes_plain"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "yes\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source0.md",
+            "name=on_plain"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "on\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source0.md",
+            "name=leading_zero"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "123\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source0.md",
+            "name=binary_plain"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "0b10\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source0.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target0]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New0.md": "# Target\n",
+        "Source0.md": "---\ndate_plain: 2024-01-02\ntime_plain: 2024-01-02T03:04:05Z\nyes_plain: yes\non_plain: on\nleading_zero: 123\nbinary_plain: 0b10\nrelated: \"[[New0]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "timestamp-date",
+      "old": "Target1.md",
+      "new": "New1.md",
+      "source": "Source1.md",
+      "format": "shortest",
+      "files": {
+        "Target1.md": "# Target\n",
+        "Source1.md": "---\nts_date: !!timestamp 2024-01-02\nrelated: \"[[Target1]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nts_date: !!timestamp 2024-01-02\nrelated: \"[[Target1]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 62
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 63
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 67
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ts_date": "2024-01-02T00:00:00.000Z",
+            "related": "[[Target1]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 62
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target1",
+              "original": "[[Target1]]",
+              "displayText": "Target1"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "ts_date",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:00:00.000Z",
+                "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704153600000
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target1]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source1.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"ts_date\": \"2024-01-02T00:00:00.000Z\",\n  \"related\": \"[[Target1]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source1.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "ts_date: 2024-01-02T00:00:00.000Z\nrelated: \"[[Target1]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source1.md",
+            "name=ts_date"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source1.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target1]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New1.md": "# Target\n",
+        "Source1.md": "---\nts_date: 2024-01-02T00:00:00.000Z\nrelated: \"[[New1]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "timestamp-time",
+      "old": "Target2.md",
+      "new": "New2.md",
+      "source": "Source2.md",
+      "format": "shortest",
+      "files": {
+        "Target2.md": "# Target\n",
+        "Source2.md": "---\nts_datetime: !!timestamp 2024-01-02T03:04:05.678+02:30\nrelated: \"[[Target2]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nts_datetime: !!timestamp 2024-01-02T03:04:05.678+02:30\nrelated: \"[[Target2]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 85
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 86
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 90
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "ts_datetime": "2024-01-02T00:34:05.678Z",
+            "related": "[[Target2]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 85
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target2",
+              "original": "[[Target2]]",
+              "displayText": "Target2"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "ts_datetime",
+              {
+                "type": "Date",
+                "id": 1,
+                "iso": "2024-01-02T00:34:05.678Z",
+                "string": "Tue Jan 02 2024 00:34:05 GMT+0000 (Coordinated Universal Time)",
+                "millis": 1704155645678
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target2]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source2.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"ts_datetime\": \"2024-01-02T00:34:05.678Z\",\n  \"related\": \"[[Target2]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source2.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "ts_datetime: 2024-01-02T00:34:05.678Z\nrelated: \"[[Target2]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source2.md",
+            "name=ts_datetime"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "Tue Jan 02 2024 00:34:05 GMT+0000 (Coordinated Universal Time)\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source2.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target2]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New2.md": "# Target\n",
+        "Source2.md": "---\nts_datetime: 2024-01-02T00:34:05.678Z\nrelated: \"[[New2]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "binary",
+      "old": "Target3.md",
+      "new": "New3.md",
+      "source": "Source3.md",
+      "format": "shortest",
+      "files": {
+        "Target3.md": "# Target\n",
+        "Source3.md": "---\nbin_data: !!binary SGVsbG8=\nrelated: \"[[Target3]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nbin_data: !!binary SGVsbG8=\nrelated: \"[[Target3]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 58
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 59
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 63
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "bin_data": {
+              "0": 72,
+              "1": 101,
+              "2": 108,
+              "3": 108,
+              "4": 111
+            },
+            "related": "[[Target3]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 58
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target3",
+              "original": "[[Target3]]",
+              "displayText": "Target3"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "bin_data",
+              {
+                "type": "Uint8Array",
+                "id": 1,
+                "values": [
+                  72,
+                  101,
+                  108,
+                  108,
+                  111
+                ],
+                "string": "72,101,108,108,111"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target3]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source3.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"bin_data\": {\n    \"0\": 72,\n    \"1\": 101,\n    \"2\": 108,\n    \"3\": 108,\n    \"4\": 111\n  },\n  \"related\": \"[[Target3]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source3.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "bin_data:\n  - 72\n  - 101\n  - 108\n  - 108\n  - 111\nrelated: \"[[Target3]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source3.md",
+            "name=bin_data"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "72,101,108,108,111\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source3.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target3]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New3.md": "# Target\n",
+        "Source3.md": "---\nbin_data:\n  - 72\n  - 101\n  - 108\n  - 108\n  - 111\nrelated: \"[[New3]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "set",
+      "old": "Target4.md",
+      "new": "New4.md",
+      "source": "Source4.md",
+      "format": "shortest",
+      "files": {
+        "Target4.md": "# Target\n",
+        "Source4.md": "---\nset_data: !!set {red: null, blue: null}\nrelated: \"[[Target4]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nset_data: !!set {red: null, blue: null}\nrelated: \"[[Target4]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 70
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 71
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 75
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "set_data": {},
+            "related": "[[Target4]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 70
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target4",
+              "original": "[[Target4]]",
+              "displayText": "Target4"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "set_data",
+              {
+                "type": "Set",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "red"
+                  },
+                  {
+                    "type": "string",
+                    "value": "blue"
+                  }
+                ],
+                "string": "[object Set]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target4]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source4.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"set_data\": {},\n  \"related\": \"[[Target4]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source4.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "set_data:\n  - red\n  - blue\nrelated: \"[[Target4]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source4.md",
+            "name=set_data"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Set]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source4.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target4]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New4.md": "# Target\n",
+        "Source4.md": "---\nset_data:\n  - red\n  - blue\nrelated: \"[[New4]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "omap",
+      "old": "Target5.md",
+      "new": "New5.md",
+      "source": "Source5.md",
+      "format": "shortest",
+      "files": {
+        "Target5.md": "# Target\n",
+        "Source5.md": "---\nomap_data: !!omap [{one: \"[[Target5]]\"}, {two: 2}]\nrelated: \"[[Target5]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nomap_data: !!omap [{one: \"[[Target5]]\"}, {two: 2}]\nrelated: \"[[Target5]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 81
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 82
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 86
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "omap_data": {},
+            "related": "[[Target5]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 81
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target5",
+              "original": "[[Target5]]",
+              "displayText": "Target5"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "omap_data",
+              {
+                "type": "Map",
+                "id": 1,
+                "entries": [
+                  [
+                    {
+                      "type": "string",
+                      "value": "one"
+                    },
+                    {
+                      "type": "string",
+                      "value": "[[Target5]]"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "string",
+                      "value": "two"
+                    },
+                    {
+                      "type": "number",
+                      "string": "2",
+                      "value": 2
+                    }
+                  ]
+                ],
+                "string": "[object Map]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target5]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source5.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"omap_data\": {},\n  \"related\": \"[[Target5]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source5.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "omap_data:\n  one: \"[[Target5]]\"\n  two: 2\nrelated: \"[[Target5]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source5.md",
+            "name=omap_data"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Map]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source5.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target5]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New5.md": "# Target\n",
+        "Source5.md": "---\nomap_data:\n  one: \"[[Target5]]\"\n  two: 2\nrelated: \"[[New5]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "pairs",
+      "old": "Target6.md",
+      "new": "New6.md",
+      "source": "Source6.md",
+      "format": "shortest",
+      "files": {
+        "Target6.md": "# Target\n",
+        "Source6.md": "---\npairs_data: !!pairs [{one: \"[[Target6]]\"}, {two: 2}]\nrelated: \"[[Target6]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\npairs_data: !!pairs [{one: \"[[Target6]]\"}, {two: 2}]\nrelated: \"[[Target6]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 83
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 84
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 88
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "pairs_data": [
+              {
+                "one": "[[Target6]]"
+              },
+              {
+                "two": 2
+              }
+            ],
+            "related": "[[Target6]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 83
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "pairs_data.0.one",
+              "link": "Target6",
+              "original": "[[Target6]]",
+              "displayText": "Target6"
+            },
+            {
+              "key": "related",
+              "link": "Target6",
+              "original": "[[Target6]]",
+              "displayText": "Target6"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "pairs_data",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "Object",
+                    "id": 2,
+                    "properties": [
+                      [
+                        "one",
+                        {
+                          "type": "string",
+                          "value": "[[Target6]]"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 3,
+                    "properties": [
+                      [
+                        "two",
+                        {
+                          "type": "number",
+                          "string": "2",
+                          "value": 2
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  }
+                ],
+                "string": "[object Object],[object Object]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target6]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source6.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"pairs_data\": [\n    {\n      \"one\": \"[[Target6]]\"\n    },\n    {\n      \"two\": 2\n    }\n  ],\n  \"related\": \"[[Target6]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source6.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "pairs_data:\n  - one: \"[[Target6]]\"\n  - two: 2\nrelated: \"[[Target6]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source6.md",
+            "name=pairs_data"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source6.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target6]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New6.md": "# Target\n",
+        "Source6.md": "---\npairs_data:\n  - one: \"[[New6]]\"\n  - two: 2\nrelated: \"[[New6]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "plain-merge",
+      "old": "Target7.md",
+      "new": "New7.md",
+      "source": "Source7.md",
+      "format": "shortest",
+      "files": {
+        "Target7.md": "# Target\n",
+        "Source7.md": "---\ndefaults_plain: &base {link: \"[[Target7]]\", number: 1}\nmerged_plain: {<<: *base, own: true}\nrelated: \"[[Target7]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\ndefaults_plain: &base {link: \"[[Target7]]\", number: 1}\nmerged_plain: {<<: *base, own: true}\nrelated: \"[[Target7]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 122
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 123
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 127
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "defaults_plain": {
+              "link": "[[Target7]]",
+              "number": 1
+            },
+            "merged_plain": {
+              "<<": {
+                "link": "[[Target7]]",
+                "number": 1
+              },
+              "own": true
+            },
+            "related": "[[Target7]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 122
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "defaults_plain.link",
+              "link": "Target7",
+              "original": "[[Target7]]",
+              "displayText": "Target7"
+            },
+            {
+              "key": "merged_plain.<<.link",
+              "link": "Target7",
+              "original": "[[Target7]]",
+              "displayText": "Target7"
+            },
+            {
+              "key": "related",
+              "link": "Target7",
+              "original": "[[Target7]]",
+              "displayText": "Target7"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "defaults_plain",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Target7]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "merged_plain",
+              {
+                "type": "Object",
+                "id": 2,
+                "properties": [
+                  [
+                    "<<",
+                    {
+                      "ref": 1
+                    }
+                  ],
+                  [
+                    "own",
+                    {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target7]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source7.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"defaults_plain\": {\n    \"link\": \"[[Target7]]\",\n    \"number\": 1\n  },\n  \"merged_plain\": {\n    \"<<\": {\n      \"link\": \"[[Target7]]\",\n      \"number\": 1\n    },\n    \"own\": true\n  },\n  \"related\": \"[[Target7]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source7.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "defaults_plain:\n  link: \"[[Target7]]\"\n  number: 1\nmerged_plain:\n  <<:\n    link: \"[[Target7]]\"\n    number: 1\n  own: true\nrelated: \"[[Target7]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source7.md",
+            "name=defaults_plain"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source7.md",
+            "name=merged_plain"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source7.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target7]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New7.md": "# Target\n",
+        "Source7.md": "---\ndefaults_plain:\n  link: \"[[New7]]\"\n  number: 1\nmerged_plain:\n  <<:\n    link: \"[[New7]]\"\n    number: 1\n  own: true\nrelated: \"[[New7]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "explicit-merge",
+      "old": "Target8.md",
+      "new": "New8.md",
+      "source": "Source8.md",
+      "format": "shortest",
+      "files": {
+        "Target8.md": "# Target\n",
+        "Source8.md": "---\ndefaults_explicit: &base {link: \"[[Target8]]\", number: 1}\nmerged_explicit: {!!merge <<: *base, own: true}\nrelated: \"[[Target8]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\ndefaults_explicit: &base {link: \"[[Target8]]\", number: 1}\nmerged_explicit: {!!merge <<: *base, own: true}\nrelated: \"[[Target8]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 136
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 137
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 141
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "defaults_explicit": {
+              "link": "[[Target8]]",
+              "number": 1
+            },
+            "merged_explicit": {
+              "link": "[[Target8]]",
+              "number": 1,
+              "own": true
+            },
+            "related": "[[Target8]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 136
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "defaults_explicit.link",
+              "link": "Target8",
+              "original": "[[Target8]]",
+              "displayText": "Target8"
+            },
+            {
+              "key": "merged_explicit.link",
+              "link": "Target8",
+              "original": "[[Target8]]",
+              "displayText": "Target8"
+            },
+            {
+              "key": "related",
+              "link": "Target8",
+              "original": "[[Target8]]",
+              "displayText": "Target8"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "defaults_explicit",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Target8]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "merged_explicit",
+              {
+                "type": "Object",
+                "id": 2,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Target8]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ],
+                  [
+                    "own",
+                    {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target8]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source8.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"defaults_explicit\": {\n    \"link\": \"[[Target8]]\",\n    \"number\": 1\n  },\n  \"merged_explicit\": {\n    \"link\": \"[[Target8]]\",\n    \"number\": 1,\n    \"own\": true\n  },\n  \"related\": \"[[Target8]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source8.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "defaults_explicit:\n  link: \"[[Target8]]\"\n  number: 1\nmerged_explicit:\n  link: \"[[Target8]]\"\n  number: 1\n  own: true\nrelated: \"[[Target8]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source8.md",
+            "name=defaults_explicit"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source8.md",
+            "name=merged_explicit"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source8.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target8]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New8.md": "# Target\n",
+        "Source8.md": "---\ndefaults_explicit:\n  link: \"[[New8]]\"\n  number: 1\nmerged_explicit:\n  link: \"[[New8]]\"\n  number: 1\n  own: true\nrelated: \"[[New8]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "unknown-scalar",
+      "old": "Target9.md",
+      "new": "New9.md",
+      "source": "Source9.md",
+      "format": "shortest",
+      "files": {
+        "Target9.md": "# Target\n",
+        "Source9.md": "---\nunknown_data: !unknown \"[[Target9]]\"\nrelated: \"[[Target9]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nunknown_data: !unknown \"[[Target9]]\"\nrelated: \"[[Target9]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 67
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 68
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 72
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_data": "[[Target9]]",
+            "related": "[[Target9]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 67
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_data",
+              "link": "Target9",
+              "original": "[[Target9]]",
+              "displayText": "Target9"
+            },
+            {
+              "key": "related",
+              "link": "Target9",
+              "original": "[[Target9]]",
+              "displayText": "Target9"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_data",
+              {
+                "type": "string",
+                "value": "[[Target9]]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target9]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source9.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"unknown_data\": \"[[Target9]]\",\n  \"related\": \"[[Target9]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source9.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "unknown_data: \"[[Target9]]\"\nrelated: \"[[Target9]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source9.md",
+            "name=unknown_data"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target9]]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source9.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target9]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New9.md": "# Target\n",
+        "Source9.md": "---\nunknown_data: \"[[New9]]\"\nrelated: \"[[New9]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "unknown-map",
+      "old": "Target10.md",
+      "new": "New10.md",
+      "source": "Source10.md",
+      "format": "shortest",
+      "files": {
+        "Target10.md": "# Target\n",
+        "Source10.md": "---\nunknown_map: !unknown {link: \"[[Target10]]\", number: 1}\nrelated: \"[[Target10]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nunknown_map: !unknown {link: \"[[Target10]]\", number: 1}\nrelated: \"[[Target10]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 87
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 88
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 92
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_map": {
+              "link": "[[Target10]]",
+              "number": 1
+            },
+            "related": "[[Target10]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 87
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_map.link",
+              "link": "Target10",
+              "original": "[[Target10]]",
+              "displayText": "Target10"
+            },
+            {
+              "key": "related",
+              "link": "Target10",
+              "original": "[[Target10]]",
+              "displayText": "Target10"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_map",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Target10]]"
+                    }
+                  ],
+                  [
+                    "number",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target10]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source10.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"unknown_map\": {\n    \"link\": \"[[Target10]]\",\n    \"number\": 1\n  },\n  \"related\": \"[[Target10]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source10.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "unknown_map:\n  link: \"[[Target10]]\"\n  number: 1\nrelated: \"[[Target10]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source10.md",
+            "name=unknown_map"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source10.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target10]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New10.md": "# Target\n",
+        "Source10.md": "---\nunknown_map:\n  link: \"[[New10]]\"\n  number: 1\nrelated: \"[[New10]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "unknown-sequence",
+      "old": "Target11.md",
+      "new": "New11.md",
+      "source": "Source11.md",
+      "format": "shortest",
+      "files": {
+        "Target11.md": "# Target\n",
+        "Source11.md": "---\nunknown_seq: !unknown [\"[[Target11]]\", 1]\nrelated: \"[[Target11]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nunknown_seq: !unknown [\"[[Target11]]\", 1]\nrelated: \"[[Target11]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 73
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 74
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 78
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "unknown_seq": [
+              "[[Target11]]",
+              1
+            ],
+            "related": "[[Target11]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 73
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "unknown_seq.0",
+              "link": "Target11",
+              "original": "[[Target11]]",
+              "displayText": "Target11"
+            },
+            {
+              "key": "related",
+              "link": "Target11",
+              "original": "[[Target11]]",
+              "displayText": "Target11"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "unknown_seq",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "string",
+                    "value": "[[Target11]]"
+                  },
+                  {
+                    "type": "number",
+                    "string": "1",
+                    "value": 1
+                  }
+                ],
+                "string": "[[Target11]],1"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target11]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source11.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"unknown_seq\": [\n    \"[[Target11]]\",\n    1\n  ],\n  \"related\": \"[[Target11]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source11.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "unknown_seq:\n  - \"[[Target11]]\"\n  - 1\nrelated: \"[[Target11]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source11.md",
+            "name=unknown_seq"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target11]]\n1\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source11.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target11]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New11.md": "# Target\n",
+        "Source11.md": "---\nunknown_seq:\n  - \"[[New11]]\"\n  - 1\nrelated: \"[[New11]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "nested-tags",
+      "old": "Target12.md",
+      "new": "New12.md",
+      "source": "Source12.md",
+      "format": "shortest",
+      "files": {
+        "Target12.md": "# Target\n",
+        "Source12.md": "---\nnested_data: [{date: !!timestamp 2024-01-02}, {binary: !!binary SGk=}, {set: !!set {red: null}}]\nrelated: \"[[Target12]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nnested_data: [{date: !!timestamp 2024-01-02}, {binary: !!binary SGk=}, {set: !!set {red: null}}]\nrelated: \"[[Target12]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 3,
+                  "col": 3,
+                  "offset": 128
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 4,
+                  "col": 0,
+                  "offset": 129
+                },
+                "end": {
+                  "line": 4,
+                  "col": 4,
+                  "offset": 133
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "nested_data": [
+              {
+                "date": "2024-01-02T00:00:00.000Z"
+              },
+              {
+                "binary": {
+                  "0": 72,
+                  "1": 105
+                }
+              },
+              {
+                "set": {}
+              }
+            ],
+            "related": "[[Target12]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "col": 3,
+              "offset": 128
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target12",
+              "original": "[[Target12]]",
+              "displayText": "Target12"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "nested_data",
+              {
+                "type": "Array",
+                "id": 1,
+                "values": [
+                  {
+                    "type": "Object",
+                    "id": 2,
+                    "properties": [
+                      [
+                        "date",
+                        {
+                          "type": "Date",
+                          "id": 3,
+                          "iso": "2024-01-02T00:00:00.000Z",
+                          "string": "Tue Jan 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+                          "millis": 1704153600000
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 4,
+                    "properties": [
+                      [
+                        "binary",
+                        {
+                          "type": "Uint8Array",
+                          "id": 5,
+                          "values": [
+                            72,
+                            105
+                          ],
+                          "string": "72,105"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  },
+                  {
+                    "type": "Object",
+                    "id": 6,
+                    "properties": [
+                      [
+                        "set",
+                        {
+                          "type": "Set",
+                          "id": 7,
+                          "values": [
+                            {
+                              "type": "string",
+                              "value": "red"
+                            }
+                          ],
+                          "string": "[object Set]"
+                        }
+                      ]
+                    ],
+                    "symbols": []
+                  }
+                ],
+                "string": "[object Object],[object Object],[object Object]"
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target12]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source12.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"nested_data\": [\n    {\n      \"date\": \"2024-01-02T00:00:00.000Z\"\n    },\n    {\n      \"binary\": {\n        \"0\": 72,\n        \"1\": 105\n      }\n    },\n    {\n      \"set\": {}\n    }\n  ],\n  \"related\": \"[[Target12]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source12.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "nested_data:\n  - date: 2024-01-02T00:00:00.000Z\n  - binary:\n      - 72\n      - 105\n  - set:\n      - red\nrelated: \"[[Target12]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source12.md",
+            "name=nested_data"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n[object Object]\n[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source12.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target12]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New12.md": "# Target\n",
+        "Source12.md": "---\nnested_data:\n  - date: 2024-01-02T00:00:00.000Z\n  - binary:\n      - 72\n      - 105\n  - set:\n      - red\nrelated: \"[[New12]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "nested-numbers",
+      "old": "Target13.md",
+      "new": "New13.md",
+      "source": "Source13.md",
+      "format": "shortest",
+      "files": {
+        "Target13.md": "# Target\n",
+        "Source13.md": "---\nnested_numbers:\n  int: !!int 0123\n  float: !!float 1\n  leading: 0123\n  binary: 0b10\nrelated: \"[[Target13]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nnested_numbers:\n  int: !!int 0123\n  float: !!float 1\n  leading: 0123\n  binary: 0b10\nrelated: \"[[Target13]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 7,
+                  "col": 3,
+                  "offset": 115
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 8,
+                  "col": 0,
+                  "offset": 116
+                },
+                "end": {
+                  "line": 8,
+                  "col": 4,
+                  "offset": 120
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "nested_numbers": {
+              "int": 123,
+              "float": "1",
+              "leading": 123,
+              "binary": "0b10"
+            },
+            "related": "[[Target13]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 7,
+              "col": 3,
+              "offset": 115
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "related",
+              "link": "Target13",
+              "original": "[[Target13]]",
+              "displayText": "Target13"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "nested_numbers",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "int",
+                    {
+                      "type": "number",
+                      "string": "123",
+                      "value": 123
+                    }
+                  ],
+                  [
+                    "float",
+                    {
+                      "type": "string",
+                      "value": "1"
+                    }
+                  ],
+                  [
+                    "leading",
+                    {
+                      "type": "number",
+                      "string": "123",
+                      "value": 123
+                    }
+                  ],
+                  [
+                    "binary",
+                    {
+                      "type": "string",
+                      "value": "0b10"
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target13]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source13.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"nested_numbers\": {\n    \"int\": 123,\n    \"float\": \"1\",\n    \"leading\": 123,\n    \"binary\": \"0b10\"\n  },\n  \"related\": \"[[Target13]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source13.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "nested_numbers:\n  int: 123\n  float: \"1\"\n  leading: 123\n  binary: 0b10\nrelated: \"[[Target13]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source13.md",
+            "name=nested_numbers"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source13.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target13]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New13.md": "# Target\n",
+        "Source13.md": "---\nnested_numbers:\n  int: 123\n  float: \"1\"\n  leading: 123\n  binary: 0b10\nrelated: \"[[New13]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    },
+    {
+      "id": "alias-copies",
+      "old": "Target14.md",
+      "new": "New14.md",
+      "source": "Source14.md",
+      "format": "shortest",
+      "files": {
+        "Target14.md": "# Target\n",
+        "Source14.md": "---\nfirst_alias: &copy {link: \"[[Target14]]\", count: 1}\nsecond_alias: *copy\nrelated: \"[[Target14]]\"\n---\nbody\n"
+      },
+      "cached_source_proof": {
+        "cached": "---\nfirst_alias: &copy {link: \"[[Target14]]\", count: 1}\nsecond_alias: *copy\nrelated: \"[[Target14]]\"\n---\nbody\n",
+        "cache": {
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 4,
+                  "col": 3,
+                  "offset": 103
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "col": 0,
+                  "offset": 104
+                },
+                "end": {
+                  "line": 5,
+                  "col": 4,
+                  "offset": 108
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "first_alias": {
+              "link": "[[Target14]]",
+              "count": 1
+            },
+            "second_alias": {
+              "link": "[[Target14]]",
+              "count": 1
+            },
+            "related": "[[Target14]]"
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "col": 3,
+              "offset": 103
+            }
+          },
+          "frontmatterLinks": [
+            {
+              "key": "first_alias.link",
+              "link": "Target14",
+              "original": "[[Target14]]",
+              "displayText": "Target14"
+            },
+            {
+              "key": "second_alias.link",
+              "link": "Target14",
+              "original": "[[Target14]]",
+              "displayText": "Target14"
+            },
+            {
+              "key": "related",
+              "link": "Target14",
+              "original": "[[Target14]]",
+              "displayText": "Target14"
+            }
+          ]
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "first_alias",
+              {
+                "type": "Object",
+                "id": 1,
+                "properties": [
+                  [
+                    "link",
+                    {
+                      "type": "string",
+                      "value": "[[Target14]]"
+                    }
+                  ],
+                  [
+                    "count",
+                    {
+                      "type": "number",
+                      "string": "1",
+                      "value": 1
+                    }
+                  ]
+                ],
+                "symbols": []
+              }
+            ],
+            [
+              "second_alias",
+              {
+                "ref": 1
+              }
+            ],
+            [
+              "related",
+              {
+                "type": "string",
+                "value": "[[Target14]]"
+              }
+            ]
+          ],
+          "symbols": []
+        }
+      },
+      "read_cases": [
+        {
+          "args": [
+            "properties",
+            "path=Source14.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"first_alias\": {\n    \"link\": \"[[Target14]]\",\n    \"count\": 1\n  },\n  \"second_alias\": {\n    \"link\": \"[[Target14]]\",\n    \"count\": 1\n  },\n  \"related\": \"[[Target14]]\"\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "properties",
+            "path=Source14.md"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "first_alias:\n  link: \"[[Target14]]\"\n  count: 1\nsecond_alias:\n  link: \"[[Target14]]\"\n  count: 1\nrelated: \"[[Target14]]\"\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source14.md",
+            "name=first_alias"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source14.md",
+            "name=second_alias"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Object]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=Source14.md",
+            "name=related"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[[Target14]]\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "expected": {
+        "New14.md": "# Target\n",
+        "Source14.md": "---\nfirst_alias:\n  link: \"[[New14]]\"\n  count: 1\nsecond_alias:\n  link: \"[[New14]]\"\n  count: 1\nrelated: \"[[New14]]\"\n---\nbody\n"
+      },
+      "rename_result": true
+    }
+  ]
+}

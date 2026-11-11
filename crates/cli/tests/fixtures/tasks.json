@@ -1,0 +1,1481 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "files": {
+    "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+    "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+    "Note2.md": "- [ ] second\n",
+    "Note10.md": "- [ ] tenth\n",
+    "attachment.txt": "- [ ] attachment\n"
+  },
+  "cases": [
+    {
+      "id": "empty-000",
+      "args": [
+        "tasks"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-001",
+      "args": [
+        "tasks",
+        "total"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "11\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-002",
+      "args": [
+        "tasks",
+        "active"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-003",
+      "args": [
+        "tasks",
+        "active",
+        "total"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-004",
+      "args": [
+        "tasks",
+        "file=Known"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-005",
+      "args": [
+        "tasks",
+        "path=Known.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-006",
+      "args": [
+        "tasks",
+        "file=Missing"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing\" not found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-007",
+      "args": [
+        "tasks",
+        "path=Missing.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-008",
+      "args": [
+        "tasks",
+        "path=Folder"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-009",
+      "args": [
+        "tasks",
+        "file=Folder"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Folder\" not found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-010",
+      "args": [
+        "tasks",
+        "file="
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-011",
+      "args": [
+        "tasks",
+        "path="
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-012",
+      "args": [
+        "tasks",
+        "file=Missing",
+        "path=Known.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-013",
+      "args": [
+        "tasks",
+        "file=Known",
+        "path=Missing.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-014",
+      "args": [
+        "tasks",
+        "file=attachment.txt"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "No tasks found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-015",
+      "args": [
+        "tasks",
+        "file=attachment.txt",
+        "total"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-016",
+      "args": [
+        "tasks",
+        "daily"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Daily notes plugin is not enabled.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-017",
+      "args": [
+        "tasks",
+        "daily",
+        "file=Known"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Daily notes plugin is not enabled.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-018",
+      "args": [
+        "tasks",
+        "done"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-019",
+      "args": [
+        "tasks",
+        "todo"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-020",
+      "args": [
+        "tasks",
+        "done",
+        "todo"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-021",
+      "args": [
+        "tasks",
+        "done",
+        "status=!"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [!] custom\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-022",
+      "args": [
+        "tasks",
+        "done",
+        "status= "
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-023",
+      "args": [
+        "tasks",
+        "todo",
+        "status=!"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [!] custom\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-024",
+      "args": [
+        "tasks",
+        "status="
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "No tasks found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-025",
+      "args": [
+        "tasks",
+        "status=X"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [X] uppercase\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-026",
+      "args": [
+        "tasks",
+        "verbose"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Folder/Other.md\n4\t- [ ] nested\n\nKnown.md\n1\t- [ ] todo\n2\t- [x] done\n3\t- [X] uppercase\n4\t- [!] custom\n5\t- [?] question\n6\t+ [ ] plus\n7\t1. [ ] numbered\n8\t1) [ ] parenthesis\n\nNote2.md\n1\t- [ ] second\n\nNote10.md\n1\t- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-027",
+      "args": [
+        "tasks",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] nested\",\n    \"file\": \"Folder/Other.md\",\n    \"line\": \"4\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] todo\",\n    \"file\": \"Known.md\",\n    \"line\": \"1\"\n  },\n  {\n    \"status\": \"x\",\n    \"text\": \"- [x] done\",\n    \"file\": \"Known.md\",\n    \"line\": \"2\"\n  },\n  {\n    \"status\": \"X\",\n    \"text\": \"- [X] uppercase\",\n    \"file\": \"Known.md\",\n    \"line\": \"3\"\n  },\n  {\n    \"status\": \"!\",\n    \"text\": \"- [!] custom\",\n    \"file\": \"Known.md\",\n    \"line\": \"4\"\n  },\n  {\n    \"status\": \"?\",\n    \"text\": \"- [?] question\",\n    \"file\": \"Known.md\",\n    \"line\": \"5\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"+ [ ] plus\",\n    \"file\": \"Known.md\",\n    \"line\": \"6\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"1. [ ] numbered\",\n    \"file\": \"Known.md\",\n    \"line\": \"7\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"1) [ ] parenthesis\",\n    \"file\": \"Known.md\",\n    \"line\": \"8\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] second\",\n    \"file\": \"Note2.md\",\n    \"line\": \"1\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] tenth\",\n    \"file\": \"Note10.md\",\n    \"line\": \"1\"\n  }\n]\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-028",
+      "args": [
+        "tasks",
+        "format=tsv"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": " \t- [ ] nested\tFolder/Other.md\t4\n \t- [ ] todo\tKnown.md\t1\nx\t- [x] done\tKnown.md\t2\nX\t- [X] uppercase\tKnown.md\t3\n!\t- [!] custom\tKnown.md\t4\n?\t- [?] question\tKnown.md\t5\n \t+ [ ] plus\tKnown.md\t6\n \t1. [ ] numbered\tKnown.md\t7\n \t1) [ ] parenthesis\tKnown.md\t8\n \t- [ ] second\tNote2.md\t1\n \t- [ ] tenth\tNote10.md\t1\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-029",
+      "args": [
+        "tasks",
+        "format=csv"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": " ,- [ ] nested,Folder/Other.md,4\n ,- [ ] todo,Known.md,1\nx,- [x] done,Known.md,2\nX,- [X] uppercase,Known.md,3\n!,- [!] custom,Known.md,4\n?,- [?] question,Known.md,5\n ,+ [ ] plus,Known.md,6\n ,1. [ ] numbered,Known.md,7\n ,1) [ ] parenthesis,Known.md,8\n ,- [ ] second,Note2.md,1\n ,- [ ] tenth,Note10.md,1\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-030",
+      "args": [
+        "tasks",
+        "format=bogus"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": " \t- [ ] nested\tFolder/Other.md\t4\n \t- [ ] todo\tKnown.md\t1\nx\t- [x] done\tKnown.md\t2\nX\t- [X] uppercase\tKnown.md\t3\n!\t- [!] custom\tKnown.md\t4\n?\t- [?] question\tKnown.md\t5\n \t+ [ ] plus\tKnown.md\t6\n \t1. [ ] numbered\tKnown.md\t7\n \t1) [ ] parenthesis\tKnown.md\t8\n \t- [ ] second\tNote2.md\t1\n \t- [ ] tenth\tNote10.md\t1\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-031",
+      "args": [
+        "tasks",
+        "total",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "11\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-032",
+      "args": [
+        "tasks",
+        "file=Known",
+        "active"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-033",
+      "args": [
+        "task"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: line\nUsage: task ref=<path:line> or task daily line=<n> or task file=<name> line=<n>\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-034",
+      "args": [
+        "task",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: file or path\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-035",
+      "args": [
+        "task",
+        "file=Known"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: line\nUsage: task ref=<path:line> or task daily line=<n> or task file=<name> line=<n>\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-036",
+      "args": [
+        "task",
+        "file=Known",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-037",
+      "args": [
+        "task",
+        "file=Missing",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing\" not found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-038",
+      "args": [
+        "task",
+        "path=Folder",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-039",
+      "args": [
+        "task",
+        "ref=Folder:1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Folder\" not found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-040",
+      "args": [
+        "task",
+        "ref=Missing.md:1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-041",
+      "args": [
+        "task",
+        "ref=Known.md:1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-042",
+      "args": [
+        "task",
+        "ref=Known.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Invalid ref format. Expected path:line (e.g., \"Note.md:5\")\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-043",
+      "args": [
+        "task",
+        "ref=Known.md:0"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Invalid line number in ref.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-044",
+      "args": [
+        "task",
+        "ref=Known.md:1tail"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-045",
+      "args": [
+        "task",
+        "file=Known",
+        "line=1tail"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-046",
+      "args": [
+        "task",
+        "file=Known",
+        "line=0"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Invalid line number.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-047",
+      "args": [
+        "task",
+        "file=Known",
+        "line=100"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 100 is out of range (file has 11 lines).\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-048",
+      "args": [
+        "task",
+        "file=Known",
+        "line=10"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 10 is not a task.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-049",
+      "args": [
+        "task",
+        "file=Known",
+        "line=6"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 6 is not a task.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-050",
+      "args": [
+        "task",
+        "file=Known",
+        "line=8"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 8 is not a task.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-051",
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "status="
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Status must be a single character.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-052",
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "status=😀"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Status must be a single character.\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "empty-053",
+      "args": [
+        "task",
+        "file=attachment.txt",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tattachment.txt\nline\t1\nstatus\t \ntext\t- [ ] attachment\n",
+        "stderr": ""
+      },
+      "active": null
+    },
+    {
+      "id": "active-known-000",
+      "args": [
+        "tasks"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-001",
+      "args": [
+        "tasks",
+        "total"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "11\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-002",
+      "args": [
+        "tasks",
+        "active"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-003",
+      "args": [
+        "tasks",
+        "active",
+        "total"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "8\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-004",
+      "args": [
+        "tasks",
+        "file=Known"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-005",
+      "args": [
+        "tasks",
+        "path=Known.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-006",
+      "args": [
+        "tasks",
+        "file=Missing"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing\" not found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-007",
+      "args": [
+        "tasks",
+        "path=Missing.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-008",
+      "args": [
+        "tasks",
+        "path=Folder"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-009",
+      "args": [
+        "tasks",
+        "file=Folder"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Folder\" not found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-010",
+      "args": [
+        "tasks",
+        "file="
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-011",
+      "args": [
+        "tasks",
+        "path="
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-012",
+      "args": [
+        "tasks",
+        "file=Missing",
+        "path=Known.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-013",
+      "args": [
+        "tasks",
+        "file=Known",
+        "path=Missing.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-014",
+      "args": [
+        "tasks",
+        "file=attachment.txt"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "No tasks found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-015",
+      "args": [
+        "tasks",
+        "file=attachment.txt",
+        "total"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-016",
+      "args": [
+        "tasks",
+        "daily"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Daily notes plugin is not enabled.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-017",
+      "args": [
+        "tasks",
+        "daily",
+        "file=Known"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Daily notes plugin is not enabled.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-018",
+      "args": [
+        "tasks",
+        "done"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-019",
+      "args": [
+        "tasks",
+        "todo"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-020",
+      "args": [
+        "tasks",
+        "done",
+        "todo"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-021",
+      "args": [
+        "tasks",
+        "done",
+        "status=!"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [!] custom\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-022",
+      "args": [
+        "tasks",
+        "done",
+        "status= "
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] nested\n- [ ] todo\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n- [ ] second\n- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-023",
+      "args": [
+        "tasks",
+        "todo",
+        "status=!"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [!] custom\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-024",
+      "args": [
+        "tasks",
+        "status="
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "No tasks found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-025",
+      "args": [
+        "tasks",
+        "status=X"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [X] uppercase\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-026",
+      "args": [
+        "tasks",
+        "verbose"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Folder/Other.md\n4\t- [ ] nested\n\nKnown.md\n1\t- [ ] todo\n2\t- [x] done\n3\t- [X] uppercase\n4\t- [!] custom\n5\t- [?] question\n6\t+ [ ] plus\n7\t1. [ ] numbered\n8\t1) [ ] parenthesis\n\nNote2.md\n1\t- [ ] second\n\nNote10.md\n1\t- [ ] tenth\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-027",
+      "args": [
+        "tasks",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] nested\",\n    \"file\": \"Folder/Other.md\",\n    \"line\": \"4\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] todo\",\n    \"file\": \"Known.md\",\n    \"line\": \"1\"\n  },\n  {\n    \"status\": \"x\",\n    \"text\": \"- [x] done\",\n    \"file\": \"Known.md\",\n    \"line\": \"2\"\n  },\n  {\n    \"status\": \"X\",\n    \"text\": \"- [X] uppercase\",\n    \"file\": \"Known.md\",\n    \"line\": \"3\"\n  },\n  {\n    \"status\": \"!\",\n    \"text\": \"- [!] custom\",\n    \"file\": \"Known.md\",\n    \"line\": \"4\"\n  },\n  {\n    \"status\": \"?\",\n    \"text\": \"- [?] question\",\n    \"file\": \"Known.md\",\n    \"line\": \"5\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"+ [ ] plus\",\n    \"file\": \"Known.md\",\n    \"line\": \"6\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"1. [ ] numbered\",\n    \"file\": \"Known.md\",\n    \"line\": \"7\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"1) [ ] parenthesis\",\n    \"file\": \"Known.md\",\n    \"line\": \"8\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] second\",\n    \"file\": \"Note2.md\",\n    \"line\": \"1\"\n  },\n  {\n    \"status\": \" \",\n    \"text\": \"- [ ] tenth\",\n    \"file\": \"Note10.md\",\n    \"line\": \"1\"\n  }\n]\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-028",
+      "args": [
+        "tasks",
+        "format=tsv"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": " \t- [ ] nested\tFolder/Other.md\t4\n \t- [ ] todo\tKnown.md\t1\nx\t- [x] done\tKnown.md\t2\nX\t- [X] uppercase\tKnown.md\t3\n!\t- [!] custom\tKnown.md\t4\n?\t- [?] question\tKnown.md\t5\n \t+ [ ] plus\tKnown.md\t6\n \t1. [ ] numbered\tKnown.md\t7\n \t1) [ ] parenthesis\tKnown.md\t8\n \t- [ ] second\tNote2.md\t1\n \t- [ ] tenth\tNote10.md\t1\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-029",
+      "args": [
+        "tasks",
+        "format=csv"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": " ,- [ ] nested,Folder/Other.md,4\n ,- [ ] todo,Known.md,1\nx,- [x] done,Known.md,2\nX,- [X] uppercase,Known.md,3\n!,- [!] custom,Known.md,4\n?,- [?] question,Known.md,5\n ,+ [ ] plus,Known.md,6\n ,1. [ ] numbered,Known.md,7\n ,1) [ ] parenthesis,Known.md,8\n ,- [ ] second,Note2.md,1\n ,- [ ] tenth,Note10.md,1\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-030",
+      "args": [
+        "tasks",
+        "format=bogus"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": " \t- [ ] nested\tFolder/Other.md\t4\n \t- [ ] todo\tKnown.md\t1\nx\t- [x] done\tKnown.md\t2\nX\t- [X] uppercase\tKnown.md\t3\n!\t- [!] custom\tKnown.md\t4\n?\t- [?] question\tKnown.md\t5\n \t+ [ ] plus\tKnown.md\t6\n \t1. [ ] numbered\tKnown.md\t7\n \t1) [ ] parenthesis\tKnown.md\t8\n \t- [ ] second\tNote2.md\t1\n \t- [ ] tenth\tNote10.md\t1\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-031",
+      "args": [
+        "tasks",
+        "total",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "11\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-032",
+      "args": [
+        "tasks",
+        "file=Known",
+        "active"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-033",
+      "args": [
+        "task"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: line\nUsage: task ref=<path:line> or task daily line=<n> or task file=<name> line=<n>\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-034",
+      "args": [
+        "task",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: file or path\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-035",
+      "args": [
+        "task",
+        "file=Known"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: line\nUsage: task ref=<path:line> or task daily line=<n> or task file=<name> line=<n>\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-036",
+      "args": [
+        "task",
+        "file=Known",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-037",
+      "args": [
+        "task",
+        "file=Missing",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing\" not found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-038",
+      "args": [
+        "task",
+        "path=Folder",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-039",
+      "args": [
+        "task",
+        "ref=Folder:1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Folder\" not found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-040",
+      "args": [
+        "task",
+        "ref=Missing.md:1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-041",
+      "args": [
+        "task",
+        "ref=Known.md:1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-042",
+      "args": [
+        "task",
+        "ref=Known.md"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Invalid ref format. Expected path:line (e.g., \"Note.md:5\")\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-043",
+      "args": [
+        "task",
+        "ref=Known.md:0"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Invalid line number in ref.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-044",
+      "args": [
+        "task",
+        "ref=Known.md:1tail"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-045",
+      "args": [
+        "task",
+        "file=Known",
+        "line=1tail"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tKnown.md\nline\t1\nstatus\t \ntext\t- [ ] todo\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-046",
+      "args": [
+        "task",
+        "file=Known",
+        "line=0"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Invalid line number.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-047",
+      "args": [
+        "task",
+        "file=Known",
+        "line=100"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 100 is out of range (file has 11 lines).\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-048",
+      "args": [
+        "task",
+        "file=Known",
+        "line=10"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 10 is not a task.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-049",
+      "args": [
+        "task",
+        "file=Known",
+        "line=6"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 6 is not a task.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-050",
+      "args": [
+        "task",
+        "file=Known",
+        "line=8"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 8 is not a task.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-051",
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "status="
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Status must be a single character.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-052",
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "status=😀"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Status must be a single character.\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    },
+    {
+      "id": "active-known-053",
+      "args": [
+        "task",
+        "file=attachment.txt",
+        "line=1"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "file\tattachment.txt\nline\t1\nstatus\t \ntext\t- [ ] attachment\n",
+        "stderr": ""
+      },
+      "active": "Known.md"
+    }
+  ],
+  "coverage": "108 captured task/tasks output observations; default daily-disabled only; ASCII numeric filename ordering. No full locale collator or plugin/API certification.",
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "source_handlers": {
+    "tasks_byte_range": [
+      1651410,
+      1653954
+    ],
+    "task_byte_range": [
+      1653954,
+      1656168
+    ],
+    "resolver_byte_range": [
+      1691012,
+      1691583
+    ]
+  }
+}

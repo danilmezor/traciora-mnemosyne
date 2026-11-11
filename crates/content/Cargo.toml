@@ -1,0 +1,26 @@
+[package]
+name = "mnemosyne-content"
+version = "0.1.0"
+edition = "2021"
+description = "Governed managed content authority and immutable reviewed revisions"
+license = "Apache-2.0"
+
+[dependencies]
+mnemosyne-index = { path = "../index" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+base64 = "0.22"
+fs2 = "0.4"
+rusqlite = { version = "0.32", features = ["bundled"] }
+lopdf = { version = "=0.45.0", default-features = false }
+zip = { version = "=0.6.6", default-features = false, features = ["deflate"] }
+quick-xml = "=0.38.4"
+time = { version = "0.3.55", features = ["formatting", "macros"] }
+
+pulldown-cmark = "0.13"
+serde_yaml = "0.9"
+tiktoken-rs = "=0.7.0"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"

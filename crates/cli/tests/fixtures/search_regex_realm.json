@@ -1,0 +1,208 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial_files": {
+    "A.md": "---\nfirst: a\nsecond: b\n---\nbodyMarker #body\n",
+    "B.md": "---\nfirst: b\nsecond: c\n---\nbodyMarker #body\n"
+  },
+  "cases": [
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=bodyMarker",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"B.md\",\"A.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=[hasOwnProperty]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "TypeError: i.hasOwnProperty is not a function\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=bodyMarker",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "TypeError: i.hasOwnProperty is not a function\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=bodyMarker",
+        "format=json",
+        "case"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"B.md\",\"A.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=tag:#body",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"B.md\",\"A.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=case:bodyMarker",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Operator \"case\" not recognized\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=[hasOwnProperty]",
+        "format=json",
+        "case"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "TypeError: i.hasOwnProperty is not a function\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=bodyMarker",
+        "format=json",
+        "case"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "TypeError: i.hasOwnProperty is not a function\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search:context",
+        "query=bodyMarker",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "TypeError: i.hasOwnProperty is not a function\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "before_idle",
+      "args": [
+        "search",
+        "query=tag:#body",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"B.md\",\"A.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "after_idle",
+      "args": [
+        "search",
+        "query=bodyMarker",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"B.md\",\"A.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "after_idle",
+      "args": [
+        "search",
+        "query=bodyMarker",
+        "format=json",
+        "case"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"B.md\",\"A.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "after_idle",
+      "args": [
+        "search:context",
+        "query=bodyMarker",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"B.md\",\"matches\":[{\"line\":5,\"text\":\"bodyMarker #body\"}]},{\"file\":\"A.md\",\"matches\":[{\"line\":5,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "conditions": [
+    "Pinned isolated mock-keychain profile. Separate sensitive/insensitive global regex caches; idle reset is actual62second wall-clock wait, no injected clock."
+  ],
+  "setup": {
+    "files": [
+      "B.md",
+      "A.md"
+    ],
+    "cache_order": [
+      "A.md",
+      "B.md"
+    ]
+  },
+  "idle_elapsed_seconds": 62.009291917,
+  "source_member_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "source_utf8_byte_anchors": {
+    "rL": 1458632,
+    "dictionaries_idle_reset": 1458580,
+    "NL_match_schedules_reset": 1476853
+  },
+  "replay_conditions": [
+    "Native waited62actualwallseconds andverifiedownedprocessliveat31seconds; Rust replay advances only anexplicit cache-timer boundary tokeepordinarytestsfast.",
+    "No user-global/profile cache changes. Full Object.prototype mutation viaJS and clock-jump/event-loop starvation remain unverified."
+  ]
+}

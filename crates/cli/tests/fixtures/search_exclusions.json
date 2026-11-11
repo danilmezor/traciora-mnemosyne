@@ -1,0 +1,2852 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "dataset": {
+    "Folder/One.md": "needle\n",
+    "Folderish/Two.md": "needle\n",
+    "Nested/Folder/Three.md": "needle\n",
+    "Étage/Note.md": "needle\n",
+    "Wildcard*.md": "needle\n",
+    "Visible.md": "needle\n",
+    ".hidden.md": "needle\n"
+  },
+  "schema_version": 1,
+  "scope": "Twenty filter configurations: actual output and exact-path decisions; stateful fingerprint/rename/external reload/cold-order records retained separately, not full timing certification.",
+  "cases": [
+    {
+      "filters": null,
+      "before_queries": {
+        "config": null,
+        "fingerprint": "null",
+        "compiled": null,
+        "cache": {},
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": null,
+        "fingerprint": "null",
+        "compiled": null,
+        "cache": {},
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [],
+      "before_queries": {
+        "config": [],
+        "fingerprint": "[]",
+        "compiled": [],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [],
+        "fingerprint": "[]",
+        "compiled": [],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        ""
+      ],
+      "before_queries": {
+        "config": [
+          ""
+        ],
+        "fingerprint": "[\"\"]",
+        "compiled": [],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          ""
+        ],
+        "fingerprint": "[\"\"]",
+        "compiled": [],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "Folder"
+      ],
+      "before_queries": {
+        "config": [
+          "Folder"
+        ],
+        "fingerprint": "[\"Folder\"]",
+        "compiled": [
+          {
+            "source": "^Folder",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": true,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": true,
+        "Folder/One.md": true,
+        "Folderish": true,
+        "Folder/": true,
+        "Folder\\One.md": true,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIl0K",
+          "stderr_base64": "",
+          "stdout_sha256": "463e1b95e4239f00d8e76f074b18646cfac0c0fbfcf5511086251e6c2e832e08"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfV0K",
+          "stderr_base64": "",
+          "stdout_sha256": "6f4776989b86fc6380e3c48145c0f6d17b6bcb262616c32d41f18e569498d2a1"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "Folder"
+        ],
+        "fingerprint": "[\"Folder\"]",
+        "compiled": [
+          {
+            "source": "^Folder",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": true,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": true,
+          "Folder/": true,
+          "Folder\\One.md": true,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "folder/"
+      ],
+      "before_queries": {
+        "config": [
+          "folder/"
+        ],
+        "fingerprint": "[\"folder/\"]",
+        "compiled": [
+          {
+            "source": "^folder\\/",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": true,
+        "Folderish": false,
+        "Folder/": true,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCJdCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "b011590bfcd4e60714b3480df0852951ee435daead1a1aab50a7668200d81da6"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX1dCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "6351bb25b3ebeb59a18cf177565a7f0f3ac71fb6f0cfe8fe72d0feef829dd3a0"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "folder/"
+        ],
+        "fingerprint": "[\"folder/\"]",
+        "compiled": [
+          {
+            "source": "^folder\\/",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": true,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "Folder/One.md"
+      ],
+      "before_queries": {
+        "config": [
+          "Folder/One.md"
+        ],
+        "fingerprint": "[\"Folder/One.md\"]",
+        "compiled": [
+          {
+            "source": "^Folder\\/One\\.md",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": true,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCJdCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "b011590bfcd4e60714b3480df0852951ee435daead1a1aab50a7668200d81da6"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX1dCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "6351bb25b3ebeb59a18cf177565a7f0f3ac71fb6f0cfe8fe72d0feef829dd3a0"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "Folder/One.md"
+        ],
+        "fingerprint": "[\"Folder/One.md\"]",
+        "compiled": [
+          {
+            "source": "^Folder\\/One\\.md",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "*.md"
+      ],
+      "before_queries": {
+        "config": [
+          "*.md"
+        ],
+        "fingerprint": "[\"*.md\"]",
+        "compiled": [
+          {
+            "source": "^\\*\\.md",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": true
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "*.md"
+        ],
+        "fingerprint": "[\"*.md\"]",
+        "compiled": [
+          {
+            "source": "^\\*\\.md",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": true
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "Wildcard*"
+      ],
+      "before_queries": {
+        "config": [
+          "Wildcard*"
+        ],
+        "fingerprint": "[\"Wildcard*\"]",
+        "compiled": [
+          {
+            "source": "^Wildcard\\*",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": true,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": true,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "2f21684831e6189c5c7ff6ef9503ae517f45f032f985be0a186426f7f778fb78"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "b80f3edb816204447a353323944ef4ecaac64a6cef26c8beaeecc96f8d049903"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "Wildcard*"
+        ],
+        "fingerprint": "[\"Wildcard*\"]",
+        "compiled": [
+          {
+            "source": "^Wildcard\\*",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": true,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "/Folder/"
+      ],
+      "before_queries": {
+        "config": [
+          "/Folder/"
+        ],
+        "fingerprint": "[\"/Folder/\"]",
+        "compiled": [
+          {
+            "source": "Folder",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": true,
+          "Nested/Folder/Three.md": true,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": true,
+        "Folderish/Two.md": true,
+        "Folder/One.md": true,
+        "Folderish": true,
+        "Folder/": true,
+        "Folder\\One.md": true,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c25dbacd366f5c3f2ea5688e954ecd7f4728a68fb7d8b14bbc638dee706bdafd"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "f514669266ba930219d63cd53247105d895df3cbab6348e980e4fcb757ea7a3b"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "/Folder/"
+        ],
+        "fingerprint": "[\"/Folder/\"]",
+        "compiled": [
+          {
+            "source": "Folder",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": true,
+          "Nested/Folder/Three.md": true,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": true,
+          "Folder/": true,
+          "Folder\\One.md": true,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "/^Folder\\//"
+      ],
+      "before_queries": {
+        "config": [
+          "/^Folder\\//"
+        ],
+        "fingerprint": "[\"/^Folder\\\\//\"]",
+        "compiled": [
+          {
+            "source": "^Folder\\/",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": true,
+        "Folderish": false,
+        "Folder/": true,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCJdCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "b011590bfcd4e60714b3480df0852951ee435daead1a1aab50a7668200d81da6"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX1dCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "6351bb25b3ebeb59a18cf177565a7f0f3ac71fb6f0cfe8fe72d0feef829dd3a0"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "/^Folder\\//"
+        ],
+        "fingerprint": "[\"/^Folder\\\\//\"]",
+        "compiled": [
+          {
+            "source": "^Folder\\/",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": true,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "/Folder$/"
+      ],
+      "before_queries": {
+        "config": [
+          "/Folder$/"
+        ],
+        "fingerprint": "[\"/Folder$/\"]",
+        "compiled": [
+          {
+            "source": "Folder$",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "/Folder$/"
+        ],
+        "fingerprint": "[\"/Folder$/\"]",
+        "compiled": [
+          {
+            "source": "Folder$",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "/[invalid/",
+        "Visible"
+      ],
+      "before_queries": {
+        "config": [
+          "/[invalid/",
+          "Visible"
+        ],
+        "fingerprint": "[\"/[invalid/\",\"Visible\"]",
+        "compiled": [
+          {
+            "source": "^Visible",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": true
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": true,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJXaWxkY2FyZCoubWQiLCLDiXRhZ2UvTm90ZS5tZCIsIk5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJGb2xkZXJpc2gvVHdvLm1kIiwiRm9sZGVyL09uZS5tZCJdCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "906cfb4a04c49211c2c5cd973eb4578ba26b8c72e9289f17cea578edf03c4a06"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IldpbGRjYXJkKi5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6IsOJdGFnZS9Ob3RlLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiTmVzdGVkL0ZvbGRlci9UaHJlZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6IkZvbGRlcmlzaC9Ud28ubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXIvT25lLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX1dCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "cf1851e0afb70d423133323e394a1dec5876a67544129b39367d0aaf73a82083"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "/[invalid/",
+          "Visible"
+        ],
+        "fingerprint": "[\"/[invalid/\",\"Visible\"]",
+        "compiled": [
+          {
+            "source": "^Visible",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": true,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "//"
+      ],
+      "before_queries": {
+        "config": [
+          "//"
+        ],
+        "fingerprint": "[\"//\"]",
+        "compiled": [
+          {
+            "source": "^\\/\\/",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "//"
+        ],
+        "fingerprint": "[\"//\"]",
+        "compiled": [
+          {
+            "source": "^\\/\\/",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "/needle/i"
+      ],
+      "before_queries": {
+        "config": [
+          "/needle/i"
+        ],
+        "fingerprint": "[\"/needle/i\"]",
+        "compiled": [
+          {
+            "source": "^\\/needle\\/i",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "/needle/i"
+        ],
+        "fingerprint": "[\"/needle/i\"]",
+        "compiled": [
+          {
+            "source": "^\\/needle\\/i",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "﻿Folder﻿"
+      ],
+      "before_queries": {
+        "config": [
+          "﻿Folder﻿"
+        ],
+        "fingerprint": "[\"﻿Folder﻿\"]",
+        "compiled": [
+          {
+            "source": "^Folder",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": true,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": true,
+        "Folder/One.md": true,
+        "Folderish": true,
+        "Folder/": true,
+        "Folder\\One.md": true,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIl0K",
+          "stderr_base64": "",
+          "stdout_sha256": "463e1b95e4239f00d8e76f074b18646cfac0c0fbfcf5511086251e6c2e832e08"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfV0K",
+          "stderr_base64": "",
+          "stdout_sha256": "6f4776989b86fc6380e3c48145c0f6d17b6bcb262616c32d41f18e569498d2a1"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "﻿Folder﻿"
+        ],
+        "fingerprint": "[\"﻿Folder﻿\"]",
+        "compiled": [
+          {
+            "source": "^Folder",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": true,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": true,
+          "Folder/": true,
+          "Folder\\One.md": true,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "Folder"
+      ],
+      "before_queries": {
+        "config": [
+          "Folder"
+        ],
+        "fingerprint": "[\"Folder\"]",
+        "compiled": [
+          {
+            "source": "^Folder",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "Folder"
+        ],
+        "fingerprint": "[\"Folder\"]",
+        "compiled": [
+          {
+            "source": "^Folder",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "Étage"
+      ],
+      "before_queries": {
+        "config": [
+          "Étage"
+        ],
+        "fingerprint": "[\"Étage\"]",
+        "compiled": [
+          {
+            "source": "^Étage",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": true,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": true,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiTmVzdGVkL0ZvbGRlci9UaHJlZS5tZCIsIkZvbGRlcmlzaC9Ud28ubWQiLCJGb2xkZXIvT25lLm1kIl0K",
+          "stderr_base64": "",
+          "stdout_sha256": "d627fad69009e99f45d55a738b475a3b9eac03d000645f247ec3350fcda116e6"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyaXNoL1R3by5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6IkZvbGRlci9PbmUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfV0K",
+          "stderr_base64": "",
+          "stdout_sha256": "396c5e3ccd3b8a249b09b74e1bad792bf2fb0ffb52b8cad6e6f41906e502898e"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "Étage"
+        ],
+        "fingerprint": "[\"Étage\"]",
+        "compiled": [
+          {
+            "source": "^Étage",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": true,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "Étage"
+      ],
+      "before_queries": {
+        "config": [
+          "Étage"
+        ],
+        "fingerprint": "[\"Étage\"]",
+        "compiled": [
+          {
+            "source": "^Étage",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": true,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "Étage"
+        ],
+        "fingerprint": "[\"Étage\"]",
+        "compiled": [
+          {
+            "source": "^Étage",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": true,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "/é/"
+      ],
+      "before_queries": {
+        "config": [
+          "/é/"
+        ],
+        "fingerprint": "[\"/é/\"]",
+        "compiled": [
+          {
+            "source": "é",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": true,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": true,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiTmVzdGVkL0ZvbGRlci9UaHJlZS5tZCIsIkZvbGRlcmlzaC9Ud28ubWQiLCJGb2xkZXIvT25lLm1kIl0K",
+          "stderr_base64": "",
+          "stdout_sha256": "d627fad69009e99f45d55a738b475a3b9eac03d000645f247ec3350fcda116e6"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyaXNoL1R3by5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6IkZvbGRlci9PbmUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfV0K",
+          "stderr_base64": "",
+          "stdout_sha256": "396c5e3ccd3b8a249b09b74e1bad792bf2fb0ffb52b8cad6e6f41906e502898e"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "/é/"
+        ],
+        "fingerprint": "[\"/é/\"]",
+        "compiled": [
+          {
+            "source": "é",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": true,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    },
+    {
+      "filters": [
+        "/./u"
+      ],
+      "before_queries": {
+        "config": [
+          "/./u"
+        ],
+        "fingerprint": "[\"/./u\"]",
+        "compiled": [
+          {
+            "source": "^\\/\\.\\/u",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "decisions": {
+        "Visible.md": false,
+        "Wildcard*.md": false,
+        "Étage/Note.md": false,
+        "Nested/Folder/Three.md": false,
+        "Folderish/Two.md": false,
+        "Folder/One.md": false,
+        "Folderish": false,
+        "Folder/": false,
+        "Folder\\One.md": false,
+        "Étage/Note.md": false,
+        "*.md": false
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/One.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCIsIkZvbGRlci9PbmUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "00933e8dcfb396d2cead81b548e177a80810eaa6b4c61f3056da7e4cba3bc858"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/One.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyL09uZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "c279784dc9dc00313bb05f113cf8f73b2f1a910139bd37c3414588a054713be4"
+        }
+      ],
+      "after_queries": {
+        "config": [
+          "/./u"
+        ],
+        "fingerprint": "[\"/./u\"]",
+        "compiled": [
+          {
+            "source": "^\\/\\.\\/u",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false,
+          "Folderish": false,
+          "Folder/": false,
+          "Folder\\One.md": false,
+          "Étage/Note.md": false,
+          "*.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      }
+    }
+  ],
+  "state_observations": [
+    {
+      "same_serialized_config": {
+        "sameCache": true,
+        "sameRules": true
+      }
+    },
+    {
+      "rename_before": {
+        "config": [
+          "Folder/"
+        ],
+        "fingerprint": "[\"Folder/\"]",
+        "compiled": [
+          {
+            "source": "^Folder\\/",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/One.md"
+        ]
+      },
+      "rename_result": {
+        "args": [
+          "rename",
+          "path=Folder/One.md",
+          "name=Renamed"
+        ],
+        "exit_code": 0,
+        "stdout": "Renamed: Folder/One.md -> Folder/Renamed.md\n",
+        "stderr": "",
+        "stdout_base64": "UmVuYW1lZDogRm9sZGVyL09uZS5tZCAtPiBGb2xkZXIvUmVuYW1lZC5tZAo=",
+        "stderr_base64": "",
+        "stdout_sha256": "4263beb8769d5dcf71db6b4cc1daa90a6a57aaaaf52d723557320c178dd1cf87"
+      }
+    },
+    {
+      "rename_after": {
+        "config": [
+          "Folder/"
+        ],
+        "fingerprint": "[\"Folder/\"]",
+        "compiled": [
+          {
+            "source": "^Folder\\/",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/One.md": true,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/Renamed.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/Renamed.md"
+        ]
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Visible.md\",\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJWaXNpYmxlLm1kIiwiV2lsZGNhcmQqLm1kIiwiw4l0YWdlL05vdGUubWQiLCJOZXN0ZWQvRm9sZGVyL1RocmVlLm1kIiwiRm9sZGVyaXNoL1R3by5tZCJdCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "b011590bfcd4e60714b3480df0852951ee435daead1a1aab50a7668200d81da6"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Visible.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IlZpc2libGUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJXaWxkY2FyZCoubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiLDiXRhZ2UvTm90ZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6Ik5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXJpc2gvVHdvLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX1dCg==",
+          "stderr_base64": "",
+          "stdout_sha256": "6351bb25b3ebeb59a18cf177565a7f0f3ac71fb6f0cfe8fe72d0feef829dd3a0"
+        }
+      ]
+    },
+    {
+      "external_config_update": {
+        "config": [
+          "Visible"
+        ],
+        "fingerprint": "[\"Visible\"]",
+        "compiled": [
+          {
+            "source": "^Visible",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Étage/Note.md": false,
+          "Wildcard*.md": false,
+          "Visible.md": true,
+          "Folder/Renamed.md": false
+        },
+        "files": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/Renamed.md"
+        ],
+        "markdown": [
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage/Note.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/Renamed.md"
+        ]
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Wildcard*.md\",\"Étage/Note.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/Renamed.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyJXaWxkY2FyZCoubWQiLCLDiXRhZ2UvTm90ZS5tZCIsIk5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJGb2xkZXJpc2gvVHdvLm1kIiwiRm9sZGVyL1JlbmFtZWQubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "9c839ae2c2b9e495a27ab27f7b3b5d16a95966e2d9bfc60d8322eed673bf9172"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/Renamed.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IldpbGRjYXJkKi5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6IsOJdGFnZS9Ob3RlLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiTmVzdGVkL0ZvbGRlci9UaHJlZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6IkZvbGRlcmlzaC9Ud28ubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXIvUmVuYW1lZC5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "9cc843743c85519d96b9cb30b966c8a6605408b60958aefb904269c47eb4df5c"
+        }
+      ]
+    },
+    {
+      "cold_restart": 0,
+      "state": {
+        "config": [
+          "Visible"
+        ],
+        "fingerprint": "[\"Visible\"]",
+        "compiled": [
+          {
+            "source": "^Visible",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/Renamed.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Visible.md": true,
+          "Wildcard*.md": false,
+          "Étage/Note.md": false
+        },
+        "files": [
+          "Étage/Note.md",
+          "Wildcard*.md",
+          "Visible.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/Renamed.md"
+        ],
+        "markdown": [
+          "Étage/Note.md",
+          "Wildcard*.md",
+          "Visible.md",
+          "Nested/Folder/Three.md",
+          "Folderish/Two.md",
+          "Folder/Renamed.md"
+        ]
+      },
+      "inventory": {
+        "tree": {
+          "path": "/",
+          "children": [
+            {
+              "path": "Folder",
+              "children": [
+                "Folder/Renamed.md"
+              ]
+            },
+            {
+              "path": "Folderish",
+              "children": [
+                "Folderish/Two.md"
+              ]
+            },
+            {
+              "path": "Nested",
+              "children": [
+                {
+                  "path": "Nested/Folder",
+                  "children": [
+                    "Nested/Folder/Three.md"
+                  ]
+                }
+              ]
+            },
+            "Visible.md",
+            "Wildcard*.md",
+            {
+              "path": "Étage",
+              "children": [
+                "Étage/Note.md"
+              ]
+            }
+          ]
+        },
+        "readdir": [
+          ".hidden.md",
+          ".obsidian",
+          "Folder",
+          "Folderish",
+          "Nested",
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage"
+        ]
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Étage/Note.md\",\"Wildcard*.md\",\"Nested/Folder/Three.md\",\"Folderish/Two.md\",\"Folder/Renamed.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyLDiXRhZ2UvTm90ZS5tZCIsIldpbGRjYXJkKi5tZCIsIk5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiLCJGb2xkZXJpc2gvVHdvLm1kIiwiRm9sZGVyL1JlbmFtZWQubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "3cee2ab50f6f74cc9b5ca186a83f40e4e8946f102e916e4572c83fb20c9e5065"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/Renamed.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IsOJdGFnZS9Ob3RlLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiV2lsZGNhcmQqLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiTmVzdGVkL0ZvbGRlci9UaHJlZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6IkZvbGRlcmlzaC9Ud28ubWQiLCJtYXRjaGVzIjpbeyJsaW5lIjoxLCJ0ZXh0IjoibmVlZGxlIn1dfSx7ImZpbGUiOiJGb2xkZXIvUmVuYW1lZC5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "37c3f54bb6b6124fadf1705c4367698279241c1d76f1d505c52592244597b17e"
+        }
+      ]
+    },
+    {
+      "cold_restart": 1,
+      "state": {
+        "config": [
+          "Visible"
+        ],
+        "fingerprint": "[\"Visible\"]",
+        "compiled": [
+          {
+            "source": "^Visible",
+            "flags": "i"
+          }
+        ],
+        "cache": {
+          "Folder/Renamed.md": false,
+          "Folderish/Two.md": false,
+          "Nested/Folder/Three.md": false,
+          "Visible.md": true,
+          "Wildcard*.md": false,
+          "Étage/Note.md": false
+        },
+        "files": [
+          "Étage/Note.md",
+          "Wildcard*.md",
+          "Folderish/Two.md",
+          "Folder/Renamed.md",
+          "Visible.md",
+          "Nested/Folder/Three.md"
+        ],
+        "markdown": [
+          "Étage/Note.md",
+          "Wildcard*.md",
+          "Folderish/Two.md",
+          "Folder/Renamed.md",
+          "Visible.md",
+          "Nested/Folder/Three.md"
+        ]
+      },
+      "inventory": {
+        "tree": {
+          "path": "/",
+          "children": [
+            {
+              "path": "Nested",
+              "children": [
+                {
+                  "path": "Nested/Folder",
+                  "children": [
+                    "Nested/Folder/Three.md"
+                  ]
+                }
+              ]
+            },
+            "Visible.md",
+            {
+              "path": "Folder",
+              "children": [
+                "Folder/Renamed.md"
+              ]
+            },
+            {
+              "path": "Folderish",
+              "children": [
+                "Folderish/Two.md"
+              ]
+            },
+            "Wildcard*.md",
+            {
+              "path": "Étage",
+              "children": [
+                "Étage/Note.md"
+              ]
+            }
+          ]
+        },
+        "readdir": [
+          ".hidden.md",
+          ".obsidian",
+          "Folder",
+          "Folderish",
+          "Nested",
+          "Visible.md",
+          "Wildcard*.md",
+          "Étage"
+        ]
+      },
+      "raw": [
+        {
+          "args": [
+            "search",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[\"Étage/Note.md\",\"Wildcard*.md\",\"Folderish/Two.md\",\"Folder/Renamed.md\",\"Nested/Folder/Three.md\"]\n",
+          "stderr": "",
+          "stdout_base64": "WyLDiXRhZ2UvTm90ZS5tZCIsIldpbGRjYXJkKi5tZCIsIkZvbGRlcmlzaC9Ud28ubWQiLCJGb2xkZXIvUmVuYW1lZC5tZCIsIk5lc3RlZC9Gb2xkZXIvVGhyZWUubWQiXQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "79ed4082b2fe6fa32466bb88eab3f4436324a0a16136753b18323b1798adb2ff"
+        },
+        {
+          "args": [
+            "search:context",
+            "query=needle",
+            "format=json"
+          ],
+          "exit_code": 0,
+          "stdout": "[{\"file\":\"Étage/Note.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Wildcard*.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folderish/Two.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Folder/Renamed.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]},{\"file\":\"Nested/Folder/Three.md\",\"matches\":[{\"line\":1,\"text\":\"needle\"}]}]\n",
+          "stderr": "",
+          "stdout_base64": "W3siZmlsZSI6IsOJdGFnZS9Ob3RlLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiV2lsZGNhcmQqLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiRm9sZGVyaXNoL1R3by5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19LHsiZmlsZSI6IkZvbGRlci9SZW5hbWVkLm1kIiwibWF0Y2hlcyI6W3sibGluZSI6MSwidGV4dCI6Im5lZWRsZSJ9XX0seyJmaWxlIjoiTmVzdGVkL0ZvbGRlci9UaHJlZS5tZCIsIm1hdGNoZXMiOlt7ImxpbmUiOjEsInRleHQiOiJuZWVkbGUifV19XQo=",
+          "stderr_base64": "",
+          "stdout_sha256": "02ba878a0b6c1564e7fa2baa91b7e2e84a66db908bc4a97df363f515d96ad9aa"
+        }
+      ]
+    }
+  ],
+  "eval_diagnostics": [
+    {
+      "code": "JSON.stringify((()=>{app.vault.setConfig(\"userIgnoreFilters\",[\"/[invalid/\", \"Visible\"]);return true})())",
+      "result": {
+        "exit_code": 0,
+        "stdout": "W2Vycm9yXSBCYWQgcmVnZXggZm9yIHVzZXIgaWdub3JlIGZpbHRlciB7fQo9PiB0cnVlCg==",
+        "stderr": ""
+      },
+      "stdout": "[error] Bad regex for user ignore filter {}\n=> true\n"
+    }
+  ]
+}

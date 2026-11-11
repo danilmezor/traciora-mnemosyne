@@ -1,0 +1,1233 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "event_contract_certified": false,
+  "cases": [
+    {
+      "id": "toggle-empty",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": null,
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "toggle"
+      ],
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [x]\n- [x] todo\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "done-empty",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": null,
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "done"
+      ],
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [x]\n- [x] todo\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "todo-empty",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": null,
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "file=Known",
+        "line=2",
+        "todo"
+      ],
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [x] → [ ]\n- [ ] done\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [ ] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [ ] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "custom-empty",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": null,
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "status=!"
+      ],
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [!]\n- [!] todo\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [!] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [!] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "unchanged-empty",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": null,
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "file=Known",
+        "line=2",
+        "done"
+      ],
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Task already has status [x].\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "toggle-open",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": "Known.md",
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "toggle"
+      ],
+      "before": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [x]\n- [x] todo\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "toggle-other-open",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": "Known.md",
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "path=Folder/Other.md",
+        "line=4",
+        "toggle"
+      ],
+      "before": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [x]\n- [x] nested\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [x] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [x] nested\n"
+        }
+      }
+    },
+    {
+      "id": "toggle-crlf-open",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": "CRLF.md",
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "path=CRLF.md",
+        "line=1",
+        "toggle"
+      ],
+      "before": {
+        "state": {
+          "active": "CRLF.md",
+          "editor": {
+            "text": "- [ ] first\n- [x] second\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Line 1 is not a task.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": "CRLF.md",
+          "editor": {
+            "text": "- [ ] first\n- [x] second\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": "CRLF.md",
+          "editor": {
+            "text": "- [ ] first\n- [x] second\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "toggle-bom-open",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": "BOM.md",
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "path=BOM.md",
+        "line=1",
+        "toggle"
+      ],
+      "before": {
+        "state": {
+          "active": "BOM.md",
+          "editor": {
+            "text": "- [ ] first\n- [x] second\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [x]\n- [x] first\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": "BOM.md",
+          "editor": {
+            "text": "- [x] first\n- [x] second\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "- [x] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": "BOM.md",
+          "editor": {
+            "text": "- [x] first\n- [x] second\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "- [x] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "attachment-done",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": "Known.md",
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "file=attachment.txt",
+        "line=1",
+        "done"
+      ],
+      "before": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [x]\n- [x] attachment\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [x] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [x] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "alias-done",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": null,
+      "dirty_setup": false,
+      "args": [
+        "task:done",
+        "file=Known",
+        "line=1"
+      ],
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [x]\n- [x] todo\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "alias-list-done",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": null,
+      "dirty_setup": false,
+      "args": [
+        "tasks:done",
+        "file=Known"
+      ],
+      "before": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": null,
+          "editor": null
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "invalid-status",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": "Known.md",
+      "dirty_setup": false,
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "status=😀"
+      ],
+      "before": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Status must be a single character.\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+            "anchor": {
+              "line": 1,
+              "ch": 4
+            },
+            "head": {
+              "line": 1,
+              "ch": 4
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    },
+    {
+      "id": "dirty-open",
+      "initial": {
+        "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+        "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n",
+        "Note2.md": "- [ ] second\n",
+        "Note10.md": "- [ ] tenth\n",
+        "attachment.txt": "- [ ] attachment\n",
+        "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+        "BOM.md": "﻿- [ ] first\n- [x] second\n"
+      },
+      "opened": "Known.md",
+      "dirty_setup": true,
+      "args": [
+        "task",
+        "file=Known",
+        "line=1",
+        "toggle"
+      ],
+      "before": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [ ] unsaved edit\n- [x] retained\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [ ] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Updated: [ ] → [x]\n- [x] todo\n",
+        "stderr": ""
+      },
+      "immediate": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [x] unsaved edit\n- [x] retained\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      },
+      "after": {
+        "state": {
+          "active": "Known.md",
+          "editor": {
+            "text": "- [x] unsaved edit\n- [x] retained\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          }
+        },
+        "files": {
+          "BOM.md": "﻿- [ ] first\n- [x] second\n",
+          "Note10.md": "- [ ] tenth\n",
+          "CRLF.md": "- [ ] first\r\n- [x] second\r\n",
+          "Note2.md": "- [ ] second\n",
+          "attachment.txt": "- [ ] attachment\n",
+          "Known.md": "- [x] todo\n- [x] done\n- [X] uppercase\n- [!] custom\n- [?] question\n+ [ ] plus\n1. [ ] numbered\n1) [ ] parenthesis\n\nnot a task\n",
+          "Folder/Other.md": "---\ntitle: Other\n---\n  - [ ] nested\n"
+        }
+      }
+    }
+  ],
+  "coverage": "14 exact saved file and editor state mutation observations. Passive event traces deliberately excluded; timing/event contract not certified. Daily-enabled evidence remains in raw report pending daily resolver.",
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "source_handlers": {
+    "tasks_byte_range": [
+      1651410,
+      1653954
+    ],
+    "task_byte_range": [
+      1653954,
+      1656168
+    ],
+    "resolver_byte_range": [
+      1691012,
+      1691583
+    ]
+  }
+}

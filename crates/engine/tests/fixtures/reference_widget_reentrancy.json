@@ -1,0 +1,168 @@
+{
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "owned_profile": true,
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "direct_internal_manager": true,
+    "no_plugin_fixture": true,
+    "single_eval_traces": true,
+    "request_pacing_seconds": 0.2
+  },
+  "cases": [
+    {
+      "id": "nested-boolean",
+      "inner_expression": "false",
+      "result": {
+        "immediate": {
+          "resultType": "undefined",
+          "outerShared": true,
+          "nestedType": "boolean",
+          "nestedString": "false",
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"ReentrantOuter0\": {\n      \"marker\": 1\n    }\n  }\n}",
+          "events": [
+            "reentrantnested0",
+            "reentrantouter0"
+          ],
+          "calls": [
+            {
+              "stage": "toJSON-enter",
+              "key": "ReentrantOuter0",
+              "nestedOwn": false,
+              "nestedProperty": false
+            },
+            {
+              "stage": "toJSON-enter",
+              "key": "ReentrantOuter0",
+              "nestedOwn": true,
+              "nestedProperty": false
+            },
+            {
+              "stage": "after-nested-call",
+              "promise": true,
+              "nestedOwn": true,
+              "nestedProperty": false
+            }
+          ]
+        },
+        "settled": {
+          "outerShared": true,
+          "nestedType": "boolean",
+          "nestedString": "false",
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"ReentrantOuter0\": {\n      \"marker\": 1\n    }\n  }\n}",
+          "events": [
+            "reentrantnested0",
+            "reentrantouter0"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nested-bigint",
+      "inner_expression": "1n",
+      "result": {
+        "immediate": {
+          "resultType": "undefined",
+          "outerShared": true,
+          "nestedType": "bigint",
+          "nestedString": "1",
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"ReentrantOuter1\": {\n      \"marker\": 1\n    }\n  }\n}",
+          "events": [
+            "reentrantnested1",
+            "reentrantouter1"
+          ],
+          "calls": [
+            {
+              "stage": "toJSON-enter",
+              "key": "ReentrantOuter1",
+              "nestedOwn": false,
+              "nestedProperty": false
+            },
+            {
+              "stage": "toJSON-enter",
+              "key": "ReentrantOuter1",
+              "nestedOwn": true,
+              "nestedProperty": false
+            },
+            {
+              "stage": "after-nested-call",
+              "promise": true,
+              "nestedOwn": true,
+              "nestedProperty": false
+            }
+          ]
+        },
+        "settled": {
+          "outerShared": true,
+          "nestedType": "bigint",
+          "nestedString": "1",
+          "stored": "{\n  \"types\": {\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"ReentrantOuter1\": {\n      \"marker\": 1\n    }\n  }\n}",
+          "events": [
+            "reentrantnested1",
+            "reentrantouter1"
+          ]
+        }
+      }
+    },
+    {
+      "id": "delete-enumerated-key-during-name",
+      "result": {
+        "calls": [
+          "own:gate",
+          "name:gate"
+        ],
+        "stored": "{\n  \"types\": {\n    \"Gate\": \"gate-old\"\n  }\n}",
+        "assignedKeys": [
+          "gate"
+        ]
+      }
+    },
+    {
+      "id": "swap-container-during-name",
+      "result": {
+        "calls": [
+          "own:gate",
+          "name:gate"
+        ],
+        "stored": "{\n  \"types\": {\n    \"Gate\": \"gate-old\",\n    \"ChangedLater\": \"later-new\"\n  }\n}",
+        "assignedKeys": [
+          "gate",
+          "later",
+          "added"
+        ]
+      }
+    }
+  ],
+  "cleanup": {
+    "pid": 33025,
+    "exit_code": 0,
+    "stopped": true,
+    "ps_absent_checked": true
+  },
+  "source_anchors": {
+    "app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+    "manager_bytes": [
+      1773242,
+      1778731
+    ],
+    "write_json_start": 1423577
+  },
+  "coverage": {
+    "native_cases": 4,
+    "rust_replay": false,
+    "installed_sdk_manager": false,
+    "prototype_proxy_inputs": false,
+    "nested_property_prefix": true,
+    "await_event_order": true,
+    "dynamic_for_in_deletion_and_container_swap": true,
+    "rust_for_in_deletion_and_container_swap_replay": true,
+    "rust_shared_handle_reentrant_vm_callback": true,
+    "rust_nested_setter_promise_replay": true,
+    "rust_normal_filesystem_io": true,
+    "rust_event_order_and_snapshot_last_save": true
+  }
+}

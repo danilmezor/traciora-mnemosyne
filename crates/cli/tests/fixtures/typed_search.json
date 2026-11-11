@@ -1,0 +1,1300 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial_files": {
+    "StringDate.md": "---\nvalue: 2024-01-02\n---\nbody\n",
+    "Date.md": "---\nvalue: !!timestamp 2024-01-02\nflag: true\nnothing: null\n---\nbody\n",
+    "Binary.md": "---\nvalue: !!binary YWI=\n---\nbody\n",
+    "Set.md": "---\nvalue: !!set {a: null, b: null}\n---\nbody\n",
+    "Map.md": "---\nvalue: !!omap [a: 1, b: 2]\n---\nbody\n",
+    "Array.md": "---\nvalue: [!!timestamp 2024-01-02, !!binary YWI=, {x: y}, [foo, null, bar]]\n---\nbody\n",
+    "Cycle.md": "---\nvalue: &a [*a, tail]\n---\nbody\n",
+    "RootDate.md": "---\n2024-01-02\n---\nbody\n"
+  },
+  "cases": [
+    {
+      "args": [
+        "search",
+        "query=[value]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\",\"Binary.md\",\"Date.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Date.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:Tue]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Date.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:Tue]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:GMT]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Date.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:GMT]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:1704153600000]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:1704153600000]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:98]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Binary.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:98]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:object]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:object]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:Map]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Map.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:Map]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Map.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:Set]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Set.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:Set]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Set.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:tail]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:tail]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:foo]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:foo]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:a]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Date.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:a]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:\"97,98\"]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Binary.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:\"97,98\"]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:null]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:null]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>0]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\",\"Binary.md\",\"Date.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>0]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<9999999999999]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Binary.md\",\"Date.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<9999999999999]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>a]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>a]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<z]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\",\"Binary.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<z]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\",\"Binary.md\",\"Date.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<2025]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<2025]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[-value]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Date.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[-value]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Date.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[x]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[x]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[0]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[0]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[byteLength]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[byteLength]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[flag:>0]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Date.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[flag:>0]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Date.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[nothing:null]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Date.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[nothing:null]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Date.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/object/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/object/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/^97,98$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Binary.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/^97,98$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/^foo,,bar$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/^foo,,bar$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/^,tail$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/^,tail$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/^$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/^$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:!object]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:!object]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:-object]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:-object]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>1704153599999]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\",\"Binary.md\",\"Date.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>1704153599999]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<1704153600001]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Date.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<1704153600001]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>97]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\",\"Binary.md\",\"Date.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>97]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<98]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Binary.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<98]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>false]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>false]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<true]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\",\"Binary.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<true]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>null]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>null]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<>]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\",\"Binary.md\",\"Date.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<>]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"Date.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>=2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>=2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<=2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Binary.md\",\"StringDate.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<=2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Binary.md\",\"matches\":[]},{\"file\":\"StringDate.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:==2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:==2024]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>999999999999999]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Map.md\",\"Set.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>999999999999999]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Map.md\",\"matches\":[]},{\"file\":\"Set.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<-999999999999999]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: lessthan operator cannot be applied to matcher Excluding: \n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<-999999999999999]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: lessthan operator cannot be applied to matcher Excluding: \n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/tail$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/tail$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:!tail]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:!tail]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[file]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[file]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[file:Cycle]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[file:Cycle]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "setup": {
+    "files": [
+      "RootDate.md",
+      "Cycle.md",
+      "Array.md",
+      "Map.md",
+      "Set.md",
+      "Binary.md",
+      "Date.md",
+      "StringDate.md"
+    ],
+    "cache_order": [
+      "StringDate.md",
+      "Date.md",
+      "Binary.md",
+      "Set.md",
+      "Map.md",
+      "Array.md",
+      "Cycle.md",
+      "RootDate.md"
+    ],
+    "types": [
+      {
+        "path": "RootDate.md",
+        "exists": true,
+        "keys": []
+      },
+      {
+        "path": "Cycle.md",
+        "exists": false,
+        "keys": []
+      },
+      {
+        "path": "Array.md",
+        "exists": true,
+        "keys": [
+          "value"
+        ]
+      },
+      {
+        "path": "Map.md",
+        "exists": true,
+        "keys": [
+          "value"
+        ]
+      },
+      {
+        "path": "Set.md",
+        "exists": true,
+        "keys": [
+          "value"
+        ]
+      },
+      {
+        "path": "Binary.md",
+        "exists": true,
+        "keys": [
+          "value"
+        ]
+      },
+      {
+        "path": "Date.md",
+        "exists": true,
+        "keys": [
+          "value",
+          "flag",
+          "nothing"
+        ]
+      },
+      {
+        "path": "StringDate.md",
+        "exists": true,
+        "keys": [
+          "value"
+        ]
+      }
+    ]
+  },
+  "conditions": [
+    "Pinned isolated UTC runtime with global-search enabled; full saved caches settled before commands.",
+    "Explicit timestamp Date vs implicit date string, Binary/Set/Map, nested arrays and cycle worker failure.",
+    "Per-file traversal/cache order imported for Rust replay; cold startup timing and non-UTC Date strings remain open."
+  ]
+}

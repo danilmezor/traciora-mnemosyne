@@ -1,0 +1,981 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial_files": {
+    "High.md": "---\n\"\\uD800\": high\n---\nbody\n",
+    "Low.md": "---\n\"\\uDC00\": low\n---\nbody\n",
+    "Replacement.md": "---\n\"\ufffd\": replacement\n---\nbody\n",
+    "Pair.md": "---\n\"\\uD83D\\uDE00\": emoji\n---\nbody\n",
+    "Mixed.md": "---\n\"\\uD800\": high\n\"\\uD801\": next\n\"\\uDC00\": low\n\"\ufffd\": replacement\n\"\\uD83D\\uDE00\": emoji\n\"\\\\uD800\": literal\n10: ten\n2: two\nCase: upper\ncase: lower\n---\nbody\n",
+    "RootArray.md": "---\n- first\n- second\n---\nbody\n",
+    "RootBinary.md": "---\n!!binary YWI=\n---\nbody\n",
+    "RootDate.md": "---\n!!timestamp 2024-01-02\n---\nbody\n"
+  },
+  "setup": {
+    "files": [
+      "RootDate.md",
+      "RootBinary.md",
+      "RootArray.md",
+      "Mixed.md",
+      "Pair.md",
+      "Replacement.md",
+      "Low.md",
+      "High.md"
+    ],
+    "cache_order": [
+      "High.md",
+      "Low.md",
+      "Replacement.md",
+      "Pair.md",
+      "Mixed.md",
+      "RootArray.md",
+      "RootBinary.md",
+      "RootDate.md"
+    ],
+    "values": [
+      {
+        "path": "High.md",
+        "cache": true,
+        "keys": [
+          [
+            55296
+          ]
+        ]
+      },
+      {
+        "path": "Low.md",
+        "cache": true,
+        "keys": [
+          [
+            56320
+          ]
+        ]
+      },
+      {
+        "path": "Replacement.md",
+        "cache": true,
+        "keys": [
+          [
+            65533
+          ]
+        ]
+      },
+      {
+        "path": "Pair.md",
+        "cache": true,
+        "keys": [
+          [
+            55357,
+            56832
+          ]
+        ]
+      },
+      {
+        "path": "Mixed.md",
+        "cache": true,
+        "keys": [
+          [
+            50
+          ],
+          [
+            49,
+            48
+          ],
+          [
+            55296
+          ],
+          [
+            55297
+          ],
+          [
+            56320
+          ],
+          [
+            65533
+          ],
+          [
+            55357,
+            56832
+          ],
+          [
+            92,
+            117,
+            68,
+            56,
+            48,
+            48
+          ],
+          [
+            67,
+            97,
+            115,
+            101
+          ],
+          [
+            99,
+            97,
+            115,
+            101
+          ]
+        ]
+      },
+      {
+        "path": "RootArray.md",
+        "cache": true,
+        "keys": null
+      },
+      {
+        "path": "RootBinary.md",
+        "cache": true,
+        "keys": [
+          [
+            48
+          ],
+          [
+            49
+          ]
+        ]
+      },
+      {
+        "path": "RootDate.md",
+        "cache": true,
+        "keys": []
+      }
+    ]
+  },
+  "property_cases": [
+    {
+      "args": [
+        "properties",
+        "path=Mixed.md",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "{\n  \"2\": \"two\",\n  \"10\": \"ten\",\n  \"\\ud800\": \"high\",\n  \"\\ud801\": \"next\",\n  \"\\udc00\": \"low\",\n  \"\ufffd\": \"replacement\",\n  \"\ud83d\ude00\": \"emoji\",\n  \"\\\\uD800\": \"literal\",\n  \"Case\": \"upper\",\n  \"case\": \"lower\"\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "properties",
+        "path=Mixed.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "\"2\": two\n\"10\": ten\n\"\\ud800\": high\n\"\\ud801\": next\n\"\\udc00\": low\n\ufffd: replacement\n\ud83d\ude00: emoji\n\\uD800: literal\nCase: upper\ncase: lower\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "properties",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"name\": \"\\\\uD800\",\n    \"type\": \"text\",\n    \"count\": 1\n  },\n  {\n    \"name\": \"\ud83d\ude00\",\n    \"type\": \"text\",\n    \"count\": 2\n  },\n  {\n    \"name\": \"0\",\n    \"type\": \"number\",\n    \"count\": 1\n  },\n  {\n    \"name\": \"1\",\n    \"type\": \"number\",\n    \"count\": 1\n  },\n  {\n    \"name\": \"2\",\n    \"type\": \"text\",\n    \"count\": 1\n  },\n  {\n    \"name\": \"10\",\n    \"type\": \"text\",\n    \"count\": 1\n  },\n  {\n    \"name\": \"aliases\",\n    \"type\": \"aliases\",\n    \"count\": 0\n  },\n  {\n    \"name\": \"case\",\n    \"type\": \"text\",\n    \"count\": 2\n  },\n  {\n    \"name\": \"cssclasses\",\n    \"type\": \"multitext\",\n    \"count\": 0\n  },\n  {\n    \"name\": \"tags\",\n    \"type\": \"tags\",\n    \"count\": 0\n  },\n  {\n    \"name\": \"\\ud800\",\n    \"type\": \"text\",\n    \"count\": 2\n  },\n  {\n    \"name\": \"\\ud801\",\n    \"type\": \"text\",\n    \"count\": 1\n  },\n  {\n    \"name\": \"\\udc00\",\n    \"type\": \"text\",\n    \"count\": 2\n  },\n  {\n    \"name\": \"\ufffd\",\n    \"type\": \"text\",\n    \"count\": 2\n  }\n]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "properties"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "\\uD800\n\ud83d\ude00\n0\n1\n2\n10\naliases\ncase\ncssclasses\ntags\n\ufffd\n\ufffd\n\ufffd\n\ufffd\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "properties",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "\\uD800\t1\n\ud83d\ude00\t2\n0\t1\n1\t1\n2\t1\n10\t1\naliases\t0\ncase\t2\ncssclasses\t0\ntags\t0\n\ufffd\t2\n\ufffd\t1\n\ufffd\t2\n\ufffd\t2\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "properties",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "14\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "collation": {
+    "locale": "en-US",
+    "values": [
+      [
+        55296
+      ],
+      [
+        55297
+      ],
+      [
+        56320
+      ],
+      [
+        56321
+      ],
+      [
+        65533
+      ],
+      [
+        92,
+        117,
+        68,
+        56,
+        48,
+        48
+      ],
+      [
+        55357,
+        56832
+      ],
+      [
+        50
+      ],
+      [
+        49,
+        48
+      ],
+      [
+        65
+      ],
+      [
+        57344
+      ],
+      [
+        233
+      ]
+    ],
+    "pairs": [
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          55297
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          56320
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          56321
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          65533
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          55357,
+          56832
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          50
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          49,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          65
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55296
+        ],
+        "right": [
+          233
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          56320
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          56321
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          65533
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          55357,
+          56832
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          50
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          49,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          65
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55297
+        ],
+        "right": [
+          233
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          56321
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          65533
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          55357,
+          56832
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          50
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          49,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          65
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          56320
+        ],
+        "right": [
+          233
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56321
+        ],
+        "right": [
+          65533
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          56321
+        ],
+        "right": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56321
+        ],
+        "right": [
+          55357,
+          56832
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56321
+        ],
+        "right": [
+          50
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56321
+        ],
+        "right": [
+          49,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56321
+        ],
+        "right": [
+          65
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          56321
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          56321
+        ],
+        "right": [
+          233
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          65533
+        ],
+        "right": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          65533
+        ],
+        "right": [
+          55357,
+          56832
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          65533
+        ],
+        "right": [
+          50
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          65533
+        ],
+        "right": [
+          49,
+          48
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          65533
+        ],
+        "right": [
+          65
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          65533
+        ],
+        "right": [
+          57344
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          65533
+        ],
+        "right": [
+          233
+        ],
+        "sign": 1
+      },
+      {
+        "left": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "right": [
+          55357,
+          56832
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "right": [
+          50
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "right": [
+          49,
+          48
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "right": [
+          65
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          92,
+          117,
+          68,
+          56,
+          48,
+          48
+        ],
+        "right": [
+          233
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55357,
+          56832
+        ],
+        "right": [
+          50
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55357,
+          56832
+        ],
+        "right": [
+          49,
+          48
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55357,
+          56832
+        ],
+        "right": [
+          65
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55357,
+          56832
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          55357,
+          56832
+        ],
+        "right": [
+          233
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          50
+        ],
+        "right": [
+          49,
+          48
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          50
+        ],
+        "right": [
+          65
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          50
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          50
+        ],
+        "right": [
+          233
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          49,
+          48
+        ],
+        "right": [
+          65
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          49,
+          48
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          49,
+          48
+        ],
+        "right": [
+          233
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          65
+        ],
+        "right": [
+          57344
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          65
+        ],
+        "right": [
+          233
+        ],
+        "sign": -1
+      },
+      {
+        "left": [
+          57344
+        ],
+        "right": [
+          233
+        ],
+        "sign": 1
+      }
+    ],
+    "sorted": [
+      [
+        92,
+        117,
+        68,
+        56,
+        48,
+        48
+      ],
+      [
+        55357,
+        56832
+      ],
+      [
+        50
+      ],
+      [
+        49,
+        48
+      ],
+      [
+        65
+      ],
+      [
+        233
+      ],
+      [
+        55296
+      ],
+      [
+        55297
+      ],
+      [
+        56320
+      ],
+      [
+        56321
+      ],
+      [
+        57344
+      ],
+      [
+        65533
+      ]
+    ]
+  }
+}

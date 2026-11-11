@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "scope": "Captured isolated active/read/exact target/newtab/recents/saved-versus-editor sequence, leaf IDs excluded; not full session certification.",
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "test_conditions": {
+    "chromium_switches": [
+      "--use-mock-keychain"
+    ],
+    "credential_scope": "excludes real OS credential storage"
+  },
+  "initial_files": {
+    "A.md": "saved A\n",
+    "B.md": "saved B\n",
+    "folder/B.md": "nested B\n",
+    "Alias.md": "---\naliases: [Nick]\n---\nalias\n",
+    "image.png": "image",
+    "ParityReady.md": "Isolated parity oracle.\n"
+  },
+  "initial_recents": [
+    "ParityReady.md",
+    "image.png",
+    "Alias.md",
+    "folder/B.md",
+    "folder",
+    "B.md",
+    "A.md"
+  ],
+  "steps": [
+    {
+      "args": [
+        "read"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": null,
+        "recents": [
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md",
+          "A.md"
+        ],
+        "leaves": [
+          {
+            "type": "empty",
+            "file": null,
+            "text": null
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "open"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: file or path\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": null,
+        "recents": [
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md",
+          "A.md"
+        ],
+        "leaves": [
+          {
+            "type": "empty",
+            "file": null,
+            "text": null
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "read",
+        "path=A"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Error: File \"A\" not found.\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": null,
+        "recents": [
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md",
+          "A.md"
+        ],
+        "leaves": [
+          {
+            "type": "empty",
+            "file": null,
+            "text": null
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "read",
+        "path=folder"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Error: \"folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": null,
+        "recents": [
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md",
+          "A.md"
+        ],
+        "leaves": [
+          {
+            "type": "empty",
+            "file": null,
+            "text": null
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "read",
+        "file=Nick"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Nick\" not found.\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": null,
+        "recents": [
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md",
+          "A.md"
+        ],
+        "leaves": [
+          {
+            "type": "empty",
+            "file": null,
+            "text": null
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "read",
+        "file=B"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "saved B\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": null,
+        "recents": [
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md",
+          "A.md"
+        ],
+        "leaves": [
+          {
+            "type": "empty",
+            "file": null,
+            "text": null
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "open",
+        "path=A.md",
+        "newtab"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Opened: A.md\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "A.md",
+        "recents": [
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md",
+          "A.md"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "saved A\n"
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "read"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "saved A\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "A.md",
+        "recents": [
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md",
+          "A.md"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "saved A\n"
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "open",
+        "path=B.md",
+        "newtab"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Opened: B.md\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "B.md",
+        "recents": [
+          "A.md",
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder",
+          "B.md"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "saved A\n"
+          },
+          {
+            "type": "markdown",
+            "file": "B.md",
+            "text": "saved B\n"
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "open",
+        "path=A.md"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Opened: A.md\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "A.md",
+        "recents": [
+          "B.md",
+          "A.md",
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "saved A\n"
+          },
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "saved A\n"
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "read",
+        "path=",
+        "file=B"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "saved B\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "A.md",
+        "recents": [
+          "B.md",
+          "A.md",
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "saved A\n"
+          },
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "saved A\n"
+          }
+        ]
+      }
+    },
+    {
+      "editor_set_value": "unsaved text \ud83d\ude00\n"
+    },
+    {
+      "args": [
+        "read"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "saved A\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "A.md",
+        "recents": [
+          "B.md",
+          "A.md",
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "unsaved text \ud83d\ude00\n"
+          },
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "unsaved text \ud83d\ude00\n"
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "recents"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "B.md\nA.md\nParityReady.md\nimage.png\nAlias.md\nfolder/B.md\nfolder\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "A.md",
+        "recents": [
+          "B.md",
+          "A.md",
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "unsaved text \ud83d\ude00\n"
+          },
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "unsaved text \ud83d\ude00\n"
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "recents",
+        "total"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "7\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "A.md",
+        "recents": [
+          "B.md",
+          "A.md",
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "unsaved text \ud83d\ude00\n"
+          },
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "unsaved text \ud83d\ude00\n"
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "tabs"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "[markdown] A\n[markdown] A\n",
+        "stderr": ""
+      },
+      "expected_state": {
+        "active": "A.md",
+        "recents": [
+          "B.md",
+          "A.md",
+          "ParityReady.md",
+          "image.png",
+          "Alias.md",
+          "folder/B.md",
+          "folder"
+        ],
+        "leaves": [
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "unsaved text \ud83d\ude00\n"
+          },
+          {
+            "type": "markdown",
+            "file": "A.md",
+            "text": "unsaved text \ud83d\ude00\n"
+          }
+        ]
+      }
+    }
+  ],
+  "observed_workspace": {
+    "main": {
+      "id": "parity-main",
+      "type": "split",
+      "children": [
+        {
+          "id": "a5372b950e918678",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "parity-leaf",
+              "type": "leaf",
+              "state": {
+                "type": "markdown",
+                "state": {
+                  "file": "A.md",
+                  "mode": "source",
+                  "source": false,
+                  "backlinks": false
+                },
+                "icon": "lucide-file",
+                "title": "A"
+              }
+            },
+            {
+              "id": "ec4b61829e8e1142",
+              "type": "leaf",
+              "state": {
+                "type": "markdown",
+                "state": {
+                  "file": "A.md",
+                  "mode": "source",
+                  "source": false,
+                  "backlinks": false
+                },
+                "icon": "lucide-file",
+                "title": "A"
+              }
+            }
+          ],
+          "currentTab": 1
+        }
+      ],
+      "direction": "vertical"
+    },
+    "left": {
+      "id": "369699db3ad4863a",
+      "type": "split",
+      "children": [],
+      "direction": "horizontal",
+      "width": 300
+    },
+    "right": {
+      "id": "4d0a14fefb575434",
+      "type": "split",
+      "children": [],
+      "direction": "horizontal",
+      "width": 300,
+      "collapsed": true
+    },
+    "left-ribbon": {
+      "hiddenItems": {}
+    },
+    "active": "ec4b61829e8e1142",
+    "lastOpenFiles": [
+      "B.md",
+      "A.md",
+      "ParityReady.md",
+      "image.png",
+      "Alias.md",
+      "folder/B.md",
+      "folder"
+    ]
+  },
+  "raw_report": "target/rea/engine-session/report.json"
+}

@@ -1,0 +1,2167 @@
+{
+  "proof": {
+    "vault": "/home/user/reference/run-d85t_x37/vault",
+    "profile": "/home/user/reference/run-d85t_x37/profile",
+    "use_mock_keychain": true
+  },
+  "direct_cases": [
+    {
+      "id": "sequence-lone-key",
+      "source": "? [\"\\uD800\"]\n: first\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [
+                91,
+                32,
+                34,
+                92,
+                117,
+                100,
+                56,
+                48,
+                48,
+                34,
+                32,
+                93
+              ],
+              "value_type": "string",
+              "value_units": [
+                102,
+                105,
+                114,
+                115,
+                116
+              ]
+            }
+          ],
+          "yaml": "'[ \"\\ud800\" ]': first\n",
+          "json": "{\"[ \\\"\\\\ud800\\\" ]\":\"first\"}"
+        },
+        "warnings": [
+          [
+            "Keys with collection values will be stringified due to JS Object restrictions: \"[ \\\"\\\\ud800\\\" ]\". Set mapAsMap: true to use object keys."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sequence-pair-key",
+      "source": "? [\"\\uD800\\uDC00\"]\n: first\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [
+                91,
+                32,
+                34,
+                55296,
+                56320,
+                34,
+                32,
+                93
+              ],
+              "value_type": "string",
+              "value_units": [
+                102,
+                105,
+                114,
+                115,
+                116
+              ]
+            }
+          ],
+          "yaml": "'[ \"\ud800\udc00\" ]': first\n",
+          "json": "{\"[ \\\"\ud800\udc00\\\" ]\":\"first\"}"
+        },
+        "warnings": [
+          [
+            "Keys with collection values will be stringified due to JS Object restrictions: \"[ \\\"\ud800\udc00\\\" ]\". Set mapAsMap: true to use object keys."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mapping-lone-key",
+      "source": "? {\"\\uD800\": \"\\uD801\"}\n: first\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [
+                123,
+                32,
+                34,
+                92,
+                117,
+                100,
+                56,
+                48,
+                48,
+                34,
+                58,
+                32,
+                34,
+                92,
+                117,
+                100,
+                56,
+                48,
+                49,
+                34,
+                32,
+                125
+              ],
+              "value_type": "string",
+              "value_units": [
+                102,
+                105,
+                114,
+                115,
+                116
+              ]
+            }
+          ],
+          "yaml": "'{ \"\\ud800\": \"\\ud801\" }': first\n",
+          "json": "{\"{ \\\"\\\\ud800\\\": \\\"\\\\ud801\\\" }\":\"first\"}"
+        },
+        "warnings": [
+          [
+            "Keys with collection values will be stringified due to JS Object restrictions: \"{ \\\"\\\\ud800\\\": \\\"\\\\ud801\\\" }\". Set mapAsMap: true to use object keys."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nested-mapping-key",
+      "source": "? {outer: {\"\\uD800\": \"\\uD801\"}}\n: first\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [
+                123,
+                32,
+                111,
+                117,
+                116,
+                101,
+                114,
+                58,
+                32,
+                123,
+                32,
+                34,
+                92,
+                117,
+                100,
+                56,
+                48,
+                48,
+                34,
+                58,
+                32,
+                34,
+                92,
+                117,
+                100,
+                56,
+                48,
+                49,
+                34,
+                32,
+                125,
+                32,
+                125
+              ],
+              "value_type": "string",
+              "value_units": [
+                102,
+                105,
+                114,
+                115,
+                116
+              ]
+            }
+          ],
+          "yaml": "'{ outer: { \"\\ud800\": \"\\ud801\" } }': first\n",
+          "json": "{\"{ outer: { \\\"\\\\ud800\\\": \\\"\\\\ud801\\\" } }\":\"first\"}"
+        },
+        "warnings": [
+          [
+            "Keys with collection values will be stringified due to JS Object restrictions: \"{ outer: { \\\"\\\\ud800\\\": \\\"\\\\ud801\\\"...\". Set mapAsMap: true to use object keys."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sequence-complex-collision",
+      "source": "? [\"\\uD800\"]\n: first\n'[ \"\\ud800\" ]': second\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [
+                91,
+                32,
+                34,
+                92,
+                117,
+                100,
+                56,
+                48,
+                48,
+                34,
+                32,
+                93
+              ],
+              "value_type": "string",
+              "value_units": [
+                115,
+                101,
+                99,
+                111,
+                110,
+                100
+              ]
+            }
+          ],
+          "yaml": "'[ \"\\ud800\" ]': second\n",
+          "json": "{\"[ \\\"\\\\ud800\\\" ]\":\"second\"}"
+        },
+        "warnings": [
+          [
+            "Keys with collection values will be stringified due to JS Object restrictions: \"[ \\\"\\\\ud800\\\" ]\". Set mapAsMap: true to use object keys."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "numeric-prefix-lone",
+      "source": "\"1\\uD800\": first\n1: integer\n\"1\ufffd\": replacement\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [
+                49
+              ],
+              "value_type": "string",
+              "value_units": [
+                105,
+                110,
+                116,
+                101,
+                103,
+                101,
+                114
+              ]
+            },
+            {
+              "key_units": [
+                49,
+                55296
+              ],
+              "value_type": "string",
+              "value_units": [
+                102,
+                105,
+                114,
+                115,
+                116
+              ]
+            },
+            {
+              "key_units": [
+                49,
+                65533
+              ],
+              "value_type": "string",
+              "value_units": [
+                114,
+                101,
+                112,
+                108,
+                97,
+                99,
+                101,
+                109,
+                101,
+                110,
+                116
+              ]
+            }
+          ],
+          "yaml": "\"1\": integer\n\"1\\ud800\": first\n1\ufffd: replacement\n",
+          "json": "{\"1\":\"integer\",\"1\\ud800\":\"first\",\"1\ufffd\":\"replacement\"}"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "nested-empty-key",
+      "source": "\"\":\n  inner: \"[[Target]]\"\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [],
+              "value_type": "object"
+            }
+          ],
+          "yaml": "\"\":\n  inner: \"[[Target]]\"\n",
+          "json": "{\"\":{\"inner\":\"[[Target]]\"}}"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "empty-key-sequence",
+      "source": "\"\": [\"[[Target]]\"]\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [],
+              "value_type": "object"
+            }
+          ],
+          "yaml": "\"\":\n  - \"[[Target]]\"\n",
+          "json": "{\"\":[\"[[Target]]\"]}"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "nested-double-empty",
+      "source": "\"\": {\"\": \"[[Target]]\"}\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [],
+              "value_type": "object"
+            }
+          ],
+          "yaml": "\"\":\n  \"\": \"[[Target]]\"\n",
+          "json": "{\"\":{\"\":\"[[Target]]\"}}"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "omap-lone-key",
+      "source": "!!omap [{\"\\uD800\": first}, {\"\ufffd\": second}]\n",
+      "result": {
+        "result": {
+          "fields": [],
+          "yaml": "\"\\ud800\": first\n\ufffd: second\n",
+          "json": "{}"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "omap-lone-duplicate",
+      "source": "!!omap [{\"\\uD800\": first}, {\"\\ud800\": second}]\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "code": "TAG_RESOLVE_FAILED",
+          "pos": [
+            0,
+            6
+          ],
+          "linePos": [
+            {
+              "line": 1,
+              "col": 1
+            },
+            {
+              "line": 1,
+              "col": 7
+            }
+          ],
+          "message_utf16": [
+            79,
+            114,
+            100,
+            101,
+            114,
+            101,
+            100,
+            32,
+            109,
+            97,
+            112,
+            115,
+            32,
+            109,
+            117,
+            115,
+            116,
+            32,
+            110,
+            111,
+            116,
+            32,
+            105,
+            110,
+            99,
+            108,
+            117,
+            100,
+            101,
+            32,
+            100,
+            117,
+            112,
+            108,
+            105,
+            99,
+            97,
+            116,
+            101,
+            32,
+            107,
+            101,
+            121,
+            115,
+            58,
+            32,
+            55296,
+            32,
+            97,
+            116,
+            32,
+            108,
+            105,
+            110,
+            101,
+            32,
+            49,
+            44,
+            32,
+            99,
+            111,
+            108,
+            117,
+            109,
+            110,
+            32,
+            49,
+            58,
+            10,
+            10,
+            33,
+            33,
+            111,
+            109,
+            97,
+            112,
+            32,
+            91,
+            123,
+            34,
+            92,
+            117,
+            68,
+            56,
+            48,
+            48,
+            34,
+            58,
+            32,
+            102,
+            105,
+            114,
+            115,
+            116,
+            125,
+            44,
+            32,
+            123,
+            34,
+            92,
+            117,
+            100,
+            56,
+            48,
+            48,
+            34,
+            58,
+            32,
+            115,
+            101,
+            99,
+            111,
+            110,
+            100,
+            125,
+            93,
+            10,
+            94,
+            94,
+            94,
+            94,
+            94,
+            94,
+            10
+          ]
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "aliases-as-keys",
+      "source": "? &key [\"\\uD800\"]\n: first\n? *key\n: second\n",
+      "result": {
+        "result": {
+          "fields": [
+            {
+              "key_units": [
+                91,
+                32,
+                34,
+                92,
+                117,
+                100,
+                56,
+                48,
+                48,
+                34,
+                32,
+                93
+              ],
+              "value_type": "string",
+              "value_units": [
+                102,
+                105,
+                114,
+                115,
+                116
+              ]
+            },
+            {
+              "key_units": [
+                42,
+                107,
+                101,
+                121
+              ],
+              "value_type": "string",
+              "value_units": [
+                115,
+                101,
+                99,
+                111,
+                110,
+                100
+              ]
+            }
+          ],
+          "yaml": "'[ \"\\ud800\" ]': first\n\"*key\": second\n",
+          "json": "{\"[ \\\"\\\\ud800\\\" ]\":\"first\",\"*key\":\"second\"}"
+        },
+        "warnings": [
+          [
+            "Keys with collection values will be stringified due to JS Object restrictions: \"[ \\\"\\\\ud800\\\" ]\". Set mapAsMap: true to use object keys."
+          ]
+        ]
+      }
+    }
+  ],
+  "constructor_cases": [
+    {
+      "id": "date-set-high",
+      "path": "Ctor-date-set-high.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "operation": "set-high",
+      "callback": "fm[String.fromCharCode(0xd800)]=\"high\"",
+      "result": {
+        "start": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "before": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "live": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  55296
+                ],
+                "value_type": "string",
+                "value_units": [
+                  104,
+                  105,
+                  103,
+                  104
+                ]
+              }
+            ],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "saved": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":32}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":33},\"end\":{\"line\":3,\"col\":4,\"offset\":37}}}]}"
+      },
+      "after": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n"
+    },
+    {
+      "id": "date-set-low",
+      "path": "Ctor-date-set-low.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "operation": "set-low",
+      "callback": "fm[String.fromCharCode(0xdc00)]=\"low\"",
+      "result": {
+        "start": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "before": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "live": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  56320
+                ],
+                "value_type": "string",
+                "value_units": [
+                  108,
+                  111,
+                  119
+                ]
+              }
+            ],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "saved": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":32}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":33},\"end\":{\"line\":3,\"col\":4,\"offset\":37}}}]}"
+      },
+      "after": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n"
+    },
+    {
+      "id": "date-set-replacement",
+      "path": "Ctor-date-set-replacement.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "operation": "set-replacement",
+      "callback": "fm[\"\ufffd\"]=\"replacement\"",
+      "result": {
+        "start": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "before": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "live": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  65533
+                ],
+                "value_type": "string",
+                "value_units": [
+                  114,
+                  101,
+                  112,
+                  108,
+                  97,
+                  99,
+                  101,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              }
+            ],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "saved": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":32}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":33},\"end\":{\"line\":3,\"col\":4,\"offset\":37}}}]}"
+      },
+      "after": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n"
+    },
+    {
+      "id": "date-set-ordinary",
+      "path": "Ctor-date-set-ordinary.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "operation": "set-ordinary",
+      "callback": "fm[\"added\"]=\"ordinary\"",
+      "result": {
+        "start": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "before": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "live": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  97,
+                  100,
+                  100,
+                  101,
+                  100
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  114,
+                  100,
+                  105,
+                  110,
+                  97,
+                  114,
+                  121
+                ]
+              }
+            ],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "saved": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":32}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":33},\"end\":{\"line\":3,\"col\":4,\"offset\":37}}}]}"
+      },
+      "after": "---\n2024-01-02T00:00:00.000Z\n---\nbody\n"
+    },
+    {
+      "id": "date-remove-high",
+      "path": "Ctor-date-remove-high.md",
+      "before": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+      "operation": "remove-high",
+      "callback": "delete fm[String.fromCharCode(0xd800)]",
+      "result": {
+        "start": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+        "before": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "live": {
+          "class": "[object Date]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "2024-01-02T00:00:00.000Z\n",
+            "json": "\"2024-01-02T00:00:00.000Z\""
+          }
+        },
+        "saved": "body\n",
+        "cache_json": "{\"sections\":[{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":0,\"col\":4,\"offset\":4}}}]}"
+      },
+      "after": "body\n"
+    },
+    {
+      "id": "binary-set-high",
+      "path": "Ctor-binary-set-high.md",
+      "before": "---\n!!binary YWI=\n---\nbody\n",
+      "operation": "set-high",
+      "callback": "fm[String.fromCharCode(0xd800)]=\"high\"",
+      "result": {
+        "start": "---\n!!binary YWI=\n---\nbody\n",
+        "before": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98}"
+          }
+        },
+        "live": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  55296
+                ],
+                "value_type": "string",
+                "value_units": [
+                  104,
+                  105,
+                  103,
+                  104
+                ]
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98,\"\\ud800\":\"high\"}"
+          }
+        },
+        "saved": "---\n- 97\n- 98\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":17}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":18},\"end\":{\"line\":4,\"col\":4,\"offset\":22}}}]}"
+      },
+      "after": "---\n- 97\n- 98\n---\nbody\n"
+    },
+    {
+      "id": "binary-set-low",
+      "path": "Ctor-binary-set-low.md",
+      "before": "---\n!!binary YWI=\n---\nbody\n",
+      "operation": "set-low",
+      "callback": "fm[String.fromCharCode(0xdc00)]=\"low\"",
+      "result": {
+        "start": "---\n!!binary YWI=\n---\nbody\n",
+        "before": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98}"
+          }
+        },
+        "live": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  56320
+                ],
+                "value_type": "string",
+                "value_units": [
+                  108,
+                  111,
+                  119
+                ]
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98,\"\\udc00\":\"low\"}"
+          }
+        },
+        "saved": "---\n- 97\n- 98\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":17}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":18},\"end\":{\"line\":4,\"col\":4,\"offset\":22}}}]}"
+      },
+      "after": "---\n- 97\n- 98\n---\nbody\n"
+    },
+    {
+      "id": "binary-set-replacement",
+      "path": "Ctor-binary-set-replacement.md",
+      "before": "---\n!!binary YWI=\n---\nbody\n",
+      "operation": "set-replacement",
+      "callback": "fm[\"\ufffd\"]=\"replacement\"",
+      "result": {
+        "start": "---\n!!binary YWI=\n---\nbody\n",
+        "before": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98}"
+          }
+        },
+        "live": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  65533
+                ],
+                "value_type": "string",
+                "value_units": [
+                  114,
+                  101,
+                  112,
+                  108,
+                  97,
+                  99,
+                  101,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98,\"\ufffd\":\"replacement\"}"
+          }
+        },
+        "saved": "---\n- 97\n- 98\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":17}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":18},\"end\":{\"line\":4,\"col\":4,\"offset\":22}}}]}"
+      },
+      "after": "---\n- 97\n- 98\n---\nbody\n"
+    },
+    {
+      "id": "binary-set-ordinary",
+      "path": "Ctor-binary-set-ordinary.md",
+      "before": "---\n!!binary YWI=\n---\nbody\n",
+      "operation": "set-ordinary",
+      "callback": "fm[\"added\"]=\"ordinary\"",
+      "result": {
+        "start": "---\n!!binary YWI=\n---\nbody\n",
+        "before": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98}"
+          }
+        },
+        "live": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  97,
+                  100,
+                  100,
+                  101,
+                  100
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  114,
+                  100,
+                  105,
+                  110,
+                  97,
+                  114,
+                  121
+                ]
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98,\"added\":\"ordinary\"}"
+          }
+        },
+        "saved": "---\n- 97\n- 98\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":17}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":18},\"end\":{\"line\":4,\"col\":4,\"offset\":22}}}]}"
+      },
+      "after": "---\n- 97\n- 98\n---\nbody\n"
+    },
+    {
+      "id": "binary-remove-high",
+      "path": "Ctor-binary-remove-high.md",
+      "before": "---\n!!binary YWI=\n---\nbody\n",
+      "operation": "remove-high",
+      "callback": "delete fm[String.fromCharCode(0xd800)]",
+      "result": {
+        "start": "---\n!!binary YWI=\n---\nbody\n",
+        "before": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98}"
+          }
+        },
+        "live": {
+          "class": "[object Uint8Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "number"
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "number"
+              }
+            ],
+            "yaml": "- 97\n- 98\n",
+            "json": "{\"0\":97,\"1\":98}"
+          }
+        },
+        "saved": "---\n- 97\n- 98\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":17}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":18},\"end\":{\"line\":4,\"col\":4,\"offset\":22}}}]}"
+      },
+      "after": "---\n- 97\n- 98\n---\nbody\n"
+    },
+    {
+      "id": "set-set-high",
+      "path": "Ctor-set-set-high.md",
+      "before": "---\n!!set {red: null}\n---\nbody\n",
+      "operation": "set-high",
+      "callback": "fm[String.fromCharCode(0xd800)]=\"high\"",
+      "result": {
+        "start": "---\n!!set {red: null}\n---\nbody\n",
+        "before": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "- red\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  55296
+                ],
+                "value_type": "string",
+                "value_units": [
+                  104,
+                  105,
+                  103,
+                  104
+                ]
+              }
+            ],
+            "yaml": "- red\n",
+            "json": "{\"\\ud800\":\"high\"}"
+          }
+        },
+        "saved": "---\n- red\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":13}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":14},\"end\":{\"line\":3,\"col\":4,\"offset\":18}}}]}"
+      },
+      "after": "---\n- red\n---\nbody\n"
+    },
+    {
+      "id": "set-set-low",
+      "path": "Ctor-set-set-low.md",
+      "before": "---\n!!set {red: null}\n---\nbody\n",
+      "operation": "set-low",
+      "callback": "fm[String.fromCharCode(0xdc00)]=\"low\"",
+      "result": {
+        "start": "---\n!!set {red: null}\n---\nbody\n",
+        "before": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "- red\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  56320
+                ],
+                "value_type": "string",
+                "value_units": [
+                  108,
+                  111,
+                  119
+                ]
+              }
+            ],
+            "yaml": "- red\n",
+            "json": "{\"\\udc00\":\"low\"}"
+          }
+        },
+        "saved": "---\n- red\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":13}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":14},\"end\":{\"line\":3,\"col\":4,\"offset\":18}}}]}"
+      },
+      "after": "---\n- red\n---\nbody\n"
+    },
+    {
+      "id": "set-set-replacement",
+      "path": "Ctor-set-set-replacement.md",
+      "before": "---\n!!set {red: null}\n---\nbody\n",
+      "operation": "set-replacement",
+      "callback": "fm[\"\ufffd\"]=\"replacement\"",
+      "result": {
+        "start": "---\n!!set {red: null}\n---\nbody\n",
+        "before": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "- red\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  65533
+                ],
+                "value_type": "string",
+                "value_units": [
+                  114,
+                  101,
+                  112,
+                  108,
+                  97,
+                  99,
+                  101,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              }
+            ],
+            "yaml": "- red\n",
+            "json": "{\"\ufffd\":\"replacement\"}"
+          }
+        },
+        "saved": "---\n- red\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":13}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":14},\"end\":{\"line\":3,\"col\":4,\"offset\":18}}}]}"
+      },
+      "after": "---\n- red\n---\nbody\n"
+    },
+    {
+      "id": "set-set-ordinary",
+      "path": "Ctor-set-set-ordinary.md",
+      "before": "---\n!!set {red: null}\n---\nbody\n",
+      "operation": "set-ordinary",
+      "callback": "fm[\"added\"]=\"ordinary\"",
+      "result": {
+        "start": "---\n!!set {red: null}\n---\nbody\n",
+        "before": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "- red\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  97,
+                  100,
+                  100,
+                  101,
+                  100
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  114,
+                  100,
+                  105,
+                  110,
+                  97,
+                  114,
+                  121
+                ]
+              }
+            ],
+            "yaml": "- red\n",
+            "json": "{\"added\":\"ordinary\"}"
+          }
+        },
+        "saved": "---\n- red\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":13}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":14},\"end\":{\"line\":3,\"col\":4,\"offset\":18}}}]}"
+      },
+      "after": "---\n- red\n---\nbody\n"
+    },
+    {
+      "id": "set-remove-high",
+      "path": "Ctor-set-remove-high.md",
+      "before": "---\n!!set {red: null}\n---\nbody\n",
+      "operation": "remove-high",
+      "callback": "delete fm[String.fromCharCode(0xd800)]",
+      "result": {
+        "start": "---\n!!set {red: null}\n---\nbody\n",
+        "before": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "- red\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Set]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "- red\n",
+            "json": "{}"
+          }
+        },
+        "saved": "body\n",
+        "cache_json": "{\"sections\":[{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":0,\"col\":4,\"offset\":4}}}]}"
+      },
+      "after": "body\n"
+    },
+    {
+      "id": "map-set-high",
+      "path": "Ctor-map-set-high.md",
+      "before": "---\n!!omap [{one: 1}]\n---\nbody\n",
+      "operation": "set-high",
+      "callback": "fm[String.fromCharCode(0xd800)]=\"high\"",
+      "result": {
+        "start": "---\n!!omap [{one: 1}]\n---\nbody\n",
+        "before": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "one: 1\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  55296
+                ],
+                "value_type": "string",
+                "value_units": [
+                  104,
+                  105,
+                  103,
+                  104
+                ]
+              }
+            ],
+            "yaml": "one: 1\n",
+            "json": "{\"\\ud800\":\"high\"}"
+          }
+        },
+        "saved": "---\none: 1\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":14}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":15},\"end\":{\"line\":3,\"col\":4,\"offset\":19}}}],\"frontmatter\":{\"one\":1},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":14}},\"frontmatterLinks\":[]}"
+      },
+      "after": "---\none: 1\n---\nbody\n"
+    },
+    {
+      "id": "map-set-low",
+      "path": "Ctor-map-set-low.md",
+      "before": "---\n!!omap [{one: 1}]\n---\nbody\n",
+      "operation": "set-low",
+      "callback": "fm[String.fromCharCode(0xdc00)]=\"low\"",
+      "result": {
+        "start": "---\n!!omap [{one: 1}]\n---\nbody\n",
+        "before": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "one: 1\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  56320
+                ],
+                "value_type": "string",
+                "value_units": [
+                  108,
+                  111,
+                  119
+                ]
+              }
+            ],
+            "yaml": "one: 1\n",
+            "json": "{\"\\udc00\":\"low\"}"
+          }
+        },
+        "saved": "---\none: 1\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":14}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":15},\"end\":{\"line\":3,\"col\":4,\"offset\":19}}}],\"frontmatter\":{\"one\":1},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":14}},\"frontmatterLinks\":[]}"
+      },
+      "after": "---\none: 1\n---\nbody\n"
+    },
+    {
+      "id": "map-set-replacement",
+      "path": "Ctor-map-set-replacement.md",
+      "before": "---\n!!omap [{one: 1}]\n---\nbody\n",
+      "operation": "set-replacement",
+      "callback": "fm[\"\ufffd\"]=\"replacement\"",
+      "result": {
+        "start": "---\n!!omap [{one: 1}]\n---\nbody\n",
+        "before": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "one: 1\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  65533
+                ],
+                "value_type": "string",
+                "value_units": [
+                  114,
+                  101,
+                  112,
+                  108,
+                  97,
+                  99,
+                  101,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              }
+            ],
+            "yaml": "one: 1\n",
+            "json": "{\"\ufffd\":\"replacement\"}"
+          }
+        },
+        "saved": "---\none: 1\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":14}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":15},\"end\":{\"line\":3,\"col\":4,\"offset\":19}}}],\"frontmatter\":{\"one\":1},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":14}},\"frontmatterLinks\":[]}"
+      },
+      "after": "---\none: 1\n---\nbody\n"
+    },
+    {
+      "id": "map-set-ordinary",
+      "path": "Ctor-map-set-ordinary.md",
+      "before": "---\n!!omap [{one: 1}]\n---\nbody\n",
+      "operation": "set-ordinary",
+      "callback": "fm[\"added\"]=\"ordinary\"",
+      "result": {
+        "start": "---\n!!omap [{one: 1}]\n---\nbody\n",
+        "before": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "one: 1\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  97,
+                  100,
+                  100,
+                  101,
+                  100
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  114,
+                  100,
+                  105,
+                  110,
+                  97,
+                  114,
+                  121
+                ]
+              }
+            ],
+            "yaml": "one: 1\n",
+            "json": "{\"added\":\"ordinary\"}"
+          }
+        },
+        "saved": "---\none: 1\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":14}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":15},\"end\":{\"line\":3,\"col\":4,\"offset\":19}}}],\"frontmatter\":{\"one\":1},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":14}},\"frontmatterLinks\":[]}"
+      },
+      "after": "---\none: 1\n---\nbody\n"
+    },
+    {
+      "id": "map-remove-high",
+      "path": "Ctor-map-remove-high.md",
+      "before": "---\n!!omap [{one: 1}]\n---\nbody\n",
+      "operation": "remove-high",
+      "callback": "delete fm[String.fromCharCode(0xd800)]",
+      "result": {
+        "start": "---\n!!omap [{one: 1}]\n---\nbody\n",
+        "before": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "one: 1\n",
+            "json": "{}"
+          }
+        },
+        "live": {
+          "class": "[object Map]",
+          "snapshot": {
+            "fields": [],
+            "yaml": "one: 1\n",
+            "json": "{}"
+          }
+        },
+        "saved": "body\n",
+        "cache_json": "{\"sections\":[{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":0,\"col\":4,\"offset\":4}}}]}"
+      },
+      "after": "body\n"
+    },
+    {
+      "id": "array-set-high",
+      "path": "Ctor-array-set-high.md",
+      "before": "---\n[one, two]\n---\nbody\n",
+      "operation": "set-high",
+      "callback": "fm[String.fromCharCode(0xd800)]=\"high\"",
+      "result": {
+        "start": "---\n[one, two]\n---\nbody\n",
+        "before": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "live": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              },
+              {
+                "key_units": [
+                  55296
+                ],
+                "value_type": "string",
+                "value_units": [
+                  104,
+                  105,
+                  103,
+                  104
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "saved": "---\n- one\n- two\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":19}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":20},\"end\":{\"line\":4,\"col\":4,\"offset\":24}}}]}"
+      },
+      "after": "---\n- one\n- two\n---\nbody\n"
+    },
+    {
+      "id": "array-set-low",
+      "path": "Ctor-array-set-low.md",
+      "before": "---\n[one, two]\n---\nbody\n",
+      "operation": "set-low",
+      "callback": "fm[String.fromCharCode(0xdc00)]=\"low\"",
+      "result": {
+        "start": "---\n[one, two]\n---\nbody\n",
+        "before": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "live": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              },
+              {
+                "key_units": [
+                  56320
+                ],
+                "value_type": "string",
+                "value_units": [
+                  108,
+                  111,
+                  119
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "saved": "---\n- one\n- two\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":19}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":20},\"end\":{\"line\":4,\"col\":4,\"offset\":24}}}]}"
+      },
+      "after": "---\n- one\n- two\n---\nbody\n"
+    },
+    {
+      "id": "array-set-replacement",
+      "path": "Ctor-array-set-replacement.md",
+      "before": "---\n[one, two]\n---\nbody\n",
+      "operation": "set-replacement",
+      "callback": "fm[\"\ufffd\"]=\"replacement\"",
+      "result": {
+        "start": "---\n[one, two]\n---\nbody\n",
+        "before": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "live": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              },
+              {
+                "key_units": [
+                  65533
+                ],
+                "value_type": "string",
+                "value_units": [
+                  114,
+                  101,
+                  112,
+                  108,
+                  97,
+                  99,
+                  101,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "saved": "---\n- one\n- two\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":19}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":20},\"end\":{\"line\":4,\"col\":4,\"offset\":24}}}]}"
+      },
+      "after": "---\n- one\n- two\n---\nbody\n"
+    },
+    {
+      "id": "array-set-ordinary",
+      "path": "Ctor-array-set-ordinary.md",
+      "before": "---\n[one, two]\n---\nbody\n",
+      "operation": "set-ordinary",
+      "callback": "fm[\"added\"]=\"ordinary\"",
+      "result": {
+        "start": "---\n[one, two]\n---\nbody\n",
+        "before": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "live": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              },
+              {
+                "key_units": [
+                  97,
+                  100,
+                  100,
+                  101,
+                  100
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  114,
+                  100,
+                  105,
+                  110,
+                  97,
+                  114,
+                  121
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "saved": "---\n- one\n- two\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":19}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":20},\"end\":{\"line\":4,\"col\":4,\"offset\":24}}}]}"
+      },
+      "after": "---\n- one\n- two\n---\nbody\n"
+    },
+    {
+      "id": "array-remove-high",
+      "path": "Ctor-array-remove-high.md",
+      "before": "---\n[one, two]\n---\nbody\n",
+      "operation": "remove-high",
+      "callback": "delete fm[String.fromCharCode(0xd800)]",
+      "result": {
+        "start": "---\n[one, two]\n---\nbody\n",
+        "before": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "live": {
+          "class": "[object Array]",
+          "snapshot": {
+            "fields": [
+              {
+                "key_units": [
+                  48
+                ],
+                "value_type": "string",
+                "value_units": [
+                  111,
+                  110,
+                  101
+                ]
+              },
+              {
+                "key_units": [
+                  49
+                ],
+                "value_type": "string",
+                "value_units": [
+                  116,
+                  119,
+                  111
+                ]
+              }
+            ],
+            "yaml": "- one\n- two\n",
+            "json": "[\"one\",\"two\"]"
+          }
+        },
+        "saved": "---\n- one\n- two\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":19}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":20},\"end\":{\"line\":4,\"col\":4,\"offset\":24}}}]}"
+      },
+      "after": "---\n- one\n- two\n---\nbody\n"
+    }
+  ],
+  "cache_cases": [
+    {
+      "id": "sequence-lone-key",
+      "path": "Grammar0.md",
+      "result": {
+        "cached": "---\n? [\"\\uD800\"]\n: first\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":28}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":29},\"end\":{\"line\":4,\"col\":4,\"offset\":33}}}],\"frontmatter\":{\"[ \\\"\\\\ud800\\\" ]\":\"first\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":28}},\"frontmatterLinks\":[]}",
+        "links": []
+      }
+    },
+    {
+      "id": "sequence-pair-key",
+      "path": "Grammar1.md",
+      "result": {
+        "cached": "---\n? [\"\\uD800\\uDC00\"]\n: first\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":34}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":35},\"end\":{\"line\":4,\"col\":4,\"offset\":39}}}],\"frontmatter\":{\"[ \\\"\ud800\udc00\\\" ]\":\"first\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":34}},\"frontmatterLinks\":[]}",
+        "links": []
+      }
+    },
+    {
+      "id": "mapping-lone-key",
+      "path": "Grammar2.md",
+      "result": {
+        "cached": "---\n? {\"\\uD800\": \"\\uD801\"}\n: first\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":38}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":39},\"end\":{\"line\":4,\"col\":4,\"offset\":43}}}],\"frontmatter\":{\"{ \\\"\\\\ud800\\\": \\\"\\\\ud801\\\" }\":\"first\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":38}},\"frontmatterLinks\":[]}",
+        "links": []
+      }
+    },
+    {
+      "id": "nested-mapping-key",
+      "path": "Grammar3.md",
+      "result": {
+        "cached": "---\n? {outer: {\"\\uD800\": \"\\uD801\"}}\n: first\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":47}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":48},\"end\":{\"line\":4,\"col\":4,\"offset\":52}}}],\"frontmatter\":{\"{ outer: { \\\"\\\\ud800\\\": \\\"\\\\ud801\\\" } }\":\"first\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":47}},\"frontmatterLinks\":[]}",
+        "links": []
+      }
+    },
+    {
+      "id": "sequence-complex-collision",
+      "path": "Grammar4.md",
+      "result": {
+        "cached": "---\n? [\"\\uD800\"]\n: first\n'[ \"\\ud800\" ]': second\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":4,\"col\":3,\"offset\":51}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":5,\"col\":0,\"offset\":52},\"end\":{\"line\":5,\"col\":4,\"offset\":56}}}],\"frontmatter\":{\"[ \\\"\\\\ud800\\\" ]\":\"second\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":4,\"col\":3,\"offset\":51}},\"frontmatterLinks\":[]}",
+        "links": []
+      }
+    },
+    {
+      "id": "numeric-prefix-lone",
+      "path": "Grammar5.md",
+      "result": {
+        "cached": "---\n\"1\\uD800\": first\n1: integer\n\"1\ufffd\": replacement\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":4,\"col\":3,\"offset\":53}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":5,\"col\":0,\"offset\":54},\"end\":{\"line\":5,\"col\":4,\"offset\":58}}}],\"frontmatter\":{\"1\":\"integer\",\"1\\ud800\":\"first\",\"1\ufffd\":\"replacement\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":4,\"col\":3,\"offset\":53}},\"frontmatterLinks\":[]}",
+        "links": []
+      }
+    },
+    {
+      "id": "nested-empty-key",
+      "path": "Grammar6.md",
+      "result": {
+        "cached": "---\n\"\":\n  inner: \"[[Target]]\"\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":33}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":34},\"end\":{\"line\":4,\"col\":4,\"offset\":38}}}],\"frontmatter\":{\"\":{\"inner\":\"[[Target]]\"}},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":33}},\"frontmatterLinks\":[{\"key\":\"inner\",\"link\":\"Target\",\"original\":\"[[Target]]\",\"displayText\":\"Target\"}]}",
+        "links": [
+          {
+            "link": "Target",
+            "original": "[[Target]]",
+            "displayText": "Target",
+            "key_units": [
+              105,
+              110,
+              110,
+              101,
+              114
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "empty-key-sequence",
+      "path": "Grammar7.md",
+      "result": {
+        "cached": "---\n\"\": [\"[[Target]]\"]\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":26}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":27},\"end\":{\"line\":3,\"col\":4,\"offset\":31}}}],\"frontmatter\":{\"\":[\"[[Target]]\"]},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":26}},\"frontmatterLinks\":[{\"key\":\"0\",\"link\":\"Target\",\"original\":\"[[Target]]\",\"displayText\":\"Target\"}]}",
+        "links": [
+          {
+            "link": "Target",
+            "original": "[[Target]]",
+            "displayText": "Target",
+            "key_units": [
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nested-double-empty",
+      "path": "Grammar8.md",
+      "result": {
+        "cached": "---\n\"\": {\"\": \"[[Target]]\"}\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":30}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":31},\"end\":{\"line\":3,\"col\":4,\"offset\":35}}}],\"frontmatter\":{\"\":{\"\":\"[[Target]]\"}},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":30}},\"frontmatterLinks\":[{\"key\":\"\",\"link\":\"Target\",\"original\":\"[[Target]]\",\"displayText\":\"Target\"}]}",
+        "links": [
+          {
+            "link": "Target",
+            "original": "[[Target]]",
+            "displayText": "Target",
+            "key_units": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "omap-lone-key",
+      "path": "Grammar9.md",
+      "result": {
+        "cached": "---\n!!omap [{\"\\uD800\": first}, {\"\ufffd\": second}]\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":49}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":50},\"end\":{\"line\":3,\"col\":4,\"offset\":54}}}],\"frontmatter\":{},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":49}},\"frontmatterLinks\":[]}",
+        "links": []
+      }
+    },
+    {
+      "id": "aliases-as-keys",
+      "path": "Grammar11.md",
+      "result": {
+        "cached": "---\n? &key [\"\\uD800\"]\n: first\n? *key\n: second\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":5,\"col\":3,\"offset\":49}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":6,\"col\":0,\"offset\":50},\"end\":{\"line\":6,\"col\":4,\"offset\":54}}}],\"frontmatter\":{\"[ \\\"\\\\ud800\\\" ]\":\"first\",\"*key\":\"second\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":5,\"col\":3,\"offset\":49}},\"frontmatterLinks\":[]}",
+        "links": []
+      }
+    }
+  ],
+  "initial_files": {
+    "Grammar0.md": "---\n? [\"\\uD800\"]\n: first\n---\nbody\n",
+    "Grammar1.md": "---\n? [\"\\uD800\\uDC00\"]\n: first\n---\nbody\n",
+    "Grammar2.md": "---\n? {\"\\uD800\": \"\\uD801\"}\n: first\n---\nbody\n",
+    "Grammar3.md": "---\n? {outer: {\"\\uD800\": \"\\uD801\"}}\n: first\n---\nbody\n",
+    "Grammar4.md": "---\n? [\"\\uD800\"]\n: first\n'[ \"\\ud800\" ]': second\n---\nbody\n",
+    "Grammar5.md": "---\n\"1\\uD800\": first\n1: integer\n\"1\ufffd\": replacement\n---\nbody\n",
+    "Grammar6.md": "---\n\"\":\n  inner: \"[[Target]]\"\n---\nbody\n",
+    "Grammar7.md": "---\n\"\": [\"[[Target]]\"]\n---\nbody\n",
+    "Grammar8.md": "---\n\"\": {\"\": \"[[Target]]\"}\n---\nbody\n",
+    "Grammar9.md": "---\n!!omap [{\"\\uD800\": first}, {\"\ufffd\": second}]\n---\nbody\n",
+    "Grammar11.md": "---\n? &key [\"\\uD800\"]\n: first\n? *key\n: second\n---\nbody\n",
+    "Target.md": "target\n",
+    "Ctor-date-set-high.md": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+    "Ctor-date-set-low.md": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+    "Ctor-date-set-replacement.md": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+    "Ctor-date-set-ordinary.md": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+    "Ctor-date-remove-high.md": "---\n!!timestamp 2024-01-02\n---\nbody\n",
+    "Ctor-binary-set-high.md": "---\n!!binary YWI=\n---\nbody\n",
+    "Ctor-binary-set-low.md": "---\n!!binary YWI=\n---\nbody\n",
+    "Ctor-binary-set-replacement.md": "---\n!!binary YWI=\n---\nbody\n",
+    "Ctor-binary-set-ordinary.md": "---\n!!binary YWI=\n---\nbody\n",
+    "Ctor-binary-remove-high.md": "---\n!!binary YWI=\n---\nbody\n",
+    "Ctor-set-set-high.md": "---\n!!set {red: null}\n---\nbody\n",
+    "Ctor-set-set-low.md": "---\n!!set {red: null}\n---\nbody\n",
+    "Ctor-set-set-replacement.md": "---\n!!set {red: null}\n---\nbody\n",
+    "Ctor-set-set-ordinary.md": "---\n!!set {red: null}\n---\nbody\n",
+    "Ctor-set-remove-high.md": "---\n!!set {red: null}\n---\nbody\n",
+    "Ctor-map-set-high.md": "---\n!!omap [{one: 1}]\n---\nbody\n",
+    "Ctor-map-set-low.md": "---\n!!omap [{one: 1}]\n---\nbody\n",
+    "Ctor-map-set-replacement.md": "---\n!!omap [{one: 1}]\n---\nbody\n",
+    "Ctor-map-set-ordinary.md": "---\n!!omap [{one: 1}]\n---\nbody\n",
+    "Ctor-map-remove-high.md": "---\n!!omap [{one: 1}]\n---\nbody\n",
+    "Ctor-array-set-high.md": "---\n[one, two]\n---\nbody\n",
+    "Ctor-array-set-low.md": "---\n[one, two]\n---\nbody\n",
+    "Ctor-array-set-replacement.md": "---\n[one, two]\n---\nbody\n",
+    "Ctor-array-set-ordinary.md": "---\n[one, two]\n---\nbody\n",
+    "Ctor-array-remove-high.md": "---\n[one, two]\n---\nbody\n"
+  },
+  "after_rename": {
+    "Grammar0.md": "---\n? [\"\\uD800\"]\n: first\n---\nbody\n",
+    "Grammar1.md": "---\n? [\"\\uD800\\uDC00\"]\n: first\n---\nbody\n",
+    "Grammar2.md": "---\n? {\"\\uD800\": \"\\uD801\"}\n: first\n---\nbody\n",
+    "Grammar3.md": "---\n? {outer: {\"\\uD800\": \"\\uD801\"}}\n: first\n---\nbody\n",
+    "Grammar4.md": "---\n? [\"\\uD800\"]\n: first\n'[ \"\\ud800\" ]': second\n---\nbody\n",
+    "Grammar5.md": "---\n\"1\\uD800\": first\n1: integer\n\"1\ufffd\": replacement\n---\nbody\n",
+    "Grammar6.md": "---\n\"\":\n  inner: \"[[Target]]\"\ninner: \"[[Renamed]]\"\n---\nbody\n",
+    "Grammar7.md": "---\n\"0\": \"[[Renamed]]\"\n\"\":\n  - \"[[Target]]\"\n---\nbody\n",
+    "Grammar8.md": "---\n\"\": \"[[Renamed]]\"\n---\nbody\n",
+    "Grammar9.md": "---\n!!omap [{\"\\uD800\": first}, {\"\ufffd\": second}]\n---\nbody\n",
+    "Grammar11.md": "---\n? &key [\"\\uD800\"]\n: first\n? *key\n: second\n---\nbody\n"
+  }
+}

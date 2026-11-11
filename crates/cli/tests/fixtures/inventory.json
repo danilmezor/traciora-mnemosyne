@@ -1,0 +1,940 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial": {
+    "files": {
+      "Alpha.md": "alpha\n",
+      "beta.MD": "beta\r\n",
+      "note2.md": "two",
+      "note10.md": "ten",
+      "Sub/Note.md": "sub\n",
+      "Sub/deep/Binary.png": [
+        0,
+        255,
+        128,
+        10,
+        0
+      ],
+      "Sub/Plain.txt": "text",
+      "Other/extensionless": "bytes",
+      "zero.md": "",
+      "archive.tar.gz": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "Café.md": "é😀",
+      "隠れ.md": "日本語",
+      ".hidden": "ignored",
+      ".private/Ignore.md": "ignored"
+    },
+    "directories": [
+      "Empty",
+      "Sub/Empty",
+      "Sub/deep",
+      "Other",
+      "true",
+      ".hiddenFolder"
+    ]
+  },
+  "cases": [
+    {
+      "id": "0:files",
+      "args": [
+        "files"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\narchive.tar.gz\nbeta.MD\nCafé.md\nnote2.md\nnote10.md\nOther/extensionless\nSub/deep/Binary.png\nSub/Note.md\nSub/Plain.txt\nzero.md\n隠れ.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "1:files:total",
+      "args": [
+        "files",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "12\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "2:files:total=",
+      "args": [
+        "files",
+        "total="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\narchive.tar.gz\nbeta.MD\nCafé.md\nnote2.md\nnote10.md\nOther/extensionless\nSub/deep/Binary.png\nSub/Note.md\nSub/Plain.txt\nzero.md\n隠れ.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "3:files:total=false",
+      "args": [
+        "files",
+        "total=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "12\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "4:files:folder=Sub",
+      "args": [
+        "files",
+        "folder=Sub"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Sub/deep/Binary.png\nSub/Note.md\nSub/Plain.txt\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "5:files:folder=Sub/",
+      "args": [
+        "files",
+        "folder=Sub/"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Sub/deep/Binary.png\nSub/Note.md\nSub/Plain.txt\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "6:files:folder=Sub//",
+      "args": [
+        "files",
+        "folder=Sub//"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "7:files:folder=/Sub",
+      "args": [
+        "files",
+        "folder=/Sub"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "8:files:folder=sub",
+      "args": [
+        "files",
+        "folder=sub"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "9:files:folder=/",
+      "args": [
+        "files",
+        "folder=/"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "10:files:folder=",
+      "args": [
+        "files",
+        "folder="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\narchive.tar.gz\nbeta.MD\nCafé.md\nnote2.md\nnote10.md\nOther/extensionless\nSub/deep/Binary.png\nSub/Note.md\nSub/Plain.txt\nzero.md\n隠れ.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "11:files:folder=Missing",
+      "args": [
+        "files",
+        "folder=Missing"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "12:files:folder=.private",
+      "args": [
+        "files",
+        "folder=.private"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "13:files:folder=Alpha.md",
+      "args": [
+        "files",
+        "folder=Alpha.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "14:files:ext=md",
+      "args": [
+        "files",
+        "ext=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\nbeta.MD\nCafé.md\nnote2.md\nnote10.md\nSub/Note.md\nzero.md\n隠れ.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "15:files:ext=.md",
+      "args": [
+        "files",
+        "ext=.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\nbeta.MD\nCafé.md\nnote2.md\nnote10.md\nSub/Note.md\nzero.md\n隠れ.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "16:files:ext=MD",
+      "args": [
+        "files",
+        "ext=MD"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "17:files:ext=..md",
+      "args": [
+        "files",
+        "ext=..md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "18:files:ext=.",
+      "args": [
+        "files",
+        "ext=."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Other/extensionless\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "19:files:ext=",
+      "args": [
+        "files",
+        "ext="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\narchive.tar.gz\nbeta.MD\nCafé.md\nnote2.md\nnote10.md\nOther/extensionless\nSub/deep/Binary.png\nSub/Note.md\nSub/Plain.txt\nzero.md\n隠れ.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "20:files:ext=png",
+      "args": [
+        "files",
+        "ext=png"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Sub/deep/Binary.png\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "21:files:ext=txt",
+      "args": [
+        "files",
+        "ext=txt"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Sub/Plain.txt\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "22:files:ext=gz",
+      "args": [
+        "files",
+        "ext=gz"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "archive.tar.gz\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "23:files:folder=Sub:ext=md",
+      "args": [
+        "files",
+        "folder=Sub",
+        "ext=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Sub/Note.md\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "24:files:folder=Sub:ext=md:total",
+      "args": [
+        "files",
+        "folder=Sub",
+        "ext=md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "25:files:folder=Sub:ext=MD:total",
+      "args": [
+        "files",
+        "folder=Sub",
+        "ext=MD",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "26:files:ext",
+      "args": [
+        "files",
+        "ext"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "27:folders",
+      "args": [
+        "folders"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "/\nEmpty\nOther\nSub\nSub/deep\nSub/Empty\ntrue\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "28:folders:total",
+      "args": [
+        "folders",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "7\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "29:folders:total=",
+      "args": [
+        "folders",
+        "total="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "/\nEmpty\nOther\nSub\nSub/deep\nSub/Empty\ntrue\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "30:folders:total=false",
+      "args": [
+        "folders",
+        "total=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "7\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "31:folders:folder=Sub",
+      "args": [
+        "folders",
+        "folder=Sub"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Sub\nSub/deep\nSub/Empty\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "32:folders:folder=Sub:total",
+      "args": [
+        "folders",
+        "folder=Sub",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "3\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "33:folders:folder=Sub/",
+      "args": [
+        "folders",
+        "folder=Sub/"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"Sub/\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "34:folders:folder=/Sub",
+      "args": [
+        "folders",
+        "folder=/Sub"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"/Sub\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "35:folders:folder=/",
+      "args": [
+        "folders",
+        "folder=/"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "/\nEmpty\nOther\nSub\nSub/deep\nSub/Empty\ntrue\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "36:folders:folder=",
+      "args": [
+        "folders",
+        "folder="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "/\nEmpty\nOther\nSub\nSub/deep\nSub/Empty\ntrue\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "37:folders:folder=Empty",
+      "args": [
+        "folders",
+        "folder=Empty"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Empty\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "38:folders:folder=Empty:total",
+      "args": [
+        "folders",
+        "folder=Empty",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "39:folders:folder=Missing",
+      "args": [
+        "folders",
+        "folder=Missing"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"Missing\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "40:folders:folder=Alpha.md",
+      "args": [
+        "folders",
+        "folder=Alpha.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"Alpha.md\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "41:folders:folder=.hiddenFolder",
+      "args": [
+        "folders",
+        "folder=.hiddenFolder"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \".hiddenFolder\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "42:folders:folder",
+      "args": [
+        "folders",
+        "folder"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "true\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "43:folders:folder=.",
+      "args": [
+        "folders",
+        "folder=."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \".\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "44:folders:folder=..",
+      "args": [
+        "folders",
+        "folder=.."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"..\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "45:folder",
+      "args": [
+        "folder"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: path=<path>\nUsage: folder path=<path> [info=files|folders|size]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "46:folder:path=",
+      "args": [
+        "folder",
+        "path="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: path\nUsage: folder path=<folder-path> [info=files|folders|size]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "47:folder:path=/",
+      "args": [
+        "folder",
+        "path=/"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "path\t/\nfiles\t12\nfolders\t6\nsize\t56\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "48:folder:path=/:info=files",
+      "args": [
+        "folder",
+        "path=/",
+        "info=files"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "12\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "49:folder:path=/:info=folders",
+      "args": [
+        "folder",
+        "path=/",
+        "info=folders"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "6\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "50:folder:path=/:info=size",
+      "args": [
+        "folder",
+        "path=/",
+        "info=size"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "56\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "51:folder:path=Sub",
+      "args": [
+        "folder",
+        "path=Sub"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "path\tSub\nfiles\t3\nfolders\t2\nsize\t13\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "52:folder:path=Sub:info=files",
+      "args": [
+        "folder",
+        "path=Sub",
+        "info=files"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "3\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "53:folder:path=Sub:info=folders",
+      "args": [
+        "folder",
+        "path=Sub",
+        "info=folders"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "2\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "54:folder:path=Sub:info=size",
+      "args": [
+        "folder",
+        "path=Sub",
+        "info=size"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "13\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "55:folder:path=Sub:info=invalid",
+      "args": [
+        "folder",
+        "path=Sub",
+        "info=invalid"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "path\tSub\nfiles\t3\nfolders\t2\nsize\t13\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "56:folder:path=Sub:info=",
+      "args": [
+        "folder",
+        "path=Sub",
+        "info="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "path\tSub\nfiles\t3\nfolders\t2\nsize\t13\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "57:folder:path=Sub/",
+      "args": [
+        "folder",
+        "path=Sub/"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"Sub/\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "58:folder:path=Empty",
+      "args": [
+        "folder",
+        "path=Empty"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "path\tEmpty\nfiles\t0\nfolders\t0\nsize\t0\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "59:folder:path=Missing",
+      "args": [
+        "folder",
+        "path=Missing"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"Missing\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "60:folder:path=Alpha.md",
+      "args": [
+        "folder",
+        "path=Alpha.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Alpha.md\" is a file, not a folder.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "61:folder:path=.hiddenFolder",
+      "args": [
+        "folder",
+        "path=.hiddenFolder"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \".hiddenFolder\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "62:folder:path",
+      "args": [
+        "folder",
+        "path"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "path\ttrue\nfiles\t0\nfolders\t0\nsize\t0\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "63:folder:path=.",
+      "args": [
+        "folder",
+        "path=."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \".\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "64:folder:path=..",
+      "args": [
+        "folder",
+        "path=.."
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Folder \"..\" not found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "66:vault:info=name",
+      "args": [
+        "vault",
+        "info=name"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "vault\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "67:vault:info=path",
+      "args": [
+        "vault",
+        "info=path"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "$VAULT\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "68:vault:info=files",
+      "args": [
+        "vault",
+        "info=files"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "12\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "69:vault:info=folders",
+      "args": [
+        "vault",
+        "info=folders"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "6\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "70:vault:info=size",
+      "args": [
+        "vault",
+        "info=size"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "56\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "71:vault:info=invalid",
+      "args": [
+        "vault",
+        "info=invalid"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "name\tvault\npath\t$VAULT\nfiles\t12\nfolders\t6\nsize\t56\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "72:vault:info=",
+      "args": [
+        "vault",
+        "info="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "name\tvault\npath\t$VAULT\nfiles\t12\nfolders\t6\nsize\t56\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "73:vault:info",
+      "args": [
+        "vault",
+        "info"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "name\tvault\npath\t$VAULT\nfiles\t12\nfolders\t6\nsize\t56\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "conditions": {
+    "authority": "actual pinned isolated runtime",
+    "request_spacing_ms": 200,
+    "use_mock_keychain": true,
+    "captured_batches": 2,
+    "boundary": "Main process last-argument existing-path shortcut captured separately: bare vault sees run-directory vault/ and returns Opened vault. This fixture covers73 registered-handler cases. One request timed out in first profile; remaining cases captured in fresh profile. Cold equal-collation traversal and stat timing remain pending."
+  }
+}

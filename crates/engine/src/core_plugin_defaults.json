@@ -1,0 +1,122 @@
+[
+  {
+    "id": "file-explorer",
+    "default_on": true
+  },
+  {
+    "id": "global-search",
+    "default_on": true
+  },
+  {
+    "id": "switcher",
+    "default_on": true
+  },
+  {
+    "id": "graph",
+    "default_on": true
+  },
+  {
+    "id": "backlink",
+    "default_on": true
+  },
+  {
+    "id": "canvas",
+    "default_on": true
+  },
+  {
+    "id": "outgoing-link",
+    "default_on": true
+  },
+  {
+    "id": "tag-pane",
+    "default_on": true
+  },
+  {
+    "id": "footnotes",
+    "default_on": false
+  },
+  {
+    "id": "properties",
+    "default_on": true
+  },
+  {
+    "id": "page-preview",
+    "default_on": true
+  },
+  {
+    "id": "daily-notes",
+    "default_on": true
+  },
+  {
+    "id": "templates",
+    "default_on": true
+  },
+  {
+    "id": "note-composer",
+    "default_on": true
+  },
+  {
+    "id": "command-palette",
+    "default_on": true
+  },
+  {
+    "id": "slash-command",
+    "default_on": false
+  },
+  {
+    "id": "editor-status",
+    "default_on": true
+  },
+  {
+    "id": "bookmarks",
+    "default_on": true
+  },
+  {
+    "id": "zk-prefixer",
+    "default_on": false
+  },
+  {
+    "id": "random-note",
+    "default_on": false
+  },
+  {
+    "id": "outline",
+    "default_on": true
+  },
+  {
+    "id": "word-count",
+    "default_on": true
+  },
+  {
+    "id": "slides",
+    "default_on": false
+  },
+  {
+    "id": "audio-recorder",
+    "default_on": false
+  },
+  {
+    "id": "workspaces",
+    "default_on": false
+  },
+  {
+    "id": "file-recovery",
+    "default_on": true
+  },
+  {
+    "id": "publish",
+    "default_on": false
+  },
+  {
+    "id": "sync",
+    "default_on": true
+  },
+  {
+    "id": "bases",
+    "default_on": true
+  },
+  {
+    "id": "webviewer",
+    "default_on": false
+  }
+]

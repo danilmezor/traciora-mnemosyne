@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mnemosyne-local-client"
+version = "0.1.0"
+description = "Bounded stdlib client for the local Mnemosyne content service"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["mnemosyne_client*"]

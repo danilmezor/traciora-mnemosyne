@@ -1,0 +1,1121 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "isolation_proof": {
+    "vault": "/home/user/reference/run-7tnlpvrl/vault",
+    "profile": "/home/user/reference/run-7tnlpvrl/profile",
+    "use_mock_keychain": true
+  },
+  "authored_plugin_sha256": "623ef21c6034e1b07d172d447984a700f30d29255dcf3304abff7c8cff2ab69e",
+  "load": {
+    "loaded": true
+  },
+  "authored_cases_sha256": "a5632dd404e02edf12f9e194988de4a233c02834d2cb2b2a67c1eaf6301a5c1d",
+  "cases": [
+    {
+      "id": "getFileCount-empty",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "0"
+      },
+      "log": []
+    },
+    {
+      "id": "getFileCount-primitive-children",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "5"
+      },
+      "log": []
+    },
+    {
+      "id": "getFileCount-holes",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": []
+    },
+    {
+      "id": "getFileCount-missing",
+      "method": "getFileCount",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of undefined (reading 'length')"
+      },
+      "log": []
+    },
+    {
+      "id": "getFileCount-null-this",
+      "method": "getFileCount",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of null (reading 'children')"
+      },
+      "log": []
+    },
+    {
+      "id": "getFileCount-length-getters",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "2"
+      },
+      "log": [
+        "length",
+        "0",
+        "length",
+        "1",
+        "length"
+      ]
+    },
+    {
+      "id": "getFileCount-changing-length",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "1"
+      },
+      "log": [
+        "length",
+        "0",
+        "length"
+      ]
+    },
+    {
+      "id": "getFileCount-length-coercion",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "1"
+      },
+      "log": [
+        "valueOf:length",
+        "valueOf:length"
+      ]
+    },
+    {
+      "id": "getFileCount-child-getter-throws",
+      "method": "getFileCount",
+      "error": {
+        "identity": "marker"
+      },
+      "log": [
+        "0"
+      ]
+    },
+    {
+      "id": "getFileCount-nested",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "2"
+      },
+      "log": []
+    },
+    {
+      "id": "getFileCount-recursive-override",
+      "method": "getFileCount",
+      "result": {
+        "type": "string",
+        "units": [
+          48,
+          50,
+          49
+        ]
+      },
+      "log": [
+        "recursive"
+      ]
+    },
+    {
+      "id": "getFileCount-recursive-coercion",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": [
+        "valueOf:count"
+      ]
+    },
+    {
+      "id": "getFileCount-recursive-noncallable",
+      "method": "getFileCount",
+      "error": {
+        "name": "TypeError",
+        "message": "r.getFileCount is not a function"
+      },
+      "log": []
+    },
+    {
+      "id": "getFolderCount-empty",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "0"
+      },
+      "log": []
+    },
+    {
+      "id": "getFolderCount-primitive-children",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "0"
+      },
+      "log": []
+    },
+    {
+      "id": "getFolderCount-holes",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "0"
+      },
+      "log": []
+    },
+    {
+      "id": "getFolderCount-missing",
+      "method": "getFolderCount",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of undefined (reading 'length')"
+      },
+      "log": []
+    },
+    {
+      "id": "getFolderCount-null-this",
+      "method": "getFolderCount",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of null (reading 'children')"
+      },
+      "log": []
+    },
+    {
+      "id": "getFolderCount-length-getters",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "0"
+      },
+      "log": [
+        "length",
+        "0",
+        "length",
+        "1",
+        "length"
+      ]
+    },
+    {
+      "id": "getFolderCount-changing-length",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "0"
+      },
+      "log": [
+        "length",
+        "0",
+        "length"
+      ]
+    },
+    {
+      "id": "getFolderCount-length-coercion",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "0"
+      },
+      "log": [
+        "valueOf:length",
+        "valueOf:length"
+      ]
+    },
+    {
+      "id": "getFolderCount-child-getter-throws",
+      "method": "getFolderCount",
+      "error": {
+        "identity": "marker"
+      },
+      "log": [
+        "0"
+      ]
+    },
+    {
+      "id": "getFolderCount-nested",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "1"
+      },
+      "log": []
+    },
+    {
+      "id": "getFolderCount-recursive-override",
+      "method": "getFolderCount",
+      "result": {
+        "type": "string",
+        "units": [
+          48,
+          49,
+          50
+        ]
+      },
+      "log": [
+        "recursive"
+      ]
+    },
+    {
+      "id": "getFolderCount-recursive-coercion",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": [
+        "valueOf:count"
+      ]
+    },
+    {
+      "id": "getFolderCount-recursive-noncallable",
+      "method": "getFolderCount",
+      "error": {
+        "name": "TypeError",
+        "message": "r.getFolderCount is not a function"
+      },
+      "log": []
+    },
+    {
+      "id": "prefix-root",
+      "method": "getParentPrefix",
+      "result": {
+        "type": "string",
+        "units": []
+      },
+      "log": [
+        "isRoot"
+      ]
+    },
+    {
+      "id": "prefix-nonroot",
+      "method": "getParentPrefix",
+      "result": {
+        "type": "string",
+        "units": [
+          70,
+          111,
+          108,
+          100,
+          101,
+          114,
+          47
+        ]
+      },
+      "log": [
+        "isRoot",
+        "path"
+      ]
+    },
+    {
+      "id": "prefix-missing-path",
+      "method": "getParentPrefix",
+      "result": {
+        "type": "string",
+        "units": [
+          117,
+          110,
+          100,
+          101,
+          102,
+          105,
+          110,
+          101,
+          100,
+          47
+        ]
+      },
+      "log": []
+    },
+    {
+      "id": "prefix-coercion",
+      "method": "getParentPrefix",
+      "result": {
+        "type": "string",
+        "units": [
+          51,
+          47
+        ]
+      },
+      "log": [
+        "isRoot",
+        "valueOf:path"
+      ]
+    },
+    {
+      "id": "prefix-truthy",
+      "method": "getParentPrefix",
+      "result": {
+        "type": "string",
+        "units": []
+      },
+      "log": []
+    },
+    {
+      "id": "prefix-missing-method",
+      "method": "getParentPrefix",
+      "error": {
+        "name": "TypeError",
+        "message": "this.isRoot is not a function"
+      },
+      "log": []
+    },
+    {
+      "id": "prefix-null",
+      "method": "getParentPrefix",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot read properties of null (reading 'isRoot')"
+      },
+      "log": []
+    },
+    {
+      "id": "prefix-lone",
+      "method": "getParentPrefix",
+      "result": {
+        "type": "string",
+        "units": [
+          55296,
+          47
+        ]
+      },
+      "log": []
+    },
+    {
+      "id": "file-count-hasInstance",
+      "method": "getFileCount",
+      "result": {
+        "type": "number",
+        "value": "3"
+      },
+      "log": []
+    },
+    {
+      "id": "folder-count-hasInstance",
+      "method": "getFolderCount",
+      "result": {
+        "type": "number",
+        "value": "4"
+      },
+      "log": []
+    },
+    {
+      "id": "hasInstance-calls",
+      "calls": 4
+    }
+  ],
+  "overrides_sha256": "393521523e1a79bacd0c1d081d609d56f42e6227f04bcd0e4ba85707d21521d4",
+  "overrides": [
+    {
+      "id": "TFile-base-call-object",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "replacement",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": [
+        {
+          "base_call": true,
+          "vault_same": true,
+          "path": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          },
+          "receiver_same": false
+        }
+      ]
+    },
+    {
+      "id": "TFile-base-call-falsy",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": [
+        "base_call"
+      ]
+    },
+    {
+      "id": "TFile-base-call-primitive",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot create property 'saving' on string 'YES'"
+      },
+      "own": [],
+      "log": [
+        "base_call"
+      ]
+    },
+    {
+      "id": "TFile-base-call-noncallable",
+      "error": {
+        "name": "TypeError",
+        "message": "e.call is not a function"
+      },
+      "own": [],
+      "log": []
+    },
+    {
+      "id": "TFile-base-call-getter",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              109,
+              100
+            ]
+          }
+        },
+        {
+          "key": "saving",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "number",
+            "value": "0"
+          }
+        },
+        {
+          "key": "stat",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        }
+      ],
+      "log": [
+        "get:base.call"
+      ]
+    },
+    {
+      "id": "TFolder-base-call-object",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "replacement",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": [
+        {
+          "base_call": true,
+          "vault_same": true,
+          "path": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          },
+          "receiver_same": false
+        }
+      ]
+    },
+    {
+      "id": "TFolder-base-call-falsy",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": [
+        "base_call"
+      ]
+    },
+    {
+      "id": "TFolder-base-call-primitive",
+      "error": {
+        "name": "TypeError",
+        "message": "Cannot create property 'children' on string 'YES'"
+      },
+      "own": [],
+      "log": [
+        "base_call"
+      ]
+    },
+    {
+      "id": "TFolder-base-call-noncallable",
+      "error": {
+        "name": "TypeError",
+        "message": "e.call is not a function"
+      },
+      "own": [],
+      "log": []
+    },
+    {
+      "id": "TFolder-base-call-getter",
+      "result": {
+        "identity": "receiver"
+      },
+      "own": [
+        {
+          "key": "parent",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "null"
+          }
+        },
+        {
+          "key": "deleted",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "key": "vault",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "identity": "vault"
+          }
+        },
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          }
+        },
+        {
+          "key": "children",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "Array",
+            "length": 0
+          }
+        }
+      ],
+      "log": [
+        "get:base.call"
+      ]
+    },
+    {
+      "id": "setPath-base-method-replaced",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              79,
+              86,
+              69,
+              82,
+              82,
+              73,
+              68,
+              69
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77,
+              46,
+              90
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              122
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "base_setPath": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "setPath-base-method-call-replaced",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              79,
+              86,
+              69,
+              82,
+              82,
+              73,
+              68,
+              69
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77,
+              46,
+              90
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              122
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "method_call": true,
+          "path": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          },
+          "function_same": true
+        }
+      ]
+    },
+    {
+      "id": "setPath-base-prototype-replaced",
+      "result": {
+        "type": "undefined"
+      },
+      "own": [
+        {
+          "key": "path",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              79,
+              86,
+              69,
+              82,
+              82,
+              73,
+              68,
+              69
+            ]
+          }
+        },
+        {
+          "key": "name",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77,
+              46,
+              90
+            ]
+          }
+        },
+        {
+          "key": "basename",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              67,
+              85,
+              83,
+              84,
+              79,
+              77
+            ]
+          }
+        },
+        {
+          "key": "extension",
+          "enumerable": true,
+          "configurable": true,
+          "writable": true,
+          "value": {
+            "type": "string",
+            "units": [
+              122
+            ]
+          }
+        }
+      ],
+      "log": [
+        {
+          "new_prototype": {
+            "type": "string",
+            "units": [
+              73,
+              110,
+              112,
+              117,
+              116,
+              46,
+              77,
+              68
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "plugin_cleanup": {
+    "exposed": false
+  },
+  "process_cleanup": {
+    "pid": 26105,
+    "exit_code": 0,
+    "stopped": true
+  },
+  "raw_report_sha256": "a790ee3dcda0f109c1eeb18794b000b40ac83783a1afe082eb9c6495682bac6c",
+  "scope": "37 native folder-method observations and13 constructor/base-prototype override outcomes. Dynamic length/coercion, recursive overrides, symbol hasInstance, mutable base constructor call/method/prototype captured. No fullSDK/Vault lifecycle certification."
+}

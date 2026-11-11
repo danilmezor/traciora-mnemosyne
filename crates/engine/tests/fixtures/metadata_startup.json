@@ -1,0 +1,5263 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "scope": "One mixed warm/cold startup after real warm-cache preconditioning. Actual early community plugin onload listeners before Vault.load; controlled real workQueue sentinel holds cold indexing until CLI query. No imported cache, fabricated events, or full arbitrary plugin SDK claim.",
+    "preload_observation": "Transparent preload/initialize wrappers delegate to original methods and return the original promises; completion observers are attached without replacing payloads. Their observer scheduling is explicitly controlled.",
+    "readiness": "Actual initialized + isCacheClean + selected disk/retained stat/hash agreement + stable turns, separate readonly IDB transaction.done.",
+    "initial_workspace": "Warm.md source leaf; no startup opened cold editor work."
+  },
+  "initial_files": {
+    "Warm.md": "# Warm\n[[Cold]]\n"
+  },
+  "offline_files": {
+    "Cold.md": "# Cold\n[[Warm]]\n"
+  },
+  "selected_paths": [
+    "Warm.md",
+    "Cold.md"
+  ],
+  "precondition_committed": {
+    "stored_files": {
+      "Warm.md": {
+        "mtime": 1792013649477,
+        "size": 16,
+        "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+      },
+      "Cold.md": null
+    },
+    "stored_metadata": {
+      "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603": {
+        "links": [
+          {
+            "link": "Cold",
+            "original": "[[Cold]]",
+            "displayText": "Cold",
+            "pos": [
+              1,
+              0,
+              7,
+              1,
+              8,
+              15
+            ]
+          }
+        ],
+        "headings": [
+          {
+            "heading": "Warm",
+            "level": 1,
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              6
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "type": "heading",
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              6
+            ]
+          },
+          {
+            "type": "paragraph",
+            "pos": [
+              1,
+              0,
+              7,
+              1,
+              8,
+              15
+            ]
+          }
+        ]
+      },
+      "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596": {
+        "sections": [
+          {
+            "type": "paragraph",
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              23,
+              23
+            ]
+          }
+        ]
+      }
+    },
+    "commit_barrier": "readonly file/metadata transaction.done"
+  },
+  "cli_pending": {
+    "state": {
+      "files": [
+        "Warm.md",
+        "Cold.md"
+      ],
+      "cache": {
+        "Warm.md": {
+          "links": [
+            {
+              "link": "Cold",
+              "original": "[[Cold]]",
+              "displayText": "Cold",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "col": 8,
+                  "offset": 15
+                }
+              }
+            }
+          ],
+          "headings": [
+            {
+              "heading": "Warm",
+              "level": 1,
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 6,
+                  "offset": 6
+                }
+              }
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 6,
+                  "offset": 6
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "col": 8,
+                  "offset": 15
+                }
+              }
+            }
+          ],
+          "v": 1
+        },
+        "Cold.md": null
+      },
+      "file_info": {
+        "Warm.md": {
+          "mtime": 1792013649477,
+          "size": 16,
+          "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+        },
+        "Cold.md": {
+          "mtime": 0,
+          "size": 0,
+          "hash": ""
+        }
+      },
+      "file_stat": {
+        "Warm.md": {
+          "ctime": 1792013649476,
+          "mtime": 1792013649477,
+          "size": 16
+        },
+        "Cold.md": {
+          "ctime": 1792013649983,
+          "mtime": 1792013649984,
+          "size": 16
+        }
+      },
+      "info_stat_matches": {
+        "Warm.md": true,
+        "Cold.md": false
+      },
+      "resolved": {
+        "Warm.md": {
+          "present": true,
+          "value": {
+            "Cold.md": 1
+          }
+        },
+        "Cold.md": {
+          "present": false,
+          "value": null
+        }
+      },
+      "unresolved": {
+        "Warm.md": {
+          "present": true,
+          "value": {}
+        },
+        "Cold.md": {
+          "present": false,
+          "value": null
+        }
+      },
+      "preload_promise_present": false,
+      "readiness": {
+        "initialized": true,
+        "is_cache_clean": false,
+        "in_progress": 1,
+        "queue_length": 0,
+        "resolver_running": false
+      },
+      "layout_ready": true
+    },
+    "rows": [
+      {
+        "sequence": 0,
+        "kind": "plugin-onload",
+        "state": {
+          "files": [],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 532.3000000119209
+      },
+      {
+        "sequence": 1,
+        "kind": "gate-enter",
+        "state": {
+          "files": [],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 532.5999999940395
+      },
+      {
+        "sequence": 2,
+        "kind": "preload-call",
+        "state": {
+          "files": [],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 533.3000000119209
+      },
+      {
+        "sequence": 3,
+        "kind": "event",
+        "domain": "vault",
+        "name": "create",
+        "path": "Cold.md",
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": null,
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 536.5
+      },
+      {
+        "sequence": 4,
+        "kind": "event",
+        "domain": "vault",
+        "name": "create",
+        "path": "Warm.md",
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 536.7000000178814
+      },
+      {
+        "sequence": 5,
+        "kind": "initialize-enter",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 537
+      },
+      {
+        "sequence": 6,
+        "kind": "preload-call",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 537.2000000178814
+      },
+      {
+        "sequence": 7,
+        "kind": "preload-complete",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 544.5999999940395
+      },
+      {
+        "sequence": 8,
+        "kind": "preload-complete",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 544.9000000059605
+      },
+      {
+        "sequence": 9,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "finished",
+        "path": null,
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 1,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 545.5
+      },
+      {
+        "sequence": 10,
+        "kind": "initialize-return",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 1,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 545.9000000059605
+      },
+      {
+        "sequence": 11,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "resolve",
+        "path": "Warm.md",
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": true
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 546.8000000119209
+      },
+      {
+        "sequence": 12,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "resolved",
+        "path": null,
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 547
+      },
+      {
+        "sequence": 13,
+        "kind": "layout-ready",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 620.4000000059605
+      },
+      {
+        "sequence": 14,
+        "kind": "cli-query",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 962.9000000059605
+      }
+    ],
+    "errors": [],
+    "gate_entered": true,
+    "gate_released": false,
+    "auto_released": false
+  },
+  "pending_committed": {
+    "stored_files": {
+      "Warm.md": {
+        "mtime": 1792013649477,
+        "size": 16,
+        "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+      },
+      "Cold.md": {
+        "mtime": 0,
+        "size": 0,
+        "hash": ""
+      }
+    },
+    "stored_metadata": {
+      "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603": {
+        "links": [
+          {
+            "link": "Cold",
+            "original": "[[Cold]]",
+            "displayText": "Cold",
+            "pos": [
+              1,
+              0,
+              7,
+              1,
+              8,
+              15
+            ]
+          }
+        ],
+        "headings": [
+          {
+            "heading": "Warm",
+            "level": 1,
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              6
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "type": "heading",
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              6
+            ]
+          },
+          {
+            "type": "paragraph",
+            "pos": [
+              1,
+              0,
+              7,
+              1,
+              8,
+              15
+            ]
+          }
+        ],
+        "v": 1
+      },
+      "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596": {
+        "sections": [
+          {
+            "type": "paragraph",
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              23,
+              23
+            ]
+          }
+        ],
+        "v": 1
+      }
+    },
+    "commit_barrier": "readonly file/metadata transaction.done"
+  },
+  "settled": {
+    "state": {
+      "files": [
+        "Warm.md",
+        "Cold.md"
+      ],
+      "cache": {
+        "Warm.md": {
+          "links": [
+            {
+              "link": "Cold",
+              "original": "[[Cold]]",
+              "displayText": "Cold",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "col": 8,
+                  "offset": 15
+                }
+              }
+            }
+          ],
+          "headings": [
+            {
+              "heading": "Warm",
+              "level": 1,
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 6,
+                  "offset": 6
+                }
+              }
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 6,
+                  "offset": 6
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "col": 8,
+                  "offset": 15
+                }
+              }
+            }
+          ],
+          "v": 1
+        },
+        "Cold.md": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "col": 8,
+                  "offset": 15
+                }
+              },
+              "link": "Warm",
+              "original": "[[Warm]]",
+              "displayText": "Warm"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 6,
+                  "offset": 6
+                }
+              },
+              "heading": "Cold",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 6,
+                  "offset": 6
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "col": 8,
+                  "offset": 15
+                }
+              }
+            }
+          ]
+        }
+      },
+      "file_info": {
+        "Warm.md": {
+          "mtime": 1792013649477,
+          "size": 16,
+          "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+        },
+        "Cold.md": {
+          "mtime": 1792013649984,
+          "size": 16,
+          "hash": "453968cac1c088245f05fbde249ebd9099280e6774ee76e4af912b2a71b4c98a"
+        }
+      },
+      "file_stat": {
+        "Warm.md": {
+          "ctime": 1792013649476,
+          "mtime": 1792013649477,
+          "size": 16
+        },
+        "Cold.md": {
+          "ctime": 1792013649983,
+          "mtime": 1792013649984,
+          "size": 16
+        }
+      },
+      "info_stat_matches": {
+        "Warm.md": true,
+        "Cold.md": true
+      },
+      "resolved": {
+        "Warm.md": {
+          "present": true,
+          "value": {
+            "Cold.md": 1
+          }
+        },
+        "Cold.md": {
+          "present": true,
+          "value": {
+            "Warm.md": 1
+          }
+        }
+      },
+      "unresolved": {
+        "Warm.md": {
+          "present": true,
+          "value": {}
+        },
+        "Cold.md": {
+          "present": true,
+          "value": {}
+        }
+      },
+      "preload_promise_present": false,
+      "readiness": {
+        "initialized": true,
+        "is_cache_clean": true,
+        "in_progress": 0,
+        "queue_length": 0,
+        "resolver_running": false
+      },
+      "layout_ready": true
+    },
+    "rows": [
+      {
+        "sequence": 0,
+        "kind": "plugin-onload",
+        "state": {
+          "files": [],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 532.3000000119209
+      },
+      {
+        "sequence": 1,
+        "kind": "gate-enter",
+        "state": {
+          "files": [],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 532.5999999940395
+      },
+      {
+        "sequence": 2,
+        "kind": "preload-call",
+        "state": {
+          "files": [],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 533.3000000119209
+      },
+      {
+        "sequence": 3,
+        "kind": "event",
+        "domain": "vault",
+        "name": "create",
+        "path": "Cold.md",
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": null,
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 536.5
+      },
+      {
+        "sequence": 4,
+        "kind": "event",
+        "domain": "vault",
+        "name": "create",
+        "path": "Warm.md",
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 536.7000000178814
+      },
+      {
+        "sequence": 5,
+        "kind": "initialize-enter",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 537
+      },
+      {
+        "sequence": 6,
+        "kind": "preload-call",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": null,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 537.2000000178814
+      },
+      {
+        "sequence": 7,
+        "kind": "preload-complete",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 544.5999999940395
+      },
+      {
+        "sequence": 8,
+        "kind": "preload-complete",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": null
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": null
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": true,
+          "readiness": {
+            "initialized": false,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 544.9000000059605
+      },
+      {
+        "sequence": 9,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "finished",
+        "path": null,
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 1,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 545.5
+      },
+      {
+        "sequence": 10,
+        "kind": "initialize-return",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": false,
+              "value": null
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 1,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 545.9000000059605
+      },
+      {
+        "sequence": 11,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "resolve",
+        "path": "Warm.md",
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": true
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 546.8000000119209
+      },
+      {
+        "sequence": 12,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "resolved",
+        "path": null,
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": false
+        },
+        "performance_ms": 547
+      },
+      {
+        "sequence": 13,
+        "kind": "layout-ready",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 620.4000000059605
+      },
+      {
+        "sequence": 14,
+        "kind": "cli-query",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 962.9000000059605
+      },
+      {
+        "sequence": 15,
+        "kind": "gate-release",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": null
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 0,
+              "size": 0,
+              "hash": ""
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": false
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 1196.300000011921
+      },
+      {
+        "sequence": 16,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "changed",
+        "path": "Cold.md",
+        "old_path": null,
+        "data": "# Cold\n[[Warm]]\n",
+        "cache_argument": {
+          "links": [
+            {
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "col": 8,
+                  "offset": 15
+                }
+              },
+              "link": "Warm",
+              "original": "[[Warm]]",
+              "displayText": "Warm"
+            }
+          ],
+          "headings": [
+            {
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 6,
+                  "offset": 6
+                }
+              },
+              "heading": "Cold",
+              "level": 1
+            }
+          ],
+          "sections": [
+            {
+              "type": "heading",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "col": 6,
+                  "offset": 6
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "col": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "col": 8,
+                  "offset": 15
+                }
+              }
+            }
+          ]
+        },
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  },
+                  "link": "Warm",
+                  "original": "[[Warm]]",
+                  "displayText": "Warm"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  },
+                  "heading": "Cold",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 1792013649984,
+              "size": 16,
+              "hash": "453968cac1c088245f05fbde249ebd9099280e6774ee76e4af912b2a71b4c98a"
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": true
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": false,
+              "value": null
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 1,
+            "queue_length": 1,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 1200.9000000059605
+      },
+      {
+        "sequence": 17,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "resolve",
+        "path": "Cold.md",
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  },
+                  "link": "Warm",
+                  "original": "[[Warm]]",
+                  "displayText": "Warm"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  },
+                  "heading": "Cold",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 1792013649984,
+              "size": 16,
+              "hash": "453968cac1c088245f05fbde249ebd9099280e6774ee76e4af912b2a71b4c98a"
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": true
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": true,
+              "value": {
+                "Warm.md": 1
+              }
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": true,
+              "value": {}
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": false,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": true
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 1201.300000011921
+      },
+      {
+        "sequence": 18,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "resolved",
+        "path": null,
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  },
+                  "link": "Warm",
+                  "original": "[[Warm]]",
+                  "displayText": "Warm"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  },
+                  "heading": "Cold",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 1792013649984,
+              "size": 16,
+              "hash": "453968cac1c088245f05fbde249ebd9099280e6774ee76e4af912b2a71b4c98a"
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": true
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": true,
+              "value": {
+                "Warm.md": 1
+              }
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": true,
+              "value": {}
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 1201.4000000059605
+      },
+      {
+        "sequence": 19,
+        "kind": "event",
+        "domain": "metadata",
+        "name": "finished",
+        "path": null,
+        "old_path": null,
+        "data": null,
+        "cache_argument": null,
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  },
+                  "link": "Warm",
+                  "original": "[[Warm]]",
+                  "displayText": "Warm"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  },
+                  "heading": "Cold",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 1792013649984,
+              "size": 16,
+              "hash": "453968cac1c088245f05fbde249ebd9099280e6774ee76e4af912b2a71b4c98a"
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": true
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": true,
+              "value": {
+                "Warm.md": 1
+              }
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": true,
+              "value": {}
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 1212.2000000178814
+      },
+      {
+        "sequence": 20,
+        "kind": "settled-query",
+        "state": {
+          "files": [
+            "Warm.md",
+            "Cold.md"
+          ],
+          "cache": {
+            "Warm.md": {
+              "links": [
+                {
+                  "link": "Cold",
+                  "original": "[[Cold]]",
+                  "displayText": "Cold",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "headings": [
+                {
+                  "heading": "Warm",
+                  "level": 1,
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ],
+              "v": 1
+            },
+            "Cold.md": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  },
+                  "link": "Warm",
+                  "original": "[[Warm]]",
+                  "displayText": "Warm"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  },
+                  "heading": "Cold",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 6,
+                      "offset": 6
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 8,
+                      "offset": 15
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "file_info": {
+            "Warm.md": {
+              "mtime": 1792013649477,
+              "size": 16,
+              "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+            },
+            "Cold.md": {
+              "mtime": 1792013649984,
+              "size": 16,
+              "hash": "453968cac1c088245f05fbde249ebd9099280e6774ee76e4af912b2a71b4c98a"
+            }
+          },
+          "file_stat": {
+            "Warm.md": {
+              "ctime": 1792013649476,
+              "mtime": 1792013649477,
+              "size": 16
+            },
+            "Cold.md": {
+              "ctime": 1792013649983,
+              "mtime": 1792013649984,
+              "size": 16
+            }
+          },
+          "info_stat_matches": {
+            "Warm.md": true,
+            "Cold.md": true
+          },
+          "resolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {
+                "Cold.md": 1
+              }
+            },
+            "Cold.md": {
+              "present": true,
+              "value": {
+                "Warm.md": 1
+              }
+            }
+          },
+          "unresolved": {
+            "Warm.md": {
+              "present": true,
+              "value": {}
+            },
+            "Cold.md": {
+              "present": true,
+              "value": {}
+            }
+          },
+          "preload_promise_present": false,
+          "readiness": {
+            "initialized": true,
+            "is_cache_clean": true,
+            "in_progress": 0,
+            "queue_length": 0,
+            "resolver_running": false
+          },
+          "layout_ready": true
+        },
+        "performance_ms": 1241.4000000059605
+      }
+    ],
+    "errors": [],
+    "readiness": {
+      "stable_turns": 2,
+      "polls": 4,
+      "elapsed_ms": 45.20000001788139
+    },
+    "auto_released": false
+  },
+  "settled_committed": {
+    "stored_files": {
+      "Warm.md": {
+        "mtime": 1792013649477,
+        "size": 16,
+        "hash": "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603"
+      },
+      "Cold.md": {
+        "mtime": 1792013649984,
+        "size": 16,
+        "hash": "453968cac1c088245f05fbde249ebd9099280e6774ee76e4af912b2a71b4c98a"
+      }
+    },
+    "stored_metadata": {
+      "11674f46928d01bcae56c60e53a16599c3c7e763e60de0ddf86bfe2297daf603": {
+        "links": [
+          {
+            "link": "Cold",
+            "original": "[[Cold]]",
+            "displayText": "Cold",
+            "pos": [
+              1,
+              0,
+              7,
+              1,
+              8,
+              15
+            ]
+          }
+        ],
+        "headings": [
+          {
+            "heading": "Warm",
+            "level": 1,
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              6
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "type": "heading",
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              6
+            ]
+          },
+          {
+            "type": "paragraph",
+            "pos": [
+              1,
+              0,
+              7,
+              1,
+              8,
+              15
+            ]
+          }
+        ],
+        "v": 1
+      },
+      "453968cac1c088245f05fbde249ebd9099280e6774ee76e4af912b2a71b4c98a": {
+        "links": [
+          {
+            "link": "Warm",
+            "original": "[[Warm]]",
+            "displayText": "Warm",
+            "pos": [
+              1,
+              0,
+              7,
+              1,
+              8,
+              15
+            ]
+          }
+        ],
+        "headings": [
+          {
+            "heading": "Cold",
+            "level": 1,
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              6
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "type": "heading",
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              6
+            ]
+          },
+          {
+            "type": "paragraph",
+            "pos": [
+              1,
+              0,
+              7,
+              1,
+              8,
+              15
+            ]
+          }
+        ]
+      },
+      "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596": {
+        "sections": [
+          {
+            "type": "paragraph",
+            "pos": [
+              0,
+              0,
+              0,
+              0,
+              23,
+              23
+            ]
+          }
+        ],
+        "v": 1
+      }
+    },
+    "commit_barrier": "readonly file/metadata transaction.done"
+  },
+  "file_bytes": {
+    "Warm.md": [
+      35,
+      32,
+      87,
+      97,
+      114,
+      109,
+      10,
+      91,
+      91,
+      67,
+      111,
+      108,
+      100,
+      93,
+      93,
+      10
+    ],
+    "Cold.md": [
+      35,
+      32,
+      67,
+      111,
+      108,
+      100,
+      10,
+      91,
+      91,
+      87,
+      97,
+      114,
+      109,
+      93,
+      93,
+      10
+    ]
+  },
+  "preconditioning": {
+    "initial_bootstrap_files": {
+      "ParityReady.md": "Isolated parity oracle.\n"
+    },
+    "operations": [
+      {
+        "type": "create",
+        "path": "Warm.md",
+        "content": "# Warm\n[[Cold]]\n"
+      },
+      {
+        "type": "delete",
+        "path": "ParityReady.md"
+      }
+    ],
+    "barrier": "Real owner clean followed by readonly IDB transaction.done before stop; then offline Cold creation and same-profile restart."
+  },
+  "evidence": {
+    "rea": "ev_ec0f4aecb61d0ff09a6b07708c23f3d60de2047043523dd75167f0b193fc4e54",
+    "raw_path": "target/rea/p2-events/startup-native.json",
+    "raw_sha256": "07e8782c121a1e0714c6c52f682abe11b89cd4a96c327ecde5b26f96f89e8113",
+    "preconditioning_input_provenance": "Authored inputs from owned helper and capture script; not imported cache state."
+  }
+}

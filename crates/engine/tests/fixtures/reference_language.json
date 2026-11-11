@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2,
+    "navigator_override": "controlled descriptor installed through Electron Debugger Page.addScriptToEvaluateOnNewDocument; Intl default locale is not overridden",
+    "ui_snapshot": "i18next.language observed when defined; public getLanguage export rb is shipped-source-derived and may retain an unknown preference while i18next has no active language."
+  },
+  "cases": [
+    {
+      "id": "stored-fr",
+      "storage": "fr",
+      "navigator": "en-US",
+      "observed": {
+        "ui": "fr",
+        "marker": 123,
+        "ready": true,
+        "navigator": "en-US",
+        "storage": "fr",
+        "moment": "fr",
+        "intl": "en-US",
+        "date": "jeudi 1 janvier 2026 04:05"
+      }
+    },
+    {
+      "id": "stored-zh",
+      "storage": "zh",
+      "navigator": "en-US",
+      "observed": {
+        "ui": "zh",
+        "marker": 123,
+        "ready": true,
+        "navigator": "en-US",
+        "storage": "zh",
+        "moment": "zh-cn",
+        "intl": "en-US",
+        "date": "2026年1月1日星期四凌晨4点05分"
+      }
+    },
+    {
+      "id": "stored-cz",
+      "storage": "cz",
+      "navigator": "en-US",
+      "observed": {
+        "marker": 123,
+        "ready": true,
+        "navigator": "en-US",
+        "storage": "cz",
+        "moment": "cs",
+        "intl": "en-US",
+        "date": "čtvrtek 1. ledna 2026 4:05"
+      }
+    },
+    {
+      "id": "stored-no",
+      "storage": "no",
+      "navigator": "en-US",
+      "observed": {
+        "ui": "no",
+        "marker": 123,
+        "ready": true,
+        "navigator": "en-US",
+        "storage": "no",
+        "moment": "nb",
+        "intl": "en-US",
+        "date": "torsdag 1. januar 2026 kl. 04:05"
+      }
+    },
+    {
+      "id": "stored-enGB",
+      "storage": "en-GB",
+      "navigator": "en-US",
+      "observed": {
+        "ui": "en-GB",
+        "marker": 123,
+        "ready": true,
+        "navigator": "en-US",
+        "storage": "en-GB",
+        "moment": "en-gb",
+        "intl": "en-US",
+        "date": "Thursday, 1 January 2026 04:05"
+      }
+    },
+    {
+      "id": "stored-unknown",
+      "storage": "missing-unknown",
+      "navigator": "en-US",
+      "observed": {
+        "marker": 123,
+        "ready": true,
+        "navigator": "en-US",
+        "storage": "missing-unknown",
+        "moment": "en",
+        "intl": "en-US",
+        "date": "Thursday, January 1, 2026 4:05 AM"
+      }
+    },
+    {
+      "id": "nav-ptBR",
+      "storage": null,
+      "navigator": "pt-BR",
+      "observed": {
+        "ui": "pt-BR",
+        "marker": 123,
+        "ready": true,
+        "navigator": "pt-BR",
+        "storage": null,
+        "moment": "pt-br",
+        "intl": "en-US",
+        "date": "quinta-feira, 1 de janeiro de 2026 às 04:05"
+      }
+    },
+    {
+      "id": "nav-frFR",
+      "storage": null,
+      "navigator": "fr-FR",
+      "observed": {
+        "ui": "fr",
+        "marker": 123,
+        "ready": true,
+        "navigator": "fr-FR",
+        "storage": null,
+        "moment": "fr",
+        "intl": "en-US",
+        "date": "jeudi 1 janvier 2026 04:05"
+      }
+    },
+    {
+      "id": "nav-case-sensitive",
+      "storage": null,
+      "navigator": "FR-fr",
+      "observed": {
+        "marker": 123,
+        "ready": true,
+        "navigator": "FR-fr",
+        "storage": null,
+        "moment": "en",
+        "intl": "en-US",
+        "date": "Thursday, January 1, 2026 4:05 AM"
+      }
+    },
+    {
+      "id": "nav-unknown",
+      "storage": null,
+      "navigator": "xx-XX",
+      "observed": {
+        "marker": 123,
+        "ready": true,
+        "navigator": "xx-XX",
+        "storage": null,
+        "moment": "en",
+        "intl": "en-US",
+        "date": "Thursday, January 1, 2026 4:05 AM"
+      }
+    },
+    {
+      "id": "empty-storage-nav-zhTW",
+      "storage": "",
+      "navigator": "zh-TW",
+      "observed": {
+        "ui": "zh-TW",
+        "marker": 123,
+        "ready": true,
+        "navigator": "zh-TW",
+        "storage": "",
+        "moment": "zh-tw",
+        "intl": "en-US",
+        "date": "2026年1月1日星期四 04:05"
+      }
+    },
+    {
+      "id": "stored-farsi",
+      "storage": "fa",
+      "navigator": "en-US",
+      "observed": {
+        "ui": "fa",
+        "marker": 123,
+        "ready": true,
+        "navigator": "en-US",
+        "storage": "fa",
+        "moment": "fa",
+        "intl": "en-US",
+        "date": "پنج‌شنبه، ۱ ژانویه ۲۰۲۶ ۰۴:۰۵"
+      }
+    }
+  ],
+  "initial": {
+    "navigator": "en-US",
+    "storage": null,
+    "moment": "en",
+    "intl": "en-US"
+  }
+}

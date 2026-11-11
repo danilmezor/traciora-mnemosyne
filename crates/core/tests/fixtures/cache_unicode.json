@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "scope": "Wiki/Markdown/footnote href normalization, displayText/original composition and reference-link omission; frontmatter captured separately for bounded comparison.",
+  "cases": [
+    {
+      "id": "Wiki.md",
+      "source": "[[é|é]] ![[é#Héad|Á]] [[e%CC%81]] [[A B]] [[é]] [[﻿é﻿]] [[é\\]]\n",
+      "cache": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 9,
+                "offset": 9
+              }
+            },
+            "link": "é",
+            "original": "[[é|é]]",
+            "displayText": "é"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 27,
+                "offset": 27
+              },
+              "end": {
+                "line": 0,
+                "col": 38,
+                "offset": 38
+              }
+            },
+            "link": "e%CC%81",
+            "original": "[[e%CC%81]]",
+            "displayText": "e%CC%81"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 39,
+                "offset": 39
+              },
+              "end": {
+                "line": 0,
+                "col": 46,
+                "offset": 46
+              }
+            },
+            "link": "A B",
+            "original": "[[A B]]",
+            "displayText": "A B"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 47,
+                "offset": 47
+              },
+              "end": {
+                "line": 0,
+                "col": 54,
+                "offset": 54
+              }
+            },
+            "link": "é",
+            "original": "[[é]]",
+            "displayText": "é"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 55,
+                "offset": 55
+              },
+              "end": {
+                "line": 0,
+                "col": 62,
+                "offset": 62
+              }
+            },
+            "link": "é",
+            "original": "[[﻿é﻿]]",
+            "displayText": "é"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 63,
+                "offset": 63
+              },
+              "end": {
+                "line": 0,
+                "col": 69,
+                "offset": 69
+              }
+            },
+            "link": "é",
+            "original": "[[é\\]]",
+            "displayText": "é\\"
+          }
+        ],
+        "embeds": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 10,
+                "offset": 10
+              },
+              "end": {
+                "line": 0,
+                "col": 26,
+                "offset": 26
+              }
+            },
+            "link": "é#Héad",
+            "original": "![[é#Héad|Á]]",
+            "displayText": "Á"
+          }
+        ],
+        "sections": [
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 69,
+                "offset": 69
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Markdown.md",
+      "source": "[é](e%CC%81.md) ![é](e%CC%81.png) [x](%GZé.md) ![é](%GZé.png) [ref][r]\n\n[r]: e%CC%81.md\n",
+      "cache": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 16,
+                "offset": 16
+              }
+            },
+            "link": "é.md",
+            "original": "[é](e%CC%81.md)",
+            "displayText": "é"
+          }
+        ],
+        "embeds": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 17,
+                "offset": 17
+              },
+              "end": {
+                "line": 0,
+                "col": 35,
+                "offset": 35
+              }
+            },
+            "link": "é.png",
+            "original": "![é](e%CC%81.png)",
+            "displayText": "é"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 50,
+                "offset": 50
+              },
+              "end": {
+                "line": 0,
+                "col": 66,
+                "offset": 66
+              }
+            },
+            "link": "%GZé.png",
+            "original": "![é](%GZé.png)",
+            "displayText": "é"
+          }
+        ],
+        "referenceLinks": [
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 77
+              },
+              "end": {
+                "line": 2,
+                "col": 15,
+                "offset": 92
+              }
+            },
+            "id": "r",
+            "link": "e%CC%81.md"
+          }
+        ],
+        "sections": [
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 75,
+                "offset": 75
+              }
+            }
+          },
+          {
+            "type": "definition",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 77
+              },
+              "end": {
+                "line": 2,
+                "col": 15,
+                "offset": 92
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Yaml.md",
+      "source": "---\naliases: [é, Á]\nrelated: \"[[é|Á]]\"\nmarkdown: \"[Á](e%CC%81.md)\"\nimage: \"![Á](e%CC%81.png)\"\n---\nYAML.\n",
+      "cache": {
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 5,
+                "col": 3,
+                "offset": 103
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 104
+              },
+              "end": {
+                "line": 6,
+                "col": 5,
+                "offset": 109
+              }
+            }
+          }
+        ],
+        "frontmatter": {
+          "aliases": [
+            "é",
+            "Á"
+          ],
+          "related": "[[é|Á]]",
+          "markdown": "[Á](e%CC%81.md)",
+          "image": "![Á](e%CC%81.png)"
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 5,
+            "col": 3,
+            "offset": 103
+          }
+        },
+        "frontmatterLinks": [
+          {
+            "key": "related",
+            "link": "é",
+            "original": "[[é|Á]]",
+            "displayText": "Á"
+          },
+          {
+            "key": "markdown",
+            "link": "é.md",
+            "original": "[Á](e%CC%81.md)",
+            "displayText": "Á"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Foot.md",
+      "source": "[^id]: [[é|Á]] ![[é]]\n\ntext[^id]\n",
+      "cache": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 7,
+                "offset": 7
+              },
+              "end": {
+                "line": 0,
+                "col": 16,
+                "offset": 16
+              }
+            },
+            "link": "é",
+            "original": "[[é|Á]]",
+            "displayText": "Á"
+          }
+        ],
+        "embeds": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 17,
+                "offset": 17
+              },
+              "end": {
+                "line": 0,
+                "col": 24,
+                "offset": 24
+              }
+            },
+            "link": "é",
+            "original": "![[é]]",
+            "displayText": "é"
+          }
+        ],
+        "footnotes": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 24,
+                "offset": 24
+              }
+            },
+            "id": "id"
+          }
+        ],
+        "footnoteRefs": [
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 4,
+                "offset": 30
+              },
+              "end": {
+                "line": 2,
+                "col": 9,
+                "offset": 35
+              }
+            },
+            "id": "id"
+          }
+        ],
+        "sections": [
+          {
+            "type": "footnoteDefinition",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 24,
+                "offset": 24
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 26
+              },
+              "end": {
+                "line": 2,
+                "col": 9,
+                "offset": 35
+              }
+            }
+          },
+          {
+            "type": "text",
+            "position": {
+              "start": {
+                "line": 3,
+                "col": 0,
+                "offset": 35
+              },
+              "end": {
+                "line": 3,
+                "col": 0,
+                "offset": 35
+              }
+            }
+          },
+          {
+            "type": "element",
+            "position": {
+              "start": {
+                "line": 3,
+                "col": 0,
+                "offset": 35
+              },
+              "end": {
+                "line": 3,
+                "col": 0,
+                "offset": 35
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "reference_worker_js_sha256": "a42f7927658132927e124131fdb7fc69fdb2853097c24158e0fdb245b87c34ae"
+}

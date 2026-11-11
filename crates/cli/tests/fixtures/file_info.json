@@ -1,0 +1,996 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "platform": "darwin",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "scope": "37 native outputs;30 actual raw stat/formatter tuples;18 controlled mtimes; same-physical-file Rust binary comparisons establish birthtime sampling. Retained stat-cache timing and other platforms remain pending. Active-unsaved native output used explicit same-file candidate target, with portable active-target coverage separate.",
+  "source_utf8_byte_anchors": {
+    "handler": 1672515,
+    "desktop_stat_conversion": 549287,
+    "file_name_fields": 1417556
+  },
+  "reports": {
+    "runtime.json": "c7196cf08de008308b3d84b2480fd40f4803cb73cef4c8ba1aff1c78d31d2261",
+    "no-active-runtime.json": "192903e2d951c8667df2da57b28f394f6f1fe68274b75598e0f250bcc08e8592"
+  },
+  "cases": [
+    {
+      "id": "file-Empty.md",
+      "args": [
+        "file",
+        "path=Empty.md"
+      ],
+      "expected": {
+        "stdout": "path\tEmpty.md\nname\tEmpty\nextension\tmd\nsize\t0\ncreated\t1791973119308\nmodified\t1791973119308\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Empty.md",
+      "raw_stat": {
+        "size": 0,
+        "birthtimeMs": 1791973119308.2917,
+        "mtimeMs": 1791973119308.2917,
+        "ctimeMs": 1791973119308.3174
+      },
+      "stat": {
+        "ctime": 1791973119308,
+        "mtime": 1791973119308,
+        "size": 0
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308291734",
+        "mtimeNs": "1791973119308291734"
+      },
+      "content_base64": ""
+    },
+    {
+      "id": "file-Binary.BIN",
+      "args": [
+        "file",
+        "path=Binary.BIN"
+      ],
+      "expected": {
+        "stdout": "path\tBinary.BIN\nname\tBinary\nextension\tbin\nsize\t4\ncreated\t1791973119308\nmodified\t1791973119308\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Binary.BIN",
+      "raw_stat": {
+        "size": 4,
+        "birthtimeMs": 1791973119308.3872,
+        "mtimeMs": 1791973119308.4602,
+        "ctimeMs": 1791973119308.4602
+      },
+      "stat": {
+        "ctime": 1791973119308,
+        "mtime": 1791973119308,
+        "size": 4
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308387317",
+        "mtimeNs": "1791973119308460316"
+      },
+      "content_base64": "AP+ACg=="
+    },
+    {
+      "id": "file-Folder/naïve_日本.MD",
+      "args": [
+        "file",
+        "path=Folder/naïve_日本.MD"
+      ],
+      "expected": {
+        "stdout": "path\tFolder/naïve_日本.MD\nname\tnaïve_日本\nextension\tmd\nsize\t14\ncreated\t1791973119309\nmodified\t1791973119309\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Folder/naïve_日本.MD",
+      "raw_stat": {
+        "size": 14,
+        "birthtimeMs": 1791973119308.6245,
+        "mtimeMs": 1791973119308.6646,
+        "ctimeMs": 1791973119308.6646
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": 1791973119309,
+        "size": 14
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308624607",
+        "mtimeNs": "1791973119308664482"
+      },
+      "content_base64": "VW5pY29kZTog8J+YgAo="
+    },
+    {
+      "id": "file-Archive.TAR.GZ",
+      "args": [
+        "file",
+        "path=Archive.TAR.GZ"
+      ],
+      "expected": {
+        "stdout": "path\tArchive.TAR.GZ\nname\tArchive.TAR\nextension\tgz\nsize\t14\ncreated\t1791973119309\nmodified\t1791973119309\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Archive.TAR.GZ",
+      "raw_stat": {
+        "size": 14,
+        "birthtimeMs": 1791973119308.7136,
+        "mtimeMs": 1791973119308.7512,
+        "ctimeMs": 1791973119308.7512
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": 1791973119309,
+        "size": 14
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308713607",
+        "mtimeNs": "1791973119308751149"
+      },
+      "content_base64": "YXJjaGl2ZSBieXRlcwo="
+    },
+    {
+      "id": "file-NoExtension",
+      "args": [
+        "file",
+        "path=NoExtension"
+      ],
+      "expected": {
+        "stdout": "path\tNoExtension\nname\tNoExtension\nextension\t\nsize\t13\ncreated\t1791973119309\nmodified\t1791973119309\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "NoExtension",
+      "raw_stat": {
+        "size": 13,
+        "birthtimeMs": 1791973119308.7986,
+        "mtimeMs": 1791973119308.8403,
+        "ctimeMs": 1791973119308.8403
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": 1791973119309,
+        "size": 13
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308798607",
+        "mtimeNs": "1791973119308840357"
+      },
+      "content_base64": "bm8gZXh0ZW5zaW9uCg=="
+    },
+    {
+      "id": "file-Trailing.",
+      "args": [
+        "file",
+        "path=Trailing."
+      ],
+      "expected": {
+        "stdout": "path\tTrailing.\nname\tTrailing.\nextension\t\nsize\t13\ncreated\t1791973119309\nmodified\t1791973119309\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Trailing.",
+      "raw_stat": {
+        "size": 13,
+        "birthtimeMs": 1791973119308.885,
+        "mtimeMs": 1791973119308.9248,
+        "ctimeMs": 1791973119308.9248
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": 1791973119309,
+        "size": 13
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308884940",
+        "mtimeNs": "1791973119308924898"
+      },
+      "content_base64": "dHJhaWxpbmcgZG90Cg=="
+    },
+    {
+      "id": "file-part.note.MD",
+      "args": [
+        "file",
+        "path=part.note.MD"
+      ],
+      "expected": {
+        "stdout": "path\tpart.note.MD\nname\tpart.note\nextension\tmd\nsize\t20\ncreated\t1791973119309\nmodified\t1791973119309\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "part.note.MD",
+      "raw_stat": {
+        "size": 20,
+        "birthtimeMs": 1791973119308.975,
+        "mtimeMs": 1791973119309.0105,
+        "ctimeMs": 1791973119309.0105
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": 1791973119309,
+        "size": 20
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308975023",
+        "mtimeNs": "1791973119309010523"
+      },
+      "content_base64": "bXVsdGlwbGUgZXh0ZW5zaW9ucwo="
+    },
+    {
+      "id": "file-Case.İ",
+      "args": [
+        "file",
+        "path=Case.İ"
+      ],
+      "expected": {
+        "stdout": "path\tCase.İ\nname\tCase\nextension\ti̇\nsize\t18\ncreated\t1791973119309\nmodified\t1791973119309\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Case.İ",
+      "raw_stat": {
+        "size": 18,
+        "birthtimeMs": 1791973119309.0657,
+        "mtimeMs": 1791973119309.0989,
+        "ctimeMs": 1791973119309.0989
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": 1791973119309,
+        "size": 18
+      },
+      "ns": {
+        "birthtimeNs": "1791973119309065647",
+        "mtimeNs": "1791973119309098897"
+      },
+      "content_base64": "dW5pY29kZSBleHRlbnNpb24K"
+    },
+    {
+      "id": "mtime--1500001",
+      "args": [
+        "file",
+        "path=Times/T00.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T00.md\nname\tT00\nextension\tmd\nsize\t26\ncreated\t1791973119309\nmodified\t-2\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T00.md",
+      "raw_stat": {
+        "size": 26,
+        "birthtimeMs": 1791973119309.1748,
+        "mtimeMs": -1.5000009999999975,
+        "ctimeMs": 1791973119310.6604
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": -2,
+        "size": 26
+      },
+      "ns": {
+        "birthtimeNs": "1791973119309174814",
+        "mtimeNs": "-1500001"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAtMTUwMDAwMQo=",
+      "requested_mtime_ns": "-1500001"
+    },
+    {
+      "id": "mtime--1500000",
+      "args": [
+        "file",
+        "path=Times/T01.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T01.md\nname\tT01\nextension\tmd\nsize\t26\ncreated\t1791973119309\nmodified\t-1\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T01.md",
+      "raw_stat": {
+        "size": 26,
+        "birthtimeMs": 1791973119309.258,
+        "mtimeMs": -1.5,
+        "ctimeMs": 1791973119310.6804
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": -1,
+        "size": 26
+      },
+      "ns": {
+        "birthtimeNs": "1791973119309258147",
+        "mtimeNs": "-1500000"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAtMTUwMDAwMAo=",
+      "requested_mtime_ns": "-1500000"
+    },
+    {
+      "id": "mtime--1499999",
+      "args": [
+        "file",
+        "path=Times/T02.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T02.md\nname\tT02\nextension\tmd\nsize\t26\ncreated\t1791973119309\nmodified\t-1\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T02.md",
+      "raw_stat": {
+        "size": 26,
+        "birthtimeMs": 1791973119309.3384,
+        "mtimeMs": -1.4999990000000025,
+        "ctimeMs": 1791973119310.698
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": -1,
+        "size": 26
+      },
+      "ns": {
+        "birthtimeNs": "1791973119309338271",
+        "mtimeNs": "-1499999"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAtMTQ5OTk5OQo=",
+      "requested_mtime_ns": "-1499999"
+    },
+    {
+      "id": "mtime--500001",
+      "args": [
+        "file",
+        "path=Times/T03.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T03.md\nname\tT03\nextension\tmd\nsize\t25\ncreated\t1791973119309\nmodified\t-1\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T03.md",
+      "raw_stat": {
+        "size": 25,
+        "birthtimeMs": 1791973119309.4197,
+        "mtimeMs": -0.5000009999999975,
+        "ctimeMs": 1791973119310.716
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": -1,
+        "size": 25
+      },
+      "ns": {
+        "birthtimeNs": "1791973119309419688",
+        "mtimeNs": "-500001"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAtNTAwMDAxCg==",
+      "requested_mtime_ns": "-500001"
+    },
+    {
+      "id": "mtime--500000",
+      "args": [
+        "file",
+        "path=Times/T04.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T04.md\nname\tT04\nextension\tmd\nsize\t25\ncreated\t1791973119310\nmodified\t0\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T04.md",
+      "raw_stat": {
+        "size": 25,
+        "birthtimeMs": 1791973119309.502,
+        "mtimeMs": -0.5,
+        "ctimeMs": 1791973119310.733
+      },
+      "stat": {
+        "ctime": 1791973119310,
+        "mtime": 0,
+        "size": 25
+      },
+      "ns": {
+        "birthtimeNs": "1791973119309501938",
+        "mtimeNs": "-500000"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAtNTAwMDAwCg==",
+      "requested_mtime_ns": "-500000"
+    },
+    {
+      "id": "mtime--499999",
+      "args": [
+        "file",
+        "path=Times/T05.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T05.md\nname\tT05\nextension\tmd\nsize\t25\ncreated\t1791973119310\nmodified\t0\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T05.md",
+      "raw_stat": {
+        "size": 25,
+        "birthtimeMs": 1791973119309.5828,
+        "mtimeMs": -0.4999990000000025,
+        "ctimeMs": 1791973119310.7512
+      },
+      "stat": {
+        "ctime": 1791973119310,
+        "mtime": 0,
+        "size": 25
+      },
+      "ns": {
+        "birthtimeNs": "1791973119309582771",
+        "mtimeNs": "-499999"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAtNDk5OTk5Cg==",
+      "requested_mtime_ns": "-499999"
+    },
+    {
+      "id": "mtime--1",
+      "args": [
+        "file",
+        "path=Times/T06.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T06.md\nname\tT06\nextension\tmd\nsize\t20\ncreated\t1791973119310\nmodified\t0\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T06.md",
+      "raw_stat": {
+        "size": 20,
+        "birthtimeMs": 1791973119309.657,
+        "mtimeMs": -9.999999974752427e-07,
+        "ctimeMs": 1791973119310.7683
+      },
+      "stat": {
+        "ctime": 1791973119310,
+        "mtime": 0,
+        "size": 20
+      },
+      "ns": {
+        "birthtimeNs": "1791973119309656979",
+        "mtimeNs": "-1"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAtMQo=",
+      "requested_mtime_ns": "-1"
+    },
+    {
+      "id": "mtime-0",
+      "args": [
+        "file",
+        "path=Times/T07.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T07.md\nname\tT07\nextension\tmd\nsize\t19\ncreated\t0\nmodified\t0\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T07.md",
+      "raw_stat": {
+        "size": 19,
+        "birthtimeMs": 0,
+        "mtimeMs": 0,
+        "ctimeMs": 1791973119310.785
+      },
+      "stat": {
+        "ctime": 0,
+        "mtime": 0,
+        "size": 19
+      },
+      "ns": {
+        "birthtimeNs": "0",
+        "mtimeNs": "0"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAwCg==",
+      "requested_mtime_ns": "0"
+    },
+    {
+      "id": "mtime-1",
+      "args": [
+        "file",
+        "path=Times/T08.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T08.md\nname\tT08\nextension\tmd\nsize\t19\ncreated\t0\nmodified\t0\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T08.md",
+      "raw_stat": {
+        "size": 19,
+        "birthtimeMs": 1e-06,
+        "mtimeMs": 1e-06,
+        "ctimeMs": 1791973119310.8037
+      },
+      "stat": {
+        "ctime": 0,
+        "mtime": 0,
+        "size": 19
+      },
+      "ns": {
+        "birthtimeNs": "1",
+        "mtimeNs": "1"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAxCg==",
+      "requested_mtime_ns": "1"
+    },
+    {
+      "id": "mtime-499999",
+      "args": [
+        "file",
+        "path=Times/T09.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T09.md\nname\tT09\nextension\tmd\nsize\t24\ncreated\t0\nmodified\t0\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T09.md",
+      "raw_stat": {
+        "size": 24,
+        "birthtimeMs": 0.499999,
+        "mtimeMs": 0.499999,
+        "ctimeMs": 1791973119310.821
+      },
+      "stat": {
+        "ctime": 0,
+        "mtime": 0,
+        "size": 24
+      },
+      "ns": {
+        "birthtimeNs": "499999",
+        "mtimeNs": "499999"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSA0OTk5OTkK",
+      "requested_mtime_ns": "499999"
+    },
+    {
+      "id": "mtime-500000",
+      "args": [
+        "file",
+        "path=Times/T10.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T10.md\nname\tT10\nextension\tmd\nsize\t24\ncreated\t1\nmodified\t1\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T10.md",
+      "raw_stat": {
+        "size": 24,
+        "birthtimeMs": 0.5,
+        "mtimeMs": 0.5,
+        "ctimeMs": 1791973119310.8384
+      },
+      "stat": {
+        "ctime": 1,
+        "mtime": 1,
+        "size": 24
+      },
+      "ns": {
+        "birthtimeNs": "500000",
+        "mtimeNs": "500000"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSA1MDAwMDAK",
+      "requested_mtime_ns": "500000"
+    },
+    {
+      "id": "mtime-500001",
+      "args": [
+        "file",
+        "path=Times/T11.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T11.md\nname\tT11\nextension\tmd\nsize\t24\ncreated\t1\nmodified\t1\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T11.md",
+      "raw_stat": {
+        "size": 24,
+        "birthtimeMs": 0.500001,
+        "mtimeMs": 0.500001,
+        "ctimeMs": 1791973119310.855
+      },
+      "stat": {
+        "ctime": 1,
+        "mtime": 1,
+        "size": 24
+      },
+      "ns": {
+        "birthtimeNs": "500001",
+        "mtimeNs": "500001"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSA1MDAwMDEK",
+      "requested_mtime_ns": "500001"
+    },
+    {
+      "id": "mtime-1499999",
+      "args": [
+        "file",
+        "path=Times/T12.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T12.md\nname\tT12\nextension\tmd\nsize\t25\ncreated\t1\nmodified\t1\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T12.md",
+      "raw_stat": {
+        "size": 25,
+        "birthtimeMs": 1.499999,
+        "mtimeMs": 1.499999,
+        "ctimeMs": 1791973119310.8704
+      },
+      "stat": {
+        "ctime": 1,
+        "mtime": 1,
+        "size": 25
+      },
+      "ns": {
+        "birthtimeNs": "1499999",
+        "mtimeNs": "1499999"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAxNDk5OTk5Cg==",
+      "requested_mtime_ns": "1499999"
+    },
+    {
+      "id": "mtime-1500000",
+      "args": [
+        "file",
+        "path=Times/T13.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T13.md\nname\tT13\nextension\tmd\nsize\t25\ncreated\t2\nmodified\t2\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T13.md",
+      "raw_stat": {
+        "size": 25,
+        "birthtimeMs": 1.5,
+        "mtimeMs": 1.5,
+        "ctimeMs": 1791973119310.8862
+      },
+      "stat": {
+        "ctime": 2,
+        "mtime": 2,
+        "size": 25
+      },
+      "ns": {
+        "birthtimeNs": "1500000",
+        "mtimeNs": "1500000"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAxNTAwMDAwCg==",
+      "requested_mtime_ns": "1500000"
+    },
+    {
+      "id": "mtime-1500001",
+      "args": [
+        "file",
+        "path=Times/T14.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T14.md\nname\tT14\nextension\tmd\nsize\t25\ncreated\t2\nmodified\t2\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T14.md",
+      "raw_stat": {
+        "size": 25,
+        "birthtimeMs": 1.500001,
+        "mtimeMs": 1.500001,
+        "ctimeMs": 1791973119310.9014
+      },
+      "stat": {
+        "ctime": 2,
+        "mtime": 2,
+        "size": 25
+      },
+      "ns": {
+        "birthtimeNs": "1500001",
+        "mtimeNs": "1500001"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAxNTAwMDAxCg==",
+      "requested_mtime_ns": "1500001"
+    },
+    {
+      "id": "mtime-1700000000000499999",
+      "args": [
+        "file",
+        "path=Times/T15.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T15.md\nname\tT15\nextension\tmd\nsize\t37\ncreated\t1700000000001\nmodified\t1700000000001\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T15.md",
+      "raw_stat": {
+        "size": 37,
+        "birthtimeMs": 1700000000000.5,
+        "mtimeMs": 1700000000000.5,
+        "ctimeMs": 1791973119310.9167
+      },
+      "stat": {
+        "ctime": 1700000000001,
+        "mtime": 1700000000001,
+        "size": 37
+      },
+      "ns": {
+        "birthtimeNs": "1700000000000499999",
+        "mtimeNs": "1700000000000499999"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAxNzAwMDAwMDAwMDAwNDk5OTk5Cg==",
+      "requested_mtime_ns": "1700000000000499999"
+    },
+    {
+      "id": "mtime-1700000000000500000",
+      "args": [
+        "file",
+        "path=Times/T16.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T16.md\nname\tT16\nextension\tmd\nsize\t37\ncreated\t1700000000001\nmodified\t1700000000001\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T16.md",
+      "raw_stat": {
+        "size": 37,
+        "birthtimeMs": 1700000000000.5,
+        "mtimeMs": 1700000000000.5,
+        "ctimeMs": 1791973119310.9434
+      },
+      "stat": {
+        "ctime": 1700000000001,
+        "mtime": 1700000000001,
+        "size": 37
+      },
+      "ns": {
+        "birthtimeNs": "1700000000000500000",
+        "mtimeNs": "1700000000000500000"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAxNzAwMDAwMDAwMDAwNTAwMDAwCg==",
+      "requested_mtime_ns": "1700000000000500000"
+    },
+    {
+      "id": "mtime-1700000000000500001",
+      "args": [
+        "file",
+        "path=Times/T17.md"
+      ],
+      "expected": {
+        "stdout": "path\tTimes/T17.md\nname\tT17\nextension\tmd\nsize\t37\ncreated\t1700000000001\nmodified\t1700000000001\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Times/T17.md",
+      "raw_stat": {
+        "size": 37,
+        "birthtimeMs": 1700000000000.5,
+        "mtimeMs": 1700000000000.5,
+        "ctimeMs": 1791973119310.9617
+      },
+      "stat": {
+        "ctime": 1700000000001,
+        "mtime": 1700000000001,
+        "size": 37
+      },
+      "ns": {
+        "birthtimeNs": "1700000000000500001",
+        "mtimeNs": "1700000000000500001"
+      },
+      "content_base64": "Q29udHJvbGxlZCBtdGltZSAxNzAwMDAwMDAwMDAwNTAwMDAxCg==",
+      "requested_mtime_ns": "1700000000000500001"
+    },
+    {
+      "id": "basename-upper",
+      "args": [
+        "file",
+        "file=part.note"
+      ],
+      "expected": {
+        "stdout": "path\tpart.note.MD\nname\tpart.note\nextension\tmd\nsize\t20\ncreated\t1791973119309\nmodified\t1791973119309\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "part.note.MD",
+      "raw_stat": {
+        "size": 20,
+        "birthtimeMs": 1791973119308.975,
+        "mtimeMs": 1791973119309.0105,
+        "ctimeMs": 1791973119309.0105
+      },
+      "stat": {
+        "ctime": 1791973119309,
+        "mtime": 1791973119309,
+        "size": 20
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308975023",
+        "mtimeNs": "1791973119309010523"
+      },
+      "content_base64": "bXVsdGlwbGUgZXh0ZW5zaW9ucwo="
+    },
+    {
+      "id": "binary-fullname",
+      "args": [
+        "file",
+        "file=Binary.BIN"
+      ],
+      "expected": {
+        "stdout": "path\tBinary.BIN\nname\tBinary\nextension\tbin\nsize\t4\ncreated\t1791973119308\nmodified\t1791973119308\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Binary.BIN",
+      "raw_stat": {
+        "size": 4,
+        "birthtimeMs": 1791973119308.3872,
+        "mtimeMs": 1791973119308.4602,
+        "ctimeMs": 1791973119308.4602
+      },
+      "stat": {
+        "ctime": 1791973119308,
+        "mtime": 1791973119308,
+        "size": 4
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308387317",
+        "mtimeNs": "1791973119308460316"
+      },
+      "content_base64": "AP+ACg=="
+    },
+    {
+      "id": "precedence",
+      "args": [
+        "file",
+        "file=Binary.BIN",
+        "path=Empty.md"
+      ],
+      "expected": {
+        "stdout": "path\tEmpty.md\nname\tEmpty\nextension\tmd\nsize\t0\ncreated\t1791973119308\nmodified\t1791973119308\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Empty.md",
+      "raw_stat": {
+        "size": 0,
+        "birthtimeMs": 1791973119308.2917,
+        "mtimeMs": 1791973119308.2917,
+        "ctimeMs": 1791973119308.3174
+      },
+      "stat": {
+        "ctime": 1791973119308,
+        "mtime": 1791973119308,
+        "size": 0
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308291734",
+        "mtimeNs": "1791973119308291734"
+      },
+      "content_base64": ""
+    },
+    {
+      "id": "empty-path",
+      "args": [
+        "file",
+        "path=",
+        "file=NoExtension"
+      ],
+      "expected": {
+        "stdout": "Error: File \"NoExtension\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "missing",
+      "args": [
+        "file",
+        "path=Missing.md"
+      ],
+      "expected": {
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "folder",
+      "args": [
+        "file",
+        "path=Folder"
+      ],
+      "expected": {
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "exact-extension",
+      "args": [
+        "file",
+        "path=Empty"
+      ],
+      "expected": {
+        "stdout": "Error: File \"Empty\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "hidden",
+      "args": [
+        "file",
+        "path=.obsidian/app.json"
+      ],
+      "expected": {
+        "stdout": "Error: File \".obsidian/app.json\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "bare-path",
+      "args": [
+        "file",
+        "path"
+      ],
+      "expected": {
+        "stdout": "Error: File \"true\" not found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "active-unsaved",
+      "args": [
+        "file"
+      ],
+      "expected": {
+        "stdout": "path\tEmpty.md\nname\tEmpty\nextension\tmd\nsize\t0\ncreated\t1791973119308\nmodified\t1791973119308\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "path": "Empty.md",
+      "raw_stat": {
+        "size": 0,
+        "birthtimeMs": 1791973119308.2917,
+        "mtimeMs": 1791973119308.2917,
+        "ctimeMs": 1791973119308.3174
+      },
+      "stat": {
+        "ctime": 1791973119308,
+        "mtime": 1791973119308,
+        "size": 0
+      },
+      "ns": {
+        "birthtimeNs": "1791973119308291734",
+        "mtimeNs": "1791973119308291734"
+      },
+      "content_base64": "",
+      "editor": {
+        "active": "Empty.md",
+        "editor": "Unsaved editor contents that exceed the saved empty file."
+      },
+      "pairing_scope": "Candidate uses explicit same physical file; portable Engine active-target case separately covers dirty buffer selection."
+    },
+    {
+      "id": "no-active",
+      "args": [
+        "file"
+      ],
+      "expected": {
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    }
+  ]
+}

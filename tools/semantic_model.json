@@ -1,0 +1,20 @@
+{
+  "model": "intfloat/multilingual-e5-small",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "model_license": "MIT",
+  "model_card": "https://huggingface.co/intfloat/multilingual-e5-small/tree/614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dimensions": 384,
+  "pooling": "attention-mask mean, then L2 normalization",
+  "prefixes": {"query":"query: ","document":"passage: "},
+  "max_tokens": 512,
+  "runtime": "Microsoft ONNX Runtime 1.22.0 CPU, macOS arm64",
+  "runtime_license": "MIT",
+  "artifacts": [
+    {"name":"model.onnx","url":"https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/onnx/model_qint8_avx512_vnni.onnx","sha256":"dd476dd0c2514e9b9be83aeb3853fac0763e0bdf4a71645407587d77c48a2d88"},
+    {"name":"tokenizer.json","url":"https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/tokenizer.json","sha256":"0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39"},
+    {"name":"runtime.tgz","url":"https://github.com/microsoft/onnxruntime/releases/download/v1.22.0/onnxruntime-osx-arm64-1.22.0.tgz","sha256":"cab6dcbd77e7ec775390e7b73a8939d45fec3379b017c7cb74f5b204c1a1cc07"}
+  ],
+  "runtime_library":"onnxruntime-osx-arm64-1.22.0/lib/libonnxruntime.1.22.0.dylib",
+  "runtime_library_sha256":"2b885992d3d6fa4130d39ec84a80d7504ff52750027c547bb22c86165f19406a",
+  "limits":"One optional pinned model and runtime, not a mandated production model or a cross-platform runtime. Weights and runtime are not committed."
+}

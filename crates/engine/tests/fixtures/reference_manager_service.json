@@ -1,0 +1,1490 @@
+{
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "owned_profile": true,
+    "use_mock_keychain": true,
+    "direct_internal_manager": true,
+    "no_plugin_fixture": true,
+    "request_pacing_seconds": 0.2
+  },
+  "cases": [
+    {
+      "id": "layout",
+      "code": "(()=>{const m=app.metadataTypeManager,desc=o=>Object.entries(Object.getOwnPropertyDescriptors(o)).map(([key,d])=>({key,enumerable:d.enumerable,configurable:d.configurable,writable:d.writable,type:typeof d.value,function:typeof d.value==='function'?{name:d.value.name,length:d.value.length}:null})),chain=[];for(let o=m;o;o=Object.getPrototypeOf(o))chain.push({constructor:o.constructor.name,keys:Reflect.ownKeys(o).map(String),descriptors:desc(o)});return JSON.stringify({chain,assignedKeys:Object.keys(m.assignedWidgets),propertiesKeys:Object.keys(m.properties),loaded:m._loaded,lastSave:m.lastSave,events:Object.entries(m._).map(([key,v])=>({key,records:v.map(x=>({keys:Object.keys(x),owner:x.e===m,ctx:x.ctx===m,name:x.name,functionName:x.fn.name,fnRebuild:x.fn===m.rebuildProperties}))})),widgets:Object.entries(m.registeredTypeWidgets).map(([key,w])=>({key,name:w.constructor.name,fields:desc(w)}))})})()",
+      "result": {
+        "chain": [
+          {
+            "constructor": "t",
+            "keys": [
+              "_",
+              "assignedWidgets",
+              "lastSave",
+              "properties",
+              "_loaded",
+              "onConfigFileChange",
+              "app",
+              "registeredTypeWidgets"
+            ],
+            "descriptors": [
+              {
+                "key": "_",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "assignedWidgets",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "lastSave",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "number",
+                "function": null
+              },
+              {
+                "key": "properties",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "_loaded",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "boolean",
+                "function": null
+              },
+              {
+                "key": "onConfigFileChange",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "h",
+                  "length": 0
+                }
+              },
+              {
+                "key": "app",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "registeredTypeWidgets",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              }
+            ]
+          },
+          {
+            "constructor": "t",
+            "keys": [
+              "constructor",
+              "load",
+              "registerListeners",
+              "onRaw",
+              "onCacheChanged",
+              "onCacheFinished",
+              "onVaultConfigChanged",
+              "rebuildProperties",
+              "getAllProperties",
+              "getPropertyOccurrences",
+              "getAssignedWidget",
+              "getWidget",
+              "getTypeInfo",
+              "getPropertyInfo",
+              "loadData",
+              "save",
+              "setType",
+              "unsetType",
+              "trigger",
+              "on"
+            ],
+            "descriptors": [
+              {
+                "key": "constructor",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "t",
+                  "length": 1
+                }
+              },
+              {
+                "key": "load",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 0
+                }
+              },
+              {
+                "key": "registerListeners",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 0
+                }
+              },
+              {
+                "key": "onRaw",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "onCacheChanged",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 3
+                }
+              },
+              {
+                "key": "onCacheFinished",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 0
+                }
+              },
+              {
+                "key": "onVaultConfigChanged",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "rebuildProperties",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 0
+                }
+              },
+              {
+                "key": "getAllProperties",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 0
+                }
+              },
+              {
+                "key": "getPropertyOccurrences",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 0
+                }
+              },
+              {
+                "key": "getAssignedWidget",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "getWidget",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "getTypeInfo",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 2
+                }
+              },
+              {
+                "key": "getPropertyInfo",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "loadData",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 0
+                }
+              },
+              {
+                "key": "save",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 0
+                }
+              },
+              {
+                "key": "setType",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 2
+                }
+              },
+              {
+                "key": "unsetType",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "trigger",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "on",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "constructor": "e",
+            "keys": [
+              "constructor",
+              "on",
+              "off",
+              "offref",
+              "trigger",
+              "tryTrigger"
+            ],
+            "descriptors": [
+              {
+                "key": "constructor",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "e",
+                  "length": 0
+                }
+              },
+              {
+                "key": "on",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 3
+                }
+              },
+              {
+                "key": "off",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 2
+                }
+              },
+              {
+                "key": "offref",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "trigger",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 1
+                }
+              },
+              {
+                "key": "tryTrigger",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "",
+                  "length": 2
+                }
+              }
+            ]
+          },
+          {
+            "constructor": "Object",
+            "keys": [
+              "constructor",
+              "__defineGetter__",
+              "__defineSetter__",
+              "hasOwnProperty",
+              "__lookupGetter__",
+              "__lookupSetter__",
+              "isPrototypeOf",
+              "propertyIsEnumerable",
+              "toString",
+              "valueOf",
+              "__proto__",
+              "toLocaleString"
+            ],
+            "descriptors": [
+              {
+                "key": "constructor",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "Object",
+                  "length": 1
+                }
+              },
+              {
+                "key": "__defineGetter__",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "__defineGetter__",
+                  "length": 2
+                }
+              },
+              {
+                "key": "__defineSetter__",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "__defineSetter__",
+                  "length": 2
+                }
+              },
+              {
+                "key": "hasOwnProperty",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "hasOwnProperty",
+                  "length": 1
+                }
+              },
+              {
+                "key": "__lookupGetter__",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "__lookupGetter__",
+                  "length": 1
+                }
+              },
+              {
+                "key": "__lookupSetter__",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "__lookupSetter__",
+                  "length": 1
+                }
+              },
+              {
+                "key": "isPrototypeOf",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "isPrototypeOf",
+                  "length": 1
+                }
+              },
+              {
+                "key": "propertyIsEnumerable",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "propertyIsEnumerable",
+                  "length": 1
+                }
+              },
+              {
+                "key": "toString",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "toString",
+                  "length": 0
+                }
+              },
+              {
+                "key": "valueOf",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "valueOf",
+                  "length": 0
+                }
+              },
+              {
+                "key": "__proto__",
+                "enumerable": false,
+                "configurable": true,
+                "type": "undefined",
+                "function": null
+              },
+              {
+                "key": "toLocaleString",
+                "enumerable": false,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "toLocaleString",
+                  "length": 0
+                }
+              }
+            ]
+          }
+        ],
+        "assignedKeys": [
+          "aliases",
+          "cssclasses",
+          "tags"
+        ],
+        "propertiesKeys": [
+          "aliases",
+          "cssclasses",
+          "tags"
+        ],
+        "loaded": true,
+        "lastSave": 0,
+        "events": [
+          {
+            "key": "changed",
+            "records": [
+              {
+                "keys": [
+                  "e",
+                  "name",
+                  "fn",
+                  "ctx"
+                ],
+                "owner": true,
+                "ctx": true,
+                "name": "changed",
+                "functionName": "",
+                "fnRebuild": true
+              },
+              {
+                "keys": [
+                  "e",
+                  "name",
+                  "fn",
+                  "ctx"
+                ],
+                "owner": true,
+                "ctx": false,
+                "name": "changed",
+                "functionName": "",
+                "fnRebuild": false
+              }
+            ]
+          }
+        ],
+        "widgets": [
+          {
+            "key": "aliases",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-aliases.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-aliases.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "reservedKeys",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "checkbox",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-checkbox.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-checkbox.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "date",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-date.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-date.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "datetime",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-datetime.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-datetime.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "file",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-file.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-file.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "reservedKeys",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "folder",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-folder.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-folder.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "reservedKeys",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "multitext",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-multitext.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-multitext.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "property",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-property-name.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-property-name.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "reservedKeys",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "number",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-number.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-number.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "tags",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-tags.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-tags.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "reservedKeys",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "object",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          },
+          {
+            "key": "text",
+            "name": "Object",
+            "fields": [
+              {
+                "key": "name",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "properties.types.option-text.name.to-j-s-o-n.name",
+                  "length": "properties.types.option-text.length.to-j-s-o-n.length"
+                }
+              },
+              {
+                "key": "type",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "icon",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "string",
+                "function": null
+              },
+              {
+                "key": "validate",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "validate",
+                  "length": 1
+                }
+              },
+              {
+                "key": "render",
+                "enumerable": true,
+                "configurable": true,
+                "writable": true,
+                "type": "function",
+                "function": {
+                  "name": "render",
+                  "length": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "borrowed-getters",
+      "code": "(()=>{const m=app.metadataTypeManager,marker={},holder={assignedWidgets:{case:{name:'CASE',widget:marker}},properties:{case:{name:'CASE',widget:marker}}},cases=[];for(const [id,fn,args]of [['assigned',m.getAssignedWidget,['CASE']],['known-info',m.getPropertyInfo,['CASE']],['unknown-info',m.getPropertyInfo,['UnKnOwN']],['all',m.getAllProperties,[]]]){try{const value=fn.apply(holder,args);cases.push({id,marker:value===marker,known:value===holder.properties.case,all:value===holder.properties,unknown:value&&value.name==='UnKnOwN'?{name:value.name,widget:value.widget}:null})}catch(e){cases.push({id,error:{name:e.name,message:e.message}})}}return JSON.stringify(cases)})()",
+      "result": [
+        {
+          "id": "assigned",
+          "marker": true,
+          "known": false,
+          "all": false,
+          "unknown": null
+        },
+        {
+          "id": "known-info",
+          "marker": false,
+          "known": true,
+          "all": false,
+          "unknown": null
+        },
+        {
+          "id": "unknown-info",
+          "marker": false,
+          "known": false,
+          "all": false,
+          "unknown": {
+            "name": "UnKnOwN",
+            "widget": "text"
+          }
+        },
+        {
+          "id": "all",
+          "marker": false,
+          "known": false,
+          "all": true,
+          "unknown": null
+        }
+      ]
+    },
+    {
+      "id": "arguments",
+      "code": "(()=>{const m=app.metadataTypeManager,rows=[];for(const name of [undefined,null,0,true,{},'UnKnOwN'])for(const method of ['getAssignedWidget','getPropertyInfo']){try{let value=m[method](name);rows.push({method,input:typeof name+':'+String(name),value})}catch(e){rows.push({method,input:typeof name+':'+String(name),error:{name:e.name,message:e.message}})}}let calls=[];let name={toLowerCase(){calls.push('lower');return'tags'}};rows.push({id:'custom-lower',value:m.getAssignedWidget(name),calls});return JSON.stringify(rows)})()",
+      "result": [
+        {
+          "method": "getAssignedWidget",
+          "input": "undefined:undefined",
+          "error": {
+            "name": "TypeError",
+            "message": "Cannot read properties of undefined (reading 'toLowerCase')"
+          }
+        },
+        {
+          "method": "getPropertyInfo",
+          "input": "undefined:undefined",
+          "error": {
+            "name": "TypeError",
+            "message": "Cannot read properties of undefined (reading 'toLowerCase')"
+          }
+        },
+        {
+          "method": "getAssignedWidget",
+          "input": "object:null",
+          "error": {
+            "name": "TypeError",
+            "message": "Cannot read properties of null (reading 'toLowerCase')"
+          }
+        },
+        {
+          "method": "getPropertyInfo",
+          "input": "object:null",
+          "error": {
+            "name": "TypeError",
+            "message": "Cannot read properties of null (reading 'toLowerCase')"
+          }
+        },
+        {
+          "method": "getAssignedWidget",
+          "input": "number:0",
+          "error": {
+            "name": "TypeError",
+            "message": "e.toLowerCase is not a function"
+          }
+        },
+        {
+          "method": "getPropertyInfo",
+          "input": "number:0",
+          "error": {
+            "name": "TypeError",
+            "message": "e.toLowerCase is not a function"
+          }
+        },
+        {
+          "method": "getAssignedWidget",
+          "input": "boolean:true",
+          "error": {
+            "name": "TypeError",
+            "message": "e.toLowerCase is not a function"
+          }
+        },
+        {
+          "method": "getPropertyInfo",
+          "input": "boolean:true",
+          "error": {
+            "name": "TypeError",
+            "message": "e.toLowerCase is not a function"
+          }
+        },
+        {
+          "method": "getAssignedWidget",
+          "input": "object:[object Object]",
+          "error": {
+            "name": "TypeError",
+            "message": "e.toLowerCase is not a function"
+          }
+        },
+        {
+          "method": "getPropertyInfo",
+          "input": "object:[object Object]",
+          "error": {
+            "name": "TypeError",
+            "message": "e.toLowerCase is not a function"
+          }
+        },
+        {
+          "method": "getAssignedWidget",
+          "input": "string:UnKnOwN",
+          "value": null
+        },
+        {
+          "method": "getPropertyInfo",
+          "input": "string:UnKnOwN",
+          "value": {
+            "name": "UnKnOwN",
+            "widget": "text"
+          }
+        },
+        {
+          "id": "custom-lower",
+          "value": "tags",
+          "calls": [
+            "lower"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "code": "(()=>{const m=app.metadataTypeManager,old=m._;m._={};const calls=[],ctx={label:'CTX'},a=function(k){calls.push({fn:'a',ctx:this===ctx,key:k})},b=function(k){calls.push({fn:'b',ctx:this===m,key:k})};try{const ar=m.on('owned',a,ctx),br=m.on('owned',b,m);let initial={keys:Object.keys(m._),recordKeys:Object.keys(ar),refOwner:ar.e===m,refName:ar.name,refFn:ar.fn===a,refCtx:ar.ctx===ctx};m.trigger('owned','one');m.offref(ar);m.trigger('owned','two');m.off('owned',b);let deleted=!Object.hasOwn(m._,'owned');return JSON.stringify({initial,calls,deleted})}finally{m._=old}})()",
+      "result": {
+        "initial": {
+          "keys": [
+            "owned"
+          ],
+          "recordKeys": [
+            "e",
+            "name",
+            "fn",
+            "ctx"
+          ],
+          "refOwner": true,
+          "refName": "owned",
+          "refFn": true,
+          "refCtx": true
+        },
+        "calls": [
+          {
+            "fn": "a",
+            "ctx": true,
+            "key": "one"
+          },
+          {
+            "fn": "b",
+            "ctx": true,
+            "key": "one"
+          },
+          {
+            "fn": "b",
+            "ctx": true,
+            "key": "two"
+          }
+        ],
+        "deleted": true
+      }
+    },
+    {
+      "id": "rebuild-listener-removed",
+      "code": "(()=>{const m=app.metadataTypeManager,old=m._,properties=m.properties;m._={};try{m.trigger('changed','owned');return JSON.stringify({same:m.properties===properties})}finally{m._=old}})()",
+      "result": {
+        "same": true
+      }
+    },
+    {
+      "id": "save-container-replacement",
+      "code": "(async()=>{const m=app.metadataTypeManager,old=m.assignedWidgets,properties=m.properties,calls=[],temporary={gate:{name:'Gate',widget:'gate-old'},later:{name:'Later',widget:'later-old'}};Object.defineProperty(temporary,'hasOwnProperty',{value:function(k){calls.push('own:'+k);return Object.prototype.hasOwnProperty.call(this,k)},enumerable:false});Object.defineProperty(temporary.gate,'name',{get(){calls.push('name:gate');m.assignedWidgets={gate:{name:'ChangedGate',widget:'gate-new'},later:{name:'ChangedLater',widget:'later-new'},added:{name:'Added',widget:'added-new'}};return'Gate'}});m.assignedWidgets=temporary;try{await m.save();return JSON.stringify({calls,stored:require('fs').readFileSync(require('path').join(app.vault.adapter.basePath,app.vault.configDir,'types.json'),'utf8'),assignedKeys:Object.keys(m.assignedWidgets)})}finally{m.assignedWidgets=old;m.properties=properties;await m.save()}})()",
+      "result": {
+        "calls": [
+          "own:gate",
+          "name:gate"
+        ],
+        "stored": "{\n  \"types\": {\n    \"Gate\": \"gate-old\",\n    \"ChangedLater\": \"later-new\"\n  }\n}",
+        "assignedKeys": [
+          "gate",
+          "later",
+          "added"
+        ]
+      }
+    }
+  ],
+  "cleanup": {
+    "pid": 41504,
+    "exit_code": 0,
+    "stopped": true
+  },
+  "coverage": {
+    "actual_native_service": true,
+    "rust_replay": false,
+    "full_service_fields": false,
+    "full_widget_registry": false,
+    "rust_five_behavior_cases": true,
+    "rust_installed_descriptors_subset": true,
+    "rust_full_service_layout": false
+  }
+}

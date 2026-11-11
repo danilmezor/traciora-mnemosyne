@@ -1,0 +1,3778 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "evidence": "Actual pinned isolated macOS CLI pipe observations. Caller traversal order preserved explicitly; cold initialization order and stateful mutation ordering require separate verification.",
+  "phases": {
+    "1": {
+      "files": {
+        "Alpha.md": "---\ntitle: Alpha\nstatus: ready\ntags: [work, project/deep]\n---\n# ALPHA\nRunning runner runs\nalpha beta\nalpha\nbeta\nCafé Straße 東京 😀\n#work #project/deep\n",
+        "Folder/Beta.md": "# Beta\nALPHA alphabet soup\nbeta gamma\nquoted exact phrase\nA quick brown fox\n",
+        "Folder/Sub/Delta.md": "---\r\nstatus: done\r\n---\r\nalpha beta\r\nalpha\r\nbeta\r\n",
+        "Folderish/Gamma.md": "gamma delta\nBeta Alpha\n",
+        "Zeta.md": "alpha\nno other term\n",
+        "FilenameOnly.md": "nothing searchable\n",
+        "Attachment.txt": "alpha beta\n",
+        ".hidden.md": "alpha hidden\n"
+      },
+      "order": [
+        "FilenameOnly.md",
+        "Zeta.md",
+        "Folderish/Gamma.md",
+        "Folder/Sub/Delta.md",
+        "Folder/Beta.md",
+        "Alpha.md"
+      ]
+    },
+    "2": {
+      "files": {
+        "Alpha.md": "---\ntitle: Alpha\nstatus: ready\ntags: [work, project/deep]\n---\n# ALPHA\nRunning runner runs\nalpha beta\nalpha\nbeta\nCafé Straße 東京 😀\n#work #project/deep\n",
+        "Folder/Beta.md": "# Beta\nALPHA alphabet soup\nbeta gamma\nquoted exact phrase\nA quick brown fox\n",
+        "Folder/Sub/Delta.md": "---\r\nstatus: done\r\n---\r\nalpha beta\r\nalpha\r\nbeta\r\n",
+        "Folderish/Gamma.md": "gamma delta\nBeta Alpha\n",
+        "Zeta.md": "alpha\nno other term\n",
+        "FilenameOnly.md": "nothing searchable\n",
+        "Attachment.txt": "alpha beta\n",
+        ".hidden.md": "alpha hidden\n",
+        "CrossOnly.md": "alpha\nbeta\n",
+        "RunOnly.md": "run\n",
+        "FrontTagOnly.md": "---\ntags: [solo]\nflag: true\ncount: 3\nempty: null\n---\nnone\n",
+        "Whitespace.md": "  alpha alpha  \nalpha-beta\nalpha_beta\nalphaBeta\nalpha\tbeta\n"
+      },
+      "order": [
+        "Whitespace.md",
+        "FrontTagOnly.md",
+        "RunOnly.md",
+        "CrossOnly.md",
+        "FilenameOnly.md",
+        "Zeta.md",
+        "Folderish/Gamma.md",
+        "Folder/Sub/Delta.md",
+        "Folder/Beta.md",
+        "Alpha.md"
+      ]
+    },
+    "3": {
+      "files": {
+        "Nested.md": "preamble token\n# Parent\nparent token\n## Child\nchild alpha\n### Grand\ngrand beta\n## Sibling\nsibling gamma\n# Last\nlast token\n",
+        "Numeric.md": "---\nnum: 3\nnegative: -1\nboolean: true\nstring: \"10\"\nobject: {a: 1}\nnull: null\ntags: [solo]\n---\nnumber contents\n",
+        "Unicode.md": "﻿  alpha﻿\nalpha\nK kelvin k K\nΣ σ ς\n東京 alph東京 alpha\n😀 alpha\n%% #comment [[Link]] %%\n#real/nested\n",
+        "Tasks.md": "before alpha\n- [ ] alpha todo\n  continuation beta\n  - [x] child gamma\n- [x] done beta\n- [-] cancelled gamma\n- [?] custom alpha\n- normal alpha\n\nparagraph beta\n",
+        "Empty.md": ""
+      },
+      "order": [
+        "Empty.md",
+        "Tasks.md",
+        "Unicode.md",
+        "Numeric.md",
+        "Nested.md"
+      ]
+    },
+    "4": {
+      "files": {
+        "Numeric.md": "---\nscore: 1.0\nhuge: 9007199254740993\nbig: 1e+21\nsmall: 1e-7\nzero: -0.0\ninf: .inf\nnan: .nan\nempty: null\nflag: true\nfalseflag: false\nstringnum: \"10\"\nvalues: [1.0, true, null, \"10\"]\n---\nalpha numeric\n",
+        "Folder/Numeric.md": "---\nscore: 1.0\n---\nALPHA\n",
+        "Folder/Sub/Note.md": "alpha\n",
+        "Boundary.md": "alpha alphaBeta alpha_beta alpha2\néalphaé 中alpha中 😀alpha😀\nALPHA\n",
+        "SavedBOM.md": "﻿# alpha\r\nsecond\r\n",
+        "SavedNoFinal.md": "last line",
+        "SavedEmpty.md": ""
+      },
+      "order": [
+        "SavedEmpty.md",
+        "SavedNoFinal.md",
+        "SavedBOM.md",
+        "Boundary.md",
+        "Folder/Sub/Note.md",
+        "Folder/Numeric.md",
+        "Numeric.md"
+      ]
+    },
+    "5": {
+      "files": {
+        "Alpha.md": "alpha\n",
+        "Folder/Beta.md": "alpha beta\n",
+        "Zeta.md": "alpha gamma\n"
+      },
+      "order": [
+        "Zeta.md",
+        "Folder/Beta.md",
+        "Alpha.md"
+      ],
+      "evidence": "Pinned actual CLI builtin_search cases; creation order captured from live getMarkdownFiles, not cold enumeration."
+    }
+  },
+  "cases": [
+    {
+      "id": "search-000",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-001",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alph",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-002",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=running",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-003",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=run",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-004",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=runner",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-005",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=runs",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-006",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-007",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=\"alpha beta\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Delta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-008",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha gamma",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folderish/Gamma.md\",\"Folder/Beta.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-009",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha OR gamma",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-010",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha -beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-011",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=-alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FilenameOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-012",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha NOT beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-013",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=(alpha OR gamma) beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-014",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=file:FilenameOnly",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FilenameOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-015",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=file:Beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Beta.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-016",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=path:Folder",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-017",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=path:Folder/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Delta.md\",\"Folder/Beta.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-018",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=tag:work",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-019",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=tag:project",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-020",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=tag:project/deep",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-021",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=[status:ready]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-022",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=[status]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Delta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-023",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=/alpha/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-024",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=/alpha.*beta/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Delta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-025",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=/alpha[/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Failed to parse regular expression. Invalid regular expression: /alpha[/: Unterminated character class\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-026",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=Café",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-027",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=cafe",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-028",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=Straße",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-029",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=STRASSE",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-030",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=東京",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-031",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=😀",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-032",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=line:(alpha beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-033",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=block:(alpha beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-034",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha"
+      ],
+      "expected": {
+        "stdout": "Zeta.md\nFolderish/Gamma.md\nFolder/Sub/Delta.md\nFolder/Beta.md\nAlpha.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-035",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "case"
+      ],
+      "expected": {
+        "stdout": "Zeta.md\nFolder/Sub/Delta.md\nFolder/Beta.md\nAlpha.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-036",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "case",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-037",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "query=ALPHA",
+        "case",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-038",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "path=Folder",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Delta.md\",\"Folder/Beta.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-039",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "path=Folder/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Delta.md\",\"Folder/Beta.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-040",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "path=folder",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-041",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "path=missing",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-042",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=0",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-043",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=-1",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-044",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=invalid",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-045",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=2",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folderish/Gamma.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-046",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=2",
+        "total"
+      ],
+      "expected": {
+        "stdout": "5\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-047",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=2",
+        "total",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "{\"total\":5}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-048",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "query=missing",
+        "total",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "{\"total\":0}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-049",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "query=missing",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-050",
+      "phase": "1",
+      "args": [
+        "search",
+        "query=alpha",
+        "format=bogus"
+      ],
+      "expected": {
+        "stdout": "Zeta.md\nFolderish/Gamma.md\nFolder/Sub/Delta.md\nFolder/Beta.md\nAlpha.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-051",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=alpha"
+      ],
+      "expected": {
+        "stdout": "Zeta.md:1: alpha\nFolderish/Gamma.md:2: Beta Alpha\nFolder/Sub/Delta.md:4: alpha beta\nFolder/Sub/Delta.md:5: alpha\nFolder/Beta.md:2: ALPHA alphabet soup\nFolder/Beta.md:2: ALPHA alphabet soup\nAlpha.md:2: title: Alpha\nAlpha.md:6: # ALPHA\nAlpha.md:8: alpha beta\nAlpha.md:9: alpha\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-052",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Zeta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Folderish/Gamma.md\",\"matches\":[{\"line\":2,\"text\":\"Beta Alpha\"}]},{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[{\"line\":4,\"text\":\"alpha beta\"},{\"line\":5,\"text\":\"alpha\"}]},{\"file\":\"Folder/Beta.md\",\"matches\":[{\"line\":2,\"text\":\"ALPHA alphabet soup\"},{\"line\":2,\"text\":\"ALPHA alphabet soup\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":2,\"text\":\"title: Alpha\"},{\"line\":6,\"text\":\"# ALPHA\"},{\"line\":8,\"text\":\"alpha beta\"},{\"line\":9,\"text\":\"alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-053",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=alpha beta"
+      ],
+      "expected": {
+        "stdout": "Folderish/Gamma.md:2: Beta Alpha\nFolderish/Gamma.md:2: Beta Alpha\nFolder/Sub/Delta.md:4: alpha beta\nFolder/Sub/Delta.md:4: alpha beta\nFolder/Sub/Delta.md:5: alpha\nFolder/Sub/Delta.md:6: beta\nFolder/Beta.md:1: # Beta\nFolder/Beta.md:2: ALPHA alphabet soup\nFolder/Beta.md:2: ALPHA alphabet soup\nFolder/Beta.md:3: beta gamma\nAlpha.md:2: title: Alpha\nAlpha.md:6: # ALPHA\nAlpha.md:8: alpha beta\nAlpha.md:8: alpha beta\nAlpha.md:9: alpha\nAlpha.md:10: beta\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-054",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=alpha beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Folderish/Gamma.md\",\"matches\":[{\"line\":2,\"text\":\"Beta Alpha\"},{\"line\":2,\"text\":\"Beta Alpha\"}]},{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[{\"line\":4,\"text\":\"alpha beta\"},{\"line\":4,\"text\":\"alpha beta\"},{\"line\":5,\"text\":\"alpha\"},{\"line\":6,\"text\":\"beta\"}]},{\"file\":\"Folder/Beta.md\",\"matches\":[{\"line\":1,\"text\":\"# Beta\"},{\"line\":2,\"text\":\"ALPHA alphabet soup\"},{\"line\":2,\"text\":\"ALPHA alphabet soup\"},{\"line\":3,\"text\":\"beta gamma\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":2,\"text\":\"title: Alpha\"},{\"line\":6,\"text\":\"# ALPHA\"},{\"line\":8,\"text\":\"alpha beta\"},{\"line\":8,\"text\":\"alpha beta\"},{\"line\":9,\"text\":\"alpha\"},{\"line\":10,\"text\":\"beta\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-055",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=\"alpha beta\""
+      ],
+      "expected": {
+        "stdout": "Folder/Sub/Delta.md:4: alpha beta\nAlpha.md:8: alpha beta\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-056",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=\"alpha beta\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[{\"line\":4,\"text\":\"alpha beta\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":8,\"text\":\"alpha beta\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-057",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=path:Folder"
+      ],
+      "expected": {
+        "stdout": "Folderish/Gamma.md\nFolder/Sub/Delta.md\nFolder/Beta.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-058",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=path:Folder",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Folderish/Gamma.md\",\"matches\":[]},{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[]},{\"file\":\"Folder/Beta.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-059",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=tag:work"
+      ],
+      "expected": {
+        "stdout": "Alpha.md:12: #work #project/deep\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-060",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=tag:work",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Alpha.md\",\"matches\":[{\"line\":12,\"text\":\"#work #project/deep\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-061",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=[status:ready]"
+      ],
+      "expected": {
+        "stdout": "Alpha.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-062",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=[status:ready]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Alpha.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-063",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=file:FilenameOnly"
+      ],
+      "expected": {
+        "stdout": "FilenameOnly.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-064",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=file:FilenameOnly",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"FilenameOnly.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-065",
+      "phase": "1",
+      "args": [
+        "search"
+      ],
+      "expected": {
+        "stdout": "Error: Missing required parameter: query=<text>\nUsage: search query=<text> [path=<folder>] [limit=<n>] [total] [case] [format=text|json]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-066",
+      "phase": "1",
+      "args": [
+        "search",
+        "query="
+      ],
+      "expected": {
+        "stdout": "Error: Missing required parameter: query\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-067",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=alpha",
+        "limit=1",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Zeta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-068",
+      "phase": "1",
+      "args": [
+        "search:context",
+        "query=missing",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-069",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=running",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-070",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=run",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"RunOnly.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-071",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=FilenameOnly",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FilenameOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-072",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=\"alpha\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"CrossOnly.md\",\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-073",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=\"alph\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-074",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=\"alpha-beta\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-075",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=alpha-beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-076",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=alpha_beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-077",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=alpha\tbeta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-078",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=alpha\nbeta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"CrossOnly.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-079",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=alpha or gamma",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-080",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=alpha OR gamma beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"CrossOnly.md\",\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-081",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=alpha beta OR gamma",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"CrossOnly.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-082",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=-(alpha OR beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FrontTagOnly.md\",\"RunOnly.md\",\"FilenameOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-083",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=TRUE",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-084",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=FALSE",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-085",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=EMPTY",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"FrontTagOnly.md\",\"RunOnly.md\",\"CrossOnly.md\",\"FilenameOnly.md\",\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-086",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=unknown:alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Operator \"unknown\" not recognized\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-087",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=tag:\"work\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Operator \"tag\" can only be followed by text\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-088",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=path:(file:Beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Operator \"file\" cannot be nested within \"path\"\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-089",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=section:(alpha beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"CrossOnly.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-090",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=content:alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"CrossOnly.md\",\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-091",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=match-case:ALPHA",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-092",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=ignore-case:ALPHA",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"CrossOnly.md\",\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-093",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=[flag:TRUE]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FrontTagOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-094",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=[count:>2]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FrontTagOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-095",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=[empty:EMPTY]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FrontTagOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-096",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=[missing]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-097",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=[tags:solo]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FrontTagOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-098",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=tag:solo",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"FrontTagOnly.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-099",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=[status:READY]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-100",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=/alpha/i",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-101",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=/alpha/gi",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-102",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"FrontTagOnly.md\",\"RunOnly.md\",\"CrossOnly.md\",\"FilenameOnly.md\",\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-103",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=()",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-104",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=OR",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Invalid search query.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-105",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Invalid search query.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-106",
+      "phase": "2",
+      "args": [
+        "search",
+        "query=alpha ) beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Whitespace.md\",\"CrossOnly.md\",\"Zeta.md\",\"Folderish/Gamma.md\",\"Folder/Sub/Delta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-107",
+      "phase": "2",
+      "args": [
+        "search:context",
+        "query=tag:solo",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"FrontTagOnly.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-108",
+      "phase": "2",
+      "args": [
+        "search:context",
+        "query=alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Whitespace.md\",\"matches\":[{\"line\":1,\"text\":\"alpha alpha\"},{\"line\":1,\"text\":\"alpha alpha\"},{\"line\":2,\"text\":\"alpha-beta\"},{\"line\":3,\"text\":\"alpha_beta\"},{\"line\":4,\"text\":\"alphaBeta\"},{\"line\":5,\"text\":\"alpha\\tbeta\"}]},{\"file\":\"CrossOnly.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Zeta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Folderish/Gamma.md\",\"matches\":[{\"line\":2,\"text\":\"Beta Alpha\"}]},{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[{\"line\":4,\"text\":\"alpha beta\"},{\"line\":5,\"text\":\"alpha\"}]},{\"file\":\"Folder/Beta.md\",\"matches\":[{\"line\":2,\"text\":\"ALPHA alphabet soup\"},{\"line\":2,\"text\":\"ALPHA alphabet soup\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":2,\"text\":\"title: Alpha\"},{\"line\":6,\"text\":\"# ALPHA\"},{\"line\":8,\"text\":\"alpha beta\"},{\"line\":9,\"text\":\"alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-109",
+      "phase": "2",
+      "args": [
+        "search:context",
+        "query=\"alpha\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Whitespace.md\",\"matches\":[{\"line\":1,\"text\":\"alpha alpha\"},{\"line\":1,\"text\":\"alpha alpha\"},{\"line\":2,\"text\":\"alpha-beta\"},{\"line\":3,\"text\":\"alpha_beta\"},{\"line\":5,\"text\":\"alpha\\tbeta\"}]},{\"file\":\"CrossOnly.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Zeta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Folderish/Gamma.md\",\"matches\":[{\"line\":2,\"text\":\"Beta Alpha\"}]},{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[{\"line\":4,\"text\":\"alpha beta\"},{\"line\":5,\"text\":\"alpha\"}]},{\"file\":\"Folder/Beta.md\",\"matches\":[{\"line\":2,\"text\":\"ALPHA alphabet soup\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":2,\"text\":\"title: Alpha\"},{\"line\":6,\"text\":\"# ALPHA\"},{\"line\":8,\"text\":\"alpha beta\"},{\"line\":9,\"text\":\"alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-110",
+      "phase": "2",
+      "args": [
+        "search:context",
+        "query=-alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"FrontTagOnly.md\",\"matches\":[]},{\"file\":\"RunOnly.md\",\"matches\":[]},{\"file\":\"FilenameOnly.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-111",
+      "phase": "2",
+      "args": [
+        "search:context",
+        "query=alpha alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Whitespace.md\",\"matches\":[{\"line\":1,\"text\":\"alpha alpha\"},{\"line\":1,\"text\":\"alpha alpha\"},{\"line\":2,\"text\":\"alpha-beta\"},{\"line\":3,\"text\":\"alpha_beta\"},{\"line\":4,\"text\":\"alphaBeta\"},{\"line\":5,\"text\":\"alpha\\tbeta\"}]},{\"file\":\"CrossOnly.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Zeta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Folderish/Gamma.md\",\"matches\":[{\"line\":2,\"text\":\"Beta Alpha\"}]},{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[{\"line\":4,\"text\":\"alpha beta\"},{\"line\":5,\"text\":\"alpha\"}]},{\"file\":\"Folder/Beta.md\",\"matches\":[{\"line\":2,\"text\":\"ALPHA alphabet soup\"},{\"line\":2,\"text\":\"ALPHA alphabet soup\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":2,\"text\":\"title: Alpha\"},{\"line\":6,\"text\":\"# ALPHA\"},{\"line\":8,\"text\":\"alpha beta\"},{\"line\":9,\"text\":\"alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-112",
+      "phase": "2",
+      "args": [
+        "search:context",
+        "query=line:(alpha beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Whitespace.md\",\"matches\":[{\"line\":2,\"text\":\"alpha-beta\"},{\"line\":2,\"text\":\"alpha-beta\"},{\"line\":3,\"text\":\"alpha_beta\"},{\"line\":3,\"text\":\"alpha_beta\"},{\"line\":4,\"text\":\"alphaBeta\"},{\"line\":5,\"text\":\"alpha\\tbeta\"},{\"line\":5,\"text\":\"alpha\\tbeta\"}]},{\"file\":\"Folderish/Gamma.md\",\"matches\":[{\"line\":2,\"text\":\"Beta Alpha\"},{\"line\":2,\"text\":\"Beta Alpha\"}]},{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[{\"line\":4,\"text\":\"alpha beta\"},{\"line\":4,\"text\":\"alpha beta\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":8,\"text\":\"alpha beta\"},{\"line\":8,\"text\":\"alpha beta\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-113",
+      "phase": "2",
+      "args": [
+        "search:context",
+        "query=block:(alpha beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Whitespace.md\",\"matches\":[{\"line\":1,\"text\":\"alpha alpha\"},{\"line\":1,\"text\":\"alpha alpha\"},{\"line\":2,\"text\":\"alpha-beta\"},{\"line\":2,\"text\":\"alpha-beta\"},{\"line\":3,\"text\":\"alpha_beta\"},{\"line\":3,\"text\":\"alpha_beta\"},{\"line\":4,\"text\":\"alphaBeta\"},{\"line\":5,\"text\":\"alpha\\tbeta\"},{\"line\":5,\"text\":\"alpha\\tbeta\"}]},{\"file\":\"CrossOnly.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"},{\"line\":2,\"text\":\"beta\"}]},{\"file\":\"Folderish/Gamma.md\",\"matches\":[{\"line\":2,\"text\":\"Beta Alpha\"},{\"line\":2,\"text\":\"Beta Alpha\"}]},{\"file\":\"Folder/Sub/Delta.md\",\"matches\":[{\"line\":4,\"text\":\"alpha beta\"},{\"line\":4,\"text\":\"alpha beta\"},{\"line\":5,\"text\":\"alpha\"},{\"line\":6,\"text\":\"beta\"}]},{\"file\":\"Folder/Beta.md\",\"matches\":[{\"line\":2,\"text\":\"ALPHA alphabet soup\"},{\"line\":2,\"text\":\"ALPHA alphabet soup\"},{\"line\":3,\"text\":\"beta gamma\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":8,\"text\":\"alpha beta\"},{\"line\":8,\"text\":\"alpha beta\"},{\"line\":9,\"text\":\"alpha\"},{\"line\":10,\"text\":\"beta\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-000",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=\"\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Tasks.md\",\"matches\":[]},{\"file\":\"Unicode.md\",\"matches\":[]},{\"file\":\"Numeric.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-001",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=//",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Tasks.md\",\"matches\":[]},{\"file\":\"Unicode.md\",\"matches\":[]},{\"file\":\"Numeric.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-002",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=-\"\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Tasks.md\",\"matches\":[]},{\"file\":\"Unicode.md\",\"matches\":[]},{\"file\":\"Numeric.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-003",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=-//",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Tasks.md\",\"matches\":[]},{\"file\":\"Unicode.md\",\"matches\":[]},{\"file\":\"Numeric.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-004",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=\"\" alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":1,\"text\":\"before alpha\"},{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":7,\"text\":\"- [?] custom alpha\"},{\"line\":8,\"text\":\"- normal alpha\"}]},{\"file\":\"Unicode.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"},{\"line\":2,\"text\":\"alpha\"},{\"line\":5,\"text\":\"東京 alph東京 alpha\"},{\"line\":6,\"text\":\"😀 alpha\"}]},{\"file\":\"Nested.md\",\"matches\":[{\"line\":5,\"text\":\"child alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-005",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=\"\" OR alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":1,\"text\":\"before alpha\"},{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":7,\"text\":\"- [?] custom alpha\"},{\"line\":8,\"text\":\"- normal alpha\"}]},{\"file\":\"Unicode.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"},{\"line\":2,\"text\":\"alpha\"},{\"line\":5,\"text\":\"東京 alph東京 alpha\"},{\"line\":6,\"text\":\"😀 alpha\"}]},{\"file\":\"Nested.md\",\"matches\":[{\"line\":5,\"text\":\"child alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-006",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=\"\" OR nohit",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-007",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=line:\"\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Tasks.md\",\"matches\":[]},{\"file\":\"Unicode.md\",\"matches\":[]},{\"file\":\"Numeric.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-008",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=section:\"\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Tasks.md\",\"matches\":[]},{\"file\":\"Unicode.md\",\"matches\":[]},{\"file\":\"Numeric.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-009",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=block:\"\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[]},{\"file\":\"Unicode.md\",\"matches\":[]},{\"file\":\"Numeric.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-010",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=task:\"\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":4,\"text\":\"- [x] child gamma\"},{\"line\":5,\"text\":\"- [x] done beta\"},{\"line\":6,\"text\":\"- [-] cancelled gamma\"},{\"line\":7,\"text\":\"- [?] custom alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-011",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=task-todo:\"\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":2,\"text\":\"- [ ] alpha todo\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-012",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=task-done:\"\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":4,\"text\":\"- [x] child gamma\"},{\"line\":5,\"text\":\"- [x] done beta\"},{\"line\":6,\"text\":\"- [-] cancelled gamma\"},{\"line\":7,\"text\":\"- [?] custom alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-013",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/^/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-014",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/()/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-015",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/a*/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":1,\"text\":\"before alpha\"},{\"line\":1,\"text\":\"before alpha\"},{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":3,\"text\":\"continuation beta\"},{\"line\":3,\"text\":\"continuation beta\"},{\"line\":4,\"text\":\"- [x] child gamma\"},{\"line\":4,\"text\":\"- [x] child gamma\"},{\"line\":5,\"text\":\"- [x] done beta\"},{\"line\":6,\"text\":\"- [-] cancelled gamma\"},{\"line\":6,\"text\":\"- [-] cancelled gamma\"},{\"line\":6,\"text\":\"- [-] cancelled gamma\"},{\"line\":7,\"text\":\"- [?] custom alpha\"},{\"line\":7,\"text\":\"- [?] custom alpha\"},{\"line\":8,\"text\":\"- normal alpha\"},{\"line\":8,\"text\":\"- normal alpha\"},{\"line\":8,\"text\":\"- normal alpha\"},{\"line\":10,\"text\":\"paragraph beta\"},{\"line\":10,\"text\":\"paragraph beta\"},{\"line\":10,\"text\":\"paragraph beta\"},{\"line\":10,\"text\":\"paragraph beta\"}]},{\"file\":\"Unicode.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"},{\"line\":1,\"text\":\"alpha\"},{\"line\":2,\"text\":\"alpha\"},{\"line\":2,\"text\":\"alpha\"},{\"line\":5,\"text\":\"東京 alph東京 alpha\"},{\"line\":5,\"text\":\"東京 alph東京 alpha\"},{\"line\":5,\"text\":\"東京 alph東京 alpha\"},{\"line\":6,\"text\":\"😀 alpha\"},{\"line\":6,\"text\":\"😀 alpha\"},{\"line\":8,\"text\":\"#real/nested\"}]},{\"file\":\"Numeric.md\",\"matches\":[{\"line\":3,\"text\":\"negative: -1\"},{\"line\":4,\"text\":\"boolean: true\"},{\"line\":6,\"text\":\"object: {a: 1}\"},{\"line\":8,\"text\":\"tags: [solo]\"}]},{\"file\":\"Nested.md\",\"matches\":[{\"line\":1,\"text\":\"preamble token\"},{\"line\":2,\"text\":\"# Parent\"},{\"line\":3,\"text\":\"parent token\"},{\"line\":5,\"text\":\"child alpha\"},{\"line\":5,\"text\":\"child alpha\"},{\"line\":6,\"text\":\"### Grand\"},{\"line\":7,\"text\":\"grand beta\"},{\"line\":7,\"text\":\"grand beta\"},{\"line\":9,\"text\":\"sibling gamma\"},{\"line\":9,\"text\":\"sibling gamma\"},{\"line\":10,\"text\":\"# Last\"},{\"line\":11,\"text\":\"last token\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-016",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=section:(parent section:child)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Nested.md\",\"matches\":[{\"line\":2,\"text\":\"# Parent\"},{\"line\":3,\"text\":\"parent token\"},{\"line\":4,\"text\":\"## Child\"},{\"line\":5,\"text\":\"child alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-017",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=section:(parent section:(child section:grand))",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Nested.md\",\"matches\":[{\"line\":2,\"text\":\"# Parent\"},{\"line\":3,\"text\":\"parent token\"},{\"line\":4,\"text\":\"## Child\"},{\"line\":5,\"text\":\"child alpha\"},{\"line\":6,\"text\":\"### Grand\"},{\"line\":7,\"text\":\"grand beta\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-018",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=section:(child section:grand)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Nested.md\",\"matches\":[{\"line\":4,\"text\":\"## Child\"},{\"line\":5,\"text\":\"child alpha\"},{\"line\":6,\"text\":\"### Grand\"},{\"line\":7,\"text\":\"grand beta\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-019",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=section:(parent child)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-020",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=section:(sibling section:grand)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-021",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=section:(preamble section:child)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-022",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=block:(alpha beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":3,\"text\":\"continuation beta\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-023",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=task:alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":7,\"text\":\"- [?] custom alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-024",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=task:gamma",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":4,\"text\":\"- [x] child gamma\"},{\"line\":6,\"text\":\"- [-] cancelled gamma\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-025",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=task:(alpha beta)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":3,\"text\":\"continuation beta\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-026",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=task-todo:alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":2,\"text\":\"- [ ] alpha todo\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-027",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=task-done:gamma",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":4,\"text\":\"- [x] child gamma\"},{\"line\":6,\"text\":\"- [-] cancelled gamma\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-028",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=tag:comment",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Unicode.md\",\"matches\":[{\"line\":7,\"text\":\"%% #comment [[Link]] %%\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-029",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=tag:real",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Unicode.md\",\"matches\":[{\"line\":8,\"text\":\"#real/nested\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-030",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=tag:/real/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Operator \"tag\" can only be followed by text\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-031",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=tag:(real OR solo)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Operator \"tag\" can only be followed by text\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-032",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[num:>2.5]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Numeric.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-033",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[num:>0x2]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Numeric.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-034",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[negative:<\"\"]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Numeric.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-035",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[boolean:>0]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Numeric.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-036",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[string:<2]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Numeric.md\",\"matches\":[]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-037",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[object:>a]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-038",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[null:EMPTY]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-039",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[null:\"null\"]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-040",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[num:-bad]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-041",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[num:\"\"]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-042",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=[\"\":3]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-043",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=EMPTY",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[{\"line\":1,\"text\":\"\"}]},{\"file\":\"Tasks.md\",\"matches\":[{\"line\":1,\"text\":\"before alpha\"}]},{\"file\":\"Unicode.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Numeric.md\",\"matches\":[{\"line\":1,\"text\":\"---\"}]},{\"file\":\"Nested.md\",\"matches\":[{\"line\":1,\"text\":\"preamble token\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-044",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/K/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Unicode.md\",\"matches\":[{\"line\":3,\"text\":\"K kelvin k K\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-045",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/k/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[]},{\"file\":\"Unicode.md\",\"matches\":[{\"line\":3,\"text\":\"K kelvin k K\"},{\"line\":3,\"text\":\"K kelvin k K\"},{\"line\":3,\"text\":\"K kelvin k K\"},{\"line\":7,\"text\":\"%% #comment [[Link]] %%\"}]},{\"file\":\"Nested.md\",\"matches\":[{\"line\":1,\"text\":\"preamble token\"},{\"line\":3,\"text\":\"parent token\"},{\"line\":11,\"text\":\"last token\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-046",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/Σ/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Unicode.md\",\"matches\":[{\"line\":4,\"text\":\"Σ σ ς\"},{\"line\":4,\"text\":\"Σ σ ς\"},{\"line\":4,\"text\":\"Σ σ ς\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-047",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/σ/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Unicode.md\",\"matches\":[{\"line\":4,\"text\":\"Σ σ ς\"},{\"line\":4,\"text\":\"Σ σ ς\"},{\"line\":4,\"text\":\"Σ σ ς\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-048",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=\"東京\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Unicode.md\",\"matches\":[{\"line\":5,\"text\":\"東京 alph東京 alpha\"},{\"line\":5,\"text\":\"東京 alph東京 alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-049",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=\"alph\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Unicode.md\",\"matches\":[{\"line\":5,\"text\":\"東京 alph東京 alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-050",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=alpha",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":1,\"text\":\"before alpha\"},{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":7,\"text\":\"- [?] custom alpha\"},{\"line\":8,\"text\":\"- normal alpha\"}]},{\"file\":\"Unicode.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"},{\"line\":2,\"text\":\"alpha\"},{\"line\":5,\"text\":\"東京 alph東京 alpha\"},{\"line\":6,\"text\":\"😀 alpha\"}]},{\"file\":\"Nested.md\",\"matches\":[{\"line\":5,\"text\":\"child alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-051",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=alpha\\ beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-052",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=alpha\\\\beta",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-053",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/alpha[/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Failed to parse regular expression. Invalid regular expression: /alpha[/: Unterminated character class\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-054",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/(/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Failed to parse regular expression. Invalid regular expression: /(/: Unterminated group\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-055",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/a{2,1}/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Failed to parse regular expression. Invalid regular expression: /a{2,1}/: numbers out of order in {} quantifier\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-056",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/*/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Failed to parse regular expression. Invalid regular expression: /*/: Nothing to repeat\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-057",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/a\\/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-058",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/(?<a>x)(?<a>y)/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: Failed to parse regular expression. Invalid regular expression: /(?<a>x)(?<a>y)/: Duplicate capture group name\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-059",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/\\k<a>/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-060",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=/\\u{1F600}/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-061",
+      "phase": "3",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=2tail",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Tasks.md\",\"Unicode.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-062",
+      "phase": "3",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=0x2",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Tasks.md\",\"Unicode.md\",\"Nested.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-063",
+      "phase": "3",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=+2",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Tasks.md\",\"Unicode.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-064",
+      "phase": "3",
+      "args": [
+        "search:context"
+      ],
+      "expected": {
+        "stdout": "Error: Missing required parameter: query=<text>\nUsage: search:context query=<text> [path=<folder>] [limit=<n>] [case] [format=text|json]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-edge-065",
+      "phase": "3",
+      "args": [
+        "search:context",
+        "query=alpha",
+        "total",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Tasks.md\",\"matches\":[{\"line\":1,\"text\":\"before alpha\"},{\"line\":2,\"text\":\"- [ ] alpha todo\"},{\"line\":7,\"text\":\"- [?] custom alpha\"},{\"line\":8,\"text\":\"- normal alpha\"}]},{\"file\":\"Unicode.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"},{\"line\":2,\"text\":\"alpha\"},{\"line\":5,\"text\":\"東京 alph東京 alpha\"},{\"line\":6,\"text\":\"😀 alpha\"}]},{\"file\":\"Nested.md\",\"matches\":[{\"line\":5,\"text\":\"child alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-000",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:1]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-001",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:1.0]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-002",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:\"1\"]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-003",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:\"1.0\"]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-004",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[huge:9007199254740993]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-005",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[huge:9007199254740992]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-006",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[big:1e+21]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-007",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[big:1000000000000000000000]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-008",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[small:1e-7]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-009",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[small:0.0000001]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-010",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[zero:0]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-011",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[zero:-0.0]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-012",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[inf:Infinity]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-013",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[inf:.inf]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-014",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[nan:NaN]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-015",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[nan:.nan]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-016",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[empty:EMPTY]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-017",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[flag:TRUE]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-018",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[falseflag:FALSE]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-019",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>0]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-020",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:<2]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-021",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>1]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-022",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[huge:>9007199254740992]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-023",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[huge:<9007199254740993]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-024",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[big:>1e20]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-025",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[inf:>1e100]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-026",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[nan:>0]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-027",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[zero:>-1]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Excluding: \n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-028",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[stringnum:<2]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-029",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[values:TRUE]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-030",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[values:EMPTY]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-031",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>/1/]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Matches regex: /1/\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-032",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>TRUE]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Is true\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-033",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>()]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-034",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>(1 2)]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Match all of: \n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-035",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>content:1]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-036",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>\"1\"]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-037",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=[score:>\"\"]",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-038",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=\"alpha\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"SavedBOM.md\",\"Boundary.md\",\"Folder/Sub/Note.md\",\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-039",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=\"éalphaé\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Boundary.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-040",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=\"中alpha中\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Boundary.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-041",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=\"😀alpha😀\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Boundary.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-042",
+      "phase": "4",
+      "args": [
+        "search:context",
+        "query=\"alpha\"",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"SavedBOM.md\",\"matches\":[{\"line\":1,\"text\":\"# alpha\"}]},{\"file\":\"Boundary.md\",\"matches\":[{\"line\":1,\"text\":\"alpha alphaBeta alpha_beta alpha2\"},{\"line\":1,\"text\":\"alpha alphaBeta alpha_beta alpha2\"},{\"line\":2,\"text\":\"éalphaé 中alpha中 😀alpha😀\"},{\"line\":2,\"text\":\"éalphaé 中alpha中 😀alpha😀\"},{\"line\":3,\"text\":\"ALPHA\"}]},{\"file\":\"Folder/Sub/Note.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Folder/Numeric.md\",\"matches\":[{\"line\":4,\"text\":\"ALPHA\"}]},{\"file\":\"Numeric.md\",\"matches\":[{\"line\":15,\"text\":\"alpha numeric\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-043",
+      "phase": "4",
+      "args": [
+        "search:context",
+        "query=\"alpha\"",
+        "case",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"SavedBOM.md\",\"matches\":[{\"line\":1,\"text\":\"# alpha\"}]},{\"file\":\"Boundary.md\",\"matches\":[{\"line\":1,\"text\":\"alpha alphaBeta alpha_beta alpha2\"},{\"line\":1,\"text\":\"alpha alphaBeta alpha_beta alpha2\"},{\"line\":2,\"text\":\"éalphaé 中alpha中 😀alpha😀\"},{\"line\":2,\"text\":\"éalphaé 中alpha中 😀alpha😀\"}]},{\"file\":\"Folder/Sub/Note.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]},{\"file\":\"Numeric.md\",\"matches\":[{\"line\":15,\"text\":\"alpha numeric\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-044",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=ALPHA",
+        "case=",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"SavedBOM.md\",\"Boundary.md\",\"Folder/Sub/Note.md\",\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-045",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=ALPHA",
+        "case",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Boundary.md\",\"Folder/Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-046",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=alpha",
+        "total=",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"SavedBOM.md\",\"Boundary.md\",\"Folder/Sub/Note.md\",\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-047",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=alpha",
+        "total",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "{\"total\":5}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-048",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=alpha",
+        "path=Folder//",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-049",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=alpha",
+        "path=Folder/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Folder/Sub/Note.md\",\"Folder/Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-050",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=>content:1",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Match file content: \n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-051",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=>line:(1)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Match line: \n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-052",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=>path:Numeric",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Match file path: \n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-053",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=>TRUE",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Is true\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-054",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=>/1/",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Matches regex: /1/\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-055",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=>(1 2)",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "Error: greaterthan operator cannot be applied to matcher Match all of: \n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-056",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=>()",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-057",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=2"
+      ],
+      "expected": {
+        "stdout": "SavedBOM.md\nBoundary.md\nFolder/Sub/Note.md\nFolder/Numeric.md\nNumeric.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-058",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=2",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"SavedBOM.md\",\"Boundary.md\",\"Folder/Sub/Note.md\",\"Folder/Numeric.md\",\"Numeric.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-059",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=﻿2"
+      ],
+      "expected": {
+        "stdout": "SavedBOM.md\nBoundary.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-060",
+      "phase": "4",
+      "args": [
+        "search",
+        "query=alpha",
+        "limit=﻿2",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"SavedBOM.md\",\"Boundary.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-01",
+      "phase": "5",
+      "args": [
+        "search",
+        "query=alpha",
+        "json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-02",
+      "phase": "5",
+      "args": [
+        "search",
+        "query=alpha",
+        "--json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-03",
+      "phase": "5",
+      "args": [
+        "search",
+        "query=alpha",
+        "text",
+        "json"
+      ],
+      "expected": {
+        "stdout": "Zeta.md\nFolder/Beta.md\nAlpha.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-04",
+      "phase": "5",
+      "args": [
+        "search",
+        "query=alpha",
+        "json",
+        "text"
+      ],
+      "expected": {
+        "stdout": "Zeta.md\nFolder/Beta.md\nAlpha.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-05",
+      "phase": "5",
+      "args": [
+        "search",
+        "query=alpha",
+        "json=false"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-06",
+      "phase": "5",
+      "args": [
+        "search",
+        "query=alpha",
+        "json="
+      ],
+      "expected": {
+        "stdout": "Zeta.md\nFolder/Beta.md\nAlpha.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-07",
+      "phase": "5",
+      "args": [
+        "search",
+        "query=alpha",
+        "format=",
+        "json"
+      ],
+      "expected": {
+        "stdout": "[\"Zeta.md\",\"Folder/Beta.md\",\"Alpha.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-08",
+      "phase": "5",
+      "args": [
+        "search:context",
+        "query=alpha",
+        "json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Zeta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha gamma\"}]},{\"file\":\"Folder/Beta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha beta\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-09",
+      "phase": "5",
+      "args": [
+        "search:context",
+        "query=alpha",
+        "--json"
+      ],
+      "expected": {
+        "stdout": "[{\"file\":\"Zeta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha gamma\"}]},{\"file\":\"Folder/Beta.md\",\"matches\":[{\"line\":1,\"text\":\"alpha beta\"}]},{\"file\":\"Alpha.md\",\"matches\":[{\"line\":1,\"text\":\"alpha\"}]}]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-10",
+      "phase": "5",
+      "args": [
+        "search:context",
+        "query=alpha",
+        "text",
+        "json"
+      ],
+      "expected": {
+        "stdout": "Zeta.md:1: alpha gamma\nFolder/Beta.md:1: alpha beta\nAlpha.md:1: alpha\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-11",
+      "phase": "5",
+      "args": [
+        "search:query",
+        "query=alpha",
+        "json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-search-12",
+      "phase": "5",
+      "args": [
+        "search:format",
+        "query=alpha",
+        "json"
+      ],
+      "expected": {
+        "stdout": "Zeta.md\nFolder/Beta.md\nAlpha.md\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    }
+  ],
+  "core_plugins": {
+    "global-search": true
+  },
+  "freshness": [
+    {
+      "files": {
+        "Fresh.md": "before\n"
+      },
+      "args": [
+        "search",
+        "query=before",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Fresh.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "files": {
+        "Fresh.md": "after\n"
+      },
+      "args": [
+        "search",
+        "query=after",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "[\"Fresh.md\"]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "files": {
+        "Fresh.md": "after\n"
+      },
+      "args": [
+        "search",
+        "query=before",
+        "format=json"
+      ],
+      "expected": {
+        "stdout": "No matches found.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    }
+  ],
+  "reads": [
+    {
+      "id": "search-review-061",
+      "phase": "4",
+      "args": [
+        "read",
+        "path=SavedBOM.md"
+      ],
+      "expected": {
+        "stdout": "# alpha\r\nsecond\r\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-062",
+      "phase": "4",
+      "args": [
+        "read",
+        "path=SavedNoFinal.md"
+      ],
+      "expected": {
+        "stdout": "last line\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "search-review-063",
+      "phase": "4",
+      "args": [
+        "read",
+        "path=SavedEmpty.md"
+      ],
+      "expected": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0
+      }
+    }
+  ],
+  "read_normalization_proof": [
+    {
+      "id": "search-review-064",
+      "phase": "4",
+      "args": [
+        "eval",
+        "code=(async()=>JSON.stringify(Object.fromEntries(await Promise.all([\"SavedBOM.md\",\"SavedNoFinal.md\",\"SavedEmpty.md\"].map(async path=>[path,{raw:await app.vault.read(app.vault.getFileByPath(path)),cached:await app.vault.cachedRead(app.vault.getFileByPath(path))}])))))()"
+      ],
+      "expected": {
+        "stdout": "=> {\"SavedBOM.md\":{\"raw\":\"# alpha\\r\\nsecond\\r\\n\",\"cached\":\"# alpha\\r\\nsecond\\r\\n\"},\"SavedNoFinal.md\":{\"raw\":\"last line\",\"cached\":\"last line\"},\"SavedEmpty.md\":{\"raw\":\"\",\"cached\":\"\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    }
+  ]
+}

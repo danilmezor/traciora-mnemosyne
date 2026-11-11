@@ -1,0 +1,16 @@
+[package]
+name="mnemosyne-runtime-addon"
+version="0.1.0"
+edition="2024"
+license = "Apache-2.0"
+[lib]
+crate-type=["cdylib"]
+test=false
+doctest=false
+[dependencies]
+napi={version="=3.14.2",default-features=false,features=["napi8"]}
+napi-derive="=3.6.12"
+mnemosyne-runtime-protocol={path="../runtime/protocol"}
+postcard={version="1",features=["use-std"]}
+[build-dependencies]
+napi-build="=2.6.0"

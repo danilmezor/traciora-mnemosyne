@@ -1,0 +1,482 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial_files": {
+    "High.md": "---\nvalue: \"\\uD800\"\n---\nbody\n",
+    "Low.md": "---\nvalue: \"\\uDC00\"\n---\nbody\n",
+    "Replacement.md": "---\nvalue: \"\\uFFFD\"\n---\nbody\n",
+    "Pair.md": "---\nvalue: \"\\uD83D\\uDE00\"\n---\nbody\n",
+    "Array.md": "---\nvalue: [\"\\uD800\", \"tail\"]\n---\nbody\n",
+    "Nested.md": "---\nvalue: [[\"\\uD800\", \"tail\"]]\n---\nbody\n",
+    "Literal.md": "---\nvalue: \"\\\\uD800\"\n---\nbody\n",
+    "Empty.md": "---\nvalue: \"\"\n---\nbody\n"
+  },
+  "cases": [
+    {
+      "args": [
+        "search",
+        "query=[value]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Empty.md\",\"Literal.md\",\"Nested.md\",\"Array.md\",\"Pair.md\",\"Replacement.md\",\"Low.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Literal.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]},{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Pair.md\",\"matches\":[]},{\"file\":\"Replacement.md\",\"matches\":[]},{\"file\":\"Low.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/\\uD800/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Nested.md\",\"Array.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/\\uD800/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Nested.md\",\"matches\":[]},{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/\\uDC00/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Low.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/\\uDC00/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Low.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/\\uFFFD/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Replacement.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/\\uFFFD/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Replacement.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/^.$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Array.md\",\"Replacement.md\",\"Low.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/^.$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Replacement.md\",\"matches\":[]},{\"file\":\"Low.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/^..$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Pair.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/^..$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Pair.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/^\\uD83D\\uDE00$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Pair.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/^\\uD83D\\uDE00$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Pair.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/^\\uD800,tail$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Nested.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/^\\uD800,tail$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Nested.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:/tail$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Nested.md\",\"Array.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:/tail$/]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Nested.md\",\"matches\":[]},{\"file\":\"Array.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>\ue000]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Replacement.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>\ue000]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Replacement.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<\ue000]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Empty.md\",\"Literal.md\",\"Nested.md\",\"Array.md\",\"Pair.md\",\"Low.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<\ue000]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Literal.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]},{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Pair.md\",\"matches\":[]},{\"file\":\"Low.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>\ud83d\ude00]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Replacement.md\",\"Low.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>\ud83d\ude00]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Replacement.md\",\"matches\":[]},{\"file\":\"Low.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<\ud83d\ude00]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Empty.md\",\"Literal.md\",\"Nested.md\",\"Array.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<\ud83d\ude00]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Literal.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]},{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:>\ufffd]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:>\ufffd]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:<\ufffd]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Empty.md\",\"Literal.md\",\"Nested.md\",\"Array.md\",\"Pair.md\",\"Low.md\",\"High.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:<\ufffd]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Empty.md\",\"matches\":[]},{\"file\":\"Literal.md\",\"matches\":[]},{\"file\":\"Nested.md\",\"matches\":[]},{\"file\":\"Array.md\",\"matches\":[]},{\"file\":\"Pair.md\",\"matches\":[]},{\"file\":\"Low.md\",\"matches\":[]},{\"file\":\"High.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:null]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:null]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:TRUE]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:TRUE]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:\"tail\"]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\"Nested.md\",\"Array.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=[value:\"tail\"]",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"Nested.md\",\"matches\":[]},{\"file\":\"Array.md\",\"matches\":[]}]\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "isolation_proof": {
+    "vault": "/home/user/reference/run-gnpydv8o/vault",
+    "profile": "/home/user/reference/run-gnpydv8o/profile",
+    "use_mock_keychain": true
+  },
+  "setup": {
+    "files": [
+      "Empty.md",
+      "Literal.md",
+      "Nested.md",
+      "Array.md",
+      "Pair.md",
+      "Replacement.md",
+      "Low.md",
+      "High.md"
+    ],
+    "cache_order": [
+      "High.md",
+      "Low.md",
+      "Replacement.md",
+      "Pair.md",
+      "Array.md",
+      "Nested.md",
+      "Literal.md",
+      "Empty.md"
+    ]
+  },
+  "process_cleanup": {
+    "pid": 59847,
+    "stopped": true
+  },
+  "scope": "36 actual desktop CLI outputs over escaped lone UTF16, replacement, paired, nested and array values; explicit observed file/cache order, UTC. Other query coercions and WTF16 property names remain open.",
+  "raw_report_sha256": "06dbb95dac0336337719d9185fcc61c4bce1d1ed3cec5b36760f0f8cc5e15db4"
+}

@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "authority": "pinned actual native runtime observation",
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "scope": {
+    "event_names": [
+      "create",
+      "modify",
+      "rename",
+      "delete"
+    ],
+    "event_arguments": "frozen path/kind and rename old_path at genuine callback",
+    "session_fields": [
+      "active_file",
+      "leaves(id,file,view_type)",
+      "last_open_files"
+    ],
+    "not_observed": [
+      "metadata events",
+      "editor buffers",
+      "layout restoration",
+      "cross-window events",
+      "listener error/order semantics"
+    ]
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "core_plugins": "disabled",
+    "startup_workspace": "parity-main/parity-leaf with ParityReady.md",
+    "reset": "independent Initial.md replaces startup note before listeners",
+    "pacing_seconds": 0.2
+  },
+  "raw_report": "target/rea/p1-vault-events/report.json",
+  "raw_report_sha256": "3ec8f08cc73212c90d812346fa2452995f483e555fcf30d854080c4cd50eeb9c",
+  "initial": {
+    "files": {
+      "Initial.md": "Initial fixture.\n"
+    }
+  },
+  "initial_snapshot": {
+    "session": {
+      "active_file": null,
+      "leaves": [
+        {
+          "id": "parity-leaf",
+          "file": null,
+          "view_type": "empty"
+        }
+      ],
+      "last_open_files": [
+        "ParityReady.md",
+        "Initial.md"
+      ]
+    },
+    "events": []
+  },
+  "steps": [
+    {
+      "id": "create",
+      "args": [
+        "create",
+        "path=P1A.md",
+        "content=A"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "Q3JlYXRlZDogUDFBLm1kCg==",
+        "stderr": ""
+      },
+      "before": {
+        "session": {
+          "active_file": null,
+          "leaves": [
+            {
+              "id": "parity-leaf",
+              "file": null,
+              "view_type": "empty"
+            }
+          ],
+          "last_open_files": [
+            "ParityReady.md",
+            "Initial.md"
+          ]
+        },
+        "events": []
+      },
+      "after": {
+        "session": {
+          "active_file": null,
+          "leaves": [
+            {
+              "id": "parity-leaf",
+              "file": null,
+              "view_type": "empty"
+            }
+          ],
+          "last_open_files": [
+            "P1A.md",
+            "ParityReady.md",
+            "Initial.md"
+          ]
+        },
+        "events": [
+          {
+            "sequence": 1,
+            "name": "create",
+            "path": "P1A.md",
+            "kind": "file"
+          }
+        ]
+      },
+      "before_files": {
+        "files": {
+          "Initial.md": "SW5pdGlhbCBmaXh0dXJlLgo="
+        },
+        "directories": [],
+        "vault_exists": true
+      },
+      "after_files": {
+        "files": {
+          "P1A.md": "QQ==",
+          "Initial.md": "SW5pdGlhbCBmaXh0dXJlLgo="
+        },
+        "directories": [],
+        "vault_exists": true
+      }
+    },
+    {
+      "id": "append",
+      "args": [
+        "append",
+        "path=P1A.md",
+        "content=B"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "QXBwZW5kZWQgdG86IFAxQS5tZAo=",
+        "stderr": ""
+      },
+      "before": {
+        "session": {
+          "active_file": null,
+          "leaves": [
+            {
+              "id": "parity-leaf",
+              "file": null,
+              "view_type": "empty"
+            }
+          ],
+          "last_open_files": [
+            "P1A.md",
+            "ParityReady.md",
+            "Initial.md"
+          ]
+        },
+        "events": []
+      },
+      "after": {
+        "session": {
+          "active_file": null,
+          "leaves": [
+            {
+              "id": "parity-leaf",
+              "file": null,
+              "view_type": "empty"
+            }
+          ],
+          "last_open_files": [
+            "P1A.md",
+            "ParityReady.md",
+            "Initial.md"
+          ]
+        },
+        "events": [
+          {
+            "sequence": 1,
+            "name": "modify",
+            "path": "P1A.md",
+            "kind": "file"
+          }
+        ]
+      },
+      "before_files": {
+        "files": {
+          "P1A.md": "QQ==",
+          "Initial.md": "SW5pdGlhbCBmaXh0dXJlLgo="
+        },
+        "directories": [],
+        "vault_exists": true
+      },
+      "after_files": {
+        "files": {
+          "P1A.md": "QQpC",
+          "Initial.md": "SW5pdGlhbCBmaXh0dXJlLgo="
+        },
+        "directories": [],
+        "vault_exists": true
+      }
+    },
+    {
+      "id": "rename",
+      "args": [
+        "rename",
+        "path=P1A.md",
+        "name=P1B"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "UmVuYW1lZDogUDFBLm1kIC0+IFAxQi5tZAo=",
+        "stderr": ""
+      },
+      "before": {
+        "session": {
+          "active_file": null,
+          "leaves": [
+            {
+              "id": "parity-leaf",
+              "file": null,
+              "view_type": "empty"
+            }
+          ],
+          "last_open_files": [
+            "P1A.md",
+            "ParityReady.md",
+            "Initial.md"
+          ]
+        },
+        "events": []
+      },
+      "after": {
+        "session": {
+          "active_file": null,
+          "leaves": [
+            {
+              "id": "parity-leaf",
+              "file": null,
+              "view_type": "empty"
+            }
+          ],
+          "last_open_files": [
+            "P1B.md",
+            "ParityReady.md",
+            "Initial.md"
+          ]
+        },
+        "events": [
+          {
+            "sequence": 1,
+            "name": "rename",
+            "path": "P1B.md",
+            "kind": "file",
+            "old_path": "P1A.md"
+          }
+        ]
+      },
+      "before_files": {
+        "files": {
+          "P1A.md": "QQpC",
+          "Initial.md": "SW5pdGlhbCBmaXh0dXJlLgo="
+        },
+        "directories": [],
+        "vault_exists": true
+      },
+      "after_files": {
+        "files": {
+          "Initial.md": "SW5pdGlhbCBmaXh0dXJlLgo=",
+          "P1B.md": "QQpC"
+        },
+        "directories": [],
+        "vault_exists": true
+      }
+    },
+    {
+      "id": "delete",
+      "args": [
+        "delete",
+        "path=P1B.md",
+        "permanent"
+      ],
+      "expected_process": {
+        "exit_code": 0,
+        "stdout": "RGVsZXRlZCBwZXJtYW5lbnRseTogUDFCLm1kCg==",
+        "stderr": ""
+      },
+      "before": {
+        "session": {
+          "active_file": null,
+          "leaves": [
+            {
+              "id": "parity-leaf",
+              "file": null,
+              "view_type": "empty"
+            }
+          ],
+          "last_open_files": [
+            "P1B.md",
+            "ParityReady.md",
+            "Initial.md"
+          ]
+        },
+        "events": []
+      },
+      "after": {
+        "session": {
+          "active_file": null,
+          "leaves": [
+            {
+              "id": "parity-leaf",
+              "file": null,
+              "view_type": "empty"
+            }
+          ],
+          "last_open_files": [
+            "P1B.md",
+            "ParityReady.md",
+            "Initial.md"
+          ]
+        },
+        "events": [
+          {
+            "sequence": 1,
+            "name": "delete",
+            "path": "P1B.md",
+            "kind": "file"
+          }
+        ]
+      },
+      "before_files": {
+        "files": {
+          "Initial.md": "SW5pdGlhbCBmaXh0dXJlLgo=",
+          "P1B.md": "QQpC"
+        },
+        "directories": [],
+        "vault_exists": true
+      },
+      "after_files": {
+        "files": {
+          "Initial.md": "SW5pdGlhbCBmaXh0dXJlLgo="
+        },
+        "directories": [],
+        "vault_exists": true
+      }
+    }
+  ],
+  "limitations": [
+    "Events observed only for four root-file CLI operations in one retained native context.",
+    "File paths are frozen callback projections, not complete mutable TFile object payloads.",
+    "Raw native leaf IDs retained; future matcher must declare stable correspondence explicitly.",
+    "No candidate event bus, session observer or broad P1 parity certification from this capture."
+  ],
+  "source_contract": {
+    "source_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+    "member": "app.js",
+    "vault_on_change": {
+      "byte_start": 1425324,
+      "byte_end": 1426293
+    },
+    "workspace": {
+      "getActiveFile_byte": 2937481,
+      "iterateAllLeaves_byte": 2938670,
+      "getLastOpenFiles_byte": 2940769,
+      "recent_tracker_getLastOpenFiles_byte": 2886515
+    },
+    "rea_evidence": {
+      "static": "ev_0573bd71c30820156abc47987c6ba05dfa5bb14df568af0d8fbee2899e8c0403",
+      "runtime": "ev_e58efd72972251bfdbbbaaac1fcb972516e571e208bce6091cb58318747b0661"
+    }
+  },
+  "sdk_contract": {
+    "url": "plugin API type definitions at revision 9abd9605ce081383674aae1ed111c456edde0688 (see THIRD_PARTY_NOTICES.md)",
+    "sha256": "97c86417c893db691e401fdffd9026e348dc96da6bfcfa5d49a301d7fe7542a0",
+    "declarations": {
+      "Vault.on.create": 10424,
+      "Vault.on.modify": 10433,
+      "Vault.on.delete": 10439,
+      "Vault.on.rename": 10445,
+      "Workspace.getActiveFile": 10946,
+      "Workspace.iterateAllLeaves": 10962,
+      "Workspace.getLastOpenFiles": 10992,
+      "Events.offref": 4282
+    }
+  },
+  "cleanup_receipt": {
+    "path": "target/rea/p1-vault-events/cleanup.json",
+    "sha256": "674b644b7cbd03b20022a36b0926068a03e2ee1227c8bd760d0f247c6c58f6ee",
+    "absent": true,
+    "listeners_removed": 4
+  }
+}

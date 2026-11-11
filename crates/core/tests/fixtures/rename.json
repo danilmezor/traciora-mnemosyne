@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "operation": "app.fileManager.renameFile",
+  "settings": {
+    "alwaysUpdateLinks": true
+  },
+  "isolation_proof": {
+    "vault": "/home/user/reference/run-lnfatu66/vault",
+    "profile": "/home/user/reference/run-lnfatu66/profile"
+  },
+  "cases": [
+    {
+      "id": "self-and-inbound",
+      "old": "Old.md",
+      "new": "New.md",
+      "format": "shortest",
+      "files": {
+        "Old.md": "[[Old]] [[#Heading]] [Old](Old.md) ![[Old#Heading]]\n",
+        "Source.md": "[[Old|Old]] [[folder/Old|Old]] [[Old#Heading|Custom]] [Old](Old.md) [Old](<Old.md> \"title\")\n"
+      },
+      "expected": {
+        "New.md": "[[New]] [[#Heading]] [New](New.md) ![[New#Heading]]\n",
+        "Source.md": "[[New|Old]] [[folder/Old|Old]] [[New#Heading|Custom]] [New](New.md) [New](<New.md> \"title\")\n"
+      }
+    },
+    {
+      "id": "outgoing-shortest",
+      "old": "a/Old.md",
+      "new": "b/New.md",
+      "format": "shortest",
+      "files": {
+        "a/Old.md": "[[./Sibling]] [Sibling](./Sibling.md) [[../Root]] ![[../image.png]] [[Sibling]] [[Missing]]\n",
+        "a/Sibling.md": "",
+        "Root.md": "",
+        "image.png": "",
+        "Source.md": "[[Old]] [[a/Old]]\n"
+      },
+      "expected": {
+        "Source.md": "[[New]] [[New]]\n",
+        "Root.md": "",
+        "image.png": "",
+        "a/Sibling.md": "",
+        "b/New.md": "[[Sibling]] [Sibling](Sibling.md) [[../Root]] ![[../image.png]] [[Sibling]] [[Missing]]\n"
+      }
+    },
+    {
+      "id": "outgoing-relative",
+      "old": "a/Old.md",
+      "new": "b/New.md",
+      "format": "relative",
+      "files": {
+        "a/Old.md": "[[./Sibling]] [Sibling](./Sibling.md) [[../Root]] ![[../image.png]] [[Sibling]] [[Missing]]\n",
+        "a/Sibling.md": "",
+        "Root.md": "",
+        "image.png": "",
+        "Source.md": "[[Old]] [[a/Old]]\n"
+      },
+      "expected": {
+        "Source.md": "[[b/New]] [[b/New]]\n",
+        "Root.md": "",
+        "image.png": "",
+        "a/Sibling.md": "",
+        "b/New.md": "[[../a/Sibling]] [Sibling](../a/Sibling.md) [[../Root]] ![[../image.png]] [[Sibling]] [[Missing]]\n"
+      }
+    },
+    {
+      "id": "yaml",
+      "old": "Old.md",
+      "new": "New.md",
+      "format": "shortest",
+      "files": {
+        "Old.md": "---\nself: \"[[Old]]\"\n---\n[[Old]]\n",
+        "Source.md": "---\n# comment\nrelated: '[[Old#Heading|Old]]'\nlist: [\"[[Old]]\", other]\nnested:\n  key: \"[[Old]]\"\nmd: \"[Old](Old.md)\"\ntext: \"prefix [[Old]]\"\nflag: true\n---\n[[Old]]\n"
+      },
+      "expected": {
+        "New.md": "---\nself: \"[[New]]\"\n---\n[[New]]\n",
+        "Source.md": "---\nrelated: \"[[New#Heading|Old]]\"\nlist:\n  - \"[[New]]\"\n  - other\nnested:\n  key: \"[[New]]\"\nmd: \"[New](New.md)\"\ntext: prefix [[Old]]\nflag: true\n---\n[[New]]\n"
+      }
+    },
+    {
+      "id": "move-unchanged-basename",
+      "old": "a/Old.md",
+      "new": "b/Old.md",
+      "format": "absolute",
+      "files": {
+        "a/Old.md": "[[Old]]\n",
+        "Source.md": "[[Old]] [Old](Old.md) [[a/Old]]\n"
+      },
+      "expected": {
+        "Source.md": "[[b/Old]] [Old](b/Old.md) [[b/Old]]\n",
+        "b/Old.md": "[[b/Old]]\n"
+      }
+    },
+    {
+      "id": "ambiguity",
+      "old": "a/Note.md",
+      "new": "a/Renamed.md",
+      "format": "shortest",
+      "files": {
+        "a/Note.md": "",
+        "b/Note.md": "",
+        "a/Source.md": "[[Note]] [[b/Note]]\n",
+        "b/Source.md": "[[Note]]\n"
+      },
+      "expected": {
+        "a/Source.md": "[[Renamed]] [[b/Note]]\n",
+        "a/Renamed.md": "",
+        "b/Note.md": "",
+        "b/Source.md": "[[Note]]\n"
+      }
+    },
+    {
+      "id": "yaml-rich",
+      "old": "Old.md",
+      "new": "New.md",
+      "format": "shortest",
+      "files": {
+        "Old.md": "",
+        "Source.md": "---\nempty: null\nblank: ''\nyesword: yes\nnumberstring: '123'\nlist:\n  - key: '[[Old]]'\n    flag: true\nmultiline: |\n  first\n  second\nrelated: '[[Old]]'\n---\nbody\n"
+      },
+      "expected": {
+        "New.md": "",
+        "Source.md": "---\nempty:\nblank: \"\"\nyesword: yes\nnumberstring: \"123\"\nlist:\n  - key: \"[[New]]\"\n    flag: true\nmultiline: |\n  first\n  second\nrelated: \"[[New]]\"\n---\nbody\n"
+      }
+    },
+    {
+      "id": "aliases-and-markdown",
+      "old": "folder/Old.md",
+      "new": "folder/New Name.md",
+      "format": "absolute",
+      "files": {
+        "folder/Old.md": "",
+        "Source.md": "[[folder/Old|Old]] [[Old|  Old  ]] [[folder/Old#Heading|Old]] [folder/Old](folder/Old.md) [Old](folder/Old.md \"title\") [custom](<folder/Old.md>)\n"
+      },
+      "expected": {
+        "Source.md": "[[folder/New Name|New Name]] [[folder/New Name|  Old  ]] [[folder/New Name#Heading|Old]] [folder/New Name](folder/New%20Name.md) [New Name](folder/New%20Name.md \"title\") [custom](<folder/New Name.md>)\n",
+        "folder/New Name.md": ""
+      }
+    },
+    {
+      "id": "yaml-crlf",
+      "old": "Old.md",
+      "new": "New.md",
+      "format": "relative",
+      "files": {
+        "Old.md": "",
+        "Source.md": "---\r\nrelated: \"[[Old]]\"\r\n---\r\n[[Old]]\r\n"
+      },
+      "expected": {
+        "New.md": "",
+        "Source.md": "---\r\nrelated: \"[[New]]\"\n---\r\n[[New]]\r\n"
+      }
+    },
+    {
+      "id": "attachment",
+      "old": "image.png",
+      "new": "New image.png",
+      "format": "shortest",
+      "files": {
+        "image.png": "image",
+        "Source.md": "![[image.png]] ![image.png](image.png) [[image.png|image]]\n"
+      },
+      "expected": {
+        "Source.md": "![[New image.png]] ![New image.png](New%20image.png) [[New image.png|image]]\n",
+        "New image.png": "image"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2121 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "timezones": [
+    {
+      "TZ": "UTC",
+      "runtime": {
+        "version": "2.30.1",
+        "locale": "en",
+        "locales": [
+          "en",
+          "af",
+          "ar-dz",
+          "ar-kw",
+          "ar-ly",
+          "ar-ma",
+          "ar-ps",
+          "ar-sa",
+          "ar-tn",
+          "ar",
+          "az",
+          "be",
+          "bg",
+          "bm",
+          "bn-bd",
+          "bn",
+          "bo",
+          "br",
+          "bs",
+          "ca",
+          "cs",
+          "cv",
+          "cy",
+          "da",
+          "de-at",
+          "de-ch",
+          "de",
+          "dv",
+          "el",
+          "en-au",
+          "en-ca",
+          "en-gb",
+          "en-ie",
+          "en-il",
+          "en-in",
+          "en-nz",
+          "en-sg",
+          "eo",
+          "es-do",
+          "es-mx",
+          "es-us",
+          "es",
+          "et",
+          "eu",
+          "fa",
+          "fi",
+          "fil",
+          "fo",
+          "fr-ca",
+          "fr-ch",
+          "fr",
+          "fy",
+          "ga",
+          "gd",
+          "gl",
+          "gom-deva",
+          "gom-latn",
+          "gu",
+          "he",
+          "hi",
+          "hr",
+          "hu",
+          "hy-am",
+          "id",
+          "is",
+          "it-ch",
+          "it",
+          "ja",
+          "jv",
+          "ka",
+          "kk",
+          "km",
+          "kn",
+          "ko",
+          "ku-kmr",
+          "ku",
+          "ky",
+          "lb",
+          "lo",
+          "lt",
+          "lv",
+          "me",
+          "mi",
+          "mk",
+          "ml",
+          "mn",
+          "mr",
+          "ms-my",
+          "ms",
+          "mt",
+          "my",
+          "nb",
+          "ne",
+          "nl-be",
+          "nl",
+          "nn",
+          "oc-lnc",
+          "pa-in",
+          "pl",
+          "pt-br",
+          "pt",
+          "ro",
+          "ru",
+          "sd",
+          "se",
+          "si",
+          "sk",
+          "sl",
+          "sq",
+          "sr-cyrl",
+          "sr",
+          "ss",
+          "sv",
+          "sw",
+          "ta",
+          "te",
+          "tet",
+          "tg",
+          "th",
+          "tk",
+          "tl-ph",
+          "tlh",
+          "tr",
+          "tzl",
+          "tzm-latn",
+          "tzm",
+          "ug-cn",
+          "uk",
+          "ur",
+          "uz-latn",
+          "uz",
+          "vi",
+          "x-pseudo",
+          "yo",
+          "zh-cn",
+          "zh-hk",
+          "zh-mo",
+          "zh-tw"
+        ],
+        "zone": "UTC",
+        "now": "2026-10-14 08:16:12 +00:00"
+      },
+      "outputs": [
+        {
+          "epoch": 1767240306987,
+          "locale": "en",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "January Jan 01 1 1st 1st",
+            "dddd ddd dd d do e E": "Thursday Thu Th 4 4th 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1st 1 01 1st 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1st 1 1st 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "4:05 AM 4:05:06 AM 01/01/2026 January 1, 2026 January 1, 2026 4:05 AM Thursday, January 1, 2026 4:05 AM 1/1/2026 Jan 1, 2026 Jan 1, 2026 4:05 AM Thu, Jan 1, 2026 4:05 AM",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [1/1/2026it4ram1/1/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "en-gb",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "January Jan 01 1 1st 1st",
+            "dddd ddd dd d do e E": "Thursday Thu Th 4 4th 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1st 1 01 1st 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1st 1 1st 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "04:05 04:05:06 01/01/2026 1 January 2026 1 January 2026 04:05 Thursday, 1 January 2026 04:05 1/1/2026 1 Jan 2026 1 Jan 2026 04:05 Thu, 1 Jan 2026 04:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [1/1/2026it3ram1/1/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "ru",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "январь янв. 01 1 1-й 1",
+            "dddd ddd dd d do e E": "четверг чт чт 4 4-й 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1-я 1 01 1-я 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1-й 1 1-го 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "4:05 4:05:06 01.01.2026 1 января 2026 г. 1 января 2026 г., 4:05 четверг, 1 января 2026 г., 4:05 1.1.2026 1 янв. 2026 г. 1 янв. 2026 г., 4:05 чт, 1 янв. 2026 г., 4:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "утра утра 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [1.1.2026it3rутра1.1.2026 nested] утраbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "fr",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "janvier janv. 01 1 1er 1er",
+            "dddd ddd dd d do e E": "jeudi jeu. je 4 4e 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1re 1 01 1re 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1er 1 1er 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "04:05 04:05:06 01/01/2026 1 janvier 2026 1 janvier 2026 04:05 jeudi 1 janvier 2026 04:05 1/1/2026 1 janv. 2026 1 janv. 2026 04:05 jeu. 1 janv. 2026 04:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [1/1/2026it3ram1/1/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "de",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "Januar Jan. 01 1 1. 1.",
+            "dddd ddd dd d do e E": "Donnerstag Do. Do 4 4. 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1. 1 01 1. 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1. 1 1. 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "04:05 04:05:06 01.01.2026 1. Januar 2026 1. Januar 2026 04:05 Donnerstag, 1. Januar 2026 04:05 1.1.2026 1. Jan. 2026 1. Jan. 2026 04:05 Do., 1. Jan. 2026 04:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [1.1.2026it3ram1.1.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "es",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "enero ene. 01 1 1º 1º",
+            "dddd ddd dd d do e E": "jueves jue. ju 4 4º 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1º 1 01 1º 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1º 1 1º 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "4:05 4:05:06 01/01/2026 1 de enero de 2026 1 de enero de 2026 4:05 jueves, 1 de enero de 2026 4:05 1/1/2026 1 de ene. de 2026 1 de ene. de 2026 4:05 jue., 1 de ene. de 2026 4:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [1/1/2026it3ram1/1/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "ja",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "1月 1月 01 1 1 1",
+            "dddd ddd dd d do e E": "木曜日 木 木 4 4日 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1 1 01 1 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1日 1 1日 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "04:05 04:05:06 2026/01/01 2026年1月1日 2026年1月1日 04:05 2026年1月1日 木曜日 04:05 2026/01/01 2026年1月1日 2026年1月1日 04:05 2026年1月1日(木) 04:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "午前 午前 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/01/01it4r午前2026/01/01 nested] 午前bc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "zh-cn",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "一月 1月 01 1 1月 1",
+            "dddd ddd dd d do e E": "星期四 周四 四 4 4日 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1周 1 01 1周 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1日 1 1日 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "04:05 04:05:06 2026/01/01 2026年1月1日 2026年1月1日凌晨4点05分 2026年1月1日星期四凌晨4点05分 2026/1/1 2026年1月1日 2026年1月1日 04:05 2026年1月1日星期四 04:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "凌晨 凌晨 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/1/1it3r凌晨2026/1/1 nested] 凌晨bc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "ar",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "٢٠٢٦-٠١-٠١ ٠٤:٠٥:٠٦.٩٨٧ +٠٠:٠٠ +٠٠٠٠ ١٧٦٧٢٤٠٣٠٦ ١٧٦٧٢٤٠٣٠٦٩٨٧",
+            "MMMM MMM MM M Mo Qo": "يناير يناير ٠١ ١ ١ ١",
+            "dddd ddd dd d do e E": "الخميس خميس خ ٤ ٤ ٥ ٤",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "٢٠٢٦ ٢٦ ٢٠٢٦ ٠٢٠٢٦ +٠٠٢٠٢٦ ٢٠٢٦ ٢٦ ٢٠٢٦ ٢٦ ١ ١ ٠١ ١ ١ ٠١",
+            "DDD DDDD DDDo D Do DD": "١ ٠٠١ ١ ١ ١ ٠١",
+            "LT LTS L LL LLL LLLL l ll lll llll": "٠٤:٠٥ ٠٤:٠٥:٠٦ ١/‏١/‏٢٠٢٦ ١ يناير ٢٠٢٦ ١ يناير ٢٠٢٦ ٠٤:٠٥ الخميس ١ يناير ٢٠٢٦ ٠٤:٠٥ ١/‏١/‏٢٠٢٦ ١ يناير ٢٠٢٦ ١ يناير ٢٠٢٦ ٠٤:٠٥ خميس ١ يناير ٢٠٢٦ ٠٤:٠٥",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "ص ص ٤ ٠٤ ٤ ٠٤ ٤ ٠٤ ٤٠٥ ٤٠٥٠٦ ٤٠٥ ٤٠٥٠٦",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "٩ ٩٨ ٩٨٧ ٩٨٧٠ ٩٨٧٠٠ ٩٨٧٠٠٠ ٩٨٧٠٠٠٠ ٩٨٧٠٠٠٠٠ ٩٨٧٠٠٠٠٠٠  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [١/‏١/‏٢٠٢٦it٥rص١/‏١/‏٢٠٢٦ nested] صbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "hi",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "२०२६-०१-०१ ०४:०५:०६.९८७ +००:०० +०००० १७६७२४०३०६ १७६७२४०३०६९८७",
+            "MMMM MMM MM M Mo Qo": "जनवरी जन. ०१ १ १ १",
+            "dddd ddd dd d do e E": "गुरूवार गुरू गु ४ ४ ४ ४",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "२०२६ २६ २०२६ ०२०२६ +००२०२६ २०२६ २६ २०२६ २६ १ १ ०१ १ १ ०१",
+            "DDD DDDD DDDo D Do DD": "१ ००१ १ १ १ ०१",
+            "LT LTS L LL LLL LLLL l ll lll llll": "सुबह ४:०५ बजे सुबह ४:०५:०६ बजे ०१/०१/२०२६ १ जनवरी २०२६ १ जनवरी २०२६, सुबह ४:०५ बजे गुरूवार, १ जनवरी २०२६, सुबह ४:०५ बजे १/१/२०२६ १ जन. २०२६ १ जन. २०२६, सुबह ४:०५ बजे गुरू, १ जन. २०२६, सुबह ४:०५ बजे",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "सुबह सुबह ४ ०४ ४ ०४ ४ ०४ ४०५ ४०५०६ ४०५ ४०५०६",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "९ ९८ ९८७ ९८७० ९८७०० ९८७००० ९८७०००० ९८७००००० ९८७००००००  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [१/१/२०२६it४rसुबह१/१/२०२६ nested] सुबहbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "lt",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "sausis sau 01 1 1-oji 1-oji",
+            "dddd ddd dd d do e E": "ketvirtadienis Ket K 4 4-oji 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1-oji 1 01 1-oji 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1-oji 1 1-oji 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "04:05 04:05:06 2026-01-01 2026 m. sausio 1 d. 2026 m. sausio 1 d., 04:05 val. 2026 m. sausio 1 d., ketvirtadienis, 04:05 val. 2026-01-01 2026 m. sausio 1 d. 2026 m. sausio 1 d., 04:05 val. 2026 m. sausio 1 d., Ket, 04:05 val.",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026-01-01it3ram2026-01-01 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "pl",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "styczeń sty 01 1 1. 1.",
+            "dddd ddd dd d do e E": "czwartek czw Cz 4 4. 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1. 1 01 1. 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1. 1 1. 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "04:05 04:05:06 01.01.2026 1 stycznia 2026 1 stycznia 2026 04:05 czwartek, 1 stycznia 2026 04:05 1.1.2026 1 sty 2026 1 sty 2026 04:05 czw, 1 sty 2026 04:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [1.1.2026it3ram1.1.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "ko",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-01-01 04:05:06.987 +00:00 +0000 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "1월 1월 01 1 1월 1",
+            "dddd ddd dd d do e E": "목요일 목 목 4 4일 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 1주 1 01 1주 1 01",
+            "DDD DDDD DDDo D Do DD": "1 001 1일 1 1일 01",
+            "LT LTS L LL LLL LLLL l ll lll llll": "오전 4:05 오전 4:05:06 2026.01.01. 2026년 1월 1일 2026년 1월 1일 오전 4:05 2026년 1월 1일 목요일 오전 4:05 2026.01.01. 2026년 1월 1일 2026년 1월 1일 오전 4:05 2026년 1월 1일 목요일 오전 4:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "오전 오전 4 04 4 04 4 04 405 40506 405 40506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026.01.01.it4r오전2026.01.01. nested] 오전bc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "fa",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "۲۰۲۶-۰۱-۰۱ ۰۴:۰۵:۰۶.۹۸۷ +۰۰:۰۰ +۰۰۰۰ ۱۷۶۷۲۴۰۳۰۶ ۱۷۶۷۲۴۰۳۰۶۹۸۷",
+            "MMMM MMM MM M Mo Qo": "ژانویه ژانویه ۰۱ ۱ ۱م ۱م",
+            "dddd ddd dd d do e E": "پنج‌شنبه پنج‌شنبه پ ۴ ۴م ۵ ۴",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "۲۰۲۶ ۲۶ ۲۰۲۶ ۰۲۰۲۶ +۰۰۲۰۲۶ ۲۰۲۶ ۲۶ ۲۰۲۶ ۲۶ ۱م ۱ ۰۱ ۱م ۱ ۰۱",
+            "DDD DDDD DDDo D Do DD": "۱ ۰۰۱ ۱م ۱ ۱م ۰۱",
+            "LT LTS L LL LLL LLLL l ll lll llll": "۰۴:۰۵ ۰۴:۰۵:۰۶ ۰۱/۰۱/۲۰۲۶ ۱ ژانویه ۲۰۲۶ ۱ ژانویه ۲۰۲۶ ۰۴:۰۵ پنج‌شنبه، ۱ ژانویه ۲۰۲۶ ۰۴:۰۵ ۱/۱/۲۰۲۶ ۱ ژانویه ۲۰۲۶ ۱ ژانویه ۲۰۲۶ ۰۴:۰۵ پنج‌شنبه، ۱ ژانویه ۲۰۲۶ ۰۴:۰۵",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "قبل از ظهر قبل از ظهر ۴ ۰۴ ۴ ۰۴ ۴ ۰۴ ۴۰۵ ۴۰۵۰۶ ۴۰۵ ۴۰۵۰۶",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "۹ ۹۸ ۹۸۷ ۹۸۷۰ ۹۸۷۰۰ ۹۸۷۰۰۰ ۹۸۷۰۰۰۰ ۹۸۷۰۰۰۰۰ ۹۸۷۰۰۰۰۰۰  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [۱/۱/۲۰۲۶it۵rقبل از ظهر۱/۱/۲۰۲۶ nested] قبل از ظهرbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "en",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "February Feb 02 2 2nd 1st",
+            "dddd ddd dd d do e E": "Thursday Thu Th 4 4th 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9th 9 09 9th 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60th 29 29th 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "11:59 PM 11:59:59 PM 02/29/2024 February 29, 2024 February 29, 2024 11:59 PM Thursday, February 29, 2024 11:59 PM 2/29/2024 Feb 29, 2024 Feb 29, 2024 11:59 PM Thu, Feb 29, 2024 11:59 PM",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2/29/2024it4rpm2/29/2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "en-gb",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "February Feb 02 2 2nd 1st",
+            "dddd ddd dd d do e E": "Thursday Thu Th 4 4th 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9th 9 09 9th 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60th 29 29th 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 29/02/2024 29 February 2024 29 February 2024 23:59 Thursday, 29 February 2024 23:59 29/2/2024 29 Feb 2024 29 Feb 2024 23:59 Thu, 29 Feb 2024 23:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29/2/2024it3rpm29/2/2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "ru",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "февраль февр. 02 2 2-й 1",
+            "dddd ddd dd d do e E": "четверг чт чт 4 4-й 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9-я 9 09 9-я 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60-й 29 29-го 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 29.02.2024 29 февраля 2024 г. 29 февраля 2024 г., 23:59 четверг, 29 февраля 2024 г., 23:59 29.2.2024 29 февр. 2024 г. 29 февр. 2024 г., 23:59 чт, 29 февр. 2024 г., 23:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "вечера вечера 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29.2.2024it3rвечера29.2.2024 nested] вечераbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "fr",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "février févr. 02 2 2e 1er",
+            "dddd ddd dd d do e E": "jeudi jeu. je 4 4e 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9e 9 09 9e 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60e 29 29 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 29/02/2024 29 février 2024 29 février 2024 23:59 jeudi 29 février 2024 23:59 29/2/2024 29 févr. 2024 29 févr. 2024 23:59 jeu. 29 févr. 2024 23:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29/2/2024it3rpm29/2/2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "de",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "Februar Feb. 02 2 2. 1.",
+            "dddd ddd dd d do e E": "Donnerstag Do. Do 4 4. 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9. 9 09 9. 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60. 29 29. 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 29.02.2024 29. Februar 2024 29. Februar 2024 23:59 Donnerstag, 29. Februar 2024 23:59 29.2.2024 29. Feb. 2024 29. Feb. 2024 23:59 Do., 29. Feb. 2024 23:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29.2.2024it3rpm29.2.2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "es",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "febrero feb. 02 2 2º 1º",
+            "dddd ddd dd d do e E": "jueves jue. ju 4 4º 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9º 9 09 9º 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60º 29 29º 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 29/02/2024 29 de febrero de 2024 29 de febrero de 2024 23:59 jueves, 29 de febrero de 2024 23:59 29/2/2024 29 de feb. de 2024 29 de feb. de 2024 23:59 jue., 29 de feb. de 2024 23:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29/2/2024it3rpm29/2/2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "ja",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "2月 2月 02 2 2 1",
+            "dddd ddd dd d do e E": "木曜日 木 木 4 4日 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9 9 09 9 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60日 29 29日 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 2024/02/29 2024年2月29日 2024年2月29日 23:59 2024年2月29日 木曜日 23:59 2024/02/29 2024年2月29日 2024年2月29日 23:59 2024年2月29日(木) 23:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "午後 午後 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2024/02/29it4r午後2024/02/29 nested] 午後bc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "zh-cn",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "二月 2月 02 2 2月 1",
+            "dddd ddd dd d do e E": "星期四 周四 四 4 4日 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9周 9 09 9周 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60日 29 29日 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 2024/02/29 2024年2月29日 2024年2月29日晚上11点59分 2024年2月29日星期四晚上11点59分 2024/2/29 2024年2月29日 2024年2月29日 23:59 2024年2月29日星期四 23:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "晚上 晚上 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2024/2/29it3r晚上2024/2/29 nested] 晚上bc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "ar",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "٢٠٢٤-٠٢-٢٩ ٢٣:٥٩:٥٩.٩٩٩ +٠٠:٠٠ +٠٠٠٠ ١٧٠٩٢٥١١٩٩ ١٧٠٩٢٥١١٩٩٩٩٩",
+            "MMMM MMM MM M Mo Qo": "فبراير فبراير ٠٢ ٢ ٢ ١",
+            "dddd ddd dd d do e E": "الخميس خميس خ ٤ ٤ ٥ ٤",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "٢٠٢٤ ٢٤ ٢٠٢٤ ٠٢٠٢٤ +٠٠٢٠٢٤ ٢٠٢٤ ٢٤ ٢٠٢٤ ٢٤ ٩ ٩ ٠٩ ٩ ٩ ٠٩",
+            "DDD DDDD DDDo D Do DD": "٦٠ ٠٦٠ ٦٠ ٢٩ ٢٩ ٢٩",
+            "LT LTS L LL LLL LLLL l ll lll llll": "٢٣:٥٩ ٢٣:٥٩:٥٩ ٢٩/‏٢/‏٢٠٢٤ ٢٩ فبراير ٢٠٢٤ ٢٩ فبراير ٢٠٢٤ ٢٣:٥٩ الخميس ٢٩ فبراير ٢٠٢٤ ٢٣:٥٩ ٢٩/‏٢/‏٢٠٢٤ ٢٩ فبراير ٢٠٢٤ ٢٩ فبراير ٢٠٢٤ ٢٣:٥٩ خميس ٢٩ فبراير ٢٠٢٤ ٢٣:٥٩",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "م م ٢٣ ٢٣ ١١ ١١ ٢٣ ٢٣ ٢٣٥٩ ٢٣٥٩٥٩ ١١٥٩ ١١٥٩٥٩",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "٩ ٩٩ ٩٩٩ ٩٩٩٠ ٩٩٩٠٠ ٩٩٩٠٠٠ ٩٩٩٠٠٠٠ ٩٩٩٠٠٠٠٠ ٩٩٩٠٠٠٠٠٠  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [٢٩/‏٢/‏٢٠٢٤it٥rم٢٩/‏٢/‏٢٠٢٤ nested] مbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "hi",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "२०२४-०२-२९ २३:५९:५९.९९९ +००:०० +०००० १७०९२५११९९ १७०९२५११९९९९९",
+            "MMMM MMM MM M Mo Qo": "फरवरी फ़र. ०२ २ २ १",
+            "dddd ddd dd d do e E": "गुरूवार गुरू गु ४ ४ ४ ४",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "२०२४ २४ २०२४ ०२०२४ +००२०२४ २०२४ २४ २०२४ २४ ९ ९ ०९ ९ ९ ०९",
+            "DDD DDDD DDDo D Do DD": "६० ०६० ६० २९ २९ २९",
+            "LT LTS L LL LLL LLLL l ll lll llll": "रात ११:५९ बजे रात ११:५९:५९ बजे २९/०२/२०२४ २९ फ़रवरी २०२४ २९ फ़रवरी २०२४, रात ११:५९ बजे गुरूवार, २९ फ़रवरी २०२४, रात ११:५९ बजे २९/२/२०२४ २९ फ़र. २०२४ २९ फ़र. २०२४, रात ११:५९ बजे गुरू, २९ फ़र. २०२४, रात ११:५९ बजे",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "रात रात २३ २३ ११ ११ २३ २३ २३५९ २३५९५९ ११५९ ११५९५९",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "९ ९९ ९९९ ९९९० ९९९०० ९९९००० ९९९०००० ९९९००००० ९९९००००००  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [२९/२/२०२४it४rरात२९/२/२०२४ nested] रातbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "lt",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "vasaris vas 02 2 2-oji 1-oji",
+            "dddd ddd dd d do e E": "ketvirtadienis Ket K 4 4-oji 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9-oji 9 09 9-oji 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60-oji 29 29-oji 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 2024-02-29 2024 m. vasario 29 d. 2024 m. vasario 29 d., 23:59 val. 2024 m. vasario 29 d., ketvirtadienis, 23:59 val. 2024-02-29 2024 m. vasario 29 d. 2024 m. vasario 29 d., 23:59 val. 2024 m. vasario 29 d., Ket, 23:59 val.",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2024-02-29it3rpm2024-02-29 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "pl",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "luty lut 02 2 2. 1.",
+            "dddd ddd dd d do e E": "czwartek czw Cz 4 4. 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9. 9 09 9. 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60. 29 29. 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "23:59 23:59:59 29.02.2024 29 lutego 2024 29 lutego 2024 23:59 czwartek, 29 lutego 2024 23:59 29.2.2024 29 lut 2024 29 lut 2024 23:59 czw, 29 lut 2024 23:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29.2.2024it3rpm29.2.2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "ko",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 23:59:59.999 +00:00 +0000 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "2월 2월 02 2 2월 1",
+            "dddd ddd dd d do e E": "목요일 목 목 4 4일 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9주 9 09 9주 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60일 29 29일 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "오후 11:59 오후 11:59:59 2024.02.29. 2024년 2월 29일 2024년 2월 29일 오후 11:59 2024년 2월 29일 목요일 오후 11:59 2024.02.29. 2024년 2월 29일 2024년 2월 29일 오후 11:59 2024년 2월 29일 목요일 오후 11:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "오후 오후 23 23 11 11 23 23 2359 235959 1159 115959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2024.02.29.it4r오후2024.02.29. nested] 오후bc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "fa",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "۲۰۲۴-۰۲-۲۹ ۲۳:۵۹:۵۹.۹۹۹ +۰۰:۰۰ +۰۰۰۰ ۱۷۰۹۲۵۱۱۹۹ ۱۷۰۹۲۵۱۱۹۹۹۹۹",
+            "MMMM MMM MM M Mo Qo": "فوریه فوریه ۰۲ ۲ ۲م ۱م",
+            "dddd ddd dd d do e E": "پنج‌شنبه پنج‌شنبه پ ۴ ۴م ۵ ۴",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "۲۰۲۴ ۲۴ ۲۰۲۴ ۰۲۰۲۴ +۰۰۲۰۲۴ ۲۰۲۴ ۲۴ ۲۰۲۴ ۲۴ ۹م ۹ ۰۹ ۹م ۹ ۰۹",
+            "DDD DDDD DDDo D Do DD": "۶۰ ۰۶۰ ۶۰م ۲۹ ۲۹م ۲۹",
+            "LT LTS L LL LLL LLLL l ll lll llll": "۲۳:۵۹ ۲۳:۵۹:۵۹ ۲۹/۰۲/۲۰۲۴ ۲۹ فوریه ۲۰۲۴ ۲۹ فوریه ۲۰۲۴ ۲۳:۵۹ پنج‌شنبه، ۲۹ فوریه ۲۰۲۴ ۲۳:۵۹ ۲۹/۲/۲۰۲۴ ۲۹ فوریه ۲۰۲۴ ۲۹ فوریه ۲۰۲۴ ۲۳:۵۹ پنج‌شنبه، ۲۹ فوریه ۲۰۲۴ ۲۳:۵۹",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "بعد از ظهر بعد از ظهر ۲۳ ۲۳ ۱۱ ۱۱ ۲۳ ۲۳ ۲۳۵۹ ۲۳۵۹۵۹ ۱۱۵۹ ۱۱۵۹۵۹",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "۹ ۹۹ ۹۹۹ ۹۹۹۰ ۹۹۹۰۰ ۹۹۹۰۰۰ ۹۹۹۰۰۰۰ ۹۹۹۰۰۰۰۰ ۹۹۹۰۰۰۰۰۰  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [۲۹/۲/۲۰۲۴it۵rبعد از ظهر۲۹/۲/۲۰۲۴ nested] بعد از ظهرbc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "en",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "March Mar 03 3 3rd 1st",
+            "dddd ddd dd d do e E": "Sunday Sun Su 0 0th 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11th 11 11 10th 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67th 8 8th 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "9:59 AM 9:59:59 AM 03/08/2026 March 8, 2026 March 8, 2026 9:59 AM Sunday, March 8, 2026 9:59 AM 3/8/2026 Mar 8, 2026 Mar 8, 2026 9:59 AM Sun, Mar 8, 2026 9:59 AM",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [3/8/2026it0ram3/8/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "en-gb",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "March Mar 03 3 3rd 1st",
+            "dddd ddd dd d do e E": "Sunday Sun Su 0 0th 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10th 10 10 10th 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67th 8 8th 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "09:59 09:59:59 08/03/2026 8 March 2026 8 March 2026 09:59 Sunday, 8 March 2026 09:59 8/3/2026 8 Mar 2026 8 Mar 2026 09:59 Sun, 8 Mar 2026 09:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "ru",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "март март 03 3 3-й 1",
+            "dddd ddd dd d do e E": "воскресенье вс вс 0 0-й 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10-я 10 10 10-я 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67-й 8 8-го 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "9:59 9:59:59 08.03.2026 8 марта 2026 г. 8 марта 2026 г., 9:59 воскресенье, 8 марта 2026 г., 9:59 8.3.2026 8 мар. 2026 г. 8 мар. 2026 г., 9:59 вс, 8 мар. 2026 г., 9:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "утра утра 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6rутра8.3.2026 nested] утраbc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "fr",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "mars mars 03 3 3e 1er",
+            "dddd ddd dd d do e E": "dimanche dim. di 0 0e 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10e 10 10 10e 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67e 8 8 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "09:59 09:59:59 08/03/2026 8 mars 2026 8 mars 2026 09:59 dimanche 8 mars 2026 09:59 8/3/2026 8 mars 2026 8 mars 2026 09:59 dim. 8 mars 2026 09:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "de",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "März März 03 3 3. 1.",
+            "dddd ddd dd d do e E": "Sonntag So. So 0 0. 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10. 10 10 10. 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67. 8 8. 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "09:59 09:59:59 08.03.2026 8. März 2026 8. März 2026 09:59 Sonntag, 8. März 2026 09:59 8.3.2026 8. März 2026 8. März 2026 09:59 So., 8. März 2026 09:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6ram8.3.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "es",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "marzo mar. 03 3 3º 1º",
+            "dddd ddd dd d do e E": "domingo dom. do 0 0º 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10º 10 10 10º 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67º 8 8º 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "9:59 9:59:59 08/03/2026 8 de marzo de 2026 8 de marzo de 2026 9:59 domingo, 8 de marzo de 2026 9:59 8/3/2026 8 de mar. de 2026 8 de mar. de 2026 9:59 dom., 8 de mar. de 2026 9:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "ja",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "3月 3月 03 3 3 1",
+            "dddd ddd dd d do e E": "日曜日 日 日 0 0日 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11 11 11 10 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67日 8 8日 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "09:59 09:59:59 2026/03/08 2026年3月8日 2026年3月8日 09:59 2026年3月8日 日曜日 09:59 2026/03/08 2026年3月8日 2026年3月8日 09:59 2026年3月8日(日) 09:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "午前 午前 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/03/08it0r午前2026/03/08 nested] 午前bc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "zh-cn",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "三月 3月 03 3 3月 1",
+            "dddd ddd dd d do e E": "星期日 周日 日 0 0日 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10周 10 10 10周 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67日 8 8日 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "09:59 09:59:59 2026/03/08 2026年3月8日 2026年3月8日上午9点59分 2026年3月8日星期日上午9点59分 2026/3/8 2026年3月8日 2026年3月8日 09:59 2026年3月8日星期日 09:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "上午 上午 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/3/8it6r上午2026/3/8 nested] 上午bc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "ar",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "٢٠٢٦-٠٣-٠٨ ٠٩:٥٩:٥٩.٩٩٩ +٠٠:٠٠ +٠٠٠٠ ١٧٧٢٩٦٣٩٩٩ ١٧٧٢٩٦٣٩٩٩٩٩٩",
+            "MMMM MMM MM M Mo Qo": "مارس مارس ٠٣ ٣ ٣ ١",
+            "dddd ddd dd d do e E": "الأحد أحد ح ٠ ٠ ١ ٧",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "٢٠٢٦ ٢٦ ٢٠٢٦ ٠٢٠٢٦ +٠٠٢٠٢٦ ٢٠٢٦ ٢٦ ٢٠٢٦ ٢٦ ١١ ١١ ١١ ١٠ ١٠ ١٠",
+            "DDD DDDD DDDo D Do DD": "٦٧ ٠٦٧ ٦٧ ٨ ٨ ٠٨",
+            "LT LTS L LL LLL LLLL l ll lll llll": "٠٩:٥٩ ٠٩:٥٩:٥٩ ٨/‏٣/‏٢٠٢٦ ٨ مارس ٢٠٢٦ ٨ مارس ٢٠٢٦ ٠٩:٥٩ الأحد ٨ مارس ٢٠٢٦ ٠٩:٥٩ ٨/‏٣/‏٢٠٢٦ ٨ مارس ٢٠٢٦ ٨ مارس ٢٠٢٦ ٠٩:٥٩ أحد ٨ مارس ٢٠٢٦ ٠٩:٥٩",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "ص ص ٩ ٠٩ ٩ ٠٩ ٩ ٠٩ ٩٥٩ ٩٥٩٥٩ ٩٥٩ ٩٥٩٥٩",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "٩ ٩٩ ٩٩٩ ٩٩٩٠ ٩٩٩٠٠ ٩٩٩٠٠٠ ٩٩٩٠٠٠٠ ٩٩٩٠٠٠٠٠ ٩٩٩٠٠٠٠٠٠  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [٨/‏٣/‏٢٠٢٦it١rص٨/‏٣/‏٢٠٢٦ nested] صbc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "hi",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "२०२६-०३-०८ ०९:५९:५९.९९९ +००:०० +०००० १७७२९६३९९९ १७७२९६३९९९९९९",
+            "MMMM MMM MM M Mo Qo": "मार्च मार्च ०३ ३ ३ १",
+            "dddd ddd dd d do e E": "रविवार रवि र ० ० ० ७",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "२०२६ २६ २०२६ ०२०२६ +००२०२६ २०२६ २६ २०२६ २६ ११ ११ ११ १० १० १०",
+            "DDD DDDD DDDo D Do DD": "६७ ०६७ ६७ ८ ८ ०८",
+            "LT LTS L LL LLL LLLL l ll lll llll": "सुबह ९:५९ बजे सुबह ९:५९:५९ बजे ०८/०३/२०२६ ८ मार्च २०२६ ८ मार्च २०२६, सुबह ९:५९ बजे रविवार, ८ मार्च २०२६, सुबह ९:५९ बजे ८/३/२०२६ ८ मार्च २०२६ ८ मार्च २०२६, सुबह ९:५९ बजे रवि, ८ मार्च २०२६, सुबह ९:५९ बजे",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "सुबह सुबह ९ ०९ ९ ०९ ९ ०९ ९५९ ९५९५९ ९५९ ९५९५९",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "९ ९९ ९९९ ९९९० ९९९०० ९९९००० ९९९०००० ९९९००००० ९९९००००००  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [८/३/२०२६it०rसुबह८/३/२०२६ nested] सुबहbc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "lt",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "kovas kov 03 3 3-oji 1-oji",
+            "dddd ddd dd d do e E": "sekmadienis Sek S 0 0-oji 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10-oji 10 10 10-oji 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67-oji 8 8-oji 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "09:59 09:59:59 2026-03-08 2026 m. kovo 8 d. 2026 m. kovo 8 d., 09:59 val. 2026 m. kovo 8 d., sekmadienis, 09:59 val. 2026-03-08 2026 m. kovo 8 d. 2026 m. kovo 8 d., 09:59 val. 2026 m. kovo 8 d., Sek, 09:59 val.",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026-03-08it6ram2026-03-08 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "pl",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "marzec mar 03 3 3. 1.",
+            "dddd ddd dd d do e E": "niedziela ndz Nd 0 0. 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10. 10 10 10. 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67. 8 8. 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "09:59 09:59:59 08.03.2026 8 marca 2026 8 marca 2026 09:59 niedziela, 8 marca 2026 09:59 8.3.2026 8 mar 2026 8 mar 2026 09:59 ndz, 8 mar 2026 09:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6ram8.3.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "ko",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 09:59:59.999 +00:00 +0000 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "3월 3월 03 3 3월 1",
+            "dddd ddd dd d do e E": "일요일 일 일 0 0일 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11주 11 11 10주 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67일 8 8일 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "오전 9:59 오전 9:59:59 2026.03.08. 2026년 3월 8일 2026년 3월 8일 오전 9:59 2026년 3월 8일 일요일 오전 9:59 2026.03.08. 2026년 3월 8일 2026년 3월 8일 오전 9:59 2026년 3월 8일 일요일 오전 9:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "오전 오전 9 09 9 09 9 09 959 95959 959 95959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026.03.08.it0r오전2026.03.08. nested] 오전bc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "fa",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "۲۰۲۶-۰۳-۰۸ ۰۹:۵۹:۵۹.۹۹۹ +۰۰:۰۰ +۰۰۰۰ ۱۷۷۲۹۶۳۹۹۹ ۱۷۷۲۹۶۳۹۹۹۹۹۹",
+            "MMMM MMM MM M Mo Qo": "مارس مارس ۰۳ ۳ ۳م ۱م",
+            "dddd ddd dd d do e E": "یک‌شنبه یک‌شنبه ی ۰ ۰م ۱ ۷",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "۲۰۲۶ ۲۶ ۲۰۲۶ ۰۲۰۲۶ +۰۰۲۰۲۶ ۲۰۲۶ ۲۶ ۲۰۲۶ ۲۶ ۱۱م ۱۱ ۱۱ ۱۰م ۱۰ ۱۰",
+            "DDD DDDD DDDo D Do DD": "۶۷ ۰۶۷ ۶۷م ۸ ۸م ۰۸",
+            "LT LTS L LL LLL LLLL l ll lll llll": "۰۹:۵۹ ۰۹:۵۹:۵۹ ۰۸/۰۳/۲۰۲۶ ۸ مارس ۲۰۲۶ ۸ مارس ۲۰۲۶ ۰۹:۵۹ یک‌شنبه، ۸ مارس ۲۰۲۶ ۰۹:۵۹ ۸/۳/۲۰۲۶ ۸ مارس ۲۰۲۶ ۸ مارس ۲۰۲۶ ۰۹:۵۹ یک‌شنبه، ۸ مارس ۲۰۲۶ ۰۹:۵۹",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "قبل از ظهر قبل از ظهر ۹ ۰۹ ۹ ۰۹ ۹ ۰۹ ۹۵۹ ۹۵۹۵۹ ۹۵۹ ۹۵۹۵۹",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "۹ ۹۹ ۹۹۹ ۹۹۹۰ ۹۹۹۰۰ ۹۹۹۰۰۰ ۹۹۹۰۰۰۰ ۹۹۹۰۰۰۰۰ ۹۹۹۰۰۰۰۰۰  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [۸/۳/۲۰۲۶it۱rقبل از ظهر۸/۳/۲۰۲۶ nested] قبل از ظهرbc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "en",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "March Mar 03 3 3rd 1st",
+            "dddd ddd dd d do e E": "Sunday Sun Su 0 0th 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11th 11 11 10th 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67th 8 8th 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 AM 10:00:00 AM 03/08/2026 March 8, 2026 March 8, 2026 10:00 AM Sunday, March 8, 2026 10:00 AM 3/8/2026 Mar 8, 2026 Mar 8, 2026 10:00 AM Sun, Mar 8, 2026 10:00 AM",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [3/8/2026it0ram3/8/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "en-gb",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "March Mar 03 3 3rd 1st",
+            "dddd ddd dd d do e E": "Sunday Sun Su 0 0th 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10th 10 10 10th 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67th 8 8th 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 08/03/2026 8 March 2026 8 March 2026 10:00 Sunday, 8 March 2026 10:00 8/3/2026 8 Mar 2026 8 Mar 2026 10:00 Sun, 8 Mar 2026 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "ru",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "март март 03 3 3-й 1",
+            "dddd ddd dd d do e E": "воскресенье вс вс 0 0-й 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10-я 10 10 10-я 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67-й 8 8-го 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 08.03.2026 8 марта 2026 г. 8 марта 2026 г., 10:00 воскресенье, 8 марта 2026 г., 10:00 8.3.2026 8 мар. 2026 г. 8 мар. 2026 г., 10:00 вс, 8 мар. 2026 г., 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "утра утра 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6rутра8.3.2026 nested] утраbc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "fr",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "mars mars 03 3 3e 1er",
+            "dddd ddd dd d do e E": "dimanche dim. di 0 0e 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10e 10 10 10e 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67e 8 8 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 08/03/2026 8 mars 2026 8 mars 2026 10:00 dimanche 8 mars 2026 10:00 8/3/2026 8 mars 2026 8 mars 2026 10:00 dim. 8 mars 2026 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "de",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "März März 03 3 3. 1.",
+            "dddd ddd dd d do e E": "Sonntag So. So 0 0. 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10. 10 10 10. 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67. 8 8. 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 08.03.2026 8. März 2026 8. März 2026 10:00 Sonntag, 8. März 2026 10:00 8.3.2026 8. März 2026 8. März 2026 10:00 So., 8. März 2026 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6ram8.3.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "es",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "marzo mar. 03 3 3º 1º",
+            "dddd ddd dd d do e E": "domingo dom. do 0 0º 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10º 10 10 10º 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67º 8 8º 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 08/03/2026 8 de marzo de 2026 8 de marzo de 2026 10:00 domingo, 8 de marzo de 2026 10:00 8/3/2026 8 de mar. de 2026 8 de mar. de 2026 10:00 dom., 8 de mar. de 2026 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "ja",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "3月 3月 03 3 3 1",
+            "dddd ddd dd d do e E": "日曜日 日 日 0 0日 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11 11 11 10 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67日 8 8日 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 2026/03/08 2026年3月8日 2026年3月8日 10:00 2026年3月8日 日曜日 10:00 2026/03/08 2026年3月8日 2026年3月8日 10:00 2026年3月8日(日) 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "午前 午前 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/03/08it0r午前2026/03/08 nested] 午前bc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "zh-cn",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "三月 3月 03 3 3月 1",
+            "dddd ddd dd d do e E": "星期日 周日 日 0 0日 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10周 10 10 10周 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67日 8 8日 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 2026/03/08 2026年3月8日 2026年3月8日上午10点00分 2026年3月8日星期日上午10点00分 2026/3/8 2026年3月8日 2026年3月8日 10:00 2026年3月8日星期日 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "上午 上午 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/3/8it6r上午2026/3/8 nested] 上午bc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "ar",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "٢٠٢٦-٠٣-٠٨ ١٠:٠٠:٠٠.٠٠٠ +٠٠:٠٠ +٠٠٠٠ ١٧٧٢٩٦٤٠٠٠ ١٧٧٢٩٦٤٠٠٠٠٠٠",
+            "MMMM MMM MM M Mo Qo": "مارس مارس ٠٣ ٣ ٣ ١",
+            "dddd ddd dd d do e E": "الأحد أحد ح ٠ ٠ ١ ٧",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "٢٠٢٦ ٢٦ ٢٠٢٦ ٠٢٠٢٦ +٠٠٢٠٢٦ ٢٠٢٦ ٢٦ ٢٠٢٦ ٢٦ ١١ ١١ ١١ ١٠ ١٠ ١٠",
+            "DDD DDDD DDDo D Do DD": "٦٧ ٠٦٧ ٦٧ ٨ ٨ ٠٨",
+            "LT LTS L LL LLL LLLL l ll lll llll": "١٠:٠٠ ١٠:٠٠:٠٠ ٨/‏٣/‏٢٠٢٦ ٨ مارس ٢٠٢٦ ٨ مارس ٢٠٢٦ ١٠:٠٠ الأحد ٨ مارس ٢٠٢٦ ١٠:٠٠ ٨/‏٣/‏٢٠٢٦ ٨ مارس ٢٠٢٦ ٨ مارس ٢٠٢٦ ١٠:٠٠ أحد ٨ مارس ٢٠٢٦ ١٠:٠٠",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "ص ص ١٠ ١٠ ١٠ ١٠ ١٠ ١٠ ١٠٠٠ ١٠٠٠٠٠ ١٠٠٠ ١٠٠٠٠٠",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "٠ ٠٠ ٠٠٠ ٠٠٠٠ ٠٠٠٠٠ ٠٠٠٠٠٠ ٠٠٠٠٠٠٠ ٠٠٠٠٠٠٠٠ ٠٠٠٠٠٠٠٠٠  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [٨/‏٣/‏٢٠٢٦it١rص٨/‏٣/‏٢٠٢٦ nested] صbc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "hi",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "२०२६-०३-०८ १०:००:००.००० +००:०० +०००० १७७२९६४००० १७७२९६४००००००",
+            "MMMM MMM MM M Mo Qo": "मार्च मार्च ०३ ३ ३ १",
+            "dddd ddd dd d do e E": "रविवार रवि र ० ० ० ७",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "२०२६ २६ २०२६ ०२०२६ +००२०२६ २०२६ २६ २०२६ २६ ११ ११ ११ १० १० १०",
+            "DDD DDDD DDDo D Do DD": "६७ ०६७ ६७ ८ ८ ०८",
+            "LT LTS L LL LLL LLLL l ll lll llll": "दोपहर १०:०० बजे दोपहर १०:००:०० बजे ०८/०३/२०२६ ८ मार्च २०२६ ८ मार्च २०२६, दोपहर १०:०० बजे रविवार, ८ मार्च २०२६, दोपहर १०:०० बजे ८/३/२०२६ ८ मार्च २०२६ ८ मार्च २०२६, दोपहर १०:०० बजे रवि, ८ मार्च २०२६, दोपहर १०:०० बजे",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "दोपहर दोपहर १० १० १० १० १० १० १००० १००००० १००० १०००००",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "० ०० ००० ०००० ००००० ०००००० ००००००० ०००००००० ०००००००००  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [८/३/२०२६it०rदोपहर८/३/२०२६ nested] दोपहरbc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "lt",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "kovas kov 03 3 3-oji 1-oji",
+            "dddd ddd dd d do e E": "sekmadienis Sek S 0 0-oji 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10-oji 10 10 10-oji 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67-oji 8 8-oji 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 2026-03-08 2026 m. kovo 8 d. 2026 m. kovo 8 d., 10:00 val. 2026 m. kovo 8 d., sekmadienis, 10:00 val. 2026-03-08 2026 m. kovo 8 d. 2026 m. kovo 8 d., 10:00 val. 2026 m. kovo 8 d., Sek, 10:00 val.",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026-03-08it6ram2026-03-08 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "pl",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "marzec mar 03 3 3. 1.",
+            "dddd ddd dd d do e E": "niedziela ndz Nd 0 0. 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10. 10 10 10. 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67. 8 8. 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "10:00 10:00:00 08.03.2026 8 marca 2026 8 marca 2026 10:00 niedziela, 8 marca 2026 10:00 8.3.2026 8 mar 2026 8 mar 2026 10:00 ndz, 8 mar 2026 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6ram8.3.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "ko",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 10:00:00.000 +00:00 +0000 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "3월 3월 03 3 3월 1",
+            "dddd ddd dd d do e E": "일요일 일 일 0 0일 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11주 11 11 10주 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67일 8 8일 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "오전 10:00 오전 10:00:00 2026.03.08. 2026년 3월 8일 2026년 3월 8일 오전 10:00 2026년 3월 8일 일요일 오전 10:00 2026.03.08. 2026년 3월 8일 2026년 3월 8일 오전 10:00 2026년 3월 8일 일요일 오전 10:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "오전 오전 10 10 10 10 10 10 1000 100000 1000 100000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026.03.08.it0r오전2026.03.08. nested] 오전bc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "fa",
+          "offset": 0,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "۲۰۲۶-۰۳-۰۸ ۱۰:۰۰:۰۰.۰۰۰ +۰۰:۰۰ +۰۰۰۰ ۱۷۷۲۹۶۴۰۰۰ ۱۷۷۲۹۶۴۰۰۰۰۰۰",
+            "MMMM MMM MM M Mo Qo": "مارس مارس ۰۳ ۳ ۳م ۱م",
+            "dddd ddd dd d do e E": "یک‌شنبه یک‌شنبه ی ۰ ۰م ۱ ۷",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "۲۰۲۶ ۲۶ ۲۰۲۶ ۰۲۰۲۶ +۰۰۲۰۲۶ ۲۰۲۶ ۲۶ ۲۰۲۶ ۲۶ ۱۱م ۱۱ ۱۱ ۱۰م ۱۰ ۱۰",
+            "DDD DDDD DDDo D Do DD": "۶۷ ۰۶۷ ۶۷م ۸ ۸م ۰۸",
+            "LT LTS L LL LLL LLLL l ll lll llll": "۱۰:۰۰ ۱۰:۰۰:۰۰ ۰۸/۰۳/۲۰۲۶ ۸ مارس ۲۰۲۶ ۸ مارس ۲۰۲۶ ۱۰:۰۰ یک‌شنبه، ۸ مارس ۲۰۲۶ ۱۰:۰۰ ۸/۳/۲۰۲۶ ۸ مارس ۲۰۲۶ ۸ مارس ۲۰۲۶ ۱۰:۰۰ یک‌شنبه، ۸ مارس ۲۰۲۶ ۱۰:۰۰",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "قبل از ظهر قبل از ظهر ۱۰ ۱۰ ۱۰ ۱۰ ۱۰ ۱۰ ۱۰۰۰ ۱۰۰۰۰۰ ۱۰۰۰ ۱۰۰۰۰۰",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "۰ ۰۰ ۰۰۰ ۰۰۰۰ ۰۰۰۰۰ ۰۰۰۰۰۰ ۰۰۰۰۰۰۰ ۰۰۰۰۰۰۰۰ ۰۰۰۰۰۰۰۰۰  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [۸/۳/۲۰۲۶it۱rقبل از ظهر۸/۳/۲۰۲۶ nested] قبل از ظهرbc"
+          }
+        }
+      ],
+      "daily_output": {
+        "stdout": "No tasks found.\n",
+        "stderr": ""
+      },
+      "daily_getter": {
+        "file": "2026-01-01.md",
+        "active": null
+      }
+    },
+    {
+      "TZ": "America/Los_Angeles",
+      "runtime": {
+        "version": "2.30.1",
+        "locale": "en",
+        "locales": [
+          "en",
+          "af",
+          "ar-dz",
+          "ar-kw",
+          "ar-ly",
+          "ar-ma",
+          "ar-ps",
+          "ar-sa",
+          "ar-tn",
+          "ar",
+          "az",
+          "be",
+          "bg",
+          "bm",
+          "bn-bd",
+          "bn",
+          "bo",
+          "br",
+          "bs",
+          "ca",
+          "cs",
+          "cv",
+          "cy",
+          "da",
+          "de-at",
+          "de-ch",
+          "de",
+          "dv",
+          "el",
+          "en-au",
+          "en-ca",
+          "en-gb",
+          "en-ie",
+          "en-il",
+          "en-in",
+          "en-nz",
+          "en-sg",
+          "eo",
+          "es-do",
+          "es-mx",
+          "es-us",
+          "es",
+          "et",
+          "eu",
+          "fa",
+          "fi",
+          "fil",
+          "fo",
+          "fr-ca",
+          "fr-ch",
+          "fr",
+          "fy",
+          "ga",
+          "gd",
+          "gl",
+          "gom-deva",
+          "gom-latn",
+          "gu",
+          "he",
+          "hi",
+          "hr",
+          "hu",
+          "hy-am",
+          "id",
+          "is",
+          "it-ch",
+          "it",
+          "ja",
+          "jv",
+          "ka",
+          "kk",
+          "km",
+          "kn",
+          "ko",
+          "ku-kmr",
+          "ku",
+          "ky",
+          "lb",
+          "lo",
+          "lt",
+          "lv",
+          "me",
+          "mi",
+          "mk",
+          "ml",
+          "mn",
+          "mr",
+          "ms-my",
+          "ms",
+          "mt",
+          "my",
+          "nb",
+          "ne",
+          "nl-be",
+          "nl",
+          "nn",
+          "oc-lnc",
+          "pa-in",
+          "pl",
+          "pt-br",
+          "pt",
+          "ro",
+          "ru",
+          "sd",
+          "se",
+          "si",
+          "sk",
+          "sl",
+          "sq",
+          "sr-cyrl",
+          "sr",
+          "ss",
+          "sv",
+          "sw",
+          "ta",
+          "te",
+          "tet",
+          "tg",
+          "th",
+          "tk",
+          "tl-ph",
+          "tlh",
+          "tr",
+          "tzl",
+          "tzm-latn",
+          "tzm",
+          "ug-cn",
+          "uk",
+          "ur",
+          "uz-latn",
+          "uz",
+          "vi",
+          "x-pseudo",
+          "yo",
+          "zh-cn",
+          "zh-hk",
+          "zh-mo",
+          "zh-tw"
+        ],
+        "zone": "America/Los_Angeles",
+        "now": "2026-10-14 01:16:14 -07:00"
+      },
+      "outputs": [
+        {
+          "epoch": 1767240306987,
+          "locale": "en",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "December Dec 12 12 12th 4th",
+            "dddd ddd dd d do e E": "Wednesday Wed We 3 3rd 3 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1st 1 01 1st 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365th 31 31st 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "8:05 PM 8:05:06 PM 12/31/2025 December 31, 2025 December 31, 2025 8:05 PM Wednesday, December 31, 2025 8:05 PM 12/31/2025 Dec 31, 2025 Dec 31, 2025 8:05 PM Wed, Dec 31, 2025 8:05 PM",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [12/31/2025it3rpm12/31/2025 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "en-gb",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "December Dec 12 12 12th 4th",
+            "dddd ddd dd d do e E": "Wednesday Wed We 3 3rd 2 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1st 1 01 1st 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365th 31 31st 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 31/12/2025 31 December 2025 31 December 2025 20:05 Wednesday, 31 December 2025 20:05 31/12/2025 31 Dec 2025 31 Dec 2025 20:05 Wed, 31 Dec 2025 20:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [31/12/2025it2rpm31/12/2025 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "ru",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "декабрь дек. 12 12 12-й 4",
+            "dddd ddd dd d do e E": "среда ср ср 3 3-й 2 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1-я 1 01 1-я 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365-й 31 31-го 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 31.12.2025 31 декабря 2025 г. 31 декабря 2025 г., 20:05 среда, 31 декабря 2025 г., 20:05 31.12.2025 31 дек. 2025 г. 31 дек. 2025 г., 20:05 ср, 31 дек. 2025 г., 20:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "вечера вечера 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [31.12.2025it2rвечера31.12.2025 nested] вечераbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "fr",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "décembre déc. 12 12 12e 4e",
+            "dddd ddd dd d do e E": "mercredi mer. me 3 3e 2 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1re 1 01 1re 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365e 31 31 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 31/12/2025 31 décembre 2025 31 décembre 2025 20:05 mercredi 31 décembre 2025 20:05 31/12/2025 31 déc. 2025 31 déc. 2025 20:05 mer. 31 déc. 2025 20:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [31/12/2025it2rpm31/12/2025 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "de",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "Dezember Dez. 12 12 12. 4.",
+            "dddd ddd dd d do e E": "Mittwoch Mi. Mi 3 3. 2 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1. 1 01 1. 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365. 31 31. 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 31.12.2025 31. Dezember 2025 31. Dezember 2025 20:05 Mittwoch, 31. Dezember 2025 20:05 31.12.2025 31. Dez. 2025 31. Dez. 2025 20:05 Mi., 31. Dez. 2025 20:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [31.12.2025it2rpm31.12.2025 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "es",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "diciembre dic. 12 12 12º 4º",
+            "dddd ddd dd d do e E": "miércoles mié. mi 3 3º 2 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1º 1 01 1º 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365º 31 31º 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 31/12/2025 31 de diciembre de 2025 31 de diciembre de 2025 20:05 miércoles, 31 de diciembre de 2025 20:05 31/12/2025 31 de dic. de 2025 31 de dic. de 2025 20:05 mié., 31 de dic. de 2025 20:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [31/12/2025it2rpm31/12/2025 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "ja",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "12月 12月 12 12 12 4",
+            "dddd ddd dd d do e E": "水曜日 水 水 3 3日 3 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1 1 01 1 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365日 31 31日 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 2025/12/31 2025年12月31日 2025年12月31日 20:05 2025年12月31日 水曜日 20:05 2025/12/31 2025年12月31日 2025年12月31日 20:05 2025年12月31日(水) 20:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "午後 午後 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2025/12/31it3r午後2025/12/31 nested] 午後bc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "zh-cn",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "十二月 12月 12 12 12月 4",
+            "dddd ddd dd d do e E": "星期三 周三 三 3 3日 2 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1周 1 01 1周 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365日 31 31日 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 2025/12/31 2025年12月31日 2025年12月31日晚上8点05分 2025年12月31日星期三晚上8点05分 2025/12/31 2025年12月31日 2025年12月31日 20:05 2025年12月31日星期三 20:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "晚上 晚上 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2025/12/31it2r晚上2025/12/31 nested] 晚上bc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "ar",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "٢٠٢٥-١٢-٣١ ٢٠:٠٥:٠٦.٩٨٧ -٠٨:٠٠ -٠٨٠٠ ١٧٦٧٢٤٠٣٠٦ ١٧٦٧٢٤٠٣٠٦٩٨٧",
+            "MMMM MMM MM M Mo Qo": "ديسمبر ديسمبر ١٢ ١٢ ١٢ ٤",
+            "dddd ddd dd d do e E": "الأربعاء أربعاء ر ٣ ٣ ٤ ٣",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "٢٠٢٥ ٢٥ ٢٠٢٥ ٠٢٠٢٥ +٠٠٢٠٢٥ ٢٠٢٦ ٢٦ ٢٠٢٦ ٢٦ ١ ١ ٠١ ١ ١ ٠١",
+            "DDD DDDD DDDo D Do DD": "٣٦٥ ٣٦٥ ٣٦٥ ٣١ ٣١ ٣١",
+            "LT LTS L LL LLL LLLL l ll lll llll": "٢٠:٠٥ ٢٠:٠٥:٠٦ ٣١/‏١٢/‏٢٠٢٥ ٣١ ديسمبر ٢٠٢٥ ٣١ ديسمبر ٢٠٢٥ ٢٠:٠٥ الأربعاء ٣١ ديسمبر ٢٠٢٥ ٢٠:٠٥ ٣١/‏١٢/‏٢٠٢٥ ٣١ ديسمبر ٢٠٢٥ ٣١ ديسمبر ٢٠٢٥ ٢٠:٠٥ أربعاء ٣١ ديسمبر ٢٠٢٥ ٢٠:٠٥",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "م م ٢٠ ٢٠ ٨ ٠٨ ٢٠ ٢٠ ٢٠٠٥ ٢٠٠٥٠٦ ٨٠٥ ٨٠٥٠٦",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "٩ ٩٨ ٩٨٧ ٩٨٧٠ ٩٨٧٠٠ ٩٨٧٠٠٠ ٩٨٧٠٠٠٠ ٩٨٧٠٠٠٠٠ ٩٨٧٠٠٠٠٠٠  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [٣١/‏١٢/‏٢٠٢٥it٤rم٣١/‏١٢/‏٢٠٢٥ nested] مbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "hi",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "२०२५-१२-३१ २०:०५:०६.९८७ -०८:०० -०८०० १७६७२४०३०६ १७६७२४०३०६९८७",
+            "MMMM MMM MM M Mo Qo": "दिसंबर दिस. १२ १२ १२ ४",
+            "dddd ddd dd d do e E": "बुधवार बुध बु ३ ३ ३ ३",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "२०२५ २५ २०२५ ०२०२५ +००२०२५ २०२६ २६ २०२६ २६ १ १ ०१ १ १ ०१",
+            "DDD DDDD DDDo D Do DD": "३६५ ३६५ ३६५ ३१ ३१ ३१",
+            "LT LTS L LL LLL LLLL l ll lll llll": "रात ८:०५ बजे रात ८:०५:०६ बजे ३१/१२/२०२५ ३१ दिसम्बर २०२५ ३१ दिसम्बर २०२५, रात ८:०५ बजे बुधवार, ३१ दिसम्बर २०२५, रात ८:०५ बजे ३१/१२/२०२५ ३१ दिस. २०२५ ३१ दिस. २०२५, रात ८:०५ बजे बुध, ३१ दिस. २०२५, रात ८:०५ बजे",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "रात रात २० २० ८ ०८ २० २० २००५ २००५०६ ८०५ ८०५०६",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "९ ९८ ९८७ ९८७० ९८७०० ९८७००० ९८७०००० ९८७००००० ९८७००००००  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [३१/१२/२०२५it३rरात३१/१२/२०२५ nested] रातbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "lt",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "gruodis grd 12 12 12-oji 4-oji",
+            "dddd ddd dd d do e E": "trečiadienis Tre T 3 3-oji 2 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1-oji 1 01 1-oji 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365-oji 31 31-oji 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 2025-12-31 2025 m. gruodžio 31 d. 2025 m. gruodžio 31 d., 20:05 val. 2025 m. gruodžio 31 d., trečiadienis, 20:05 val. 2025-12-31 2025 m. gruodžio 31 d. 2025 m. gruodžio 31 d., 20:05 val. 2025 m. gruodžio 31 d., Tre, 20:05 val.",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2025-12-31it2rpm2025-12-31 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "pl",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "grudzień gru 12 12 12. 4.",
+            "dddd ddd dd d do e E": "środa śr Śr 3 3. 2 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1. 1 01 1. 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365. 31 31. 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "20:05 20:05:06 31.12.2025 31 grudnia 2025 31 grudnia 2025 20:05 środa, 31 grudnia 2025 20:05 31.12.2025 31 gru 2025 31 gru 2025 20:05 śr, 31 gru 2025 20:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [31.12.2025it2rpm31.12.2025 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "ko",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2025-12-31 20:05:06.987 -08:00 -0800 1767240306 1767240306987",
+            "MMMM MMM MM M Mo Qo": "12월 12월 12 12 12월 4",
+            "dddd ddd dd d do e E": "수요일 수 수 3 3일 3 3",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2025 25 2025 02025 +002025 2026 26 2026 26 1주 1 01 1주 1 01",
+            "DDD DDDD DDDo D Do DD": "365 365 365일 31 31일 31",
+            "LT LTS L LL LLL LLLL l ll lll llll": "오후 8:05 오후 8:05:06 2025.12.31. 2025년 12월 31일 2025년 12월 31일 오후 8:05 2025년 12월 31일 수요일 오후 8:05 2025.12.31. 2025년 12월 31일 2025년 12월 31일 오후 8:05 2025년 12월 31일 수요일 오후 8:05",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "오후 오후 20 20 8 08 20 20 2005 200506 805 80506",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 98 987 9870 98700 987000 9870000 98700000 987000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2025.12.31.it3r오후2025.12.31. nested] 오후bc"
+          }
+        },
+        {
+          "epoch": 1767240306987,
+          "locale": "fa",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "۲۰۲۵-۱۲-۳۱ ۲۰:۰۵:۰۶.۹۸۷ -۰۸:۰۰ -۰۸۰۰ ۱۷۶۷۲۴۰۳۰۶ ۱۷۶۷۲۴۰۳۰۶۹۸۷",
+            "MMMM MMM MM M Mo Qo": "دسامبر دسامبر ۱۲ ۱۲ ۱۲م ۴م",
+            "dddd ddd dd d do e E": "چهارشنبه چهارشنبه چ ۳ ۳م ۴ ۳",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "۲۰۲۵ ۲۵ ۲۰۲۵ ۰۲۰۲۵ +۰۰۲۰۲۵ ۲۰۲۶ ۲۶ ۲۰۲۶ ۲۶ ۱م ۱ ۰۱ ۱م ۱ ۰۱",
+            "DDD DDDD DDDo D Do DD": "۳۶۵ ۳۶۵ ۳۶۵م ۳۱ ۳۱م ۳۱",
+            "LT LTS L LL LLL LLLL l ll lll llll": "۲۰:۰۵ ۲۰:۰۵:۰۶ ۳۱/۱۲/۲۰۲۵ ۳۱ دسامبر ۲۰۲۵ ۳۱ دسامبر ۲۰۲۵ ۲۰:۰۵ چهارشنبه، ۳۱ دسامبر ۲۰۲۵ ۲۰:۰۵ ۳۱/۱۲/۲۰۲۵ ۳۱ دسامبر ۲۰۲۵ ۳۱ دسامبر ۲۰۲۵ ۲۰:۰۵ چهارشنبه، ۳۱ دسامبر ۲۰۲۵ ۲۰:۰۵",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "بعد از ظهر بعد از ظهر ۲۰ ۲۰ ۸ ۰۸ ۲۰ ۲۰ ۲۰۰۵ ۲۰۰۵۰۶ ۸۰۵ ۸۰۵۰۶",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "۹ ۹۸ ۹۸۷ ۹۸۷۰ ۹۸۷۰۰ ۹۸۷۰۰۰ ۹۸۷۰۰۰۰ ۹۸۷۰۰۰۰۰ ۹۸۷۰۰۰۰۰۰  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [۳۱/۱۲/۲۰۲۵it۴rبعد از ظهر۳۱/۱۲/۲۰۲۵ nested] بعد از ظهرbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "en",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "February Feb 02 2 2nd 1st",
+            "dddd ddd dd d do e E": "Thursday Thu Th 4 4th 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9th 9 09 9th 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60th 29 29th 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "3:59 PM 3:59:59 PM 02/29/2024 February 29, 2024 February 29, 2024 3:59 PM Thursday, February 29, 2024 3:59 PM 2/29/2024 Feb 29, 2024 Feb 29, 2024 3:59 PM Thu, Feb 29, 2024 3:59 PM",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2/29/2024it4rpm2/29/2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "en-gb",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "February Feb 02 2 2nd 1st",
+            "dddd ddd dd d do e E": "Thursday Thu Th 4 4th 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9th 9 09 9th 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60th 29 29th 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 29/02/2024 29 February 2024 29 February 2024 15:59 Thursday, 29 February 2024 15:59 29/2/2024 29 Feb 2024 29 Feb 2024 15:59 Thu, 29 Feb 2024 15:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29/2/2024it3rpm29/2/2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "ru",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "февраль февр. 02 2 2-й 1",
+            "dddd ddd dd d do e E": "четверг чт чт 4 4-й 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9-я 9 09 9-я 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60-й 29 29-го 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 29.02.2024 29 февраля 2024 г. 29 февраля 2024 г., 15:59 четверг, 29 февраля 2024 г., 15:59 29.2.2024 29 февр. 2024 г. 29 февр. 2024 г., 15:59 чт, 29 февр. 2024 г., 15:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "дня дня 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29.2.2024it3rдня29.2.2024 nested] дняbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "fr",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "février févr. 02 2 2e 1er",
+            "dddd ddd dd d do e E": "jeudi jeu. je 4 4e 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9e 9 09 9e 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60e 29 29 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 29/02/2024 29 février 2024 29 février 2024 15:59 jeudi 29 février 2024 15:59 29/2/2024 29 févr. 2024 29 févr. 2024 15:59 jeu. 29 févr. 2024 15:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29/2/2024it3rpm29/2/2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "de",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "Februar Feb. 02 2 2. 1.",
+            "dddd ddd dd d do e E": "Donnerstag Do. Do 4 4. 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9. 9 09 9. 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60. 29 29. 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 29.02.2024 29. Februar 2024 29. Februar 2024 15:59 Donnerstag, 29. Februar 2024 15:59 29.2.2024 29. Feb. 2024 29. Feb. 2024 15:59 Do., 29. Feb. 2024 15:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29.2.2024it3rpm29.2.2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "es",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "febrero feb. 02 2 2º 1º",
+            "dddd ddd dd d do e E": "jueves jue. ju 4 4º 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9º 9 09 9º 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60º 29 29º 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 29/02/2024 29 de febrero de 2024 29 de febrero de 2024 15:59 jueves, 29 de febrero de 2024 15:59 29/2/2024 29 de feb. de 2024 29 de feb. de 2024 15:59 jue., 29 de feb. de 2024 15:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29/2/2024it3rpm29/2/2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "ja",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "2月 2月 02 2 2 1",
+            "dddd ddd dd d do e E": "木曜日 木 木 4 4日 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9 9 09 9 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60日 29 29日 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 2024/02/29 2024年2月29日 2024年2月29日 15:59 2024年2月29日 木曜日 15:59 2024/02/29 2024年2月29日 2024年2月29日 15:59 2024年2月29日(木) 15:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "午後 午後 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2024/02/29it4r午後2024/02/29 nested] 午後bc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "zh-cn",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "二月 2月 02 2 2月 1",
+            "dddd ddd dd d do e E": "星期四 周四 四 4 4日 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9周 9 09 9周 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60日 29 29日 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 2024/02/29 2024年2月29日 2024年2月29日下午3点59分 2024年2月29日星期四下午3点59分 2024/2/29 2024年2月29日 2024年2月29日 15:59 2024年2月29日星期四 15:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "下午 下午 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2024/2/29it3r下午2024/2/29 nested] 下午bc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "ar",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "٢٠٢٤-٠٢-٢٩ ١٥:٥٩:٥٩.٩٩٩ -٠٨:٠٠ -٠٨٠٠ ١٧٠٩٢٥١١٩٩ ١٧٠٩٢٥١١٩٩٩٩٩",
+            "MMMM MMM MM M Mo Qo": "فبراير فبراير ٠٢ ٢ ٢ ١",
+            "dddd ddd dd d do e E": "الخميس خميس خ ٤ ٤ ٥ ٤",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "٢٠٢٤ ٢٤ ٢٠٢٤ ٠٢٠٢٤ +٠٠٢٠٢٤ ٢٠٢٤ ٢٤ ٢٠٢٤ ٢٤ ٩ ٩ ٠٩ ٩ ٩ ٠٩",
+            "DDD DDDD DDDo D Do DD": "٦٠ ٠٦٠ ٦٠ ٢٩ ٢٩ ٢٩",
+            "LT LTS L LL LLL LLLL l ll lll llll": "١٥:٥٩ ١٥:٥٩:٥٩ ٢٩/‏٢/‏٢٠٢٤ ٢٩ فبراير ٢٠٢٤ ٢٩ فبراير ٢٠٢٤ ١٥:٥٩ الخميس ٢٩ فبراير ٢٠٢٤ ١٥:٥٩ ٢٩/‏٢/‏٢٠٢٤ ٢٩ فبراير ٢٠٢٤ ٢٩ فبراير ٢٠٢٤ ١٥:٥٩ خميس ٢٩ فبراير ٢٠٢٤ ١٥:٥٩",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "م م ١٥ ١٥ ٣ ٠٣ ١٥ ١٥ ١٥٥٩ ١٥٥٩٥٩ ٣٥٩ ٣٥٩٥٩",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "٩ ٩٩ ٩٩٩ ٩٩٩٠ ٩٩٩٠٠ ٩٩٩٠٠٠ ٩٩٩٠٠٠٠ ٩٩٩٠٠٠٠٠ ٩٩٩٠٠٠٠٠٠  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [٢٩/‏٢/‏٢٠٢٤it٥rم٢٩/‏٢/‏٢٠٢٤ nested] مbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "hi",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "२०२४-०२-२९ १५:५९:५९.९९९ -०८:०० -०८०० १७०९२५११९९ १७०९२५११९९९९९",
+            "MMMM MMM MM M Mo Qo": "फरवरी फ़र. ०२ २ २ १",
+            "dddd ddd dd d do e E": "गुरूवार गुरू गु ४ ४ ४ ४",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "२०२४ २४ २०२४ ०२०२४ +००२०२४ २०२४ २४ २०२४ २४ ९ ९ ०९ ९ ९ ०९",
+            "DDD DDDD DDDo D Do DD": "६० ०६० ६० २९ २९ २९",
+            "LT LTS L LL LLL LLLL l ll lll llll": "दोपहर ३:५९ बजे दोपहर ३:५९:५९ बजे २९/०२/२०२४ २९ फ़रवरी २०२४ २९ फ़रवरी २०२४, दोपहर ३:५९ बजे गुरूवार, २९ फ़रवरी २०२४, दोपहर ३:५९ बजे २९/२/२०२४ २९ फ़र. २०२४ २९ फ़र. २०२४, दोपहर ३:५९ बजे गुरू, २९ फ़र. २०२४, दोपहर ३:५९ बजे",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "दोपहर दोपहर १५ १५ ३ ०३ १५ १५ १५५९ १५५९५९ ३५९ ३५९५९",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "९ ९९ ९९९ ९९९० ९९९०० ९९९००० ९९९०००० ९९९००००० ९९९००००००  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [२९/२/२०२४it४rदोपहर२९/२/२०२४ nested] दोपहरbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "lt",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "vasaris vas 02 2 2-oji 1-oji",
+            "dddd ddd dd d do e E": "ketvirtadienis Ket K 4 4-oji 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9-oji 9 09 9-oji 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60-oji 29 29-oji 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 2024-02-29 2024 m. vasario 29 d. 2024 m. vasario 29 d., 15:59 val. 2024 m. vasario 29 d., ketvirtadienis, 15:59 val. 2024-02-29 2024 m. vasario 29 d. 2024 m. vasario 29 d., 15:59 val. 2024 m. vasario 29 d., Ket, 15:59 val.",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2024-02-29it3rpm2024-02-29 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "pl",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "luty lut 02 2 2. 1.",
+            "dddd ddd dd d do e E": "czwartek czw Cz 4 4. 3 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9. 9 09 9. 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60. 29 29. 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "15:59 15:59:59 29.02.2024 29 lutego 2024 29 lutego 2024 15:59 czwartek, 29 lutego 2024 15:59 29.2.2024 29 lut 2024 29 lut 2024 15:59 czw, 29 lut 2024 15:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "PM pm 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [29.2.2024it3rpm29.2.2024 nested] pmbc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "ko",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2024-02-29 15:59:59.999 -08:00 -0800 1709251199 1709251199999",
+            "MMMM MMM MM M Mo Qo": "2월 2월 02 2 2월 1",
+            "dddd ddd dd d do e E": "목요일 목 목 4 4일 4 4",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2024 24 2024 02024 +002024 2024 24 2024 24 9주 9 09 9주 9 09",
+            "DDD DDDD DDDo D Do DD": "60 060 60일 29 29일 29",
+            "LT LTS L LL LLL LLLL l ll lll llll": "오후 3:59 오후 3:59:59 2024.02.29. 2024년 2월 29일 2024년 2월 29일 오후 3:59 2024년 2월 29일 목요일 오후 3:59 2024.02.29. 2024년 2월 29일 2024년 2월 29일 오후 3:59 2024년 2월 29일 목요일 오후 3:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "오후 오후 15 15 3 03 15 15 1559 155959 359 35959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2024.02.29.it4r오후2024.02.29. nested] 오후bc"
+          }
+        },
+        {
+          "epoch": 1709251199999,
+          "locale": "fa",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "۲۰۲۴-۰۲-۲۹ ۱۵:۵۹:۵۹.۹۹۹ -۰۸:۰۰ -۰۸۰۰ ۱۷۰۹۲۵۱۱۹۹ ۱۷۰۹۲۵۱۱۹۹۹۹۹",
+            "MMMM MMM MM M Mo Qo": "فوریه فوریه ۰۲ ۲ ۲م ۱م",
+            "dddd ddd dd d do e E": "پنج‌شنبه پنج‌شنبه پ ۴ ۴م ۵ ۴",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "۲۰۲۴ ۲۴ ۲۰۲۴ ۰۲۰۲۴ +۰۰۲۰۲۴ ۲۰۲۴ ۲۴ ۲۰۲۴ ۲۴ ۹م ۹ ۰۹ ۹م ۹ ۰۹",
+            "DDD DDDD DDDo D Do DD": "۶۰ ۰۶۰ ۶۰م ۲۹ ۲۹م ۲۹",
+            "LT LTS L LL LLL LLLL l ll lll llll": "۱۵:۵۹ ۱۵:۵۹:۵۹ ۲۹/۰۲/۲۰۲۴ ۲۹ فوریه ۲۰۲۴ ۲۹ فوریه ۲۰۲۴ ۱۵:۵۹ پنج‌شنبه، ۲۹ فوریه ۲۰۲۴ ۱۵:۵۹ ۲۹/۲/۲۰۲۴ ۲۹ فوریه ۲۰۲۴ ۲۹ فوریه ۲۰۲۴ ۱۵:۵۹ پنج‌شنبه، ۲۹ فوریه ۲۰۲۴ ۱۵:۵۹",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "بعد از ظهر بعد از ظهر ۱۵ ۱۵ ۳ ۰۳ ۱۵ ۱۵ ۱۵۵۹ ۱۵۵۹۵۹ ۳۵۹ ۳۵۹۵۹",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "۹ ۹۹ ۹۹۹ ۹۹۹۰ ۹۹۹۰۰ ۹۹۹۰۰۰ ۹۹۹۰۰۰۰ ۹۹۹۰۰۰۰۰ ۹۹۹۰۰۰۰۰۰  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [۲۹/۲/۲۰۲۴it۵rبعد از ظهر۲۹/۲/۲۰۲۴ nested] بعد از ظهرbc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "en",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "March Mar 03 3 3rd 1st",
+            "dddd ddd dd d do e E": "Sunday Sun Su 0 0th 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11th 11 11 10th 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67th 8 8th 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "1:59 AM 1:59:59 AM 03/08/2026 March 8, 2026 March 8, 2026 1:59 AM Sunday, March 8, 2026 1:59 AM 3/8/2026 Mar 8, 2026 Mar 8, 2026 1:59 AM Sun, Mar 8, 2026 1:59 AM",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [3/8/2026it0ram3/8/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "en-gb",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "March Mar 03 3 3rd 1st",
+            "dddd ddd dd d do e E": "Sunday Sun Su 0 0th 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10th 10 10 10th 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67th 8 8th 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "01:59 01:59:59 08/03/2026 8 March 2026 8 March 2026 01:59 Sunday, 8 March 2026 01:59 8/3/2026 8 Mar 2026 8 Mar 2026 01:59 Sun, 8 Mar 2026 01:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "ru",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "март март 03 3 3-й 1",
+            "dddd ddd dd d do e E": "воскресенье вс вс 0 0-й 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10-я 10 10 10-я 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67-й 8 8-го 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "1:59 1:59:59 08.03.2026 8 марта 2026 г. 8 марта 2026 г., 1:59 воскресенье, 8 марта 2026 г., 1:59 8.3.2026 8 мар. 2026 г. 8 мар. 2026 г., 1:59 вс, 8 мар. 2026 г., 1:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "ночи ночи 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6rночи8.3.2026 nested] ночиbc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "fr",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "mars mars 03 3 3e 1er",
+            "dddd ddd dd d do e E": "dimanche dim. di 0 0e 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10e 10 10 10e 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67e 8 8 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "01:59 01:59:59 08/03/2026 8 mars 2026 8 mars 2026 01:59 dimanche 8 mars 2026 01:59 8/3/2026 8 mars 2026 8 mars 2026 01:59 dim. 8 mars 2026 01:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "de",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "März März 03 3 3. 1.",
+            "dddd ddd dd d do e E": "Sonntag So. So 0 0. 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10. 10 10 10. 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67. 8 8. 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "01:59 01:59:59 08.03.2026 8. März 2026 8. März 2026 01:59 Sonntag, 8. März 2026 01:59 8.3.2026 8. März 2026 8. März 2026 01:59 So., 8. März 2026 01:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6ram8.3.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "es",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "marzo mar. 03 3 3º 1º",
+            "dddd ddd dd d do e E": "domingo dom. do 0 0º 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10º 10 10 10º 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67º 8 8º 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "1:59 1:59:59 08/03/2026 8 de marzo de 2026 8 de marzo de 2026 1:59 domingo, 8 de marzo de 2026 1:59 8/3/2026 8 de mar. de 2026 8 de mar. de 2026 1:59 dom., 8 de mar. de 2026 1:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "ja",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "3月 3月 03 3 3 1",
+            "dddd ddd dd d do e E": "日曜日 日 日 0 0日 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11 11 11 10 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67日 8 8日 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "01:59 01:59:59 2026/03/08 2026年3月8日 2026年3月8日 01:59 2026年3月8日 日曜日 01:59 2026/03/08 2026年3月8日 2026年3月8日 01:59 2026年3月8日(日) 01:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "午前 午前 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/03/08it0r午前2026/03/08 nested] 午前bc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "zh-cn",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "三月 3月 03 3 3月 1",
+            "dddd ddd dd d do e E": "星期日 周日 日 0 0日 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10周 10 10 10周 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67日 8 8日 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "01:59 01:59:59 2026/03/08 2026年3月8日 2026年3月8日凌晨1点59分 2026年3月8日星期日凌晨1点59分 2026/3/8 2026年3月8日 2026年3月8日 01:59 2026年3月8日星期日 01:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "凌晨 凌晨 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/3/8it6r凌晨2026/3/8 nested] 凌晨bc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "ar",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "٢٠٢٦-٠٣-٠٨ ٠١:٥٩:٥٩.٩٩٩ -٠٨:٠٠ -٠٨٠٠ ١٧٧٢٩٦٣٩٩٩ ١٧٧٢٩٦٣٩٩٩٩٩٩",
+            "MMMM MMM MM M Mo Qo": "مارس مارس ٠٣ ٣ ٣ ١",
+            "dddd ddd dd d do e E": "الأحد أحد ح ٠ ٠ ١ ٧",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "٢٠٢٦ ٢٦ ٢٠٢٦ ٠٢٠٢٦ +٠٠٢٠٢٦ ٢٠٢٦ ٢٦ ٢٠٢٦ ٢٦ ١١ ١١ ١١ ١٠ ١٠ ١٠",
+            "DDD DDDD DDDo D Do DD": "٦٧ ٠٦٧ ٦٧ ٨ ٨ ٠٨",
+            "LT LTS L LL LLL LLLL l ll lll llll": "٠١:٥٩ ٠١:٥٩:٥٩ ٨/‏٣/‏٢٠٢٦ ٨ مارس ٢٠٢٦ ٨ مارس ٢٠٢٦ ٠١:٥٩ الأحد ٨ مارس ٢٠٢٦ ٠١:٥٩ ٨/‏٣/‏٢٠٢٦ ٨ مارس ٢٠٢٦ ٨ مارس ٢٠٢٦ ٠١:٥٩ أحد ٨ مارس ٢٠٢٦ ٠١:٥٩",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "ص ص ١ ٠١ ١ ٠١ ١ ٠١ ١٥٩ ١٥٩٥٩ ١٥٩ ١٥٩٥٩",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "٩ ٩٩ ٩٩٩ ٩٩٩٠ ٩٩٩٠٠ ٩٩٩٠٠٠ ٩٩٩٠٠٠٠ ٩٩٩٠٠٠٠٠ ٩٩٩٠٠٠٠٠٠  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [٨/‏٣/‏٢٠٢٦it١rص٨/‏٣/‏٢٠٢٦ nested] صbc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "hi",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "२०२६-०३-०८ ०१:५९:५९.९९९ -०८:०० -०८०० १७७२९६३९९९ १७७२९६३९९९९९९",
+            "MMMM MMM MM M Mo Qo": "मार्च मार्च ०३ ३ ३ १",
+            "dddd ddd dd d do e E": "रविवार रवि र ० ० ० ७",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "२०२६ २६ २०२६ ०२०२६ +००२०२६ २०२६ २६ २०२६ २६ ११ ११ ११ १० १० १०",
+            "DDD DDDD DDDo D Do DD": "६७ ०६७ ६७ ८ ८ ०८",
+            "LT LTS L LL LLL LLLL l ll lll llll": "रात १:५९ बजे रात १:५९:५९ बजे ०८/०३/२०२६ ८ मार्च २०२६ ८ मार्च २०२६, रात १:५९ बजे रविवार, ८ मार्च २०२६, रात १:५९ बजे ८/३/२०२६ ८ मार्च २०२६ ८ मार्च २०२६, रात १:५९ बजे रवि, ८ मार्च २०२६, रात १:५९ बजे",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "रात रात १ ०१ १ ०१ १ ०१ १५९ १५९५९ १५९ १५९५९",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "९ ९९ ९९९ ९९९० ९९९०० ९९९००० ९९९०००० ९९९००००० ९९९००००००  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [८/३/२०२६it०rरात८/३/२०२६ nested] रातbc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "lt",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "kovas kov 03 3 3-oji 1-oji",
+            "dddd ddd dd d do e E": "sekmadienis Sek S 0 0-oji 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10-oji 10 10 10-oji 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67-oji 8 8-oji 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "01:59 01:59:59 2026-03-08 2026 m. kovo 8 d. 2026 m. kovo 8 d., 01:59 val. 2026 m. kovo 8 d., sekmadienis, 01:59 val. 2026-03-08 2026 m. kovo 8 d. 2026 m. kovo 8 d., 01:59 val. 2026 m. kovo 8 d., Sek, 01:59 val.",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026-03-08it6ram2026-03-08 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "pl",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "marzec mar 03 3 3. 1.",
+            "dddd ddd dd d do e E": "niedziela ndz Nd 0 0. 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10. 10 10 10. 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67. 8 8. 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "01:59 01:59:59 08.03.2026 8 marca 2026 8 marca 2026 01:59 niedziela, 8 marca 2026 01:59 8.3.2026 8 mar 2026 8 mar 2026 01:59 ndz, 8 mar 2026 01:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6ram8.3.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "ko",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 01:59:59.999 -08:00 -0800 1772963999 1772963999999",
+            "MMMM MMM MM M Mo Qo": "3월 3월 03 3 3월 1",
+            "dddd ddd dd d do e E": "일요일 일 일 0 0일 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11주 11 11 10주 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67일 8 8일 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "오전 1:59 오전 1:59:59 2026.03.08. 2026년 3월 8일 2026년 3월 8일 오전 1:59 2026년 3월 8일 일요일 오전 1:59 2026.03.08. 2026년 3월 8일 2026년 3월 8일 오전 1:59 2026년 3월 8일 일요일 오전 1:59",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "오전 오전 1 01 1 01 1 01 159 15959 159 15959",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "9 99 999 9990 99900 999000 9990000 99900000 999000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026.03.08.it0r오전2026.03.08. nested] 오전bc"
+          }
+        },
+        {
+          "epoch": 1772963999999,
+          "locale": "fa",
+          "offset": -480,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "۲۰۲۶-۰۳-۰۸ ۰۱:۵۹:۵۹.۹۹۹ -۰۸:۰۰ -۰۸۰۰ ۱۷۷۲۹۶۳۹۹۹ ۱۷۷۲۹۶۳۹۹۹۹۹۹",
+            "MMMM MMM MM M Mo Qo": "مارس مارس ۰۳ ۳ ۳م ۱م",
+            "dddd ddd dd d do e E": "یک‌شنبه یک‌شنبه ی ۰ ۰م ۱ ۷",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "۲۰۲۶ ۲۶ ۲۰۲۶ ۰۲۰۲۶ +۰۰۲۰۲۶ ۲۰۲۶ ۲۶ ۲۰۲۶ ۲۶ ۱۱م ۱۱ ۱۱ ۱۰م ۱۰ ۱۰",
+            "DDD DDDD DDDo D Do DD": "۶۷ ۰۶۷ ۶۷م ۸ ۸م ۰۸",
+            "LT LTS L LL LLL LLLL l ll lll llll": "۰۱:۵۹ ۰۱:۵۹:۵۹ ۰۸/۰۳/۲۰۲۶ ۸ مارس ۲۰۲۶ ۸ مارس ۲۰۲۶ ۰۱:۵۹ یک‌شنبه، ۸ مارس ۲۰۲۶ ۰۱:۵۹ ۸/۳/۲۰۲۶ ۸ مارس ۲۰۲۶ ۸ مارس ۲۰۲۶ ۰۱:۵۹ یک‌شنبه، ۸ مارس ۲۰۲۶ ۰۱:۵۹",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "قبل از ظهر قبل از ظهر ۱ ۰۱ ۱ ۰۱ ۱ ۰۱ ۱۵۹ ۱۵۹۵۹ ۱۵۹ ۱۵۹۵۹",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "۹ ۹۹ ۹۹۹ ۹۹۹۰ ۹۹۹۰۰ ۹۹۹۰۰۰ ۹۹۹۰۰۰۰ ۹۹۹۰۰۰۰۰ ۹۹۹۰۰۰۰۰۰  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [۸/۳/۲۰۲۶it۱rقبل از ظهر۸/۳/۲۰۲۶ nested] قبل از ظهرbc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "en",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "March Mar 03 3 3rd 1st",
+            "dddd ddd dd d do e E": "Sunday Sun Su 0 0th 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11th 11 11 10th 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67th 8 8th 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "3:00 AM 3:00:00 AM 03/08/2026 March 8, 2026 March 8, 2026 3:00 AM Sunday, March 8, 2026 3:00 AM 3/8/2026 Mar 8, 2026 Mar 8, 2026 3:00 AM Sun, Mar 8, 2026 3:00 AM",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [3/8/2026it0ram3/8/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "en-gb",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "March Mar 03 3 3rd 1st",
+            "dddd ddd dd d do e E": "Sunday Sun Su 0 0th 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10th 10 10 10th 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67th 8 8th 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "03:00 03:00:00 08/03/2026 8 March 2026 8 March 2026 03:00 Sunday, 8 March 2026 03:00 8/3/2026 8 Mar 2026 8 Mar 2026 03:00 Sun, 8 Mar 2026 03:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "ru",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "март март 03 3 3-й 1",
+            "dddd ddd dd d do e E": "воскресенье вс вс 0 0-й 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10-я 10 10 10-я 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67-й 8 8-го 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "3:00 3:00:00 08.03.2026 8 марта 2026 г. 8 марта 2026 г., 3:00 воскресенье, 8 марта 2026 г., 3:00 8.3.2026 8 мар. 2026 г. 8 мар. 2026 г., 3:00 вс, 8 мар. 2026 г., 3:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "ночи ночи 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6rночи8.3.2026 nested] ночиbc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "fr",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "mars mars 03 3 3e 1er",
+            "dddd ddd dd d do e E": "dimanche dim. di 0 0e 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10e 10 10 10e 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67e 8 8 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "03:00 03:00:00 08/03/2026 8 mars 2026 8 mars 2026 03:00 dimanche 8 mars 2026 03:00 8/3/2026 8 mars 2026 8 mars 2026 03:00 dim. 8 mars 2026 03:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "de",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "März März 03 3 3. 1.",
+            "dddd ddd dd d do e E": "Sonntag So. So 0 0. 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10. 10 10 10. 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67. 8 8. 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "03:00 03:00:00 08.03.2026 8. März 2026 8. März 2026 03:00 Sonntag, 8. März 2026 03:00 8.3.2026 8. März 2026 8. März 2026 03:00 So., 8. März 2026 03:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6ram8.3.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "es",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "marzo mar. 03 3 3º 1º",
+            "dddd ddd dd d do e E": "domingo dom. do 0 0º 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10º 10 10 10º 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67º 8 8º 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "3:00 3:00:00 08/03/2026 8 de marzo de 2026 8 de marzo de 2026 3:00 domingo, 8 de marzo de 2026 3:00 8/3/2026 8 de mar. de 2026 8 de mar. de 2026 3:00 dom., 8 de mar. de 2026 3:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8/3/2026it6ram8/3/2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "ja",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "3月 3月 03 3 3 1",
+            "dddd ddd dd d do e E": "日曜日 日 日 0 0日 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11 11 11 10 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67日 8 8日 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "03:00 03:00:00 2026/03/08 2026年3月8日 2026年3月8日 03:00 2026年3月8日 日曜日 03:00 2026/03/08 2026年3月8日 2026年3月8日 03:00 2026年3月8日(日) 03:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "午前 午前 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/03/08it0r午前2026/03/08 nested] 午前bc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "zh-cn",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "三月 3月 03 3 3月 1",
+            "dddd ddd dd d do e E": "星期日 周日 日 0 0日 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10周 10 10 10周 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67日 8 8日 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "03:00 03:00:00 2026/03/08 2026年3月8日 2026年3月8日凌晨3点00分 2026年3月8日星期日凌晨3点00分 2026/3/8 2026年3月8日 2026年3月8日 03:00 2026年3月8日星期日 03:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "凌晨 凌晨 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026/3/8it6r凌晨2026/3/8 nested] 凌晨bc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "ar",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "٢٠٢٦-٠٣-٠٨ ٠٣:٠٠:٠٠.٠٠٠ -٠٧:٠٠ -٠٧٠٠ ١٧٧٢٩٦٤٠٠٠ ١٧٧٢٩٦٤٠٠٠٠٠٠",
+            "MMMM MMM MM M Mo Qo": "مارس مارس ٠٣ ٣ ٣ ١",
+            "dddd ddd dd d do e E": "الأحد أحد ح ٠ ٠ ١ ٧",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "٢٠٢٦ ٢٦ ٢٠٢٦ ٠٢٠٢٦ +٠٠٢٠٢٦ ٢٠٢٦ ٢٦ ٢٠٢٦ ٢٦ ١١ ١١ ١١ ١٠ ١٠ ١٠",
+            "DDD DDDD DDDo D Do DD": "٦٧ ٠٦٧ ٦٧ ٨ ٨ ٠٨",
+            "LT LTS L LL LLL LLLL l ll lll llll": "٠٣:٠٠ ٠٣:٠٠:٠٠ ٨/‏٣/‏٢٠٢٦ ٨ مارس ٢٠٢٦ ٨ مارس ٢٠٢٦ ٠٣:٠٠ الأحد ٨ مارس ٢٠٢٦ ٠٣:٠٠ ٨/‏٣/‏٢٠٢٦ ٨ مارس ٢٠٢٦ ٨ مارس ٢٠٢٦ ٠٣:٠٠ أحد ٨ مارس ٢٠٢٦ ٠٣:٠٠",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "ص ص ٣ ٠٣ ٣ ٠٣ ٣ ٠٣ ٣٠٠ ٣٠٠٠٠ ٣٠٠ ٣٠٠٠٠",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "٠ ٠٠ ٠٠٠ ٠٠٠٠ ٠٠٠٠٠ ٠٠٠٠٠٠ ٠٠٠٠٠٠٠ ٠٠٠٠٠٠٠٠ ٠٠٠٠٠٠٠٠٠  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [٨/‏٣/‏٢٠٢٦it١rص٨/‏٣/‏٢٠٢٦ nested] صbc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "hi",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "२०२६-०३-०८ ०३:००:००.००० -०७:०० -०७०० १७७२९६४००० १७७२९६४००००००",
+            "MMMM MMM MM M Mo Qo": "मार्च मार्च ०३ ३ ३ १",
+            "dddd ddd dd d do e E": "रविवार रवि र ० ० ० ७",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "२०२६ २६ २०२६ ०२०२६ +००२०२६ २०२६ २६ २०२६ २६ ११ ११ ११ १० १० १०",
+            "DDD DDDD DDDo D Do DD": "६७ ०६७ ६७ ८ ८ ०८",
+            "LT LTS L LL LLL LLLL l ll lll llll": "रात ३:०० बजे रात ३:००:०० बजे ०८/०३/२०२६ ८ मार्च २०२६ ८ मार्च २०२६, रात ३:०० बजे रविवार, ८ मार्च २०२६, रात ३:०० बजे ८/३/२०२६ ८ मार्च २०२६ ८ मार्च २०२६, रात ३:०० बजे रवि, ८ मार्च २०२६, रात ३:०० बजे",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "रात रात ३ ०३ ३ ०३ ३ ०३ ३०० ३०००० ३०० ३००००",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "० ०० ००० ०००० ००००० ०००००० ००००००० ०००००००० ०००००००००  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [८/३/२०२६it०rरात८/३/२०२६ nested] रातbc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "lt",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "kovas kov 03 3 3-oji 1-oji",
+            "dddd ddd dd d do e E": "sekmadienis Sek S 0 0-oji 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10-oji 10 10 10-oji 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67-oji 8 8-oji 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "03:00 03:00:00 2026-03-08 2026 m. kovo 8 d. 2026 m. kovo 8 d., 03:00 val. 2026 m. kovo 8 d., sekmadienis, 03:00 val. 2026-03-08 2026 m. kovo 8 d. 2026 m. kovo 8 d., 03:00 val. 2026 m. kovo 8 d., Sek, 03:00 val.",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026-03-08it6ram2026-03-08 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "pl",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "marzec mar 03 3 3. 1.",
+            "dddd ddd dd d do e E": "niedziela ndz Nd 0 0. 6 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 10. 10 10 10. 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67. 8 8. 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "03:00 03:00:00 08.03.2026 8 marca 2026 8 marca 2026 03:00 niedziela, 8 marca 2026 03:00 8.3.2026 8 mar 2026 8 mar 2026 03:00 ndz, 8 mar 2026 03:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "AM am 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [8.3.2026it6ram8.3.2026 nested] ambc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "ko",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "2026-03-08 03:00:00.000 -07:00 -0700 1772964000 1772964000000",
+            "MMMM MMM MM M Mo Qo": "3월 3월 03 3 3월 1",
+            "dddd ddd dd d do e E": "일요일 일 일 0 0일 0 7",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "2026 26 2026 02026 +002026 2026 26 2026 26 11주 11 11 10주 10 10",
+            "DDD DDDD DDDo D Do DD": "67 067 67일 8 8일 08",
+            "LT LTS L LL LLL LLLL l ll lll llll": "오전 3:00 오전 3:00:00 2026.03.08. 2026년 3월 8일 2026년 3월 8일 오전 3:00 2026년 3월 8일 일요일 오전 3:00 2026.03.08. 2026년 3월 8일 2026년 3월 8일 오전 3:00 2026년 3월 8일 일요일 오전 3:00",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "오전 오전 3 03 3 03 3 03 300 30000 300 30000",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "0 00 000 0000 00000 000000 0000000 00000000 000000000  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [2026.03.08.it0r오전2026.03.08. nested] 오전bc"
+          }
+        },
+        {
+          "epoch": 1772964000000,
+          "locale": "fa",
+          "offset": -420,
+          "formats": {
+            "YYYY-MM-DD HH:mm:ss.SSS Z ZZ X x": "۲۰۲۶-۰۳-۰۸ ۰۳:۰۰:۰۰.۰۰۰ -۰۷:۰۰ -۰۷۰۰ ۱۷۷۲۹۶۴۰۰۰ ۱۷۷۲۹۶۴۰۰۰۰۰۰",
+            "MMMM MMM MM M Mo Qo": "مارس مارس ۰۳ ۳ ۳م ۱م",
+            "dddd ddd dd d do e E": "یک‌شنبه یک‌شنبه ی ۰ ۰م ۱ ۷",
+            "YYYY YY Y YYYYY YYYYYY GGGG GG gggg gg wo w ww Wo W WW": "۲۰۲۶ ۲۶ ۲۰۲۶ ۰۲۰۲۶ +۰۰۲۰۲۶ ۲۰۲۶ ۲۶ ۲۰۲۶ ۲۶ ۱۱م ۱۱ ۱۱ ۱۰م ۱۰ ۱۰",
+            "DDD DDDD DDDo D Do DD": "۶۷ ۰۶۷ ۶۷م ۸ ۸م ۰۸",
+            "LT LTS L LL LLL LLLL l ll lll llll": "۰۳:۰۰ ۰۳:۰۰:۰۰ ۰۸/۰۳/۲۰۲۶ ۸ مارس ۲۰۲۶ ۸ مارس ۲۰۲۶ ۰۳:۰۰ یک‌شنبه، ۸ مارس ۲۰۲۶ ۰۳:۰۰ ۸/۳/۲۰۲۶ ۸ مارس ۲۰۲۶ ۸ مارس ۲۰۲۶ ۰۳:۰۰ یک‌شنبه، ۸ مارس ۲۰۲۶ ۰۳:۰۰",
+            "A a H HH h hh k kk Hmm Hmmss hmm hmmss": "قبل از ظهر قبل از ظهر ۳ ۰۳ ۳ ۰۳ ۳ ۰۳ ۳۰۰ ۳۰۰۰۰ ۳۰۰ ۳۰۰۰۰",
+            "S SS SSS SSSS SSSSS SSSSSS SSSSSSS SSSSSSSS SSSSSSSSS z zz": "۰ ۰۰ ۰۰۰ ۰۰۰۰ ۰۰۰۰۰ ۰۰۰۰۰۰ ۰۰۰۰۰۰۰ ۰۰۰۰۰۰۰۰ ۰۰۰۰۰۰۰۰۰  ",
+            "[YYYY] \\Y [literal [nested]] abc": "YYYY Y [۸/۳/۲۰۲۶it۱rقبل از ظهر۸/۳/۲۰۲۶ nested] قبل از ظهرbc"
+          }
+        }
+      ],
+      "daily_output": {
+        "stdout": "No tasks found.\n",
+        "stderr": ""
+      },
+      "daily_getter": {
+        "file": "2025-12-31.md",
+        "active": null
+      }
+    }
+  ],
+  "real_credentials": "excluded mock-keychain"
+}

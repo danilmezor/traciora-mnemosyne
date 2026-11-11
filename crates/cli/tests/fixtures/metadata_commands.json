@@ -1,0 +1,8326 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "initial_files": {
+    "Alpha.md": "---\ntags: [Work, work, parent/child, \"tail/\", \"123\", \"bad space\", \"a\\tb\", \"😀\", \"١٢\"]\naliases: [\"Alias 10\", \"Alias 2\", \" Same \", \"Same\", \"\", 12, false, null, {x: y}]\n---\n# Root\n### Jump\n## Middle\n#### Deep\n# Last\n#Work #work #Work #parent/child #tail/ #dup #dup\n",
+    "Beta.md": "---\nTags: [work, WORK, parent/other, \"#trail//\", \"#\", \"#punct!\", \"#tab\\ttag\"]\nALIASES: [Same, same, \"alias 2\", \"😀\"]\n---\n## Start\n### Kid\n## Peer\n#### Tail\n#work #WORK #Case #case #Case\n",
+    "Scalar.md": "---\naliases: \" First, Second \"\nAliases: [Ignored]\ntags: \"one,two\"\nTags: [Ignored]\n---\nPlain\n",
+    "Space.md": "---\nALIASES: [\"\\uFEFFbom\\uFEFF\", \"\\u0085nel\\u0085\", \"a\\tb\", \"line\\nnext\", \"comma,alias\"]\nTAGS: [\"\\uFEFFtrim\\uFEFF\", \"\\u0085nel\\u0085\", \"a\\tb\", \"two words\", \"#a/b/\"]\n---\n#before﻿after #beforeafter\n",
+    "Ignored.md": "---\naliases: [Same, Ignored alias]\ntags: [IgnoredTag, work]\n---\n#IgnoredTag #work\n",
+    "Empty.md": "",
+    "NoFM.md": "text #plain\n",
+    "Folder/Child.md": "# **Bold** `code` [link](Dest.md) ![alt](x.png) [[Wiki|Label]]\n\nSetext _em_\n===========\n## Repeat\n## Repeat\n",
+    "attach.txt": "# Attachment\n",
+    "Dirty-tags.md": "",
+    "Dirty-aliases.md": "",
+    "Dirty-outline.md": ""
+  },
+  "cases": [
+    {
+      "id": "0:tags",
+      "args": [
+        "tags"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\n#😀\n#١٢\n#a\n#a/b\n#before\n#beforeafter\n#Case\n#dup\n#IgnoredTag\n#parent\n#parent/child\n#parent/other\n#plain\n#tail\n#trail\n#trail/\n#trim\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "1:tags:total",
+      "args": [
+        "tags",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "19\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "2:tags:counts",
+      "args": [
+        "tags",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\t1\n#😀\t1\n#١٢\t1\n#a\t1\n#a/b\t1\n#before\t1\n#beforeafter\t1\n#Case\t3\n#dup\t2\n#IgnoredTag\t2\n#parent\t3\n#parent/child\t2\n#parent/other\t1\n#plain\t1\n#tail\t2\n#trail\t1\n#trail/\t1\n#trim\t1\n#work\t11\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "3:tags:sort=count",
+      "args": [
+        "tags",
+        "sort=count"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#work\n#parent\n#Case\n#parent/child\n#tail\n#dup\n#IgnoredTag\n#😀\n#١٢\n#parent/other\n#trail/\n#trail\n#trim\n#nel\n#a/b\n#a\n#before\n#beforeafter\n#plain\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "4:tags:sort=count:counts",
+      "args": [
+        "tags",
+        "sort=count",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#work\t11\n#parent\t3\n#Case\t3\n#parent/child\t2\n#tail\t2\n#dup\t2\n#IgnoredTag\t2\n#😀\t1\n#١٢\t1\n#parent/other\t1\n#trail/\t1\n#trail\t1\n#trim\t1\n#nel\t1\n#a/b\t1\n#a\t1\n#before\t1\n#beforeafter\t1\n#plain\t1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "5:tags:format=json",
+      "args": [
+        "tags",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"tag\": \"#nel\"\n  },\n  {\n    \"tag\": \"#😀\"\n  },\n  {\n    \"tag\": \"#١٢\"\n  },\n  {\n    \"tag\": \"#a\"\n  },\n  {\n    \"tag\": \"#a/b\"\n  },\n  {\n    \"tag\": \"#before\"\n  },\n  {\n    \"tag\": \"#beforeafter\"\n  },\n  {\n    \"tag\": \"#Case\"\n  },\n  {\n    \"tag\": \"#dup\"\n  },\n  {\n    \"tag\": \"#IgnoredTag\"\n  },\n  {\n    \"tag\": \"#parent\"\n  },\n  {\n    \"tag\": \"#parent/child\"\n  },\n  {\n    \"tag\": \"#parent/other\"\n  },\n  {\n    \"tag\": \"#plain\"\n  },\n  {\n    \"tag\": \"#tail\"\n  },\n  {\n    \"tag\": \"#trail\"\n  },\n  {\n    \"tag\": \"#trail/\"\n  },\n  {\n    \"tag\": \"#trim\"\n  },\n  {\n    \"tag\": \"#work\"\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "6:tags:format=json:counts",
+      "args": [
+        "tags",
+        "format=json",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"tag\": \"#nel\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#😀\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#١٢\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#a\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#a/b\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#before\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#beforeafter\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#Case\",\n    \"count\": \"3\"\n  },\n  {\n    \"tag\": \"#dup\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#IgnoredTag\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#parent\",\n    \"count\": \"3\"\n  },\n  {\n    \"tag\": \"#parent/child\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#parent/other\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#plain\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#tail\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#trail\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#trail/\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#trim\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#work\",\n    \"count\": \"11\"\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "7:tags:format=csv",
+      "args": [
+        "tags",
+        "format=csv"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\n#😀\n#١٢\n#a\n#a/b\n#before\n#beforeafter\n#Case\n#dup\n#IgnoredTag\n#parent\n#parent/child\n#parent/other\n#plain\n#tail\n#trail\n#trail/\n#trim\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "8:tags:format=csv:counts",
+      "args": [
+        "tags",
+        "format=csv",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel,1\n#😀,1\n#١٢,1\n#a,1\n#a/b,1\n#before,1\n#beforeafter,1\n#Case,3\n#dup,2\n#IgnoredTag,2\n#parent,3\n#parent/child,2\n#parent/other,1\n#plain,1\n#tail,2\n#trail,1\n#trail/,1\n#trim,1\n#work,11\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "9:tags:format=tsv:counts",
+      "args": [
+        "tags",
+        "format=tsv",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\t1\n#😀\t1\n#١٢\t1\n#a\t1\n#a/b\t1\n#before\t1\n#beforeafter\t1\n#Case\t3\n#dup\t2\n#IgnoredTag\t2\n#parent\t3\n#parent/child\t2\n#parent/other\t1\n#plain\t1\n#tail\t2\n#trail\t1\n#trail/\t1\n#trim\t1\n#work\t11\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "10:tags:format=bogus:counts",
+      "args": [
+        "tags",
+        "format=bogus",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\t1\n#😀\t1\n#١٢\t1\n#a\t1\n#a/b\t1\n#before\t1\n#beforeafter\t1\n#Case\t3\n#dup\t2\n#IgnoredTag\t2\n#parent\t3\n#parent/child\t2\n#parent/other\t1\n#plain\t1\n#tail\t2\n#trail\t1\n#trail/\t1\n#trim\t1\n#work\t11\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "11:tags:json:counts",
+      "args": [
+        "tags",
+        "json",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"tag\": \"#nel\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#😀\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#١٢\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#a\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#a/b\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#before\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#beforeafter\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#Case\",\n    \"count\": \"3\"\n  },\n  {\n    \"tag\": \"#dup\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#IgnoredTag\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#parent\",\n    \"count\": \"3\"\n  },\n  {\n    \"tag\": \"#parent/child\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#parent/other\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#plain\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#tail\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#trail\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#trail/\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#trim\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#work\",\n    \"count\": \"11\"\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "12:tags:csv:counts",
+      "args": [
+        "tags",
+        "csv",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel,1\n#😀,1\n#١٢,1\n#a,1\n#a/b,1\n#before,1\n#beforeafter,1\n#Case,3\n#dup,2\n#IgnoredTag,2\n#parent,3\n#parent/child,2\n#parent/other,1\n#plain,1\n#tail,2\n#trail,1\n#trail/,1\n#trim,1\n#work,11\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "13:tags:total=",
+      "args": [
+        "tags",
+        "total="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\n#😀\n#١٢\n#a\n#a/b\n#before\n#beforeafter\n#Case\n#dup\n#IgnoredTag\n#parent\n#parent/child\n#parent/other\n#plain\n#tail\n#trail\n#trail/\n#trim\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "14:tags:counts=false",
+      "args": [
+        "tags",
+        "counts=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\t1\n#😀\t1\n#١٢\t1\n#a\t1\n#a/b\t1\n#before\t1\n#beforeafter\t1\n#Case\t3\n#dup\t2\n#IgnoredTag\t2\n#parent\t3\n#parent/child\t2\n#parent/other\t1\n#plain\t1\n#tail\t2\n#trail\t1\n#trail/\t1\n#trim\t1\n#work\t11\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "15:tags:path=Alpha.md",
+      "args": [
+        "tags",
+        "path=Alpha.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#😀\n#١٢\n#123\n\"#a\tb\"\n#dup\n#parent/child\n#tail/\n#Work\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "16:tags:path=Alpha.md:counts",
+      "args": [
+        "tags",
+        "path=Alpha.md",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#😀\t1\n#١٢\t1\n#123\t1\n\"#a\tb\"\t1\n#dup\t2\n#parent/child\t2\n#tail/\t2\n#Work\t3\n#work\t2\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "17:tags:path=Alpha.md:total",
+      "args": [
+        "tags",
+        "path=Alpha.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "9\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "18:tags:path=Alpha.md:format=json:counts",
+      "args": [
+        "tags",
+        "path=Alpha.md",
+        "format=json",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"tag\": \"#😀\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#١٢\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#123\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#a\\tb\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#dup\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#parent/child\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#tail/\",\n    \"count\": \"2\"\n  },\n  {\n    \"tag\": \"#Work\",\n    \"count\": \"3\"\n  },\n  {\n    \"tag\": \"#work\",\n    \"count\": \"2\"\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "19:tags:path=Alpha.md:format=csv:counts",
+      "args": [
+        "tags",
+        "path=Alpha.md",
+        "format=csv",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#😀,1\n#١٢,1\n#123,1\n#a\tb,1\n#dup,2\n#parent/child,2\n#tail/,2\n#Work,3\n#work,2\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "20:tags:path=Beta.md:sort=count:counts",
+      "args": [
+        "tags",
+        "path=Beta.md",
+        "sort=count",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#work\t2\n#WORK\t2\n#Case\t2\n#parent/other\t1\n#trail//\t1\n#\t1\n#punct!\t1\n\"#tab\ttag\"\t1\n#case\t1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "21:tags:path=Scalar.md:counts",
+      "args": [
+        "tags",
+        "path=Scalar.md",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#one,two\t1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "22:tags:path=Space.md:counts",
+      "args": [
+        "tags",
+        "path=Space.md",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\t1\n\"#a\tb\"\t1\n#a/b/\t1\n#before\t1\n#beforeafter\t1\n#trim\t1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "23:tags:path=Space.md:format=json:counts",
+      "args": [
+        "tags",
+        "path=Space.md",
+        "format=json",
+        "counts"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"tag\": \"#nel\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#a\\tb\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#a/b/\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#before\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#beforeafter\",\n    \"count\": \"1\"\n  },\n  {\n    \"tag\": \"#trim\",\n    \"count\": \"1\"\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "24:tags:path=Empty.md",
+      "args": [
+        "tags",
+        "path=Empty.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No tags found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "25:tags:path=Empty.md:total",
+      "args": [
+        "tags",
+        "path=Empty.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "26:tags:path=attach.txt",
+      "args": [
+        "tags",
+        "path=attach.txt"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No tags found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "27:tags:path=attach.txt:total",
+      "args": [
+        "tags",
+        "path=attach.txt",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "28:tags:path=Missing.md",
+      "args": [
+        "tags",
+        "path=Missing.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "29:tags:path=Folder",
+      "args": [
+        "tags",
+        "path=Folder"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "30:tags:active",
+      "args": [
+        "tags",
+        "active"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "31:tags:file=Alpha",
+      "args": [
+        "tags",
+        "file=Alpha"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#😀\n#١٢\n#123\n\"#a\tb\"\n#dup\n#parent/child\n#tail/\n#Work\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "32:tags:path=",
+      "args": [
+        "tags",
+        "path="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\n#😀\n#١٢\n#a\n#a/b\n#before\n#beforeafter\n#Case\n#dup\n#IgnoredTag\n#parent\n#parent/child\n#parent/other\n#plain\n#tail\n#trail\n#trail/\n#trim\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "33:tags:active=",
+      "args": [
+        "tags",
+        "active="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\n#😀\n#١٢\n#a\n#a/b\n#before\n#beforeafter\n#Case\n#dup\n#IgnoredTag\n#parent\n#parent/child\n#parent/other\n#plain\n#tail\n#trail\n#trail/\n#trim\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "34:tags:path=Alpha.md:counts=",
+      "args": [
+        "tags",
+        "path=Alpha.md",
+        "counts="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#😀\n#١٢\n#123\n\"#a\tb\"\n#dup\n#parent/child\n#tail/\n#Work\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "35:tag:name=Work",
+      "args": [
+        "tag",
+        "name=Work"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#Work\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "36:tag:name=Work:total",
+      "args": [
+        "tag",
+        "name=Work",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#Work\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "37:tag:name=Work:verbose",
+      "args": [
+        "tag",
+        "name=Work",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#Work\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "38:tag:name=work",
+      "args": [
+        "tag",
+        "name=work"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\nBeta.md\nIgnored.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "39:tag:name=work:total",
+      "args": [
+        "tag",
+        "name=work",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "11\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "40:tag:name=work:verbose",
+      "args": [
+        "tag",
+        "name=work",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#work\t11\nAlpha.md\nBeta.md\nIgnored.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "41:tag:name=WORK",
+      "args": [
+        "tag",
+        "name=WORK"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#WORK\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "42:tag:name=WORK:total",
+      "args": [
+        "tag",
+        "name=WORK",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#WORK\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "43:tag:name=WORK:verbose",
+      "args": [
+        "tag",
+        "name=WORK",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#WORK\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "44:tag:name=parent",
+      "args": [
+        "tag",
+        "name=parent"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "45:tag:name=parent:total",
+      "args": [
+        "tag",
+        "name=parent",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "3\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "46:tag:name=parent:verbose",
+      "args": [
+        "tag",
+        "name=parent",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#parent\t3\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "47:tag:name=parent/child",
+      "args": [
+        "tag",
+        "name=parent/child"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "48:tag:name=parent/child:total",
+      "args": [
+        "tag",
+        "name=parent/child",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "2\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "49:tag:name=parent/child:verbose",
+      "args": [
+        "tag",
+        "name=parent/child",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#parent/child\t2\nAlpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "50:tag:name=tail",
+      "args": [
+        "tag",
+        "name=tail"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "51:tag:name=tail:total",
+      "args": [
+        "tag",
+        "name=tail",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "2\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "52:tag:name=tail:verbose",
+      "args": [
+        "tag",
+        "name=tail",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#tail\t2\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "53:tag:name=tail/",
+      "args": [
+        "tag",
+        "name=tail/"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#tail/\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "54:tag:name=tail/:total",
+      "args": [
+        "tag",
+        "name=tail/",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#tail/\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "55:tag:name=tail/:verbose",
+      "args": [
+        "tag",
+        "name=tail/",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#tail/\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "56:tag:name=trail",
+      "args": [
+        "tag",
+        "name=trail"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "57:tag:name=trail:total",
+      "args": [
+        "tag",
+        "name=trail",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "58:tag:name=trail:verbose",
+      "args": [
+        "tag",
+        "name=trail",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#trail\t1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "59:tag:name=trail/",
+      "args": [
+        "tag",
+        "name=trail/"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "60:tag:name=trail/:total",
+      "args": [
+        "tag",
+        "name=trail/",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "61:tag:name=trail/:verbose",
+      "args": [
+        "tag",
+        "name=trail/",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#trail/\t1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "62:tag:name=123",
+      "args": [
+        "tag",
+        "name=123"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#123\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "63:tag:name=123:total",
+      "args": [
+        "tag",
+        "name=123",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#123\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "64:tag:name=123:verbose",
+      "args": [
+        "tag",
+        "name=123",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#123\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "65:tag:name=١٢",
+      "args": [
+        "tag",
+        "name=١٢"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "66:tag:name=١٢:total",
+      "args": [
+        "tag",
+        "name=١٢",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "67:tag:name=١٢:verbose",
+      "args": [
+        "tag",
+        "name=١٢",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#١٢\t1\nAlpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "68:tag:name=😀",
+      "args": [
+        "tag",
+        "name=😀"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "69:tag:name=😀:total",
+      "args": [
+        "tag",
+        "name=😀",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "70:tag:name=😀:verbose",
+      "args": [
+        "tag",
+        "name=😀",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#😀\t1\nAlpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "71:tag:name=Case",
+      "args": [
+        "tag",
+        "name=Case"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Beta.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "72:tag:name=Case:total",
+      "args": [
+        "tag",
+        "name=Case",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "3\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "73:tag:name=Case:verbose",
+      "args": [
+        "tag",
+        "name=Case",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#Case\t3\nBeta.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "74:tag:name=case",
+      "args": [
+        "tag",
+        "name=case"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#case\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "75:tag:name=case:total",
+      "args": [
+        "tag",
+        "name=case",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#case\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "76:tag:name=case:verbose",
+      "args": [
+        "tag",
+        "name=case",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#case\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "77:tag:name=plain",
+      "args": [
+        "tag",
+        "name=plain"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "NoFM.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "78:tag:name=plain:total",
+      "args": [
+        "tag",
+        "name=plain",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "79:tag:name=plain:verbose",
+      "args": [
+        "tag",
+        "name=plain",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#plain\t1\nNoFM.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "80:tag:name=IgnoredTag",
+      "args": [
+        "tag",
+        "name=IgnoredTag"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Ignored.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "81:tag:name=IgnoredTag:total",
+      "args": [
+        "tag",
+        "name=IgnoredTag",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "2\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "82:tag:name=IgnoredTag:verbose",
+      "args": [
+        "tag",
+        "name=IgnoredTag",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#IgnoredTag\t2\nIgnored.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "83:tag:name=Missing",
+      "args": [
+        "tag",
+        "name=Missing"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#Missing\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "84:tag:name=Missing:total",
+      "args": [
+        "tag",
+        "name=Missing",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#Missing\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "85:tag:name=Missing:verbose",
+      "args": [
+        "tag",
+        "name=Missing",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#Missing\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "86:tag:name=#",
+      "args": [
+        "tag",
+        "name=#"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "87:tag:name=#:total",
+      "args": [
+        "tag",
+        "name=#",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "88:tag:name=#:verbose",
+      "args": [
+        "tag",
+        "name=#",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "89:tag:name=#dup",
+      "args": [
+        "tag",
+        "name=#dup"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "90:tag:name=#dup:total",
+      "args": [
+        "tag",
+        "name=#dup",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "2\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "91:tag:name=#dup:verbose",
+      "args": [
+        "tag",
+        "name=#dup",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#dup\t2\nAlpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "92:tag:name=trim",
+      "args": [
+        "tag",
+        "name=trim"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Space.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "93:tag:name=trim:total",
+      "args": [
+        "tag",
+        "name=trim",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "94:tag:name=trim:verbose",
+      "args": [
+        "tag",
+        "name=trim",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#trim\t1\nSpace.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "95:tag:name=nel",
+      "args": [
+        "tag",
+        "name=nel"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Space.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "96:tag:name=nel:total",
+      "args": [
+        "tag",
+        "name=nel",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "97:tag:name=nel:verbose",
+      "args": [
+        "tag",
+        "name=nel",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\t1\nSpace.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "98:tag",
+      "args": [
+        "tag"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: name=<tag>\nUsage: tag name=<tag> [total] [verbose]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "99:tag:name=",
+      "args": [
+        "tag",
+        "name="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Missing required parameter: name\nUsage: tag name=<tag>\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "100:tag:name",
+      "args": [
+        "tag",
+        "name"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#true\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "101:tag:name=dup:total=",
+      "args": [
+        "tag",
+        "name=dup",
+        "total="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "102:tag:name=dup:verbose=false",
+      "args": [
+        "tag",
+        "name=dup",
+        "verbose=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#dup\t2\nAlpha.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "103:aliases",
+      "args": [
+        "aliases"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "nel\n😀\na\tb\nalias 2\nAlias 2\nAlias 10\nbom\ncomma,alias\nFirst, Second\nIgnored alias\nline\nnext\nSame\nsame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "104:aliases:total",
+      "args": [
+        "aliases",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "13\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "105:aliases:verbose",
+      "args": [
+        "aliases",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "nel\tSpace.md\n😀\tBeta.md\na\tb\tSpace.md\nalias 2\tBeta.md\nAlias 2\tAlpha.md\nAlias 10\tAlpha.md\nbom\tSpace.md\ncomma,alias\tSpace.md\nFirst, Second\tScalar.md\nIgnored alias\tIgnored.md\nline\nnext\tSpace.md\nSame\tIgnored.md, Beta.md, Alpha.md, Alpha.md\nsame\tBeta.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "106:aliases:total=",
+      "args": [
+        "aliases",
+        "total="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "nel\n😀\na\tb\nalias 2\nAlias 2\nAlias 10\nbom\ncomma,alias\nFirst, Second\nIgnored alias\nline\nnext\nSame\nsame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "107:aliases:verbose=false",
+      "args": [
+        "aliases",
+        "verbose=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "nel\tSpace.md\n😀\tBeta.md\na\tb\tSpace.md\nalias 2\tBeta.md\nAlias 2\tAlpha.md\nAlias 10\tAlpha.md\nbom\tSpace.md\ncomma,alias\tSpace.md\nFirst, Second\tScalar.md\nIgnored alias\tIgnored.md\nline\nnext\tSpace.md\nSame\tIgnored.md, Beta.md, Alpha.md, Alpha.md\nsame\tBeta.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "108:aliases:path=Alpha.md",
+      "args": [
+        "aliases",
+        "path=Alpha.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alias 2\nAlias 10\nSame\nSame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "109:aliases:path=Alpha.md:total",
+      "args": [
+        "aliases",
+        "path=Alpha.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "4\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "110:aliases:path=Alpha.md:verbose",
+      "args": [
+        "aliases",
+        "path=Alpha.md",
+        "verbose"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alias 2\nAlias 10\nSame\nSame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "111:aliases:path=Beta.md",
+      "args": [
+        "aliases",
+        "path=Beta.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "😀\nalias 2\nSame\nsame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "112:aliases:path=Scalar.md",
+      "args": [
+        "aliases",
+        "path=Scalar.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "First, Second\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "113:aliases:path=Space.md",
+      "args": [
+        "aliases",
+        "path=Space.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "nel\na\tb\nbom\ncomma,alias\nline\nnext\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "114:aliases:path=Empty.md",
+      "args": [
+        "aliases",
+        "path=Empty.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No aliases found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "115:aliases:path=Empty.md:total",
+      "args": [
+        "aliases",
+        "path=Empty.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "116:aliases:path=attach.txt",
+      "args": [
+        "aliases",
+        "path=attach.txt"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No aliases found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "117:aliases:path=Missing.md",
+      "args": [
+        "aliases",
+        "path=Missing.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "118:aliases:path=Folder",
+      "args": [
+        "aliases",
+        "path=Folder"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "119:aliases:active",
+      "args": [
+        "aliases",
+        "active"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "120:aliases:file=Alpha",
+      "args": [
+        "aliases",
+        "file=Alpha"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alias 2\nAlias 10\nSame\nSame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "121:aliases:path=",
+      "args": [
+        "aliases",
+        "path="
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "nel\n😀\na\tb\nalias 2\nAlias 2\nAlias 10\nbom\ncomma,alias\nFirst, Second\nIgnored alias\nline\nnext\nSame\nsame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "122:outline:path=Alpha.md",
+      "args": [
+        "outline",
+        "path=Alpha.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── Root\n│   ├── Jump\n│   └── Middle\n│       └── Deep\n└── Last\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "123:outline:path=Alpha.md:total",
+      "args": [
+        "outline",
+        "path=Alpha.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "5\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "124:outline:path=Alpha.md:format=json",
+      "args": [
+        "outline",
+        "path=Alpha.md",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"level\": 1,\n    \"heading\": \"Root\",\n    \"line\": 5\n  },\n  {\n    \"level\": 3,\n    \"heading\": \"Jump\",\n    \"line\": 6\n  },\n  {\n    \"level\": 2,\n    \"heading\": \"Middle\",\n    \"line\": 7\n  },\n  {\n    \"level\": 4,\n    \"heading\": \"Deep\",\n    \"line\": 8\n  },\n  {\n    \"level\": 1,\n    \"heading\": \"Last\",\n    \"line\": 9\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "125:outline:path=Alpha.md:format=md",
+      "args": [
+        "outline",
+        "path=Alpha.md",
+        "format=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "# Root\n### Jump\n## Middle\n#### Deep\n# Last\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "126:outline:path=Alpha.md:format=bogus",
+      "args": [
+        "outline",
+        "path=Alpha.md",
+        "format=bogus"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── Root\n│   ├── Jump\n│   └── Middle\n│       └── Deep\n└── Last\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "127:outline:path=Beta.md",
+      "args": [
+        "outline",
+        "path=Beta.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── Start\n│   └── Kid\n└── Peer\n    └── Tail\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "128:outline:path=Beta.md:total",
+      "args": [
+        "outline",
+        "path=Beta.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "4\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "129:outline:path=Beta.md:format=json",
+      "args": [
+        "outline",
+        "path=Beta.md",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"level\": 2,\n    \"heading\": \"Start\",\n    \"line\": 5\n  },\n  {\n    \"level\": 3,\n    \"heading\": \"Kid\",\n    \"line\": 6\n  },\n  {\n    \"level\": 2,\n    \"heading\": \"Peer\",\n    \"line\": 7\n  },\n  {\n    \"level\": 4,\n    \"heading\": \"Tail\",\n    \"line\": 8\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "130:outline:path=Beta.md:format=md",
+      "args": [
+        "outline",
+        "path=Beta.md",
+        "format=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "## Start\n### Kid\n## Peer\n#### Tail\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "131:outline:path=Beta.md:format=bogus",
+      "args": [
+        "outline",
+        "path=Beta.md",
+        "format=bogus"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── Start\n│   └── Kid\n└── Peer\n    └── Tail\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "132:outline:path=Folder/Child.md",
+      "args": [
+        "outline",
+        "path=Folder/Child.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── **Bold** `code` [link](Dest.md) ![alt](x.png) [[Wiki|Label]]\n└── Setext _em_\n    ├── Repeat\n    └── Repeat\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "133:outline:path=Folder/Child.md:total",
+      "args": [
+        "outline",
+        "path=Folder/Child.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "4\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "134:outline:path=Folder/Child.md:format=json",
+      "args": [
+        "outline",
+        "path=Folder/Child.md",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"level\": 1,\n    \"heading\": \"**Bold** `code` [link](Dest.md) ![alt](x.png) [[Wiki|Label]]\",\n    \"line\": 1\n  },\n  {\n    \"level\": 1,\n    \"heading\": \"Setext _em_\",\n    \"line\": 3\n  },\n  {\n    \"level\": 2,\n    \"heading\": \"Repeat\",\n    \"line\": 5\n  },\n  {\n    \"level\": 2,\n    \"heading\": \"Repeat\",\n    \"line\": 6\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "135:outline:path=Folder/Child.md:format=md",
+      "args": [
+        "outline",
+        "path=Folder/Child.md",
+        "format=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "# **Bold** `code` [link](Dest.md) ![alt](x.png) [[Wiki|Label]]\n# Setext _em_\n## Repeat\n## Repeat\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "136:outline:path=Folder/Child.md:format=bogus",
+      "args": [
+        "outline",
+        "path=Folder/Child.md",
+        "format=bogus"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── **Bold** `code` [link](Dest.md) ![alt](x.png) [[Wiki|Label]]\n└── Setext _em_\n    ├── Repeat\n    └── Repeat\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "137:outline:path=Empty.md",
+      "args": [
+        "outline",
+        "path=Empty.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No headings found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "138:outline:path=Empty.md:total",
+      "args": [
+        "outline",
+        "path=Empty.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No headings found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "139:outline:path=Empty.md:format=json",
+      "args": [
+        "outline",
+        "path=Empty.md",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No headings found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "140:outline:path=Empty.md:format=md",
+      "args": [
+        "outline",
+        "path=Empty.md",
+        "format=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No headings found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "141:outline:path=Empty.md:format=bogus",
+      "args": [
+        "outline",
+        "path=Empty.md",
+        "format=bogus"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No headings found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "142:outline:path=attach.txt",
+      "args": [
+        "outline",
+        "path=attach.txt"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File is not a markdown file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "143:outline:path=attach.txt:total",
+      "args": [
+        "outline",
+        "path=attach.txt",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File is not a markdown file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "144:outline:path=attach.txt:format=json",
+      "args": [
+        "outline",
+        "path=attach.txt",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File is not a markdown file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "145:outline:path=attach.txt:format=md",
+      "args": [
+        "outline",
+        "path=attach.txt",
+        "format=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File is not a markdown file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "146:outline:path=attach.txt:format=bogus",
+      "args": [
+        "outline",
+        "path=attach.txt",
+        "format=bogus"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File is not a markdown file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "147:outline:path=Missing.md",
+      "args": [
+        "outline",
+        "path=Missing.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "148:outline:path=Missing.md:total",
+      "args": [
+        "outline",
+        "path=Missing.md",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "149:outline:path=Missing.md:format=json",
+      "args": [
+        "outline",
+        "path=Missing.md",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "150:outline:path=Missing.md:format=md",
+      "args": [
+        "outline",
+        "path=Missing.md",
+        "format=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "151:outline:path=Missing.md:format=bogus",
+      "args": [
+        "outline",
+        "path=Missing.md",
+        "format=bogus"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: File \"Missing.md\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "152:outline:path=Folder",
+      "args": [
+        "outline",
+        "path=Folder"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "153:outline:path=Folder:total",
+      "args": [
+        "outline",
+        "path=Folder",
+        "total"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "154:outline:path=Folder:format=json",
+      "args": [
+        "outline",
+        "path=Folder",
+        "format=json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "155:outline:path=Folder:format=md",
+      "args": [
+        "outline",
+        "path=Folder",
+        "format=md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "156:outline:path=Folder:format=bogus",
+      "args": [
+        "outline",
+        "path=Folder",
+        "format=bogus"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: \"Folder\" is a folder, not a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "157:outline",
+      "args": [
+        "outline"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: No active file. Use file=<name> or path=<path> to specify a file.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "158:outline:path=Alpha.md:total=false",
+      "args": [
+        "outline",
+        "path=Alpha.md",
+        "total=false"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "5\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "159:outline:path=Alpha.md:json",
+      "args": [
+        "outline",
+        "path=Alpha.md",
+        "json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "[\n  {\n    \"level\": 1,\n    \"heading\": \"Root\",\n    \"line\": 5\n  },\n  {\n    \"level\": 3,\n    \"heading\": \"Jump\",\n    \"line\": 6\n  },\n  {\n    \"level\": 2,\n    \"heading\": \"Middle\",\n    \"line\": 7\n  },\n  {\n    \"level\": 4,\n    \"heading\": \"Deep\",\n    \"line\": 8\n  },\n  {\n    \"level\": 1,\n    \"heading\": \"Last\",\n    \"line\": 9\n  }\n]\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "160:outline:path=Alpha.md:md",
+      "args": [
+        "outline",
+        "path=Alpha.md",
+        "md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "# Root\n### Jump\n## Middle\n#### Deep\n# Last\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "161:tags",
+      "args": [
+        "tags"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\n#😀\n#١٢\n#a\n#a/b\n#before\n#beforeafter\n#Case\n#dup\n#IgnoredTag\n#parent\n#parent/child\n#parent/other\n#plain\n#tail\n#trail\n#trail/\n#trim\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "162:tags:active",
+      "args": [
+        "tags",
+        "active"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#😀\n#١٢\n#123\n\"#a\tb\"\n#dup\n#parent/child\n#tail/\n#Work\n#work\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "163:tags:path=Beta.md:active",
+      "args": [
+        "tags",
+        "path=Beta.md",
+        "active"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#\n#Case\n#case\n#parent/other\n#punct!\n\"#tab\ttag\"\n#trail//\n#work\n#WORK\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "164:aliases",
+      "args": [
+        "aliases"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "nel\n😀\na\tb\nalias 2\nAlias 2\nAlias 10\nbom\ncomma,alias\nFirst, Second\nIgnored alias\nline\nnext\nSame\nsame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "165:aliases:active",
+      "args": [
+        "aliases",
+        "active"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Alias 2\nAlias 10\nSame\nSame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "166:aliases:path=Beta.md:active",
+      "args": [
+        "aliases",
+        "path=Beta.md",
+        "active"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "😀\nalias 2\nSame\nsame\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "167:outline",
+      "args": [
+        "outline"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── Root\n│   ├── Jump\n│   └── Middle\n│       └── Deep\n└── Last\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "168:outline:active",
+      "args": [
+        "outline",
+        "active"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── Root\n│   ├── Jump\n│   └── Middle\n│       └── Deep\n└── Last\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "169:outline:path=Beta.md:active",
+      "args": [
+        "outline",
+        "path=Beta.md",
+        "active"
+      ],
+      "opened": "Alpha.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "├── Start\n│   └── Kid\n└── Peer\n    └── Tail\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "170:tags:counts",
+      "args": [
+        "tags",
+        "counts"
+      ],
+      "ignore": [
+        "Ignored.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#nel\t1\n#😀\t1\n#١٢\t1\n#a\t1\n#a/b\t1\n#before\t1\n#beforeafter\t1\n#Case\t3\n#dup\t2\n#parent\t3\n#parent/child\t2\n#parent/other\t1\n#plain\t1\n#tail\t2\n#trail\t1\n#trail/\t1\n#trim\t1\n#work\t9\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "171:tags:sort=count:counts",
+      "args": [
+        "tags",
+        "sort=count",
+        "counts"
+      ],
+      "ignore": [
+        "Ignored.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#work\t9\n#parent\t3\n#Case\t3\n#parent/child\t2\n#tail\t2\n#dup\t2\n#😀\t1\n#١٢\t1\n#parent/other\t1\n#trail/\t1\n#trail\t1\n#trim\t1\n#nel\t1\n#a/b\t1\n#a\t1\n#before\t1\n#beforeafter\t1\n#plain\t1\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "172:tag:name=IgnoredTag",
+      "args": [
+        "tag",
+        "name=IgnoredTag"
+      ],
+      "ignore": [
+        "Ignored.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#IgnoredTag\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "173:tag:name=IgnoredTag:total",
+      "args": [
+        "tag",
+        "name=IgnoredTag",
+        "total"
+      ],
+      "ignore": [
+        "Ignored.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#IgnoredTag\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "174:tag:name=IgnoredTag:verbose",
+      "args": [
+        "tag",
+        "name=IgnoredTag",
+        "verbose"
+      ],
+      "ignore": [
+        "Ignored.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "Error: Tag \"#IgnoredTag\" not found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "175:tags:path=Ignored.md:counts",
+      "args": [
+        "tags",
+        "path=Ignored.md",
+        "counts"
+      ],
+      "ignore": [
+        "Ignored.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "#IgnoredTag\t2\n#work\t2\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "176:aliases:verbose",
+      "args": [
+        "aliases",
+        "verbose"
+      ],
+      "ignore": [
+        "Ignored.md"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "stdout": "nel\tSpace.md\n😀\tBeta.md\na\tb\tSpace.md\nalias 2\tBeta.md\nAlias 2\tAlpha.md\nAlias 10\tAlpha.md\nbom\tSpace.md\ncomma,alias\tSpace.md\nFirst, Second\tScalar.md\nIgnored alias\tIgnored.md\nline\nnext\tSpace.md\nSame\tIgnored.md, Beta.md, Alpha.md, Alpha.md\nsame\tBeta.md\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ]
+    },
+    {
+      "id": "177:tags:path=Dirty-tags.md",
+      "args": [
+        "tags",
+        "path=Dirty-tags.md"
+      ],
+      "dirty": "## unsaved #not-saved",
+      "opened": "Dirty-tags.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No tags found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ],
+      "dirty_proof": {
+        "editor": "## unsaved #not-saved",
+        "saved": "",
+        "cache": {}
+      }
+    },
+    {
+      "id": "178:aliases:path=Dirty-aliases.md",
+      "args": [
+        "aliases",
+        "path=Dirty-aliases.md"
+      ],
+      "dirty": "## unsaved #not-saved",
+      "opened": "Dirty-aliases.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No aliases found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ],
+      "dirty_proof": {
+        "editor": "## unsaved #not-saved",
+        "saved": "",
+        "cache": {}
+      }
+    },
+    {
+      "id": "179:outline:path=Dirty-outline.md",
+      "args": [
+        "outline",
+        "path=Dirty-outline.md"
+      ],
+      "dirty": "## unsaved #not-saved",
+      "opened": "Dirty-outline.md",
+      "expected": {
+        "exit_code": 0,
+        "stdout": "No headings found.\n",
+        "stderr": ""
+      },
+      "cache_order": [
+        "Alpha.md",
+        "Beta.md",
+        "Scalar.md",
+        "Space.md",
+        "Ignored.md",
+        "Empty.md",
+        "NoFM.md",
+        "Folder/Child.md",
+        "attach.txt",
+        "Dirty-tags.md",
+        "Dirty-aliases.md",
+        "Dirty-outline.md"
+      ],
+      "note_order": [
+        "Dirty-outline.md",
+        "Dirty-aliases.md",
+        "Dirty-tags.md",
+        "Folder/Child.md",
+        "NoFM.md",
+        "Empty.md",
+        "Ignored.md",
+        "Space.md",
+        "Scalar.md",
+        "Beta.md",
+        "Alpha.md"
+      ],
+      "dirty_proof": {
+        "editor": "## unsaved #not-saved",
+        "saved": "",
+        "cache": {}
+      }
+    }
+  ],
+  "cache_proof": {
+    "files": [
+      "Dirty-outline.md",
+      "Dirty-aliases.md",
+      "Dirty-tags.md",
+      "Folder/Child.md",
+      "NoFM.md",
+      "Empty.md",
+      "Ignored.md",
+      "Space.md",
+      "Scalar.md",
+      "Beta.md",
+      "Alpha.md"
+    ],
+    "fileCache": [
+      "Alpha.md",
+      "Beta.md",
+      "Scalar.md",
+      "Space.md",
+      "Ignored.md",
+      "Empty.md",
+      "NoFM.md",
+      "Folder/Child.md",
+      "attach.txt",
+      "Dirty-tags.md",
+      "Dirty-aliases.md",
+      "Dirty-outline.md"
+    ],
+    "caches": {
+      "Dirty-outline.md": {},
+      "Dirty-aliases.md": {},
+      "Dirty-tags.md": {},
+      "Folder/Child.md": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 18,
+                "offset": 18
+              },
+              "end": {
+                "line": 0,
+                "col": 33,
+                "offset": 33
+              }
+            },
+            "link": "Dest.md",
+            "original": "[link](Dest.md)",
+            "displayText": "link"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 48,
+                "offset": 48
+              },
+              "end": {
+                "line": 0,
+                "col": 62,
+                "offset": 62
+              }
+            },
+            "link": "Wiki",
+            "original": "[[Wiki|Label]]",
+            "displayText": "Label"
+          }
+        ],
+        "embeds": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 34,
+                "offset": 34
+              },
+              "end": {
+                "line": 0,
+                "col": 47,
+                "offset": 47
+              }
+            },
+            "link": "x.png",
+            "original": "![alt](x.png)",
+            "displayText": "alt"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 62,
+                "offset": 62
+              }
+            },
+            "heading": "**Bold** `code` [link](Dest.md) ![alt](x.png) [[Wiki|Label]]",
+            "level": 1
+          },
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 64
+              },
+              "end": {
+                "line": 3,
+                "col": 11,
+                "offset": 87
+              }
+            },
+            "heading": "Setext _em_",
+            "level": 1
+          },
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 88
+              },
+              "end": {
+                "line": 4,
+                "col": 9,
+                "offset": 97
+              }
+            },
+            "heading": "Repeat",
+            "level": 2
+          },
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 98
+              },
+              "end": {
+                "line": 5,
+                "col": 9,
+                "offset": 107
+              }
+            },
+            "heading": "Repeat",
+            "level": 2
+          }
+        ],
+        "sections": [
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 62,
+                "offset": 62
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 64
+              },
+              "end": {
+                "line": 3,
+                "col": 11,
+                "offset": 87
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 88
+              },
+              "end": {
+                "line": 4,
+                "col": 9,
+                "offset": 97
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 98
+              },
+              "end": {
+                "line": 5,
+                "col": 9,
+                "offset": 107
+              }
+            }
+          }
+        ]
+      },
+      "NoFM.md": {
+        "tags": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 5,
+                "offset": 5
+              },
+              "end": {
+                "line": 0,
+                "col": 11,
+                "offset": 11
+              }
+            },
+            "tag": "#plain"
+          }
+        ],
+        "sections": [
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 11,
+                "offset": 11
+              }
+            }
+          }
+        ]
+      },
+      "Empty.md": {},
+      "Ignored.md": {
+        "tags": [
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 64
+              },
+              "end": {
+                "line": 4,
+                "col": 11,
+                "offset": 75
+              }
+            },
+            "tag": "#IgnoredTag"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 12,
+                "offset": 76
+              },
+              "end": {
+                "line": 4,
+                "col": 17,
+                "offset": 81
+              }
+            },
+            "tag": "#work"
+          }
+        ],
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 3,
+                "col": 3,
+                "offset": 63
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 64
+              },
+              "end": {
+                "line": 4,
+                "col": 17,
+                "offset": 81
+              }
+            }
+          }
+        ],
+        "frontmatter": {
+          "aliases": [
+            "Same",
+            "Ignored alias"
+          ],
+          "tags": [
+            "IgnoredTag",
+            "work"
+          ]
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 3,
+            "col": 3,
+            "offset": 63
+          }
+        },
+        "frontmatterLinks": []
+      },
+      "Space.md": {
+        "tags": [
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 169
+              },
+              "end": {
+                "line": 4,
+                "col": 7,
+                "offset": 176
+              }
+            },
+            "tag": "#before"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 14,
+                "offset": 183
+              },
+              "end": {
+                "line": 4,
+                "col": 27,
+                "offset": 196
+              }
+            },
+            "tag": "#beforeafter"
+          }
+        ],
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 3,
+                "col": 3,
+                "offset": 168
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 169
+              },
+              "end": {
+                "line": 4,
+                "col": 27,
+                "offset": 196
+              }
+            }
+          }
+        ],
+        "frontmatter": {
+          "ALIASES": [
+            "﻿bom﻿",
+            "nel",
+            "a\tb",
+            "line\nnext",
+            "comma,alias"
+          ],
+          "TAGS": [
+            "﻿trim﻿",
+            "nel",
+            "a\tb",
+            "two words",
+            "#a/b/"
+          ]
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 3,
+            "col": 3,
+            "offset": 168
+          }
+        },
+        "frontmatterLinks": []
+      },
+      "Scalar.md": {
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 5,
+                "col": 3,
+                "offset": 85
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 86
+              },
+              "end": {
+                "line": 6,
+                "col": 5,
+                "offset": 91
+              }
+            }
+          }
+        ],
+        "frontmatter": {
+          "aliases": " First, Second ",
+          "Aliases": [
+            "Ignored"
+          ],
+          "tags": "one,two",
+          "Tags": [
+            "Ignored"
+          ]
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 5,
+            "col": 3,
+            "offset": 85
+          }
+        },
+        "frontmatterLinks": []
+      },
+      "Beta.md": {
+        "tags": [
+          {
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 0,
+                "offset": 156
+              },
+              "end": {
+                "line": 8,
+                "col": 5,
+                "offset": 161
+              }
+            },
+            "tag": "#work"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 6,
+                "offset": 162
+              },
+              "end": {
+                "line": 8,
+                "col": 11,
+                "offset": 167
+              }
+            },
+            "tag": "#WORK"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 12,
+                "offset": 168
+              },
+              "end": {
+                "line": 8,
+                "col": 17,
+                "offset": 173
+              }
+            },
+            "tag": "#Case"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 18,
+                "offset": 174
+              },
+              "end": {
+                "line": 8,
+                "col": 23,
+                "offset": 179
+              }
+            },
+            "tag": "#case"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 24,
+                "offset": 180
+              },
+              "end": {
+                "line": 8,
+                "col": 29,
+                "offset": 185
+              }
+            },
+            "tag": "#Case"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 121
+              },
+              "end": {
+                "line": 4,
+                "col": 8,
+                "offset": 129
+              }
+            },
+            "heading": "Start",
+            "level": 2
+          },
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 130
+              },
+              "end": {
+                "line": 5,
+                "col": 7,
+                "offset": 137
+              }
+            },
+            "heading": "Kid",
+            "level": 3
+          },
+          {
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 138
+              },
+              "end": {
+                "line": 6,
+                "col": 7,
+                "offset": 145
+              }
+            },
+            "heading": "Peer",
+            "level": 2
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 146
+              },
+              "end": {
+                "line": 7,
+                "col": 9,
+                "offset": 155
+              }
+            },
+            "heading": "Tail",
+            "level": 4
+          }
+        ],
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 3,
+                "col": 3,
+                "offset": 120
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 121
+              },
+              "end": {
+                "line": 4,
+                "col": 8,
+                "offset": 129
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 130
+              },
+              "end": {
+                "line": 5,
+                "col": 7,
+                "offset": 137
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 138
+              },
+              "end": {
+                "line": 6,
+                "col": 7,
+                "offset": 145
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 146
+              },
+              "end": {
+                "line": 7,
+                "col": 9,
+                "offset": 155
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 0,
+                "offset": 156
+              },
+              "end": {
+                "line": 8,
+                "col": 29,
+                "offset": 185
+              }
+            }
+          }
+        ],
+        "frontmatter": {
+          "Tags": [
+            "work",
+            "WORK",
+            "parent/other",
+            "#trail//",
+            "#",
+            "#punct!",
+            "#tab\ttag"
+          ],
+          "ALIASES": [
+            "Same",
+            "same",
+            "alias 2",
+            "😀"
+          ]
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 3,
+            "col": 3,
+            "offset": 120
+          }
+        },
+        "frontmatterLinks": []
+      },
+      "Alpha.md": {
+        "tags": [
+          {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 0,
+                "offset": 213
+              },
+              "end": {
+                "line": 9,
+                "col": 5,
+                "offset": 218
+              }
+            },
+            "tag": "#Work"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 6,
+                "offset": 219
+              },
+              "end": {
+                "line": 9,
+                "col": 11,
+                "offset": 224
+              }
+            },
+            "tag": "#work"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 12,
+                "offset": 225
+              },
+              "end": {
+                "line": 9,
+                "col": 17,
+                "offset": 230
+              }
+            },
+            "tag": "#Work"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 18,
+                "offset": 231
+              },
+              "end": {
+                "line": 9,
+                "col": 31,
+                "offset": 244
+              }
+            },
+            "tag": "#parent/child"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 32,
+                "offset": 245
+              },
+              "end": {
+                "line": 9,
+                "col": 38,
+                "offset": 251
+              }
+            },
+            "tag": "#tail/"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 39,
+                "offset": 252
+              },
+              "end": {
+                "line": 9,
+                "col": 43,
+                "offset": 256
+              }
+            },
+            "tag": "#dup"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 44,
+                "offset": 257
+              },
+              "end": {
+                "line": 9,
+                "col": 48,
+                "offset": 261
+              }
+            },
+            "tag": "#dup"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 170
+              },
+              "end": {
+                "line": 4,
+                "col": 6,
+                "offset": 176
+              }
+            },
+            "heading": "Root",
+            "level": 1
+          },
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 177
+              },
+              "end": {
+                "line": 5,
+                "col": 8,
+                "offset": 185
+              }
+            },
+            "heading": "Jump",
+            "level": 3
+          },
+          {
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 186
+              },
+              "end": {
+                "line": 6,
+                "col": 9,
+                "offset": 195
+              }
+            },
+            "heading": "Middle",
+            "level": 2
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 196
+              },
+              "end": {
+                "line": 7,
+                "col": 9,
+                "offset": 205
+              }
+            },
+            "heading": "Deep",
+            "level": 4
+          },
+          {
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 0,
+                "offset": 206
+              },
+              "end": {
+                "line": 8,
+                "col": 6,
+                "offset": 212
+              }
+            },
+            "heading": "Last",
+            "level": 1
+          }
+        ],
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 3,
+                "col": 3,
+                "offset": 169
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 170
+              },
+              "end": {
+                "line": 4,
+                "col": 6,
+                "offset": 176
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 177
+              },
+              "end": {
+                "line": 5,
+                "col": 8,
+                "offset": 185
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 186
+              },
+              "end": {
+                "line": 6,
+                "col": 9,
+                "offset": 195
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 196
+              },
+              "end": {
+                "line": 7,
+                "col": 9,
+                "offset": 205
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 0,
+                "offset": 206
+              },
+              "end": {
+                "line": 8,
+                "col": 6,
+                "offset": 212
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 0,
+                "offset": 213
+              },
+              "end": {
+                "line": 9,
+                "col": 48,
+                "offset": 261
+              }
+            }
+          }
+        ],
+        "frontmatter": {
+          "tags": [
+            "Work",
+            "work",
+            "parent/child",
+            "tail/",
+            "123",
+            "bad space",
+            "a\tb",
+            "😀",
+            "١٢"
+          ],
+          "aliases": [
+            "Alias 10",
+            "Alias 2",
+            " Same ",
+            "Same",
+            "",
+            12,
+            false,
+            null,
+            {
+              "x": "y"
+            }
+          ]
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 3,
+            "col": 3,
+            "offset": 169
+          }
+        },
+        "frontmatterLinks": []
+      }
+    },
+    "tags": {
+      "#work": 11,
+      "#parent/child": 2,
+      "#parent": 3,
+      "#tail": 2,
+      "#😀": 1,
+      "#١٢": 1,
+      "#dup": 2,
+      "#parent/other": 1,
+      "#trail/": 1,
+      "#trail": 1,
+      "#Case": 3,
+      "#trim": 1,
+      "#nel": 1,
+      "#a/b": 1,
+      "#a": 1,
+      "#before": 1,
+      "#beforeafter": 1,
+      "#IgnoredTag": 2,
+      "#plain": 1
+    }
+  },
+  "disabled_outline": {
+    "exit_code": 0,
+    "stdout": "Error: Command \"outline\" not found. It may require a plugin to be enabled.\n",
+    "stderr": ""
+  },
+  "conditions": {
+    "authority": "actual pinned isolated runtime",
+    "use_mock_keychain": true,
+    "request_spacing_ms": 200,
+    "capture_batches": 2,
+    "scope": "180 handler pipe outputs plus disabled-outline output. Actual cache/Vault orders retained per case and imported explicitly for replay. Cold asynchronous ordering and broader plugin lifecycle remain pending. First profile timeout after109 valid cases retained in raw logs, remaining cases captured in fresh profile."
+  }
+}

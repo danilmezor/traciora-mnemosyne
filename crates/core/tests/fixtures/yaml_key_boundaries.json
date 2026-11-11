@@ -1,0 +1,1058 @@
+{
+  "proof": {
+    "vault": "/home/user/reference/run-bv6md59r/vault",
+    "profile": "/home/user/reference/run-bv6md59r/profile",
+    "use_mock_keychain": true
+  },
+  "direct_cases": [
+    {
+      "id": "lone-high",
+      "source": "\"\\uD800\": one\n",
+      "result": {
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              111,
+              110,
+              101
+            ]
+          }
+        ],
+        "yaml": "\"\\ud800\": one\n",
+        "json": "{\"\\ud800\":\"one\"}"
+      }
+    },
+    {
+      "id": "distinct-keys",
+      "source": "\"\\uD800\": high\n\"\\uD801\": next\n\"\ufffd\": replacement\n\"\\\\uD800\": literal\n",
+      "result": {
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              104,
+              105,
+              103,
+              104
+            ]
+          },
+          {
+            "key_units": [
+              55297
+            ],
+            "value_type": "string",
+            "value_units": [
+              110,
+              101,
+              120,
+              116
+            ]
+          },
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          },
+          {
+            "key_units": [
+              92,
+              117,
+              68,
+              56,
+              48,
+              48
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              105,
+              116,
+              101,
+              114,
+              97,
+              108
+            ]
+          }
+        ],
+        "yaml": "\"\\ud800\": high\n\"\\ud801\": next\n\ufffd: replacement\n\\uD800: literal\n",
+        "json": "{\"\\ud800\":\"high\",\"\\ud801\":\"next\",\"\ufffd\":\"replacement\",\"\\\\uD800\":\"literal\"}"
+      }
+    },
+    {
+      "id": "pair-collision",
+      "source": "\"\\uD800\\uDC00\": escaped\n\"\ud800\udc00\": literal\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Map keys must be unique at line 2, column 1:\n\n\"\\uD800\\uDC00\": escaped\n\"\ud800\udc00\": literal\n^\n",
+          "code": "DUPLICATE_KEY",
+          "pos": [
+            24,
+            25
+          ],
+          "linePos": [
+            {
+              "line": 2,
+              "col": 1
+            },
+            {
+              "line": 2,
+              "col": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "lone-duplicate",
+      "source": "\"\\uD800\": first\n\"\\ud800\": second\n",
+      "result": {
+        "error": {
+          "name": "YAMLParseError",
+          "message": "Map keys must be unique at line 2, column 1:\n\n\"\\uD800\": first\n\"\\ud800\": second\n^\n",
+          "code": "DUPLICATE_KEY",
+          "pos": [
+            16,
+            17
+          ],
+          "linePos": [
+            {
+              "line": 2,
+              "col": 1
+            },
+            {
+              "line": 2,
+              "col": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ordering",
+      "source": "\"\\uD800\": lone\n10: ten\n2: two\n0: zero\n4294967294: lastindex\n4294967295: ordinary\ntrue: bool\nnull: null\n",
+      "result": {
+        "fields": [
+          {
+            "key_units": [
+              48
+            ],
+            "value_type": "string",
+            "value_units": [
+              122,
+              101,
+              114,
+              111
+            ]
+          },
+          {
+            "key_units": [
+              50
+            ],
+            "value_type": "string",
+            "value_units": [
+              116,
+              119,
+              111
+            ]
+          },
+          {
+            "key_units": [
+              49,
+              48
+            ],
+            "value_type": "string",
+            "value_units": [
+              116,
+              101,
+              110
+            ]
+          },
+          {
+            "key_units": [
+              52,
+              50,
+              57,
+              52,
+              57,
+              54,
+              55,
+              50,
+              57,
+              52
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              97,
+              115,
+              116,
+              105,
+              110,
+              100,
+              101,
+              120
+            ]
+          },
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              111,
+              110,
+              101
+            ]
+          },
+          {
+            "key_units": [
+              52,
+              50,
+              57,
+              52,
+              57,
+              54,
+              55,
+              50,
+              57,
+              53
+            ],
+            "value_type": "string",
+            "value_units": [
+              111,
+              114,
+              100,
+              105,
+              110,
+              97,
+              114,
+              121
+            ]
+          },
+          {
+            "key_units": [
+              116,
+              114,
+              117,
+              101
+            ],
+            "value_type": "string",
+            "value_units": [
+              98,
+              111,
+              111,
+              108
+            ]
+          },
+          {
+            "key_units": [],
+            "value_type": "object"
+          }
+        ],
+        "yaml": "\"0\": zero\n\"2\": two\n\"10\": ten\n\"4294967294\": lastindex\n\"\\ud800\": lone\n\"4294967295\": ordinary\n\"true\": bool\n\"\":\n",
+        "json": "{\"0\":\"zero\",\"2\":\"two\",\"10\":\"ten\",\"4294967294\":\"lastindex\",\"\\ud800\":\"lone\",\"4294967295\":\"ordinary\",\"true\":\"bool\",\"\":null}"
+      }
+    },
+    {
+      "id": "shadowed",
+      "source": "\"\\uD800\": lone\nhasOwnProperty: bad\n",
+      "result": {
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              111,
+              110,
+              101
+            ]
+          },
+          {
+            "key_units": [
+              104,
+              97,
+              115,
+              79,
+              119,
+              110,
+              80,
+              114,
+              111,
+              112,
+              101,
+              114,
+              116,
+              121
+            ],
+            "value_type": "string",
+            "value_units": [
+              98,
+              97,
+              100
+            ]
+          }
+        ],
+        "yaml": "\"\\ud800\": lone\nhasOwnProperty: bad\n",
+        "json": "{\"\\ud800\":\"lone\",\"hasOwnProperty\":\"bad\"}"
+      }
+    },
+    {
+      "id": "prototype",
+      "source": "\"\\uD800\": lone\n__proto__: {x: true}\n",
+      "result": {
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              111,
+              110,
+              101
+            ]
+          },
+          {
+            "key_units": [
+              95,
+              95,
+              112,
+              114,
+              111,
+              116,
+              111,
+              95,
+              95
+            ],
+            "value_type": "object"
+          }
+        ],
+        "yaml": "\"\\ud800\": lone\n__proto__:\n  x: true\n",
+        "json": "{\"\\ud800\":\"lone\",\"__proto__\":{\"x\":true}}"
+      }
+    },
+    {
+      "id": "nested",
+      "source": "outer:\n  \"\\uD800\": \"[[Target]]\"\n\"\\uD801\": \"[[Target]]\"\n",
+      "result": {
+        "fields": [
+          {
+            "key_units": [
+              111,
+              117,
+              116,
+              101,
+              114
+            ],
+            "value_type": "object"
+          },
+          {
+            "key_units": [
+              55297
+            ],
+            "value_type": "string",
+            "value_units": [
+              91,
+              91,
+              84,
+              97,
+              114,
+              103,
+              101,
+              116,
+              93,
+              93
+            ]
+          }
+        ],
+        "yaml": "outer:\n  \"\\ud800\": \"[[Target]]\"\n\"\\ud801\": \"[[Target]]\"\n",
+        "json": "{\"outer\":{\"\\ud800\":\"[[Target]]\"},\"\\ud801\":\"[[Target]]\"}"
+      }
+    }
+  ],
+  "cache_cases": [
+    {
+      "path": "Key0.md",
+      "result": {
+        "cached": "---\n\"\\uD800\": one\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":21}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":3,\"col\":0,\"offset\":22},\"end\":{\"line\":3,\"col\":4,\"offset\":26}}}],\"frontmatter\":{\"\\ud800\":\"one\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":2,\"col\":3,\"offset\":21}},\"frontmatterLinks\":[]}",
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              111,
+              110,
+              101
+            ]
+          }
+        ],
+        "links": []
+      }
+    },
+    {
+      "path": "Key1.md",
+      "result": {
+        "cached": "---\n\"\\uD800\": high\n\"\\uD801\": next\n\"\ufffd\": replacement\n\"\\\\uD800\": literal\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":5,\"col\":3,\"offset\":73}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":6,\"col\":0,\"offset\":74},\"end\":{\"line\":6,\"col\":4,\"offset\":78}}}],\"frontmatter\":{\"\\ud800\":\"high\",\"\\ud801\":\"next\",\"\ufffd\":\"replacement\",\"\\\\uD800\":\"literal\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":5,\"col\":3,\"offset\":73}},\"frontmatterLinks\":[]}",
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              104,
+              105,
+              103,
+              104
+            ]
+          },
+          {
+            "key_units": [
+              55297
+            ],
+            "value_type": "string",
+            "value_units": [
+              110,
+              101,
+              120,
+              116
+            ]
+          },
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          },
+          {
+            "key_units": [
+              92,
+              117,
+              68,
+              56,
+              48,
+              48
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              105,
+              116,
+              101,
+              114,
+              97,
+              108
+            ]
+          }
+        ],
+        "links": []
+      }
+    },
+    {
+      "path": "Key4.md",
+      "result": {
+        "cached": "---\n\"\\uD800\": lone\n10: ten\n2: two\n0: zero\n4294967294: lastindex\n4294967295: ordinary\ntrue: bool\nnull: null\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":9,\"col\":3,\"offset\":110}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":10,\"col\":0,\"offset\":111},\"end\":{\"line\":10,\"col\":4,\"offset\":115}}}],\"frontmatter\":{\"0\":\"zero\",\"2\":\"two\",\"10\":\"ten\",\"4294967294\":\"lastindex\",\"\\ud800\":\"lone\",\"4294967295\":\"ordinary\",\"true\":\"bool\",\"\":null},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":9,\"col\":3,\"offset\":110}},\"frontmatterLinks\":[]}",
+        "fields": [
+          {
+            "key_units": [
+              48
+            ],
+            "value_type": "string",
+            "value_units": [
+              122,
+              101,
+              114,
+              111
+            ]
+          },
+          {
+            "key_units": [
+              50
+            ],
+            "value_type": "string",
+            "value_units": [
+              116,
+              119,
+              111
+            ]
+          },
+          {
+            "key_units": [
+              49,
+              48
+            ],
+            "value_type": "string",
+            "value_units": [
+              116,
+              101,
+              110
+            ]
+          },
+          {
+            "key_units": [
+              52,
+              50,
+              57,
+              52,
+              57,
+              54,
+              55,
+              50,
+              57,
+              52
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              97,
+              115,
+              116,
+              105,
+              110,
+              100,
+              101,
+              120
+            ]
+          },
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              111,
+              110,
+              101
+            ]
+          },
+          {
+            "key_units": [
+              52,
+              50,
+              57,
+              52,
+              57,
+              54,
+              55,
+              50,
+              57,
+              53
+            ],
+            "value_type": "string",
+            "value_units": [
+              111,
+              114,
+              100,
+              105,
+              110,
+              97,
+              114,
+              121
+            ]
+          },
+          {
+            "key_units": [
+              116,
+              114,
+              117,
+              101
+            ],
+            "value_type": "string",
+            "value_units": [
+              98,
+              111,
+              111,
+              108
+            ]
+          },
+          {
+            "key_units": [],
+            "value_type": "object"
+          }
+        ],
+        "links": []
+      }
+    },
+    {
+      "path": "Key5.md",
+      "result": {
+        "cached": "---\n\"\\uD800\": lone\nhasOwnProperty: bad\n---\nbody\n",
+        "cache_json": "null",
+        "fields": null,
+        "links": []
+      }
+    },
+    {
+      "path": "Key6.md",
+      "result": {
+        "cached": "---\n\"\\uD800\": lone\n__proto__: {x: true}\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":43}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":44},\"end\":{\"line\":4,\"col\":4,\"offset\":48}}}],\"frontmatter\":{\"\\ud800\":\"lone\",\"__proto__\":{\"x\":true}},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":43}},\"frontmatterLinks\":[]}",
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              108,
+              111,
+              110,
+              101
+            ]
+          },
+          {
+            "key_units": [
+              95,
+              95,
+              112,
+              114,
+              111,
+              116,
+              111,
+              95,
+              95
+            ],
+            "value_type": "object"
+          }
+        ],
+        "links": []
+      }
+    },
+    {
+      "path": "Key7.md",
+      "result": {
+        "cached": "---\nouter:\n  \"\\uD800\": \"[[Target]]\"\n\"\\uD801\": \"[[Target]]\"\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":4,\"col\":3,\"offset\":62}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":5,\"col\":0,\"offset\":63},\"end\":{\"line\":5,\"col\":4,\"offset\":67}}}],\"frontmatter\":{\"outer\":{\"\\ud800\":\"[[Target]]\"},\"\\ud801\":\"[[Target]]\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":4,\"col\":3,\"offset\":62}},\"frontmatterLinks\":[{\"key\":\"outer.\\ud800\",\"link\":\"Target\",\"original\":\"[[Target]]\",\"displayText\":\"Target\"},{\"key\":\"\\ud801\",\"link\":\"Target\",\"original\":\"[[Target]]\",\"displayText\":\"Target\"}]}",
+        "fields": [
+          {
+            "key_units": [
+              111,
+              117,
+              116,
+              101,
+              114
+            ],
+            "value_type": "object"
+          },
+          {
+            "key_units": [
+              55297
+            ],
+            "value_type": "string",
+            "value_units": [
+              91,
+              91,
+              84,
+              97,
+              114,
+              103,
+              101,
+              116,
+              93,
+              93
+            ]
+          }
+        ],
+        "links": [
+          {
+            "link": "Target",
+            "original": "[[Target]]",
+            "displayText": "Target",
+            "key_units": [
+              111,
+              117,
+              116,
+              101,
+              114,
+              46,
+              55296
+            ]
+          },
+          {
+            "link": "Target",
+            "original": "[[Target]]",
+            "displayText": "Target",
+            "key_units": [
+              55297
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "Target.md",
+      "result": {
+        "cached": "target\n",
+        "cache_json": "{\"sections\":[{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":0,\"col\":6,\"offset\":6}}}]}",
+        "fields": null,
+        "links": []
+      }
+    },
+    {
+      "path": "Callback.md",
+      "result": {
+        "cached": "---\n\"\\uD800\": high\n\"\ufffd\": replacement\n---\nbody\n",
+        "cache_json": "{\"sections\":[{\"type\":\"yaml\",\"position\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":39}}},{\"type\":\"paragraph\",\"position\":{\"start\":{\"line\":4,\"col\":0,\"offset\":40},\"end\":{\"line\":4,\"col\":4,\"offset\":44}}}],\"frontmatter\":{\"\\ud800\":\"high\",\"\ufffd\":\"replacement\"},\"frontmatterPosition\":{\"start\":{\"line\":0,\"col\":0,\"offset\":0},\"end\":{\"line\":3,\"col\":3,\"offset\":39}},\"frontmatterLinks\":[]}",
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              104,
+              105,
+              103,
+              104
+            ]
+          },
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          }
+        ],
+        "links": []
+      }
+    }
+  ],
+  "callbacks": [
+    {
+      "id": "set-lone",
+      "before": "---\n\"\\uD800\": high\n\"\ufffd\": replacement\n---\nbody\n",
+      "after": "---\n\"\\ud800\": changed\n\ufffd: replacement\n---\nbody\n",
+      "result": {
+        "before": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              104,
+              105,
+              103,
+              104
+            ]
+          },
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              99,
+              104,
+              97,
+              110,
+              103,
+              101,
+              100
+            ]
+          },
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "set-other",
+      "before": "---\n\"\\ud800\": changed\n\ufffd: replacement\n---\nbody\n",
+      "after": "---\n\"\\ud800\": changed\n\ufffd: replacement\n\"\\ud801\": added\n---\nbody\n",
+      "result": {
+        "before": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              99,
+              104,
+              97,
+              110,
+              103,
+              101,
+              100
+            ]
+          },
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              99,
+              104,
+              97,
+              110,
+              103,
+              101,
+              100
+            ]
+          },
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          },
+          {
+            "key_units": [
+              55297
+            ],
+            "value_type": "string",
+            "value_units": [
+              97,
+              100,
+              100,
+              101,
+              100
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "remove-lone",
+      "before": "---\n\"\\ud800\": changed\n\ufffd: replacement\n\"\\ud801\": added\n---\nbody\n",
+      "after": "---\n\ufffd: replacement\n\"\\ud801\": added\n---\nbody\n",
+      "result": {
+        "before": [
+          {
+            "key_units": [
+              55296
+            ],
+            "value_type": "string",
+            "value_units": [
+              99,
+              104,
+              97,
+              110,
+              103,
+              101,
+              100
+            ]
+          },
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          },
+          {
+            "key_units": [
+              55297
+            ],
+            "value_type": "string",
+            "value_units": [
+              97,
+              100,
+              100,
+              101,
+              100
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "key_units": [
+              65533
+            ],
+            "value_type": "string",
+            "value_units": [
+              114,
+              101,
+              112,
+              108,
+              97,
+              99,
+              101,
+              109,
+              101,
+              110,
+              116
+            ]
+          },
+          {
+            "key_units": [
+              55297
+            ],
+            "value_type": "string",
+            "value_units": [
+              97,
+              100,
+              100,
+              101,
+              100
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "initial_files": {
+    "Key0.md": "---\n\"\\uD800\": one\n---\nbody\n",
+    "Key1.md": "---\n\"\\uD800\": high\n\"\\uD801\": next\n\"\ufffd\": replacement\n\"\\\\uD800\": literal\n---\nbody\n",
+    "Key4.md": "---\n\"\\uD800\": lone\n10: ten\n2: two\n0: zero\n4294967294: lastindex\n4294967295: ordinary\ntrue: bool\nnull: null\n---\nbody\n",
+    "Key5.md": "---\n\"\\uD800\": lone\nhasOwnProperty: bad\n---\nbody\n",
+    "Key6.md": "---\n\"\\uD800\": lone\n__proto__: {x: true}\n---\nbody\n",
+    "Key7.md": "---\nouter:\n  \"\\uD800\": \"[[Target]]\"\n\"\\uD801\": \"[[Target]]\"\n---\nbody\n",
+    "Target.md": "target\n",
+    "Callback.md": "---\n\"\\uD800\": high\n\"\ufffd\": replacement\n---\nbody\n"
+  },
+  "after_rename": {
+    "Key0.md": "---\n\"\\uD800\": one\n---\nbody\n",
+    "Key1.md": "---\n\"\\uD800\": high\n\"\\uD801\": next\n\"\ufffd\": replacement\n\"\\\\uD800\": literal\n---\nbody\n",
+    "Key4.md": "---\n\"\\uD800\": lone\n10: ten\n2: two\n0: zero\n4294967294: lastindex\n4294967295: ordinary\ntrue: bool\nnull: null\n---\nbody\n",
+    "Key5.md": "---\n\"\\uD800\": lone\nhasOwnProperty: bad\n---\nbody\n",
+    "Key6.md": "---\n\"\\uD800\": lone\n__proto__: {x: true}\n---\nbody\n",
+    "Key7.md": "---\nouter:\n  \"\\ud800\": \"[[Renamed]]\"\n\"\\ud801\": \"[[Renamed]]\"\n---\nbody\n",
+    "Callback.md": "---\n\ufffd: replacement\n\"\\ud801\": added\n---\nbody\n"
+  }
+}

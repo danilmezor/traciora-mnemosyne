@@ -1,0 +1,847 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "cases": [
+    {
+      "path": "object-cycle.md",
+      "source": "---\nvalue: &self {self: *self}\n---\nbodyMarker #body\n",
+      "expected": {
+        "cached": "---\nvalue: &self {self: *self}\n---\nbodyMarker #body\n",
+        "cache": null,
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        },
+        "rawKey": "object-cycle.md",
+        "cache_member": true,
+        "resolved": null,
+        "unresolved": null
+      },
+      "reads": [
+        {
+          "args": [
+            "properties",
+            "path=object-cycle.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "No frontmatter found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=object-cycle.md",
+            "name=value"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "Error: Property \"value\" not found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "search",
+            "query=path:\"object-cycle.md\" bodyMarker",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[\"object-cycle.md\"]\n",
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    {
+      "path": "array-cycle.md",
+      "source": "---\nvalue: &self [*self]\n---\nbodyMarker #body\n",
+      "expected": {
+        "cached": "---\nvalue: &self [*self]\n---\nbodyMarker #body\n",
+        "cache": null,
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        },
+        "rawKey": "array-cycle.md",
+        "cache_member": true,
+        "resolved": null,
+        "unresolved": null
+      },
+      "reads": [
+        {
+          "args": [
+            "properties",
+            "path=array-cycle.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "No frontmatter found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=array-cycle.md",
+            "name=value"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "Error: Property \"value\" not found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "search",
+            "query=path:\"array-cycle.md\" bodyMarker",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[\"array-cycle.md\"]\n",
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    {
+      "path": "map-cycle.md",
+      "source": "---\nvalue: &self !!omap [{self: *self}]\n---\nbodyMarker #body\n",
+      "expected": {
+        "cached": "---\nvalue: &self !!omap [{self: *self}]\n---\nbodyMarker #body\n",
+        "cache": {
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 11,
+                  "offset": 55
+                },
+                "end": {
+                  "line": 3,
+                  "col": 16,
+                  "offset": 60
+                }
+              },
+              "tag": "#body"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 43
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 44
+                },
+                "end": {
+                  "line": 3,
+                  "col": 16,
+                  "offset": 60
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "value": {}
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 43
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "Map",
+                "id": 1,
+                "entries": [
+                  [
+                    {
+                      "type": "string",
+                      "value": "self"
+                    },
+                    {
+                      "ref": 1
+                    }
+                  ]
+                ],
+                "string": "[object Map]"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "rawKey": "map-cycle.md",
+        "cache_member": true,
+        "resolved": {},
+        "unresolved": {}
+      },
+      "reads": [
+        {
+          "args": [
+            "properties",
+            "path=map-cycle.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"value\": {}\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=map-cycle.md",
+            "name=value"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Map]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "search",
+            "query=path:\"map-cycle.md\" bodyMarker",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[\"map-cycle.md\"]\n",
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    {
+      "path": "set-cycle.md",
+      "source": "---\nvalue: &self !!set {? *self : null}\n---\nbodyMarker #body\n",
+      "expected": {
+        "cached": "---\nvalue: &self !!set {? *self : null}\n---\nbodyMarker #body\n",
+        "cache": {
+          "tags": [
+            {
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 11,
+                  "offset": 55
+                },
+                "end": {
+                  "line": 3,
+                  "col": 16,
+                  "offset": 60
+                }
+              },
+              "tag": "#body"
+            }
+          ],
+          "sections": [
+            {
+              "type": "yaml",
+              "position": {
+                "start": {
+                  "line": 0,
+                  "col": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 2,
+                  "col": 3,
+                  "offset": 43
+                }
+              }
+            },
+            {
+              "type": "paragraph",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "col": 0,
+                  "offset": 44
+                },
+                "end": {
+                  "line": 3,
+                  "col": 16,
+                  "offset": 60
+                }
+              }
+            }
+          ],
+          "frontmatter": {
+            "value": {}
+          },
+          "frontmatterPosition": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "col": 3,
+              "offset": 43
+            }
+          },
+          "frontmatterLinks": []
+        },
+        "descriptor": {
+          "type": "Object",
+          "id": 0,
+          "properties": [
+            [
+              "value",
+              {
+                "type": "Set",
+                "id": 1,
+                "values": [
+                  {
+                    "ref": 1
+                  }
+                ],
+                "string": "[object Set]"
+              }
+            ]
+          ],
+          "symbols": []
+        },
+        "rawKey": "set-cycle.md",
+        "cache_member": true,
+        "resolved": {},
+        "unresolved": {}
+      },
+      "reads": [
+        {
+          "args": [
+            "properties",
+            "path=set-cycle.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "{\n  \"value\": {}\n}\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=set-cycle.md",
+            "name=value"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[object Set]\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "search",
+            "query=path:\"set-cycle.md\" bodyMarker",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[\"set-cycle.md\"]\n",
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    {
+      "path": "own-method.md",
+      "source": "---\nhasOwnProperty: text\nvalue: 1\n---\nbodyMarker #body\n",
+      "expected": {
+        "cached": "---\nhasOwnProperty: text\nvalue: 1\n---\nbodyMarker #body\n",
+        "cache": null,
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        },
+        "rawKey": "own-method.md",
+        "cache_member": true,
+        "resolved": null,
+        "unresolved": null
+      },
+      "reads": [
+        {
+          "args": [
+            "properties",
+            "path=own-method.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "No frontmatter found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=own-method.md",
+            "name=value"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "Error: Property \"value\" not found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "search",
+            "query=path:\"own-method.md\" bodyMarker",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[\"own-method.md\"]\n",
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    {
+      "path": "nested-method.md",
+      "source": "---\nvalue: {hasOwnProperty: text, link: \"[[Missing]]\"}\n---\nbodyMarker #body\n",
+      "expected": {
+        "cached": "---\nvalue: {hasOwnProperty: text, link: \"[[Missing]]\"}\n---\nbodyMarker #body\n",
+        "cache": null,
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        },
+        "rawKey": "nested-method.md",
+        "cache_member": true,
+        "resolved": null,
+        "unresolved": null
+      },
+      "reads": [
+        {
+          "args": [
+            "properties",
+            "path=nested-method.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "No frontmatter found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=nested-method.md",
+            "name=value"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "Error: Property \"value\" not found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "search",
+            "query=path:\"nested-method.md\" bodyMarker",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[\"nested-method.md\"]\n",
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    {
+      "path": "symbol.md",
+      "source": "---\nvalue: !!merge <<\n---\nbodyMarker #body\n",
+      "expected": {
+        "cached": "---\nvalue: !!merge <<\n---\nbodyMarker #body\n",
+        "cache": null,
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        },
+        "rawKey": "symbol.md",
+        "cache_member": true,
+        "resolved": null,
+        "unresolved": null
+      },
+      "reads": [
+        {
+          "args": [
+            "properties",
+            "path=symbol.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "No frontmatter found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=symbol.md",
+            "name=value"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "Error: Property \"value\" not found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "search",
+            "query=path:\"symbol.md\" bodyMarker",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[\"map-symbol.md\",\"symbol.md\"]\n",
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    {
+      "path": "map-symbol.md",
+      "source": "---\nvalue: !!omap [{symbol: !!merge <<}]\n---\nbodyMarker #body\n",
+      "expected": {
+        "cached": "---\nvalue: !!omap [{symbol: !!merge <<}]\n---\nbodyMarker #body\n",
+        "cache": null,
+        "descriptor": {
+          "type": "undefined",
+          "string": "undefined"
+        },
+        "rawKey": "map-symbol.md",
+        "cache_member": true,
+        "resolved": null,
+        "unresolved": null
+      },
+      "reads": [
+        {
+          "args": [
+            "properties",
+            "path=map-symbol.md",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "No frontmatter found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "property:read",
+            "path=map-symbol.md",
+            "name=value"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "Error: Property \"value\" not found.\n",
+            "stderr": ""
+          }
+        },
+        {
+          "args": [
+            "search",
+            "query=path:\"map-symbol.md\" bodyMarker",
+            "format=json"
+          ],
+          "output": {
+            "exit_code": 0,
+            "stdout": "[\"map-symbol.md\"]\n",
+            "stderr": ""
+          }
+        }
+      ]
+    }
+  ],
+  "setup": {
+    "order": [
+      "object-cycle.md",
+      "array-cycle.md",
+      "map-cycle.md",
+      "set-cycle.md",
+      "own-method.md",
+      "nested-method.md",
+      "symbol.md",
+      "map-symbol.md"
+    ]
+  },
+  "search_cases": [
+    {
+      "args": [
+        "search",
+        "query=[value]",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\"set-cycle.md\",\"map-cycle.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:object]",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\"set-cycle.md\",\"map-cycle.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:tail]",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[cycle]",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:Set]",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\"set-cycle.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:Map]",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\"map-cycle.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=[value:Symbol]",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "No matches found.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=tag:#body",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\"set-cycle.md\",\"map-cycle.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search",
+        "query=bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[\"map-symbol.md\",\"symbol.md\",\"nested-method.md\",\"own-method.md\",\"set-cycle.md\",\"map-cycle.md\",\"array-cycle.md\",\"object-cycle.md\"]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=path:\"object-cycle.md\" bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"object-cycle.md\",\"matches\":[{\"line\":4,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=path:\"array-cycle.md\" bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"array-cycle.md\",\"matches\":[{\"line\":4,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=path:\"map-cycle.md\" bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"map-cycle.md\",\"matches\":[{\"line\":4,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=path:\"set-cycle.md\" bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"set-cycle.md\",\"matches\":[{\"line\":4,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=path:\"own-method.md\" bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"own-method.md\",\"matches\":[{\"line\":5,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=path:\"nested-method.md\" bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"nested-method.md\",\"matches\":[{\"line\":4,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=path:\"symbol.md\" bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"map-symbol.md\",\"matches\":[{\"line\":4,\"text\":\"bodyMarker #body\"}]},{\"file\":\"symbol.md\",\"matches\":[{\"line\":4,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    },
+    {
+      "args": [
+        "search:context",
+        "query=path:\"map-symbol.md\" bodyMarker",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "[{\"file\":\"map-symbol.md\",\"matches\":[{\"line\":4,\"text\":\"bodyMarker #body\"}]}]\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "after_search_cases": [
+    {
+      "args": [
+        "search",
+        "query=[hasOwnProperty]",
+        "format=json"
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": "TypeError: i.hasOwnProperty is not a function\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "conditions": [
+    "Actual isolated pinned profile, sequential warm file creation. Metadata worker failures do not prevent body text search.",
+    "Properties/tags use successful metadata only; body search includes failed files.",
+    "after_search_cases captures required unresolved retained-regexp dictionary poisoning; not discarded as invalid observation.",
+    "Replay verifies17global+8path-scoped outputs followedbyone actual retained-regex cache poisoning failure."
+  ]
+}

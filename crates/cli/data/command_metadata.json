@@ -1,0 +1,3825 @@
+{
+  "commands": [
+    {
+      "command": "help",
+      "description": "Show list of all available commands",
+      "usage": "[<command>]",
+      "flags": {
+        "<command>": {
+          "description": "Show help for a specific command"
+        }
+      },
+      "flag_order": [
+        "<command>"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 0
+    },
+    {
+      "command": "__completions",
+      "description": "",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 1
+    },
+    {
+      "command": "__commands",
+      "description": "",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 2
+    },
+    {
+      "command": "__files",
+      "description": "",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 3
+    },
+    {
+      "command": "devtools",
+      "description": "Toggle Electron dev tools",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 4
+    },
+    {
+      "command": "dev:mobile",
+      "description": "Toggle mobile emulation",
+      "usage": "[on] [off]",
+      "flags": {
+        "on": {
+          "description": "Enable mobile emulation"
+        },
+        "off": {
+          "description": "Disable mobile emulation"
+        }
+      },
+      "flag_order": [
+        "on",
+        "off"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 5
+    },
+    {
+      "command": "dev:debug",
+      "description": "Attach/detach Chrome DevTools Protocol debugger",
+      "usage": "[on] [off]",
+      "flags": {
+        "on": {
+          "description": "Attach debugger"
+        },
+        "off": {
+          "description": "Detach debugger"
+        }
+      },
+      "flag_order": [
+        "on",
+        "off"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 6
+    },
+    {
+      "command": "dev:errors",
+      "description": "Show captured errors",
+      "usage": "[clear]",
+      "flags": {
+        "clear": {
+          "description": "Clear the error buffer"
+        }
+      },
+      "flag_order": [
+        "clear"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 7
+    },
+    {
+      "command": "dev:screenshot",
+      "description": "Take a screenshot",
+      "usage": "[path=<filename>]",
+      "flags": {
+        "path": {
+          "value": "<filename>",
+          "description": "Output file path"
+        }
+      },
+      "flag_order": [
+        "path"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 8
+    },
+    {
+      "command": "dev:cdp",
+      "description": "Run a Chrome DevTools Protocol command",
+      "usage": "method=<CDP.method> [params=<json>]",
+      "flags": {
+        "method": {
+          "value": "<CDP.method>",
+          "description": "CDP method to call",
+          "required": true
+        },
+        "params": {
+          "value": "<json>",
+          "description": "Method parameters as JSON"
+        }
+      },
+      "flag_order": [
+        "method",
+        "params"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 9
+    },
+    {
+      "command": "dev:css",
+      "description": "Inspect CSS with source locations",
+      "usage": "selector=<css> [prop=<name>]",
+      "flags": {
+        "selector": {
+          "value": "<css>",
+          "description": "CSS selector",
+          "required": true
+        },
+        "prop": {
+          "value": "<name>",
+          "description": "Filter by property name"
+        }
+      },
+      "flag_order": [
+        "selector",
+        "prop"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 10
+    },
+    {
+      "command": "dev:dom",
+      "description": "Query DOM elements",
+      "usage": "selector=<css> [total] [text] [inner] [all] [attr=<name>] [css=<prop>]",
+      "flags": {
+        "selector": {
+          "value": "<css>",
+          "description": "CSS selector",
+          "required": true
+        },
+        "total": {
+          "description": "Return element count"
+        },
+        "text": {
+          "description": "Return text content"
+        },
+        "inner": {
+          "description": "Return innerHTML instead of outerHTML"
+        },
+        "all": {
+          "description": "Return all matches instead of first"
+        },
+        "attr": {
+          "value": "<name>",
+          "description": "Get attribute value"
+        },
+        "css": {
+          "value": "<prop>",
+          "description": "Get CSS property value"
+        }
+      },
+      "flag_order": [
+        "selector",
+        "total",
+        "text",
+        "inner",
+        "all",
+        "attr",
+        "css"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 11
+    },
+    {
+      "command": "dev:console",
+      "description": "Show captured console messages",
+      "usage": "[clear] [limit=<n>] [level=log|warn|error|info|debug]",
+      "flags": {
+        "clear": {
+          "description": "Clear the console buffer"
+        },
+        "limit": {
+          "value": "<n>",
+          "description": "Max messages to show (default 50)"
+        },
+        "level": {
+          "value": "log|warn|error|info|debug",
+          "description": "Filter by log level"
+        }
+      },
+      "flag_order": [
+        "clear",
+        "limit",
+        "level"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 12
+    },
+    {
+      "command": "eval",
+      "description": "Execute JavaScript and return result",
+      "usage": "code=<javascript>",
+      "flags": {
+        "code": {
+          "value": "<javascript>",
+          "description": "JavaScript code to execute",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "code"
+      ],
+      "availability": {
+        "kind": "desktop",
+        "owner_plugin": null,
+        "requirements": [
+          "desktop application with Electron runtime"
+        ],
+        "desktop_required": true,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 13
+    },
+    {
+      "command": "commands",
+      "description": "List available commands",
+      "usage": "[filter=<prefix>]",
+      "flags": {
+        "filter": {
+          "value": "<prefix>",
+          "description": "Filter by ID prefix"
+        }
+      },
+      "flag_order": [
+        "filter"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 14
+    },
+    {
+      "command": "command",
+      "description": "Execute an app command",
+      "usage": "id=<command-id>",
+      "flags": {
+        "id": {
+          "value": "<command-id>",
+          "description": "Command ID to execute",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "id"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 15
+    },
+    {
+      "command": "random",
+      "description": "Open a random note",
+      "usage": "[folder=<path>] [newtab]",
+      "flags": {
+        "folder": {
+          "value": "<path>",
+          "description": "Limit to folder"
+        },
+        "newtab": {
+          "description": "Open in new tab"
+        }
+      },
+      "flag_order": [
+        "folder",
+        "newtab"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 16
+    },
+    {
+      "command": "random:read",
+      "description": "Read a random note",
+      "usage": "[folder=<path>]",
+      "flags": {
+        "folder": {
+          "value": "<path>",
+          "description": "Limit to folder"
+        }
+      },
+      "flag_order": [
+        "folder"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 17
+    },
+    {
+      "command": "reload",
+      "description": "Reload the vault",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 18
+    },
+    {
+      "command": "restart",
+      "description": "Restart the app",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 19
+    },
+    {
+      "command": "plugin",
+      "description": "Get plugin info",
+      "usage": "id=<plugin-id>",
+      "flags": {
+        "id": {
+          "value": "<plugin-id>",
+          "description": "Plugin ID",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "id"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 20
+    },
+    {
+      "command": "plugins",
+      "description": "List installed plugins",
+      "usage": "[filter=core|community] [versions] [format=json|tsv|csv]",
+      "flags": {
+        "filter": {
+          "value": "core|community",
+          "description": "Filter by plugin type"
+        },
+        "versions": {
+          "description": "Include version numbers"
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "description": "Output format (default: tsv)"
+        }
+      },
+      "flag_order": [
+        "filter",
+        "versions",
+        "format"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 21
+    },
+    {
+      "command": "plugins:enabled",
+      "description": "List enabled plugins",
+      "usage": "[filter=core|community] [versions] [format=json|tsv|csv]",
+      "flags": {
+        "filter": {
+          "value": "core|community",
+          "description": "Filter by plugin type"
+        },
+        "versions": {
+          "description": "Include version numbers"
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "description": "Output format (default: tsv)"
+        }
+      },
+      "flag_order": [
+        "filter",
+        "versions",
+        "format"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 22
+    },
+    {
+      "command": "plugins:restrict",
+      "description": "Toggle or check restricted mode",
+      "usage": "[on] [off]",
+      "flags": {
+        "on": {
+          "description": "Enable restricted mode"
+        },
+        "off": {
+          "description": "Disable restricted mode"
+        }
+      },
+      "flag_order": [
+        "on",
+        "off"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 23
+    },
+    {
+      "command": "themes",
+      "description": "List installed themes",
+      "usage": "[versions]",
+      "flags": {
+        "versions": {
+          "description": "Include version numbers"
+        }
+      },
+      "flag_order": [
+        "versions"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 24
+    },
+    {
+      "command": "theme",
+      "description": "Show active theme or get info",
+      "usage": "[name=<name>]",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Theme name for details"
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 25
+    },
+    {
+      "command": "snippets",
+      "description": "List installed CSS snippets",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 26
+    },
+    {
+      "command": "snippets:enabled",
+      "description": "List enabled CSS snippets",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 27
+    },
+    {
+      "command": "tags",
+      "description": "List tags in the vault",
+      "usage": "[file=<name>] [path=<path>] [total] [counts] [sort=count] [format=json|tsv|csv] [active]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "total": {
+          "description": "Return tag count"
+        },
+        "counts": {
+          "description": "Include tag counts"
+        },
+        "sort": {
+          "value": "count",
+          "description": "Sort by count (default: name)"
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "description": "Output format (default: tsv)"
+        },
+        "active": {
+          "description": "Show tags for active file"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "total",
+        "counts",
+        "sort",
+        "format",
+        "active"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 28
+    },
+    {
+      "command": "tasks",
+      "description": "List tasks in the vault",
+      "usage": "[file=<name>] [path=<path>] [total] [done] [todo] [status=\"<char>\"] [verbose] [format=json|tsv|csv] [active] [daily]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "Filter by file name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "Filter by file path"
+        },
+        "total": {
+          "description": "Return task count"
+        },
+        "done": {
+          "description": "Show completed tasks"
+        },
+        "todo": {
+          "description": "Show incomplete tasks"
+        },
+        "status": {
+          "value": "\"<char>\"",
+          "description": "Filter by status character"
+        },
+        "verbose": {
+          "description": "Group by file with line numbers"
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "description": "Output format (default: text)"
+        },
+        "active": {
+          "description": "Show tasks for active file"
+        },
+        "daily": {
+          "description": "Show tasks from daily note"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "total",
+        "done",
+        "todo",
+        "status",
+        "verbose",
+        "format",
+        "active",
+        "daily"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 29
+    },
+    {
+      "command": "task",
+      "description": "Show or update a task",
+      "usage": "[ref=<path:line>] [file=<name>] [path=<path>] [line=<n>] [toggle] [done] [todo] [daily] [status=\"<char>\"]",
+      "flags": {
+        "ref": {
+          "value": "<path:line>",
+          "description": "Task reference (path:line)"
+        },
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "line": {
+          "value": "<n>",
+          "description": "Line number"
+        },
+        "toggle": {
+          "description": "Toggle task status"
+        },
+        "done": {
+          "description": "Mark as done"
+        },
+        "todo": {
+          "description": "Mark as todo"
+        },
+        "daily": {
+          "description": "Use daily note"
+        },
+        "status": {
+          "value": "\"<char>\"",
+          "description": "Set status character"
+        }
+      },
+      "flag_order": [
+        "ref",
+        "file",
+        "path",
+        "line",
+        "toggle",
+        "done",
+        "todo",
+        "daily",
+        "status"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 30
+    },
+    {
+      "command": "tag",
+      "description": "Get tag info",
+      "usage": "name=<tag> [total] [verbose]",
+      "flags": {
+        "name": {
+          "value": "<tag>",
+          "description": "Tag name",
+          "required": true
+        },
+        "total": {
+          "description": "Return occurrence count"
+        },
+        "verbose": {
+          "description": "Include file list and count"
+        }
+      },
+      "flag_order": [
+        "name",
+        "total",
+        "verbose"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 31
+    },
+    {
+      "command": "properties",
+      "description": "List properties in the vault",
+      "usage": "[file=<name>] [path=<path>] [name=<name>] [total] [sort=count] [counts] [format=yaml|json|tsv] [active]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "Show properties for file"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "Show properties for path"
+        },
+        "name": {
+          "value": "<name>",
+          "description": "Get specific property count"
+        },
+        "total": {
+          "description": "Return property count"
+        },
+        "sort": {
+          "value": "count",
+          "description": "Sort by count (default: name)"
+        },
+        "counts": {
+          "description": "Include occurrence counts"
+        },
+        "format": {
+          "value": "yaml|json|tsv",
+          "description": "Output format (default: yaml)"
+        },
+        "active": {
+          "description": "Show properties for active file"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "name",
+        "total",
+        "sort",
+        "counts",
+        "format",
+        "active"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 32
+    },
+    {
+      "command": "property:set",
+      "description": "Set a property on a file",
+      "usage": "name=<name> value=<value> [type=text|list|number|checkbox|date|datetime] [file=<name>] [path=<path>]",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Property name",
+          "required": true
+        },
+        "value": {
+          "value": "<value>",
+          "description": "Property value",
+          "required": true
+        },
+        "type": {
+          "value": "text|list|number|checkbox|date|datetime",
+          "description": "Property type"
+        },
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "name",
+        "value",
+        "type",
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 33
+    },
+    {
+      "command": "property:remove",
+      "description": "Remove a property from a file",
+      "usage": "name=<name> [file=<name>] [path=<path>]",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Property name",
+          "required": true
+        },
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "name",
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 34
+    },
+    {
+      "command": "property:read",
+      "description": "Read a property value from a file",
+      "usage": "name=<name> [file=<name>] [path=<path>]",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Property name",
+          "required": true
+        },
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "name",
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 35
+    },
+    {
+      "command": "tabs",
+      "description": "List open tabs",
+      "usage": "[ids]",
+      "flags": {
+        "ids": {
+          "description": "Include tab IDs"
+        }
+      },
+      "flag_order": [
+        "ids"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 36
+    },
+    {
+      "command": "recents",
+      "description": "List recently opened files",
+      "usage": "[total]",
+      "flags": {
+        "total": {
+          "description": "Return recent file count"
+        }
+      },
+      "flag_order": [
+        "total"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 37
+    },
+    {
+      "command": "tab:open",
+      "description": "Open a new tab",
+      "usage": "[group=<id>] [file=<path>] [view=<type>]",
+      "flags": {
+        "group": {
+          "value": "<id>",
+          "description": "Tab group ID"
+        },
+        "file": {
+          "value": "<path>",
+          "description": "File to open"
+        },
+        "view": {
+          "value": "<type>",
+          "description": "View type to open"
+        }
+      },
+      "flag_order": [
+        "group",
+        "file",
+        "view"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 38
+    },
+    {
+      "command": "workspace",
+      "description": "Show workspace tree",
+      "usage": "[ids]",
+      "flags": {
+        "ids": {
+          "description": "Include workspace item IDs"
+        }
+      },
+      "flag_order": [
+        "ids"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 39
+    },
+    {
+      "command": "hotkeys",
+      "description": "List hotkeys",
+      "usage": "[total] [verbose] [format=json|tsv|csv] [all]",
+      "flags": {
+        "total": {
+          "description": "Return hotkey count"
+        },
+        "verbose": {
+          "description": "Show if hotkey is custom"
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "description": "Output format (default: tsv)"
+        },
+        "all": {
+          "description": "Include commands without hotkeys"
+        }
+      },
+      "flag_order": [
+        "total",
+        "verbose",
+        "format",
+        "all"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 40
+    },
+    {
+      "command": "hotkey",
+      "description": "Get hotkey for a command",
+      "usage": "id=<command-id> [verbose]",
+      "flags": {
+        "id": {
+          "value": "<command-id>",
+          "description": "Command ID",
+          "required": true
+        },
+        "verbose": {
+          "description": "Show if custom or default"
+        }
+      },
+      "flag_order": [
+        "id",
+        "verbose"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 41
+    },
+    {
+      "command": "vault",
+      "description": "Show vault info",
+      "usage": "[info=name|path|files|folders|size]",
+      "flags": {
+        "info": {
+          "value": "name|path|files|folders|size",
+          "description": "Return specific info only"
+        }
+      },
+      "flag_order": [
+        "info"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 42
+    },
+    {
+      "command": "files",
+      "description": "List files in the vault",
+      "usage": "[folder=<path>] [ext=<extension>] [total]",
+      "flags": {
+        "folder": {
+          "value": "<path>",
+          "description": "Filter by folder"
+        },
+        "ext": {
+          "value": "<extension>",
+          "description": "Filter by extension"
+        },
+        "total": {
+          "description": "Return file count"
+        }
+      },
+      "flag_order": [
+        "folder",
+        "ext",
+        "total"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 43
+    },
+    {
+      "command": "folders",
+      "description": "List folders in the vault",
+      "usage": "[folder=<path>] [total]",
+      "flags": {
+        "folder": {
+          "value": "<path>",
+          "description": "Filter by parent folder"
+        },
+        "total": {
+          "description": "Return folder count"
+        }
+      },
+      "flag_order": [
+        "folder",
+        "total"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 44
+    },
+    {
+      "command": "vaults",
+      "description": "List known vaults",
+      "usage": "[total] [verbose]",
+      "flags": {
+        "total": {
+          "description": "Return vault count"
+        },
+        "verbose": {
+          "description": "Include vault paths"
+        }
+      },
+      "flag_order": [
+        "total",
+        "verbose"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 45
+    },
+    {
+      "command": "version",
+      "description": "Show app version",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 46
+    },
+    {
+      "command": "backlinks",
+      "description": "List backlinks to a file",
+      "usage": "[file=<name>] [path=<path>] [counts] [total] [format=json|tsv|csv]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "Target file name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "Target file path"
+        },
+        "counts": {
+          "description": "Include link counts"
+        },
+        "total": {
+          "description": "Return backlink count"
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "description": "Output format (default: tsv)"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "counts",
+        "total",
+        "format"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 47
+    },
+    {
+      "command": "unresolved",
+      "description": "List unresolved links in vault",
+      "usage": "[total] [counts] [verbose] [format=json|tsv|csv]",
+      "flags": {
+        "total": {
+          "description": "Return unresolved link count"
+        },
+        "counts": {
+          "description": "Include link counts"
+        },
+        "verbose": {
+          "description": "Include source files"
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "description": "Output format (default: tsv)"
+        }
+      },
+      "flag_order": [
+        "total",
+        "counts",
+        "verbose",
+        "format"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 48
+    },
+    {
+      "command": "orphans",
+      "description": "List files with no incoming links",
+      "usage": "[total] [all]",
+      "flags": {
+        "total": {
+          "description": "Return orphan count"
+        },
+        "all": {
+          "description": "Include non-markdown files"
+        }
+      },
+      "flag_order": [
+        "total",
+        "all"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 49
+    },
+    {
+      "command": "deadends",
+      "description": "List files with no outgoing links",
+      "usage": "[total] [all]",
+      "flags": {
+        "total": {
+          "description": "Return dead-end count"
+        },
+        "all": {
+          "description": "Include non-markdown files"
+        }
+      },
+      "flag_order": [
+        "total",
+        "all"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 50
+    },
+    {
+      "command": "aliases",
+      "description": "List aliases in the vault",
+      "usage": "[file=<name>] [path=<path>] [total] [verbose] [active]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "total": {
+          "description": "Return alias count"
+        },
+        "verbose": {
+          "description": "Include file paths"
+        },
+        "active": {
+          "description": "Show aliases for active file"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "total",
+        "verbose",
+        "active"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 51
+    },
+    {
+      "command": "folder",
+      "description": "Show folder info",
+      "usage": "path=<path> [info=files|folders|size]",
+      "flags": {
+        "path": {
+          "value": "<path>",
+          "description": "Folder path",
+          "required": true
+        },
+        "info": {
+          "value": "files|folders|size",
+          "description": "Return specific info only"
+        }
+      },
+      "flag_order": [
+        "path",
+        "info"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 52
+    },
+    {
+      "command": "file",
+      "description": "Show file info",
+      "usage": "[file=<name>] [path=<path>]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 53
+    },
+    {
+      "command": "open",
+      "description": "Open a file",
+      "usage": "[file=<name>] [path=<path>] [newtab]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "newtab": {
+          "description": "Open in new tab"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "newtab"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 54
+    },
+    {
+      "command": "create",
+      "description": "Create a new file",
+      "usage": "[name=<name>] [path=<path>] [content=<text>] [template=<name>] [overwrite] [open] [newtab]",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "content": {
+          "value": "<text>",
+          "description": "Initial content"
+        },
+        "template": {
+          "value": "<name>",
+          "description": "Template to use"
+        },
+        "overwrite": {
+          "description": "Overwrite if file exists"
+        },
+        "open": {
+          "description": "Open file after creating"
+        },
+        "newtab": {
+          "description": "Open in new tab"
+        }
+      },
+      "flag_order": [
+        "name",
+        "path",
+        "content",
+        "template",
+        "overwrite",
+        "open",
+        "newtab"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 55
+    },
+    {
+      "command": "append",
+      "description": "Append content to a file",
+      "usage": "[file=<name>] [path=<path>] content=<text> [inline]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "content": {
+          "value": "<text>",
+          "description": "Content to append",
+          "required": true
+        },
+        "inline": {
+          "description": "Append without newline"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "content",
+        "inline"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 56
+    },
+    {
+      "command": "prepend",
+      "description": "Prepend content to a file",
+      "usage": "[file=<name>] [path=<path>] content=<text> [inline]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "content": {
+          "value": "<text>",
+          "description": "Content to prepend",
+          "required": true
+        },
+        "inline": {
+          "description": "Prepend without newline"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "content",
+        "inline"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 57
+    },
+    {
+      "command": "move",
+      "description": "Move or rename a file",
+      "usage": "[file=<name>] [path=<path>] to=<path>",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "to": {
+          "value": "<path>",
+          "description": "Destination folder or path",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "to"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 58
+    },
+    {
+      "command": "rename",
+      "description": "Rename a file",
+      "usage": "[file=<name>] [path=<path>] name=<name>",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "name": {
+          "value": "<name>",
+          "description": "New file name",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "name"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 59
+    },
+    {
+      "command": "delete",
+      "description": "Delete a file",
+      "usage": "[file=<name>] [path=<path>] [permanent]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "permanent": {
+          "description": "Skip trash, delete permanently"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "permanent"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 60
+    },
+    {
+      "command": "read",
+      "description": "Read file contents",
+      "usage": "[file=<name>] [path=<path>]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 61
+    },
+    {
+      "command": "diff",
+      "description": "List or diff local/sync versions",
+      "usage": "[file=<name>] [path=<path>] [from=<n>] [to=<n>] [filter=local|sync]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "from": {
+          "value": "<n>",
+          "description": "Version number to diff from"
+        },
+        "to": {
+          "value": "<n>",
+          "description": "Version number to diff to"
+        },
+        "filter": {
+          "value": "local|sync",
+          "description": "Filter by version source"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "from",
+        "to",
+        "filter"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 62
+    },
+    {
+      "command": "plugin:enable",
+      "description": "Enable a plugin",
+      "usage": "id=<id> [filter=core|community]",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "description": "Plugin ID",
+          "required": true
+        },
+        "filter": {
+          "value": "core|community",
+          "description": "Plugin type"
+        }
+      },
+      "flag_order": [
+        "id",
+        "filter"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 63
+    },
+    {
+      "command": "plugin:disable",
+      "description": "Disable a plugin",
+      "usage": "id=<id> [filter=core|community]",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "description": "Plugin ID",
+          "required": true
+        },
+        "filter": {
+          "value": "core|community",
+          "description": "Plugin type"
+        }
+      },
+      "flag_order": [
+        "id",
+        "filter"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 64
+    },
+    {
+      "command": "plugin:reload",
+      "description": "Reload a plugin (for developers)",
+      "usage": "id=<id>",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "description": "Plugin ID",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "id"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 65
+    },
+    {
+      "command": "plugin:install",
+      "description": "Install a community plugin",
+      "usage": "id=<id> [enable]",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "description": "Plugin ID",
+          "required": true
+        },
+        "enable": {
+          "description": "Enable after install"
+        }
+      },
+      "flag_order": [
+        "id",
+        "enable"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 66
+    },
+    {
+      "command": "plugin:uninstall",
+      "description": "Uninstall a community plugin",
+      "usage": "id=<id>",
+      "flags": {
+        "id": {
+          "value": "<id>",
+          "description": "Plugin ID",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "id"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 67
+    },
+    {
+      "command": "snippet:enable",
+      "description": "Enable a CSS snippet",
+      "usage": "name=<name>",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Snippet name",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 68
+    },
+    {
+      "command": "snippet:disable",
+      "description": "Disable a CSS snippet",
+      "usage": "name=<name>",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Snippet name",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 69
+    },
+    {
+      "command": "theme:set",
+      "description": "Set active theme",
+      "usage": "name=<name>",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Theme name (empty for default)",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 70
+    },
+    {
+      "command": "theme:install",
+      "description": "Install a community theme",
+      "usage": "name=<name> [enable]",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Theme name",
+          "required": true
+        },
+        "enable": {
+          "description": "Activate after install"
+        }
+      },
+      "flag_order": [
+        "name",
+        "enable"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 71
+    },
+    {
+      "command": "theme:uninstall",
+      "description": "Uninstall a theme",
+      "usage": "name=<name>",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Theme name",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core",
+        "owner_plugin": null,
+        "requirements": [
+          "application CLI initialization"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": null,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 72
+    },
+    {
+      "command": "search",
+      "description": "Search vault for text",
+      "usage": "query=<text> [path=<folder>] [limit=<n>] [total] [case] [format=text|json]",
+      "flags": {
+        "query": {
+          "value": "<text>",
+          "description": "Search query",
+          "required": true
+        },
+        "path": {
+          "value": "<folder>",
+          "description": "Limit to folder"
+        },
+        "limit": {
+          "value": "<n>",
+          "description": "Max files"
+        },
+        "total": {
+          "description": "Return match count"
+        },
+        "case": {
+          "description": "Case sensitive"
+        },
+        "format": {
+          "value": "text|json",
+          "description": "Output format (default: text)"
+        }
+      },
+      "flag_order": [
+        "query",
+        "path",
+        "limit",
+        "total",
+        "case",
+        "format"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "global-search",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 73
+    },
+    {
+      "command": "search:context",
+      "description": "Search with matching line context",
+      "usage": "query=<text> [path=<folder>] [limit=<n>] [case] [format=text|json]",
+      "flags": {
+        "query": {
+          "value": "<text>",
+          "description": "Search query",
+          "required": true
+        },
+        "path": {
+          "value": "<folder>",
+          "description": "Limit to folder"
+        },
+        "limit": {
+          "value": "<n>",
+          "description": "Max files"
+        },
+        "case": {
+          "description": "Case sensitive"
+        },
+        "format": {
+          "value": "text|json",
+          "description": "Output format (default: text)"
+        }
+      },
+      "flag_order": [
+        "query",
+        "path",
+        "limit",
+        "case",
+        "format"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "global-search",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 74
+    },
+    {
+      "command": "search:open",
+      "description": "Open search view",
+      "usage": "[query=<text>]",
+      "flags": {
+        "query": {
+          "value": "<text>",
+          "description": "Initial search query"
+        }
+      },
+      "flag_order": [
+        "query"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "global-search",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 75
+    },
+    {
+      "command": "web",
+      "description": "Open URL in web viewer",
+      "usage": "url=<url> [newtab]",
+      "flags": {
+        "url": {
+          "value": "<url>",
+          "description": "URL to open",
+          "required": true
+        },
+        "newtab": {
+          "description": "Open in new tab"
+        }
+      },
+      "flag_order": [
+        "url",
+        "newtab"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "webviewer",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "desktop application",
+          "application policy permits webViewer"
+        ],
+        "desktop_required": true,
+        "policy_feature": "webViewer",
+        "plugin_default_on": false,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 76
+    },
+    {
+      "command": "base:query",
+      "description": "Query a base and return results",
+      "usage": "[file=<name>] [path=<path>] [view=<name>] [format=json|csv|tsv|md|paths]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "Base file name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "Base file path"
+        },
+        "view": {
+          "value": "<name>",
+          "description": "View name to query"
+        },
+        "format": {
+          "value": "json|csv|tsv|md|paths",
+          "description": "Output format (default: json)"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "view",
+        "format"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "bases",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 77
+    },
+    {
+      "command": "bases",
+      "description": "List all base files in vault",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "bases",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 78
+    },
+    {
+      "command": "base:views",
+      "description": "List views in the current base file",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "bases",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 79
+    },
+    {
+      "command": "base:create",
+      "description": "Create a new item in a base",
+      "usage": "[file=<name>] [path=<path>] [view=<name>] [name=<name>] [content=<text>] [open] [newtab]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "Base file name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "Base file path"
+        },
+        "view": {
+          "value": "<name>",
+          "description": "View name"
+        },
+        "name": {
+          "value": "<name>",
+          "description": "New file name"
+        },
+        "content": {
+          "value": "<text>",
+          "description": "Initial content"
+        },
+        "open": {
+          "description": "Open file after creating"
+        },
+        "newtab": {
+          "description": "Open in new tab"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "view",
+        "name",
+        "content",
+        "open",
+        "newtab"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "bases",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 80
+    },
+    {
+      "command": "bookmarks",
+      "description": "List bookmarks",
+      "usage": "[total] [verbose] [format=json|tsv|csv]",
+      "flags": {
+        "total": {
+          "description": "Return bookmark count"
+        },
+        "verbose": {
+          "description": "Include bookmark types"
+        },
+        "format": {
+          "value": "json|tsv|csv",
+          "description": "Output format (default: tsv)"
+        }
+      },
+      "flag_order": [
+        "total",
+        "verbose",
+        "format"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "bookmarks",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 81
+    },
+    {
+      "command": "bookmark",
+      "description": "Add a bookmark",
+      "usage": "[file=<path>] [subpath=<subpath>] [folder=<path>] [search=<query>] [url=<url>] [title=<title>]",
+      "flags": {
+        "file": {
+          "value": "<path>",
+          "description": "File to bookmark"
+        },
+        "subpath": {
+          "value": "<subpath>",
+          "description": "Subpath (heading or block) within file"
+        },
+        "folder": {
+          "value": "<path>",
+          "description": "Folder to bookmark"
+        },
+        "search": {
+          "value": "<query>",
+          "description": "Search query to bookmark"
+        },
+        "url": {
+          "value": "<url>",
+          "description": "URL to bookmark"
+        },
+        "title": {
+          "value": "<title>",
+          "description": "Bookmark title"
+        }
+      },
+      "flag_order": [
+        "file",
+        "subpath",
+        "folder",
+        "search",
+        "url",
+        "title"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "bookmarks",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 82
+    },
+    {
+      "command": "daily",
+      "description": "Open daily note",
+      "usage": "[paneType=tab|split|window]",
+      "flags": {
+        "paneType": {
+          "value": "tab|split|window",
+          "description": "Pane type to open in"
+        }
+      },
+      "flag_order": [
+        "paneType"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "daily-notes",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 83
+    },
+    {
+      "command": "daily:path",
+      "description": "Get daily note path",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "daily-notes",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 84
+    },
+    {
+      "command": "daily:read",
+      "description": "Read daily note contents",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "daily-notes",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 85
+    },
+    {
+      "command": "daily:append",
+      "description": "Append content to daily note",
+      "usage": "content=<text> [inline] [open] [paneType=tab|split|window]",
+      "flags": {
+        "content": {
+          "value": "<text>",
+          "description": "Content to append",
+          "required": true
+        },
+        "inline": {
+          "description": "Append without newline"
+        },
+        "open": {
+          "description": "Open file after adding"
+        },
+        "paneType": {
+          "value": "tab|split|window",
+          "description": "Pane type to open in"
+        }
+      },
+      "flag_order": [
+        "content",
+        "inline",
+        "open",
+        "paneType"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "daily-notes",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 86
+    },
+    {
+      "command": "daily:prepend",
+      "description": "Prepend content to daily note",
+      "usage": "content=<text> [inline] [open] [paneType=tab|split|window]",
+      "flags": {
+        "content": {
+          "value": "<text>",
+          "description": "Content to prepend",
+          "required": true
+        },
+        "inline": {
+          "description": "Prepend without newline"
+        },
+        "open": {
+          "description": "Open file after adding"
+        },
+        "paneType": {
+          "value": "tab|split|window",
+          "description": "Pane type to open in"
+        }
+      },
+      "flag_order": [
+        "content",
+        "inline",
+        "open",
+        "paneType"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "daily-notes",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 87
+    },
+    {
+      "command": "history",
+      "description": "List file history versions",
+      "usage": "[file=<name>] [path=<path>]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "file-recovery",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 88
+    },
+    {
+      "command": "history:list",
+      "description": "List files with history",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "file-recovery",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 89
+    },
+    {
+      "command": "history:read",
+      "description": "Read a file history version",
+      "usage": "[file=<name>] [path=<path>] [version=<n>]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "version": {
+          "value": "<n>",
+          "description": "Version number (default: 1)"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "version"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "file-recovery",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 90
+    },
+    {
+      "command": "history:restore",
+      "description": "Restore a file history version",
+      "usage": "[file=<name>] [path=<path>] version=<n>",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "version": {
+          "value": "<n>",
+          "description": "Version number",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "version"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "file-recovery",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 91
+    },
+    {
+      "command": "history:open",
+      "description": "Open file recovery",
+      "usage": "[file=<name>] [path=<path>]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "file-recovery",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 92
+    },
+    {
+      "command": "links",
+      "description": "List outgoing links from a file",
+      "usage": "[file=<name>] [path=<path>] [total]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "total": {
+          "description": "Return link count"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "total"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "outgoing-link",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 93
+    },
+    {
+      "command": "outline",
+      "description": "Show headings for the current file",
+      "usage": "[file=<name>] [path=<path>] [format=tree|md|json] [total]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "format": {
+          "value": "tree|md|json",
+          "description": "Output format (default: tree)"
+        },
+        "total": {
+          "description": "Return heading count"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "format",
+        "total"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "outline",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 94
+    },
+    {
+      "command": "publish:open",
+      "description": "Open file on published site",
+      "usage": "[file=<name>] [path=<path>]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "publish",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits publish"
+        ],
+        "desktop_required": false,
+        "policy_feature": "publish",
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 95
+    },
+    {
+      "command": "publish:status",
+      "description": "List publish changes",
+      "usage": "[total] [new] [changed] [deleted]",
+      "flags": {
+        "total": {
+          "description": "Return change count"
+        },
+        "new": {
+          "description": "Show new files only"
+        },
+        "changed": {
+          "description": "Show changed files only"
+        },
+        "deleted": {
+          "description": "Show deleted files only"
+        }
+      },
+      "flag_order": [
+        "total",
+        "new",
+        "changed",
+        "deleted"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "publish",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits publish"
+        ],
+        "desktop_required": false,
+        "policy_feature": "publish",
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 96
+    },
+    {
+      "command": "publish:list",
+      "description": "List published files",
+      "usage": "[total]",
+      "flags": {
+        "total": {
+          "description": "Return published file count"
+        }
+      },
+      "flag_order": [
+        "total"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "publish",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits publish"
+        ],
+        "desktop_required": false,
+        "policy_feature": "publish",
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 97
+    },
+    {
+      "command": "publish:site",
+      "description": "Show publish site info",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "publish",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits publish"
+        ],
+        "desktop_required": false,
+        "policy_feature": "publish",
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 98
+    },
+    {
+      "command": "publish:add",
+      "description": "Publish a file or all changed files",
+      "usage": "[file=<name>] [path=<path>] [changed]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "changed": {
+          "description": "Publish all changed files"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "changed"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "publish",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits publish"
+        ],
+        "desktop_required": false,
+        "policy_feature": "publish",
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 99
+    },
+    {
+      "command": "publish:remove",
+      "description": "Unpublish a file",
+      "usage": "[file=<name>] [path=<path>]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "publish",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits publish"
+        ],
+        "desktop_required": false,
+        "policy_feature": "publish",
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 100
+    },
+    {
+      "command": "sync",
+      "description": "Pause or resume sync",
+      "usage": "[on] [off]",
+      "flags": {
+        "on": {
+          "description": "Resume sync"
+        },
+        "off": {
+          "description": "Pause sync"
+        }
+      },
+      "flag_order": [
+        "on",
+        "off"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "sync",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits sync"
+        ],
+        "desktop_required": false,
+        "policy_feature": "sync",
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 101
+    },
+    {
+      "command": "sync:history",
+      "description": "List sync version history for a file",
+      "usage": "[file=<name>] [path=<path>] [total]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "total": {
+          "description": "Return version count"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "total"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "sync",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits sync"
+        ],
+        "desktop_required": false,
+        "policy_feature": "sync",
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 102
+    },
+    {
+      "command": "sync:read",
+      "description": "Read a sync version",
+      "usage": "[file=<name>] [path=<path>] version=<n>",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "version": {
+          "value": "<n>",
+          "description": "Version number",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "version"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "sync",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits sync"
+        ],
+        "desktop_required": false,
+        "policy_feature": "sync",
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 103
+    },
+    {
+      "command": "sync:restore",
+      "description": "Restore a sync version",
+      "usage": "[file=<name>] [path=<path>] version=<n>",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "version": {
+          "value": "<n>",
+          "description": "Version number",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "version"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "sync",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits sync"
+        ],
+        "desktop_required": false,
+        "policy_feature": "sync",
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 104
+    },
+    {
+      "command": "sync:open",
+      "description": "Open sync history",
+      "usage": "[file=<name>] [path=<path>]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "sync",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits sync"
+        ],
+        "desktop_required": false,
+        "policy_feature": "sync",
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 105
+    },
+    {
+      "command": "sync:deleted",
+      "description": "List deleted files in sync",
+      "usage": "[total]",
+      "flags": {
+        "total": {
+          "description": "Return deleted file count"
+        }
+      },
+      "flag_order": [
+        "total"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "sync",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits sync"
+        ],
+        "desktop_required": false,
+        "policy_feature": "sync",
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 106
+    },
+    {
+      "command": "sync:status",
+      "description": "Show sync status",
+      "usage": "",
+      "flags": null,
+      "flag_order": [],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "sync",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration",
+          "application policy permits sync"
+        ],
+        "desktop_required": false,
+        "policy_feature": "sync",
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 107
+    },
+    {
+      "command": "templates",
+      "description": "List templates",
+      "usage": "[total]",
+      "flags": {
+        "total": {
+          "description": "Return template count"
+        }
+      },
+      "flag_order": [
+        "total"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "templates",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 108
+    },
+    {
+      "command": "template:read",
+      "description": "Read template content",
+      "usage": "name=<template> [resolve] [title=<title>]",
+      "flags": {
+        "name": {
+          "value": "<template>",
+          "description": "Template name",
+          "required": true
+        },
+        "resolve": {
+          "description": "Resolve template variables"
+        },
+        "title": {
+          "value": "<title>",
+          "description": "Title for variable resolution"
+        }
+      },
+      "flag_order": [
+        "name",
+        "resolve",
+        "title"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "templates",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 109
+    },
+    {
+      "command": "template:insert",
+      "description": "Insert template into active file",
+      "usage": "name=<template>",
+      "flags": {
+        "name": {
+          "value": "<template>",
+          "description": "Template name",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "templates",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 110
+    },
+    {
+      "command": "unique",
+      "description": "Create unique note",
+      "usage": "[name=<text>] [content=<text>] [paneType=tab|split|window] [open]",
+      "flags": {
+        "name": {
+          "value": "<text>",
+          "description": "Note name"
+        },
+        "content": {
+          "value": "<text>",
+          "description": "Initial content"
+        },
+        "paneType": {
+          "value": "tab|split|window",
+          "description": "Pane type to open in"
+        },
+        "open": {
+          "description": "Open file after creating"
+        }
+      },
+      "flag_order": [
+        "name",
+        "content",
+        "paneType",
+        "open"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "zk-prefixer",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 111
+    },
+    {
+      "command": "wordcount",
+      "description": "Count words and characters",
+      "usage": "[file=<name>] [path=<path>] [words] [characters]",
+      "flags": {
+        "file": {
+          "value": "<name>",
+          "description": "File name"
+        },
+        "path": {
+          "value": "<path>",
+          "description": "File path"
+        },
+        "words": {
+          "description": "Return word count only"
+        },
+        "characters": {
+          "description": "Return character count only"
+        }
+      },
+      "flag_order": [
+        "file",
+        "path",
+        "words",
+        "characters"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "word-count",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": true,
+        "plugin_default_on_declared": true
+      },
+      "source_declaration_index": 112
+    },
+    {
+      "command": "workspaces",
+      "description": "List saved workspaces",
+      "usage": "[total]",
+      "flags": {
+        "total": {
+          "description": "Return workspace count"
+        }
+      },
+      "flag_order": [
+        "total"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "workspaces",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 113
+    },
+    {
+      "command": "workspace:save",
+      "description": "Save current layout as workspace",
+      "usage": "[name=<name>]",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Workspace name"
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "workspaces",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 114
+    },
+    {
+      "command": "workspace:load",
+      "description": "Load a saved workspace",
+      "usage": "name=<name>",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Workspace name",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "workspaces",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 115
+    },
+    {
+      "command": "workspace:delete",
+      "description": "Delete a saved workspace",
+      "usage": "name=<name>",
+      "flags": {
+        "name": {
+          "value": "<name>",
+          "description": "Workspace name",
+          "required": true
+        }
+      },
+      "flag_order": [
+        "name"
+      ],
+      "availability": {
+        "kind": "core_plugin",
+        "owner_plugin": "workspaces",
+        "requirements": [
+          "enabled core plugin",
+          "successful asynchronous onEnable registration"
+        ],
+        "desktop_required": false,
+        "policy_feature": null,
+        "plugin_default_on": false,
+        "plugin_default_on_declared": false
+      },
+      "source_declaration_index": 116
+    }
+  ]
+}

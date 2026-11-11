@@ -1,0 +1,3480 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+    "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9"
+  },
+  "initial_files": {
+    "Seed.md": "# Persisted\n",
+    "OfflineChange.md": "# Before offline\n",
+    "OfflineDelete.md": "Delete offline.\n",
+    "Asset.png": "fixture attachment\n",
+    "StatSame.md": "# One\n"
+  },
+  "selected_paths": [
+    "Seed.md",
+    "OfflineChange.md",
+    "OfflineDelete.md",
+    "Asset.png",
+    "StatSame.md",
+    "Moved.md",
+    "OfflineNew.md"
+  ],
+  "steps": [
+    {
+      "id": "fresh",
+      "operation": {
+        "type": "create-initial-files"
+      },
+      "result": {
+        "cache": {
+          "Seed.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                },
+                "heading": "Persisted",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ]
+          },
+          "OfflineChange.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                },
+                "heading": "Before offline",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ]
+          },
+          "OfflineDelete.md": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                }
+              }
+            ]
+          },
+          "Asset.png": {},
+          "StatSame.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                },
+                "heading": "One",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ]
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "live_files": {
+          "Seed.md": {
+            "mtime": 1792006898606,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_files": {
+          "Seed.md": {
+            "mtime": 1792006898606,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_metadata": {
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ]
+          },
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ]
+          },
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ]
+          },
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        "descriptors": {
+          "Seed.md": null,
+          "OfflineChange.md": null,
+          "OfflineDelete.md": null,
+          "Asset.png": null,
+          "StatSame.md": null,
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+        ]
+      },
+      "file_bytes": {
+        "Seed.md": [
+          35,
+          32,
+          80,
+          101,
+          114,
+          115,
+          105,
+          115,
+          116,
+          101,
+          100,
+          10
+        ],
+        "OfflineChange.md": [
+          35,
+          32,
+          66,
+          101,
+          102,
+          111,
+          114,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          10
+        ],
+        "OfflineDelete.md": [
+          68,
+          101,
+          108,
+          101,
+          116,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          46,
+          10
+        ],
+        "Asset.png": [
+          102,
+          105,
+          120,
+          116,
+          117,
+          114,
+          101,
+          32,
+          97,
+          116,
+          116,
+          97,
+          99,
+          104,
+          109,
+          101,
+          110,
+          116,
+          10
+        ],
+        "StatSame.md": [
+          35,
+          32,
+          79,
+          110,
+          101,
+          10
+        ],
+        "Moved.md": null,
+        "OfflineNew.md": null
+      },
+      "file_sha256": {
+        "Seed.md": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+        "OfflineChange.md": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+        "OfflineDelete.md": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+        "Asset.png": "fa7b57ddeea09e347209cca4c51ebb77b9eca97117e1d4fea3126802dee7cc30",
+        "StatSame.md": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+        "Moved.md": null,
+        "OfflineNew.md": null
+      }
+    },
+    {
+      "id": "restart-unchanged",
+      "operation": {
+        "type": "restart"
+      },
+      "result": {
+        "cache": {
+          "Seed.md": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineChange.md": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineDelete.md": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Asset.png": {},
+          "StatSame.md": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "live_files": {
+          "Seed.md": {
+            "mtime": 1792006898606,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_files": {
+          "Seed.md": {
+            "mtime": 1792006898606,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_metadata": {
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          }
+        },
+        "descriptors": {
+          "Seed.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineChange.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineDelete.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Asset.png": null,
+          "StatSame.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23.599999994039536,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+        ]
+      },
+      "file_bytes": {
+        "Seed.md": [
+          35,
+          32,
+          80,
+          101,
+          114,
+          115,
+          105,
+          115,
+          116,
+          101,
+          100,
+          10
+        ],
+        "OfflineChange.md": [
+          35,
+          32,
+          66,
+          101,
+          102,
+          111,
+          114,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          10
+        ],
+        "OfflineDelete.md": [
+          68,
+          101,
+          108,
+          101,
+          116,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          46,
+          10
+        ],
+        "Asset.png": [
+          102,
+          105,
+          120,
+          116,
+          117,
+          114,
+          101,
+          32,
+          97,
+          116,
+          116,
+          97,
+          99,
+          104,
+          109,
+          101,
+          110,
+          116,
+          10
+        ],
+        "StatSame.md": [
+          35,
+          32,
+          79,
+          110,
+          101,
+          10
+        ],
+        "Moved.md": null,
+        "OfflineNew.md": null
+      },
+      "file_sha256": {
+        "Seed.md": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+        "OfflineChange.md": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+        "OfflineDelete.md": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+        "Asset.png": "fa7b57ddeea09e347209cca4c51ebb77b9eca97117e1d4fea3126802dee7cc30",
+        "StatSame.md": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+        "Moved.md": null,
+        "OfflineNew.md": null
+      }
+    },
+    {
+      "id": "touch-same-bytes",
+      "operation": {
+        "type": "external-touch",
+        "path": "Seed.md"
+      },
+      "result": {
+        "cache": {
+          "Seed.md": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineChange.md": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineDelete.md": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Asset.png": {},
+          "StatSame.md": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "live_files": {
+          "Seed.md": {
+            "mtime": 1792006900606,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_files": {
+          "Seed.md": {
+            "mtime": 1792006900606,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_metadata": {
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          }
+        },
+        "descriptors": {
+          "Seed.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineChange.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineDelete.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Asset.png": null,
+          "StatSame.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 24.399999976158142,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+        ]
+      },
+      "file_bytes": {
+        "Seed.md": [
+          35,
+          32,
+          80,
+          101,
+          114,
+          115,
+          105,
+          115,
+          116,
+          101,
+          100,
+          10
+        ],
+        "OfflineChange.md": [
+          35,
+          32,
+          66,
+          101,
+          102,
+          111,
+          114,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          10
+        ],
+        "OfflineDelete.md": [
+          68,
+          101,
+          108,
+          101,
+          116,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          46,
+          10
+        ],
+        "Asset.png": [
+          102,
+          105,
+          120,
+          116,
+          117,
+          114,
+          101,
+          32,
+          97,
+          116,
+          116,
+          97,
+          99,
+          104,
+          109,
+          101,
+          110,
+          116,
+          10
+        ],
+        "StatSame.md": [
+          35,
+          32,
+          79,
+          110,
+          101,
+          10
+        ],
+        "Moved.md": null,
+        "OfflineNew.md": null
+      },
+      "file_sha256": {
+        "Seed.md": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+        "OfflineChange.md": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+        "OfflineDelete.md": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+        "Asset.png": "fa7b57ddeea09e347209cca4c51ebb77b9eca97117e1d4fea3126802dee7cc30",
+        "StatSame.md": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+        "Moved.md": null,
+        "OfflineNew.md": null
+      }
+    },
+    {
+      "id": "change",
+      "operation": {
+        "type": "modify",
+        "path": "Seed.md",
+        "content": "# Changed content\n"
+      },
+      "result": {
+        "cache": {
+          "Seed.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 17,
+                    "offset": 17
+                  }
+                },
+                "heading": "Changed content",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 17,
+                    "offset": 17
+                  }
+                }
+              }
+            ]
+          },
+          "OfflineChange.md": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineDelete.md": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Asset.png": {},
+          "StatSame.md": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "live_files": {
+          "Seed.md": {
+            "mtime": 1792006900275,
+            "size": 18,
+            "hash": "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_files": {
+          "Seed.md": {
+            "mtime": 1792006900275,
+            "size": 18,
+            "hash": "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_metadata": {
+          "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1": {
+            "headings": [
+              {
+                "heading": "Changed content",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  17,
+                  17
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  17,
+                  17
+                ]
+              }
+            ]
+          },
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          }
+        },
+        "descriptors": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineDelete.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Asset.png": null,
+          "StatSame.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 22.400000005960464,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+          "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1"
+        ]
+      },
+      "file_bytes": {
+        "Seed.md": [
+          35,
+          32,
+          67,
+          104,
+          97,
+          110,
+          103,
+          101,
+          100,
+          32,
+          99,
+          111,
+          110,
+          116,
+          101,
+          110,
+          116,
+          10
+        ],
+        "OfflineChange.md": [
+          35,
+          32,
+          66,
+          101,
+          102,
+          111,
+          114,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          10
+        ],
+        "OfflineDelete.md": [
+          68,
+          101,
+          108,
+          101,
+          116,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          46,
+          10
+        ],
+        "Asset.png": [
+          102,
+          105,
+          120,
+          116,
+          117,
+          114,
+          101,
+          32,
+          97,
+          116,
+          116,
+          97,
+          99,
+          104,
+          109,
+          101,
+          110,
+          116,
+          10
+        ],
+        "StatSame.md": [
+          35,
+          32,
+          79,
+          110,
+          101,
+          10
+        ],
+        "Moved.md": null,
+        "OfflineNew.md": null
+      },
+      "file_sha256": {
+        "Seed.md": "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1",
+        "OfflineChange.md": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+        "OfflineDelete.md": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+        "Asset.png": "fa7b57ddeea09e347209cca4c51ebb77b9eca97117e1d4fea3126802dee7cc30",
+        "StatSame.md": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+        "Moved.md": null,
+        "OfflineNew.md": null
+      }
+    },
+    {
+      "id": "revert",
+      "operation": {
+        "type": "modify",
+        "path": "Seed.md",
+        "content": "# Persisted\n"
+      },
+      "result": {
+        "cache": {
+          "Seed.md": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineChange.md": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineDelete.md": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Asset.png": {},
+          "StatSame.md": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "live_files": {
+          "Seed.md": {
+            "mtime": 1792006900521,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_files": {
+          "Seed.md": {
+            "mtime": 1792006900521,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_metadata": {
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          }
+        },
+        "descriptors": {
+          "Seed.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineChange.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineDelete.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Asset.png": null,
+          "StatSame.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23.599999994039536,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+          "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1"
+        ]
+      },
+      "file_bytes": {
+        "Seed.md": [
+          35,
+          32,
+          80,
+          101,
+          114,
+          115,
+          105,
+          115,
+          116,
+          101,
+          100,
+          10
+        ],
+        "OfflineChange.md": [
+          35,
+          32,
+          66,
+          101,
+          102,
+          111,
+          114,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          10
+        ],
+        "OfflineDelete.md": [
+          68,
+          101,
+          108,
+          101,
+          116,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          46,
+          10
+        ],
+        "Asset.png": [
+          102,
+          105,
+          120,
+          116,
+          117,
+          114,
+          101,
+          32,
+          97,
+          116,
+          116,
+          97,
+          99,
+          104,
+          109,
+          101,
+          110,
+          116,
+          10
+        ],
+        "StatSame.md": [
+          35,
+          32,
+          79,
+          110,
+          101,
+          10
+        ],
+        "Moved.md": null,
+        "OfflineNew.md": null
+      },
+      "file_sha256": {
+        "Seed.md": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+        "OfflineChange.md": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+        "OfflineDelete.md": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+        "Asset.png": "fa7b57ddeea09e347209cca4c51ebb77b9eca97117e1d4fea3126802dee7cc30",
+        "StatSame.md": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+        "Moved.md": null,
+        "OfflineNew.md": null
+      }
+    },
+    {
+      "id": "rename",
+      "operation": {
+        "type": "rename",
+        "path": "Seed.md",
+        "to": "Moved.md"
+      },
+      "result": {
+        "cache": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineDelete.md": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Asset.png": {},
+          "StatSame.md": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Moved.md": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 11,
+                    "offset": 11
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineNew.md": null
+        },
+        "live_files": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": {
+            "mtime": 1792006900521,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineNew.md": null
+        },
+        "stored_files": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": {
+            "mtime": 1792006900521,
+            "size": 12,
+            "hash": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1"
+          },
+          "OfflineNew.md": null
+        },
+        "stored_metadata": {
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1": {
+            "headings": [
+              {
+                "heading": "Persisted",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "v": 1
+          }
+        },
+        "descriptors": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineDelete.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Asset.png": null,
+          "StatSame.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Moved.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineNew.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23.299999982118607,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+          "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1"
+        ]
+      },
+      "file_bytes": {
+        "Seed.md": null,
+        "OfflineChange.md": [
+          35,
+          32,
+          66,
+          101,
+          102,
+          111,
+          114,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          10
+        ],
+        "OfflineDelete.md": [
+          68,
+          101,
+          108,
+          101,
+          116,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          46,
+          10
+        ],
+        "Asset.png": [
+          102,
+          105,
+          120,
+          116,
+          117,
+          114,
+          101,
+          32,
+          97,
+          116,
+          116,
+          97,
+          99,
+          104,
+          109,
+          101,
+          110,
+          116,
+          10
+        ],
+        "StatSame.md": [
+          35,
+          32,
+          79,
+          110,
+          101,
+          10
+        ],
+        "Moved.md": [
+          35,
+          32,
+          80,
+          101,
+          114,
+          115,
+          105,
+          115,
+          116,
+          101,
+          100,
+          10
+        ],
+        "OfflineNew.md": null
+      },
+      "file_sha256": {
+        "Seed.md": null,
+        "OfflineChange.md": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+        "OfflineDelete.md": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+        "Asset.png": "fa7b57ddeea09e347209cca4c51ebb77b9eca97117e1d4fea3126802dee7cc30",
+        "StatSame.md": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+        "Moved.md": "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+        "OfflineNew.md": null
+      }
+    },
+    {
+      "id": "delete",
+      "operation": {
+        "type": "delete",
+        "path": "Moved.md"
+      },
+      "result": {
+        "cache": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "OfflineDelete.md": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Asset.png": {},
+          "StatSame.md": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "live_files": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_files": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "mtime": 1792006898607,
+            "size": 17,
+            "hash": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a"
+          },
+          "OfflineDelete.md": {
+            "mtime": 1792006898609,
+            "size": 16,
+            "hash": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21"
+          },
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "stored_metadata": {
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a": {
+            "headings": [
+              {
+                "heading": "Before offline",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          }
+        },
+        "descriptors": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "OfflineDelete.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Asset.png": null,
+          "StatSame.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 22.900000005960464,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+          "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1"
+        ]
+      },
+      "file_bytes": {
+        "Seed.md": null,
+        "OfflineChange.md": [
+          35,
+          32,
+          66,
+          101,
+          102,
+          111,
+          114,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          10
+        ],
+        "OfflineDelete.md": [
+          68,
+          101,
+          108,
+          101,
+          116,
+          101,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          46,
+          10
+        ],
+        "Asset.png": [
+          102,
+          105,
+          120,
+          116,
+          117,
+          114,
+          101,
+          32,
+          97,
+          116,
+          116,
+          97,
+          99,
+          104,
+          109,
+          101,
+          110,
+          116,
+          10
+        ],
+        "StatSame.md": [
+          35,
+          32,
+          79,
+          110,
+          101,
+          10
+        ],
+        "Moved.md": null,
+        "OfflineNew.md": null
+      },
+      "file_sha256": {
+        "Seed.md": null,
+        "OfflineChange.md": "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+        "OfflineDelete.md": "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+        "Asset.png": "fa7b57ddeea09e347209cca4c51ebb77b9eca97117e1d4fea3126802dee7cc30",
+        "StatSame.md": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+        "Moved.md": null,
+        "OfflineNew.md": null
+      }
+    },
+    {
+      "id": "restart-offline",
+      "operation": {
+        "type": "offline-and-restart",
+        "operations": [
+          {
+            "type": "modify-preserve-stat",
+            "path": "StatSame.md",
+            "content": "# Two\n",
+            "preserve_mtime_ns": 1792006898609858643
+          },
+          {
+            "type": "modify",
+            "path": "OfflineChange.md",
+            "content": "# After offline\n"
+          },
+          {
+            "type": "delete",
+            "path": "OfflineDelete.md"
+          },
+          {
+            "type": "create",
+            "path": "OfflineNew.md",
+            "content": "Created offline.\n"
+          }
+        ]
+      },
+      "result": {
+        "cache": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "headings": [
+              {
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                },
+                "heading": "After offline",
+                "level": 1
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 15,
+                    "offset": 15
+                  }
+                }
+              }
+            ]
+          },
+          "OfflineDelete.md": null,
+          "Asset.png": {},
+          "StatSame.md": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 5,
+                    "offset": 5
+                  }
+                }
+              }
+            ],
+            "v": 1
+          },
+          "Moved.md": null,
+          "OfflineNew.md": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "position": {
+                  "start": {
+                    "line": 0,
+                    "col": 0,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "col": 16,
+                    "offset": 16
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "live_files": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "mtime": 1792006901338,
+            "size": 16,
+            "hash": "88ae1b27153a2bdfb56a214f6139057c9c17a5723a61fdbf2c634792de898d90"
+          },
+          "OfflineDelete.md": null,
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": {
+            "mtime": 1792006901339,
+            "size": 17,
+            "hash": "01534702911416b4d68b952740a1a59c9fddc73ce06de3ee1fc721189715ea4d"
+          }
+        },
+        "stored_files": {
+          "Seed.md": null,
+          "OfflineChange.md": {
+            "mtime": 1792006901338,
+            "size": 16,
+            "hash": "88ae1b27153a2bdfb56a214f6139057c9c17a5723a61fdbf2c634792de898d90"
+          },
+          "OfflineDelete.md": null,
+          "Asset.png": {
+            "mtime": 1792006898609,
+            "size": 19,
+            "hash": ""
+          },
+          "StatSame.md": {
+            "mtime": 1792006898610,
+            "size": 6,
+            "hash": "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5"
+          },
+          "Moved.md": null,
+          "OfflineNew.md": {
+            "mtime": 1792006901339,
+            "size": 17,
+            "hash": "01534702911416b4d68b952740a1a59c9fddc73ce06de3ee1fc721189715ea4d"
+          }
+        },
+        "stored_metadata": {
+          "88ae1b27153a2bdfb56a214f6139057c9c17a5723a61fdbf2c634792de898d90": {
+            "headings": [
+              {
+                "heading": "After offline",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  15
+                ]
+              }
+            ]
+          },
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5": {
+            "headings": [
+              {
+                "heading": "One",
+                "level": 1,
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "type": "heading",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "v": 1
+          },
+          "01534702911416b4d68b952740a1a59c9fddc73ce06de3ee1fc721189715ea4d": {
+            "sections": [
+              {
+                "type": "paragraph",
+                "pos": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  16,
+                  16
+                ]
+              }
+            ]
+          }
+        },
+        "descriptors": {
+          "Seed.md": null,
+          "OfflineChange.md": null,
+          "OfflineDelete.md": null,
+          "Asset.png": null,
+          "StatSame.md": {
+            "value": 1,
+            "enumerable": true,
+            "writable": true,
+            "configurable": true
+          },
+          "Moved.md": null,
+          "OfflineNew.md": null
+        },
+        "readiness": {
+          "initialized": true,
+          "clean": true,
+          "stable_turns": 2,
+          "polls": 2,
+          "elapsed_ms": 23.30000001192093,
+          "commit_barrier": "overlapping readonly transaction.done",
+          "stored_match": true
+        },
+        "metadata_hashes": [
+          "18f5d3b04720827fb78dcfdacd18f42f1a660f602d5d2b98df8dff2b4e54837a",
+          "4de4264ffb6363ee0a04a8db8964db60067ba40e797bf1ceb53a3586cff9cbf1",
+          "5add2e4a6306bb1bb52c92869f20756aa1c9d514dbb2c9c4d2a94bc8378b0eb5",
+          "75db1dea110bb2718f9667e9b2c2c9422c525db0d5a2c5c744399af3907a0596",
+          "79327ecc9c2dd1e465399e96426efbda053334bef29e72fb4b06a24f1ac51e21",
+          "7dd3cd19fff65c8381c436a0c56bcf0f36b0ed6bf29671f6cf6839963e94b9d1",
+          "88ae1b27153a2bdfb56a214f6139057c9c17a5723a61fdbf2c634792de898d90",
+          "01534702911416b4d68b952740a1a59c9fddc73ce06de3ee1fc721189715ea4d"
+        ]
+      },
+      "file_bytes": {
+        "Seed.md": null,
+        "OfflineChange.md": [
+          35,
+          32,
+          65,
+          102,
+          116,
+          101,
+          114,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          10
+        ],
+        "OfflineDelete.md": null,
+        "Asset.png": [
+          102,
+          105,
+          120,
+          116,
+          117,
+          114,
+          101,
+          32,
+          97,
+          116,
+          116,
+          97,
+          99,
+          104,
+          109,
+          101,
+          110,
+          116,
+          10
+        ],
+        "StatSame.md": [
+          35,
+          32,
+          84,
+          119,
+          111,
+          10
+        ],
+        "Moved.md": null,
+        "OfflineNew.md": [
+          67,
+          114,
+          101,
+          97,
+          116,
+          101,
+          100,
+          32,
+          111,
+          102,
+          102,
+          108,
+          105,
+          110,
+          101,
+          46,
+          10
+        ]
+      },
+      "file_sha256": {
+        "Seed.md": null,
+        "OfflineChange.md": "88ae1b27153a2bdfb56a214f6139057c9c17a5723a61fdbf2c634792de898d90",
+        "OfflineDelete.md": null,
+        "Asset.png": "fa7b57ddeea09e347209cca4c51ebb77b9eca97117e1d4fea3126802dee7cc30",
+        "StatSame.md": "9bddb161f35580d46abd4d4391535309621452d89daf8d9ed939ec642d1ee9df",
+        "Moved.md": null,
+        "OfflineNew.md": "01534702911416b4d68b952740a1a59c9fddc73ce06de3ee1fc721189715ea4d"
+      }
+    }
+  ],
+  "cleanup": [
+    {
+      "pid": 96219,
+      "returncode": 0,
+      "stopped": true,
+      "reaped": true,
+      "ps_absent": true
+    },
+    {
+      "pid": 96766,
+      "returncode": 0,
+      "stopped": true,
+      "reaped": true,
+      "ps_absent": true
+    },
+    {
+      "pid": 97765,
+      "returncode": 0,
+      "stopped": true,
+      "reaped": true,
+      "ps_absent": true
+    }
+  ],
+  "conditions": {
+    "use_mock_keychain": true,
+    "timezone": "UTC",
+    "gc": "No 10-minute wait. Lifecycle finishes before startup 60-second cleanup; old unreferenced content hash is retained for revert.",
+    "readiness": "Initialized + isCacheClean + live selected file stat/hash validity + two stable turns; readonly overlapping IDB transaction.done commit barrier and selected stored file records equal live."
+  },
+  "evidence_id": "ev_e47f95a8142ec50c1e63ec0430a56b2b035a7c06f491fcdc0c4713e0811652f1",
+  "limitations": [
+    "Scope is selected Markdown/attachment cache objects and file bytes, not full MetadataCache runtime DTO or SDK descriptors. Native timestamps/private hash encoding are retained facts; no universal scheduling promise.",
+    "Cache clean + stable turns does not alone certify IDB commit. Every snapshot also completes overlapping readonly file/metadata transaction.done and verifies stored selected file records equal live.",
+    "Lifecycle finished in about5.4seconds; stale content hashes survived naturally before startup60s/recurring10m cleanup. No forced GC/cache injection/reparse.",
+    "A prior safely caught readiness probe failed because fs.mtimeMs was compared without native Math.round; corrected report retained under target/rea/p2-cache/readiness-raw-ms.json. No GUI errors or malformed transport."
+  ],
+  "cleanup_group": "REA owned process group verified"
+}

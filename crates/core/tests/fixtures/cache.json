@@ -1,0 +1,1730 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "isolation_proof": {
+    "vault": "/home/user/reference/run-492l3ahh/vault",
+    "profile": "/home/user/reference/run-492l3ahh/profile"
+  },
+  "cases": [
+    {
+      "id": "unicode-frontmatter",
+      "source": "---\ntitle: \"😀 café\"\nrelated: \"[[Other#😀|Alias]]\"\nmarkdown: \"[Other](Other.md)\"\n---\n# Hello **bold** 😀 [[Other]]\n\nCafé 😀 [[Other#Heading]] ![[image.png|alt]] [label *em*](Other.md) ![image](image.png) #tag/child\n",
+      "expected": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 20,
+                "offset": 105
+              },
+              "end": {
+                "line": 5,
+                "col": 29,
+                "offset": 114
+              }
+            },
+            "link": "Other",
+            "original": "[[Other]]",
+            "displayText": "Other"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 8,
+                "offset": 124
+              },
+              "end": {
+                "line": 7,
+                "col": 25,
+                "offset": 141
+              }
+            },
+            "link": "Other#Heading",
+            "original": "[[Other#Heading]]",
+            "displayText": "Other > Heading"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 45,
+                "offset": 161
+              },
+              "end": {
+                "line": 7,
+                "col": 67,
+                "offset": 183
+              }
+            },
+            "link": "Other.md",
+            "original": "[label *em*](Other.md)",
+            "displayText": "label em"
+          }
+        ],
+        "embeds": [
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 26,
+                "offset": 142
+              },
+              "end": {
+                "line": 7,
+                "col": 44,
+                "offset": 160
+              }
+            },
+            "link": "image.png",
+            "original": "![[image.png|alt]]",
+            "displayText": "alt"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 68,
+                "offset": 184
+              },
+              "end": {
+                "line": 7,
+                "col": 87,
+                "offset": 203
+              }
+            },
+            "link": "image.png",
+            "original": "![image](image.png)",
+            "displayText": "image"
+          }
+        ],
+        "tags": [
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 88,
+                "offset": 204
+              },
+              "end": {
+                "line": 7,
+                "col": 98,
+                "offset": 214
+              }
+            },
+            "tag": "#tag/child"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 85
+              },
+              "end": {
+                "line": 5,
+                "col": 29,
+                "offset": 114
+              }
+            },
+            "heading": "Hello **bold** 😀 [[Other]]",
+            "level": 1
+          }
+        ],
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 4,
+                "col": 3,
+                "offset": 84
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 85
+              },
+              "end": {
+                "line": 5,
+                "col": 29,
+                "offset": 114
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 116
+              },
+              "end": {
+                "line": 7,
+                "col": 98,
+                "offset": 214
+              }
+            }
+          }
+        ],
+        "frontmatter": {
+          "title": "😀 café",
+          "related": "[[Other#😀|Alias]]",
+          "markdown": "[Other](Other.md)"
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 4,
+            "col": 3,
+            "offset": 84
+          }
+        },
+        "frontmatterLinks": [
+          {
+            "key": "related",
+            "link": "Other#😀",
+            "original": "[[Other#😀|Alias]]",
+            "displayText": "Alias"
+          },
+          {
+            "key": "markdown",
+            "link": "Other.md",
+            "original": "[Other](Other.md)",
+            "displayText": "Other"
+          }
+        ]
+      }
+    },
+    {
+      "id": "crlf-bom",
+      "source": "﻿---\r\ntitle: Bom\r\n---\r\n# Heading 😀\r\n\r\n[[Other]] #tag\r\n",
+      "expected": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 38
+              },
+              "end": {
+                "line": 5,
+                "col": 9,
+                "offset": 47
+              }
+            },
+            "link": "Other",
+            "original": "[[Other]]",
+            "displayText": "Other"
+          }
+        ],
+        "tags": [
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 10,
+                "offset": 48
+              },
+              "end": {
+                "line": 5,
+                "col": 14,
+                "offset": 52
+              }
+            },
+            "tag": "#tag"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 3,
+                "col": 0,
+                "offset": 22
+              },
+              "end": {
+                "line": 3,
+                "col": 12,
+                "offset": 34
+              }
+            },
+            "heading": "Heading 😀",
+            "level": 1
+          }
+        ],
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 2,
+                "col": 3,
+                "offset": 20
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 3,
+                "col": 0,
+                "offset": 22
+              },
+              "end": {
+                "line": 3,
+                "col": 12,
+                "offset": 34
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 38
+              },
+              "end": {
+                "line": 5,
+                "col": 14,
+                "offset": 52
+              }
+            }
+          }
+        ],
+        "frontmatter": {
+          "title": "Bom"
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 2,
+            "col": 3,
+            "offset": 20
+          }
+        },
+        "frontmatterLinks": []
+      }
+    },
+    {
+      "id": "malformed-yaml",
+      "source": "---\ninvalid: [broken\n---\n# Heading\n[[Other]]\n",
+      "expected": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 35
+              },
+              "end": {
+                "line": 4,
+                "col": 9,
+                "offset": 44
+              }
+            },
+            "link": "Other",
+            "original": "[[Other]]",
+            "displayText": "Other"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 3,
+                "col": 0,
+                "offset": 25
+              },
+              "end": {
+                "line": 3,
+                "col": 9,
+                "offset": 34
+              }
+            },
+            "heading": "Heading",
+            "level": 1
+          }
+        ],
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 2,
+                "col": 3,
+                "offset": 24
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 3,
+                "col": 0,
+                "offset": 25
+              },
+              "end": {
+                "line": 3,
+                "col": 9,
+                "offset": 34
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 35
+              },
+              "end": {
+                "line": 4,
+                "col": 9,
+                "offset": 44
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "empty-yaml",
+      "source": "---\n---\nText\n",
+      "expected": {
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "col": 3,
+                "offset": 7
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 8
+              },
+              "end": {
+                "line": 2,
+                "col": 4,
+                "offset": 12
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "comments-escapes",
+      "source": "Before %% [[Hidden]] #hidden %% after [[Shown]]\n\n%%\n# Hidden heading\n[[Comment]] #comment\n%%\n\n\\[[Escaped]] \\#escaped [[Shown\\|alias]] #tag\n",
+      "expected": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 10,
+                "offset": 10
+              },
+              "end": {
+                "line": 0,
+                "col": 20,
+                "offset": 20
+              }
+            },
+            "link": "Hidden",
+            "original": "[[Hidden]]",
+            "displayText": "Hidden"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 38,
+                "offset": 38
+              },
+              "end": {
+                "line": 0,
+                "col": 47,
+                "offset": 47
+              }
+            },
+            "link": "Shown",
+            "original": "[[Shown]]",
+            "displayText": "Shown"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 69
+              },
+              "end": {
+                "line": 4,
+                "col": 11,
+                "offset": 80
+              }
+            },
+            "link": "Comment",
+            "original": "[[Comment]]",
+            "displayText": "Comment"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 23,
+                "offset": 117
+              },
+              "end": {
+                "line": 7,
+                "col": 39,
+                "offset": 133
+              }
+            },
+            "link": "Shown",
+            "original": "[[Shown\\|alias]]",
+            "displayText": "alias"
+          }
+        ],
+        "tags": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 21,
+                "offset": 21
+              },
+              "end": {
+                "line": 0,
+                "col": 28,
+                "offset": 28
+              }
+            },
+            "tag": "#hidden"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 12,
+                "offset": 81
+              },
+              "end": {
+                "line": 4,
+                "col": 20,
+                "offset": 89
+              }
+            },
+            "tag": "#comment"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 40,
+                "offset": 134
+              },
+              "end": {
+                "line": 7,
+                "col": 44,
+                "offset": 138
+              }
+            },
+            "tag": "#tag"
+          }
+        ],
+        "sections": [
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 47,
+                "offset": 47
+              }
+            }
+          },
+          {
+            "type": "comment",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 49
+              },
+              "end": {
+                "line": 5,
+                "col": 2,
+                "offset": 92
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 94
+              },
+              "end": {
+                "line": 7,
+                "col": 44,
+                "offset": 138
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nested-code-tasks",
+      "source": "---\nname: Tasks\n---\n\n- [ ] first 😀 ^task\n  - [x] nested\n  - [!] custom\n- plain\n\n- [ ] loose\n\n  paragraph\n\n  - child\n\n> # Quoted\n> - [ ] quoted\n\n```md\n[[Code]] #code\n```\n\n    [[Indent]] #indent\n",
+      "expected": {
+        "sections": [
+          {
+            "type": "yaml",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 2,
+                "col": 3,
+                "offset": 19
+              }
+            }
+          },
+          {
+            "type": "list",
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 21
+              },
+              "end": {
+                "line": 13,
+                "col": 9,
+                "offset": 116
+              }
+            }
+          },
+          {
+            "type": "blockquote",
+            "position": {
+              "start": {
+                "line": 15,
+                "col": 0,
+                "offset": 118
+              },
+              "end": {
+                "line": 16,
+                "col": 14,
+                "offset": 143
+              }
+            }
+          },
+          {
+            "type": "code",
+            "position": {
+              "start": {
+                "line": 18,
+                "col": 0,
+                "offset": 145
+              },
+              "end": {
+                "line": 20,
+                "col": 3,
+                "offset": 169
+              }
+            }
+          },
+          {
+            "type": "code",
+            "position": {
+              "start": {
+                "line": 22,
+                "col": 0,
+                "offset": 171
+              },
+              "end": {
+                "line": 22,
+                "col": 22,
+                "offset": 193
+              }
+            }
+          }
+        ],
+        "listItems": [
+          {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 21
+              },
+              "end": {
+                "line": 4,
+                "col": 20,
+                "offset": 41
+              }
+            },
+            "parent": -4,
+            "task": " ",
+            "id": "task"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 2,
+                "offset": 44
+              },
+              "end": {
+                "line": 5,
+                "col": 14,
+                "offset": 56
+              }
+            },
+            "parent": 4,
+            "task": "x"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 2,
+                "offset": 59
+              },
+              "end": {
+                "line": 6,
+                "col": 14,
+                "offset": 71
+              }
+            },
+            "parent": 4,
+            "task": "!"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 72
+              },
+              "end": {
+                "line": 8,
+                "col": 0,
+                "offset": 80
+              }
+            },
+            "parent": -4
+          },
+          {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 0,
+                "offset": 81
+              },
+              "end": {
+                "line": 11,
+                "col": 11,
+                "offset": 105
+              }
+            },
+            "parent": -4,
+            "task": " "
+          },
+          {
+            "position": {
+              "start": {
+                "line": 13,
+                "col": 2,
+                "offset": 109
+              },
+              "end": {
+                "line": 13,
+                "col": 9,
+                "offset": 116
+              }
+            },
+            "parent": 9
+          },
+          {
+            "position": {
+              "start": {
+                "line": 16,
+                "col": 2,
+                "offset": 131
+              },
+              "end": {
+                "line": 16,
+                "col": 14,
+                "offset": 143
+              }
+            },
+            "parent": -16,
+            "task": " "
+          }
+        ],
+        "blocks": {
+          "task": {
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 21
+              },
+              "end": {
+                "line": 4,
+                "col": 20,
+                "offset": 41
+              }
+            },
+            "id": "task"
+          }
+        },
+        "frontmatter": {
+          "name": "Tasks"
+        },
+        "frontmatterPosition": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 2,
+            "col": 3,
+            "offset": 19
+          }
+        },
+        "frontmatterLinks": []
+      }
+    },
+    {
+      "id": "blocks",
+      "source": "Paragraph 😀 ^Alpha\n\nSecond paragraph\n\n^standalone\n\n- first ^list\n- second\n\n> quote ^quote\n\n# Heading ^heading\n",
+      "expected": {
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 11,
+                "col": 0,
+                "offset": 92
+              },
+              "end": {
+                "line": 11,
+                "col": 18,
+                "offset": 110
+              }
+            },
+            "heading": "Heading ^heading",
+            "level": 1
+          }
+        ],
+        "sections": [
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 19,
+                "offset": 19
+              }
+            },
+            "id": "Alpha"
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 21
+              },
+              "end": {
+                "line": 2,
+                "col": 16,
+                "offset": 37
+              }
+            },
+            "id": "standalone"
+          },
+          {
+            "type": "list",
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 52
+              },
+              "end": {
+                "line": 7,
+                "col": 8,
+                "offset": 74
+              }
+            }
+          },
+          {
+            "type": "blockquote",
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 0,
+                "offset": 76
+              },
+              "end": {
+                "line": 9,
+                "col": 14,
+                "offset": 90
+              }
+            },
+            "id": "quote"
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 11,
+                "col": 0,
+                "offset": 92
+              },
+              "end": {
+                "line": 11,
+                "col": 18,
+                "offset": 110
+              }
+            },
+            "id": "heading"
+          }
+        ],
+        "listItems": [
+          {
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 52
+              },
+              "end": {
+                "line": 6,
+                "col": 13,
+                "offset": 65
+              }
+            },
+            "parent": -6,
+            "id": "list"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 66
+              },
+              "end": {
+                "line": 7,
+                "col": 8,
+                "offset": 74
+              }
+            },
+            "parent": -6
+          }
+        ],
+        "blocks": {
+          "alpha": {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 19,
+                "offset": 19
+              }
+            },
+            "id": "Alpha"
+          },
+          "standalone": {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 21
+              },
+              "end": {
+                "line": 2,
+                "col": 16,
+                "offset": 37
+              }
+            },
+            "id": "standalone"
+          },
+          "quote": {
+            "position": {
+              "start": {
+                "line": 9,
+                "col": 0,
+                "offset": 76
+              },
+              "end": {
+                "line": 9,
+                "col": 14,
+                "offset": 90
+              }
+            },
+            "id": "quote"
+          },
+          "heading": {
+            "position": {
+              "start": {
+                "line": 11,
+                "col": 0,
+                "offset": 92
+              },
+              "end": {
+                "line": 11,
+                "col": 18,
+                "offset": 110
+              }
+            },
+            "id": "heading"
+          },
+          "list": {
+            "position": {
+              "start": {
+                "line": 6,
+                "col": 0,
+                "offset": 52
+              },
+              "end": {
+                "line": 6,
+                "col": 13,
+                "offset": 65
+              }
+            },
+            "id": "list"
+          }
+        }
+      }
+    },
+    {
+      "id": "footnotes",
+      "source": "Text[^Note] and inline ^[inline 😀 [[Other]]] and again[^Note].\n\n[^Note]: definition 😀\n    continuation [[Other]]\n\n[ref]: Other.md \"title\"\n\n[ref] [label][ref]\n",
+      "expected": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 3,
+                "col": 17,
+                "offset": 105
+              },
+              "end": {
+                "line": 3,
+                "col": 26,
+                "offset": 114
+              }
+            },
+            "link": "Other",
+            "original": "[[Other]]",
+            "displayText": "Other"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 35,
+                "offset": 35
+              },
+              "end": {
+                "line": 0,
+                "col": 44,
+                "offset": 44
+              }
+            },
+            "link": "Other",
+            "original": "[[Other]]",
+            "displayText": "Other"
+          }
+        ],
+        "footnotes": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 25,
+                "offset": 25
+              },
+              "end": {
+                "line": 0,
+                "col": 44,
+                "offset": 44
+              }
+            },
+            "id": "[inline1"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 65
+              },
+              "end": {
+                "line": 3,
+                "col": 26,
+                "offset": 114
+              }
+            },
+            "id": "note"
+          }
+        ],
+        "footnoteRefs": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 4,
+                "offset": 4
+              },
+              "end": {
+                "line": 0,
+                "col": 11,
+                "offset": 11
+              }
+            },
+            "id": "note"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 55,
+                "offset": 55
+              },
+              "end": {
+                "line": 0,
+                "col": 62,
+                "offset": 62
+              }
+            },
+            "id": "note"
+          }
+        ],
+        "referenceLinks": [
+          {
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 116
+              },
+              "end": {
+                "line": 5,
+                "col": 23,
+                "offset": 139
+              }
+            },
+            "id": "ref",
+            "link": "Other.md"
+          }
+        ],
+        "sections": [
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 63,
+                "offset": 63
+              }
+            }
+          },
+          {
+            "type": "footnoteDefinition",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 65
+              },
+              "end": {
+                "line": 3,
+                "col": 26,
+                "offset": 114
+              }
+            }
+          },
+          {
+            "type": "definition",
+            "position": {
+              "start": {
+                "line": 5,
+                "col": 0,
+                "offset": 116
+              },
+              "end": {
+                "line": 5,
+                "col": 23,
+                "offset": 139
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 141
+              },
+              "end": {
+                "line": 7,
+                "col": 18,
+                "offset": 159
+              }
+            }
+          },
+          {
+            "type": "text",
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 0,
+                "offset": 159
+              },
+              "end": {
+                "line": 8,
+                "col": 0,
+                "offset": 159
+              }
+            }
+          },
+          {
+            "type": "element",
+            "position": {
+              "start": {
+                "line": 8,
+                "col": 0,
+                "offset": 159
+              },
+              "end": {
+                "line": 8,
+                "col": 0,
+                "offset": 159
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-types",
+      "source": "# Title\n\n---\n\n> [!note]\n> Callout\n\n| A | B |\n| - | - |\n| 😀 | x |\n\n<div>html</div>\n\n![alt](image.png)\n",
+      "expected": {
+        "embeds": [
+          {
+            "position": {
+              "start": {
+                "line": 13,
+                "col": 0,
+                "offset": 84
+              },
+              "end": {
+                "line": 13,
+                "col": 17,
+                "offset": 101
+              }
+            },
+            "link": "image.png",
+            "original": "![alt](image.png)",
+            "displayText": "alt"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 7,
+                "offset": 7
+              }
+            },
+            "heading": "Title",
+            "level": 1
+          }
+        ],
+        "sections": [
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 7,
+                "offset": 7
+              }
+            }
+          },
+          {
+            "type": "thematicBreak",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 9
+              },
+              "end": {
+                "line": 2,
+                "col": 3,
+                "offset": 12
+              }
+            }
+          },
+          {
+            "type": "callout",
+            "position": {
+              "start": {
+                "line": 4,
+                "col": 0,
+                "offset": 14
+              },
+              "end": {
+                "line": 5,
+                "col": 9,
+                "offset": 33
+              }
+            }
+          },
+          {
+            "type": "table",
+            "position": {
+              "start": {
+                "line": 7,
+                "col": 0,
+                "offset": 35
+              },
+              "end": {
+                "line": 9,
+                "col": 10,
+                "offset": 65
+              }
+            }
+          },
+          {
+            "type": "html",
+            "position": {
+              "start": {
+                "line": 11,
+                "col": 0,
+                "offset": 67
+              },
+              "end": {
+                "line": 11,
+                "col": 15,
+                "offset": 82
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 13,
+                "col": 0,
+                "offset": 84
+              },
+              "end": {
+                "line": 13,
+                "col": 17,
+                "offset": 101
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "link-display",
+      "source": "# A &amp; B **bold** `code` [[Other|Shown]]\n\n[[Other#Heading#Sub]] [[#Heading]] [[Other| alias ]] ![[image.png|100]]\n[**bold** *em* `code`](Other%20Name.md) [web](https://example.com) <https://example.com>\n\\[[escaped]]\n",
+      "expected": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 28,
+                "offset": 28
+              },
+              "end": {
+                "line": 0,
+                "col": 43,
+                "offset": 43
+              }
+            },
+            "link": "Other",
+            "original": "[[Other|Shown]]",
+            "displayText": "Shown"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 45
+              },
+              "end": {
+                "line": 2,
+                "col": 21,
+                "offset": 66
+              }
+            },
+            "link": "Other#Heading#Sub",
+            "original": "[[Other#Heading#Sub]]",
+            "displayText": "Other > Heading > Sub"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 22,
+                "offset": 67
+              },
+              "end": {
+                "line": 2,
+                "col": 34,
+                "offset": 79
+              }
+            },
+            "link": "#Heading",
+            "original": "[[#Heading]]",
+            "displayText": "Heading"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 35,
+                "offset": 80
+              },
+              "end": {
+                "line": 2,
+                "col": 52,
+                "offset": 97
+              }
+            },
+            "link": "Other",
+            "original": "[[Other| alias ]]",
+            "displayText": "alias"
+          },
+          {
+            "position": {
+              "start": {
+                "line": 3,
+                "col": 0,
+                "offset": 117
+              },
+              "end": {
+                "line": 3,
+                "col": 39,
+                "offset": 156
+              }
+            },
+            "link": "Other Name.md",
+            "original": "[**bold** *em* `code`](Other%20Name.md)",
+            "displayText": "bold em code"
+          }
+        ],
+        "embeds": [
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 53,
+                "offset": 98
+              },
+              "end": {
+                "line": 2,
+                "col": 71,
+                "offset": 116
+              }
+            },
+            "link": "image.png",
+            "original": "![[image.png|100]]",
+            "displayText": "100"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 43,
+                "offset": 43
+              }
+            },
+            "heading": "A &amp; B **bold** `code` [[Other|Shown]]",
+            "level": 1
+          }
+        ],
+        "sections": [
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 43,
+                "offset": 43
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 45
+              },
+              "end": {
+                "line": 4,
+                "col": 12,
+                "offset": 218
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "reference-only",
+      "source": "[abc]: target.md \"Title\"\n\n[abc]\n",
+      "expected": {
+        "referenceLinks": [
+          {
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 24,
+                "offset": 24
+              }
+            },
+            "id": "abc",
+            "link": "target.md"
+          }
+        ],
+        "sections": [
+          {
+            "type": "definition",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 0,
+                "col": 24,
+                "offset": 24
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 26
+              },
+              "end": {
+                "line": 2,
+                "col": 5,
+                "offset": 31
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "lone-cr",
+      "source": "First\rSecond [[Other]]\r# Third\r",
+      "expected": {
+        "links": [
+          {
+            "position": {
+              "start": {
+                "line": 1,
+                "col": 7,
+                "offset": 13
+              },
+              "end": {
+                "line": 1,
+                "col": 16,
+                "offset": 22
+              }
+            },
+            "link": "Other",
+            "original": "[[Other]]",
+            "displayText": "Other"
+          }
+        ],
+        "headings": [
+          {
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 23
+              },
+              "end": {
+                "line": 2,
+                "col": 7,
+                "offset": 30
+              }
+            },
+            "heading": "Third",
+            "level": 1
+          }
+        ],
+        "sections": [
+          {
+            "type": "paragraph",
+            "position": {
+              "start": {
+                "line": 0,
+                "col": 0,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "col": 16,
+                "offset": 22
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "position": {
+              "start": {
+                "line": 2,
+                "col": 0,
+                "offset": 23
+              },
+              "end": {
+                "line": 2,
+                "col": 7,
+                "offset": 30
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

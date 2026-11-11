@@ -1,0 +1,1704 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2,
+    "owned_disposable_vault_only": true,
+    "dirty_flag_scope": "Paced snapshots can cross prior 2000ms callbacks; dirty is retained as captured evidence, replayed only in timestamped immediate/timer fixture."
+  },
+  "cases": [
+    {
+      "id": "source-opens-crlf",
+      "action": {
+        "type": "open",
+        "path": "A.md",
+        "new_tab": false
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "ParityReady.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "ParityReady.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "Isolated parity oracle.\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "Isolated parity oracle.\n",
+          "lastSavedData": "Isolated parity oracle.\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "ParityReady.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "Isolated parity oracle.\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "Isolated parity oracle.\n",
+            "lastSavedData": "Isolated parity oracle.\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# First\nline A\n# Second\nlast A\n",
+          "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# First\nline A\n# Second\nlast A\n",
+            "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "source-cursor-before-noop",
+      "action": {
+        "type": "cursor",
+        "line": 1,
+        "ch": 3
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# First\nline A\n# Second\nlast A\n",
+          "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# First\nline A\n# Second\nlast A\n",
+            "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 1,
+              "ch": 3
+            },
+            "anchor": {
+              "line": 1,
+              "ch": 3
+            },
+            "head": {
+              "line": 1,
+              "ch": 3
+            }
+          },
+          "dirty": false,
+          "viewData": "# First\nline A\n# Second\nlast A\n",
+          "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 1,
+                "ch": 3
+              },
+              "anchor": {
+                "line": 1,
+                "ch": 3
+              },
+              "head": {
+                "line": 1,
+                "ch": 3
+              }
+            },
+            "dirty": false,
+            "viewData": "# First\nline A\n# Second\nlast A\n",
+            "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "same-source-set-value",
+      "action": {
+        "type": "editor",
+        "text": "# First\nline A\n# Second\nlast A\n"
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 1,
+              "ch": 3
+            },
+            "anchor": {
+              "line": 1,
+              "ch": 3
+            },
+            "head": {
+              "line": 1,
+              "ch": 3
+            }
+          },
+          "dirty": false,
+          "viewData": "# First\nline A\n# Second\nlast A\n",
+          "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 1,
+                "ch": 3
+              },
+              "anchor": {
+                "line": 1,
+                "ch": 3
+              },
+              "head": {
+                "line": 1,
+                "ch": 3
+              }
+            },
+            "dirty": false,
+            "viewData": "# First\nline A\n# Second\nlast A\n",
+            "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": true,
+          "viewData": "# First\nline A\n# Second\nlast A\n",
+          "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": true,
+            "viewData": "# First\nline A\n# Second\nlast A\n",
+            "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "clean-source-to-reading-normalizes-crlf",
+      "action": {
+        "type": "state",
+        "state": {
+          "mode": "preview"
+        }
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": true,
+          "viewData": "# First\nline A\n# Second\nlast A\n",
+          "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": true,
+            "viewData": "# First\nline A\n# Second\nlast A\n",
+            "lastSavedData": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# First\nline A\n# Second\nlast A\n",
+          "lastSavedData": "# First\nline A\n# Second\nlast A\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# First\nline A\n# Second\nlast A\n",
+            "lastSavedData": "# First\nline A\n# Second\nlast A\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\nline A\n# Second\nlast A\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "reading-saved-modify-keeps-hidden-editor",
+      "action": {
+        "type": "saved_modify",
+        "text": "# Modified\nnew body\n"
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# First\nline A\n# Second\nlast A\n",
+          "lastSavedData": "# First\nline A\n# Second\nlast A\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# First\nline A\n# Second\nlast A\n",
+            "lastSavedData": "# First\nline A\n# Second\nlast A\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# First\nline A\n# Second\nlast A\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified\nnew body\n",
+          "lastSavedData": "# Modified\nnew body\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified\nnew body\n",
+            "lastSavedData": "# Modified\nnew body\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified\nnew body\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "hidden-editor-dirty-reading",
+      "action": {
+        "type": "editor",
+        "text": "hidden unsaved\n"
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "# First\nline A\n# Second\nlast A\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified\nnew body\n",
+          "lastSavedData": "# Modified\nnew body\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "# First\nline A\n# Second\nlast A\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified\nnew body\n",
+            "lastSavedData": "# Modified\nnew body\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified\nnew body\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "hidden unsaved\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified\nnew body\n",
+          "lastSavedData": "# Modified\nnew body\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "hidden unsaved\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified\nnew body\n",
+            "lastSavedData": "# Modified\nnew body\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified\nnew body\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "reading-saved-modify-keeps-dirty-hidden-editor",
+      "action": {
+        "type": "saved_modify",
+        "text": "# Modified twice\nbody two\n"
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "hidden unsaved\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified\nnew body\n",
+          "lastSavedData": "# Modified\nnew body\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "hidden unsaved\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified\nnew body\n",
+            "lastSavedData": "# Modified\nnew body\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified\nnew body\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "hidden unsaved\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified twice\nbody two\n",
+          "lastSavedData": "# Modified twice\nbody two\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "hidden unsaved\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified twice\nbody two\n",
+            "lastSavedData": "# Modified twice\nbody two\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified twice\nbody two\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "reading-to-source-discards-hidden-draft",
+      "action": {
+        "type": "state",
+        "state": {
+          "mode": "source"
+        }
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "hidden unsaved\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified twice\nbody two\n",
+          "lastSavedData": "# Modified twice\nbody two\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "hidden unsaved\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified twice\nbody two\n",
+            "lastSavedData": "# Modified twice\nbody two\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified twice\nbody two\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# Modified twice\nbody two\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified twice\nbody two\n",
+          "lastSavedData": "# Modified twice\nbody two\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# Modified twice\nbody two\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified twice\nbody two\n",
+            "lastSavedData": "# Modified twice\nbody two\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified twice\nbody two\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "array-mode-coerces-property-name",
+      "action": {
+        "type": "state",
+        "state": {
+          "mode": [
+            "preview"
+          ]
+        }
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# Modified twice\nbody two\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified twice\nbody two\n",
+          "lastSavedData": "# Modified twice\nbody two\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# Modified twice\nbody two\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified twice\nbody two\n",
+            "lastSavedData": "# Modified twice\nbody two\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified twice\nbody two\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "# Modified twice\nbody two\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified twice\nbody two\n",
+          "lastSavedData": "# Modified twice\nbody two\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "# Modified twice\nbody two\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified twice\nbody two\n",
+            "lastSavedData": "# Modified twice\nbody two\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified twice\nbody two\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    },
+    {
+      "id": "nested-array-mode-coerces-property-name",
+      "action": {
+        "type": "state",
+        "state": {
+          "mode": [
+            [
+              "source"
+            ]
+          ]
+        }
+      },
+      "before": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "preview",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "preview",
+          "source": false,
+          "editor": {
+            "text": "# Modified twice\nbody two\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified twice\nbody two\n",
+          "lastSavedData": "# Modified twice\nbody two\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "preview",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "preview",
+            "source": false,
+            "editor": {
+              "text": "# Modified twice\nbody two\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified twice\nbody two\n",
+            "lastSavedData": "# Modified twice\nbody two\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified twice\nbody two\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      },
+      "result": true,
+      "after": {
+        "activeLeaf": "parity-leaf",
+        "active": "A.md",
+        "current": {
+          "id": "parity-leaf",
+          "type": "markdown",
+          "state": {
+            "file": "A.md",
+            "mode": "source",
+            "source": false,
+            "backlinks": false
+          },
+          "mode": "source",
+          "source": false,
+          "editor": {
+            "text": "# Modified twice\nbody two\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "dirty": false,
+          "viewData": "# Modified twice\nbody two\n",
+          "lastSavedData": "# Modified twice\nbody two\n"
+        },
+        "leaves": [
+          {
+            "id": "parity-leaf",
+            "type": "markdown",
+            "state": {
+              "file": "A.md",
+              "mode": "source",
+              "source": false,
+              "backlinks": false
+            },
+            "mode": "source",
+            "source": false,
+            "editor": {
+              "text": "# Modified twice\nbody two\n",
+              "cursor": {
+                "line": 0,
+                "ch": 0
+              },
+              "anchor": {
+                "line": 0,
+                "ch": 0
+              },
+              "head": {
+                "line": 0,
+                "ch": 0
+              }
+            },
+            "dirty": false,
+            "viewData": "# Modified twice\nbody two\n",
+            "lastSavedData": "# Modified twice\nbody two\n"
+          }
+        ],
+        "saved": {
+          "A.md": "# Modified twice\nbody two\n"
+        },
+        "config": {
+          "defaultViewMode": "source",
+          "livePreview": true
+        }
+      }
+    }
+  ],
+  "initial_files": {
+    "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+  },
+  "initial": {
+    "activeLeaf": "parity-leaf",
+    "active": "ParityReady.md",
+    "current": {
+      "id": "parity-leaf",
+      "type": "markdown",
+      "state": {
+        "file": "ParityReady.md",
+        "mode": "source",
+        "source": false,
+        "backlinks": false
+      },
+      "mode": "source",
+      "source": false,
+      "editor": {
+        "text": "Isolated parity oracle.\n",
+        "cursor": {
+          "line": 0,
+          "ch": 0
+        },
+        "anchor": {
+          "line": 0,
+          "ch": 0
+        },
+        "head": {
+          "line": 0,
+          "ch": 0
+        }
+      },
+      "dirty": false,
+      "viewData": "Isolated parity oracle.\n",
+      "lastSavedData": "Isolated parity oracle.\n"
+    },
+    "leaves": [
+      {
+        "id": "parity-leaf",
+        "type": "markdown",
+        "state": {
+          "file": "ParityReady.md",
+          "mode": "source",
+          "source": false,
+          "backlinks": false
+        },
+        "mode": "source",
+        "source": false,
+        "editor": {
+          "text": "Isolated parity oracle.\n",
+          "cursor": {
+            "line": 0,
+            "ch": 0
+          },
+          "anchor": {
+            "line": 0,
+            "ch": 0
+          },
+          "head": {
+            "line": 0,
+            "ch": 0
+          }
+        },
+        "dirty": false,
+        "viewData": "Isolated parity oracle.\n",
+        "lastSavedData": "Isolated parity oracle.\n"
+      }
+    ],
+    "saved": {
+      "A.md": "# First\r\nline A\r\n# Second\r\nlast A\r\n"
+    },
+    "config": {
+      "defaultViewMode": "source",
+      "livePreview": true
+    }
+  },
+  "workspace": {
+    "main": {
+      "id": "parity-main",
+      "type": "split",
+      "children": [
+        {
+          "id": "85f97857549f304c",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "parity-leaf",
+              "type": "leaf",
+              "state": {
+                "type": "markdown",
+                "state": {
+                  "file": "A.md",
+                  "mode": "source",
+                  "source": false,
+                  "backlinks": false
+                },
+                "icon": "lucide-file",
+                "title": "A"
+              }
+            }
+          ]
+        }
+      ],
+      "direction": "vertical"
+    },
+    "left": {
+      "id": "485735775236b81c",
+      "type": "split",
+      "children": [],
+      "direction": "horizontal",
+      "width": 300
+    },
+    "right": {
+      "id": "80ad61daae8de8d7",
+      "type": "split",
+      "children": [],
+      "direction": "horizontal",
+      "width": 300,
+      "collapsed": true
+    },
+    "left-ribbon": {
+      "hiddenItems": {}
+    },
+    "active": "parity-leaf"
+  },
+  "cleanup": {
+    "pid": 57661,
+    "returncode": 0,
+    "stopped": true
+  },
+  "source_receipt": "target/rea/engine-clock/markdown-mode-followup-report.json"
+}

@@ -1,0 +1,391 @@
+{
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "coverage": "Authored saved-cache graph CLI cases; recorded cache-source chronology explicit; cold async completion order and full link parser remain separately bounded; retry fresh isolated instance after native timeout.",
+  "phases": {
+    "initial-first": {
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md"
+      ]
+    },
+    "initial": {
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md"
+      ]
+    },
+    "created": {
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md"
+      ]
+    },
+    "modified": {
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Folder/Source.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md"
+      ]
+    },
+    "renamed-source": {
+      "file_cache_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "Target.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md"
+      ]
+    },
+    "renamed-target": {
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ]
+    },
+    "external-modified": {
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Created.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ]
+    },
+    "deleted-source": {
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "image.png",
+        "Unused.bin",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ]
+    },
+    "all-self": {
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ]
+    },
+    "final": {
+      "file_cache_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ],
+      "resolved_order": [
+        "Empty.md",
+        "AliasOther.md",
+        "Dup.md",
+        "Folder/Dup.md",
+        "Source,One.md",
+        "Self.md",
+        "AliasOnly.md",
+        "UnresolvedOnly.md",
+        "Unicode.md",
+        "é.md",
+        "Folder/Renamed.md",
+        "Renamed.md"
+      ]
+    }
+  },
+  "initial_files": {
+    "AliasOther.md": "---\naliases: [shared]\n---\nOther.\n",
+    "AliasOnly.md": "[[Nickname]]\n",
+    "Target.md": "---\naliases: [Nickname, shared]\n---\n# Heading\nTarget.\n",
+    "Self.md": "[[Self]] [[Self#Heading]]\n",
+    "é.md": "Unicode target.\n",
+    "Source,One.md": "---\nrelated: \"[[Target]]\"\nlist: [\"[[Target]]\", \"[[Missing]]\"]\n---\n[[Target]] [[Target]] [[Target#Heading]] ![[Target]]\n[[Nickname]] [[shared]] [[Missing.md]] [[Missing]] [[Missing.MD]]\n[[#local]] [[Folder/Dup]] [[Dup]]\n[ref][r] ![image](image.png) ![[image.png]] [external](https://example.com)\n[r]: Target.md\n",
+    "Dup.md": "Root duplicate.\n",
+    "Unicode.md": "[[é]] [[é]] [[Missing.md#Heading]] [[Missing.MD#Heading]]\n",
+    "Unused.bin": [
+      0,
+      114,
+      97,
+      119,
+      255
+    ],
+    "Empty.md": "No links here.\n",
+    "image.png": "\u0000PNG\u0001",
+    "UnresolvedOnly.md": "[[Void]]\n",
+    "Folder/Source.md": "[[Dup]] [[Missing]] [[Target]]\n",
+    "Folder/Dup.md": "Nested duplicate.\n"
+  },
+  "created_source": "[[Missing]] [[Target]]\n",
+  "modified_sources": {
+    "modified": {
+      "AliasOther.md": "---\naliases: [shared]\n---\nOther.\n",
+      "AliasOnly.md": "[[Nickname]]\n",
+      "Target.md": "---\naliases: [Nickname, shared]\n---\n# Heading\nTarget.\n",
+      "Self.md": "[[Self]] [[Self#Heading]]\n",
+      "é.md": "Unicode target.\n",
+      "Source,One.md": "---\nrelated: \"[[Target]]\"\nlist: [\"[[Target]]\", \"[[Missing]]\"]\n---\n[[Target]] [[Target]] [[Target#Heading]] ![[Target]]\n[[Nickname]] [[shared]] [[Missing.md]] [[Missing]] [[Missing.MD]]\n[[#local]] [[Folder/Dup]] [[Dup]]\n[ref][r] ![image](image.png) ![[image.png]] [external](https://example.com)\n[r]: Target.md\n",
+      "Dup.md": "Root duplicate.\n",
+      "Unicode.md": "[[é]] [[é]] [[Missing.md#Heading]] [[Missing.MD#Heading]]\n",
+      "Created.md": "[[Missing]] [[Target]]\n",
+      "Empty.md": "[[Missing]]\n",
+      "UnresolvedOnly.md": "[[Void]]\n",
+      "Folder/Source.md": "[[Dup]] [[Missing]] [[Target]]\n",
+      "Folder/Dup.md": "Nested duplicate.\n"
+    },
+    "external-modified": {
+      "AliasOther.md": "---\naliases: [shared]\n---\nOther.\n",
+      "AliasOnly.md": "[[Renamed]] [[Renamed]] [[Missing]]\n",
+      "Self.md": "[[Self]] [[Self#Heading]]\n",
+      "é.md": "Unicode target.\n",
+      "Source,One.md": "---\nrelated: \"[[Target]]\"\nlist: [\"[[Target]]\", \"[[Missing]]\"]\n---\n[[Target]] [[Target]] [[Target#Heading]] ![[Target]]\n[[Nickname]] [[shared]] [[Missing.md]] [[Missing]] [[Missing.MD]]\n[[#local]] [[Folder/Dup]] [[Dup]]\n[ref][r] ![image](image.png) ![[image.png]] [external](https://example.com)\n[r]: Target.md\n",
+      "Dup.md": "Root duplicate.\n",
+      "Unicode.md": "[[é]] [[é]] [[Missing.md#Heading]] [[Missing.MD#Heading]]\n",
+      "Renamed.md": "---\naliases: [Nickname, shared]\n---\n# Heading\nTarget.\n",
+      "Created.md": "[[Missing]] [[Target]]\n",
+      "Empty.md": "[[Missing]]\n",
+      "UnresolvedOnly.md": "[[Void]]\n",
+      "Folder/Dup.md": "Nested duplicate.\n",
+      "Folder/Renamed.md": "[[Dup]] [[Missing]] [[Target]]\n"
+    }
+  }
+}

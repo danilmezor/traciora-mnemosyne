@@ -1,0 +1,875 @@
+{
+  "schema_version": 1,
+  "scope": "11 deterministic shipped eval/handleCli Promise constructor/adoption cases plus real CLI early noncallable resolve failure; no background construct-count oracle",
+  "reports": [
+    {
+      "path": "target/rea/runtime-eval/promise-boundaries/part1-report.json",
+      "sha256": "e216ca64409331d075789801c5ea6273915bd1d61afcb5962439e337b5d52e92",
+      "cleanup": {
+        "pid": 41876,
+        "exit_code": 0,
+        "stopped": true,
+        "pid_absent": true
+      },
+      "plugin_cleanup": {
+        "loaded": false,
+        "exposed": false
+      }
+    },
+    {
+      "path": "target/rea/runtime-eval/promise-boundaries/report.json",
+      "sha256": "db0d8206876e579862ac25c1f948612f150a87b0546d062f11f55613e07ac56f",
+      "cleanup": {
+        "pid": 41957,
+        "exit_code": 0,
+        "stopped": true,
+        "pid_absent": true
+      },
+      "plugin_cleanup": {
+        "loaded": false,
+        "exposed": false
+      }
+    }
+  ],
+  "cases": [
+    {
+      "spec": {
+        "id": "handler-primitive",
+        "target": "handler",
+        "code": "42"
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"handler-primitive\", \"target\": \"handler\", \"code\": \"42\"})"
+        ],
+        "stdout": "=> {\n  \"id\": \"handler-primitive\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 1,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 1,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"result\": \"=> 42\",\n  \"synchronousThrow\": false\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJpZCI6ICJoYW5kbGVyLXByaW1pdGl2ZSIsCiAgInByZWZpeCI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAxLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAxLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0KICBdLAogICJyZXN1bHQiOiAiPT4gNDIiLAogICJzeW5jaHJvbm91c1Rocm93IjogZmFsc2UKfQo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.003689417000000139
+      },
+      "expected": {
+        "id": "handler-primitive",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 1,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 1,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "result": "=> 42",
+        "synchronousThrow": false
+      }
+    },
+    {
+      "spec": {
+        "id": "handler-object",
+        "target": "handler",
+        "code": "({value:42})"
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"handler-object\", \"target\": \"handler\", \"code\": \"({value:42})\"})"
+        ],
+        "stdout": "=> {\n  \"id\": \"handler-object\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 1,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 1,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"result\": \"=> {\\n  \\\"value\\\": 42\\n}\",\n  \"synchronousThrow\": false\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJpZCI6ICJoYW5kbGVyLW9iamVjdCIsCiAgInByZWZpeCI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAxLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAxLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0KICBdLAogICJyZXN1bHQiOiAiPT4ge1xuICBcInZhbHVlXCI6IDQyXG59IiwKICAic3luY2hyb25vdXNUaHJvdyI6IGZhbHNlCn0K",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.00602141700000014
+      },
+      "expected": {
+        "id": "handler-object",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 1,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 1,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "result": "=> {\n  \"value\": 42\n}",
+        "synchronousThrow": false
+      }
+    },
+    {
+      "spec": {
+        "id": "handler-original-promise",
+        "target": "handler",
+        "code": "__reaPromiseOriginal.resolve(42)"
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"handler-original-promise\", \"target\": \"handler\", \"code\": \"__reaPromiseOriginal.resolve(42)\"})"
+        ],
+        "stdout": "=> {\n  \"id\": \"handler-original-promise\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    }\n  ],\n  \"result\": \"=> 42\",\n  \"synchronousThrow\": false\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJpZCI6ICJoYW5kbGVyLW9yaWdpbmFsLXByb21pc2UiLAogICJwcmVmaXgiOiBbCiAgICB7CiAgICAgICJvcCI6ICJnZXQtY29uc3RydWN0b3IiCiAgICB9LAogICAgewogICAgICAib3AiOiAiY29uc3RydWN0IiwKICAgICAgImV4ZWN1dG9yIjogewogICAgICAgICJuYW1lIjogIiIsCiAgICAgICAgImxlbmd0aCI6IDIsCiAgICAgICAgIm93blByb3RvdHlwZSI6IHRydWUKICAgICAgfQogICAgfSwKICAgIHsKICAgICAgIm9wIjogImdldC1pbnN0YW5jZSIKICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfQogIF0sCiAgInJlc3VsdCI6ICI9PiA0MiIsCiAgInN5bmNocm9ub3VzVGhyb3ciOiBmYWxzZQp9Cg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.01044129100000002
+      },
+      "expected": {
+        "id": "handler-original-promise",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          }
+        ],
+        "result": "=> 42",
+        "synchronousThrow": false
+      }
+    },
+    {
+      "spec": {
+        "id": "handler-forced-adoption",
+        "target": "handler",
+        "code": "__reaPromiseOriginal.resolve(42)",
+        "has_instance": "false"
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"handler-forced-adoption\", \"target\": \"handler\", \"code\": \"__reaPromiseOriginal.resolve(42)\", \"has_instance\": \"false\"})"
+        ],
+        "stdout": "=> {\n  \"id\": \"handler-forced-adoption\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"instance\",\n      \"type\": \"object\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 1,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"instance\",\n      \"type\": \"object\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 1,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"result\": \"=> 42\",\n  \"synchronousThrow\": false\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJpZCI6ICJoYW5kbGVyLWZvcmNlZC1hZG9wdGlvbiIsCiAgInByZWZpeCI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImluc3RhbmNlIiwKICAgICAgInR5cGUiOiAib2JqZWN0IgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAxLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImluc3RhbmNlIiwKICAgICAgInR5cGUiOiAib2JqZWN0IgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAxLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0KICBdLAogICJyZXN1bHQiOiAiPT4gNDIiLAogICJzeW5jaHJvbm91c1Rocm93IjogZmFsc2UKfQo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.013602375000000055
+      },
+      "expected": {
+        "id": "handler-forced-adoption",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "instance",
+            "type": "object"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 1,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "instance",
+            "type": "object"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 1,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "result": "=> 42",
+        "synchronousThrow": false
+      }
+    },
+    {
+      "spec": {
+        "id": "handler-invalid-instance",
+        "target": "handler",
+        "code": "42",
+        "has_instance": "true"
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"handler-invalid-instance\", \"target\": \"handler\", \"code\": \"42\", \"has_instance\": \"true\"})"
+        ],
+        "stdout": "=> {\n  \"id\": \"handler-invalid-instance\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"instance\",\n      \"type\": \"number\"\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"instance\",\n      \"type\": \"number\"\n    }\n  ],\n  \"synchronousThrow\": false,\n  \"error\": {\n    \"type\": \"object\",\n    \"same\": false,\n    \"name\": \"TypeError\",\n    \"message\": \"(t , (intermediate value)(intermediate value)(intermediate value)).then is not a function\",\n    \"text\": null\n  }\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJpZCI6ICJoYW5kbGVyLWludmFsaWQtaW5zdGFuY2UiLAogICJwcmVmaXgiOiBbCiAgICB7CiAgICAgICJvcCI6ICJnZXQtY29uc3RydWN0b3IiCiAgICB9LAogICAgewogICAgICAib3AiOiAiY29uc3RydWN0IiwKICAgICAgImV4ZWN1dG9yIjogewogICAgICAgICJuYW1lIjogIiIsCiAgICAgICAgImxlbmd0aCI6IDIsCiAgICAgICAgIm93blByb3RvdHlwZSI6IHRydWUKICAgICAgfQogICAgfSwKICAgIHsKICAgICAgIm9wIjogImdldC1pbnN0YW5jZSIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJpbnN0YW5jZSIsCiAgICAgICJ0eXBlIjogIm51bWJlciIKICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImluc3RhbmNlIiwKICAgICAgInR5cGUiOiAibnVtYmVyIgogICAgfQogIF0sCiAgInN5bmNocm9ub3VzVGhyb3ciOiBmYWxzZSwKICAiZXJyb3IiOiB7CiAgICAidHlwZSI6ICJvYmplY3QiLAogICAgInNhbWUiOiBmYWxzZSwKICAgICJuYW1lIjogIlR5cGVFcnJvciIsCiAgICAibWVzc2FnZSI6ICIodCAsIChpbnRlcm1lZGlhdGUgdmFsdWUpKGludGVybWVkaWF0ZSB2YWx1ZSkoaW50ZXJtZWRpYXRlIHZhbHVlKSkudGhlbiBpcyBub3QgYSBmdW5jdGlvbiIsCiAgICAidGV4dCI6IG51bGwKICB9Cn0K",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.007132750000000021
+      },
+      "expected": {
+        "id": "handler-invalid-instance",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "instance",
+            "type": "number"
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "instance",
+            "type": "number"
+          }
+        ],
+        "synchronousThrow": false,
+        "error": {
+          "type": "object",
+          "same": false,
+          "name": "TypeError",
+          "message": "(t , (intermediate value)(intermediate value)(intermediate value)).then is not a function",
+          "text": null
+        }
+      }
+    },
+    {
+      "spec": {
+        "id": "handler-instance-throw",
+        "target": "handler",
+        "code": "42",
+        "has_instance": "throw"
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"handler-instance-throw\", \"target\": \"handler\", \"code\": \"42\", \"has_instance\": \"throw\"})"
+        ],
+        "stdout": "=> {\n  \"id\": \"handler-instance-throw\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"instance\",\n      \"type\": \"number\"\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"instance\",\n      \"type\": \"number\"\n    }\n  ],\n  \"synchronousThrow\": false,\n  \"error\": {\n    \"type\": \"object\",\n    \"same\": true,\n    \"text\": null\n  }\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJpZCI6ICJoYW5kbGVyLWluc3RhbmNlLXRocm93IiwKICAicHJlZml4IjogWwogICAgewogICAgICAib3AiOiAiZ2V0LWNvbnN0cnVjdG9yIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAyLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJnZXQtaW5zdGFuY2UiCiAgICB9LAogICAgewogICAgICAib3AiOiAiaW5zdGFuY2UiLAogICAgICAidHlwZSI6ICJudW1iZXIiCiAgICB9CiAgXSwKICAidHJhY2UiOiBbCiAgICB7CiAgICAgICJvcCI6ICJnZXQtY29uc3RydWN0b3IiCiAgICB9LAogICAgewogICAgICAib3AiOiAiY29uc3RydWN0IiwKICAgICAgImV4ZWN1dG9yIjogewogICAgICAgICJuYW1lIjogIiIsCiAgICAgICAgImxlbmd0aCI6IDIsCiAgICAgICAgIm93blByb3RvdHlwZSI6IHRydWUKICAgICAgfQogICAgfSwKICAgIHsKICAgICAgIm9wIjogImdldC1pbnN0YW5jZSIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJpbnN0YW5jZSIsCiAgICAgICJ0eXBlIjogIm51bWJlciIKICAgIH0KICBdLAogICJzeW5jaHJvbm91c1Rocm93IjogZmFsc2UsCiAgImVycm9yIjogewogICAgInR5cGUiOiAib2JqZWN0IiwKICAgICJzYW1lIjogdHJ1ZSwKICAgICJ0ZXh0IjogbnVsbAogIH0KfQo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.01059187500000025
+      },
+      "expected": {
+        "id": "handler-instance-throw",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "instance",
+            "type": "number"
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "instance",
+            "type": "number"
+          }
+        ],
+        "synchronousThrow": false,
+        "error": {
+          "type": "object",
+          "same": true,
+          "text": null
+        }
+      }
+    },
+    {
+      "spec": {
+        "id": "handler-constructor-throw",
+        "target": "handler",
+        "code": "42",
+        "constructor_throw": true
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"handler-constructor-throw\", \"target\": \"handler\", \"code\": \"42\", \"constructor_throw\": true})"
+        ],
+        "stdout": "=> {\n  \"id\": \"handler-constructor-throw\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"synchronousThrow\": true,\n  \"error\": {\n    \"type\": \"object\",\n    \"same\": true,\n    \"text\": null\n  }\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJpZCI6ICJoYW5kbGVyLWNvbnN0cnVjdG9yLXRocm93IiwKICAicHJlZml4IjogWwogICAgewogICAgICAib3AiOiAiZ2V0LWNvbnN0cnVjdG9yIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAyLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9CiAgXSwKICAic3luY2hyb25vdXNUaHJvdyI6IHRydWUsCiAgImVycm9yIjogewogICAgInR5cGUiOiAib2JqZWN0IiwKICAgICJzYW1lIjogdHJ1ZSwKICAgICJ0ZXh0IjogbnVsbAogIH0KfQo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.014193666999999799
+      },
+      "expected": {
+        "id": "handler-constructor-throw",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "synchronousThrow": true,
+        "error": {
+          "type": "object",
+          "same": true,
+          "text": null
+        }
+      }
+    },
+    {
+      "spec": {
+        "id": "handler-empty",
+        "target": "handler",
+        "code": ""
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"handler-empty\", \"target\": \"handler\", \"code\": \"\"})"
+        ],
+        "stdout": "=> {\n  \"id\": \"handler-empty\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"synchronousThrow\": false,\n  \"error\": {\n    \"type\": \"string\",\n    \"same\": false,\n    \"text\": \"Missing required parameter: code\\nUsage: eval code=<javascript>\"\n  }\n}\n",
+        "stderr": "",
+        "stdout_base64": "PT4gewogICJpZCI6ICJoYW5kbGVyLWVtcHR5IiwKICAicHJlZml4IjogWwogICAgewogICAgICAib3AiOiAiZ2V0LWNvbnN0cnVjdG9yIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAyLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9CiAgXSwKICAic3luY2hyb25vdXNUaHJvdyI6IGZhbHNlLAogICJlcnJvciI6IHsKICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAic2FtZSI6IGZhbHNlLAogICAgInRleHQiOiAiTWlzc2luZyByZXF1aXJlZCBwYXJhbWV0ZXI6IGNvZGVcblVzYWdlOiBldmFsIGNvZGU9PGphdmFzY3JpcHQ+IgogIH0KfQo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.004512875000000083
+      },
+      "expected": {
+        "id": "handler-empty",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "synchronousThrow": false,
+        "error": {
+          "type": "string",
+          "same": false,
+          "text": "Missing required parameter: code\nUsage: eval code=<javascript>"
+        }
+      }
+    },
+    {
+      "spec": {
+        "id": "cli-primitive",
+        "target": "cli",
+        "code": "42"
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"cli-primitive\", \"target\": \"cli\", \"code\": \"42\"})"
+        ],
+        "stdout": "Received CLI command [\"eval\",\"code=42\"]\n=> {\n  \"id\": \"cli-primitive\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 1,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 1,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    }\n  ],\n  \"result\": \"=> 42\",\n  \"synchronousThrow\": false\n}\n",
+        "stderr": "",
+        "stdout_base64": "UmVjZWl2ZWQgQ0xJIGNvbW1hbmQgWyJldmFsIiwiY29kZT00MiJdCj0+IHsKICAiaWQiOiAiY2xpLXByaW1pdGl2ZSIsCiAgInByZWZpeCI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWNvbnN0cnVjdG9yIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAyLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJnZXQtaW5zdGFuY2UiCiAgICB9LAogICAgewogICAgICAib3AiOiAiY29uc3RydWN0IiwKICAgICAgImV4ZWN1dG9yIjogewogICAgICAgICJuYW1lIjogIiIsCiAgICAgICAgImxlbmd0aCI6IDEsCiAgICAgICAgIm93blByb3RvdHlwZSI6IHRydWUKICAgICAgfQogICAgfSwKICAgIHsKICAgICAgIm9wIjogImdldC1pbnN0YW5jZSIKICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWNvbnN0cnVjdG9yIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAyLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJnZXQtaW5zdGFuY2UiCiAgICB9LAogICAgewogICAgICAib3AiOiAiY29uc3RydWN0IiwKICAgICAgImV4ZWN1dG9yIjogewogICAgICAgICJuYW1lIjogIiIsCiAgICAgICAgImxlbmd0aCI6IDEsCiAgICAgICAgIm93blByb3RvdHlwZSI6IHRydWUKICAgICAgfQogICAgfSwKICAgIHsKICAgICAgIm9wIjogImdldC1pbnN0YW5jZSIKICAgIH0KICBdLAogICJyZXN1bHQiOiAiPT4gNDIiLAogICJzeW5jaHJvbm91c1Rocm93IjogZmFsc2UKfQo=",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.0035323329999999986
+      },
+      "expected": {
+        "id": "cli-primitive",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 1,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 1,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          }
+        ],
+        "result": "=> 42",
+        "synchronousThrow": false
+      }
+    },
+    {
+      "spec": {
+        "id": "cli-original-promise",
+        "target": "cli",
+        "code": "__reaPromiseOriginal.resolve(42)"
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"cli-original-promise\", \"target\": \"cli\", \"code\": \"__reaPromiseOriginal.resolve(42)\"})"
+        ],
+        "stdout": "Received CLI command [\"eval\",\"code=__reaPromiseOriginal.resolve(42)\"]\n=> {\n  \"id\": \"cli-original-promise\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"get-instance\"\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    },\n    {\n      \"op\": \"get-instance\"\n    },\n    {\n      \"op\": \"get-instance\"\n    }\n  ],\n  \"result\": \"=> 42\",\n  \"synchronousThrow\": false\n}\n",
+        "stderr": "",
+        "stdout_base64": "UmVjZWl2ZWQgQ0xJIGNvbW1hbmQgWyJldmFsIiwiY29kZT1fX3JlYVByb21pc2VPcmlnaW5hbC5yZXNvbHZlKDQyKSJdCj0+IHsKICAiaWQiOiAiY2xpLW9yaWdpbmFsLXByb21pc2UiLAogICJwcmVmaXgiOiBbCiAgICB7CiAgICAgICJvcCI6ICJnZXQtY29uc3RydWN0b3IiCiAgICB9LAogICAgewogICAgICAib3AiOiAiY29uc3RydWN0IiwKICAgICAgImV4ZWN1dG9yIjogewogICAgICAgICJuYW1lIjogIiIsCiAgICAgICAgImxlbmd0aCI6IDIsCiAgICAgICAgIm93blByb3RvdHlwZSI6IHRydWUKICAgICAgfQogICAgfSwKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImdldC1pbnN0YW5jZSIKICAgIH0KICBdLAogICJ0cmFjZSI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWNvbnN0cnVjdG9yIgogICAgfSwKICAgIHsKICAgICAgIm9wIjogImNvbnN0cnVjdCIsCiAgICAgICJleGVjdXRvciI6IHsKICAgICAgICAibmFtZSI6ICIiLAogICAgICAgICJsZW5ndGgiOiAyLAogICAgICAgICJvd25Qcm90b3R5cGUiOiB0cnVlCiAgICAgIH0KICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJnZXQtaW5zdGFuY2UiCiAgICB9LAogICAgewogICAgICAib3AiOiAiZ2V0LWluc3RhbmNlIgogICAgfQogIF0sCiAgInJlc3VsdCI6ICI9PiA0MiIsCiAgInN5bmNocm9ub3VzVGhyb3ciOiBmYWxzZQp9Cg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.004595332999999924
+      },
+      "expected": {
+        "id": "cli-original-promise",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "get-instance"
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          },
+          {
+            "op": "get-instance"
+          },
+          {
+            "op": "get-instance"
+          }
+        ],
+        "result": "=> 42",
+        "synchronousThrow": false
+      }
+    },
+    {
+      "spec": {
+        "id": "cli-missing",
+        "target": "cli",
+        "missing": true
+      },
+      "raw": {
+        "args": [
+          "eval",
+          "code=__reaPromiseProbe({\"id\": \"cli-missing\", \"target\": \"cli\", \"missing\": true})"
+        ],
+        "stdout": "Received CLI command [\"eval\"]\n=> {\n  \"id\": \"cli-missing\",\n  \"prefix\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"trace\": [\n    {\n      \"op\": \"get-constructor\"\n    },\n    {\n      \"op\": \"construct\",\n      \"executor\": {\n        \"name\": \"\",\n        \"length\": 2,\n        \"ownPrototype\": true\n      }\n    }\n  ],\n  \"synchronousThrow\": false,\n  \"error\": {\n    \"type\": \"string\",\n    \"same\": false,\n    \"text\": \"Missing required parameter: code=<javascript>\\nUsage: eval code=<javascript>\"\n  }\n}\n",
+        "stderr": "",
+        "stdout_base64": "UmVjZWl2ZWQgQ0xJIGNvbW1hbmQgWyJldmFsIl0KPT4gewogICJpZCI6ICJjbGktbWlzc2luZyIsCiAgInByZWZpeCI6IFsKICAgIHsKICAgICAgIm9wIjogImdldC1jb25zdHJ1Y3RvciIKICAgIH0sCiAgICB7CiAgICAgICJvcCI6ICJjb25zdHJ1Y3QiLAogICAgICAiZXhlY3V0b3IiOiB7CiAgICAgICAgIm5hbWUiOiAiIiwKICAgICAgICAibGVuZ3RoIjogMiwKICAgICAgICAib3duUHJvdG90eXBlIjogdHJ1ZQogICAgICB9CiAgICB9CiAgXSwKICAidHJhY2UiOiBbCiAgICB7CiAgICAgICJvcCI6ICJnZXQtY29uc3RydWN0b3IiCiAgICB9LAogICAgewogICAgICAib3AiOiAiY29uc3RydWN0IiwKICAgICAgImV4ZWN1dG9yIjogewogICAgICAgICJuYW1lIjogIiIsCiAgICAgICAgImxlbmd0aCI6IDIsCiAgICAgICAgIm93blByb3RvdHlwZSI6IHRydWUKICAgICAgfQogICAgfQogIF0sCiAgInN5bmNocm9ub3VzVGhyb3ciOiBmYWxzZSwKICAiZXJyb3IiOiB7CiAgICAidHlwZSI6ICJzdHJpbmciLAogICAgInNhbWUiOiBmYWxzZSwKICAgICJ0ZXh0IjogIk1pc3NpbmcgcmVxdWlyZWQgcGFyYW1ldGVyOiBjb2RlPTxqYXZhc2NyaXB0PlxuVXNhZ2U6IGV2YWwgY29kZT08amF2YXNjcmlwdD4iCiAgfQp9Cg==",
+        "stderr_base64": "",
+        "exit_code": 0,
+        "elapsed": 0.005232542000000118
+      },
+      "expected": {
+        "id": "cli-missing",
+        "prefix": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "trace": [
+          {
+            "op": "get-constructor"
+          },
+          {
+            "op": "construct",
+            "executor": {
+              "name": "",
+              "length": 2,
+              "ownPrototype": true
+            }
+          }
+        ],
+        "synchronousThrow": false,
+        "error": {
+          "type": "string",
+          "same": false,
+          "text": "Missing required parameter: code=<javascript>\nUsage: eval code=<javascript>"
+        }
+      }
+    }
+  ],
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "framework_early_failure": {
+    "framework_setup": {
+      "args": [
+        "eval",
+        "code=Promise.resolve=3;undefined"
+      ],
+      "stdout": "(no output)\n",
+      "stderr": "",
+      "stdout_base64": "KG5vIG91dHB1dCkK",
+      "stderr_base64": "",
+      "exit_code": 0,
+      "elapsed": 0.004776208999999865
+    },
+    "framework_probe": {
+      "args": [
+        "eval",
+        "code=globalThis.__reaPromiseTouched=41;new __reaPromiseOriginal(resolve=>setTimeout(()=>resolve(42),500))"
+      ],
+      "stdout": "TypeError: Promise.resolve is not a function\n",
+      "stderr": "",
+      "stdout_base64": "VHlwZUVycm9yOiBQcm9taXNlLnJlc29sdmUgaXMgbm90IGEgZnVuY3Rpb24K",
+      "stderr_base64": "",
+      "exit_code": 0,
+      "elapsed": 0.00516845900000007
+    },
+    "restore_first": {
+      "args": [
+        "command",
+        "id=rea-runtime-promise-boundaries:restore"
+      ],
+      "stdout": "TypeError: Promise.resolve is not a function\n",
+      "stderr": "",
+      "stdout_base64": "VHlwZUVycm9yOiBQcm9taXNlLnJlc29sdmUgaXMgbm90IGEgZnVuY3Rpb24K",
+      "stderr_base64": "",
+      "exit_code": 0,
+      "elapsed": 0.0036200840000000234
+    },
+    "restore_second": {
+      "args": [
+        "command",
+        "id=rea-runtime-promise-boundaries:restore"
+      ],
+      "stdout": "Executed: rea-runtime-promise-boundaries:restore\n",
+      "stderr": "",
+      "stdout_base64": "RXhlY3V0ZWQ6IHJlYS1ydW50aW1lLXByb21pc2UtYm91bmRhcmllczpyZXN0b3JlCg==",
+      "stderr_base64": "",
+      "exit_code": 0,
+      "elapsed": 0.006275208000000365
+    },
+    "framework_after": {
+      "args": [
+        "eval",
+        "code=JSON.stringify({touched:__reaPromiseTouched,resolveRestored:Promise.resolve===__reaPromiseOriginal.resolve})"
+      ],
+      "stdout": "=> {\"touched\":41,\"resolveRestored\":true}\n",
+      "stderr": "",
+      "stdout_base64": "PT4geyJ0b3VjaGVkIjo0MSwicmVzb2x2ZVJlc3RvcmVkIjp0cnVlfQo=",
+      "stderr_base64": "",
+      "exit_code": 0,
+      "elapsed": 0.004321999999999715
+    }
+  },
+  "authored_semantics": {
+    "construct": "Current realm constructor and ordinary executor shape observed, never cached resolve approximation",
+    "adopt": "Captured-constructor instanceof including user Symbol.hasInstance, identity-preserving thrown values, construct resolving executor when false, dynamic then",
+    "framework": "Evaluate resolve callee before synchronous handler prefix, reject immediately after noncallable invocation; pending handler survives outer rejection",
+    "timing": "500ms awaited owned timer did not delay5.17ms framework reply; synchronous write touched41 persisted"
+  }
+}

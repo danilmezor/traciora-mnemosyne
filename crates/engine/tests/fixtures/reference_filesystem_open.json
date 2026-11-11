@@ -1,0 +1,3724 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "reference_version": "1.14.4",
+    "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+    "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f"
+  },
+  "conditions": {
+    "use_mock_keychain": true,
+    "credential_scope": "real OS credentials excluded",
+    "request_pacing_seconds": 0.2,
+    "all_files_and_vaults_owned": true,
+    "focus_control": "Explicit native BrowserWindow.emit focus, not ordinary OS delivery proof."
+  },
+  "filesystem_cases": [
+    {
+      "id": "nested-file",
+      "path": "$RUN/vault/Inner/Note.md",
+      "argv": [
+        "eval",
+        "$RUN/vault/Inner/Note.md"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Isolated parity oracle.\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready nested\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy92YXVsdC9Jbm5lci9Ob3RlLm1kCg==",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Isolated parity oracle.\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "base-file",
+      "path": "$RUN/vault/Within.md",
+      "argv": [
+        "eval",
+        "$RUN/vault/Within.md"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Isolated parity oracle.\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy92YXVsdC9XaXRoaW4ubWQK",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nested-dir",
+      "path": "$RUN/vault/Inner",
+      "argv": [
+        "eval",
+        "$RUN/vault/Inner"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy92YXVsdC9Jbm5lcgo=",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "base-dir",
+      "path": "$RUN/vault",
+      "argv": [
+        "eval",
+        "$RUN/vault"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy92YXVsdAo=",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unregistered-dir",
+      "path": "$RUN/Unregistered",
+      "argv": [
+        "eval",
+        "$RUN/Unregistered"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy9VbnJlZ2lzdGVyZWQK",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relative-nested-file",
+      "path": "vault/Inner/Note.md",
+      "argv": [
+        "eval",
+        "vault/Inner/Note.md"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIHZhdWx0L0lubmVyL05vdGUubWQK",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "last-path-before-bad-selector",
+      "path": "$RUN/vault/Within.md",
+      "argv": [
+        "vault=Missing",
+        "eval",
+        "$RUN/vault/Within.md"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy92YXVsdC9XaXRoaW4ubWQK",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "literal-hash-path",
+      "path": "$RUN/vault/Hash#literal.md",
+      "argv": [
+        "eval",
+        "$RUN/vault/Hash#literal.md"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Within.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Within\ninside base\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Within.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy92YXVsdC9IYXNoI2xpdGVyYWwubWQK",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plain-text-file",
+      "path": "$RUN/vault/Plain.txt",
+      "argv": [
+        "eval",
+        "$RUN/vault/Plain.txt"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy92YXVsdC9QbGFpbi50eHQK",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outside-file-focused-peer",
+      "path": "$RUN/External.md",
+      "argv": [
+        "eval",
+        "$RUN/External.md"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "ParityReady.md",
+          "type": "markdown",
+          "editor": {
+            "text": "Ready peer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "ParityReady.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md",
+            "ParityReady.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy9FeHRlcm5hbC5tZAo=",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "file:$RUN/External.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Outside\nexternal buffer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "file:$RUN/External.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outside-text-focused-peer",
+      "path": "$RUN/External.txt",
+      "argv": [
+        "eval",
+        "$RUN/External.txt"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "file:$RUN/External.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Outside\nexternal buffer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "file:$RUN/External.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy9FeHRlcm5hbC50eHQK",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "file:$RUN/External.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Outside\nexternal buffer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "file:$RUN/External.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outside-symlink-no-transient-file",
+      "path": "$RUN/External-link.md",
+      "argv": [
+        "eval",
+        "$RUN/External-link.md"
+      ],
+      "before": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "file:$RUN/External.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Outside\nexternal buffer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "file:$RUN/External.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        }
+      ],
+      "process": {
+        "exit_code": 0,
+        "stdout": "T3BlbmVkIC9ob21lL3VzZXIvcmVmZXJlbmNlL3J1bi1neWVmcWlmcy9FeHRlcm5hbC1saW5rLm1kCg==",
+        "stderr": ""
+      },
+      "after": [
+        {
+          "id": "f1ea000000000001",
+          "active": "Hash.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Heading\nbase hash target\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Hash.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "Within.md",
+            "ParityReady.md",
+            "Inner/ParityReady.md",
+            "Inner/Note.md",
+            "Inner",
+            "Plain.txt",
+            "Hash#literal.md",
+            "Hash.md"
+          ]
+        },
+        {
+          "id": "3e6af0a8903d2b39",
+          "active": "Note.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# nested\nbody\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "Note.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        },
+        {
+          "id": "891d6a9b837c322d",
+          "active": "file:$RUN/External.md",
+          "type": "markdown",
+          "editor": {
+            "text": "# Outside\nexternal buffer\n",
+            "cursor": {
+              "line": 0,
+              "ch": 0
+            },
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            }
+          },
+          "leaves": [
+            {
+              "file": "file:$RUN/External.md",
+              "type": "markdown"
+            }
+          ],
+          "recents": [
+            "ParityReady.md",
+            "Hash#literal.md",
+            "Hash.md",
+            "Within.md"
+          ]
+        }
+      ]
+    }
+  ],
+  "ghost_cases": [
+    {
+      "id": "renamed",
+      "before": {
+        "files": [
+          "GhostSource.md",
+          "Target.md",
+          "Inner/ParityReady.md",
+          "Inner/Note.md",
+          "Plain.txt",
+          "Hash#literal.md",
+          "Hash.md",
+          "Within.md",
+          "ParityReady.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "Target.md": {},
+          "GhostSource.md": {
+            "Target.md": 1,
+            "GhostSource.md": 1
+          }
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "Target.md": {},
+          "GhostSource.md": {
+            "Missing": 1
+          }
+        },
+        "file_cache_keys": [
+          "ParityReady.md",
+          "Within.md",
+          "Hash.md",
+          "Hash#literal.md",
+          "Plain.txt",
+          "Inner/Note.md",
+          "Inner/ParityReady.md",
+          "Target.md",
+          "GhostSource.md"
+        ],
+        "sources": {
+          "GhostSource.md": {
+            "file": {
+              "path": "GhostSource.md",
+              "deleted": false,
+              "parent": "/"
+            },
+            "cache": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 10,
+                      "offset": 16
+                    }
+                  },
+                  "link": "Target",
+                  "original": "[[Target]]",
+                  "displayText": "Target"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 11,
+                      "offset": 17
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 22,
+                      "offset": 28
+                    }
+                  },
+                  "link": "Missing",
+                  "original": "[[Missing]]",
+                  "displayText": "Missing"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 23,
+                      "offset": 29
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 31,
+                      "offset": 37
+                    }
+                  },
+                  "link": "#Own",
+                  "original": "[[#Own]]",
+                  "displayText": "Own"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  },
+                  "heading": "Own",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 31,
+                      "offset": 37
+                    }
+                  }
+                }
+              ]
+            },
+            "recomputed_resolved": {
+              "Target.md": 1,
+              "GhostSource.md": 1
+            },
+            "recomputed_unresolved": {
+              "Missing": 1
+            }
+          }
+        }
+      },
+      "process": {
+        "exit_code": 0,
+        "stdout": "TW92ZWQ6IEdob3N0U291cmNlLm1kIC0+IC4vR3JhcGhHaG9zdC5tZAo=",
+        "stderr": ""
+      },
+      "after": {
+        "files": [
+          "GraphGhost.md",
+          "Target.md",
+          "Inner/ParityReady.md",
+          "Inner/Note.md",
+          "Plain.txt",
+          "Hash#literal.md",
+          "Hash.md",
+          "Within.md",
+          "ParityReady.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "Target.md": {},
+          "./GraphGhost.md": {
+            "Target.md": 1,
+            "./GraphGhost.md": 1
+          },
+          "GraphGhost.md": {
+            "Target.md": 1,
+            "GraphGhost.md": 1
+          }
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "Target.md": {},
+          "./GraphGhost.md": {
+            "Missing": 1
+          },
+          "GraphGhost.md": {
+            "Missing": 1
+          }
+        },
+        "file_cache_keys": [
+          "ParityReady.md",
+          "Within.md",
+          "Hash.md",
+          "Hash#literal.md",
+          "Plain.txt",
+          "Inner/Note.md",
+          "Inner/ParityReady.md",
+          "Target.md",
+          "./GraphGhost.md",
+          "GraphGhost.md"
+        ],
+        "sources": {
+          "./GraphGhost.md": {
+            "file": {
+              "path": "./GraphGhost.md",
+              "deleted": false
+            },
+            "cache": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 10,
+                      "offset": 16
+                    }
+                  },
+                  "link": "Target",
+                  "original": "[[Target]]",
+                  "displayText": "Target"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 11,
+                      "offset": 17
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 22,
+                      "offset": 28
+                    }
+                  },
+                  "link": "Missing",
+                  "original": "[[Missing]]",
+                  "displayText": "Missing"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 23,
+                      "offset": 29
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 31,
+                      "offset": 37
+                    }
+                  },
+                  "link": "#Own",
+                  "original": "[[#Own]]",
+                  "displayText": "Own"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  },
+                  "heading": "Own",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 31,
+                      "offset": 37
+                    }
+                  }
+                }
+              ]
+            },
+            "recomputed_resolved": {
+              "Target.md": 1,
+              "./GraphGhost.md": 1
+            },
+            "recomputed_unresolved": {
+              "Missing": 1
+            }
+          },
+          "GraphGhost.md": {
+            "file": {
+              "path": "GraphGhost.md",
+              "deleted": false,
+              "parent": "/"
+            },
+            "cache": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 10,
+                      "offset": 16
+                    }
+                  },
+                  "link": "Target",
+                  "original": "[[Target]]",
+                  "displayText": "Target"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 11,
+                      "offset": 17
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 22,
+                      "offset": 28
+                    }
+                  },
+                  "link": "Missing",
+                  "original": "[[Missing]]",
+                  "displayText": "Missing"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 23,
+                      "offset": 29
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 31,
+                      "offset": 37
+                    }
+                  },
+                  "link": "#Own",
+                  "original": "[[#Own]]",
+                  "displayText": "Own"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  },
+                  "heading": "Own",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 31,
+                      "offset": 37
+                    }
+                  }
+                }
+              ]
+            },
+            "recomputed_resolved": {
+              "Target.md": 1,
+              "GraphGhost.md": 1
+            },
+            "recomputed_unresolved": {
+              "Missing": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "target-renamed",
+      "process": {
+        "exit_code": 0,
+        "stdout": "UmVuYW1lZDogVGFyZ2V0Lm1kIC0+IFJlbmFtZWRUYXJnZXQubWQK",
+        "stderr": ""
+      },
+      "after": {
+        "files": [
+          "RenamedTarget.md",
+          "GraphGhost.md",
+          "Inner/ParityReady.md",
+          "Inner/Note.md",
+          "Plain.txt",
+          "Hash#literal.md",
+          "Hash.md",
+          "Within.md",
+          "ParityReady.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "GraphGhost.md": {
+            "RenamedTarget.md": 1,
+            "GraphGhost.md": 1
+          },
+          "RenamedTarget.md": {}
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "GraphGhost.md": {
+            "Missing": 1
+          },
+          "RenamedTarget.md": {}
+        },
+        "file_cache_keys": [
+          "ParityReady.md",
+          "Within.md",
+          "Hash.md",
+          "Hash#literal.md",
+          "Plain.txt",
+          "Inner/Note.md",
+          "Inner/ParityReady.md",
+          "GraphGhost.md",
+          "RenamedTarget.md"
+        ],
+        "sources": {
+          "./GraphGhost.md": {
+            "file": null,
+            "cache": null,
+            "recomputed_resolved": {},
+            "recomputed_unresolved": {}
+          },
+          "GraphGhost.md": {
+            "file": {
+              "path": "GraphGhost.md",
+              "deleted": false,
+              "parent": "/"
+            },
+            "cache": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 17,
+                      "offset": 23
+                    }
+                  },
+                  "link": "RenamedTarget",
+                  "original": "[[RenamedTarget]]",
+                  "displayText": "RenamedTarget"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 25,
+                      "offset": 31
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 36,
+                      "offset": 42
+                    }
+                  },
+                  "link": "Missing",
+                  "original": "[[Missing]]",
+                  "displayText": "Missing"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 37,
+                      "offset": 43
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 45,
+                      "offset": 51
+                    }
+                  },
+                  "link": "#Own",
+                  "original": "[[#Own]]",
+                  "displayText": "Own"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  },
+                  "heading": "Own",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 45,
+                      "offset": 51
+                    }
+                  }
+                }
+              ]
+            },
+            "recomputed_resolved": {
+              "RenamedTarget.md": 1,
+              "GraphGhost.md": 1
+            },
+            "recomputed_unresolved": {
+              "Missing": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "missing-created",
+      "after": {
+        "files": [
+          "Missing.md",
+          "RenamedTarget.md",
+          "GraphGhost.md",
+          "Inner/ParityReady.md",
+          "Inner/Note.md",
+          "Plain.txt",
+          "Hash#literal.md",
+          "Hash.md",
+          "Within.md",
+          "ParityReady.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "GraphGhost.md": {
+            "RenamedTarget.md": 1,
+            "Missing.md": 1,
+            "GraphGhost.md": 1
+          },
+          "RenamedTarget.md": {},
+          "Missing.md": {}
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "GraphGhost.md": {},
+          "RenamedTarget.md": {},
+          "Missing.md": {}
+        },
+        "file_cache_keys": [
+          "ParityReady.md",
+          "Within.md",
+          "Hash.md",
+          "Hash#literal.md",
+          "Plain.txt",
+          "Inner/Note.md",
+          "Inner/ParityReady.md",
+          "GraphGhost.md",
+          "RenamedTarget.md",
+          "Missing.md"
+        ],
+        "sources": {
+          "./GraphGhost.md": {
+            "file": null,
+            "cache": null,
+            "recomputed_resolved": {},
+            "recomputed_unresolved": {}
+          },
+          "GraphGhost.md": {
+            "file": {
+              "path": "GraphGhost.md",
+              "deleted": false,
+              "parent": "/"
+            },
+            "cache": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 17,
+                      "offset": 23
+                    }
+                  },
+                  "link": "RenamedTarget",
+                  "original": "[[RenamedTarget]]",
+                  "displayText": "RenamedTarget"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 25,
+                      "offset": 31
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 36,
+                      "offset": 42
+                    }
+                  },
+                  "link": "Missing",
+                  "original": "[[Missing]]",
+                  "displayText": "Missing"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 37,
+                      "offset": 43
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 45,
+                      "offset": 51
+                    }
+                  },
+                  "link": "#Own",
+                  "original": "[[#Own]]",
+                  "displayText": "Own"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  },
+                  "heading": "Own",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 45,
+                      "offset": 51
+                    }
+                  }
+                }
+              ]
+            },
+            "recomputed_resolved": {
+              "RenamedTarget.md": 1,
+              "Missing.md": 1,
+              "GraphGhost.md": 1
+            },
+            "recomputed_unresolved": {}
+          }
+        }
+      }
+    },
+    {
+      "id": "target-deleted",
+      "after": {
+        "files": [
+          "Missing.md",
+          "GraphGhost.md",
+          "Inner/ParityReady.md",
+          "Inner/Note.md",
+          "Plain.txt",
+          "Hash#literal.md",
+          "Hash.md",
+          "Within.md",
+          "ParityReady.md"
+        ],
+        "resolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "GraphGhost.md": {
+            "Missing.md": 1,
+            "GraphGhost.md": 1
+          },
+          "Missing.md": {}
+        },
+        "unresolved": {
+          "ParityReady.md": {},
+          "Within.md": {},
+          "Hash.md": {},
+          "Hash#literal.md": {},
+          "Inner/Note.md": {},
+          "Inner/ParityReady.md": {},
+          "GraphGhost.md": {
+            "RenamedTarget": 1
+          },
+          "Missing.md": {}
+        },
+        "file_cache_keys": [
+          "ParityReady.md",
+          "Within.md",
+          "Hash.md",
+          "Hash#literal.md",
+          "Plain.txt",
+          "Inner/Note.md",
+          "Inner/ParityReady.md",
+          "GraphGhost.md",
+          "Missing.md"
+        ],
+        "sources": {
+          "./GraphGhost.md": {
+            "file": null,
+            "cache": null,
+            "recomputed_resolved": {},
+            "recomputed_unresolved": {}
+          },
+          "GraphGhost.md": {
+            "file": {
+              "path": "GraphGhost.md",
+              "deleted": false,
+              "parent": "/"
+            },
+            "cache": {
+              "links": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 17,
+                      "offset": 23
+                    }
+                  },
+                  "link": "RenamedTarget",
+                  "original": "[[RenamedTarget]]",
+                  "displayText": "RenamedTarget"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 25,
+                      "offset": 31
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 36,
+                      "offset": 42
+                    }
+                  },
+                  "link": "Missing",
+                  "original": "[[Missing]]",
+                  "displayText": "Missing"
+                },
+                {
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 37,
+                      "offset": 43
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 45,
+                      "offset": 51
+                    }
+                  },
+                  "link": "#Own",
+                  "original": "[[#Own]]",
+                  "displayText": "Own"
+                }
+              ],
+              "headings": [
+                {
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  },
+                  "heading": "Own",
+                  "level": 1
+                }
+              ],
+              "sections": [
+                {
+                  "type": "heading",
+                  "position": {
+                    "start": {
+                      "line": 0,
+                      "col": 0,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "col": 5,
+                      "offset": 5
+                    }
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "col": 0,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "col": 45,
+                      "offset": 51
+                    }
+                  }
+                }
+              ]
+            },
+            "recomputed_resolved": {
+              "Missing.md": 1,
+              "GraphGhost.md": 1
+            },
+            "recomputed_unresolved": {
+              "RenamedTarget": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "seed_files": {
+    "vault/ParityReady.md": "Isolated parity oracle.\n",
+    "vault/Within.md": "# Within\ninside base\n",
+    "vault/Hash.md": "# Heading\nbase hash target\n",
+    "vault/Hash#literal.md": "literal hash filename\n",
+    "vault/Plain.txt": "plain text\n",
+    "vault/Inner/ParityReady.md": "Ready nested\n",
+    "vault/Inner/Note.md": "# nested\nbody\n",
+    "Peer/ParityReady.md": "Ready peer\n",
+    "Peer/Note.md": "# peer\nbody\n",
+    "External.md": "﻿# Outside\nexternal buffer\n",
+    "External.txt": "outside text\n"
+  },
+  "registry": {
+    "f1ea000000000001": {
+      "path": "$RUN/vault",
+      "ts": 1,
+      "open": true
+    },
+    "3e6af0a8903d2b39": {
+      "path": "$RUN/vault/Inner",
+      "ts": 1791974954713,
+      "open": true
+    },
+    "891d6a9b837c322d": {
+      "path": "$RUN/Peer",
+      "ts": 1791974955365,
+      "open": true
+    }
+  },
+  "ids": {
+    "nested": "3e6af0a8903d2b39",
+    "peer": "891d6a9b837c322d"
+  },
+  "cleanup": {
+    "pid": 37201,
+    "returncode": 0,
+    "stopped": true
+  },
+  "source_receipt": "target/rea/engine-clock/filesystem-open-report.json",
+  "source_evidence": {
+    "app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+    "app_anchors": {
+      "KP=function": {
+        "utf8_start": 1412997,
+        "utf8_end": 1413008
+      },
+      "getExternalFile=function": {
+        "utf8_start": 1413142,
+        "utf8_end": 1413166
+      },
+      "reconcileFile=function": {
+        "utf8_start": 565234,
+        "utf8_end": 565256
+      },
+      "reconcileInternalFile=function": {
+        "utf8_start": 565061,
+        "utf8_end": 565091
+      },
+      "function gB(": {
+        "utf8_start": 1809307,
+        "utf8_end": 1809319
+      },
+      "runAsyncLinkUpdate=function": {
+        "utf8_start": 1794785,
+        "utf8_end": 1794812
+      },
+      "updateInternalLinks=function": {
+        "utf8_start": 1758125,
+        "utf8_end": 1758153
+      },
+      "function zR(": {
+        "utf8_start": 1752422,
+        "utf8_end": 1752434
+      },
+      "function Al(": {
+        "utf8_start": 547962,
+        "utf8_end": 547974
+      }
+    },
+    "scope": "Independent Rust implementation; anchors identify shipped source, no source excerpts embedded."
+  }
+}

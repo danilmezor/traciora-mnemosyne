@@ -1,0 +1,801 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "authored_metadata": {
+    "query": {
+      "value": "<text>",
+      "description": "Query to echo",
+      "required": true
+    },
+    "done": {
+      "description": "Done marker"
+    },
+    "mode": {
+      "value": "<value>",
+      "description": "Mode to echo"
+    },
+    "format": {
+      "value": "text|json",
+      "description": "Output selector"
+    }
+  },
+  "authored_handler": "args => JSON.stringify({handler:\"base\",args:Object.fromEntries(Object.entries(args))})",
+  "base_completions": {
+    "aliasprobe": {
+      "usage": "query=<text> [done] [mode=<value>] [format=text|json]",
+      "description": "Echo framework arguments",
+      "flags": {
+        "query": {
+          "value": "<text>",
+          "description": "Query to echo (required)",
+          "required": true
+        },
+        "done": {
+          "description": "Done marker"
+        },
+        "mode": {
+          "value": "<value>",
+          "description": "Mode to echo"
+        },
+        "format": {
+          "value": "text|json",
+          "description": "Output selector"
+        }
+      }
+    }
+  },
+  "shadow_completions": {
+    "aliasprobe": {
+      "usage": "query=<text> [done] [mode=<value>] [format=text|json]",
+      "description": "Echo framework arguments",
+      "flags": {
+        "query": {
+          "value": "<text>",
+          "description": "Query to echo (required)",
+          "required": true
+        },
+        "done": {
+          "description": "Done marker"
+        },
+        "mode": {
+          "value": "<value>",
+          "description": "Mode to echo"
+        },
+        "format": {
+          "value": "text|json",
+          "description": "Output selector"
+        }
+      }
+    },
+    "aliasprobe:done": {
+      "usage": "",
+      "description": "Exact shadow command"
+    }
+  },
+  "schema_version": 1,
+  "coverage": "52 captured synthetic-framework pipe cases; only named background suggestion candidates are supplied. Built-in command help metadata, locale collation and clipboard execution are not certified by this fixture.",
+  "suggestion_background": [
+    "aliases",
+    "tag"
+  ],
+  "cases": [
+    {
+      "id": "framework-01",
+      "phase": "base",
+      "args": [
+        "aliasprobe"
+      ],
+      "expected": {
+        "stdout": "Error: Missing required parameter: query=<text>\nUsage: aliasprobe query=<text> [done] [mode=<value>] [format=text|json]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-02",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query="
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-03",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=false"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"false\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-04",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "done"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"done\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-05",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "done=false"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"done\":\"false\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-06",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=first",
+        "query=last"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"last\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-07",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "done",
+        "done=",
+        "done=false",
+        "done"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"done\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-08",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "a=b=c",
+        "unknown",
+        " spaced = value ",
+        "=emptyKey"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"a\":\"b=c\",\"unknown\":\"true\",\" spaced \":\" value \",\"\":\"emptyKey\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-09",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"json\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-10",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "--json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"json\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-11",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "text",
+        "json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"json\":\"true\",\"format\":\"text\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-12",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "json",
+        "text"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"json\":\"true\",\"format\":\"text\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-13",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "json=false"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"json\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-14",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "json="
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"json\":\"\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-15",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "format=",
+        "json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"json\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-16",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "format=json",
+        "text"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"json\",\"text\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-17",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "format=false",
+        "json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"false\",\"json\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-18",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "format=bogus",
+        "json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"bogus\",\"json\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-19",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "text=false",
+        "json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"json\":\"true\",\"format\":\"text\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-20",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "--text=false",
+        "json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"json\":\"true\",\"format\":\"text\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-21",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "json",
+        "--copy="
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"json\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-22",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "json",
+        "--copy=false"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"json\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-23",
+      "phase": "base",
+      "args": [
+        "aliasprobe:done",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"done\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-24",
+      "phase": "base",
+      "args": [
+        "aliasprobe:done",
+        "query=needle",
+        "done="
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"done\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-25",
+      "phase": "base",
+      "args": [
+        "aliasprobe:done",
+        "query=needle",
+        "done=false"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"done\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-26",
+      "phase": "base",
+      "args": [
+        "aliasprobe:mode",
+        "query=needle",
+        "mode=actual"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"mode\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-27",
+      "phase": "base",
+      "args": [
+        "aliasprobe:query"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-28",
+      "phase": "base",
+      "args": [
+        "aliasprobe:query",
+        "query=actual"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-29",
+      "phase": "base",
+      "args": [
+        "aliasprobe:format",
+        "query=needle",
+        "format=json",
+        "json"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"format\":\"true\",\"json\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-30",
+      "phase": "base",
+      "args": [
+        "aliasprobe:done"
+      ],
+      "expected": {
+        "stdout": "Error: Missing required parameter: query=<text>\nUsage: aliasprobe query=<text> [done] [mode=<value>] [format=text|json]\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-31",
+      "phase": "base",
+      "args": [
+        "aliasprobe:done:mode",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "Error: Command \"aliasprobe:done:mode\" not found. It may require a plugin to be enabled.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-32",
+      "phase": "base",
+      "args": [
+        "aliasprobe:unknown",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "Error: Command \"aliasprobe:unknown\" not found. It may require a plugin to be enabled.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-33",
+      "phase": "base",
+      "args": [
+        "Aliasprobe:done",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "Error: Command \"Aliasprobe:done\" not found. It may require a plugin to be enabled.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-34",
+      "phase": "base",
+      "args": [
+        "aliasprobe:Done",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "Error: Command \"aliasprobe:Done\" not found. It may require a plugin to be enabled.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-35",
+      "phase": "base",
+      "args": [
+        "aliasprobe:constructor",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"constructor\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-36",
+      "phase": "base",
+      "args": [
+        "aliasprobe:toString",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"toString\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-37",
+      "phase": "base",
+      "args": [
+        "aliasprobe:__proto__",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-38",
+      "phase": "base",
+      "args": [
+        "aliasprobe",
+        "query=needle",
+        "constructor=x",
+        "__proto__=x"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"constructor\":\"x\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-39",
+      "phase": "base",
+      "args": [
+        "help",
+        "aliasprobe"
+      ],
+      "expected": {
+        "stdout": "  aliasprobe            Echo framework arguments\n    query=<text>        - Query to echo (required)\n    done                - Done marker\n    mode=<value>        - Mode to echo\n    format=text|json    - Output selector\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-40",
+      "phase": "base",
+      "args": [
+        "help",
+        "aliasprobe:done"
+      ],
+      "expected": {
+        "stdout": "No commands matching \"aliasprobe:done\".\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-41",
+      "phase": "base",
+      "args": [
+        "help",
+        "aliaspro"
+      ],
+      "expected": {
+        "stdout": "No commands matching \"aliaspro\". Did you mean: aliasprobe, aliases?\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-42",
+      "phase": "base",
+      "args": [
+        "aliaspro",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "Error: Command \"aliaspro\" not found. Did you mean: aliasprobe, aliases?\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-43",
+      "phase": "base",
+      "args": [
+        "help:aliasprobe"
+      ],
+      "expected": {
+        "stdout": "Error: Command \"help:aliasprobe\" not found. It may require a plugin to be enabled.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-44",
+      "phase": "base",
+      "args": [
+        "help",
+        "2",
+        "aliasprobe"
+      ],
+      "expected": {
+        "stdout": "No commands matching \"2\". Did you mean: tag?\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-45",
+      "phase": "shadow_registered",
+      "args": [
+        "aliasprobe:done"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"shadow\",\"args\":{}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-46",
+      "phase": "shadow_registered",
+      "args": [
+        "aliasprobe:done",
+        "query=needle",
+        "done="
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"shadow\",\"args\":{\"query\":\"needle\",\"done\":\"\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-47",
+      "phase": "shadow_registered",
+      "args": [
+        "aliasprobe:done",
+        "query=needle",
+        "done=false"
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"shadow\",\"args\":{\"query\":\"needle\",\"done\":\"false\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-48",
+      "phase": "shadow_registered",
+      "args": [
+        "help",
+        "aliasprobe"
+      ],
+      "expected": {
+        "stdout": "  aliasprobe            Echo framework arguments\n    query=<text>        - Query to echo (required)\n    done                - Done marker\n    mode=<value>        - Mode to echo\n    format=text|json    - Output selector\n\n  aliasprobe:done       Exact shadow command\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-49",
+      "phase": "shadow_registered",
+      "args": [
+        "help",
+        "aliasprobe:done"
+      ],
+      "expected": {
+        "stdout": "  aliasprobe:done       Exact shadow command\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-50",
+      "phase": "shadow_registered",
+      "args": [
+        "aliasprobe:done:mode",
+        "query=needle"
+      ],
+      "expected": {
+        "stdout": "Error: Command \"aliasprobe:done:mode\" not found. It may require a plugin to be enabled.\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-51",
+      "phase": "shadow_removed",
+      "args": [
+        "aliasprobe:done",
+        "query=needle",
+        "done="
+      ],
+      "expected": {
+        "stdout": "{\"handler\":\"base\",\"args\":{\"query\":\"needle\",\"done\":\"true\"}}\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "framework-52",
+      "phase": "shadow_removed",
+      "args": [
+        "help",
+        "aliasprobe:done"
+      ],
+      "expected": {
+        "stdout": "No commands matching \"aliasprobe:done\".\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    }
+  ]
+}

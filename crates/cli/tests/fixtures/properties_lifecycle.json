@@ -1,0 +1,2083 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "schema_version": 1,
+  "read_cases": [],
+  "initial_files": {
+    "Live.md": "---\nTitle: before\n---\nBody\n",
+    "Array.md": "---\n- one\n- two\n---\nArray body\n",
+    "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+    "MapError.md": "---\na: {bad\n---\nBody\n",
+    "NoFM.md": "Body\n"
+  },
+  "initial_types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+  "mutation_cases": [
+    {
+      "id": "clean-header",
+      "args": [
+        "property:set",
+        "name=Title",
+        "value=after"
+      ],
+      "cached_source_proof": {
+        "Live.md": "---\nTitle: before\n---\nBody\n"
+      },
+      "opened_mode": "clean",
+      "prototype_proof": {
+        "Live.md": {
+          "keys": [
+            "Title"
+          ],
+          "hasOwnProto": false,
+          "prototypeConstructor": "Object"
+        }
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "Live.md",
+          "editor": {
+            "text": "---\nTitle: before\n---\nBody\n",
+            "anchor": {
+              "line": 3,
+              "ch": 0
+            },
+            "head": {
+              "line": 3,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {
+            "title": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Title: after\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: after\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "Live.md",
+          "editor": {
+            "text": "---\nTitle: after\n---\nBody\n",
+            "anchor": {
+              "line": 3,
+              "ch": 0
+            },
+            "head": {
+              "line": 3,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {
+            "title": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "dirty-header",
+      "args": [
+        "property:set",
+        "name=Title",
+        "value=after"
+      ],
+      "cached_source_proof": {
+        "Live.md": "---\nTitle: before\n---\nBody\n"
+      },
+      "opened_mode": "dirty",
+      "prototype_proof": {
+        "Live.md": {
+          "keys": [
+            "Title"
+          ],
+          "hasOwnProto": false,
+          "prototypeConstructor": "Object"
+        }
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "Live.md",
+          "editor": {
+            "text": "---\nTitle: before\n---\ndirty Body\n",
+            "anchor": {
+              "line": 3,
+              "ch": 0
+            },
+            "head": {
+              "line": 3,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {
+            "title": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Title: after\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: after\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "Live.md",
+          "editor": {
+            "text": "---\nTitle: after\n---\ndirty Body\n",
+            "anchor": {
+              "line": 3,
+              "ch": 0
+            },
+            "head": {
+              "line": 3,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {
+            "title": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "clean-remove",
+      "args": [
+        "property:remove",
+        "name=Title"
+      ],
+      "cached_source_proof": {
+        "Live.md": "---\nTitle: before\n---\nBody\n"
+      },
+      "opened_mode": "clean",
+      "prototype_proof": {
+        "Live.md": {
+          "keys": [
+            "Title"
+          ],
+          "hasOwnProto": false,
+          "prototypeConstructor": "Object"
+        }
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "Live.md",
+          "editor": {
+            "text": "---\nTitle: before\n---\nBody\n",
+            "anchor": {
+              "line": 3,
+              "ch": 0
+            },
+            "head": {
+              "line": 3,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {
+            "title": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: Title\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "Body\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "Live.md",
+          "editor": {
+            "text": "Body\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {},
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "dirty-remove",
+      "args": [
+        "property:remove",
+        "name=Title"
+      ],
+      "cached_source_proof": {
+        "Live.md": "---\nTitle: before\n---\nBody\n"
+      },
+      "opened_mode": "dirty",
+      "prototype_proof": {
+        "Live.md": {
+          "keys": [
+            "Title"
+          ],
+          "hasOwnProto": false,
+          "prototypeConstructor": "Object"
+        }
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "Live.md",
+          "editor": {
+            "text": "---\nTitle: before\n---\ndirty Body\n",
+            "anchor": {
+              "line": 3,
+              "ch": 0
+            },
+            "head": {
+              "line": 3,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {
+            "title": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: Title\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "Body\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "Live.md",
+          "editor": {
+            "text": "Body\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {},
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "new-fm-open",
+      "args": [
+        "property:set",
+        "name=k",
+        "value=v"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "Body\n"
+      },
+      "opened_mode": "clean",
+      "prototype_proof": {
+        "NoFM.md": null
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "Body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "NoFM.md",
+          "editor": {
+            "text": "Body\n",
+            "anchor": {
+              "line": 0,
+              "ch": 2
+            },
+            "head": {
+              "line": 0,
+              "ch": 2
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "occurrences": {
+            "title": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set k: v\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": "NoFM.md",
+          "editor": {
+            "text": "---\nk: v\n---\nBody\n",
+            "anchor": {
+              "line": 0,
+              "ch": 0
+            },
+            "head": {
+              "line": 0,
+              "ch": 0
+            },
+            "selection": ""
+          },
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "proto-string",
+      "args": [
+        "property:set",
+        "file=Live",
+        "name=__proto__",
+        "value=text"
+      ],
+      "cached_source_proof": {
+        "Live.md": "---\nTitle: before\n---\nBody\n"
+      },
+      "opened_mode": null,
+      "prototype_proof": {
+        "Live.md": {
+          "keys": [
+            "Title"
+          ],
+          "hasOwnProto": false,
+          "prototypeConstructor": "Object"
+        }
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set __proto__: text\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "proto-array",
+      "args": [
+        "property:set",
+        "file=Live",
+        "name=__proto__",
+        "value=[\"x\"]"
+      ],
+      "cached_source_proof": {
+        "Live.md": "---\nTitle: before\n---\nBody\n"
+      },
+      "opened_mode": null,
+      "prototype_proof": {
+        "Live.md": {
+          "keys": [
+            "Title"
+          ],
+          "hasOwnProto": false,
+          "prototypeConstructor": "Object"
+        }
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set __proto__: [\"x\"]\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\n- x\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "constructor",
+      "args": [
+        "property:set",
+        "file=Live",
+        "name=constructor",
+        "value=text"
+      ],
+      "cached_source_proof": {
+        "Live.md": "---\nTitle: before\n---\nBody\n"
+      },
+      "opened_mode": null,
+      "prototype_proof": {
+        "Live.md": {
+          "keys": [
+            "Title"
+          ],
+          "hasOwnProto": false,
+          "prototypeConstructor": "Object"
+        }
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set constructor: text\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\nconstructor: text\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            },
+            "constructor": {
+              "name": "constructor",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "constructor": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "array-length",
+      "args": [
+        "property:set",
+        "file=Array",
+        "name=length",
+        "value=1"
+      ],
+      "cached_source_proof": {
+        "Array.md": "---\n- one\n- two\n---\nArray body\n"
+      },
+      "opened_mode": null,
+      "prototype_proof": {
+        "Array.md": null
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\nconstructor: text\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            },
+            "constructor": {
+              "name": "constructor",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "constructor": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set length: 1\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\nconstructor: text\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            },
+            "constructor": {
+              "name": "constructor",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "constructor": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "duplicate-yaml",
+      "args": [
+        "property:set",
+        "file=Duplicate",
+        "name=k",
+        "value=v"
+      ],
+      "cached_source_proof": {
+        "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n"
+      },
+      "opened_mode": null,
+      "prototype_proof": {
+        "Duplicate.md": null
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\nconstructor: text\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            },
+            "constructor": {
+              "name": "constructor",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "constructor": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Map keys must be unique at line 2, column 1:\n\na: 1\na: 2\n^\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\nconstructor: text\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            },
+            "constructor": {
+              "name": "constructor",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "constructor": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "flow-map-error",
+      "args": [
+        "property:set",
+        "file=MapError",
+        "name=k",
+        "value=v"
+      ],
+      "cached_source_proof": {
+        "MapError.md": "---\na: {bad\n---\nBody\n"
+      },
+      "opened_mode": null,
+      "prototype_proof": {
+        "MapError.md": null
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\nconstructor: text\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            },
+            "constructor": {
+              "name": "constructor",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "constructor": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Flow map in block collection must be sufficiently indented and end with a } at line 2, column 1:\n\na: {bad\n\n^\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "Live.md": "---\nTitle: before\nconstructor: text\n---\nBody\n",
+            "Duplicate.md": "---\na: 1\na: 2\n---\nBody\n",
+            "Array.md": "---\n- one\n---\nArray body\n",
+            "MapError.md": "---\na: {bad\n---\nBody\n",
+            "NoFM.md": "---\nk: v\n---\nBody\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "k": {
+              "name": "k",
+              "widget": "text"
+            },
+            "constructor": {
+              "name": "constructor",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "title": 1,
+            "constructor": 1,
+            "k": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "Live.md",
+            "Array.md",
+            "Duplicate.md",
+            "MapError.md",
+            "NoFM.md"
+          ]
+        }
+      }
+    }
+  ],
+  "evidence": [
+    "target/rea/properties-probes/report-lifecycle-part1.json",
+    "target/rea/properties-probes/report-lifecycle-part2.json"
+  ],
+  "app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "limitations": [
+    "Cursor positions reproduce actual editor coordinates after native visible-frontmatter clipping, not unsupported UI operations.",
+    "Saved bytes are proved before dirty setup; autosave timing outside observations remains pending.",
+    "Array inherited iterator length overrides and arbitrary prototype-object graphs remain open.",
+    "General YAML diagnostics and invalid/large array-length exception framing remain open beyond the captured cases."
+  ]
+}

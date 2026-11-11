@@ -1,0 +1,6126 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "schema_version": 1,
+  "read_cases": [
+    {
+      "id": "empty-0",
+      "args": [
+        "properties",
+        "file=Unicode",
+        "format=json"
+      ],
+      "state": {
+        "active": null,
+        "editor": null,
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "{\n  \"1\": \"one\",\n  \"3\": \"three\",\n  \"é\": \"café\",\n  \"emoji\": \"😀\",\n  \"01\": \"zero-one\"\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty-1",
+      "args": [
+        "properties",
+        "file=Unicode",
+        "format=tsv"
+      ],
+      "state": {
+        "active": null,
+        "editor": null,
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "1\tone\n3\tthree\né\tcafé\nemoji\t😀\n01\tzero-one\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty-2",
+      "args": [
+        "properties",
+        "file=Unicode",
+        "format=yaml"
+      ],
+      "state": {
+        "active": null,
+        "editor": null,
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "\"1\": one\n\"3\": three\né: café\nemoji: 😀\n\"01\": zero-one\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty-3",
+      "args": [
+        "property:read",
+        "file=EmptyLists",
+        "name=empty"
+      ],
+      "state": {
+        "active": null,
+        "editor": null,
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "(empty)\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty-4",
+      "args": [
+        "property:read",
+        "file=EmptyLists",
+        "name=onlyNull"
+      ],
+      "state": {
+        "active": null,
+        "editor": null,
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "empty-5",
+      "args": [
+        "properties",
+        "file=EmptyLists",
+        "format=tsv"
+      ],
+      "state": {
+        "active": null,
+        "editor": null,
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "empty\t\nonlyNull\t\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "active-0",
+      "args": [
+        "properties",
+        "file=Unicode",
+        "format=json"
+      ],
+      "state": {
+        "active": "Unicode.md",
+        "editor": {
+          "text": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "selection": ""
+        },
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "{\n  \"1\": \"one\",\n  \"3\": \"three\",\n  \"é\": \"café\",\n  \"emoji\": \"😀\",\n  \"01\": \"zero-one\"\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "active-1",
+      "args": [
+        "properties",
+        "file=Unicode",
+        "format=tsv"
+      ],
+      "state": {
+        "active": "Unicode.md",
+        "editor": {
+          "text": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "selection": ""
+        },
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "1\tone\n3\tthree\né\tcafé\nemoji\t😀\n01\tzero-one\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "active-2",
+      "args": [
+        "properties",
+        "file=Unicode",
+        "format=yaml"
+      ],
+      "state": {
+        "active": "Unicode.md",
+        "editor": {
+          "text": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "selection": ""
+        },
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "\"1\": one\n\"3\": three\né: café\nemoji: 😀\n\"01\": zero-one\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "active-3",
+      "args": [
+        "property:read",
+        "file=EmptyLists",
+        "name=empty"
+      ],
+      "state": {
+        "active": "Unicode.md",
+        "editor": {
+          "text": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "selection": ""
+        },
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "(empty)\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "active-4",
+      "args": [
+        "property:read",
+        "file=EmptyLists",
+        "name=onlyNull"
+      ],
+      "state": {
+        "active": "Unicode.md",
+        "editor": {
+          "text": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "selection": ""
+        },
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "active-5",
+      "args": [
+        "properties",
+        "file=EmptyLists",
+        "format=tsv"
+      ],
+      "state": {
+        "active": "Unicode.md",
+        "editor": {
+          "text": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+          "anchor": {
+            "line": 7,
+            "ch": 0
+          },
+          "head": {
+            "line": 7,
+            "ch": 0
+          },
+          "selection": ""
+        },
+        "properties": {
+          "1": {
+            "name": "1",
+            "widget": "text"
+          },
+          "3": {
+            "name": "3",
+            "widget": "text"
+          },
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          },
+          "old": {
+            "name": "old",
+            "widget": "text"
+          },
+          "empty": {
+            "name": "empty",
+            "widget": "multitext"
+          },
+          "onlynull": {
+            "name": "onlyNull",
+            "widget": "multitext"
+          },
+          "nullkey": {
+            "name": "nullKey",
+            "widget": "text"
+          },
+          "é": {
+            "name": "é",
+            "widget": "text"
+          },
+          "emoji": {
+            "name": "emoji",
+            "widget": "text"
+          },
+          "01": {
+            "name": "01",
+            "widget": "text"
+          }
+        },
+        "occurrences": {
+          "1": 1,
+          "3": 1,
+          "old": 1,
+          "empty": 1,
+          "onlynull": 1,
+          "nullkey": 1,
+          "é": 1,
+          "emoji": 1,
+          "01": 1
+        },
+        "assigned": {
+          "stored": {
+            "name": "Stored",
+            "widget": "checkbox"
+          },
+          "title": {
+            "name": "Title",
+            "widget": "text"
+          },
+          "aliases": {
+            "name": "aliases",
+            "widget": "aliases"
+          },
+          "cssclasses": {
+            "name": "cssclasses",
+            "widget": "multitext"
+          },
+          "tags": {
+            "name": "tags",
+            "widget": "tags"
+          }
+        },
+        "cache_order": [
+          "NoFM.md",
+          "PlainCRLF.md",
+          "Array.md",
+          "EmptyLists.md",
+          "Unicode.md"
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "empty\t\nonlyNull\t\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "mutation_cases": [
+    {
+      "id": "nested-array",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Array",
+        "value=[[1,2],[],[null],{\"a\":[\"b\",null],\"empty\":{}}]"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Array: [[1,2],[],[null],{\"a\":[\"b\",null],\"empty\":{}}]\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nArray:\n  - - 1\n    - 2\n  - []\n  - - \n  - a:\n      - b\n      - \n    empty: {}\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "array": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unicode",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=É😀",
+        "value=café 😀"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set É😀: café 😀\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nÉ😀: café 😀\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "é😀": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "multiline-plain",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Multi",
+        "value=first\nsecond"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Multi: first\nsecond\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nMulti: |-\n  first\n  second\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "multi": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "multiline-blank",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Multi",
+        "value=first\n\nsecond\n\n"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Multi: first\n\nsecond\n\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nMulti: |+\n  first\n\n  second\n\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "multi": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "control",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Control",
+        "value=a\tb\rc\u0007"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Control: a\tb\rc\u0007\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nControl: \"a\\tb\\rc\\a\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "control": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hash",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Hash",
+        "value=a # b"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Hash: a # b\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nHash: \"a # b\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "hash": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "numeric-text",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Numeric",
+        "value=0123"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Numeric: 0123\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNumeric: \"0123\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "numeric": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "time-text",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Time",
+        "value=12:30"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Time: 12:30\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nTime: 12:30\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "time": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "colon",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Colon",
+        "value=a: b"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Colon: a: b\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nColon: \"a: b\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "colon": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "quote",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Quote",
+        "value='a'"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Quote: 'a'\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nQuote: \"'a'\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "quote": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "newline-only",
+      "args": [
+        "property:set",
+        "file=NoFM",
+        "name=Newline",
+        "value=\n"
+      ],
+      "cached_source_proof": {
+        "NoFM.md": "# body\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set Newline: \n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "plain-crlf",
+      "args": [
+        "property:set",
+        "file=PlainCRLF",
+        "name=z",
+        "value=after"
+      ],
+      "cached_source_proof": {
+        "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set z: after\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\nz: after\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            },
+            "z": {
+              "name": "z",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "z": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "array-index",
+      "args": [
+        "property:set",
+        "file=Array",
+        "name=4",
+        "value=x"
+      ],
+      "cached_source_proof": {
+        "Array.md": "---\n- one\n- two\n---\nBody\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\nz: after\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            },
+            "z": {
+              "name": "z",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "z": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set 4: x\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n- \n- \n- x\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\nz: after\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            },
+            "z": {
+              "name": "z",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "z": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "array-remove",
+      "args": [
+        "property:remove",
+        "file=Array",
+        "name=0"
+      ],
+      "cached_source_proof": {
+        "Array.md": "---\n- one\n- two\n---\nBody\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- one\n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\nz: after\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            },
+            "z": {
+              "name": "z",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "z": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Removed: 0\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- \n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\nz: after\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            },
+            "z": {
+              "name": "z",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "z": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "integer-name",
+      "args": [
+        "property:set",
+        "file=Unicode",
+        "name=2",
+        "value=two"
+      ],
+      "cached_source_proof": {
+        "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- \n- two\n---\nBody\n",
+            "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\nz: after\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            },
+            "z": {
+              "name": "z",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "z": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Set 2: two\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+            "Array.md": "---\n- \n- two\n---\nBody\n",
+            "Unicode.md": "---\n\"1\": one\n\"2\": two\n\"3\": three\né: café\nemoji: 😀\n\"01\": zero-one\n---\nBody\n",
+            "PlainCRLF.md": "---\r\nold: before\nz: after\n---\r\nBody\r\n",
+            "NoFM.md": "---\nNewline: \"\\n\"\n---\n# body\n"
+          },
+          "directories": [],
+          "vault_exists": true
+        },
+        "types": "{\n  \"types\": {\n    \"Stored\": \"checkbox\",\n    \"Title\": \"text\",\n    \"aliases\": \"aliases\",\n    \"cssclasses\": \"multitext\",\n    \"tags\": \"tags\",\n    \"Array\": \"multitext\"\n  }\n}",
+        "state": {
+          "active": null,
+          "editor": null,
+          "properties": {
+            "1": {
+              "name": "1",
+              "widget": "text"
+            },
+            "2": {
+              "name": "2",
+              "widget": "text"
+            },
+            "3": {
+              "name": "3",
+              "widget": "text"
+            },
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            },
+            "old": {
+              "name": "old",
+              "widget": "text"
+            },
+            "empty": {
+              "name": "empty",
+              "widget": "multitext"
+            },
+            "onlynull": {
+              "name": "onlyNull",
+              "widget": "multitext"
+            },
+            "nullkey": {
+              "name": "nullKey",
+              "widget": "text"
+            },
+            "é": {
+              "name": "é",
+              "widget": "text"
+            },
+            "emoji": {
+              "name": "emoji",
+              "widget": "text"
+            },
+            "01": {
+              "name": "01",
+              "widget": "text"
+            },
+            "é😀": {
+              "name": "É😀",
+              "widget": "text"
+            },
+            "multi": {
+              "name": "Multi",
+              "widget": "text"
+            },
+            "control": {
+              "name": "Control",
+              "widget": "text"
+            },
+            "hash": {
+              "name": "Hash",
+              "widget": "text"
+            },
+            "numeric": {
+              "name": "Numeric",
+              "widget": "text"
+            },
+            "time": {
+              "name": "Time",
+              "widget": "text"
+            },
+            "colon": {
+              "name": "Colon",
+              "widget": "text"
+            },
+            "quote": {
+              "name": "Quote",
+              "widget": "text"
+            },
+            "newline": {
+              "name": "Newline",
+              "widget": "text"
+            },
+            "z": {
+              "name": "z",
+              "widget": "text"
+            }
+          },
+          "occurrences": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "newline": 1,
+            "old": 1,
+            "z": 1,
+            "empty": 1,
+            "onlynull": 1,
+            "nullkey": 1,
+            "é": 1,
+            "emoji": 1,
+            "01": 1
+          },
+          "assigned": {
+            "stored": {
+              "name": "Stored",
+              "widget": "checkbox"
+            },
+            "title": {
+              "name": "Title",
+              "widget": "text"
+            },
+            "aliases": {
+              "name": "aliases",
+              "widget": "aliases"
+            },
+            "cssclasses": {
+              "name": "cssclasses",
+              "widget": "multitext"
+            },
+            "tags": {
+              "name": "tags",
+              "widget": "tags"
+            },
+            "array": {
+              "name": "Array",
+              "widget": "multitext"
+            }
+          },
+          "cache_order": [
+            "NoFM.md",
+            "PlainCRLF.md",
+            "Array.md",
+            "EmptyLists.md",
+            "Unicode.md"
+          ]
+        }
+      }
+    }
+  ],
+  "initial_files": {
+    "NoFM.md": "# body\n",
+    "PlainCRLF.md": "---\r\nold: before\r\n---\r\nBody\r\n",
+    "Array.md": "---\n- one\n- two\n---\nBody\n",
+    "EmptyLists.md": "---\nempty: []\nonlyNull: [null]\nnullKey:\n---\nBody\n",
+    "Unicode.md": "---\né: café\nemoji: 😀\n3: three\n1: one\n\"01\": zero-one\n---\nBody\n"
+  },
+  "initial_types": "{\"types\": {\"Stored\": \"checkbox\", \"Title\": \"text\"}}",
+  "evidence": "target/rea/properties-probes/report-edges.json",
+  "app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "warm_creation_order": [
+    "NoFM.md",
+    "PlainCRLF.md",
+    "Array.md",
+    "EmptyLists.md",
+    "Unicode.md"
+  ]
+}

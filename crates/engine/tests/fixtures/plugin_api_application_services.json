@@ -1,0 +1,300 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "isolation_proof": {
+    "vault": "/home/user/reference/run-jpda5_dk/vault",
+    "profile": "/home/user/reference/run-jpda5_dk/profile",
+    "use_mock_keychain": true
+  },
+  "authored_plugin_sha256": "623ef21c6034e1b07d172d447984a700f30d29255dcf3304abff7c8cff2ab69e",
+  "load": {
+    "loaded": true
+  },
+  "authored_cases_sha256": "ea671f8f1b9cc786cedf1dcb4038dff76c2239b4c61e9caf52ff45fbe3ccc2fd",
+  "cases": {
+    "cases": [
+      {
+        "id": "text",
+        "result": {
+          "type": "string",
+          "units": [
+            79,
+            87,
+            78,
+            69,
+            68
+          ]
+        }
+      },
+      {
+        "id": "missing",
+        "result": {
+          "type": "undefined"
+        }
+      },
+      {
+        "id": "null",
+        "error": {
+          "name": "TypeError",
+          "message": "Cannot read properties of null (reading 'basePath')"
+        }
+      },
+      {
+        "id": "undefined",
+        "error": {
+          "name": "TypeError",
+          "message": "Cannot read properties of undefined (reading 'basePath')"
+        }
+      },
+      {
+        "id": "number",
+        "result": {
+          "type": "undefined"
+        }
+      },
+      {
+        "id": "object",
+        "result": {
+          "identity": "marker"
+        }
+      },
+      {
+        "id": "lone",
+        "result": {
+          "type": "string",
+          "units": [
+            55296
+          ]
+        }
+      },
+      {
+        "id": "getter",
+        "result": {
+          "identity": "marker"
+        },
+        "log": [
+          "basePath"
+        ]
+      }
+    ],
+    "instances": [
+      {
+        "name": "app",
+        "constructor_name": "e",
+        "prototype_constructor_name": "e",
+        "public_prototype_same": null,
+        "own_keys": [
+          "appMenuBarManager",
+          "embedRegistry",
+          "viewRegistry",
+          "nextFrameEvents",
+          "nextFrameTimer",
+          "isMobile",
+          "mobileToolbar",
+          "mobileNavbar",
+          "mobileTabSwitcher",
+          "mobileQuickActions",
+          "lastEvent",
+          "title",
+          "appId",
+          "keymap",
+          "scope",
+          "commands",
+          "hotkeyManager",
+          "dragManager",
+          "dom",
+          "customCss",
+          "shareReceiver",
+          "renderContext",
+          "secretStorage",
+          "cli",
+          "vault",
+          "workspace",
+          "fileManager",
+          "statusBar",
+          "metadataCache",
+          "metadataTypeManager",
+          "foldManager",
+          "internalPlugins",
+          "plugins",
+          "setting"
+        ],
+        "selected": [
+          {
+            "key": "vault",
+            "enumerable": true,
+            "configurable": true,
+            "writable": true,
+            "value": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      {
+        "name": "vault",
+        "constructor_name": "t",
+        "prototype_constructor_name": "t",
+        "public_prototype_same": true,
+        "own_keys": [
+          "_",
+          "fileMap",
+          "config",
+          "configTs",
+          "configDir",
+          "requestSaveConfig",
+          "cacheLimit",
+          "reloadConfig",
+          "adapter",
+          "root",
+          "externalFileManager"
+        ],
+        "selected": [
+          {
+            "key": "adapter",
+            "enumerable": true,
+            "configurable": true,
+            "writable": true,
+            "value": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      {
+        "name": "adapter",
+        "constructor_name": "e",
+        "prototype_constructor_name": "e",
+        "public_prototype_same": true,
+        "own_keys": [
+          "thingsHappening",
+          "resourcePathPrefix",
+          "basePath",
+          "fs",
+          "fsPromises",
+          "path",
+          "url",
+          "trash",
+          "files",
+          "promise",
+          "watchers",
+          "handler",
+          "btime",
+          "insensitive",
+          "killLastAction"
+        ],
+        "selected": [
+          {
+            "key": "basePath",
+            "enumerable": true,
+            "configurable": true,
+            "writable": true,
+            "value": {
+              "type": "string",
+              "units": [
+                47,
+                85,
+                115,
+                101,
+                114,
+                115,
+                47,
+                100,
+                97,
+                110,
+                105,
+                108,
+                47,
+                80,
+                114,
+                111,
+                103,
+                114,
+                97,
+                109,
+                109,
+                105,
+                110,
+                103,
+                47,
+                109,
+                110,
+                101,
+                109,
+                111,
+                115,
+                121,
+                110,
+                101,
+                47,
+                116,
+                97,
+                114,
+                103,
+                101,
+                116,
+                47,
+                112,
+                97,
+                114,
+                105,
+                116,
+                121,
+                45,
+                114,
+                101,
+                102,
+                101,
+                114,
+                101,
+                110,
+                99,
+                101,
+                47,
+                114,
+                117,
+                110,
+                45,
+                106,
+                112,
+                100,
+                97,
+                53,
+                95,
+                100,
+                107,
+                47,
+                118,
+                97,
+                117,
+                108,
+                116
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "method": {
+      "name": "",
+      "length": 0,
+      "own_keys": [
+        "length",
+        "name",
+        "prototype"
+      ]
+    },
+    "actual_base_path": "/home/user/reference/run-jpda5_dk/vault"
+  },
+  "plugin_cleanup": {
+    "exposed": false
+  },
+  "process_cleanup": {
+    "pid": 30238,
+    "exit_code": 0,
+    "stopped": true
+  },
+  "raw_report_sha256": "02718040b1d0f72e1454b3b93635e650c8a8c24835efec6d84754b146276b649",
+  "scope": "Eight native borrowed FileSystemAdapter.getBasePath cases andthree application/vault/adapter instance observations; actual basePath returned uncoerced. Owned profile normalrouting observed, whole application/Vault service descriptors and runtime bindings remain required."
+}

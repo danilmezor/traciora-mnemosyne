@@ -1,0 +1,1808 @@
+{
+  "schema_version": 1,
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "reference_javascript_engine": "15.0.245.31-electron.0",
+  "reference_node": "24.21.0",
+  "source_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9",
+  "source_utf8_byte_anchors": {
+    "eval_handler": 1642241
+  },
+  "capture_reports": [
+    {
+      "path": "target/rea/runtime-eval/run-0.json",
+      "sha256": "cf38cc2f1498750204ccfad1f86b2e070a43abb77fe4d12112e92e5ac90a1138",
+      "cleanup": {
+        "pid": 34744,
+        "stopped": true
+      }
+    },
+    {
+      "path": "target/rea/runtime-eval/run-40.json",
+      "sha256": "c5380d4abb9756aa3ccddbd0bb943d85af20f9bdb9a54d48565df58e5d7713a4",
+      "cleanup": {
+        "pid": 35027,
+        "stopped": true
+      }
+    },
+    {
+      "path": "target/rea/runtime-eval/run-80.json",
+      "sha256": "b0dbed55a9dfbb6ff49d9e2cf64043c0de485643b0ffc337e03c6cfb306e7fcd",
+      "cleanup": {
+        "pid": 35308,
+        "stopped": true
+      }
+    }
+  ],
+  "scope": [
+    "117 actual native CLI pipes, not a claim that a Rust runtime currently executes these cases.",
+    "Sequential global-persistence cases share a fixture renderer; indirect-eval let is local and var persists.",
+    "The ecmascript scope includes required console/browser-timer/eval host primitives, not only language intrinsics.",
+    "Native-host and async-order scopes include Node/Electron integration; requiring vm emits the captured Electron renderer warning.",
+    "UTF16 remains a JS property; lone surrogate direct strings are U+FFFD at the UTF8 pipe boundary, object JSON retains escaped surrogates.",
+    "No copied shipped handler implementation, SDK hosting, network requests, or broad JS/Node conformance claim."
+  ],
+  "cases": [
+    {
+      "id": "undefined",
+      "args": [
+        "eval",
+        "code=undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "null",
+      "args": [
+        "eval",
+        "code=null"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> null\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gbnVsbAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "boolean-true",
+      "args": [
+        "eval",
+        "code=true"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> true\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gdHJ1ZQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "boolean-false",
+      "args": [
+        "eval",
+        "code=false"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> false\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gZmFsc2UK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "zero",
+      "args": [
+        "eval",
+        "code=0"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> 0\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gMAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "negative-zero",
+      "args": [
+        "eval",
+        "code=-0"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> 0\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gMAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "fraction",
+      "args": [
+        "eval",
+        "code=1/3"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> 0.3333333333333333\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gMC4zMzMzMzMzMzMzMzMzMzMzCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "nan",
+      "args": [
+        "eval",
+        "code=NaN"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> NaN\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gTmFOCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "infinity",
+      "args": [
+        "eval",
+        "code=Infinity"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> Infinity\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gSW5maW5pdHkK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "negative-infinity",
+      "args": [
+        "eval",
+        "code=-Infinity"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> -Infinity\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gLUluZmluaXR5Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "bigint",
+      "args": [
+        "eval",
+        "code=9007199254740993n"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> 9007199254740993\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gOTAwNzE5OTI1NDc0MDk5Mwo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "symbol",
+      "args": [
+        "eval",
+        "code=Symbol(\"owned\")"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> Symbol(owned)\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gU3ltYm9sKG93bmVkKQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "empty-string",
+      "args": [
+        "eval",
+        "code=\"\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> \n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "newline-string",
+      "args": [
+        "eval",
+        "code=\"text\\n\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> text\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gdGV4dAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "multiline-string",
+      "args": [
+        "eval",
+        "code=\"one\\ntwo\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> one\ntwo\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gb25lCnR3bwo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "unicode-string",
+      "args": [
+        "eval",
+        "code=\"日本😀é\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> 日本😀é\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4g5pel5pys8J+YgMOpCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "lone-high-surrogate",
+      "args": [
+        "eval",
+        "code=\"\\ud800\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> �\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4g77+9Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "lone-low-surrogate",
+      "args": [
+        "eval",
+        "code=\"\\udfff\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> �\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4g77+9Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "surrogate-pair",
+      "args": [
+        "eval",
+        "code=\"\\ud83d\\ude00\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> 😀\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4g8J+YgAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "surrogate-object",
+      "args": [
+        "eval",
+        "code=({high:\"\\ud800\",low:\"\\udfff\"})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {\n  \"high\": \"\\ud800\",\n  \"low\": \"\\udfff\"\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICJoaWdoIjogIlx1ZDgwMCIsCiAgImxvdyI6ICJcdWRmZmYiCn0K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "utf16-length",
+      "args": [
+        "eval",
+        "code=[\"😀\".length,\"\\ud800\".length]"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> [\n  2,\n  1\n]\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gWwogIDIsCiAgMQpdCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "object",
+      "args": [
+        "eval",
+        "code=({b:2,a:1})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {\n  \"b\": 2,\n  \"a\": 1\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICJiIjogMiwKICAiYSI6IDEKfQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "numeric-object-keys",
+      "args": [
+        "eval",
+        "code=({\"10\":\"ten\",\"2\":\"two\",a:1})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {\n  \"2\": \"two\",\n  \"10\": \"ten\",\n  \"a\": 1\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICIyIjogInR3byIsCiAgIjEwIjogInRlbiIsCiAgImEiOiAxCn0K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "array",
+      "args": [
+        "eval",
+        "code=[1,undefined,null,NaN]"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> [\n  1,\n  null,\n  null,\n  null\n]\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gWwogIDEsCiAgbnVsbCwKICBudWxsLAogIG51bGwKXQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "sparse-array",
+      "args": [
+        "eval",
+        "code=[,,3]"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> [\n  null,\n  null,\n  3\n]\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gWwogIG51bGwsCiAgbnVsbCwKICAzCl0K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "array-function-symbol",
+      "args": [
+        "eval",
+        "code=[function fn(){},Symbol(\"a\")]"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> [\n  null,\n  null\n]\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gWwogIG51bGwsCiAgbnVsbApdCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "date",
+      "args": [
+        "eval",
+        "code=new Date(\"2024-01-02T03:04:05.678Z\")"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> \"2024-01-02T03:04:05.678Z\"\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gIjIwMjQtMDEtMDJUMDM6MDQ6MDUuNjc4WiIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "invalid-date",
+      "args": [
+        "eval",
+        "code=new Date(NaN)"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> null\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gbnVsbAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "map",
+      "args": [
+        "eval",
+        "code=new Map([[\"x\",1]])"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4ge30K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "set",
+      "args": [
+        "eval",
+        "code=new Set([1,2])"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4ge30K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "regex",
+      "args": [
+        "eval",
+        "code=/owned/gi"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4ge30K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "error-object",
+      "args": [
+        "eval",
+        "code=new TypeError(\"owned\")"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4ge30K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "typed-array",
+      "args": [
+        "eval",
+        "code=new Uint8Array([0,255])"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {\n  \"0\": 0,\n  \"1\": 255\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICIwIjogMCwKICAiMSI6IDI1NQp9Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "bigint-object",
+      "args": [
+        "eval",
+        "code=({n:1n})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: Do not know how to serialize a BigInt\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IERvIG5vdCBrbm93IGhvdyB0byBzZXJpYWxpemUgYSBCaWdJbnQK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "bigint-wrapper",
+      "args": [
+        "eval",
+        "code=Object(1n)"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: Do not know how to serialize a BigInt\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IERvIG5vdCBrbm93IGhvdyB0byBzZXJpYWxpemUgYSBCaWdJbnQK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "symbol-wrapper",
+      "args": [
+        "eval",
+        "code=Object(Symbol(\"owned\"))"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4ge30K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "cycle",
+      "args": [
+        "eval",
+        "code=(()=>{const x={};x.self=x;return x})()"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: Converting circular structure to JSON\n    --> starting at object with constructor 'Object'\n    --- property 'self' closes the circle\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IENvbnZlcnRpbmcgY2lyY3VsYXIgc3RydWN0dXJlIHRvIEpTT04KICAgIC0tPiBzdGFydGluZyBhdCBvYmplY3Qgd2l0aCBjb25zdHJ1Y3RvciAnT2JqZWN0JwogICAgLS0tIHByb3BlcnR5ICdzZWxmJyBjbG9zZXMgdGhlIGNpcmNsZQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "cycle-array",
+      "args": [
+        "eval",
+        "code=(()=>{const x=[];x.push(x);return x})()"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: Converting circular structure to JSON\n    --> starting at object with constructor 'Array'\n    --- index 0 closes the circle\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IENvbnZlcnRpbmcgY2lyY3VsYXIgc3RydWN0dXJlIHRvIEpTT04KICAgIC0tPiBzdGFydGluZyBhdCBvYmplY3Qgd2l0aCBjb25zdHJ1Y3RvciAnQXJyYXknCiAgICAtLS0gaW5kZXggMCBjbG9zZXMgdGhlIGNpcmNsZQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "tojson-undefined",
+      "args": [
+        "eval",
+        "code=({toJSON(){return undefined}})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> undefined\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gdW5kZWZpbmVkCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "tojson-string",
+      "args": [
+        "eval",
+        "code=({toJSON(){return \"converted\"}})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> \"converted\"\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gImNvbnZlcnRlZCIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "tojson-throw",
+      "args": [
+        "eval",
+        "code=({toJSON(){throw new Error(\"toJSON failed\")}})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: toJSON failed\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IHRvSlNPTiBmYWlsZWQK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "getter-json-throw",
+      "args": [
+        "eval",
+        "code=({get value(){throw new Error(\"getter failed\")}})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: getter failed\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IGdldHRlciBmYWlsZWQK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "proxy-ownkeys-throw",
+      "args": [
+        "eval",
+        "code=new Proxy({},{ownKeys(){throw new Error(\"proxy failed\")}})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: proxy failed\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IHByb3h5IGZhaWxlZAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "function",
+      "args": [
+        "eval",
+        "code=(function owned(a){return a})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> function owned(a){return a}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gZnVuY3Rpb24gb3duZWQoYSl7cmV0dXJuIGF9Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "arrow",
+      "args": [
+        "eval",
+        "code=(x=>x+1)"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> x=>x+1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4geD0+eCsxCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "native-function",
+      "args": [
+        "eval",
+        "code=Math.max"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> function max() { [native code] }\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gZnVuY3Rpb24gbWF4KCkgeyBbbmF0aXZlIGNvZGVdIH0K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "class",
+      "args": [
+        "eval",
+        "code=(class Owned {})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> class Owned {}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gY2xhc3MgT3duZWQge30K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "async-function",
+      "args": [
+        "eval",
+        "code=(async function owned(){return 1})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> async function owned(){return 1}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gYXN5bmMgZnVuY3Rpb24gb3duZWQoKXtyZXR1cm4gMX0K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-error",
+      "args": [
+        "eval",
+        "code=throw new Error(\"owned boom\")"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: owned boom\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IG93bmVkIGJvb20K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-typeerror",
+      "args": [
+        "eval",
+        "code=throw new TypeError(\"owned type\")"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: owned type\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IG93bmVkIHR5cGUK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-string",
+      "args": [
+        "eval",
+        "code=throw \"owned string\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: owned string\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IG93bmVkIHN0cmluZwo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-number",
+      "args": [
+        "eval",
+        "code=throw 7"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: 7\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IDcK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-zero",
+      "args": [
+        "eval",
+        "code=throw 0"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: 0\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IDAK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-false",
+      "args": [
+        "eval",
+        "code=throw false"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: false\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IGZhbHNlCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-null",
+      "args": [
+        "eval",
+        "code=throw null"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "TypeError: Cannot read properties of null (reading 'message')\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "VHlwZUVycm9yOiBDYW5ub3QgcmVhZCBwcm9wZXJ0aWVzIG9mIG51bGwgKHJlYWRpbmcgJ21lc3NhZ2UnKQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-undefined",
+      "args": [
+        "eval",
+        "code=throw undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "TypeError: Cannot read properties of undefined (reading 'message')\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "VHlwZUVycm9yOiBDYW5ub3QgcmVhZCBwcm9wZXJ0aWVzIG9mIHVuZGVmaW5lZCAocmVhZGluZyAnbWVzc2FnZScpCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-symbol",
+      "args": [
+        "eval",
+        "code=throw Symbol(\"owned\")"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "TypeError: Cannot convert a Symbol value to a string\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "VHlwZUVycm9yOiBDYW5ub3QgY29udmVydCBhIFN5bWJvbCB2YWx1ZSB0byBhIHN0cmluZwo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-bigint",
+      "args": [
+        "eval",
+        "code=throw 9n"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: 9\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IDkK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-message",
+      "args": [
+        "eval",
+        "code=throw {message:\"owned message\"}"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: owned message\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IG93bmVkIG1lc3NhZ2UK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-empty-message",
+      "args": [
+        "eval",
+        "code=throw {message:\"\"}"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: [object Object]\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IFtvYmplY3QgT2JqZWN0XQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "throw-object",
+      "args": [
+        "eval",
+        "code=throw {value:1}"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: [object Object]\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IFtvYmplY3QgT2JqZWN0XQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "syntax-error",
+      "args": [
+        "eval",
+        "code=const = 1"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: Unexpected token '='\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IFVuZXhwZWN0ZWQgdG9rZW4gJz0nCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "reference-error",
+      "args": [
+        "eval",
+        "code=__reaMissingOwnedIdentifier"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: __reaMissingOwnedIdentifier is not defined\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IF9fcmVhTWlzc2luZ093bmVkSWRlbnRpZmllciBpcyBub3QgZGVmaW5lZAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "promise-resolve",
+      "args": [
+        "eval",
+        "code=Promise.resolve({value:7})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> {\n  \"value\": 7\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICJ2YWx1ZSI6IDcKfQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "promise-reject",
+      "args": [
+        "eval",
+        "code=Promise.reject(new Error(\"owned rejected\"))"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: owned rejected\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IG93bmVkIHJlamVjdGVkCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "promise-reject-null",
+      "args": [
+        "eval",
+        "code=Promise.reject(null)"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "TypeError: Cannot read properties of null (reading 'message')\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "VHlwZUVycm9yOiBDYW5ub3QgcmVhZCBwcm9wZXJ0aWVzIG9mIG51bGwgKHJlYWRpbmcgJ21lc3NhZ2UnKQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "thenable",
+      "args": [
+        "eval",
+        "code=({then(resolve){resolve(12)}})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> 12\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gMTIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "then-getter-throw",
+      "args": [
+        "eval",
+        "code=({get then(){throw new Error(\"then failed\")}})"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: then failed\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IHRoZW4gZmFpbGVkCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-log",
+      "args": [
+        "eval",
+        "code=console.log(\"hello\",1,true,null,undefined); undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "hello 1 true null undefined\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "aGVsbG8gMSB0cnVlIG51bGwgdW5kZWZpbmVkCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-levels",
+      "args": [
+        "eval",
+        "code=console.log(\"log\");console.warn(\"warn\");console.error(\"error\");42"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "log\n[warn] warn\n[error] error\n=> 42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "bG9nClt3YXJuXSB3YXJuCltlcnJvcl0gZXJyb3IKPT4gNDIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-empty",
+      "args": [
+        "eval",
+        "code=console.log();undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-empty-string",
+      "args": [
+        "eval",
+        "code=console.log(\"\");undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-empty-warn",
+      "args": [
+        "eval",
+        "code=console.warn();undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "[warn] \n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "W3dhcm5dIAo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-object",
+      "args": [
+        "eval",
+        "code=console.log({a:1},[1,2]);null"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "{\"a\":1} [1,2]\n=> null\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "eyJhIjoxfSBbMSwyXQo9PiBudWxsCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-cycle",
+      "args": [
+        "eval",
+        "code=(()=>{const x={};x.self=x;console.log(x);return 1})()"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "[object Object]\n=> 1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "W29iamVjdCBPYmplY3RdCj0+IDEK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-bigint-object",
+      "args": [
+        "eval",
+        "code=console.log({value:1n});undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "[object Object]\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "W29iamVjdCBPYmplY3RdCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-tojson-undefined",
+      "args": [
+        "eval",
+        "code=console.log({toJSON(){return undefined}},\"tail\");undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": " tail\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "IHRhaWwK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-function-symbol",
+      "args": [
+        "eval",
+        "code=console.log(function owned(){},Symbol(\"owned\"),1n);undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "function owned(){} Symbol(owned) 1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "ZnVuY3Rpb24gb3duZWQoKXt9IFN5bWJvbChvd25lZCkgMQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-before-throw",
+      "args": [
+        "eval",
+        "code=console.log(\"before\");throw new Error(\"after\")"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "before\nError: after\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "YmVmb3JlCkVycm9yOiBhZnRlcgo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-before-cycle",
+      "args": [
+        "eval",
+        "code=console.log(\"before\");(()=>{const x={};x.self=x;return x})()"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "before\nError: Converting circular structure to JSON\n    --> starting at object with constructor 'Object'\n    --- property 'self' closes the circle\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "YmVmb3JlCkVycm9yOiBDb252ZXJ0aW5nIGNpcmN1bGFyIHN0cnVjdHVyZSB0byBKU09OCiAgICAtLT4gc3RhcnRpbmcgYXQgb2JqZWN0IHdpdGggY29uc3RydWN0b3IgJ09iamVjdCcKICAgIC0tLSBwcm9wZXJ0eSAnc2VsZicgY2xvc2VzIHRoZSBjaXJjbGUK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-surrogate",
+      "args": [
+        "eval",
+        "code=console.log(\"\\ud800\",{low:\"\\udfff\"});undefined"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "� {\"low\":\"\\udfff\"}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "77+9IHsibG93IjoiXHVkZmZmIn0K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "console-override",
+      "args": [
+        "eval",
+        "code=console.log=()=>{};console.log(\"hidden\");\"done\""
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> done\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gZG9uZQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "microtask-before-result",
+      "args": [
+        "eval",
+        "code=queueMicrotask(()=>console.log(\"micro\"));42"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "micro\n=> 42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "bWljcm8KPT4gNDIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "promise-then-before-result",
+      "args": [
+        "eval",
+        "code=Promise.resolve().then(()=>console.log(\"then\"));42"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "then\n=> 42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "dGhlbgo9PiA0Mgo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "promise-timer",
+      "args": [
+        "eval",
+        "code=new Promise(resolve=>setTimeout(()=>{console.log(\"timer\");resolve(23)},5))"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "timer\n=> 23\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "dGltZXIKPT4gMjMK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "timer-after-result",
+      "args": [
+        "eval",
+        "code=setTimeout(()=>console.log(\"late-owned\"),0);42"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "=> 42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gNDIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "microtask-order",
+      "args": [
+        "eval",
+        "code=console.log(\"sync\");Promise.resolve().then(()=>console.log(\"then\"));queueMicrotask(()=>console.log(\"micro\"));Promise.resolve(\"done\")"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "sync\nthen\nmicro\n=> done\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "c3luYwp0aGVuCm1pY3JvCj0+IGRvbmUK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "async-console-order",
+      "args": [
+        "eval",
+        "code=(async()=>{console.log(\"start\");await Promise.resolve();console.warn(\"after\");return \"done\"})()"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "start\n[warn] after\n=> done\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "c3RhcnQKW3dhcm5dIGFmdGVyCj0+IGRvbmUK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "top-level-await",
+      "args": [
+        "eval",
+        "code=await Promise.resolve(1)"
+      ],
+      "scope": "ecmascript",
+      "expected": {
+        "stdout": "Error: await is only valid in async functions and the top level bodies of modules\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IGF3YWl0IGlzIG9ubHkgdmFsaWQgaW4gYXN5bmMgZnVuY3Rpb25zIGFuZCB0aGUgdG9wIGxldmVsIGJvZGllcyBvZiBtb2R1bGVzCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "let-local",
+      "args": [
+        "eval",
+        "code=let __reaOwnedLet=31;__reaOwnedLet"
+      ],
+      "scope": "ecmascript",
+      "sequence": "global-persistence",
+      "expected": {
+        "stdout": "=> 31\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gMzEK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "let-not-retained",
+      "args": [
+        "eval",
+        "code=typeof __reaOwnedLet"
+      ],
+      "scope": "ecmascript",
+      "sequence": "global-persistence",
+      "expected": {
+        "stdout": "=> undefined\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gdW5kZWZpbmVkCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "var-retained",
+      "args": [
+        "eval",
+        "code=var __reaOwnedVar=41;__reaOwnedVar"
+      ],
+      "scope": "ecmascript",
+      "sequence": "global-persistence",
+      "expected": {
+        "stdout": "=> 41\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gNDEK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "var-next-call",
+      "args": [
+        "eval",
+        "code=__reaOwnedVar+1"
+      ],
+      "scope": "ecmascript",
+      "sequence": "global-persistence",
+      "expected": {
+        "stdout": "=> 42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gNDIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "global-property",
+      "args": [
+        "eval",
+        "code=globalThis.__reaOwnedValue=43;__reaOwnedValue"
+      ],
+      "scope": "ecmascript",
+      "sequence": "global-persistence",
+      "expected": {
+        "stdout": "=> 43\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gNDMK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "global-next-call",
+      "args": [
+        "eval",
+        "code=delete globalThis.__reaOwnedValue;typeof __reaOwnedValue"
+      ],
+      "scope": "ecmascript",
+      "sequence": "global-persistence",
+      "expected": {
+        "stdout": "=> undefined\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gdW5kZWZpbmVkCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "global-types",
+      "args": [
+        "eval",
+        "code=({app:typeof app,window:typeof window,document:typeof document,require:typeof require,module:typeof module,exports:typeof exports,Buffer:typeof Buffer,process:typeof process,Promise:typeof Promise,setImmediate:typeof setImmediate,queueMicrotask:typeof queueMicrotask})"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> {\n  \"app\": \"object\",\n  \"window\": \"object\",\n  \"document\": \"object\",\n  \"require\": \"function\",\n  \"module\": \"object\",\n  \"exports\": \"undefined\",\n  \"Buffer\": \"function\",\n  \"process\": \"object\",\n  \"Promise\": \"function\",\n  \"setImmediate\": \"function\",\n  \"queueMicrotask\": \"function\"\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICJhcHAiOiAib2JqZWN0IiwKICAid2luZG93IjogIm9iamVjdCIsCiAgImRvY3VtZW50IjogIm9iamVjdCIsCiAgInJlcXVpcmUiOiAiZnVuY3Rpb24iLAogICJtb2R1bGUiOiAib2JqZWN0IiwKICAiZXhwb3J0cyI6ICJ1bmRlZmluZWQiLAogICJCdWZmZXIiOiAiZnVuY3Rpb24iLAogICJwcm9jZXNzIjogIm9iamVjdCIsCiAgIlByb21pc2UiOiAiZnVuY3Rpb24iLAogICJzZXRJbW1lZGlhdGUiOiAiZnVuY3Rpb24iLAogICJxdWV1ZU1pY3JvdGFzayI6ICJmdW5jdGlvbiIKfQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "commonjs-types",
+      "args": [
+        "eval",
+        "code=({requireResolve:typeof require.resolve,dirname:typeof __dirname,filename:typeof __filename,moduleExports:typeof module.exports})"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> {\n  \"requireResolve\": \"function\",\n  \"dirname\": \"string\",\n  \"filename\": \"string\",\n  \"moduleExports\": \"object\"\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICJyZXF1aXJlUmVzb2x2ZSI6ICJmdW5jdGlvbiIsCiAgImRpcm5hbWUiOiAic3RyaW5nIiwKICAiZmlsZW5hbWUiOiAic3RyaW5nIiwKICAibW9kdWxlRXhwb3J0cyI6ICJvYmplY3QiCn0K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "sdk-not-global-require",
+      "args": [
+        "eval",
+        "code=require(\"obsidian\")"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "Error: Cannot find module 'obsidian'\nRequire stack:\n- electron/js2c/renderer_init\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IENhbm5vdCBmaW5kIG1vZHVsZSAnb2JzaWRpYW4nClJlcXVpcmUgc3RhY2s6Ci0gZWxlY3Ryb24vanMyYy9yZW5kZXJlcl9pbml0Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-module-types",
+      "args": [
+        "eval",
+        "code=Object.fromEntries([\"fs\",\"path\",\"buffer\",\"events\",\"timers\",\"http\",\"vm\",\"electron\"].map(name=>[name,typeof require(name)]))"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "[warn] The vm module of Node.js is unsupported in Electron's renderer process due to incompatibilities with the Blink rendering engine. Crashes are likely and avoiding the module is highly recommended. This module may be removed in a future release.\n=> {\n  \"fs\": \"object\",\n  \"path\": \"object\",\n  \"buffer\": \"object\",\n  \"events\": \"function\",\n  \"timers\": \"object\",\n  \"http\": \"object\",\n  \"vm\": \"object\",\n  \"electron\": \"object\"\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "W3dhcm5dIFRoZSB2bSBtb2R1bGUgb2YgTm9kZS5qcyBpcyB1bnN1cHBvcnRlZCBpbiBFbGVjdHJvbidzIHJlbmRlcmVyIHByb2Nlc3MgZHVlIHRvIGluY29tcGF0aWJpbGl0aWVzIHdpdGggdGhlIEJsaW5rIHJlbmRlcmluZyBlbmdpbmUuIENyYXNoZXMgYXJlIGxpa2VseSBhbmQgYXZvaWRpbmcgdGhlIG1vZHVsZSBpcyBoaWdobHkgcmVjb21tZW5kZWQuIFRoaXMgbW9kdWxlIG1heSBiZSByZW1vdmVkIGluIGEgZnV0dXJlIHJlbGVhc2UuCj0+IHsKICAiZnMiOiAib2JqZWN0IiwKICAicGF0aCI6ICJvYmplY3QiLAogICJidWZmZXIiOiAib2JqZWN0IiwKICAiZXZlbnRzIjogImZ1bmN0aW9uIiwKICAidGltZXJzIjogIm9iamVjdCIsCiAgImh0dHAiOiAib2JqZWN0IiwKICAidm0iOiAib2JqZWN0IiwKICAiZWxlY3Ryb24iOiAib2JqZWN0Igp9Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-buffer",
+      "args": [
+        "eval",
+        "code=Buffer.from([0,255,128])"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> {\n  \"type\": \"Buffer\",\n  \"data\": [\n    0,\n    255,\n    128\n  ]\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICJ0eXBlIjogIkJ1ZmZlciIsCiAgImRhdGEiOiBbCiAgICAwLAogICAgMjU1LAogICAgMTI4CiAgXQp9Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-buffer-unicode",
+      "args": [
+        "eval",
+        "code=Buffer.from(\"😀\").toString(\"hex\")"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> f09f9880\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gZjA5Zjk4ODAK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-path",
+      "args": [
+        "eval",
+        "code=require(\"path\").posix.normalize(\"a/../b/./c\")"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> b/c\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gYi9jCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-eventemitter",
+      "args": [
+        "eval",
+        "code=(()=>{const E=require(\"events\");const e=new E();let n=0;e.on(\"owned\",v=>n+=v);e.emit(\"owned\",2);return n})()"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> 2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gMgo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-vm-context",
+      "args": [
+        "eval",
+        "code=require(\"vm\").runInNewContext(\"1+2\")"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "[warn] The vm module of Node.js is unsupported in Electron's renderer process due to incompatibilities with the Blink rendering engine. Crashes are likely and avoiding the module is highly recommended. This module may be removed in a future release.\n=> 3\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "W3dhcm5dIFRoZSB2bSBtb2R1bGUgb2YgTm9kZS5qcyBpcyB1bnN1cHBvcnRlZCBpbiBFbGVjdHJvbidzIHJlbmRlcmVyIHByb2Nlc3MgZHVlIHRvIGluY29tcGF0aWJpbGl0aWVzIHdpdGggdGhlIEJsaW5rIHJlbmRlcmluZyBlbmdpbmUuIENyYXNoZXMgYXJlIGxpa2VseSBhbmQgYXZvaWRpbmcgdGhlIG1vZHVsZSBpcyBoaWdobHkgcmVjb21tZW5kZWQuIFRoaXMgbW9kdWxlIG1heSBiZSByZW1vdmVkIGluIGEgZnV0dXJlIHJlbGVhc2UuCj0+IDMK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "owned-file-read",
+      "args": [
+        "eval",
+        "code=require(\"fs\").readFileSync(require(\"path\").join(app.vault.adapter.getBasePath(),\"ParityReady.md\"),\"utf8\")"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> Isolated parity oracle.\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gSXNvbGF0ZWQgcGFyaXR5IG9yYWNsZS4K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "browser-timer-handle",
+      "args": [
+        "eval",
+        "code=(()=>{const t=setTimeout(()=>{},0);clearTimeout(t);return typeof t})()"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> number\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gbnVtYmVyCg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-timer-handle",
+      "args": [
+        "eval",
+        "code=(()=>{const timers=require(\"timers\");const t=timers.setTimeout(()=>{},0);timers.clearTimeout(t);return typeof t})()"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> object\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gb2JqZWN0Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "electron-boundary",
+      "args": [
+        "eval",
+        "code=({ipcRenderer:typeof require(\"electron\").ipcRenderer,remote:typeof require(\"@electron/remote\"),processType:process.type})"
+      ],
+      "scope": "native-host",
+      "expected": {
+        "stdout": "=> {\n  \"ipcRenderer\": \"object\",\n  \"remote\": \"object\",\n  \"processType\": \"renderer\"\n}\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gewogICJpcGNSZW5kZXJlciI6ICJvYmplY3QiLAogICJyZW1vdGUiOiAib2JqZWN0IiwKICAicHJvY2Vzc1R5cGUiOiAicmVuZGVyZXIiCn0K",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "missing-code",
+      "args": [
+        "eval"
+      ],
+      "scope": "argv",
+      "expected": {
+        "stdout": "Error: Missing required parameter: code=<javascript>\nUsage: eval code=<javascript>\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IE1pc3NpbmcgcmVxdWlyZWQgcGFyYW1ldGVyOiBjb2RlPTxqYXZhc2NyaXB0PgpVc2FnZTogZXZhbCBjb2RlPTxqYXZhc2NyaXB0Pgo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "empty-code",
+      "args": [
+        "eval",
+        "code="
+      ],
+      "scope": "argv",
+      "expected": {
+        "stdout": "Error: Missing required parameter: code\nUsage: eval code=<javascript>\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "RXJyb3I6IE1pc3NpbmcgcmVxdWlyZWQgcGFyYW1ldGVyOiBjb2RlClVzYWdlOiBldmFsIGNvZGU9PGphdmFzY3JpcHQ+Cg==",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "bare-code",
+      "args": [
+        "eval",
+        "code"
+      ],
+      "scope": "argv",
+      "expected": {
+        "stdout": "=> true\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "PT4gdHJ1ZQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "whitespace-code",
+      "args": [
+        "eval",
+        "code= \t "
+      ],
+      "scope": "argv",
+      "expected": {
+        "stdout": "(no output)\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "KG5vIG91dHB1dCkK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "microtask-chain-cutoff",
+      "args": [
+        "eval",
+        "code=Promise.resolve().then(()=>console.log(\"first\")).then(()=>console.log(\"second\"));42"
+      ],
+      "scope": "async-order",
+      "expected": {
+        "stdout": "first\n=> 42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "Zmlyc3QKPT4gNDIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "microtask-nested-cutoff",
+      "args": [
+        "eval",
+        "code=queueMicrotask(()=>{queueMicrotask(()=>console.log(\"nested\"));console.log(\"first\")});42"
+      ],
+      "scope": "async-order",
+      "expected": {
+        "stdout": "first\n=> 42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "Zmlyc3QKPT4gNDIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "microtask-chain-promise-cutoff",
+      "args": [
+        "eval",
+        "code=Promise.resolve().then(()=>console.log(\"first\")).then(()=>console.log(\"second\"));Promise.resolve(\"done\")"
+      ],
+      "scope": "async-order",
+      "expected": {
+        "stdout": "first\n=> done\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "Zmlyc3QKPT4gZG9uZQo=",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-nexttick-before-result",
+      "args": [
+        "eval",
+        "code=process.nextTick(()=>console.log(\"nexttick\"));42"
+      ],
+      "scope": "async-order",
+      "expected": {
+        "stdout": "nexttick\n=> 42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "bmV4dHRpY2sKPT4gNDIK",
+        "stderr_base64": ""
+      }
+    },
+    {
+      "id": "node-nexttick-awaited",
+      "args": [
+        "eval",
+        "code=new Promise(resolve=>process.nextTick(()=>{console.log(\"nexttick\");resolve(\"done\")}))"
+      ],
+      "scope": "async-order",
+      "expected": {
+        "stdout": "nexttick\n=> done\n",
+        "stderr": "",
+        "exit_code": 0,
+        "stdout_base64": "bmV4dHRpY2sKPT4gZG9uZQo=",
+        "stderr_base64": ""
+      }
+    }
+  ]
+}

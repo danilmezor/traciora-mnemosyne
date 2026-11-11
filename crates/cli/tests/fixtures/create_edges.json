@@ -1,0 +1,550 @@
+{
+  "reference_version": "1.14.4",
+  "reference_cli_sha256": "32e520c5c252afa2ed4dc35e7db686d4bfe41c5bf6762331742a4bd7e639645b",
+  "reference_asar_sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "parent-case",
+      "args": [
+        "create",
+        "path=folder/New"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Folder/New.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/New.md": "",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "parent-case-collision",
+      "args": [
+        "create",
+        "path=folder/other"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Created: Folder/other 1.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/other 1.md": "",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "hidden-existing",
+      "args": [
+        "create",
+        "name=.hidden",
+        "content=replacement"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: File already exists.\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "folder-overwrite",
+      "args": [
+        "create",
+        "name=AsFile.md",
+        "overwrite"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Overwrote: AsFile 1.md\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            "AsFile 1.md": "",
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "dot-parent-fresh",
+      "args": [
+        "create",
+        "path=.newhidden/New"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "TypeError: Cannot read properties of null (reading 'getParentPrefix')\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            ".newhidden",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    },
+    {
+      "id": "dot-parent-existing",
+      "args": [
+        "create",
+        "path=.existing/New"
+      ],
+      "config": {
+        "enabled": false,
+        "options": null,
+        "creators": [
+          "md"
+        ],
+        "feature_plugins": {
+          "canvas": false,
+          "bases": false
+        }
+      },
+      "settings": {
+        "newFileLocation": "root",
+        "newFileFolderPath": "Configured"
+      },
+      "before": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": "Error: Folder already exists.\n",
+        "stderr": ""
+      },
+      "after": {
+        "tree": {
+          "files": {
+            ".hidden.md": "first",
+            "attachment.txt": "old attachment\n",
+            "Existing.md": "old saved\n",
+            "Configured/Keep.md": "keep\n",
+            "AsFile.md/Child.md": "child\n",
+            "Folder/Other.md": "other\n",
+            ".existing/child.txt": "hidden child",
+            "Templates/BOM.md": "﻿BOM {{title}}\r\n",
+            "Templates/Defaults.md": "{{date}}/{{time}}/{{DATE}}/{{TIME}}\n",
+            "Templates/Basic.md": "Title={{title}}\nDATE={{date:[CONST]}} TIME={{time:[CLOCK]}}\n",
+            "Templates/Sub/Nested.md": "Nested {{TITLE}} {{unknown}}\n"
+          },
+          "directories": [
+            ".existing",
+            "AsFile.md",
+            "Configured",
+            "Folder",
+            "Templates",
+            "Templates/Sub"
+          ],
+          "vault_exists": true
+        },
+        "state": {
+          "active": null,
+          "editor": null,
+          "file_leaves": []
+        }
+      }
+    }
+  ],
+  "coverage": "Six actual isolated runtime parent-case and hidden-folder/file collision cases, including exact error side effects.",
+  "reference_app_js_sha256": "958ce57fe22f87fdf121546e46dfccd9c8ee971ce3fd8f801d60d4ece39a2df9"
+}
