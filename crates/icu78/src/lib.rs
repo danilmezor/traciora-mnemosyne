@@ -170,7 +170,7 @@ impl Collator {
             .checked_add(1)
             .filter(|capacity| *capacity > 0)
             .ok_or_else(|| Error("Invalid locale id length".into()))?;
-        let mut locale = vec![0i8; capacity as usize];
+        let mut locale: Vec<c_char> = vec![0; capacity as usize];
         status = 0;
         unsafe {
             locale_for_tag(
