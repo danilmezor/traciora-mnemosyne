@@ -81,7 +81,8 @@ else `root_seen_from`. Set it with a `set_meta` change in an `edit`:
 - No entry may rank below its folder (`visibility_below_folder`), also after a
   rename or restore.
 - `colour` needs `edit`. Colours: `blue`, `magenta`, `green`, `lavender`,
-  `orange`, `cyan`, `other`.
+  `orange`, `cyan`, `sand`, `slate`, `other`. A top-level folder's default is one
+  of the first six, shuffled per tenant; `sand` and `slate` are only ever set here.
 - `set_meta` is never allowed in a proposal (`set_meta_requires_edit`).
 - A role named by a `seen_from` at head cannot be removed from the ladder; re-rank
   those paths first.

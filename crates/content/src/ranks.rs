@@ -21,8 +21,10 @@ impl PathMeta {
     }
 }
 
-pub const COLOURS: [&str; 7] = [
-    "blue", "magenta", "green", "lavender", "orange", "cyan", "other",
+/// The six categorical hues in their fixed order, then sand and slate, then `other`.
+/// Sand and slate are only ever picked by hand: no default lands on them.
+pub const COLOURS: [&str; 9] = [
+    "blue", "magenta", "green", "lavender", "orange", "cyan", "sand", "slate", "other",
 ];
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize, Deserialize)]
@@ -72,7 +74,9 @@ fn seed(tenant: &TenantPolicy, tenant_id: &str) -> u64 {
     })
 }
 
-/// Fisher-Yates over the first six colours, driven by a 64-bit LCG.
+/// Fisher-Yates over the first six colours, driven by a 64-bit LCG. The pool stays the six:
+/// sand and slate are picked by hand only, and widening the pool would move every tenant's
+/// default colours.
 fn shuffled(seed: u64) -> [&'static str; 6] {
     let mut pool = [
         COLOURS[0], COLOURS[1], COLOURS[2], COLOURS[3], COLOURS[4], COLOURS[5],

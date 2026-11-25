@@ -320,6 +320,69 @@ fn colour_is_explicit_then_inherited_then_seeded_default() {
 }
 
 #[test]
+fn defaults_stay_the_six_and_never_land_on_sand_or_slate() {
+    // Pinned so that adding a colour can never move a tenant's existing defaults.
+    let seeded = TenantPolicy {
+        colour_seed: Some(42),
+        ..TenantPolicy::default()
+    };
+    let mut files = BTreeMap::new();
+    for i in 1..=8 {
+        files.insert(
+            format!("d{i}"),
+            entry(&format!("f{i}"), EntryKind::Folder, PathMeta::default()),
+        );
+    }
+    let names: Vec<String> = (1..=8)
+        .map(|i| effective_colour(&files, &seeded, "t1", &format!("d{i}")).0)
+        .collect();
+    assert_eq!(
+        names,
+        ["cyan", "lavender", "blue", "green", "magenta", "orange", "other", "other"]
+    );
+    for tenant in ["t1", "t2", "t3", "t4", "t5"] {
+        let t = TenantPolicy::default();
+        for i in 1..=8 {
+            let c = effective_colour(&files, &t, tenant, &format!("d{i}")).0;
+            assert!(c != "sand" && c != "slate", "{tenant} d{i} got {c}");
+        }
+    }
+}
+
+#[test]
+fn set_meta_accepts_sand_and_slate() {
+    let (_fx, s, root) = ranked_fixture();
+    let seed = s
+        .edit(
+            &root,
+            "r0",
+            vec![folder("a"), folder("b"), put("a/x.md", "x")],
+            "seed",
+            None,
+            None,
+        )
+        .unwrap();
+    let senior = identity("t1", "senior-s", ActorKind::Human);
+    let r = s
+        .edit(
+            &senior,
+            &seed.id,
+            vec![colour_meta("a", "sand"), colour_meta("b", "slate")],
+            "c1",
+            None,
+            None,
+        )
+        .unwrap();
+    assert_eq!(r.changes[0].meta_after, meta(None, Some("sand")));
+    assert_eq!(r.changes[1].meta_after, meta(None, Some("slate")));
+    let p = s.permissions(&senior, "a/x.md").unwrap();
+    assert_eq!(
+        (p.colour.as_str(), p.colour_source),
+        ("sand", ColourSource::Inherited)
+    );
+}
+
+#[test]
 fn store_version_moves_to_4_and_entries_keep_meta() {
     let fx = Fixture::new();
     let s = fx.service();
